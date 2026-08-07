@@ -1,0 +1,215 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --panel-hi: #273449;
+  --border: #334155;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --correct: #4ade80;
+  --wrong: #f87171;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2rem 1rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+}
+
+header {
+  max-width: 900px;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+header h1 { margin: 0; font-size: 1.9rem; }
+
+#phase-label {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---------- question cards ---------- */
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.card-num {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.question { margin: 0 0 1rem; font-size: 1.02rem; }
+
+.choices { display: flex; flex-direction: column; gap: 0.45rem; }
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.choice:hover { background: var(--panel-hi); }
+
+.choice.selected {
+  border-color: var(--accent);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.choice-letter {
+  flex: 0 0 auto;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.choice.selected .choice-letter { color: var(--accent); }
+
+/* ---------- navigation ---------- */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.nav-info { color: var(--muted); font-size: 0.9rem; }
+
+button.btn {
+  padding: 0.65rem 1.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.btn:hover:not(:disabled) { background: var(--panel-hi); }
+
+button.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #06283a;
+}
+
+button.btn.primary:hover:not(:disabled) { filter: brightness(1.08); }
+
+button.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.warn {
+  margin-top: 0.9rem;
+  color: var(--wrong);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* ---------- results ---------- */
+
+.results {
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+}
+
+.score { font-size: 3.2rem; font-weight: 700; margin: 0.5rem 0; }
+
+.score-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.score-item .score { font-size: 2.4rem; }
+
+.score-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.results p { color: var(--muted); }
+
+.results .btn { margin-top: 1rem; }
+
+/* ---------- review ---------- */
+
+.review-card { cursor: pointer; }
+
+.review-card .hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.9rem;
+}
+
+.answer-panel {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.answer-line { font-weight: 700; color: var(--correct); margin: 0 0 0.5rem; }
+
+.explanation { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+.choice.is-answer {
+  border-color: var(--correct);
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.choice.is-answer .choice-letter { color: var(--correct); }
+
+.tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.tag.missed { background: rgba(248, 113, 113, 0.18); color: var(--wrong); }
+
+@media (max-width: 600px) {
+  body { padding: 1.25rem 0.75rem 3rem; }
+  .score-row { gap: 1.75rem; }
+}
