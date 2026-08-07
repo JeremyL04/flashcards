@@ -1,6 +1,8 @@
 // Quiz flow:
 //   round 1 (all cards) -> score -> round 2 (missed cards, shuffled) ->
 //   both scores -> review (every card, click to reveal the answer)
+//
+// Unanswered questions are simply graded as wrong.
 
 const PER_PAGE = 4;
 const SHUFFLE_CHOICES_ON_RETRY = true;
@@ -10,6 +12,7 @@ const answerIndex = (card) => LETTERS.indexOf(card.answer);
 
 const appEl = document.getElementById("app");
 const phaseEl = document.getElementById("phase-label");
+const progressEl = document.getElementById("progress-fill");
 
 let state;
 
@@ -40,14 +43,13 @@ function isCorrect(item) {
 }
 
 function startRound(round, items) {
-  state = { phase: "quiz", round, items, page: 0, showWarning: false };
+  state = { ...state, phase: "quiz", round, items, page: 0 };
   render();
 }
 
 function begin() {
-  const items = DECK.cards.map((card, i) => makeItem(card, i, false));
   state = { round1: null, round2: null };
-  startRound(1, items);
+  startRound(1, DECK.cards.map((card, i) => makeItem(card, i, false)));
 }
 
 // ---------- rendering ----------
@@ -59,38 +61,46 @@ function render() {
   if (state.phase === "review") return renderReview();
 }
 
-function pageSlice(items, page) {
-  return items.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+function pageCount(n) {
+  return Math.ceil(n / PER_PAGE);
 }
 
-function pageCount(items) {
-  return Math.ceil(items.length / PER_PAGE);
+function setProgress(fraction) {
+  progressEl.style.width = `${Math.round(fraction * 100)}%`;
 }
 
 function renderQuiz() {
   const { items, page, round } = state;
-  const total = pageCount(items);
+  const total = pageCount(items.length);
   const lastPage = page === total - 1;
-  const visible = pageSlice(items, page);
+  const visible = items.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
 
   phaseEl.textContent =
     round === 1
-      ? `Round 1 — ${items.length} questions`
-      : `Round 2 — ${items.length} to try again`;
+      ? `Round 1 · ${items.length} questions`
+      : `Round 2 · ${items.length} to try again`;
+  setProgress((page + 1) / total);
 
   appEl.innerHTML = "";
 
+  const grid = document.createElement("div");
+  grid.className = "grid";
   visible.forEach((item, i) => {
-    const number = page * PER_PAGE + i + 1;
-    appEl.appendChild(questionCard(item, number, items.length));
+    grid.appendChild(questionCard(item, page * PER_PAGE + i + 1, items.length));
   });
+  appEl.appendChild(grid);
+
+  // Count of blanks across the whole round, live-updated as answers are picked.
+  const note = document.createElement("p");
+  note.className = "unanswered";
+  note.id = "unanswered-note";
+  appEl.appendChild(note);
 
   const nav = document.createElement("div");
   nav.className = "nav";
 
   const back = button("Back", "btn", () => {
     state.page--;
-    state.showWarning = false;
     render();
   });
   back.disabled = page === 0;
@@ -103,18 +113,27 @@ function renderQuiz() {
     ? button("Submit answers", "btn primary", submitRound)
     : button("Next", "btn primary", () => {
         state.page++;
-        state.showWarning = false;
         render();
       });
 
   nav.append(back, info, next);
   appEl.appendChild(nav);
 
-  if (state.showWarning) {
-    const w = document.createElement("p");
-    w.className = "warn";
-    w.textContent = "Answer every question before submitting.";
-    appEl.appendChild(w);
+  updateUnansweredNote();
+}
+
+function updateUnansweredNote() {
+  const note = document.getElementById("unanswered-note");
+  if (!note) return;
+  const blanks = state.items.filter((it) => it.selected === null).length;
+  const onLastPage = state.page === pageCount(state.items.length) - 1;
+
+  if (blanks === 0) {
+    note.textContent = "";
+  } else if (onLastPage) {
+    note.textContent = `${blanks} unanswered — these will be marked wrong.`;
+  } else {
+    note.textContent = `${blanks} unanswered`;
   }
 }
 
@@ -132,13 +151,15 @@ function questionCard(item, number, total) {
 
   const choices = document.createElement("div");
   choices.className = "choices";
+  choices.setAttribute("role", "radiogroup");
+  choices.setAttribute("aria-label", `Question ${number}`);
 
   item.order.forEach((originalIndex, position) => {
     const btn = document.createElement("button");
     btn.className = "choice" + (item.selected === position ? " selected" : "");
-    btn.innerHTML =
-      `<span class="choice-letter">${LETTERS[position]}</span>` +
-      `<span></span>`;
+    btn.setAttribute("role", "radio");
+    btn.setAttribute("aria-checked", String(item.selected === position));
+    btn.innerHTML = `<span class="choice-letter">${LETTERS[position]}</span><span></span>`;
     btn.lastElementChild.textContent = item.card.choices[originalIndex];
     // Repaint only this card's buttons — a full render() would scroll the
     // page back to the top mid-question.
@@ -146,7 +167,9 @@ function questionCard(item, number, total) {
       item.selected = position;
       [...choices.children].forEach((el, i) => {
         el.classList.toggle("selected", i === position);
+        el.setAttribute("aria-checked", String(i === position));
       });
+      updateUnansweredNote();
     });
     choices.appendChild(btn);
   });
@@ -156,11 +179,6 @@ function questionCard(item, number, total) {
 }
 
 function submitRound() {
-  if (state.items.some((it) => it.selected === null)) {
-    state.showWarning = true;
-    return render();
-  }
-
   const correct = state.items.filter(isCorrect).length;
   const missed = state.items.filter((it) => !isCorrect(it));
 
@@ -177,39 +195,45 @@ function submitRound() {
 function renderResults() {
   const r1 = state.round1;
   const r2 = state.round2;
-  phaseEl.textContent = "";
+  phaseEl.textContent = "Results";
+  setProgress(1);
   appEl.innerHTML = "";
 
   const box = document.createElement("div");
   box.className = "results";
+  const actions = document.createElement("div");
+  actions.className = "results-actions";
 
   // After round 1, with anything still missed, offer the second attempt.
   if (!r2 && r1.missed.length > 0) {
     box.innerHTML = `
-      <div class="score-label">Round 1</div>
+      <p class="results-title">Round 1 complete</p>
+      <div class="score-label">Score</div>
       <div class="score">${r1.correct} / ${r1.total}</div>
-      <p>${r1.missed.length} to try again. You'll see the answers after this round.</p>`;
-    box.appendChild(
+      <p>${r1.missed.length} to try again. Answers are shown after this round.</p>`;
+    actions.append(
       button("Try those again", "btn primary", () => {
-        const retry = shuffled(
-          r1.missed.map((it) =>
-            makeItem(it.card, it.deckIndex, SHUFFLE_CHOICES_ON_RETRY)
+        startRound(
+          2,
+          shuffled(
+            r1.missed.map((it) =>
+              makeItem(it.card, it.deckIndex, SHUFFLE_CHOICES_ON_RETRY)
+            )
           )
         );
-        const saved = { round1: r1, round2: null };
-        startRound(2, retry);
-        Object.assign(state, saved);
-        render();
-      })
+      }),
+      button("Skip to answers", "btn link", toReview)
     );
   } else if (!r2) {
     box.innerHTML = `
-      <div class="score-label">Round 1</div>
+      <p class="results-title">Round 1 complete</p>
+      <div class="score-label">Score</div>
       <div class="score">${r1.correct} / ${r1.total}</div>
-      <p>Perfect — nothing to retry.</p>`;
-    box.appendChild(button("Review all questions", "btn primary", toReview));
+      <p>Perfect score — nothing to retry.</p>`;
+    actions.append(button("Review all questions", "btn primary", toReview));
   } else {
     box.innerHTML = `
+      <p class="results-title">Both attempts complete</p>
       <div class="score-row">
         <div class="score-item">
           <div class="score-label">Round 1</div>
@@ -219,34 +243,35 @@ function renderResults() {
           <div class="score-label">Round 2</div>
           <div class="score">${r2.correct} / ${r2.total}</div>
         </div>
-      </div>
-      <p>That's both attempts — here are all the answers.</p>`;
-    box.appendChild(button("Review all questions", "btn primary", toReview));
+      </div>`;
+    actions.append(button("Review all questions", "btn primary", toReview));
   }
 
+  box.appendChild(actions);
   appEl.appendChild(box);
 }
 
 function toReview() {
-  const missedIndexes = new Set(state.round1.missed.map((it) => it.deckIndex));
+  state.missedIndexes = new Set(state.round1.missed.map((it) => it.deckIndex));
   state.phase = "review";
   state.page = 0;
-  state.missedIndexes = missedIndexes;
   render();
 }
 
 function renderReview() {
   const cards = DECK.cards;
-  const total = Math.ceil(cards.length / PER_PAGE);
+  const total = pageCount(cards.length);
   const start = state.page * PER_PAGE;
   const visible = cards.slice(start, start + PER_PAGE);
 
-  phaseEl.textContent = "Review — click a question to see the answer";
+  phaseEl.textContent = "Review · click a question to reveal the answer";
+  setProgress((state.page + 1) / total);
   appEl.innerHTML = "";
 
-  visible.forEach((card, i) => {
-    appEl.appendChild(reviewCard(card, start + i));
-  });
+  const grid = document.createElement("div");
+  grid.className = "grid";
+  visible.forEach((card, i) => grid.appendChild(reviewCard(card, start + i)));
+  appEl.appendChild(grid);
 
   const nav = document.createElement("div");
   nav.className = "nav";
@@ -281,10 +306,12 @@ function reviewCard(card, deckIndex) {
 
     const num = document.createElement("div");
     num.className = "card-num";
-    num.textContent = `Question ${deckIndex + 1}`;
+    const label = document.createElement("span");
+    label.textContent = `Question ${deckIndex + 1}`;
+    num.appendChild(label);
     if (state.missedIndexes && state.missedIndexes.has(deckIndex)) {
       const tag = document.createElement("span");
-      tag.className = "tag missed";
+      tag.className = "tag";
       tag.textContent = "missed";
       num.appendChild(tag);
     }
@@ -297,8 +324,7 @@ function reviewCard(card, deckIndex) {
     choices.className = "choices";
     card.choices.forEach((text, i) => {
       const row = document.createElement("div");
-      row.className =
-        "choice" + (open && i === answerIndex(card) ? " is-answer" : "");
+      row.className = "choice" + (open && i === answerIndex(card) ? " is-answer" : "");
       row.innerHTML = `<span class="choice-letter">${LETTERS[i]}</span><span></span>`;
       row.lastElementChild.textContent = text;
       choices.appendChild(row);
