@@ -1,13 +1,15 @@
 // Flow:
-//   login -> menu -> first pass (all cards) -> score ->
+//   login -> greeting -> menu -> first pass (all cards) -> score ->
 //   second pass (missed cards, shuffled) -> both scores ->
 //   review (every card, click to reveal the answer)
 //
 // Unanswered questions are graded as wrong.
+// Progress is saved to localStorage so a refresh picks up where it left off.
 
 const PER_PAGE = 4;
 const SHUFFLE_CHOICES_ON_RETRY = true;
 const MENU_SLOTS = 25; // 5x5 board
+const STORAGE_KEY = "flashcards-progress";
 
 // Not real security: this file is public, so anyone who views the page
 // source can read it. It only keeps casual visitors out.
@@ -21,6 +23,7 @@ const phaseEl = document.getElementById("phase-label");
 const titleEl = document.getElementById("deck-title");
 const topbarEl = document.querySelector(".topbar");
 const progressEl = document.getElementById("progress-fill");
+const homeBtn = document.getElementById("home-btn");
 
 let state;
 
@@ -58,21 +61,114 @@ function setProgress(fraction) {
   progressEl.style.width = `${Math.round(fraction * 100)}%`;
 }
 
+// ---------- saved progress ----------
+
+// Changing any question invalidates saved progress, so answers can never be
+// restored against a deck they no longer line up with.
+const DECK_VERSION = (() => {
+  const src = EXAMS.map(
+    (e) => e.name + e.cards.length + e.cards.map((c) => c.question).join("")
+  ).join("");
+  let h = 0;
+  for (let i = 0; i < src.length; i++) h = (h * 31 + src.charCodeAt(i)) | 0;
+  return h;
+})();
+
+const packItem = (it) => ({ d: it.deckIndex, o: it.order, s: it.selected });
+
+const unpackItem = (exam, p) => ({
+  card: exam.cards[p.d],
+  deckIndex: p.d,
+  order: p.o,
+  selected: p.s,
+});
+
+function save() {
+  if (!state) return;
+  try {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        v: DECK_VERSION,
+        phase: state.phase,
+        greeted: !!state.greeted,
+        examIndex: state.exam ? EXAMS.indexOf(state.exam) : null,
+        pass: state.pass ?? null,
+        page: state.page ?? null,
+        items: state.items ? state.items.map(packItem) : null,
+        first: state.first
+          ? {
+              correct: state.first.correct,
+              total: state.first.total,
+              missed: state.first.missed.map(packItem),
+            }
+          : null,
+        second: state.second ?? null,
+        missedIndexes: state.missedIndexes ? [...state.missedIndexes] : null,
+      })
+    );
+  } catch (e) {
+    // Storage can be unavailable (private mode, full quota) — progress just
+    // won't persist in that case.
+  }
+}
+
+function restore() {
+  let saved;
+  try {
+    saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+  } catch (e) {
+    return null;
+  }
+  if (!saved || saved.v !== DECK_VERSION) return null;
+  if (saved.phase === "login") return null;
+
+  const exam = saved.examIndex == null ? null : EXAMS[saved.examIndex];
+  if (saved.phase !== "menu" && !exam) return null;
+
+  return {
+    phase: saved.phase,
+    greeted: true,
+    exam,
+    pass: saved.pass,
+    page: saved.page,
+    items: saved.items ? saved.items.map((p) => unpackItem(exam, p)) : null,
+    first: saved.first
+      ? {
+          correct: saved.first.correct,
+          total: saved.first.total,
+          missed: saved.first.missed.map((p) => unpackItem(exam, p)),
+        }
+      : null,
+    second: saved.second,
+    missedIndexes: saved.missedIndexes ? new Set(saved.missedIndexes) : null,
+  };
+}
+
+function clearSaved() {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (e) {
+    /* nothing to clear */
+  }
+}
+
 // ---------- top-level navigation ----------
 
 function showLogin() {
-  state = { phase: "login" };
+  state = { phase: "login", greeted: false };
   render();
 }
 
 function showMenu() {
-  state = { phase: "menu" };
+  state = { phase: "menu", greeted: true };
   render();
 }
 
 function startExam(exam) {
   state = {
     phase: "quiz",
+    greeted: true,
     exam,
     pass: 1,
     first: null,
@@ -100,12 +196,16 @@ function startSecondPass() {
 
 function render() {
   window.scrollTo(0, 0);
-  topbarEl.hidden = state.phase === "login";
-  if (state.phase === "login") return renderLogin();
-  if (state.phase === "menu") return renderMenu();
-  if (state.phase === "quiz") return renderQuiz();
-  if (state.phase === "results") return renderResults();
-  if (state.phase === "review") return renderReview();
+  const chromeless = state.phase === "login" || state.phase === "menu";
+  topbarEl.hidden = chromeless;
+
+  if (state.phase === "login") renderLogin();
+  else if (state.phase === "menu") renderMenu();
+  else if (state.phase === "quiz") renderQuiz();
+  else if (state.phase === "results") renderResults();
+  else if (state.phase === "review") renderReview();
+
+  save();
 }
 
 // ---------- login ----------
@@ -116,31 +216,40 @@ function renderLogin() {
   const wrap = document.createElement("div");
   wrap.className = "login";
 
-  const greeting = document.createElement("h2");
-  greeting.className = "login-greeting";
-  greeting.textContent = "hi";
+  if (state.greeted) {
+    const greeting = document.createElement("h2");
+    greeting.className = "login-greeting";
+    greeting.textContent = "hi";
 
+    const go = document.createElement("button");
+    go.type = "button";
+    go.className = "btn primary login-submit";
+    go.textContent = "Continue";
+    go.addEventListener("click", showMenu);
+
+    wrap.append(greeting, go);
+    appEl.appendChild(wrap);
+    go.focus();
+    return;
+  }
+
+  // A single-input form submits on Enter in every browser; the keydown
+  // handler is a backstop in case implicit submission is suppressed.
   const form = document.createElement("form");
-  form.className = "login-form";
 
   const input = document.createElement("input");
   input.type = "password";
   input.className = "login-input";
-  input.placeholder = "Password";
   input.setAttribute("aria-label", "Password");
   input.autocomplete = "off";
-
-  const submit = document.createElement("button");
-  submit.type = "submit";
-  submit.className = "btn primary login-submit";
-  submit.textContent = "Continue";
 
   const error = document.createElement("p");
   error.className = "login-error";
 
   const attempt = () => {
     if (input.value === PASSWORD) {
-      showMenu();
+      state.greeted = true;
+      render();
     } else {
       error.textContent = "Not quite — try again.";
       input.value = "";
@@ -152,16 +261,14 @@ function renderLogin() {
     e.preventDefault();
     attempt();
   });
-  // Enter alone doesn't reliably trigger implicit submission everywhere.
   input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      attempt();
-    }
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    attempt();
   });
 
-  form.append(input, submit, error);
-  wrap.append(greeting, form);
+  form.appendChild(input);
+  wrap.append(form, error);
   appEl.appendChild(wrap);
   input.focus();
 }
@@ -169,9 +276,6 @@ function renderLogin() {
 // ---------- menu ----------
 
 function renderMenu() {
-  titleEl.textContent = "Flashcards";
-  phaseEl.textContent = "Choose a practice exam";
-  setProgress(0);
   appEl.innerHTML = "";
 
   const board = document.createElement("div");
@@ -179,6 +283,7 @@ function renderMenu() {
 
   EXAMS.forEach((exam) => {
     const tile = document.createElement("button");
+    tile.type = "button";
     tile.className = "tile";
 
     const name = document.createElement("span");
@@ -304,6 +409,7 @@ function questionCard(item, number, total) {
         el.setAttribute("aria-checked", String(on));
       });
       updateUnansweredNote();
+      save();
     });
     choices.appendChild(btn);
   });
@@ -331,6 +437,7 @@ function submitPass() {
 function renderResults() {
   const first = state.first;
   const second = state.second;
+  titleEl.textContent = state.exam.name;
   phaseEl.textContent = "Results";
   setProgress(1);
   appEl.innerHTML = "";
@@ -393,6 +500,7 @@ function renderReview() {
   const start = state.page * PER_PAGE;
   const visible = cards.slice(start, start + PER_PAGE);
 
+  titleEl.textContent = state.exam.name;
   phaseEl.textContent = "Review · click a question to reveal the answer";
   setProgress((state.page + 1) / total);
   appEl.innerHTML = "";
@@ -500,4 +608,13 @@ function button(label, className, onClick) {
   return b;
 }
 
-showLogin();
+homeBtn.addEventListener("click", showMenu);
+
+const resumed = restore();
+if (resumed) {
+  state = resumed;
+  render();
+} else {
+  clearSaved();
+  showLogin();
+}
