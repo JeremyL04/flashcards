@@ -361,165 +361,31 @@ const EXAMS = [
 
 // ============================================================
 //
-//  SET NOTES — Quantum Stat. Mech. & Geometric Blur
-//  ------------------------------------------------
-//  12 questions: cards 1-6 geometric blur, cards 7-12 quantum statistical
-//  mechanics. Grouped rather than shuffled, since this is a targeted drill.
+//  SET NOTES — Geometric Optics & Quantum Stat. Mech.
+//  --------------------------------------------------
+//  Cards 1-6 geometric optics, cards 7-12 quantum statistical mechanics.
 //
-//  "Geometric blur" here means image smearing you get from ray geometry
-//  alone, no diffraction required. Four distinct mechanisms appear:
-//    - motion blur          (cards 1, 2)  image speed = object speed x magnification
-//    - aperture/defocus     (card 5)      circle of confusion
-//    - extended-source      (card 4)      penumbra = source size x (L_far/L_near)
-//    - pinhole              (cards 3, 6)  geometric spread competing with diffraction
-//  All four reduce to the same idea: a point in the object maps to a patch,
-//  not a point, and the patch size follows from similar triangles.
+//  Revised from the earlier blur-only version: two blur questions kept
+//  (motion blur, pinhole), the penumbra / defocus / dominant-term cards
+//  dropped as too convoluted, and four short general-optics questions added.
+//  Stems are deliberately terse to match ETS pacing (~1.7 min/question).
 //
-//  Reference points on the released forms:
-//    GR8677 Q100 — pinhole camera, d for the sharpest image (answer sqrt(lambda D)).
-//                  Cards 3 and 6 work the same competition from other directions
-//                  (resulting blur size; which term dominates off-optimum).
-//    GR8677 Q88  — ordering of fermion / classical / boson pressures.
-//    GR9677 Q94, GR9277 Q71, GR0877 Q78, GR0177 Q49 — two-level Boltzmann systems.
-//                  Deliberately avoided here; the released forms mine that vein hard
-//                  and barely touch degenerate gases, BEC, or exchange counting.
+//  Gaps on the released forms that cards 3-6 target:
+//    apparent depth        — 0 questions across all six forms
+//    plane-mirror rotation — 0 questions
+//    lens in a medium      — 0 questions (lensmaker appears only via lens shape)
+//    numeric mirror imaging— mirrors appear twice, both purely qualitative
+//  Blur reference: GR8677 Q100 asks for the pinhole diameter giving the
+//  sharpest image; card 2 asks for the blur that results, same competition.
+//
+//  Cards are interleaved here, not grouped by topic as in the source file.
 // ============================================================
   {
-    "name": "Geometric Blur & Quantum Stat Mech",
+    "name": "Geometric Optics & Quantum Stat. Mech.",
     "cards": [
 
       {
-        "question": "A camera of focal length 50 mm photographs a car 25 m away that is moving perpendicular to the line of sight at 20 m/s. If the exposure time is 1/125 s, the length of the blurred streak on the sensor is most nearly",
-        "choices": [
-          "0.16 mm",
-          "0.32 mm",
-          "0.64 mm",
-          "1.3 mm",
-          "2.6 mm"
-        ],
-        "answer": "B",
-        "explanation": "The image moves at the object's speed times the transverse magnification. For an object far outside the focal length the image forms essentially at the focal plane, so |m| = i/o ≈ f/o = 0.050/25 = 2.0 × 10⁻³. The image speed is then v_image = (20 m/s)(2.0 × 10⁻³) = 4.0 × 10⁻² m/s = 40 mm/s. Over an exposure of 1/125 s = 8.0 ms the streak is (40 mm/s)(0.0080 s) = 0.32 mm. Note that the blur scales as f/o: doubling the focal length doubles the smear, which is why long lenses demand short exposures."
-      },
-
-      {
-        "question": "An aerial survey camera of focal length 30 cm photographs the ground from an altitude of 3.0 km while the aircraft flies horizontally at 90 m/s. The longest exposure time for which the image blur does not exceed 0.020 mm is most nearly",
-        "choices": [
-          "0.55 ms",
-          "1.1 ms",
-          "2.2 ms",
-          "4.4 ms",
-          "8.8 ms"
-        ],
-        "answer": "C",
-        "explanation": "Same relation as the previous card, solved for the time. The magnification is m ≈ f/o = 0.30/3000 = 1.0 × 10⁻⁴, so the ground image sweeps across the film at v_image = (90 m/s)(1.0 × 10⁻⁴) = 9.0 × 10⁻³ m/s = 9.0 mm/s. Requiring v_image·t ≤ 0.020 mm gives t ≤ 0.020/9.0 = 2.2 × 10⁻³ s. Two checks worth making: the answer depends only on the ratio f/o, not on either separately, and it is the aircraft's horizontal speed that matters — vertical motion would change the magnification rather than smear the image transversely."
-      },
-
-      {
-        "question": "In a pinhole camera the pinhole-to-screen distance is 20 cm and the illumination has wavelength 550 nm. The pinhole diameter is chosen to make the image as sharp as possible. The resulting blur width on the screen is most nearly",
-        "choices": [
-          "0.011 mm",
-          "0.033 mm",
-          "0.11 mm",
-          "0.33 mm",
-          "1.1 mm"
-        ],
-        "answer": "D",
-        "explanation": "Two effects fight each other. Geometry alone smears a point into a patch about the size of the hole, b_geom ≈ d. Diffraction spreads the beam by roughly b_diff ≈ λD/d, which grows as the hole shrinks. The total blur b ≈ d + λD/d is minimised when the two are comparable, at d ≈ √(λD) — and at that point the blur itself is also of order √(λD). Numerically √(550 × 10⁻⁹ × 0.20) = √(1.1 × 10⁻⁷) = 3.3 × 10⁻⁴ m = 0.33 mm. This is the companion result to the classic question that asks for the optimal d: the optimal hole size and the blur it produces are the same order of magnitude. Note the consequence — a pinhole camera's resolution improves only as √D, so making the box longer helps slowly."
-      },
-
-      {
-        "question": "A circular lamp of diameter 8.0 cm faces a wall 2.0 m away. A small opaque disk of diameter 2.0 cm is mounted coaxially 1.5 m from the lamp, so that it is 0.50 m from the wall. The width of the penumbra — the partially shaded ring surrounding the full shadow — on the wall is most nearly",
-        "choices": [
-          "0.67 cm",
-          "2.0 cm",
-          "2.7 cm",
-          "8.0 cm",
-          "10.7 cm"
-        ],
-        "answer": "C",
-        "explanation": "Each point of the extended lamp casts its own sharp shadow of the disk, and those shadows are mutually displaced; the penumbra is the region covered by some but not all of them. Take the two extreme source points, at ±S/2. A ray from the source edge grazing the disk edge lands on the wall at a radius r = d/2 + (d/2 ∓ S/2)(L_w/L_s), where L_s = 1.5 m is lamp-to-disk and L_w = 0.50 m is disk-to-wall. Subtracting the two gives a penumbra width of exactly S·L_w/L_s = (8.0 cm)(0.50/1.5) = 2.7 cm. Notice the disk's own diameter cancels completely — it sets where the shadow is, not how blurred its edge is. This is the same similar-triangles relation as the geometric unsharpness of a radiograph, where a finite X-ray focal spot blurs the image by (spot size) × (object-to-film)/(source-to-object)."
-      },
-
-      {
-        "question": "A camera lens of focal length 50 mm and aperture diameter 25 mm is focused at infinity, so the sensor lies in the focal plane. A point source located 5.0 m in front of the lens is photographed. The diameter of the blur circle it produces on the sensor is most nearly",
-        "choices": [
-          "0.25 mm",
-          "0.50 mm",
-          "1.0 mm",
-          "2.0 mm",
-          "4.0 mm"
-        ],
-        "answer": "A",
-        "explanation": "The nearby source images behind the focal plane, so the converging cone is intercepted before it comes to a point, and the sensor records a disk. From 1/o + 1/i = 1/f, i = fo/(o − f) = (50)(5000)/4950 = 50.5 mm, so the focus falls Δ = i − f = 0.505 mm past the sensor. By similar triangles on the converging cone, the blur diameter is c = D·Δ/i = 25 × 0.505/50.5 = 0.25 mm. A useful approximate form: since Δ ≈ f²/o for a distant object, c ≈ Df/o = (25)(50)/5000 = 0.25 mm — the blur circle is just the aperture scaled by the magnification. This is why stopping down (reducing D) increases depth of field: the blur circle shrinks in direct proportion to the aperture."
-      },
-
-      {
-        "question": "A pinhole camera uses a hole of diameter 0.50 mm with the screen 15 cm behind it, illuminated at wavelength 500 nm. Which of the following best describes the image blur?",
-        "choices": [
-          "Diffraction dominates; the blur is about 0.5 mm and would decrease if the hole were made smaller.",
-          "Diffraction dominates; the blur is about 0.15 mm and is already as small as it can be.",
-          "The two effects are comparable; the hole is very nearly the optimum size.",
-          "Geometric spreading dominates; the blur is about 0.15 mm and would decrease if the hole were made larger.",
-          "Geometric spreading dominates; the blur is about 0.5 mm and would decrease if the hole were made smaller."
-        ],
-        "answer": "E",
-        "explanation": "Evaluate both terms. Geometric spreading gives b_geom ≈ d = 0.50 mm. Diffraction gives b_diff ≈ λD/d = (500 × 10⁻⁹)(0.15)/(0.50 × 10⁻³) = 1.5 × 10⁻⁴ m = 0.15 mm. The geometric term is more than three times larger, so it sets the blur at about 0.5 mm. Equivalently, the optimum hole for this screen distance is √(λD) = √(500 × 10⁻⁹ × 0.15) = 0.27 mm, and 0.50 mm is well above it — the hole is too big, and shrinking it toward 0.27 mm would sharpen the image. Past that point diffraction takes over and further shrinking makes things worse again, which is the non-monotonic behaviour this pair of effects is famous for."
-      },
-
-      {
-        "question": "In a system of noninteracting fermions in thermal equilibrium at temperature T with chemical potential μ, the average occupation number of a single-particle state whose energy lies exactly kT above μ is most nearly",
-        "choices": [
-          "0.12",
-          "0.27",
-          "0.50",
-          "0.73",
-          "0.88"
-        ],
-        "answer": "B",
-        "explanation": "The Fermi-Dirac distribution is f(E) = 1/(e^((E−μ)/kT) + 1). With E − μ = kT the exponent is exactly 1, so f = 1/(e + 1) = 1/3.718 = 0.269. Choice D, 0.73, is the occupancy one kT below μ — the distribution is antisymmetric about μ in the sense f(μ + x) + f(μ − x) = 1, so those two values must sum to 1, which is a fast way to check your arithmetic. Choice C is the value exactly at E = μ, true at any temperature and worth memorising as the operational definition of the chemical potential for fermions."
-      },
-
-      {
-        "question": "The conduction electrons in a metal may be treated as a degenerate free-electron gas at T = 0. If the number density of conduction electrons were increased by a factor of 8 with no other change, the Fermi energy would increase by a factor of",
-        "choices": [
-          "2",
-          "4",
-          "8",
-          "16",
-          "64"
-        ],
-        "answer": "B",
-        "explanation": "Filling states up to the Fermi momentum in a box gives N ∝ k_F³V, so k_F ∝ n^(1/3), and since E_F = ħ²k_F²/2m for a nonrelativistic gas, E_F ∝ n^(2/3). An increase of n by 8 therefore raises E_F by 8^(2/3) = 4. Choice C is the trap of assuming linear scaling. Worth noting that the exponent depends on dimensionality and dispersion: in two dimensions E_F ∝ n, and for an ultrarelativistic gas where E = ħkc the Fermi energy would go as n^(1/3) instead."
-      },
-
-      {
-        "question": "Two identical particles are to be distributed among three nondegenerate single-particle states, with all distinct microstates taken as equally likely. The ratio of the probability that both particles occupy the same state when the particles are bosons, to that probability when the particles are treated as distinguishable, is",
-        "choices": [
-          "1/2",
-          "2/3",
-          "1",
-          "3/2",
-          "3"
-        ],
-        "answer": "D",
-        "explanation": "Count the microstates. Distinguishable particles: each independently picks one of three states, giving 3² = 9 arrangements, of which 3 have both in the same state, so P = 3/9 = 1/3. Bosons: the particles are not separately labelled, so a microstate is just an occupancy list, and the count is C(3 + 2 − 1, 2) = 6 — three with both in one state and three with the particles in different states — giving P = 3/6 = 1/2. The ratio is (1/2)/(1/3) = 3/2. Bosons are thus more likely than classical particles to be found bunched in the same state, which is the microscopic root of stimulated emission and Bose-Einstein condensation. For fermions the same count gives P = 0, and this bunching-versus-exclusion contrast is what drives the pressure ordering P_fermion > P_classical > P_boson."
-      },
-
-      {
-        "question": "The low-temperature molar heat capacity of a metal has the form C = γT + AT³. For copper the two terms are equal at about 3.0 K. At a temperature of 0.30 K, the ratio of the electronic contribution to the lattice contribution is most nearly",
-        "choices": [
-          "0.01",
-          "1",
-          "10",
-          "30",
-          "100"
-        ],
-        "answer": "E",
-        "explanation": "The ratio is C_el/C_lat = γT/(AT³) = (γ/A)/T². The two terms being equal at T₀ = 3.0 K means γ/A = T₀², so the ratio is simply (T₀/T)². At T = 0.30 K this is (3.0/0.30)² = 10² = 100. Choice C, 10, is the ratio of temperatures rather than its square. The physics behind the two powers: the linear electronic term arises because only electrons within about kT of the Fermi surface can be thermally excited, a fraction ~T of them each gaining ~kT; the cubic lattice term is the Debye phonon result. Because the electronic term dies away more slowly, it always wins at sufficiently low temperature — which is how γ, and hence the density of states at the Fermi level, is measured experimentally."
-      },
-
-      {
-        "question": "An ideal gas of noninteracting bosons of mass m and number density n undergoes Bose-Einstein condensation at temperature T_c. A second ideal Bose gas, whose particles have mass 4m and number density 8n, condenses at a temperature of",
+        "question": "An ideal Bose gas of particles of mass m and number density n condenses at temperature T_c. A second ideal Bose gas, of particles of mass 4m and number density 8n, condenses at",
         "choices": [
           "T_c/4",
           "T_c/2",
@@ -528,20 +394,150 @@ const EXAMS = [
           "4T_c"
         ],
         "answer": "C",
-        "explanation": "Condensation sets in when the thermal de Broglie wavelength becomes comparable to the interparticle spacing, i.e. when nλ_T³ is of order unity with λ_T = h/√(2πmkT). Solving gives kT_c ∝ ħ²n^(2/3)/m, so T_c ∝ n^(2/3)/m. Applying both changes: the density factor contributes 8^(2/3) = 4, and the mass factor contributes 1/4. The two exactly cancel and the condensation temperature is unchanged. The scaling itself is the point worth carrying away — heavier particles and dilute gases condense only at lower temperatures, which is why atomic BECs require nanokelvin conditions while the far lighter, denser electron pairs in a superconductor manage an analogous transition at kelvin temperatures."
+        "explanation": "Condensation begins when the thermal de Broglie wavelength approaches the interparticle spacing, giving kT_c ∝ ħ²n^(2/3)/m. The density change contributes 8^(2/3) = 4 and the mass change contributes 1/4, so the two cancel exactly and T_c is unchanged. The scaling is the point: heavier and more dilute means colder, which is why atomic BECs need nanokelvin temperatures."
       },
 
       {
-        "question": "In applying Bose-Einstein statistics to the photons of blackbody radiation in a cavity, the chemical potential of the photon gas is set to zero. The reason is that",
+        "question": "A camera of focal length 50 mm photographs a car 25 m away moving perpendicular to the line of sight at 20 m/s. For an exposure of 1/125 s, the blur on the sensor is most nearly",
         "choices": [
-          "photons are massless, and the chemical potential of any massless particle vanishes",
-          "photons do not interact with one another, so no energy is required to add one",
-          "photons are their own antiparticles",
-          "the number of photons is not conserved, since the cavity walls freely emit and absorb them",
-          "the photon gas is always in the classical limit, where μ → 0"
+          "0.16 mm",
+          "0.32 mm",
+          "0.64 mm",
+          "1.3 mm",
+          "2.6 mm"
+        ],
+        "answer": "B",
+        "explanation": "The image moves at the object's speed times the magnification. For a distant object the image sits essentially at the focal plane, so m ≈ f/o = 0.050/25 = 2.0 × 10⁻³. Then v_image = (20)(2.0 × 10⁻³) = 40 mm/s, and in 1/125 s = 8.0 ms the streak is 0.32 mm. Blur scales as f/o, which is why long lenses need short exposures."
+      },
+
+      {
+        "question": "The conduction electrons in a metal form a degenerate free-electron gas. If the number density were increased by a factor of 8 with no other change, the Fermi energy would increase by a factor of",
+        "choices": [
+          "2",
+          "4",
+          "8",
+          "16",
+          "64"
+        ],
+        "answer": "B",
+        "explanation": "Filling states up to the Fermi momentum gives N ∝ k_F³V, so k_F ∝ n^(1/3), and with E_F = ħ²k_F²/2m this makes E_F ∝ n^(2/3). Thus 8^(2/3) = 4. Choice C assumes linear scaling. The exponent depends on dimensionality and dispersion — in 2D E_F ∝ n, and for an ultrarelativistic gas (E = ħkc) it would go as n^(1/3)."
+      },
+
+      {
+        "question": "An object is placed 15 cm in front of a concave mirror whose radius of curvature is 20 cm. The image is",
+        "choices": [
+          "real, inverted, and 30 cm in front of the mirror",
+          "real, upright, and 30 cm in front of the mirror",
+          "virtual, upright, and 30 cm behind the mirror",
+          "real, inverted, and 6.0 cm in front of the mirror",
+          "virtual, inverted, and 6.0 cm behind the mirror"
+        ],
+        "answer": "A",
+        "explanation": "A concave mirror has f = R/2 = +10 cm. From 1/o + 1/i = 1/f: 1/i = 1/10 − 1/15 = 1/30, so i = +30 cm — positive, meaning real and in front. The magnification m = −i/o = −2 is negative, so the image is inverted and twice the object's size. The object sitting between f and 2f is exactly the projector configuration: real, inverted, magnified. Had the object been inside the focal length, i would have come out negative and the image would be virtual and upright."
+      },
+
+      {
+        "question": "Two identical particles are distributed among three nondegenerate single-particle states, all distinct microstates being equally likely. The ratio of the probability that both occupy the same state for bosons, to that for distinguishable particles, is",
+        "choices": [
+          "1/2",
+          "2/3",
+          "1",
+          "3/2",
+          "3"
         ],
         "answer": "D",
-        "explanation": "The chemical potential is the energy cost of adding one particle at fixed entropy and volume, and it enters as a Lagrange multiplier enforcing a fixed particle number. Photons are continually created and destroyed by the cavity walls, so N is not conserved and there is no such constraint; equivalently, equilibrium is reached by minimising the free energy with respect to N, and ∂F/∂N = μ = 0. The occupation of a mode then reduces to the Planck factor 1/(e^(ħω/kT) − 1). Choice A is a plausible-sounding but false generalisation — masslessness is not the criterion, as shown by a gas of massless particles whose number IS conserved, which would have μ ≠ 0. Note the corollary: with μ = 0 fixed, the photon number density is not a free parameter but is determined entirely by T, scaling as T³."
+        "explanation": "Distinguishable: each particle independently picks a state, 3² = 9 arrangements, 3 with both together, so P = 1/3. Bosons: a microstate is only an occupancy list, giving C(3+2−1, 2) = 6 arrangements, again 3 with both together, so P = 1/2. The ratio is 3/2. Bosons bunch more than classical particles — the microscopic root of stimulated emission and Bose-Einstein condensation. For fermions P = 0, and this bunching-versus-exclusion contrast is what makes P_fermion > P_classical > P_boson."
+      },
+
+      {
+        "question": "A narrow beam of light strikes a plane mirror. The mirror is then rotated by 15° about an axis in its surface, perpendicular to the plane of incidence. The reflected beam rotates by",
+        "choices": [
+          "0°",
+          "7.5°",
+          "30°",
+          "15°",
+          "45°"
+        ],
+        "answer": "C",
+        "explanation": "Rotating the mirror by θ rotates the normal by θ, which changes the angle of incidence by θ and the angle of reflection by another θ, so the reflected ray swings through 2θ = 30°. This factor of two is the basis of the optical lever, used in galvanometers and in atomic-force microscopes to amplify small deflections. Note it holds for the mirror rotating, not the incident beam — rotating the incoming beam by θ moves the reflected beam by only θ."
+      },
+
+      {
+        "question": "The low-temperature molar heat capacity of a metal is C = γT + AT³, and for copper the two terms are equal at about 3.0 K. At 0.30 K the ratio of the electronic to the lattice contribution is most nearly",
+        "choices": [
+          "0.01",
+          "1",
+          "10",
+          "30",
+          "100"
+        ],
+        "answer": "E",
+        "explanation": "The ratio is γT/(AT³) = (γ/A)/T². Equality at T₀ means γ/A = T₀², so the ratio is just (T₀/T)² = (3.0/0.30)² = 100. Choice C is the temperature ratio without squaring. The linear electronic term arises because only electrons within ~kT of the Fermi surface can be excited; the cubic term is the Debye phonon result. The electronic term always wins at low enough T, which is how γ is measured."
+      },
+
+      {
+        "question": "In a system of noninteracting fermions at temperature T with chemical potential μ, the average occupation of a single-particle state with energy exactly kT above μ is most nearly",
+        "choices": [
+          "0.12",
+          "0.27",
+          "0.50",
+          "0.73",
+          "0.88"
+        ],
+        "answer": "B",
+        "explanation": "The Fermi-Dirac distribution is f(E) = 1/(e^((E−μ)/kT) + 1). With E − μ = kT the exponent is 1, so f = 1/(e + 1) = 0.269. Choice D is the occupancy one kT *below* μ; the distribution satisfies f(μ + x) + f(μ − x) = 1, so those two must sum to 1 — a quick way to check the arithmetic. Choice C is the value exactly at E = μ, true at any temperature."
+      },
+
+      {
+        "question": "A pinhole camera has its screen 20 cm behind the pinhole and is used at wavelength 550 nm. If the hole diameter is chosen to make the image as sharp as possible, the resulting blur is most nearly",
+        "choices": [
+          "0.011 mm",
+          "0.033 mm",
+          "0.11 mm",
+          "0.33 mm",
+          "1.1 mm"
+        ],
+        "answer": "D",
+        "explanation": "Geometry smears a point into a patch about the size of the hole, b ≈ d, while diffraction spreads it by b ≈ λD/d. The sum is minimised where the two are comparable, so both the optimal hole and the blur it leaves are of order √(λD) = √(550 × 10⁻⁹ × 0.20) = 0.33 mm. Resolution therefore improves only as √D — making the box longer helps slowly."
+      },
+
+      {
+        "question": "A thin lens made of glass of index 1.50 has a focal length of 20 cm in air. When the lens is fully immersed in water (n = 1.33), its focal length becomes most nearly",
+        "choices": [
+          "15 cm",
+          "20 cm",
+          "27 cm",
+          "40 cm",
+          "80 cm"
+        ],
+        "answer": "E",
+        "explanation": "The lensmaker's equation in a surrounding medium reads 1/f = (n_lens/n_medium − 1)(1/R₁ − 1/R₂). Only the prefactor changes, so f scales inversely with it: f_water/f_air = (1.50 − 1)/(1.50/1.33 − 1) = 0.50/0.128 = 3.9. Hence f ≈ 20 × 3.9 ≈ 78 cm, or about 80 cm. The lens becomes much weaker because refraction depends on the index *contrast* at each surface, not on the glass alone — and a lens immersed in a medium of its own index would have no focusing power at all."
+      },
+
+      {
+        "question": "In applying Bose-Einstein statistics to blackbody radiation, the chemical potential of the photon gas is set to zero because",
+        "choices": [
+          "photons are massless, and any massless particle has zero chemical potential",
+          "photons do not interact with one another",
+          "photons are their own antiparticles",
+          "the number of photons is not conserved, since the cavity walls freely emit and absorb them",
+          "the photon gas is always in the classical limit"
+        ],
+        "answer": "D",
+        "explanation": "The chemical potential enters as the multiplier enforcing a fixed particle number. Cavity walls create and destroy photons freely, so N is unconstrained and equilibrium instead requires ∂F/∂N = μ = 0, leaving the Planck factor 1/(e^(ħω/kT) − 1). Choice A is a plausible but false generalisation — a gas of massless particles with conserved number would have μ ≠ 0. With μ fixed at zero the photon density is set entirely by T, scaling as T³."
+      },
+
+      {
+        "question": "A coin lies on the bottom of a pool of water (n = 1.33) at a depth of 1.20 m. Viewed from directly above, the coin appears to be at a depth of most nearly",
+        "choices": [
+          "0.90 m",
+          "1.20 m",
+          "1.60 m",
+          "1.80 m",
+          "2.10 m"
+        ],
+        "answer": "A",
+        "explanation": "For near-normal viewing, refraction at a flat surface puts the image at an apparent depth d/n = 1.20/1.33 = 0.90 m. Rays bend away from the normal on leaving the water, so they appear to diverge from a point closer to the surface than the object. Choice C, 1.60 m, is d × n — the ratio inverted. The rule of thumb: looking into a denser medium, things look shallower by a factor n."
       }
 
     ]
