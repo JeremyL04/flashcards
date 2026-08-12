@@ -581,6 +581,29 @@ function reviewCard(card, deckIndex) {
       why.className = "explanation";
       why.textContent = card.explanation || "";
       panel.append(line, why);
+
+      // Optional per-card note on how heavily the released exams cover this
+      // topic. Written as parts separated by "|"; each becomes its own line.
+      if (card.coverage) {
+        const cov = document.createElement("div");
+        cov.className = "coverage";
+        const label = document.createElement("p");
+        label.className = "coverage-label";
+        label.textContent = "Coverage";
+        cov.appendChild(label);
+        card.coverage
+          .split("|")
+          .map((part) => part.trim())
+          .filter(Boolean)
+          .forEach((part) => {
+            const row = document.createElement("p");
+            row.className = "coverage-line";
+            row.textContent = part;
+            cov.appendChild(row);
+          });
+        panel.appendChild(cov);
+      }
+
       el.appendChild(panel);
     } else {
       const hint = document.createElement("p");
