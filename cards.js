@@ -1303,7 +1303,7 @@ const EXAMS = [
   },
 
   {
-    "name": "Practice Test A",
+    "name": "Practice Test 1",
     "cards": [
 
       // [CM/work-energy]
@@ -2010,7 +2010,7 @@ const EXAMS = [
   },
 
   {
-    "name": "Practice Test B",
+    "name": "Practice Test 2",
     "cards": [
 
       // [CM/SHM]
