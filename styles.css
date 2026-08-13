@@ -12,6 +12,10 @@
   --correct-soft: #e8f5ed;
   --flag: #9a3412;
   --flag-soft: #fdf0e7;
+  --warn: #92600b;
+  --warn-soft: #fdf4e3;
+  --danger: #a01b1b;
+  --danger-soft: #fceded;
   --shadow: 0 1px 2px rgba(20, 24, 31, 0.05);
 }
 
@@ -87,6 +91,44 @@ body {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.timer {
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  white-space: nowrap;
+}
+
+.timer .timer-limit { font-weight: 500; color: var(--ink-faint); }
+
+.timer.warn {
+  color: var(--warn);
+  border-color: var(--warn);
+  background: var(--warn-soft);
+}
+
+.timer.warn .timer-limit { color: var(--warn); }
+
+.timer.over {
+  color: var(--danger);
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.timer.over .timer-limit { color: var(--danger); }
 
 .progress { height: 2px; background: var(--rule-soft); }
 
@@ -442,6 +484,75 @@ button.btn:disabled { opacity: 0.35; cursor: not-allowed; }
   color: var(--flag);
 }
 
+/* ---------- pre-quiz briefing ---------- */
+
+.intro {
+  max-width: 620px;
+  margin: 2rem auto;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 2.25rem 2rem 2rem;
+}
+
+.intro h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+}
+
+.intro-sub {
+  margin: 0 0 1.5rem;
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+}
+
+.intro-clock {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+  border-radius: 5px;
+}
+
+.intro-clock-time {
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.intro-clock-note { color: var(--ink-faint); font-size: 0.85rem; }
+
+.intro ul {
+  margin: 0 0 1.75rem;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.intro li { margin-bottom: 0.5rem; }
+
+.intro li:last-child { margin-bottom: 0; }
+
+.swatch {
+  display: inline-block;
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 2px;
+  margin-right: 0.15rem;
+  vertical-align: baseline;
+}
+
+.swatch.warn { background: var(--warn); }
+
+.swatch.over { background: var(--danger); }
+
+.intro-actions { display: flex; justify-content: center; }
+
 /* ---------- exam menu ---------- */
 
 .board {
@@ -518,6 +629,10 @@ button.tile:hover { border-color: var(--accent); background: var(--accent-soft);
     --correct-soft: #16291f;
     --flag: #e08a5a;
     --flag-soft: #2b1f18;
+    --warn: #e3b341;
+    --warn-soft: #2b2415;
+    --danger: #f08a8a;
+    --danger-soft: #2e1a1a;
     --shadow: none;
   }
   .choice.selected .choice-letter,

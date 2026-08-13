@@ -10,6 +10,8 @@ const PER_PAGE = 4;
 const SHUFFLE_CHOICES_ON_RETRY = true;
 const MENU_SLOTS = 25; // 5x5 board
 const STORAGE_KEY = "flashcards-progress";
+const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
+const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
 
 // Not real security: this file is public, so anyone who views the page
 // source can read it. It only keeps casual visitors out.
@@ -24,8 +26,80 @@ const titleEl = document.getElementById("deck-title");
 const topbarEl = document.querySelector(".topbar");
 const progressEl = document.getElementById("progress-fill");
 const homeBtn = document.getElementById("home-btn");
+const timerEl = document.getElementById("timer");
 
 let state;
+let tickHandle = null;
+
+// ---------- timer ----------
+//
+// Counts up while a pass is in progress and pauses everywhere else, so time
+// spent on the results screen or in review is not charged to the attempt.
+// Time while the tab is closed is not counted either: `save` banks the elapsed
+// total, and a restored attempt resumes from that banked figure.
+
+function elapsedMs() {
+  const t = state && state.timer;
+  if (!t) return 0;
+  return t.banked + (t.running ? Date.now() - t.since : 0);
+}
+
+function setTimerRunning(on) {
+  const t = state && state.timer;
+  if (!t) return;
+  if (on && !t.running) {
+    t.since = Date.now();
+    t.running = true;
+  } else if (!on && t.running) {
+    t.banked += Date.now() - t.since;
+    t.running = false;
+  }
+}
+
+function formatClock(ms) {
+  const total = Math.max(0, Math.floor(ms / 1000));
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+}
+
+function recommendedMs(exam) {
+  return exam.cards.length * SECONDS_PER_QUESTION * 1000;
+}
+
+function paintTimer() {
+  const t = state && state.timer;
+  const show = t && (state.phase === "quiz" || state.phase === "results");
+  timerEl.hidden = !show;
+  if (!show) return;
+
+  const used = elapsedMs();
+  timerEl.innerHTML = `<span></span><span class="timer-limit"></span>`;
+  timerEl.firstElementChild.textContent = formatClock(used);
+  timerEl.lastElementChild.textContent = ` / ${formatClock(t.limit)}`;
+
+  const ratio = t.limit > 0 ? used / t.limit : 0;
+  timerEl.classList.toggle("warn", ratio >= WARN_AT && ratio < 1);
+  timerEl.classList.toggle("over", ratio >= 1);
+}
+
+let ticksSinceSave = 0;
+
+function syncTicking() {
+  const shouldTick = state && state.phase === "quiz";
+  if (shouldTick && !tickHandle) {
+    tickHandle = setInterval(() => {
+      paintTimer();
+      // Bank the elapsed total periodically so closing the tab mid-page
+      // loses at most a few seconds of credit.
+      if (++ticksSinceSave >= 5) {
+        ticksSinceSave = 0;
+        save();
+      }
+    }, 1000);
+  } else if (!shouldTick && tickHandle) {
+    clearInterval(tickHandle);
+    tickHandle = null;
+  }
+}
 
 function shuffled(arr) {
   const out = arr.slice();
@@ -105,6 +179,10 @@ function save() {
           : null,
         second: state.second ?? null,
         missedIndexes: state.missedIndexes ? [...state.missedIndexes] : null,
+        // Bank the running total so a closed tab does not accrue time.
+        timer: state.timer
+          ? { banked: elapsedMs(), running: state.timer.running, limit: state.timer.limit }
+          : null,
       })
     );
   } catch (e) {
@@ -142,6 +220,10 @@ function restore() {
       : null,
     second: saved.second,
     missedIndexes: saved.missedIndexes ? new Set(saved.missedIndexes) : null,
+    // Resume paused; render restarts the clock if a pass is on screen.
+    timer: saved.timer
+      ? { banked: saved.timer.banked, running: false, since: 0, limit: saved.timer.limit }
+      : null,
   };
 }
 
@@ -165,6 +247,11 @@ function showMenu() {
   render();
 }
 
+function showIntro(exam) {
+  state = { phase: "intro", greeted: true, exam };
+  render();
+}
+
 function startExam(exam) {
   state = {
     phase: "quiz",
@@ -175,6 +262,7 @@ function startExam(exam) {
     second: null,
     items: exam.cards.map((card, i) => makeItem(card, i, false)),
     page: 0,
+    timer: { banked: 0, running: false, since: 0, limit: recommendedMs(exam) },
   };
   render();
 }
@@ -199,12 +287,18 @@ function render() {
   const chromeless = state.phase === "login" || state.phase === "menu";
   topbarEl.hidden = chromeless;
 
+  // The clock advances only while a pass is on screen.
+  setTimerRunning(state.phase === "quiz");
+
   if (state.phase === "login") renderLogin();
   else if (state.phase === "menu") renderMenu();
+  else if (state.phase === "intro") renderIntro();
   else if (state.phase === "quiz") renderQuiz();
   else if (state.phase === "results") renderResults();
   else if (state.phase === "review") renderReview();
 
+  paintTimer();
+  syncTicking();
   save();
 }
 
@@ -273,6 +367,49 @@ function renderLogin() {
   input.focus();
 }
 
+// ---------- pre-quiz briefing ----------
+
+function renderIntro() {
+  const exam = state.exam;
+  titleEl.textContent = exam.name;
+  phaseEl.textContent = "Before you start";
+  setProgress(0);
+  appEl.innerHTML = "";
+
+  const box = document.createElement("div");
+  box.className = "intro";
+  box.innerHTML = `
+    <h2></h2>
+    <p class="intro-sub"></p>
+    <div class="intro-clock">
+      <span class="intro-clock-time"></span>
+      <span class="intro-clock-note"></span>
+    </div>
+    <ul>
+      <li>A clock starts when you begin and runs in the corner of the screen.</li>
+      <li>Next to it is the recommended time for the whole set.</li>
+      <li>It turns <span class="swatch warn"></span> amber once you have used
+          three quarters of that time, and
+          <span class="swatch over"></span> red once you go past it.</li>
+      <li><strong>Nothing stops when time runs out.</strong> The clock keeps
+          counting and you can keep working — it is a pacing guide, not a limit.</li>
+      <li>The clock pauses while you are reading your score or the answers.</li>
+    </ul>`;
+
+  box.querySelector("h2").textContent = exam.name;
+  box.querySelector(".intro-sub").textContent =
+    `${exam.cards.length} questions · ${SECONDS_PER_QUESTION} seconds per question`;
+  box.querySelector(".intro-clock-time").textContent = formatClock(recommendedMs(exam));
+  box.querySelector(".intro-clock-note").textContent = "recommended for the full set";
+
+  const actions = document.createElement("div");
+  actions.className = "intro-actions";
+  actions.appendChild(button("Start", "btn primary", () => startExam(exam)));
+  box.appendChild(actions);
+
+  appEl.appendChild(box);
+}
+
 // ---------- menu ----------
 
 function renderMenu() {
@@ -295,7 +432,7 @@ function renderMenu() {
     count.textContent = `${exam.cards.length} questions`;
 
     tile.append(name, count);
-    tile.addEventListener("click", () => startExam(exam));
+    tile.addEventListener("click", () => showIntro(exam));
     board.appendChild(tile);
   });
 
