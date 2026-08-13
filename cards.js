@@ -1300,5 +1300,1419 @@ const EXAMS = [
       }
 
     ]
+  },
+
+  {
+    "name": "Practice Test A",
+    "cards": [
+
+      // [CM/work-energy]
+      {
+        "question": "A block slides onto a horizontal surface at 6.0 m/s. The coefficient of kinetic friction grows with distance as μ = αx, where α = 0.20 m⁻¹ and x is measured from the entry point. Taking g = 9.8 m/s², the distance the block slides before stopping is most nearly",
+        "choices": [
+          "2.1 m",
+          "3.0 m",
+          "4.3 m",
+          "6.1 m",
+          "9.2 m"
+        ],
+        "answer": "C",
+        "explanation": "The friction force is αmgx, so the work-energy theorem gives ½mv₀² = ∫₀^d αmgx dx = ½αmgd². Hence d = v₀/√(αg) = 6.0/√(0.20 × 9.8) = 6.0/1.4 = 4.3 m. Note the mass cancels, so it is never needed. The 9.2 m distractor is what you get by treating α as a constant coefficient μ = 0.20 and using v₀²/(2μg), forgetting that the friction builds up from zero."
+      },
+
+      // [QM/uncertainty principle]
+      {
+        "question": "An electron is confined to a region of nuclear size, Δx = 5.0 × 10⁻¹⁵ m. Estimating its momentum by Δp ≈ ħ/Δx with ħ = h/2π, h = 6.63 × 10⁻³⁴ J·s, c = 3.0 × 10⁸ m/s, e = 1.6 × 10⁻¹⁹ C and m_e = 9.11 × 10⁻³¹ kg, the minimum energy of the electron is most nearly",
+        "choices": [
+          "1.5 keV",
+          "20 keV",
+          "4.0 MeV",
+          "40 MeV",
+          "1.5 GeV"
+        ],
+        "answer": "D",
+        "explanation": "ħ/Δx gives pc = ħc/Δx ≈ (1.05 × 10⁻³⁴ × 3.0 × 10⁸)/(5.0 × 10⁻¹⁵ × 1.6 × 10⁻¹⁹ eV) ≈ 4.0 × 10⁷ eV = 40 MeV. Since pc = 40 MeV vastly exceeds m_ec² = 0.51 MeV, the electron is ultrarelativistic and E ≈ pc = 40 MeV. The 1.5 GeV distractor comes from applying the nonrelativistic p²/2m, which is illegitimate here. This estimate is the standard argument that electrons cannot be nuclear constituents."
+      },
+
+      // [EM/image charges]
+      {
+        "question": "A point charge +q is held a distance d from an infinite grounded conducting plane. The work that an external agent must do to move the charge slowly out to infinity is",
+        "choices": [
+          "q²/(16πε₀d)",
+          "q²/(8πε₀d)",
+          "q²/(4πε₀d)",
+          "q²/(32πε₀d)",
+          "zero, because the plane is grounded"
+        ],
+        "answer": "A",
+        "explanation": "The attractive force on the charge is that of an image −q at distance 2d, F = q²/(4πε₀(2z)²) at height z. The external work is ∫_d^∞ q²/(16πε₀z²) dz = q²/(16πε₀d). The q²/(8πε₀d) distractor is the interaction energy of a genuine charge pair separated by 2d; it is wrong here because the image is not a real charge and moves as the charge moves, which costs exactly half as much. Grounding does not make the energy vanish, since real induced charge is attracted to q."
+      },
+
+      // [TS/heat conduction]
+      {
+        "question": "Two rods of equal length and equal cross-sectional area are joined end to end, with their sides insulated. The free end of rod 1 (thermal conductivity k) is held at 100 °C and the free end of rod 2 (thermal conductivity 3k) is held at 0 °C. In the steady state, the temperature of the junction is most nearly",
+        "choices": [
+          "12 °C",
+          "25 °C",
+          "50 °C",
+          "67 °C",
+          "75 °C"
+        ],
+        "answer": "B",
+        "explanation": "In steady state the same heat current flows through both rods: k(100 − T)/L = 3k(T − 0)/L, so 100 − T = 3T and T = 25 °C. The junction sits close to the end of the better conductor, because the better conductor supports the smaller temperature drop. The 75 °C distractor comes from inverting the ratio, i.e. assigning the larger drop to the more conductive rod; 50 °C ignores the conductivity difference entirely."
+      },
+
+      // [OW/polarization]
+      {
+        "question": "Sunlight strikes the flat surface of a still pond of index of refraction 1.33. The angle of incidence at which the reflected light is completely linearly polarized is most nearly",
+        "choices": [
+          "33°",
+          "37°",
+          "49°",
+          "53°",
+          "57°"
+        ],
+        "answer": "D",
+        "explanation": "Complete polarization on reflection occurs at Brewster's angle, tan θ_B = n₂/n₁ = 1.33, so θ_B = 53°. At this angle the reflected and refracted rays are perpendicular and the component polarized in the plane of incidence cannot be radiated into the reflected direction. The 49° distractor is the critical angle for total internal reflection, arcsin(1/1.33), which applies to light going the other way and is a different phenomenon; 37° is the complement of the correct answer."
+      },
+
+      // [CM/rotational dynamics]
+      {
+        "question": "A uniform disk of radius R is spun about its horizontal symmetry axis to angular speed ω₀ and then gently set down on a floor with coefficient of kinetic friction μ, its center initially at rest. When the disk finally rolls without slipping, the speed of its center is",
+        "choices": [
+          "0",
+          "ω₀R/4",
+          "ω₀R/3",
+          "ω₀R/2",
+          "2ω₀R/3"
+        ],
+        "answer": "C",
+        "explanation": "Friction acts forward, so v = μgt, while the torque −μmgR about the center gives ω = ω₀ − 2μgt/R for I = ½mR². Rolling begins when v = ωR: μgt = ω₀R − 2μgt, so v = ω₀R/3. Equivalently, angular momentum about the contact line is conserved: ½mR²ω₀ = (3/2)mR²ω_f. The coefficient μ is a red herring — it sets how long the slipping lasts but not the final speed. The ω₀R/2 distractor comes from equating initial and final kinetic energies, but sliding friction dissipates energy."
+      },
+
+      // [QM/harmonic oscillator]
+      {
+        "question": "For the ground state of a one-dimensional quantum harmonic oscillator of angular frequency ω, the expectation value of the potential energy is",
+        "choices": [
+          "0",
+          "¼ħω",
+          "½ħω",
+          "¾ħω",
+          "ħω"
+        ],
+        "answer": "B",
+        "explanation": "The virial theorem for a quadratic potential gives ⟨T⟩ = ⟨V⟩, and their sum is the ground-state energy ½ħω, so ⟨V⟩ = ¼ħω. Direct evaluation with ⟨x²⟩ = ħ/2mω gives ½mω²⟨x²⟩ = ¼ħω, confirming it. The ½ħω distractor is the total energy, chosen by students who forget that half of the zero-point energy is kinetic; 0 would be the classical ground-state value for a particle sitting at the minimum."
+      },
+
+      // [SP/fission & fusion]
+      {
+        "question": "In the reaction ²H + ³H → ⁴He + n the masses, in unified mass units, are 2.014102, 3.016049, 4.002603 and 1.008665, and 1 u is equivalent to 931.5 MeV. The energy released is most nearly",
+        "choices": [
+          "1.8 MeV",
+          "3.5 MeV",
+          "14 MeV",
+          "18 MeV",
+          "176 MeV"
+        ],
+        "answer": "D",
+        "explanation": "The mass defect is (2.014102 + 3.016049) − (4.002603 + 1.008665) = 0.018883 u, and 0.018883 × 931.5 = 17.6 ≈ 18 MeV. The 14 MeV and 3.5 MeV distractors are the individual kinetic energies carried off by the neutron and the alpha particle respectively; the question asks for the total, which is their sum. The 176 MeV value is a misplaced decimal, and 176–200 MeV is the scale for fission, not fusion."
+      },
+
+      // [EM/biot-savart & ampere's law]
+      {
+        "question": "A long solenoid has 5,000 turns per meter and carries a steady current of 2.0 A. Taking μ₀ = 4π × 10⁻⁷ T·m/A, the magnitude of the magnetic field on the axis at the very end of the solenoid is most nearly",
+        "choices": [
+          "3.1 mT",
+          "6.3 mT",
+          "13 mT",
+          "25 mT",
+          "63 mT"
+        ],
+        "answer": "B",
+        "explanation": "Deep inside a long solenoid B = μ₀nI = 4π × 10⁻⁷ × 5000 × 2.0 = 1.26 × 10⁻² T, but at the end face only half the solid angle of turns contributes, so B = ½μ₀nI = 6.3 mT. This factor of two follows immediately from superposing two half-infinite solenoids to build the infinite one. The 13 mT distractor is the interior value, applied where it does not hold."
+      },
+
+      // [SR/invariant mass]
+      {
+        "question": "Two photons, each of energy E, travel in directions that are perpendicular to each other. The invariant mass of the two-photon system is",
+        "choices": [
+          "0",
+          "E/c²",
+          "√2 E/c²",
+          "2E/c²",
+          "4E/c²"
+        ],
+        "answer": "C",
+        "explanation": "Total energy is 2E and total momentum has magnitude √((E/c)² + (E/c)²) = √2 E/c, since the momenta are perpendicular. Then M²c⁴ = (2E)² − (√2E)² = 2E², so M = √2 E/c². The 0 distractor is the trap: each photon individually is massless, but invariant mass is not additive, and any pair of non-parallel photons has nonzero invariant mass. The 2E/c² answer would require the two momenta to cancel, i.e. photons moving oppositely."
+      },
+
+      // [CM/momentum & collisions]
+      {
+        "question": "A ball moving horizontally at speed v strikes head-on a massive wall that is itself moving toward the ball at constant speed u. The collision is elastic and the wall's motion is unaffected. The speed of the ball immediately after the collision is",
+        "choices": [
+          "v",
+          "v + u",
+          "2u − v",
+          "2v + u",
+          "v + 2u"
+        ],
+        "answer": "E",
+        "explanation": "Work in the wall's frame, where the wall is at rest and the ball approaches at v + u. An elastic bounce off an infinitely massive wall reverses that relative speed, so the ball leaves at v + u in the wall frame. Transforming back to the ground frame adds u again, giving v + 2u. The v + u distractor is what you get by forgetting one of the two frame transformations, and v is the answer for a stationary wall — this is exactly how a tennis racket adds speed to a ball."
+      },
+
+      // [QM/operators & commutators]
+      {
+        "question": "With p = −iħ ∂/∂x, the commutator [x, p²] is equal to",
+        "choices": [
+          "2iħp",
+          "−2iħp",
+          "iħp",
+          "2iħp²",
+          "0"
+        ],
+        "answer": "A",
+        "explanation": "Use [x, p²] = p[x, p] + [x, p]p and [x, p] = iħ, giving 2iħp. Checking on a test function: x p²ψ − p²(xψ) = −ħ²(xψ″ − (xψ)″) = 2ħ²ψ′ = 2iħ(pψ). The 0 distractor tempts students who recall that x commutes with itself and forget that any power of p still fails to commute with x. The sign distractor −2iħp comes from writing [x, p] = −iħ."
+      },
+
+      // [LM/error propagation]
+      {
+        "question": "The value of g is obtained from a pendulum using g = 4π²L/T². The length L is measured to 1.0 percent and the period T to 2.0 percent, the two errors being independent. The fractional uncertainty in g is most nearly",
+        "choices": [
+          "1.0 percent",
+          "2.2 percent",
+          "3.0 percent",
+          "4.1 percent",
+          "5.0 percent"
+        ],
+        "answer": "D",
+        "explanation": "For a product of powers, fractional errors add in quadrature after being weighted by the exponents: σ_g/g = √((σ_L/L)² + (2σ_T/T)²) = √(1.0² + 4.0²) = 4.1 percent. The dominant term is the period, precisely because it enters squared. The 2.2 percent distractor, √(1² + 2²), is the common error of omitting the factor of 2 from the exponent; 3.0 percent comes from adding the fractional errors linearly."
+      },
+
+      // [TS/phase transitions & latent heat]
+      {
+        "question": "One kilogram of ice at 0 °C is melted completely to water at 0 °C at atmospheric pressure. The latent heat of fusion is 3.34 × 10⁵ J/kg. The entropy change of the H₂O is most nearly",
+        "choices": [
+          "0",
+          "1.2 × 10³ J/K",
+          "1.2 × 10⁴ J/K",
+          "3.3 × 10⁵ J/K",
+          "3.3 × 10⁸ J/K"
+        ],
+        "answer": "B",
+        "explanation": "Melting is isothermal and reversible at the melting point, so ΔS = Q/T = mL/T = 3.34 × 10⁵/273 = 1.2 × 10³ J/K, using the absolute temperature 273 K. The 3.3 × 10⁵ J/K distractor is the latent heat itself, i.e. dividing by nothing; using 0 °C rather than 273 K in the denominator gives a divergence, which is the standard reminder that entropy requires kelvins. The entropy of the H₂O rises because the liquid is the more disordered phase."
+      },
+
+      // [EM/gauss's law]
+      {
+        "question": "Two infinite parallel sheets of charge lie in the planes z = 0 and z = d. The sheet at z = 0 carries uniform surface charge density +σ and the sheet at z = d carries −2σ. The magnitude of the electric field at points between the sheets is",
+        "choices": [
+          "3σ/2ε₀",
+          "σ/2ε₀",
+          "σ/ε₀",
+          "3σ/ε₀",
+          "zero"
+        ],
+        "answer": "A",
+        "explanation": "Each infinite sheet produces a uniform field of magnitude |σ|/2ε₀ independent of distance, directed away from a positive sheet and toward a negative one. Between the sheets both contributions point in the +z direction, giving σ/2ε₀ + 2σ/2ε₀ = 3σ/2ε₀. Outside, the two contributions partly cancel and the magnitude is σ/2ε₀ on both sides. The σ/ε₀ distractor is the familiar parallel-plate result for equal and opposite charges, which does not apply when the magnitudes differ."
+      },
+
+      // [QM/bohr model]
+      {
+        "question": "In the Bohr model of hydrogen, the ratio of the orbital period of the electron in the n = 3 state to its orbital period in the n = 1 state is",
+        "choices": [
+          "3",
+          "9",
+          "27",
+          "81",
+          "243"
+        ],
+        "answer": "C",
+        "explanation": "Bohr orbits have r ∝ n² and orbital speed v ∝ 1/n, so the period 2πr/v scales as n³, giving 3³ = 27. Equivalently, Kepler's third law applied to the Coulomb force gives T² ∝ r³. The 9 distractor is the ratio of the orbit radii, and 81 is the ratio of the level energies inverted; each corresponds to stopping one power short or long of the correct scaling."
+      },
+
+      // [CM/central force & orbits]
+      {
+        "question": "A satellite of mass m is in a circular orbit of radius r about a planet of mass M. The additional energy that must be supplied to place it in a circular orbit of radius 2r is",
+        "choices": [
+          "GMm/8r",
+          "GMm/4r",
+          "GMm/3r",
+          "GMm/2r",
+          "GMm/r"
+        ],
+        "answer": "B",
+        "explanation": "For a circular orbit the total energy is E = −GMm/2r, so E(2r) − E(r) = −GMm/4r + GMm/2r = GMm/4r. The GMm/2r distractor is the change in potential energy alone; it is wrong because the satellite also slows down in the higher orbit, and the kinetic energy it gives back pays for half of the climb. This factor of two is the virial theorem for an inverse-square force."
+      },
+
+      // [OW/group & phase velocity]
+      {
+        "question": "Deep-water gravity waves obey the dispersion relation ω = √(gk), where g is the acceleration of gravity and k the wave number. Which relation between the group velocity v_g and the phase velocity v_p holds for these waves?",
+        "choices": [
+          "v_g = 4v_p",
+          "v_g = 2v_p",
+          "v_g = v_p",
+          "v_g = v_p/4",
+          "v_g = v_p/2"
+        ],
+        "answer": "E",
+        "explanation": "The phase velocity is ω/k = √(g/k), while the group velocity is dω/dk = ½√(g/k), so v_g = v_p/2. Individual crests therefore outrun the wave group and vanish at its front edge, which is what one sees in the wake of a ship. The v_g = v_p distractor holds only for a nondispersive medium such as an ideal string or vacuum light, where ω ∝ k."
+      },
+
+      // [EM/RLC & AC circuits]
+      {
+        "question": "A series RLC circuit with L = 10 mH, C = 1.0 μF and R = 5.0 Ω is driven at its resonant frequency by a source of amplitude 10 V. The amplitude of the voltage across the capacitor is most nearly",
+        "choices": [
+          "1.0 V",
+          "10 V",
+          "50 V",
+          "200 V",
+          "2,000 V"
+        ],
+        "answer": "D",
+        "explanation": "At resonance ω₀ = 1/√(LC) = 1.0 × 10⁴ rad/s and the impedance is purely resistive, so the current amplitude is 10/5.0 = 2.0 A. The capacitor reactance is 1/ω₀C = 100 Ω, giving 200 V across it — a factor Q = ω₀L/R = 20 above the source. The 10 V distractor assumes the capacitor cannot exceed the source voltage; it can, because the inductor voltage is equal and opposite, so only their sum is limited."
+      },
+
+      // [QM/spin & pauli matrices]
+      {
+        "question": "A beam of spin-½ atoms is prepared in the state S_z = +ħ/2. It passes through an analyzer that transmits only atoms with S_x = +ħ/2, and that transmitted beam then enters an analyzer measuring S_z. The fraction of the original beam that emerges with S_z = −ħ/2 is",
+        "choices": [
+          "0",
+          "1/8",
+          "1/4",
+          "1/2",
+          "1"
+        ],
+        "answer": "C",
+        "explanation": "|S_z = +⟩ is an equal superposition of the S_x eigenstates, so half the beam passes the S_x analyzer. That output is a pure S_x = + state, itself an equal superposition of S_z eigenstates, so half of it is found with S_z = −ħ/2: the fraction is ½ × ½ = 1/4. The 0 distractor is the classical intuition that the atoms 'still have' S_z = +ħ/2; the intermediate S_x measurement destroys that information, since S_x and S_z do not commute."
+      },
+
+      // [SP/band theory & semiconductors]
+      {
+        "question": "Pure silicon has an energy gap of 1.1 eV between the valence and conduction bands. Taking h = 6.63 × 10⁻³⁴ J·s, c = 3.0 × 10⁸ m/s and e = 1.6 × 10⁻¹⁹ C, the longest wavelength of light that can excite an electron across the gap is most nearly",
+        "choices": [
+          "5.6 × 10⁻⁷ m",
+          "1.1 × 10⁻⁶ m",
+          "2.2 × 10⁻⁶ m",
+          "1.1 × 10⁻⁵ m",
+          "1.1 × 10⁻⁴ m"
+        ],
+        "answer": "B",
+        "explanation": "The threshold photon energy equals the gap, so λ_max = hc/E_g = (6.63 × 10⁻³⁴ × 3.0 × 10⁸)/(1.1 × 1.6 × 10⁻¹⁹) = 1.1 × 10⁻⁶ m, in the near infrared. This is why silicon detectors respond to the whole visible range but go blind beyond about 1.1 μm. The 5.6 × 10⁻⁷ m distractor comes from doubling the gap energy, and treating 1.1 eV as 1.1 J-scale quantities shifts the decade."
+      },
+
+      // [CM/statics]
+      {
+        "question": "A uniform beam of mass M and length L is attached to a wall by a hinge at one end and held horizontal by a straight cable running from its far end up to the wall, making an angle of 30° with the beam. The magnitude of the horizontal force exerted by the hinge on the beam is",
+        "choices": [
+          "0",
+          "0.29Mg",
+          "0.50Mg",
+          "0.58Mg",
+          "0.87Mg"
+        ],
+        "answer": "E",
+        "explanation": "Torques about the hinge give T sin30° × L = Mg × L/2, so T = Mg. The cable's horizontal pull is T cos30° = 0.87Mg toward the wall, and the hinge must supply an equal outward force. The 0.50Mg distractor is the vertical force bookkeeping (the hinge carries half the weight) mistaken for the horizontal one; 0.58Mg = Mg/√3 comes from using tan30° in place of cos30° after solving for the tension."
+      },
+
+      // [TS/kinetic theory]
+      {
+        "question": "A container holding H₂ (molar mass 2 g) and a container holding O₂ (molar mass 32 g) are at the same temperature and pressure, and each leaks through an identical small hole. The ratio of the effusion rate of H₂ to that of O₂ is",
+        "choices": [
+          "1/4",
+          "1/2",
+          "2",
+          "4",
+          "16"
+        ],
+        "answer": "D",
+        "explanation": "The effusion rate is proportional to the mean molecular speed at fixed number density, and v ∝ 1/√M, so the ratio is √(32/2) = 4. The 16 distractor comes from using the mass ratio itself rather than the square root, which is the same error as forgetting that kinetic energy, not speed, is what equipartition fixes. This √M scaling is the basis of gaseous isotope separation."
+      },
+
+      // [QM/potential barrier & tunneling]
+      {
+        "question": "An electron of energy 5.0 eV is incident on a rectangular barrier of height 10.0 eV and width 0.20 nm. Using T ≈ e^(−2κL) with κ = √(2m(V₀ − E))/ħ, ħ = 1.05 × 10⁻³⁴ J·s, m_e = 9.11 × 10⁻³¹ kg and e = 1.6 × 10⁻¹⁹ C, the transmission probability is of order",
+        "choices": [
+          "10⁻¹",
+          "10⁻²",
+          "10⁻⁴",
+          "10⁻⁶",
+          "10⁻⁸"
+        ],
+        "answer": "B",
+        "explanation": "With V₀ − E = 5.0 eV = 8.0 × 10⁻¹⁹ J, κ = √(2 × 9.11 × 10⁻³¹ × 8.0 × 10⁻¹⁹)/1.05 × 10⁻³⁴ = 1.1 × 10¹⁰ m⁻¹, so 2κL = 4.6 and T ≈ e^(−4.6) ≈ 1 × 10⁻². Tunneling is appreciable here only because the barrier is a fraction of a nanometer wide. Omitting the factor of 2 in the exponent gives e^(−2.3) ≈ 10⁻¹, the first distractor; doubling the width instead would land near 10⁻⁴."
+      },
+
+      // [EM/magnetic force on charges/currents]
+      {
+        "question": "A proton of speed 1.0 × 10⁶ m/s enters a uniform magnetic field of magnitude 0.10 T, its velocity making an angle of 30° with the field. Taking m_p = 1.67 × 10⁻²⁷ kg and e = 1.6 × 10⁻¹⁹ C, the pitch of the resulting helix (the advance along the field per revolution) is most nearly",
+        "choices": [
+          "0.16 m",
+          "0.33 m",
+          "0.57 m",
+          "0.66 m",
+          "1.3 m"
+        ],
+        "answer": "C",
+        "explanation": "The cyclotron period 2πm/qB = 6.6 × 10⁻⁷ s depends only on the perpendicular motion, while the component along B is unaccelerated: pitch = v cos30° × T = 8.7 × 10⁵ × 6.6 × 10⁻⁷ = 0.57 m. The 0.33 m distractor uses v sin30°, the component that sets the helix radius rather than the advance; 0.66 m uses the full speed, ignoring the 30° projection."
+      },
+
+      // [SR/relativistic doppler]
+      {
+        "question": "A spacecraft approaching Earth at 0.60c transmits a radio signal that has frequency 100 MHz in the spacecraft's rest frame. The frequency received on Earth is most nearly",
+        "choices": [
+          "50 MHz",
+          "80 MHz",
+          "125 MHz",
+          "200 MHz",
+          "250 MHz"
+        ],
+        "answer": "D",
+        "explanation": "For an approaching source the relativistic Doppler formula gives f = f₀√((1 + β)/(1 − β)) = 100 × √(1.6/0.4) = 100 × 2 = 200 MHz. The 250 MHz distractor is the nonrelativistic result f₀/(1 − β), which omits the time-dilation factor; 125 MHz is f₀γ, i.e. time dilation with no account of the shrinking travel distance; 50 MHz would be the receding case."
+      },
+
+      // [CM/moment of inertia]
+      {
+        "question": "Four uniform thin rods, each of length a and mass M/4, are joined end to end to form a square frame of total mass M lying in the xy-plane with its center at the origin. The moment of inertia of the frame about the z-axis is",
+        "choices": [
+          "Ma²/12",
+          "Ma²/6",
+          "Ma²/3",
+          "Ma²/2",
+          "2Ma²/3"
+        ],
+        "answer": "C",
+        "explanation": "Each rod contributes (1/12)(M/4)a² about its own center plus (M/4)(a/2)² from the parallel-axis shift, i.e. Ma²/48 + Ma²/16 = Ma²/12; four rods give Ma²/3. The Ma²/6 distractor is the moment of inertia of a uniform square plate of the same mass and side, which is smaller because a plate concentrates mass near the axis while the frame puts it all out at the edges."
+      },
+
+      // [QM/zeeman & stark effects]
+      {
+        "question": "An atomic level with orbital angular momentum quantum number l = 1 is placed in a uniform magnetic field of 1.0 T. Taking the magnetic moment scale to be eħ/2m_e with e = 1.6 × 10⁻¹⁹ C, ħ = 1.05 × 10⁻³⁴ J·s and m_e = 9.11 × 10⁻³¹ kg, the energy difference between adjacent m_l sublevels is most nearly",
+        "choices": [
+          "5.8 × 10⁻⁷ eV",
+          "5.8 × 10⁻⁶ eV",
+          "2.9 × 10⁻⁵ eV",
+          "5.8 × 10⁻⁵ eV",
+          "1.2 × 10⁻⁴ eV"
+        ],
+        "answer": "D",
+        "explanation": "The splitting between neighbouring m_l values is μ_B B, with μ_B = eħ/2m_e = 1.6 × 10⁻¹⁹ × 1.05 × 10⁻³⁴/(2 × 9.11 × 10⁻³¹) = 9.3 × 10⁻²⁴ J/T. Dividing by e converts to 5.8 × 10⁻⁵ eV per tesla. The 1.2 × 10⁻⁴ eV distractor is the full spread from m_l = +1 to m_l = −1, which is twice the adjacent spacing. Note how tiny this is beside the electron-volt scale of the transition itself."
+      },
+
+      // [LM/digital logic]
+      {
+        "question": "A two-input logic gate produces an output of 1 if and only if its two inputs are different. This gate is",
+        "choices": [
+          "an exclusive-OR gate",
+          "an AND gate",
+          "an OR gate",
+          "a NAND gate",
+          "a NOR gate"
+        ],
+        "answer": "A",
+        "explanation": "The truth table 00 → 0, 01 → 1, 10 → 1, 11 → 0 is exclusive OR, the sum bit of a binary half adder. Ordinary OR differs only in the 11 case, where it gives 1, and that single row is the trap that catches students who read 'or' in the description without noticing the exclusion. NAND and NOR both output 1 for the 00 input, which fails immediately."
+      },
+
+      // [TS/first law & work]
+      {
+        "question": "A monatomic ideal gas with γ = 5/3 is compressed quasi-statically and adiabatically to half of its initial volume. The factor by which its absolute temperature increases is most nearly",
+        "choices": [
+          "1.3",
+          "1.6",
+          "2.0",
+          "2.5",
+          "3.2"
+        ],
+        "answer": "B",
+        "explanation": "For a quasi-static adiabat TV^(γ−1) is constant, so T_f/T_i = 2^(γ−1) = 2^(2/3) = 1.6. The 3.2 distractor is 2^(5/3), the factor by which the pressure rises; using the full γ instead of γ − 1 is the single most common slip here. A factor of 2.0 would require the temperature to track the volume compression directly, which is not what any adiabat does."
+      },
+
+      // [EM/dielectrics]
+      {
+        "question": "A parallel-plate capacitor has plate area A and plate separation d. A slab of dielectric constant κ and thickness d is inserted so that it fills the gap over exactly half of the plate area, the other half remaining vacuum. The capacitance is now",
+        "choices": [
+          "ε₀A(1 + κ)/2d",
+          "κε₀A/2d",
+          "κε₀A/d",
+          "2κε₀A/[(1 + κ)d]",
+          "ε₀A(1 + κ)/d"
+        ],
+        "answer": "A",
+        "explanation": "The two halves share the same plate-to-plate voltage, so they act as capacitors in parallel: C = ε₀(A/2)/d + κε₀(A/2)/d = ε₀A(1 + κ)/2d. The 2κε₀A/[(1 + κ)d] distractor is the series combination, which would apply if the slab covered the full area but only half the gap thickness — the geometry decides series versus parallel, and here the slab is beside the vacuum, not stacked on it. For κ = 1 the correct expression collapses to ε₀A/d, a useful check."
+      },
+
+      // [QM/hydrogen atom]
+      {
+        "question": "In hydrogen, counting electron spin and ignoring all fine structure, the number of distinct quantum states with principal quantum number n = 3 is",
+        "choices": [
+          "3",
+          "6",
+          "9",
+          "18",
+          "27"
+        ],
+        "answer": "D",
+        "explanation": "For each n there are n² orbital states (l = 0, 1, 2 contributing 1 + 3 + 5 = 9 here), and each admits two spin orientations, giving 2n² = 18. The 9 distractor is the count that forgets spin, and it is exactly the number that would apply to a spinless particle. Notice that all 18 states are degenerate in the pure Coulomb problem, an accidental degeneracy in l that is special to the 1/r potential."
+      },
+
+      // [CM/terminal velocity & drag]
+      {
+        "question": "Two solid spheres made of the same material, of radii r and 2r, fall at terminal speed through a viscous fluid in which the drag force is 6πηrv. Buoyancy is negligible. The ratio of the terminal speed of the larger sphere to that of the smaller is",
+        "choices": [
+          "√2",
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "answer": "C",
+        "explanation": "At terminal speed 6πηrv = mg with m ∝ r³, so v ∝ r³/r = r², and doubling the radius quadruples the terminal speed. The 8 distractor is the mass (or weight) ratio, used by students who forget that the drag coefficient itself grows with radius; 2 is the bare radius ratio. This r² scaling is why fine mist stays suspended in air while raindrops fall fast."
+      },
+
+      // [OW/standing waves on strings]
+      {
+        "question": "A string of linear mass density 5.0 × 10⁻³ kg/m is stretched between two fixed supports 0.50 m apart with a tension of 80 N. Its fundamental frequency of transverse vibration is most nearly",
+        "choices": [
+          "63 Hz",
+          "130 Hz",
+          "180 Hz",
+          "250 Hz",
+          "320 Hz"
+        ],
+        "answer": "B",
+        "explanation": "The wave speed is √(T/μ) = √(80/5.0 × 10⁻³) = 1.3 × 10² m/s, and the fundamental has half a wavelength between fixed ends, so λ = 2L = 1.0 m and f = v/λ = 130 Hz. The 250 Hz distractor takes λ = L, the mistake of putting a full wavelength between the supports; 63 Hz takes λ = 4L, which is the pattern for a string free at one end."
+      },
+
+      // [SP/crystal structure & bragg]
+      {
+        "question": "For the face-centered cubic structure with conventional cubic cell of edge a, consider: I. The conventional cubic cell contains 4 atoms. II. Each atom has 12 nearest neighbors. III. The nearest-neighbor distance is a/√2. Which of these are correct?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "The corners contribute 8 × 1/8 = 1 atom and the six face centers 6 × 1/2 = 3, giving 4 atoms per conventional cell. Nearest neighbors run from a corner to the centers of the faces meeting there, a distance √((a/2)² + (a/2)²) = a/√2, and there are 12 such neighbors. All three are correct. Students who answer 'I and II only' typically quote the body-centered nearest-neighbor distance √3a/2 instead."
+      },
+
+      // [QM/identical particles]
+      {
+        "question": "Two identical noninteracting spin-½ particles are placed in the same one-dimensional infinite square well, and the pair is in a spin-triplet state. If E₁ is the single-particle ground-state energy, the lowest possible total energy of the pair is",
+        "choices": [
+          "2E₁",
+          "5E₁",
+          "8E₁",
+          "10E₁",
+          "13E₁"
+        ],
+        "answer": "B",
+        "explanation": "The triplet spin state is symmetric under exchange, so the spatial state must be antisymmetric, which forbids both particles from occupying the same orbital. The lowest allowed configuration is one particle in n = 1 and one in n = 2, giving E₁ + 4E₁ = 5E₁. The 2E₁ distractor puts both particles in n = 1; that is the correct ground state only for the singlet, whose antisymmetric spin part permits a symmetric spatial state."
+      },
+
+      // [EM/induction & faraday]
+      {
+        "question": "A circular conducting ring of radius 5.0 cm lies in a plane perpendicular to a spatially uniform magnetic field whose magnitude is increasing at 0.20 T/s. The magnitude of the induced electric field at points on the ring is most nearly",
+        "choices": [
+          "1.6 × 10⁻³ V/m",
+          "2.5 × 10⁻³ V/m",
+          "5.0 × 10⁻³ V/m",
+          "1.0 × 10⁻² V/m",
+          "2.0 × 10⁻² V/m"
+        ],
+        "answer": "C",
+        "explanation": "By symmetry ∮E·dl = E(2πr) = |dΦ/dt| = πr²(dB/dt), so E = (r/2)(dB/dt) = (0.025)(0.20) = 5.0 × 10⁻³ V/m. The 1.6 × 10⁻³ distractor is the emf itself, πr²(dB/dt) = 1.6 × 10⁻³ V, quoted as though it were a field; the two differ by the circumference. Note that the resistance of the ring never enters, since the induced field is set by the changing flux alone."
+      },
+
+      // [CM/lagrangian]
+      {
+        "question": "A bead slides without friction on a circular hoop of radius R that is forced to rotate about its vertical diameter at constant angular speed ω. For ω² > g/R the bead has a stable equilibrium at an angle θ measured from the lowest point of the hoop, given by",
+        "choices": [
+          "cos θ = g/(ω²R)",
+          "cos θ = ω²R/g",
+          "sin θ = g/(ω²R)",
+          "tan θ = ω²R/g",
+          "θ = 0, for every ω"
+        ],
+        "answer": "A",
+        "explanation": "With θ as the generalized coordinate, L = ½mR²θ̇² + ½mR²ω² sin²θ + mgR cos θ, and the equilibrium condition mR²ω² sinθ cosθ = mgR sinθ gives cos θ = g/(ω²R). The θ = 0 answer is the equilibrium for slow rotation only: once ω² exceeds g/R the bottom of the hoop becomes unstable and the bead rides up. The inverted cos θ = ω²R/g has no solution in that regime, which is a quick way to reject it."
+      },
+
+      // [TS/blackbody radiation]
+      {
+        "question": "A planet in a circular orbit of radius d about a star has an equilibrium temperature T set by balancing absorbed starlight against its own blackbody emission. At what orbital radius would a planet of the same size and albedo have equilibrium temperature T/2?",
+        "choices": [
+          "√2 d",
+          "2d",
+          "2√2 d",
+          "4d",
+          "16d"
+        ],
+        "answer": "D",
+        "explanation": "Absorbed power scales as 1/d² while emitted power scales as T⁴, so T ∝ d^(−1/2) and halving T requires quadrupling the distance. The 16d distractor comes from setting T⁴ ∝ 1/d directly, and 2d from assuming T ∝ 1/d. The planet's radius cancels out of the balance entirely, since it enters the absorption and the emission in the same way."
+      },
+
+      // [QM/lasers & stimulated emission]
+      {
+        "question": "A gas of atoms with two nondegenerate levels is illuminated by intense light exactly at the transition frequency. A population inversion between these two levels cannot be produced this way because",
+        "choices": [
+          "the photons have too little momentum to excite the atoms",
+          "spontaneous emission is always faster than absorption",
+          "the upper level has a shorter lifetime than the lower one",
+          "the Pauli exclusion principle limits the upper-level population",
+          "stimulated emission and absorption have equal rate coefficients, so the populations can at best be equalized"
+        ],
+        "answer": "E",
+        "explanation": "Einstein's relation B₁₂ = B₂₁ for nondegenerate levels means the light drives downward transitions as readily as upward ones, so pumping saturates at equal populations and the medium becomes transparent, never amplifying. Real lasers evade this by using a third or fourth level, so that the pumped population decays into a metastable upper laser level not directly coupled to the pump. Spontaneous emission only makes matters worse; it never produces inversion, so that distractor gets the direction right but the mechanism wrong."
+      },
+
+      // [SP/astrophysics & cosmology]
+      {
+        "question": "A star has twice the radius and twice the surface temperature of the Sun. Treating both as blackbodies, its luminosity in units of the Sun's luminosity is",
+        "choices": [
+          "4",
+          "8",
+          "16",
+          "32",
+          "64"
+        ],
+        "answer": "E",
+        "explanation": "Luminosity is the surface area times the Stefan-Boltzmann flux, L ∝ R²T⁴, so the factor is 2² × 2⁴ = 64. The 16 distractor uses the temperature scaling alone and 4 the area scaling alone; each is half of the calculation. The same relation, run backwards, is how a measured luminosity and temperature fix a star's radius on the Hertzsprung-Russell diagram."
+      },
+
+      // [EM/current & resistance]
+      {
+        "question": "A cylindrical copper wire is drawn out uniformly until its length is three times the original length. Its volume and resistivity are unchanged. Its resistance is multiplied by a factor of",
+        "choices": [
+          "3",
+          "6",
+          "9",
+          "27",
+          "81"
+        ],
+        "answer": "C",
+        "explanation": "R = ρL/A, and constant volume with tripled length forces the cross-sectional area down by a factor of 3, so R rises by 3 × 3 = 9. The 3 distractor accounts only for the extra length and misses the thinning, which is the whole point of the constant-volume condition. Equivalently R ∝ L²/V, so resistance goes as the square of the drawn length."
+      },
+
+      // [CM/rocket/variable mass]
+      {
+        "question": "Sand falls vertically at a steady 5.0 kg/s from a stationary hopper onto a horizontal conveyor belt that moves at a constant 2.0 m/s. Ignoring friction in the belt's bearings, the power the motor must deliver is most nearly",
+        "choices": [
+          "2.0 W",
+          "5.0 W",
+          "10 W",
+          "20 W",
+          "40 W"
+        ],
+        "answer": "D",
+        "explanation": "Each kilogram of sand must be accelerated from rest to 2.0 m/s, so the belt exerts F = v dm/dt = 5.0 × 2.0 = 10 N and the motor supplies P = Fv = 10 × 2.0 = 20 W. The 10 W distractor is the rate at which the sand gains kinetic energy, ½(dm/dt)v²; exactly half the motor's output is dissipated as heat in the sliding between the sand and the belt, which is unavoidable no matter how the sand is dropped."
+      },
+
+      // [QM/finite well & bound states]
+      {
+        "question": "A particle is bound in a one-dimensional square well of finite depth V₀ and width L. Compared with the levels of an infinite square well of the same width, which of the following is true?",
+        "choices": [
+          "Every bound level lies lower in energy, and there are only finitely many bound levels",
+          "Every bound level lies higher in energy, and there are only finitely many bound levels",
+          "The levels are the same, since the width is the same",
+          "The levels lie lower in energy, and there are infinitely many bound levels",
+          "The wave function still vanishes at the walls, so the levels are unchanged"
+        ],
+        "answer": "A",
+        "explanation": "The wave function leaks into the classically forbidden region, so the particle is effectively confined to a width greater than L and every level is pushed down relative to n²π²ħ²/2mL². Only states with E < V₀ are bound, so the number of bound levels is finite (in one dimension there is always at least one). The 'unchanged' options miss that the boundary condition is continuity of ψ and ψ′, not ψ = 0, once the walls are of finite height."
+      },
+
+      // [SR/relativistic energy & momentum]
+      {
+        "question": "An electron starting from rest is accelerated through a potential difference of 2.0 MV. Taking its rest energy to be 0.51 MeV, its final speed is most nearly",
+        "choices": [
+          "0.60c",
+          "0.75c",
+          "0.86c",
+          "0.94c",
+          "0.98c"
+        ],
+        "answer": "E",
+        "explanation": "The kinetic energy is 2.0 MeV, so γ = 1 + 2.0/0.51 = 4.9 and β = √(1 − 1/γ²) = 0.98. The 0.86c distractor is γ = 2, the answer for a 0.51 MV gap, and 0.94c is γ = 3. Applying ½mv² here would give v ≈ 2.8c, which is the clearest possible signal that the nonrelativistic formula has been pushed past its domain."
+      },
+
+      // [LM/detectors & counters]
+      {
+        "question": "A photomultiplier tube has 10 dynodes, and each dynode emits 4 secondary electrons for every electron that strikes it. The overall electron gain of the tube is most nearly",
+        "choices": [
+          "40",
+          "4 × 10³",
+          "1 × 10⁶",
+          "1 × 10¹⁰",
+          "1 × 10¹²"
+        ],
+        "answer": "C",
+        "explanation": "The stages multiply, so the gain is 4¹⁰ = 1.0 × 10⁶. The 40 distractor adds the stages instead of compounding them, which is the standard slip with cascaded gain. A gain near 10⁶ is what lets a photomultiplier register a single photoelectron as a millivolt-scale pulse, and it is why modest changes in the dynode voltage swing the output so violently."
+      },
+
+      // [CM/angular momentum]
+      {
+        "question": "A puck slides on a frictionless horizontal table at the end of a string that passes through a small hole in the table. It circles at radius r with speed v. The string is then pulled slowly downward until the puck circles at radius r/2. The kinetic energy of the puck is multiplied by",
+        "choices": [
+          "1/4",
+          "1",
+          "2",
+          "4",
+          "8"
+        ],
+        "answer": "D",
+        "explanation": "The string's tension is central, so angular momentum mvr is conserved and halving the radius doubles the speed, quadrupling the kinetic energy. The factor of 1 is the trap for anyone who assumes mechanical energy is conserved because the surface is frictionless; the hand pulling the string does positive work, and that work is precisely the extra 3(½mv²). The tension is not perpendicular to the displacement once the radius is changing."
+      },
+
+      // [OW/beats]
+      {
+        "question": "A 440 Hz tuning fork sounded together with a second fork produces 4 beats per second. A small piece of wax is then stuck to the second fork, and the beat rate drops to 2 per second. The original frequency of the second fork was",
+        "choices": [
+          "434 Hz",
+          "436 Hz",
+          "440 Hz",
+          "442 Hz",
+          "444 Hz"
+        ],
+        "answer": "E",
+        "explanation": "Four beats per second means the second fork was at either 436 Hz or 444 Hz; the beat rate alone cannot say which. Wax adds inertia and therefore lowers a fork's frequency, so a 436 Hz fork would move to about 434 Hz and the beat rate would rise to 6, while a 444 Hz fork moves toward 440 and the beat rate falls. The observed drop to 2 beats per second identifies 444 Hz. Choosing 436 Hz is the trap for anyone who assumes loading raises the frequency, or who stops at the two-fold ambiguity without using the wax."
+      },
+
+      // [SP/conservation laws in particle physics]
+      {
+        "question": "A free proton cannot undergo the decay p → n + e⁺ + ν_e, even though the same process occurs for protons bound in some nuclei. The conservation law that forbids the free decay is",
+        "choices": [
+          "conservation of energy",
+          "conservation of electric charge",
+          "conservation of baryon number",
+          "conservation of lepton number",
+          "conservation of angular momentum"
+        ],
+        "answer": "A",
+        "explanation": "Charge, baryon number and lepton number all balance in this decay, and the spins can be coupled consistently, so none of those is the obstruction. The neutron is 1.3 MeV heavier than the proton, so a proton at rest simply lacks the rest energy to produce the final state. Inside a nucleus the binding energy of the daughter can supply the difference, which is why β⁺ decay of bound protons is common. Students often reach for baryon or lepton number here out of habit, but both are satisfied."
+      },
+
+      // [EM/EM waves & poynting]
+      {
+        "question": "A radio transmitter radiates 50 kW isotropically. Taking ε₀ = 8.85 × 10⁻¹² F/m and c = 3.0 × 10⁸ m/s, the amplitude of the electric field of the wave at a distance of 10 km is most nearly",
+        "choices": [
+          "0.087 V/m",
+          "0.12 V/m",
+          "0.17 V/m",
+          "0.24 V/m",
+          "0.35 V/m"
+        ],
+        "answer": "C",
+        "explanation": "The intensity is P/4πr² = 5.0 × 10⁴/(4π × 10⁸) = 4.0 × 10⁻⁵ W/m², and for a plane wave I = ½ε₀cE₀², so E₀ = √(2I/ε₀c) = 0.17 V/m. The 0.12 V/m distractor is the rms field E₀/√2, which is what you get by dropping the factor of ½ in the time average. Note the field falls as 1/r even though the intensity falls as 1/r²."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Practice Test B",
+    "cards": [
+
+      // [CM/SHM]
+      {
+        "question": "A particle executes simple harmonic motion with amplitude A and period T. Its average speed over one complete period is",
+        "choices": [
+          "4A/T",
+          "0",
+          "2A/T",
+          "πA/T",
+          "2πA/T"
+        ],
+        "answer": "A",
+        "explanation": "In one period the particle covers a path length of 4A (out, back, out the other side, back), so the average speed is 4A/T. The 0 distractor is the average velocity, which does vanish because the displacement over a period is zero — average speed and average velocity are different quantities. The 2πA/T value is the maximum speed ωA, which exceeds the average by π/2, the same factor that relates peak and mean for a sinusoid."
+      },
+
+      // [QM/de broglie waves]
+      {
+        "question": "A neutron is in thermal equilibrium at 300 K, with kinetic energy (3/2)k_BT. Taking k_B = 1.38 × 10⁻²³ J/K, h = 6.63 × 10⁻³⁴ J·s and m_n = 1.67 × 10⁻²⁷ kg, its de Broglie wavelength is most nearly",
+        "choices": [
+          "1.5 × 10⁻¹² m",
+          "1.5 × 10⁻¹¹ m",
+          "1.5 × 10⁻¹⁰ m",
+          "1.5 × 10⁻⁹ m",
+          "1.5 × 10⁻⁸ m"
+        ],
+        "answer": "C",
+        "explanation": "The kinetic energy is (3/2)(1.38 × 10⁻²³)(300) = 6.2 × 10⁻²¹ J, so p = √(2mE) = 4.6 × 10⁻²⁴ kg·m/s and λ = h/p = 1.5 × 10⁻¹⁰ m. That is 0.15 nm, comparable to interatomic spacings, which is exactly why thermal neutrons from a reactor are the standard probe for crystal and magnetic structure. Using E = k_BT rather than (3/2)k_BT shifts the answer only by 20 percent, so the decade ladder here is forgiving; using the electron mass instead is not, and moves the result two decades."
+      },
+
+      // [EM/gauss's law]
+      {
+        "question": "A very long solid cylinder of radius R carries charge distributed uniformly through its volume with density ρ. The magnitude of the electric field at a distance r from the axis, with r < R, is",
+        "choices": [
+          "ρr/ε₀",
+          "ρr/2ε₀",
+          "ρR²/(2ε₀r)",
+          "ρr²/(2ε₀R)",
+          "ρR/(2ε₀)"
+        ],
+        "answer": "B",
+        "explanation": "A coaxial Gaussian cylinder of radius r and length L encloses ρπr²L, and the field is radial with area 2πrL, giving E = ρr/2ε₀ — linear in r, as for the interior of any uniformly charged symmetric body. The ρR²/(2ε₀r) distractor is the exterior field, correct only for r > R, and the two agree at r = R as they must. Note that the field inside a uniformly charged cylinder grows outward, in contrast to the vanishing field inside a hollow conductor."
+      },
+
+      // [TS/carnot cycle]
+      {
+        "question": "A Carnot engine operating between reservoirs at 500 K and 300 K delivers 1,000 J of work per cycle. The heat it rejects to the cold reservoir per cycle is",
+        "choices": [
+          "400 J",
+          "600 J",
+          "1,000 J",
+          "1,500 J",
+          "2,500 J"
+        ],
+        "answer": "D",
+        "explanation": "The Carnot efficiency is 1 − 300/500 = 0.40, so Q_h = W/η = 2,500 J and Q_c = Q_h − W = 1,500 J. Equivalently Q_c/W = T_c/(T_h − T_c) = 300/200 = 1.5. The 2,500 J distractor is the heat absorbed rather than rejected, and 600 J comes from the ratio T_c/T_h applied to the work instead of to the heat input. Note that a Carnot engine at these temperatures must dump more heat than it converts to work."
+      },
+
+      // [OW/geometric optics: lenses]
+      {
+        "question": "An object is placed 20 cm in front of a thin converging lens of focal length 12 cm. The image is",
+        "choices": [
+          "30 cm beyond the lens, real and inverted, 1.5 times the size of the object",
+          "30 cm in front of the lens, virtual and upright, 1.5 times the size of the object",
+          "7.5 cm beyond the lens, real and inverted, 0.6 times the size of the object",
+          "60 cm beyond the lens, real and inverted, 3 times the size of the object",
+          "20 cm beyond the lens, virtual and inverted, the same size as the object"
+        ],
+        "answer": "A",
+        "explanation": "From 1/v = 1/f − 1/s = 1/12 − 1/20 = 1/30, the image sits 30 cm beyond the lens, and the magnification is −v/s = −1.5, i.e. inverted and enlarged. Because the object lies between f and 2f, an enlarged real image on the far side is the expected outcome. The 7.5 cm option comes from adding the reciprocals instead of subtracting them, which is the single most common sign error in the thin-lens equation."
+      },
+
+      // [CM/kinematics]
+      {
+        "question": "Two stones are released from rest from the same high tower, the second one exactly 1.0 s after the first. Taking g = 9.8 m/s² and neglecting air resistance, the separation between them at the instant the second stone has been falling for 2.0 s is most nearly",
+        "choices": [
+          "4.9 m",
+          "9.8 m",
+          "14.7 m",
+          "19.6 m",
+          "24.5 m"
+        ],
+        "answer": "E",
+        "explanation": "The first stone has fallen for 3.0 s and the second for 2.0 s, so the gap is ½g(3.0² − 2.0²) = ½(9.8)(5.0) = 24.5 m. The 4.9 m distractor is the separation at the moment the second stone is released, which many students assume stays fixed; in fact the gap grows without limit as gΔt × t, because both stones keep accelerating and the leader is always faster. The 19.6 m value is just the distance fallen by the second stone."
+      },
+
+      // [QM/photoelectric effect]
+      {
+        "question": "Light of wavelength 250 nm ejects photoelectrons from a metal surface, and the stopping potential is measured to be 1.0 V. Taking h = 6.63 × 10⁻³⁴ J·s, c = 3.0 × 10⁸ m/s and e = 1.6 × 10⁻¹⁹ C, the work function of the metal is most nearly",
+        "choices": [
+          "1.0 eV",
+          "2.0 eV",
+          "3.0 eV",
+          "4.0 eV",
+          "5.0 eV"
+        ],
+        "answer": "D",
+        "explanation": "The photon energy is hc/λ = (6.63 × 10⁻³⁴ × 3.0 × 10⁸)/(2.5 × 10⁻⁷ × 1.6 × 10⁻¹⁹ eV) = 5.0 eV, and W = hν − eV_stop = 5.0 − 1.0 = 4.0 eV. The 5.0 eV distractor is the photon energy itself, the answer for a hypothetical zero stopping potential. Increasing the light intensity would raise the current but leave the stopping potential, and hence this determination of W, untouched."
+      },
+
+      // [SP/nuclear binding energy]
+      {
+        "question": "The relevant atomic masses are ¹H 1.007825 u, the neutron 1.008665 u and ⁴He 4.002603 u, with 1 u equivalent to 931.5 MeV. The binding energy per nucleon of ⁴He is most nearly",
+        "choices": [
+          "1.1 MeV",
+          "3.5 MeV",
+          "7.1 MeV",
+          "14 MeV",
+          "28 MeV"
+        ],
+        "answer": "C",
+        "explanation": "The mass defect is 2(1.007825) + 2(1.008665) − 4.002603 = 0.030377 u, giving a total binding energy of 28.3 MeV and 28.3/4 = 7.1 MeV per nucleon. The 28 MeV distractor is that total, which the question does not ask for. Helium-4 is unusually tightly bound for its mass number — its 7.1 MeV per nucleon already approaches the 8.8 MeV peak at iron — which is why alpha particles appear as intact units in nuclear decay."
+      },
+
+      // [EM/electric potential]
+      {
+        "question": "Three point charges, each of magnitude +q, are brought in one at a time from infinity and fixed at the vertices of an equilateral triangle of side a. The total work required is",
+        "choices": [
+          "q²/(4πε₀a)",
+          "3q²/(8πε₀a)",
+          "q²/(2πε₀a)",
+          "3q²/(2πε₀a)",
+          "3q²/(4πε₀a)"
+        ],
+        "answer": "E",
+        "explanation": "There are three distinct pairs, each contributing q²/(4πε₀a), so the assembly energy is 3q²/(4πε₀a). The first charge costs nothing, the second costs one pair term and the third costs two, which is the same count. The q²/(4πε₀a) distractor counts a single pair, and 3q²/(8πε₀a) comes from applying a factor of ½ that belongs in ½ΣqᵢVᵢ but has already been used up by counting each pair once."
+      },
+
+      // [SR/velocity addition]
+      {
+        "question": "Two spacecraft move directly toward each other, each traveling at 0.60c as measured in the Earth frame. The speed of one spacecraft as measured in the rest frame of the other is most nearly",
+        "choices": [
+          "0.60c",
+          "0.75c",
+          "0.88c",
+          "0.96c",
+          "1.20c"
+        ],
+        "answer": "C",
+        "explanation": "Relativistic velocity addition gives (0.60c + 0.60c)/(1 + 0.36) = 0.88c. The 1.20c distractor is the Galilean sum, which is also the rate at which the gap between them closes in the Earth frame — a perfectly legitimate quantity that is not the speed of anything in anyone's rest frame. No combination of subluminal speeds can produce a relative speed of c or more, which is why the correct answer must lie below 1."
+      },
+
+      // [CM/newton's laws / friction]
+      {
+        "question": "A small bead slides on the inside of a vertical circular track of radius 2.5 m. Taking g = 9.8 m/s² and neglecting friction, the minimum speed the bead can have at the top of the track without leaving the surface is most nearly",
+        "choices": [
+          "3.5 m/s",
+          "4.9 m/s",
+          "7.0 m/s",
+          "9.9 m/s",
+          "24 m/s"
+        ],
+        "answer": "B",
+        "explanation": "At the critical condition the track pushes with zero force and gravity alone supplies the centripetal acceleration: mg = mv²/R, so v = √(gR) = √(9.8 × 2.5) = 4.9 m/s. The mass drops out entirely. The 7.0 m/s distractor is √(2gR), which is the speed gained falling through the radius — an energy result imported into a force question. Requiring merely v > 0 at the top is the classic error: below √(gR) the bead leaves the track before reaching it."
+      },
+
+      // [QM/angular momentum & spherical harmonics]
+      {
+        "question": "An electron is in a state with orbital angular momentum quantum number l = 2 and magnetic quantum number m_l = 2. The angle between the orbital angular momentum vector and the z-axis is most nearly",
+        "choices": [
+          "0°",
+          "18°",
+          "26°",
+          "35°",
+          "45°"
+        ],
+        "answer": "D",
+        "explanation": "The magnitude is √(l(l+1))ħ = √6 ħ while the z-component is 2ħ, so cos θ = 2/√6 = 0.82 and θ = 35°. The 0° distractor assumes the vector can lie along z, which the uncertainty relations for the components forbid: L_x and L_y cannot both be zero when L_z is sharp. Even the most aligned state, m_l = l, keeps a nonzero tilt, and that tilt shrinks toward zero only in the classical limit of large l."
+      },
+
+      // [LM/oscilloscope & signal measurement]
+      {
+        "question": "A sinusoidal signal on an oscilloscope spans 6.0 cm vertically from the bottom to the top of the trace, with the vertical gain set to 0.50 V/cm, and one complete cycle occupies 4.0 cm horizontally with the sweep set to 0.10 ms/cm. The rms voltage and the frequency of the signal are most nearly",
+        "choices": [
+          "1.1 V and 2,500 Hz",
+          "1.5 V and 2,500 Hz",
+          "3.0 V and 2,500 Hz",
+          "1.1 V and 250 Hz",
+          "2.1 V and 400 Hz"
+        ],
+        "answer": "A",
+        "explanation": "The trace height is peak-to-peak, so 6.0 cm × 0.50 V/cm = 3.0 V peak-to-peak, an amplitude of 1.5 V, and V_rms = 1.5/√2 = 1.1 V. The period is 4.0 cm × 0.10 ms/cm = 0.40 ms, giving f = 2,500 Hz. The 1.5 V option quotes the amplitude as though it were the rms value, and 3.0 V quotes the full peak-to-peak swing; only one of the three voltage readings survives both conversions."
+      },
+
+      // [TS/kinetic theory]
+      {
+        "question": "The temperature at which the average translational kinetic energy of a molecule of an ideal gas equals 1.0 eV is most nearly, with k_B = 1.38 × 10⁻²³ J/K and e = 1.6 × 10⁻¹⁹ C,",
+        "choices": [
+          "1,200 K",
+          "3,900 K",
+          "7,700 K",
+          "11,600 K",
+          "23,000 K"
+        ],
+        "answer": "C",
+        "explanation": "Setting (3/2)k_BT = 1.6 × 10⁻¹⁹ J gives T = 2(1.6 × 10⁻¹⁹)/(3 × 1.38 × 10⁻²³) = 7.7 × 10³ K. The 11,600 K distractor is the familiar conversion 1 eV ↔ k_BT, which omits the factor of 3/2 that belongs to three translational degrees of freedom. The result is worth remembering: even at several thousand kelvin the typical molecular energy is only about an electron volt, which is why ionization requires either very hot plasmas or nonthermal excitation."
+      },
+
+      // [EM/DC circuits]
+      {
+        "question": "A battery of emf 12 V and internal resistance 2.0 Ω is connected to an external resistor R that can be varied. The maximum power that can be delivered to R is",
+        "choices": [
+          "9.0 W",
+          "18 W",
+          "36 W",
+          "72 W",
+          "144 W"
+        ],
+        "answer": "B",
+        "explanation": "Power in the load, P = ε²R/(R + r)², is maximized at R = r, where the current is 12/4.0 = 3.0 A and P = I²R = 18 W. The 36 W distractor is the total power the battery delivers at that setting, exactly half of which is wasted inside the battery — matched loads are efficient in transfer, not in efficiency. The 72 W value, ε²/r, would be the dissipation for a short circuit, where the load gets nothing at all."
+      },
+
+      // [QM/operators & commutators]
+      {
+        "question": "Acting on well-behaved functions that vanish at infinity, which of the following operators is Hermitian?",
+        "choices": [
+          "d/dx",
+          "ix",
+          "x d/dx",
+          "x + d/dx",
+          "i d/dx"
+        ],
+        "answer": "E",
+        "explanation": "Integration by parts shows (d/dx)† = −d/dx, so d/dx is anti-Hermitian and multiplying it by i repairs the sign: (i d/dx)† = (−i)(−d/dx) = i d/dx. This is exactly why the momentum operator carries its factor of −i. The operator ix is anti-Hermitian for the opposite reason, since x is Hermitian and i is not, and x d/dx fails because the product of two Hermitian operators is Hermitian only if they commute."
+      },
+
+      // [CM/work-energy]
+      {
+        "question": "A 2.0 kg block is pressed against a spring of force constant 800 N/m, compressing it 0.10 m, on a horizontal surface for which the coefficient of kinetic friction is 0.25. The block is released. Taking g = 9.8 m/s², the total distance it slides from the point of release before coming to rest is most nearly",
+        "choices": [
+          "0.41 m",
+          "0.61 m",
+          "0.82 m",
+          "1.2 m",
+          "1.6 m"
+        ],
+        "answer": "C",
+        "explanation": "All of the stored energy ½kx² = ½(800)(0.10)² = 4.0 J is eventually consumed by friction, which takes μmg = 0.25 × 2.0 × 9.8 = 4.9 N per meter, so d = 4.0/4.9 = 0.82 m. The 1.6 m distractor drops the factor of ½ in the spring energy, the most common slip in this problem. Note that the mass matters here only through the friction force, not through any kinematic step."
+      },
+
+      // [OW/doppler]
+      {
+        "question": "A stationary siren emits sound at 500 Hz. An observer moves directly away from the siren at 68 m/s. Taking the speed of sound to be 340 m/s, the frequency the observer hears is most nearly",
+        "choices": [
+          "333 Hz",
+          "400 Hz",
+          "417 Hz",
+          "500 Hz",
+          "600 Hz"
+        ],
+        "answer": "B",
+        "explanation": "For a moving observer and a stationary source the wavelength in the air is unchanged, and the observer simply meets fewer crests per second: f = f₀(v − v_o)/v = 500(340 − 68)/340 = 400 Hz. The 417 Hz distractor is the answer for a receding source, f₀v/(v + v_s) = 500(340)/408, which is a genuinely different physical situation even though the relative speed is the same. Source motion and observer motion are not equivalent for sound, precisely because the medium defines a preferred frame."
+      },
+
+      // [EM/magnetic force on charges/currents]
+      {
+        "question": "A wire is bent into a semicircle of radius R and carries a steady current I. The semicircle lies in a plane perpendicular to a uniform magnetic field of magnitude B. The magnitude of the net magnetic force on the semicircular wire is",
+        "choices": [
+          "0",
+          "BIR",
+          "πBIR",
+          "2πBIR",
+          "2BIR"
+        ],
+        "answer": "E",
+        "explanation": "For a uniform field the force depends only on the vector joining the endpoints: F = I(∫dl) × B = I L_eff B, and the straight-line distance across a semicircle of radius R is the diameter 2R, giving 2BIR. The πBIR distractor uses the arc length πR, i.e. it adds the magnitudes of the element forces instead of adding them as vectors, and the components along the diameter partly cancel. A closed loop makes ∫dl vanish, which is why any closed current loop feels zero net force in a uniform field."
+      },
+
+      // [QM/perturbation theory]
+      {
+        "question": "A particle is in the ground state of a one-dimensional infinite square well with walls at x = 0 and x = L. A small constant potential V₀ is then switched on over the left half of the well only, 0 < x < L/2. To first order, the shift in the ground-state energy is",
+        "choices": [
+          "0",
+          "V₀/π",
+          "V₀/4",
+          "V₀/2",
+          "V₀"
+        ],
+        "answer": "D",
+        "explanation": "The first-order shift is the expectation value of the perturbation, V₀∫₀^(L/2)|ψ₁|²dx, and the ground-state probability density is symmetric about the midpoint, so exactly half of it lies in the left half: the shift is V₀/2. No integral needs to be evaluated once the symmetry is noticed. The V₀ distractor is the shift for a perturbation covering the whole well, and 0 would require the perturbation to be odd about the center, which a one-sided step is not."
+      },
+
+      // [SP/superconductivity]
+      {
+        "question": "Which of the following statements about a type-I superconductor below its critical temperature is NOT true?",
+        "choices": [
+          "Its dc electrical resistance is zero",
+          "It expels a weak applied magnetic field from its interior",
+          "A sufficiently strong applied magnetic field destroys the superconducting state",
+          "There is an energy gap in its electronic excitation spectrum",
+          "The magnetic flux trapped inside it is whatever the flux was at the moment it was cooled through the critical temperature"
+        ],
+        "answer": "E",
+        "explanation": "The Meissner effect is the statement that a superconductor actively expels flux, reaching the same field-free state whether it is cooled first and then placed in the field or placed in the field and then cooled. A merely perfect conductor would freeze in whatever flux was present at the transition, which is the trap in the last option: zero resistance alone does not imply the Meissner effect, and that is why it counts as a separate experimental fact. Zero resistance, a critical field and an energy gap of order k_BT_c are all genuine properties."
+      },
+
+      // [CM/momentum & collisions]
+      {
+        "question": "A projectile fired from level ground would land a distance R from its launch point. At the highest point of its trajectory it explodes into two fragments of equal mass, and one fragment drops straight down from the burst point with zero horizontal velocity. Neglecting air resistance, the second fragment lands at a distance from the launch point of",
+        "choices": [
+          "R/2",
+          "R",
+          "5R/4",
+          "3R/2",
+          "2R"
+        ],
+        "answer": "D",
+        "explanation": "The burst occurs at horizontal distance R/2, and horizontal momentum is conserved through the explosion: with one half-mass fragment left at zero horizontal speed, the other must carry twice the original horizontal velocity. Both fragments take the same time to fall from the apex, so the second travels twice the remaining half-range, landing at R/2 + 2(R/2) = 3R/2. The 2R distractor doubles the whole range instead of the post-explosion portion, forgetting that only the second half of the flight is affected."
+      },
+
+      // [TS/second law & entropy]
+      {
+        "question": "Heat in the amount of 1,000 J is conducted from a large thermal reservoir at 600 K to a large thermal reservoir at 300 K. The reservoirs are large enough that their temperatures do not change. The total entropy change of the two reservoirs is most nearly",
+        "choices": [
+          "−3.3 J/K",
+          "−1.7 J/K",
+          "0",
+          "1.7 J/K",
+          "3.3 J/K"
+        ],
+        "answer": "D",
+        "explanation": "The hot reservoir loses 1,000/600 = 1.67 J/K and the cold gains 1,000/300 = 3.33 J/K, for a net increase of 1.7 J/K. The 3.3 J/K distractor counts only the cold reservoir, forgetting that the source pays some entropy back; 0 would be right only for reversible heat transfer, which requires the two temperatures to be equal. The positive net value is the second law in its most elementary quantitative form: heat flowing down a finite temperature gradient always creates entropy."
+      },
+
+      // [QM/atomic spectra & selection rules]
+      {
+        "question": "The ground-state binding energy of hydrogen is 13.6 eV. Taking h = 6.63 × 10⁻³⁴ J·s, c = 3.0 × 10⁸ m/s and e = 1.6 × 10⁻¹⁹ C, the shortest wavelength emitted in the Lyman series is most nearly",
+        "choices": [
+          "46 nm",
+          "91 nm",
+          "122 nm",
+          "365 nm",
+          "656 nm"
+        ],
+        "answer": "B",
+        "explanation": "The series limit corresponds to a transition from n = ∞ down to n = 1, releasing the full 13.6 eV, so λ = hc/E = 1,240 eV·nm/13.6 eV = 91 nm. The 122 nm distractor is Lyman-alpha, the n = 2 to n = 1 line, which is the longest wavelength in the series rather than the shortest; 365 nm is the corresponding limit for the Balmer series. All Lyman lines lie in the ultraviolet, between 91 and 122 nm."
+      },
+
+      // [EM/induction & faraday]
+      {
+        "question": "A conducting rod of length 0.40 m slides without friction at a constant 3.0 m/s along two parallel rails that are joined at one end by a 0.20 Ω resistor. A uniform magnetic field of 0.50 T is perpendicular to the plane of the rails, and the rod and rails have negligible resistance. The power dissipated in the resistor is",
+        "choices": [
+          "0.60 W",
+          "1.8 W",
+          "3.6 W",
+          "6.0 W",
+          "18 W"
+        ],
+        "answer": "B",
+        "explanation": "The motional emf is BLv = 0.50 × 0.40 × 3.0 = 0.60 V, so the current is 3.0 A and P = emf²/R = 0.36/0.20 = 1.8 W. As a check, the retarding force on the rod is BIL = 0.60 N and the agent pushing it delivers Fv = 1.8 W, exactly the dissipated power. The 0.60 W distractor is the emf in volts read off as though it were the power, a units slip worth catching."
+      },
+
+      // [SR/relativistic collisions]
+      {
+        "question": "A nucleus of rest mass M, initially at rest, absorbs a photon of energy E. The rest mass of the resulting system is",
+        "choices": [
+          "√(M² + 2ME/c²)",
+          "M",
+          "M + E/c²",
+          "M + 2E/c²",
+          "√(M² + E²/c⁴)"
+        ],
+        "answer": "A",
+        "explanation": "After absorption the total energy is Mc² + E and the total momentum is E/c, so (M′c²)² = (Mc² + E)² − E² = M²c⁴ + 2Mc²E, giving M′ = √(M² + 2ME/c²). The M + E/c² distractor ignores the recoil momentum the photon necessarily delivers; some of the photon's energy must go into kinetic energy of the recoiling system, so the rest mass rises by less than E/c². For E ≪ Mc² the exact result does reduce to M + E/c², which is why the Mössbauer effect, where the recoil is taken up by the whole crystal, is so useful."
+      },
+
+      // [CM/rotational dynamics]
+      {
+        "question": "A uniform solid cylinder of mass M and radius R has a light string wound many times around it. The free end of the string is held fixed and the cylinder is released from rest, falling as the string unwinds without slipping. The downward acceleration of its center is",
+        "choices": [
+          "g/3",
+          "g/2",
+          "2g/3",
+          "3g/4",
+          "g"
+        ],
+        "answer": "C",
+        "explanation": "Newton's law gives Mg − T = Ma and the torque about the center gives TR = (½MR²)(a/R), so T = Ma/2 and a = 2g/3. Equivalently, use the fixed contact line as the pivot: a = Mg R/(I_contact/R) with I_contact = (3/2)MR². The g/2 distractor comes from using I = MR², the value for a hoop; the string's tension is Mg/3 here, not the full weight, and the cylinder falls at two-thirds of free fall no matter how tightly the string is wound."
+      },
+
+      // [QM/franck-hertz experiment]
+      {
+        "question": "In a Franck-Hertz tube filled with mercury vapor, the collected current shows dips at accelerating-voltage intervals of 4.9 V. Taking h = 6.63 × 10⁻³⁴ J·s, c = 3.0 × 10⁸ m/s and e = 1.6 × 10⁻¹⁹ C, the wavelength of the light emitted by the excited mercury atoms is most nearly",
+        "choices": [
+          "126 nm",
+          "253 nm",
+          "400 nm",
+          "506 nm",
+          "650 nm"
+        ],
+        "answer": "B",
+        "explanation": "The 4.9 V spacing means an electron must acquire 4.9 eV before it can excite a mercury atom inelastically, so the excited state lies 4.9 eV above the ground state and decays by emitting a photon of that energy: λ = hc/E = 1,240 eV·nm/4.9 eV = 253 nm, in the ultraviolet, which is what is observed. The 506 nm distractor uses half the excitation energy, as though two dips were needed per photon. The equal spacing of the dips shows that each electron can excite several atoms in succession, not that higher levels are involved."
+      },
+
+      // [LM/poisson & counting statistics]
+      {
+        "question": "A detector registers 100 counts in one minute with a radioactive source in place, and 64 counts in one minute with the source removed. The net counting rate due to the source is 36 per minute, with a statistical uncertainty of most nearly",
+        "choices": [
+          "6 per minute",
+          "8 per minute",
+          "10 per minute",
+          "13 per minute",
+          "16 per minute"
+        ],
+        "answer": "D",
+        "explanation": "Each measurement is Poisson with its own uncertainty, √100 = 10 and √64 = 8, and subtracting two independent numbers adds their variances: σ = √(100 + 64) = 13. The 6 per minute distractor is √36, applying the Poisson rule to the difference as though the net count were itself a Poisson variable, which it is not. Note the uncertainty is over a third of the net signal here — a background nearly as large as the signal is expensive."
+      },
+
+      // [TS/thermodynamic cycles]
+      {
+        "question": "One mole of a monatomic ideal gas is carried around a closed rectangular cycle in the PV plane: from (P₀, V₀) at constant volume to (2P₀, V₀), then at constant pressure to (2P₀, 2V₀), then at constant volume to (P₀, 2V₀), then at constant pressure back to the start. The efficiency of this cycle is most nearly",
+        "choices": [
+          "6.7 percent",
+          "10 percent",
+          "15 percent",
+          "25 percent",
+          "50 percent"
+        ],
+        "answer": "C",
+        "explanation": "The net work is the enclosed area, P₀V₀. Heat enters on the first two legs only: (3/2)V₀ΔP = 1.5P₀V₀ on the isochore and (5/2)(2P₀)(V₀) = 5P₀V₀ on the isobaric expansion, for Q_in = 6.5P₀V₀ and η = 1/6.5 = 15 percent. The 25 percent distractor divides the work by the total heat exchanged in magnitude, or by a miscounted Q_in; efficiency uses only the heat absorbed. For reference the Carnot limit between the extreme temperatures of this cycle would be 75 percent."
+      },
+
+      // [EM/RC circuits]
+      {
+        "question": "A capacitor of capacitance C, initially uncharged, is charged through a resistor R by a battery of emf V until the current has stopped. The fraction of the total energy supplied by the battery that ends up stored in the capacitor is",
+        "choices": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "2/3",
+          "1"
+        ],
+        "answer": "C",
+        "explanation": "The battery moves charge Q = CV through its own terminals at fixed emf, delivering QV = CV², while the capacitor ends up holding ½CV². The missing half is dissipated in the resistor, and remarkably the answer is independent of R: a smaller resistance gives a larger current for a shorter time, and the integral of I²R is unchanged. The answer 1 is the trap for students who equate the battery's work with the stored energy, forgetting that charging a capacitor through any resistance is irreversible."
+      },
+
+      // [QM/wavefunction & normalization]
+      {
+        "question": "A particle in one dimension has the wave function ψ(x) = N e^(−|x|/a) for −∞ < x < ∞, where a > 0 and N is real and positive. The value of N is",
+        "choices": [
+          "1/√a",
+          "1/√(2a)",
+          "√(2/a)",
+          "1/a",
+          "√a"
+        ],
+        "answer": "A",
+        "explanation": "Normalization requires N²∫e^(−2|x|/a)dx = 2N²∫₀^∞ e^(−2x/a)dx = 2N²(a/2) = N²a = 1, so N = 1/√a. The factor of 2 from the two sides of the origin exactly cancels the ½ from the integral, which is why the answer is so clean; dropping one of the two gives the 1/√(2a) and √(2/a) distractors. Note that N must have units of (length)^(−1/2) in one dimension, which immediately rules out 1/a and √a."
+      },
+
+      // [CM/gravitation]
+      {
+        "question": "For an airless spherical planet, the ratio of the escape speed from the surface to the speed of a satellite in a circular orbit just above the surface is",
+        "choices": [
+          "1/2",
+          "1/√2",
+          "1",
+          "√2",
+          "2"
+        ],
+        "answer": "D",
+        "explanation": "The circular orbit satisfies v_c² = GM/R while escape requires ½v_e² = GM/R, so v_e = √2 v_c. This factor is universal: it depends on neither the planet's mass nor its radius, and it says that a satellite in low orbit needs only about 41 percent more speed to leave the planet forever. The ratio 2 comes from comparing energies rather than speeds, since escape does require twice the kinetic energy."
+      },
+
+      // [OW/sound waves]
+      {
+        "question": "A sound wave has intensity 1.0 × 10⁻⁴ W/m². Taking the reference intensity to be 1.0 × 10⁻¹² W/m², the sound intensity level is",
+        "choices": [
+          "8 dB",
+          "20 dB",
+          "40 dB",
+          "80 dB",
+          "120 dB"
+        ],
+        "answer": "D",
+        "explanation": "The level is 10 log₁₀(I/I₀) = 10 log₁₀(10⁸) = 80 dB. The 8 dB distractor omits the factor of 10 that converts bels to decibels, and 40 dB comes from a stray factor of ½ or from using an amplitude ratio where an intensity ratio is called for. For reference, 80 dB is heavy traffic; the 120 dB entry is the threshold of pain, four orders of magnitude more intense than the wave described here."
+      },
+
+      // [SP/nuclear reactions]
+      {
+        "question": "A ²³⁵U nucleus absorbs a slow neutron and undergoes fission into ¹⁴¹Ba and ⁹²Kr together with some free neutrons. The number of free neutrons released is",
+        "choices": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": "B",
+        "explanation": "Mass number is conserved: 235 + 1 = 236, while the two named fragments account for 141 + 92 = 233, leaving 3 neutrons. Charge is consistent as well, since Z = 56 for Ba and Z = 36 for Kr sum to the uranium's 92. Two or three prompt neutrons per fission is what makes a chain reaction possible, and the answer here is fixed by bookkeeping rather than by any nuclear model."
+      },
+
+      // [QM/addition of angular momentum]
+      {
+        "question": "Two electrons occupy p orbitals, each with orbital angular momentum quantum number l = 1. Considering the orbital angular momenta alone, the possible values of the total orbital quantum number L are",
+        "choices": [
+          "1 only",
+          "1 and 2 only",
+          "0 and 2 only",
+          "0, 1, 2, and 3",
+          "0, 1, and 2"
+        ],
+        "answer": "E",
+        "explanation": "Angular momenta add from |l₁ − l₂| to l₁ + l₂ in integer steps, so L runs over 0, 1 and 2, giving the S, P and D terms of a p² configuration. The '0, 1, 2, and 3' distractor adds the quantum numbers as though they simply summed to 3 at the top, which overshoots the maximum; note that l₁ + l₂ = 2 is already the largest possible. The Pauli principle further restricts which of these combine with which total spin for equivalent electrons, but it does not remove any L value from this list."
+      },
+
+      // [EM/conductors & capacitance]
+      {
+        "question": "A spherical capacitor consists of a conducting sphere of radius a surrounded by a concentric conducting shell of inner radius b, with vacuum between them. Its capacitance is",
+        "choices": [
+          "4πε₀ab/(b − a)",
+          "4πε₀(b − a)/ab",
+          "4πε₀(a + b)",
+          "4πε₀ab/(b + a)",
+          "4πε₀b²/(b − a)"
+        ],
+        "answer": "A",
+        "explanation": "With charge Q on the inner sphere, V = (Q/4πε₀)(1/a − 1/b) = Q(b − a)/(4πε₀ab), so C = Q/V = 4πε₀ab/(b − a). Two checks settle the answer without algebra: as b → ∞ it must reduce to the isolated-sphere value 4πε₀a, and as b → a the gap vanishes and C must diverge. The 4πε₀(b − a)/ab distractor has the difference in the wrong place and fails both limits."
+      },
+
+      // [CM/fluids]
+      {
+        "question": "A block floats in water with 60 percent of its volume submerged. It is then placed in a liquid whose density is 0.80 times that of water. The fraction of the block's volume that is submerged is",
+        "choices": [
+          "48 percent",
+          "60 percent",
+          "67 percent",
+          "75 percent",
+          "80 percent"
+        ],
+        "answer": "D",
+        "explanation": "The submerged fraction equals the ratio of the block's density to the fluid's density, so the block's density is 0.60 that of water and in the lighter liquid the fraction is 0.60/0.80 = 0.75. The 48 percent distractor multiplies by 0.80 instead of dividing, which has the block floating higher in a thinner fluid — the wrong direction physically. If the fluid density fell below 0.60 that of water the block would sink outright."
+      },
+
+      // [TS/first law & work]
+      {
+        "question": "An ideal monatomic gas is heated at constant pressure. The fraction of the heat added that appears as work done by the gas is",
+        "choices": [
+          "1/5",
+          "2/5",
+          "1/2",
+          "3/5",
+          "2/3"
+        ],
+        "answer": "B",
+        "explanation": "At constant pressure Q = nC_pΔT with C_p = (5/2)R, while W = PΔV = nRΔT, so W/Q = R/C_p = 2/5. The remaining 3/5 goes into internal energy, consistent with C_v = (3/2)R. The 2/3 distractor is W/ΔU rather than W/Q, the ratio of work to internal-energy change rather than to the total heat; for a diatomic gas at room temperature the correct fraction would drop to 2/7."
+      },
+
+      // [QM/harmonic oscillator]
+      {
+        "question": "The molecules H₂ and D₂ have essentially identical electronic structure and therefore the same effective force constant for vibration. The ratio of the vibrational level spacing of D₂ to that of H₂ is most nearly",
+        "choices": [
+          "0.25",
+          "0.50",
+          "0.71",
+          "1.4",
+          "2.0"
+        ],
+        "answer": "C",
+        "explanation": "The spacing is ħω = ħ√(k/μ) with the reduced mass μ = m/2 for a homonuclear molecule: 0.5 u for H₂ and 1.0 u for D₂. Doubling the reduced mass at fixed k lowers the frequency by √2, so the ratio is 1/√2 = 0.71. The 0.50 distractor uses the mass ratio without the square root. This isotope shift is exactly how vibrational assignments in molecular spectra are confirmed experimentally."
+      },
+
+      // [SP/astrophysics & cosmology]
+      {
+        "question": "Taking the Hubble constant to be 70 (km/s) per megaparsec, with 1 Mpc = 3.1 × 10¹⁹ km and 1 yr = 3.2 × 10⁷ s, the Hubble time 1/H₀ is most nearly",
+        "choices": [
+          "1.4 × 10⁸ yr",
+          "1.4 × 10⁹ yr",
+          "1.4 × 10¹⁰ yr",
+          "1.4 × 10¹¹ yr",
+          "1.4 × 10¹² yr"
+        ],
+        "answer": "C",
+        "explanation": "H₀ = 70/(3.1 × 10¹⁹) = 2.3 × 10⁻¹⁸ s⁻¹, so 1/H₀ = 4.4 × 10¹⁷ s = 1.4 × 10¹⁰ yr. This is the age the universe would have if it had always expanded at the present rate, and it lands within about ten percent of the actual age — a coincidence of the deceleration and acceleration epochs roughly cancelling. Losing the Mpc-to-km conversion is what shifts the answer by whole decades, so the unit chain matters more than the arithmetic here."
+      },
+
+      // [EM/RLC & AC circuits]
+      {
+        "question": "An ideal inductor L and an ideal capacitor C are connected in parallel with each other, and this combination is driven by an ac source of angular frequency ω = 1/√(LC). The amplitude of the current drawn from the source is",
+        "choices": [
+          "zero",
+          "V√(C/L)",
+          "V/√(LC)",
+          "V√(L/C)",
+          "the sum of V/ωL and VωC"
+        ],
+        "answer": "A",
+        "explanation": "The two branches carry equal current amplitudes V/ωL and VωC, equal because ω² = 1/LC, and they are 180° out of phase with each other, so they cancel in the supply line: the parallel tank has infinite impedance at resonance. Current still circulates around the LC loop; it just never comes from the source. The last option adds the branch magnitudes as though the currents were in phase, which is exactly the mistake that the series case (where voltages, not currents, cancel) tempts students to make."
+      },
+
+      // [CM/coupled oscillators & normal modes]
+      {
+        "question": "Two identical blocks, each of mass m, rest on a frictionless horizontal surface and are joined to each other by a spring of force constant k. Nothing else is attached to them. The angular frequency of the mode in which they oscillate is",
+        "choices": [
+          "√(2k/m)",
+          "√(k/m)",
+          "√(k/2m)",
+          "2√(k/m)",
+          "√(k/4m)"
+        ],
+        "answer": "A",
+        "explanation": "In the oscillating mode the center of mass stays fixed and each block moves ±x/2, so the relative coordinate obeys μẍ = −kx with the reduced mass μ = m/2, giving ω = √(k/μ) = √(2k/m). The other normal mode is the zero-frequency translation of the pair. The √(k/m) distractor treats one block as though it were bolted to a wall, and √(k/2m) uses the total mass 2m instead of the reduced mass — the two errors push the answer in opposite directions."
+      },
+
+      // [QM/spin & pauli matrices]
+      {
+        "question": "The magnitude of the spin angular momentum of a particle whose spin quantum number is s = 1 is",
+        "choices": [
+          "ħ",
+          "√2 ħ",
+          "√3 ħ",
+          "2ħ",
+          "√6 ħ"
+        ],
+        "answer": "B",
+        "explanation": "The magnitude is √(s(s+1))ħ = √2 ħ, while the largest measurable z-component is only sħ = ħ. The ħ distractor is that maximum projection, the standard confusion between the length of the vector and its largest component; the two can never be equal for a nonzero spin. For comparison, an electron with s = ½ has magnitude √3 ħ/2 and maximum projection ħ/2."
+      },
+
+      // [SR/length contraction]
+      {
+        "question": "A cube of rest mass M and rest-frame edge length L₀ moves at 0.60c parallel to one of its edges. In the laboratory frame, its total energy divided by c² and by the volume it occupies is",
+        "choices": [
+          "0.64M/L₀³",
+          "0.80M/L₀³",
+          "1.0M/L₀³",
+          "1.25M/L₀³",
+          "1.6M/L₀³"
+        ],
+        "answer": "E",
+        "explanation": "With γ = 1.25, the total energy is γMc² and the volume is contracted along one edge to L₀³/γ, so the quantity asked for is γ²M/L₀³ = 1.56M/L₀³, most nearly 1.6M/L₀³. Two independent factors of γ appear — one from the energy, one from the contraction — and taking only the first gives the 1.25 distractor. The 0.80 value is the volume contraction alone, with the energy left unrelativistic."
+      },
+
+      // [LM/diodes & rectifiers]
+      {
+        "question": "A 60 Hz sinusoidal voltage is applied to an ideal full-wave rectifier with no smoothing capacitor. The fundamental frequency of the ripple in the output voltage is",
+        "choices": [
+          "15 Hz",
+          "30 Hz",
+          "60 Hz",
+          "90 Hz",
+          "120 Hz"
+        ],
+        "answer": "E",
+        "explanation": "A full-wave rectifier flips the negative half-cycles up rather than discarding them, so the output repeats twice per input cycle and the ripple fundamental is 120 Hz. The 60 Hz distractor is the half-wave answer, where alternate half-cycles are simply blocked and the period matches the input. The doubled ripple frequency is a practical advantage: it is easier to filter, since a given capacitor has half the reactance at twice the frequency."
+      },
+
+      // [CM/center of mass]
+      {
+        "question": "A uniform wire is bent into a semicircular arc of radius R. The distance of its center of mass from the center of the circle is",
+        "choices": [
+          "2R/π",
+          "R/π",
+          "R/2",
+          "4R/3π",
+          "πR/2"
+        ],
+        "answer": "A",
+        "explanation": "Taking the arc symmetric about the y-axis, ȳ = (1/πR)∫₀^π R sinθ · R dθ = 2R/π ≈ 0.64R. The 4R/3π distractor is the center of mass of a uniform semicircular lamina, where the material near the diameter pulls the average inward; a wire has all its mass out at radius R, so its center of mass must lie farther out than the disk's. Since every mass element is at distance R, the answer is bound to be less than R but not much less."
+      },
+
+      // [OW/refraction & snell's law]
+      {
+        "question": "Light traveling inside glass of index 1.50 strikes a plane boundary with water of index 1.33 at an angle of incidence of 40°. The angle of refraction in the water is most nearly",
+        "choices": [
+          "29°",
+          "33°",
+          "40°",
+          "44°",
+          "46°"
+        ],
+        "answer": "E",
+        "explanation": "Snell's law gives sin θ₂ = (1.50/1.33) sin 40° = 1.128 × 0.643 = 0.725, so θ₂ = 46°. The ray bends away from the normal because it is entering the less dense medium. The 33° distractor comes from inverting the index ratio, which would describe light going from water into glass. Total internal reflection would only set in beyond the critical angle arcsin(1.33/1.50) = 62°, so a transmitted ray certainly exists at 40°."
+      },
+
+      // [SP/particle decays & annihilation]
+      {
+        "question": "A photon passing near a heavy nucleus can convert into an electron-positron pair. Taking the electron rest energy to be 0.511 MeV, the minimum photon energy for which this is possible is most nearly",
+        "choices": [
+          "0.26 MeV",
+          "0.51 MeV",
+          "0.66 MeV",
+          "0.77 MeV",
+          "1.02 MeV"
+        ],
+        "answer": "E",
+        "explanation": "Two particles of rest energy 0.511 MeV must be created, so the threshold is 2 × 0.511 = 1.02 MeV, the recoil of the massive nucleus adding a negligible correction. The 0.51 MeV distractor accounts for only one of the two particles. The nucleus is essential rather than incidental: in empty space a single photon cannot convert to a pair at all, because no frame exists in which the pair's total momentum vanishes while the photon's does not."
+      },
+
+      // [EM/coulomb's law & E-field]
+      {
+        "question": "A charge +4q is fixed at the origin and a charge −q is fixed at x = L on the x-axis. The electric field vanishes at",
+        "choices": [
+          "x = 2L",
+          "x = 2L/3",
+          "x = L/2",
+          "x = −L",
+          "no point on the x-axis"
+        ],
+        "answer": "A",
+        "explanation": "A null can only occur outside the pair and on the side of the weaker charge, so try x > L: 4/x² = 1/(x − L)² gives 2(x − L) = x and x = 2L. Between the charges both fields point in the +x direction and cannot cancel, which rules out x = L/2 and x = 2L/3. To the left of the origin the larger charge is also the nearer one, so no cancellation is possible there either — the geometry alone eliminates three of the five options before any algebra."
+      }
+
+    ]
   }
 ];
