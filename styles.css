@@ -399,7 +399,7 @@ button.btn:disabled { opacity: 0.35; cursor: not-allowed; }
   color: var(--correct);
 }
 
-.explanation { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
+.explanation { margin: 0; color: var(--ink-soft); font-size: 0.9rem; white-space: pre-line; }
 
 .coverage {
   margin-top: 0.9rem;

@@ -2731,7 +2731,7 @@ const EXAMS = [
           "L"
         ],
         "answer": "C",
-        "explanation": "The impulse J must satisfy both laws at once. Linear: J = Mv_cm. Angular about the pivot: Jd = I_pivot·ω = (ML²/3)ω. Rolling without slipping about the pivot means v_cm = ωL/2, so J = MωL/2, and substituting gives (MωL/2)d = ML²ω/3, hence d = 2L/3. The trap is L/2, the centre of mass — a blow there does produce a reaction at the pivot, because the rod's rotation about the pivot demands a specific relation between v_cm and ω that only d = 2L/3 satisfies. ⏱ 90-second route: memorize I = ML²/3 for a rod about its end, and nothing else. Everything follows from writing the two impulse equations and eliminating ω. If you have seen the term 'centre of percussion' (the sweet spot of a bat), 2L/3 is recall and the whole question is 15 seconds."
+        "explanation": "WORKED SOLUTION\nLinear impulse gives J = Mv_cm; angular impulse about the pivot gives Jd = (ML²/3)ω. Rotation about the pivot forces v_cm = ωL/2, so J = MωL/2, and substituting leaves d = 2L/3. The trap is L/2, the centre of mass: a blow there does produce a reaction at the pivot.\n\n90-SECOND SOLUTION\nWrite the two impulse equations, eliminate ω, and read off d. If you recognise this as the centre of percussion — the sweet spot of a bat — the answer is recall and the question takes fifteen seconds.\n\nWHAT TO MEMORIZE\nI = ML²/3 for a rod about its end. Nothing else."
       },
 
       // [CM/central force & orbits]
@@ -2745,7 +2745,7 @@ const EXAMS = [
           "2E"
         ],
         "answer": "B",
-        "explanation": "The virial theorem for a force varying as r⁻² gives 2⟨T⟩ = −⟨U⟩. Combining with ⟨T⟩ + ⟨U⟩ = E eliminates ⟨U⟩: 2⟨T⟩ = −(E − ⟨T⟩), so ⟨T⟩ = −E, a positive quantity as required. The tempting wrong answer is −E/2, which comes from setting ⟨T⟩ = ⟨U⟩ as one would for a harmonic potential rather than a Coulomb one. ⏱ 90-second route: memorize the virial relation 2⟨T⟩ = −⟨U⟩ for inverse-square attraction, or just memorize the circular-orbit result T = −E/2·2 = −E and trust that averaging preserves it. The sign check is free inference: ⟨T⟩ must come out positive, which kills −E/2 only if you also know the factor, but kills 2E and E/2 immediately."
+        "explanation": "WORKED SOLUTION\nThe virial theorem for an inverse-square force gives 2⟨T⟩ = −⟨U⟩. Combining with ⟨T⟩ + ⟨U⟩ = E gives ⟨T⟩ = −E, positive as required. The trap is −E/2, from assuming ⟨T⟩ = ⟨U⟩ as for a harmonic potential.\n\n90-SECOND SOLUTION\nApply the virial relation, substitute into the energy sum, and check the sign: ⟨T⟩ must come out positive, which eliminates 2E and E/2 immediately.\n\nWHAT TO MEMORIZE\nThe virial theorem 2⟨T⟩ = −⟨U⟩ for inverse-square attraction, and that the harmonic case is different (⟨T⟩ = ⟨U⟩)."
       },
 
       // [CM/kinematics]
@@ -2759,7 +2759,7 @@ const EXAMS = [
           "45° + α"
         ],
         "answer": "B",
-        "explanation": "Working in axes tilted with the slope, gravity has components −g sin α along the slope and −g cos α perpendicular to it, and the standard flat-ground result says the optimum is 45° from the 'floor' — here the slope itself. Adding back the slope's own tilt gives α + 45°/1 measured from the slope, which is 45° + α/2 from the horizontal once the algebra is done properly. The trap is 45° + α, which is what you get by naively adding the full slope angle instead of bisecting. ⏱ 90-second route: memorize only that the optimum bisects the angle between the slope and the vertical. Then infer: for α = 0 the answer must reduce to 45°, which eliminates 90° − α and 45° + α is only eliminated by a second check — take α = 90° (firing straight up a wall), where the answer must be 90°, and only 45° + α/2 gives it. Limit-checking the candidate formulas is faster than deriving."
+        "explanation": "WORKED SOLUTION\nIn axes tilted with the slope the optimum is 45° from the slope itself, which works out to 45° + α/2 from the horizontal. The trap is 45° + α, from adding the full slope angle instead of bisecting.\n\n90-SECOND SOLUTION\nDo not derive this — limit-check the candidates. At α = 0 the answer must be 45°, killing 90° − α. At α = 90°, firing straight up a wall, it must be 90°, and only 45° + α/2 gives that.\n\nWHAT TO MEMORIZE\nThat the optimum bisects the angle between the slope and the vertical. Limit-checking replaces the rest."
       },
 
       // [CM/pendulum]
@@ -2773,7 +2773,7 @@ const EXAMS = [
           "keep perfect time, since the period is independent of the bob's mass"
         ],
         "answer": "A",
-        "explanation": "The length increases by ΔL/L = αΔθ = (1.2 × 10⁻⁵)(20) = 2.4 × 10⁻⁴. Since T ∝ √L, the fractional change in period is half of that, 1.2 × 10⁻⁴. A longer period means fewer ticks, so the clock runs slow by (1.2 × 10⁻⁴)(86,400 s) ≈ 10 s per day. The trap is 21 s, which is what you get by forgetting the factor of ½ from the square root. ⏱ 90-second route: memorize T = 2π√(L/g) and the expansion law ΔL = LαΔθ; both are standard. The rest is pure inference: the square root halves the fractional change, and 86,400 s/day is worth knowing cold. The sign — slow, not fast — is inference too: longer pendulum, longer swing, fewer counted seconds."
+        "explanation": "WORKED SOLUTION\nΔL/L = αΔθ = 2.4 × 10⁻⁴, and since T ∝ √L the period changes by half that, 1.2 × 10⁻⁴. A longer period means fewer ticks, so the clock loses (1.2 × 10⁻⁴)(86,400 s) ≈ 10 s per day. The trap is 21 s, from forgetting the factor of ½.\n\n90-SECOND SOLUTION\nCompute the fractional length change, halve it for the square root, multiply by seconds per day. The direction is inference: a longer pendulum swings slower, so the clock runs slow.\n\nWHAT TO MEMORIZE\nT = 2π√(L/g), ΔL = LαΔθ, and 86,400 s per day."
       },
 
       // [CM/momentum & collisions]
@@ -2787,7 +2787,7 @@ const EXAMS = [
           "4"
         ],
         "answer": "D",
-        "explanation": "Momentum is zero before and after, so the two blocks carry equal and opposite momenta of magnitude p. Writing kinetic energy as p²/2m shows it is inversely proportional to mass at fixed momentum, so the lighter block, with half the mass, carries twice the kinetic energy: the ratio is 2. The trap is ½, which is what you get by assuming equal speeds instead of equal momenta. ⏱ 90-second route: memorize the form K = p²/2m — it is the single most useful rewriting of kinetic energy on this exam. Everything else is inference: zero total momentum forces equal |p|, and then the ratio is just the inverse mass ratio. No numbers needed."
+        "explanation": "WORKED SOLUTION\nMomentum is zero throughout, so both blocks carry equal and opposite momenta. Writing K = p²/2m shows kinetic energy is inversely proportional to mass at fixed momentum, so the lighter block carries twice as much. The trap is ½, from assuming equal speeds.\n\n90-SECOND SOLUTION\nRecognise that zero total momentum forces equal |p|, then the ratio is just the inverse mass ratio. No numbers needed.\n\nWHAT TO MEMORIZE\nK = p²/2m — the single most useful rewriting of kinetic energy on this exam."
       },
 
       // [CM/SHM]
@@ -2801,7 +2801,7 @@ const EXAMS = [
           "2π√(7(R − r)/5g)"
         ],
         "answer": "E",
-        "explanation": "The centre of the sphere moves on a circle of radius (R − r), and rolling adds rotational inertia, so the effective mass is increased by the factor (1 + I/mr²) = 1 + 2/5 = 7/5. The period is therefore that of a simple pendulum of length (R − r) stretched by √(7/5), giving 2π√(7(R − r)/5g). The trap is the first choice, the pure pendulum answer, which ignores the energy stored in rotation. ⏱ 90-second route: memorize I = ⅖mr² for a solid sphere and the general rolling-oscillation rule that the period picks up a factor √(1 + I/mr²). Then infer: rolling always makes things slower, so the answer must exceed the plain pendulum period, which immediately eliminates the 5/7 and 2/3 versions. That single inference leaves only one plausible choice."
+        "explanation": "WORKED SOLUTION\nThe sphere's centre moves on a circle of radius (R − r), and rolling raises the effective inertia by (1 + I/mr²) = 7/5, so the period is the pendulum result stretched by √(7/5).\n\n90-SECOND SOLUTION\nRolling always makes oscillation slower, so the answer must exceed the plain pendulum period 2π√((R − r)/g). That one inference eliminates the 5/7 and 2/3 versions and leaves a single candidate.\n\nWHAT TO MEMORIZE\nI = ⅖mr² for a solid sphere, and that rolling multiplies the period by √(1 + I/mr²)."
       },
 
       // [CM/moment of inertia]
@@ -2815,7 +2815,7 @@ const EXAMS = [
           "12/5 MR²"
         ],
         "answer": "D",
-        "explanation": "The parallel-axis theorem adds Md² where d is the distance between the two parallel axes. A tangent line is one radius away from the central diameter, so I = ⅖MR² + MR² = 7/5 MR². The trap is 12/5 MR², which comes from mistakenly using d = 2R, the diameter, rather than the radius. ⏱ 90-second route: memorize ⅖MR² for a solid sphere and the parallel-axis theorem I = I_cm + Md². Both are recall you cannot avoid. The only inference is recognizing that 'tangent' means the shift is R, not 2R — sketch it for two seconds rather than trusting instinct."
+        "explanation": "WORKED SOLUTION\nThe parallel-axis theorem adds Md², and a tangent line sits one radius from the central diameter, so I = ⅖MR² + MR² = 7/5 MR². The trap is 12/5 MR², from using d = 2R.\n\n90-SECOND SOLUTION\nAdd Md² with d = R. The only real decision is that 'tangent' means a shift of R, not 2R — sketch it for two seconds rather than trusting instinct.\n\nWHAT TO MEMORIZE\nI = ⅖MR² for a solid sphere and the parallel-axis theorem I = I_cm + Md²."
       },
 
       // [CM/damped/driven oscillator]
@@ -2829,7 +2829,7 @@ const EXAMS = [
           "40 kg/s"
         ],
         "answer": "D",
-        "explanation": "Critical damping is the boundary between oscillatory and non-oscillatory return, and occurs when the discriminant of the characteristic equation vanishes: b = 2√(mk). Here 2√(0.50 × 200) = 2√100 = 20 kg/s. The trap is 10 kg/s, which is √(mk) without the factor of 2, and 40 kg/s, which comes from using 2mk under no root at all. ⏱ 90-second route: memorize b_crit = 2√(mk), equivalently β = ω₀ in the standard notation where β = b/2m. That is the whole question. If you blank on the factor of 2, you can recover it in about twenty seconds by writing mẍ + bẋ + kx = 0, trying x = e^(λt), and demanding the two roots coincide."
+        "explanation": "WORKED SOLUTION\nCritical damping is where the two roots of the characteristic equation coincide, at b = 2√(mk) = 2√100 = 20 kg/s. The traps are 10 kg/s, which is √(mk) without the factor of 2, and 40 kg/s.\n\n90-SECOND SOLUTION\nOne substitution into b = 2√(mk). If you blank on the factor of 2, write mẍ + bẋ + kx = 0, try x = e^(λt), and demand the roots coincide — about twenty seconds.\n\nWHAT TO MEMORIZE\nb_crit = 2√(mk), equivalently β = ω₀ where β = b/2m."
       },
 
       // [CM/work-energy]
@@ -2843,7 +2843,7 @@ const EXAMS = [
           "zero"
         ],
         "answer": "B",
-        "explanation": "The force is the negative gradient: F_x = −∂U/∂x = −ky and F_y = −∂U/∂y = −kx. At (a, a) both components equal −ka, so the magnitude is √2 ka and the force points back toward the origin along the diagonal. The trap is ka, from computing only one component and forgetting that the gradient has two. ⏱ 90-second route: memorize F = −∇U — this one relation is the entire question. The inference is mechanical: differentiate twice, evaluate, add in quadrature. Note the dimensional check that kills ka² instantly: U has units of energy, so k here carries units of energy per area, and force must go as ka, not ka²."
+        "explanation": "WORKED SOLUTION\nF = −∇U gives F_x = −ky and F_y = −kx, both equal to −ka at (a, a), so the magnitude is √2 ka and the force points back toward the origin. The trap is ka, from computing only one component.\n\n90-SECOND SOLUTION\nDifferentiate twice, evaluate, add in quadrature. The dimensional check kills ka² instantly: U is an energy, so k carries energy per area and force must go as ka.\n\nWHAT TO MEMORIZE\nF = −∇U. That one relation is the whole question."
       },
 
       // [CM/gravitation]
@@ -2857,7 +2857,7 @@ const EXAMS = [
           "d = h²/R"
         ],
         "answer": "C",
-        "explanation": "Inside a uniform sphere only the enclosed mass acts, so g falls linearly: g(d) = g(1 − d/R). Outside, g ∝ 1/r², so for small h, g(h) = g(1 + h/R)⁻² ≈ g(1 − 2h/R). Setting the two equal gives d = 2h — gravity falls off twice as fast going up as going down. The trap is d = h, which assumes the two behaviours are symmetric. ⏱ 90-second route: memorize the two behaviours, linear inside and inverse-square outside — this is a standard result worth having cold. The rest is one binomial expansion, (1 + x)⁻² ≈ 1 − 2x, which is the most-used approximation on this exam. The whole question is really a test of whether you know that factor of 2 exists."
+        "explanation": "WORKED SOLUTION\nInside a uniform sphere g falls linearly, g(d) = g(1 − d/R); outside it falls as 1/r², so g(h) ≈ g(1 − 2h/R). Setting them equal gives d = 2h. The trap is d = h, which assumes the two behaviours are symmetric.\n\n90-SECOND SOLUTION\nWrite both expressions, expand the outside one binomially, equate. The factor of 2 from the expansion is the entire question.\n\nWHAT TO MEMORIZE\ng linear inside a uniform sphere, inverse-square outside, and the expansion (1 + x)⁻² ≈ 1 − 2x."
       },
 
       // [EM/biot-savart & ampere's law]
@@ -2871,7 +2871,7 @@ const EXAMS = [
           "zero"
         ],
         "answer": "C",
-        "explanation": "An Amperian loop of radius r between the conductors encloses only the inner current, so B = μ₀I/2πr = (2 × 10⁻⁷)(5.0)/(2.0 × 10⁻³) = 5.0 × 10⁻⁴ T. The return current in the shell lies outside the loop and contributes nothing here — that is the trap behind the 'zero' choice, which is the correct answer only outside the cable entirely. ⏱ 90-second route: memorize B = μ₀I/2πr for a long straight current, and the shortcut μ₀/2π = 2 × 10⁻⁷ exactly, which turns this into one division. The inference is Ampère's law's central lesson: only enclosed current matters, so a coaxial cable is just a wire until you step outside the shell."
+        "explanation": "WORKED SOLUTION\nAn Amperian loop between the conductors encloses only the inner current, so B = μ₀I/2πr = (2 × 10⁻⁷)(5.0)/(2.0 × 10⁻³) = 5.0 × 10⁻⁴ T. The return current lies outside the loop and contributes nothing; 'zero' is correct only outside the cable entirely.\n\n90-SECOND SOLUTION\nOne division, once you see that only enclosed current matters. A coaxial cable is just a wire until you step outside the shell.\n\nWHAT TO MEMORIZE\nB = μ₀I/2πr, and the shortcut μ₀/2π = 2 × 10⁻⁷ exactly."
       },
 
       // [EM/inductance]
@@ -2885,7 +2885,7 @@ const EXAMS = [
           "4.0 × 10⁵ J/m³"
         ],
         "answer": "A",
-        "explanation": "The magnetic energy density is u = B²/2μ₀ = (0.10)²/(2 × 4π × 10⁻⁷) = 0.010/(2.51 × 10⁻⁶) ≈ 4.0 × 10³ J/m³. The trap is 8.0 × 10³, from dropping the factor of 2 in the denominator — the same slip that turns ½CV² into CV². ⏱ 90-second route: memorize the pair u_E = ½ε₀E² and u_B = B²/2μ₀; they are mirror images and are best learned together. Everything else is arithmetic. A useful sanity anchor: a 1 T field stores about 4 × 10⁵ J/m³, so scaling down by a factor of 100 in B means a factor of 10⁴ in energy density."
+        "explanation": "WORKED SOLUTION\nThe magnetic energy density is u = B²/2μ₀ = 0.010/(2.51 × 10⁻⁶) ≈ 4.0 × 10³ J/m³. The trap is 8.0 × 10³, from dropping the factor of 2 — the same slip that turns ½CV² into CV².\n\n90-SECOND SOLUTION\nOne substitution. Anchor the magnitude: a 1 T field stores about 4 × 10⁵ J/m³, so dropping B by 100 drops the density by 10⁴.\n\nWHAT TO MEMORIZE\nThe mirror pair u_E = ½ε₀E² and u_B = B²/2μ₀ — learn them together."
       },
 
       // [EM/induction & faraday]
@@ -2899,7 +2899,7 @@ const EXAMS = [
           "72 A"
         ],
         "answer": "A",
-        "explanation": "An ideal transformer conserves power, so I_p V_p = I_s V_s. The secondary voltage is 120 × (100/1200) = 10 V, so the secondary delivers 60 W, and the primary must draw 60 W at 120 V, giving 0.50 A. Equivalently the current ratio is the inverse of the turns ratio: 6.0 × (100/1200) = 0.50 A. The trap is 72 A, from applying the turns ratio in the wrong direction. ⏱ 90-second route: memorize only 'voltage scales with turns, current scales inversely'. Then infer everything from power conservation, which is the safer route because it is impossible to invert by accident: a step-down transformer lowers voltage and therefore must raise current on the secondary side, so the primary current is the small one."
+        "explanation": "WORKED SOLUTION\nAn ideal transformer conserves power. The secondary sits at 120 × (100/1200) = 10 V and delivers 60 W, so the primary draws 60 W at 120 V, giving 0.50 A. The trap is 72 A, from applying the turns ratio backwards.\n\n90-SECOND SOLUTION\nGo through power rather than the turns ratio — it is impossible to invert by accident. A step-down transformer raises secondary current, so the primary current is the small one.\n\nWHAT TO MEMORIZE\nVoltage scales with turns, current inversely; and that an ideal transformer conserves power."
       },
 
       // [EM/induction & faraday]
@@ -2913,7 +2913,7 @@ const EXAMS = [
           "The magnet falls freely but the tube acquires a permanent magnetization"
         ],
         "answer": "A",
-        "explanation": "The moving magnet changes the flux through each ring-shaped element of the tube wall, driving eddy currents whose own field opposes the change and therefore retards the magnet. The retarding force grows with speed, so the magnet settles at a terminal velocity where magnetic drag balances gravity, and the eddy currents dissipate the lost potential energy as resistive heating. The trap is the claim that the magnet falls freely, which confuses 'not ferromagnetic' with 'not conducting' — induction needs only a conductor. ⏱ 90-second route: memorize nothing beyond Lenz's law. The chain of inference is short: changing flux drives current, current opposes the change, opposition grows with speed, speed therefore saturates. Energy conservation then tells you where the gravitational energy went, which is what distinguishes the correct choice from the merely plausible one."
+        "explanation": "WORKED SOLUTION\nThe moving magnet changes the flux through each ring-shaped element of the tube wall, driving eddy currents whose field opposes the change. The retarding force grows with speed until it balances gravity, and the lost potential energy appears as resistive heating. The trap is the claim that the magnet falls freely, which confuses 'not ferromagnetic' with 'not conducting'.\n\n90-SECOND SOLUTION\nFour steps, no formulas: changing flux drives current, current opposes the change, opposition grows with speed, speed saturates. Then ask where the gravitational energy went — that is what separates the right answer from the merely plausible one.\n\nWHAT TO MEMORIZE\nLenz's law. Nothing else."
       },
 
       // [EM/inductance]
@@ -2927,7 +2927,7 @@ const EXAMS = [
           "20 V"
         ],
         "answer": "B",
-        "explanation": "Mutual inductance is defined so that ε₂ = M dI₁/dt, giving (0.50)(4.0) = 2.0 V. Note that the emf depends on the rate of change of current, not on the current itself, so the actual current in the first coil is irrelevant and is deliberately not supplied. The trap is 0.13 V, from dividing by the rate instead of multiplying. ⏱ 90-second route: memorize ε = M dI/dt and its self-inductance twin ε = L dI/dt; they are the same statement applied to two circuits or one. The whole problem is a single multiplication. The inference worth making is dimensional: henries times amperes per second gives volts directly, which confirms the operation is multiplication and rules out the reciprocal trap without any physical reasoning."
+        "explanation": "WORKED SOLUTION\nMutual inductance is defined by ε₂ = M dI₁/dt, giving (0.50)(4.0) = 2.0 V. The emf depends on the rate of change of current, not the current itself, which is why no current value is supplied. The trap is 0.13 V, from dividing instead of multiplying.\n\n90-SECOND SOLUTION\nOne multiplication. The dimensional check settles the direction of the operation: henries times amperes per second gives volts.\n\nWHAT TO MEMORIZE\nε = M dI/dt, and its self-inductance twin ε = L dI/dt."
       },
 
       // [EM/EM waves & poynting]
@@ -2941,7 +2941,7 @@ const EXAMS = [
           "100"
         ],
         "answer": "B",
-        "explanation": "The skin depth is δ = √(2/μσω), so δ ∝ ω⁻¹/², and increasing the frequency by 100 reduces the penetration depth by √100 = 10. The trap is 1/100, from assuming a linear rather than square-root dependence. ⏱ 90-second route: memorize the scaling δ ∝ 1/√f, not the full formula — the constants almost never matter on this exam. If even the scaling is gone, you can infer the exponent from the diffusion character of fields in a conductor, where lengths always go as the square root of a time; that argument also tells you δ ∝ 1/√σ, which is the other half of what this topic ever asks."
+        "explanation": "WORKED SOLUTION\nSkin depth is δ = √(2/μσω), so δ ∝ ω⁻¹/² and a hundredfold rise in frequency cuts penetration by √100 = 10. The trap is 1/100, from assuming a linear dependence.\n\n90-SECOND SOLUTION\nRead the exponent off the scaling and take a square root. If the scaling is gone, infer it: fields diffuse into a conductor, and diffusion lengths always go as the square root of a time.\n\nWHAT TO MEMORIZE\nδ ∝ 1/√f. The constants almost never matter; the exponent always does."
       },
 
       // [EM/multipole expansion]
@@ -2955,7 +2955,7 @@ const EXAMS = [
           "1/r⁵"
         ],
         "answer": "D",
-        "explanation": "Each successive multipole potential carries one more power of 1/r: monopole V ∝ 1/r, dipole 1/r², quadrupole 1/r³. The field is the gradient of the potential, adding one further power, so the quadrupole field falls as 1/r⁴. The trap is 1/r³, which is the quadrupole potential, or equivalently the dipole field — confusing V with E by one power is the single most common error in this topic. ⏱ 90-second route: memorize one anchor, that a dipole field goes as 1/r³, and count from there. The inference is just bookkeeping: quadrupole is one order beyond dipole, so add a power. Writing the ladder V: 1/r, 1/r², 1/r³ and E: 1/r², 1/r³, 1/r⁴ in the margin takes ten seconds and removes all ambiguity."
+        "explanation": "WORKED SOLUTION\nEach successive multipole potential carries one more power of 1/r — monopole 1/r, dipole 1/r², quadrupole 1/r³ — and the field adds one more, so the quadrupole field falls as 1/r⁴. The trap is 1/r³, which is the quadrupole potential, or equivalently the dipole field.\n\n90-SECOND SOLUTION\nWrite the two ladders in the margin, V: 1/r, 1/r², 1/r³ and E: 1/r², 1/r³, 1/r⁴, and read off. Ten seconds, and it removes all ambiguity between V and E.\n\nWHAT TO MEMORIZE\nOne anchor: a dipole field goes as 1/r³. Count up or down from there."
       },
 
       // [EM/magnetic materials]
@@ -2969,7 +2969,7 @@ const EXAMS = [
           "0.13 T"
         ],
         "answer": "E",
-        "explanation": "For an empty solenoid B = μ₀nI = (1.26 × 10⁻⁶)(1000)(0.20) = 2.5 × 10⁻⁴ T. Filling the core multiplies this by the relative permeability: 500 × 2.5 × 10⁻⁴ ≈ 0.13 T. The trap is the first choice, the empty-core value, which is what you get by ignoring the core entirely. ⏱ 90-second route: memorize B = μ₀nI and the rule that a linear magnetic medium simply replaces μ₀ by μ_rμ₀. The inference worth making is directional: μ_r > 1 means the material is paramagnetic or ferromagnetic and concentrates flux, so the field must go up, not down — that alone eliminates two choices before any arithmetic."
+        "explanation": "WORKED SOLUTION\nAn empty solenoid gives B = μ₀nI = 2.5 × 10⁻⁴ T, and filling the core multiplies this by the relative permeability: 500 × 2.5 × 10⁻⁴ ≈ 0.13 T. The trap is 2.5 × 10⁻⁴ T, the empty-core value.\n\n90-SECOND SOLUTION\nOne multiplication after the empty-core field. Check direction first: μ_r > 1 concentrates flux, so the field must rise, which eliminates two choices before any arithmetic.\n\nWHAT TO MEMORIZE\nB = μ₀nI, and that a linear magnetic medium replaces μ₀ by μ_rμ₀."
       },
 
       // [EM/conductors & capacitance]
@@ -2983,7 +2983,7 @@ const EXAMS = [
           "10 mJ"
         ],
         "answer": "D",
-        "explanation": "The stored energy before is ½CV² = ½(2.0 × 10⁻⁶)(100)² = 10 mJ. Charge is conserved at 2.0 × 10⁻⁴ C and now sits on 5.0 μF, so the common voltage is 40 V and the energy after is ½(5.0 × 10⁻⁶)(40)² = 4.0 mJ. The difference, 6.0 mJ, is dissipated in the connecting wires and as radiation no matter how small the resistance. The trap is 'zero', which follows from wrongly assuming energy is conserved because charge is. ⏱ 90-second route: memorize U = ½CV² = Q²/2C, and the rule that in this configuration charge is the conserved quantity, not voltage or energy. The whole calculation is faster in the Q²/2C form: the same Q on a larger C means less energy, so the answer is 10 mJ × (1 − 2/5) = 6 mJ in one step."
+        "explanation": "WORKED SOLUTION\nBefore: ½CV² = 10 mJ. Charge is conserved at 2.0 × 10⁻⁴ C, now on 5.0 μF, so the common voltage is 40 V and the stored energy is 4.0 mJ. The missing 6.0 mJ is dissipated no matter how small the resistance. The trap is 'zero', from assuming energy is conserved because charge is.\n\n90-SECOND SOLUTION\nUse Q²/2C rather than ½CV²: the same charge on a larger capacitance means less energy, so the answer is 10 mJ × (1 − 2/5) = 6 mJ in one step.\n\nWHAT TO MEMORIZE\nU = ½CV² = Q²/2C, and that charge — not voltage or energy — is the conserved quantity here."
       },
 
       // [QM/infinite square well]
@@ -2997,7 +2997,7 @@ const EXAMS = [
           "270 nm"
         ],
         "answer": "E",
-        "explanation": "The levels are E_n = n²h²/8mL², giving E₁ ≈ 1.5 eV, so the n = 2 to n = 1 gap is 3E₁ ≈ 4.5 eV. Using λ = 1240 eV·nm / E gives λ ≈ 270 nm. The trap is 82 nm, which is what you get by using E₂ alone rather than the difference E₂ − E₁. ⏱ 90-second route: memorize E_n = n²h²/8mL² and, far more usefully, hc = 1240 eV·nm — that conversion turns every photon question on this exam into a single division. The inference is that transitions depend on differences, so the factor is 4 − 1 = 3, never 4. Estimating E₁ ≈ 1.5 eV for a half-nanometre box is worth committing to memory as a sanity anchor for the whole topic."
+        "explanation": "WORKED SOLUTION\nE_n = n²h²/8mL² gives E₁ ≈ 1.5 eV, so the n = 2 to n = 1 gap is 3E₁ ≈ 4.5 eV and λ = 1240/4.5 ≈ 270 nm. The trap is 82 nm, from using E₂ alone rather than the difference.\n\n90-SECOND SOLUTION\nGet E₁, multiply by 3 (not 4 — transitions are differences), then divide into 1240 eV·nm. That conversion turns every photon question into a single division.\n\nWHAT TO MEMORIZE\nE_n = n²h²/8mL², hc = 1240 eV·nm, and the anchor that a half-nanometre box has E₁ ≈ 1.5 eV."
       },
 
       // [QM/compton scattering]
@@ -3011,7 +3011,7 @@ const EXAMS = [
           "9.7 × 10⁻¹² m"
         ],
         "answer": "D",
-        "explanation": "The shift is Δλ = λ_C(1 − cos θ), which is largest for backscattering at θ = 180°, where 1 − cos θ = 2, giving Δλ = 2λ_C ≈ 4.9 × 10⁻¹² m. The trap is 2.4 × 10⁻¹² m, the Compton wavelength itself, which is the shift at 90° rather than the maximum. ⏱ 90-second route: memorize Δλ = λ_C(1 − cos θ) and λ_C = 2.43 pm. Then the only inference is that cos θ is bounded below by −1. Note that the shift is additive and independent of the incident wavelength, which is why this effect is invisible for visible light and obvious for X-rays — a fact worth carrying, since it is the qualitative version of the same question."
+        "explanation": "WORKED SOLUTION\nΔλ = λ_C(1 − cos θ) is largest at θ = 180°, where 1 − cos θ = 2, giving 2λ_C ≈ 4.9 × 10⁻¹² m. The trap is 2.4 × 10⁻¹² m, the shift at 90° rather than the maximum.\n\n90-SECOND SOLUTION\nRecognise that cos θ is bounded below by −1 and double the Compton wavelength. The shift is additive and independent of the incident wavelength, which is why the effect is invisible for visible light.\n\nWHAT TO MEMORIZE\nΔλ = λ_C(1 − cos θ) and λ_C = 2.43 pm."
       },
 
       // [QM/x-rays]
@@ -3025,7 +3025,7 @@ const EXAMS = [
           "6.0 keV"
         ],
         "answer": "E",
-        "explanation": "Moseley's law says the Kα energy scales as (Z − 1)², the screening constant of 1 accounting for the second K-shell electron. The ratio is ((25 − 1)/(13 − 1))² = 2² = 4, so the energy is 4 × 1.5 = 6.0 keV. The trap is 5.6 keV, obtained from (25/13)² without the screening correction, and 2.9 keV, from scaling linearly in Z. ⏱ 90-second route: memorize Moseley's law in the form E ∝ (Z − 1)². That is the entire question — everything else is one ratio. The screening term matters here only because 12 and 24 differ by exactly a factor of 2, which the designer chose deliberately; recognizing that the numbers were picked to make (Z − 1) clean is itself a hint that you are meant to use it."
+        "explanation": "WORKED SOLUTION\nMoseley's law makes the Kα energy scale as (Z − 1)², the screening constant accounting for the second K-shell electron. The ratio is ((25 − 1)/(13 − 1))² = 4, so the energy is 6.0 keV. The traps are 5.6 keV, from (25/13)² without screening, and 2.9 keV, from scaling linearly in Z.\n\n90-SECOND SOLUTION\nOne ratio. Notice that 12 and 24 differ by exactly 2 — the numbers were chosen so the screening term matters, which is itself a hint that you are meant to use it.\n\nWHAT TO MEMORIZE\nMoseley's law in the form E ∝ (Z − 1)²."
       },
 
       // [QM/hydrogen atom]
@@ -3039,7 +3039,7 @@ const EXAMS = [
           "4"
         ],
         "answer": "C",
-        "explanation": "The radial function has n − l − 1 nodes, here 4 − 1 − 1 = 2. The angular part contributes l = 1 further nodal surfaces, for a total of n − 1 = 3 nodes overall, which is the trap answer 3 — the question asks specifically for radial nodes. ⏱ 90-second route: memorize the single formula n − l − 1 for radial nodes, and its companion, l angular nodes, summing to n − 1 in total. There is no derivation available in 90 seconds, so this is pure recall; the only inference is reading carefully enough to notice which of the three counts is being requested. Questions in this family almost always hinge on that distinction rather than on the arithmetic."
+        "explanation": "WORKED SOLUTION\nThe radial function has n − l − 1 = 2 nodes. The angular part contributes l = 1 more, for n − 1 = 3 overall — which is the trap, since the question asks specifically for radial nodes.\n\n90-SECOND SOLUTION\nThere is no derivation available in the time; this is recall plus careful reading. Questions in this family hinge on which of the three counts is requested, not on the arithmetic.\n\nWHAT TO MEMORIZE\nn − l − 1 radial nodes, l angular nodes, n − 1 in total."
       },
 
       // [QM/pauli exclusion & electron configuration]
@@ -3053,7 +3053,7 @@ const EXAMS = [
           "32"
         ],
         "answer": "C",
-        "explanation": "For a given l there are 2l + 1 values of m_l, here 5, and each accommodates two electrons of opposite spin, giving 10. This is the 3d-like shell capacity, which is why the transition-metal rows are ten elements wide. The trap is 32, the total capacity of the whole n = 4 shell, which answers a question that was not asked. ⏱ 90-second route: memorize the capacity 2(2l + 1) per subshell, or equivalently the familiar s/p/d/f capacities 2/6/10/14 — recognizing l = 2 as 'd' makes this instant. The value of n is a deliberate red herring: capacity depends only on l. Spotting the irrelevant given is the actual skill being tested."
+        "explanation": "WORKED SOLUTION\nEach l has 2l + 1 values of m_l, here 5, and each holds two electrons of opposite spin, giving 10 — the capacity that makes the transition-metal rows ten elements wide. The trap is 32, the capacity of the whole n = 4 shell.\n\n90-SECOND SOLUTION\nRecognise l = 2 as a d subshell and read off 10. The value of n is a deliberate red herring: capacity depends only on l, and spotting the irrelevant given is the actual skill here.\n\nWHAT TO MEMORIZE\nThe subshell capacity 2(2l + 1), or equivalently s/p/d/f = 2/6/10/14."
       },
 
       // [QM/probability & expectation values]
@@ -3067,7 +3067,7 @@ const EXAMS = [
           "determined only by the potential"
         ],
         "answer": "A",
-        "explanation": "For a real ψ, the expectation ⟨p⟩ = ∫ψ(−iħ dψ/dx)dx is −iħ times a real integral, so it is purely imaginary; but ⟨p⟩ must be real because p is Hermitian, and the only number that is both is zero. Physically, a bound stationary state is not going anywhere, so its average momentum must vanish. The trap is ħk, which applies to a travelling plane wave — a state that is neither bound nor real. ⏱ 90-second route: memorize the fact that bound stationary states can be chosen real and consequently carry zero average momentum. The reality-plus-Hermiticity argument is worth being able to reconstruct, because it generalizes: any observable whose operator is purely imaginary in a real basis has zero expectation value in a real state."
+        "explanation": "WORKED SOLUTION\nFor real ψ, ⟨p⟩ = ∫ψ(−iħ dψ/dx)dx is −iħ times a real integral and so purely imaginary; but p is Hermitian, so ⟨p⟩ must be real. Only zero is both. Physically, a bound stationary state is not going anywhere. The trap is ħk, which belongs to a travelling plane wave.\n\n90-SECOND SOLUTION\nSkip the integral: reality plus Hermiticity forces zero. The argument generalises — any operator that is purely imaginary in a real basis has zero expectation value in a real state.\n\nWHAT TO MEMORIZE\nThat bound stationary states can be chosen real, and therefore carry zero average momentum."
       },
 
       // [QM/de broglie waves]
@@ -3081,7 +3081,7 @@ const EXAMS = [
           "10⁻⁶⁸ m"
         ],
         "answer": "D",
-        "explanation": "λ = h/p = 6.6 × 10⁻³⁴/(1.0 × 1.0) ≈ 6.6 × 10⁻³⁴ m, so the order is 10⁻³⁴ m — some twenty orders of magnitude below a nuclear diameter, which is exactly why wave behaviour is invisible for macroscopic objects. The trap is 10⁻¹⁰ m, the atomic scale, which is where thermal-electron wavelengths land and is the number most students have memorized. ⏱ 90-second route: memorize λ = h/p and nothing else; with mass and speed both unity the answer is literally Planck's constant in metres. The inference worth keeping is the comparison: this question is really asking whether you understand why the correspondence principle works, and the numerical answer is a byproduct."
+        "explanation": "WORKED SOLUTION\nλ = h/p = 6.6 × 10⁻³⁴/(1.0 × 1.0) ≈ 6.6 × 10⁻³⁴ m, some twenty orders below a nuclear diameter — which is why wave behaviour is invisible for macroscopic objects. The trap is 10⁻¹⁰ m, the atomic scale where thermal-electron wavelengths land.\n\n90-SECOND SOLUTION\nWith mass and speed both unity the answer is literally Planck's constant in metres. No arithmetic at all.\n\nWHAT TO MEMORIZE\nλ = h/p, and h ≈ 6.6 × 10⁻³⁴ J·s."
       },
 
       // [QM/atomic spectra & selection rules]
@@ -3095,7 +3095,7 @@ const EXAMS = [
           "2p → 1s"
         ],
         "answer": "D",
-        "explanation": "The electric-dipole selection rule requires Δl = ±1, because the photon carries one unit of angular momentum. Checking each: p→s, d→p, f→d and p→s all change l by one, but 3s → 2s has Δl = 0 and is forbidden. Such transitions do occur through much weaker higher-order processes, which is why metastable states exist. ⏱ 90-second route: memorize Δl = ±1 — this single rule answers essentially every selection-rule question that appears. The inference is the letter-to-l dictionary s/p/d/f = 0/1/2/3, which you must have automatic. Scanning five choices for the one that fails takes about fifteen seconds; note that Δn is unconstrained, so the changing principal quantum numbers are deliberate noise."
+        "explanation": "WORKED SOLUTION\nElectric-dipole transitions require Δl = ±1, because the photon carries one unit of angular momentum. Of the five, only 3s → 2s has Δl = 0 and is forbidden; such transitions proceed by much weaker higher-order processes, which is why metastable states exist.\n\n90-SECOND SOLUTION\nScan the five for the one that fails Δl = ±1 — about fifteen seconds. Δn is unconstrained, so the changing principal quantum numbers are deliberate noise.\n\nWHAT TO MEMORIZE\nΔl = ±1, and the letter-to-l dictionary s/p/d/f = 0/1/2/3."
       },
 
       // [QM/bohr model]
@@ -3109,7 +3109,7 @@ const EXAMS = [
           "2.6 × 10⁻⁹ m"
         ],
         "answer": "A",
-        "explanation": "The Bohr radius is a₀ = 4πε₀ħ²/me², inversely proportional to the mass of the orbiting particle, so the muon's orbit is smaller by 207: 5.3 × 10⁻¹¹/207 ≈ 2.6 × 10⁻¹³ m. This is comparable to nuclear dimensions, which is precisely why muonic atoms are used to probe nuclear charge radii. The trap is the last choice, obtained by multiplying rather than dividing by 207. ⏱ 90-second route: memorize a₀ ∝ 1/m and its partner E ∝ m, which together handle every 'heavy electron' variant — muonic atoms, positronium, excitons in semiconductors. The direction is pure inference and worth confirming physically: a heavier particle is harder to spread out, so it orbits closer in. That check alone eliminates three of the five choices."
+        "explanation": "WORKED SOLUTION\nThe Bohr radius a₀ = 4πε₀ħ²/me² is inversely proportional to the orbiting mass, so the muon orbits 207 times closer: 5.3 × 10⁻¹¹/207 ≈ 2.6 × 10⁻¹³ m — comparable to nuclear dimensions, which is why muonic atoms probe nuclear charge radii. The trap is 2.6 × 10⁻⁹ m, from multiplying rather than dividing.\n\n90-SECOND SOLUTION\nOne division, but confirm the direction physically first: a heavier particle is harder to spread out, so it orbits closer in. That check alone eliminates three of the five choices.\n\nWHAT TO MEMORIZE\na₀ ∝ 1/m and its partner E ∝ m — the pair that handles muonic atoms, positronium and excitons alike."
       },
 
       // [QM/harmonic oscillator]
@@ -3123,7 +3123,7 @@ const EXAMS = [
           "6"
         ],
         "answer": "C",
-        "explanation": "The energy is (n_x + n_y + n_z + 3/2)ħω, so the first excited level has n_x + n_y + n_z = 1, achieved by (1,0,0), (0,1,0) and (0,0,1) — three states. The trap is 5, which is the degeneracy 2l + 1 for l = 2 and belongs to the second excited level, not the first. ⏱ 90-second route: memorize that the 3D isotropic oscillator's energy depends only on the sum n_x + n_y + n_z. Then the counting is pure inference: the number of ways to write N as an ordered sum of three non-negative integers, which for N = 1 you can enumerate faster than you can recall the general formula (N + 1)(N + 2)/2. Enumerating beats remembering here."
+        "explanation": "WORKED SOLUTION\nThe energy is (n_x + n_y + n_z + 3/2)ħω, so the first excited level has the sum equal to 1, reached by (1,0,0), (0,1,0) and (0,0,1) — three states. The trap is 5, which is 2l + 1 for l = 2 and belongs to the second excited level.\n\n90-SECOND SOLUTION\nEnumerate rather than recall: listing the ways to write 1 as an ordered sum of three non-negative integers is faster than remembering (N + 1)(N + 2)/2.\n\nWHAT TO MEMORIZE\nThat the 3D isotropic oscillator's energy depends only on n_x + n_y + n_z."
       },
 
       // [QM/operators & commutators]
@@ -3137,7 +3137,7 @@ const EXAMS = [
           "⟨p⟩/m"
         ],
         "answer": "E",
-        "explanation": "Ehrenfest's theorem gives d⟨A⟩/dt = (i/ħ)⟨[H, A]⟩ for an operator with no explicit time dependence, and evaluating [H, x] with H = p²/2m + V leaves only the kinetic term, yielding d⟨x⟩/dt = ⟨p⟩/m. The trap is −⟨dV/dx⟩, which is the correct expression for d⟨p⟩/dt, the second half of Ehrenfest's pair. ⏱ 90-second route: memorize the pair d⟨x⟩/dt = ⟨p⟩/m and d⟨p⟩/dt = −⟨dV/dx⟩ together, since they are the quantum restatement of Newton's laws and are always tested as a matched set. No derivation is needed. The only inference is dimensional: iħ⟨p⟩ has the wrong units for a velocity, which kills it on sight."
+        "explanation": "WORKED SOLUTION\nEhrenfest's theorem gives d⟨A⟩/dt = (i/ħ)⟨[H, A]⟩, and evaluating [H, x] leaves only the kinetic term, so d⟨x⟩/dt = ⟨p⟩/m. The trap is −⟨dV/dx⟩, which is the correct expression for d⟨p⟩/dt — the other half of the pair.\n\n90-SECOND SOLUTION\nNo derivation needed; identify which half of Ehrenfest's pair is being asked. The dimensional check kills iħ⟨p⟩ on sight, since it has the wrong units for a velocity.\n\nWHAT TO MEMORIZE\nBoth halves together: d⟨x⟩/dt = ⟨p⟩/m and d⟨p⟩/dt = −⟨dV/dx⟩ — the quantum restatement of Newton's laws."
       },
 
       // [TS/maxwell-boltzmann distribution]
@@ -3151,7 +3151,7 @@ const EXAMS = [
           "1.73"
         ],
         "answer": "C",
-        "explanation": "The Maxwell-Boltzmann distribution gives v_rms = √(3kT/m) and v_mp = √(2kT/m), so the ratio is √(3/2) ≈ 1.22. The trap is 1.13, which is v_avg/v_mp = √(8/π)/√2 — the three characteristic speeds are close together and easily confused. ⏱ 90-second route: memorize the three coefficients under the root: 2 for most probable, 8/π for mean, 3 for rms, always in that increasing order. The ordering itself is inference — the rms weights fast molecules most heavily, so it must be the largest — and that ordering alone eliminates 1.00 and anything below it. Then it is one square root."
+        "explanation": "WORKED SOLUTION\nMaxwell-Boltzmann gives v_rms = √(3kT/m) and v_mp = √(2kT/m), so the ratio is √(3/2) ≈ 1.22. The trap is 1.13, which is v_avg/v_mp — the three characteristic speeds sit close together and are easily confused.\n\n90-SECOND SOLUTION\nTake the ratio of the two coefficients and square-root it. The ordering is inference: rms weights fast molecules most heavily, so it must be the largest, which eliminates 1.00 before you start.\n\nWHAT TO MEMORIZE\nThe three coefficients under the root, in increasing order: 2 most probable, 8/π mean, 3 rms."
       },
 
       // [TS/partition function]
@@ -3165,7 +3165,7 @@ const EXAMS = [
           "3Nε/2"
         ],
         "answer": "C",
-        "explanation": "At high temperature the Boltzmann factor e^(−ε/kT) approaches 1, so both states become equally likely and each particle has average energy ε/2, giving Nε/2 in total. The trap is Nε, which would require every particle to sit in the upper state — impossible in equilibrium, since Boltzmann statistics never populate a higher level more than a lower one at positive temperature. ⏱ 90-second route: memorize the two-level partition function Z = 1 + e^(−ε/kT), but the limit is faster by inference: infinite temperature means equal populations, so the mean energy is the unweighted average of the level energies. That reasoning generalizes instantly to any finite set of levels, and it also tells you the heat capacity must vanish at both temperature extremes — the Schottky anomaly."
+        "explanation": "WORKED SOLUTION\nAt high temperature the Boltzmann factor approaches 1, both states become equally likely, and each particle averages ε/2 — so Nε/2 in total. The trap is Nε, which would need every particle in the upper state, impossible at positive temperature.\n\n90-SECOND SOLUTION\nSkip the partition function: infinite temperature means equal populations, so the mean energy is the unweighted average of the level energies. That reasoning generalises to any finite set of levels.\n\nWHAT TO MEMORIZE\nZ = 1 + e^(−ε/kT) for a two-level system, though the limit argument avoids needing it."
       },
 
       // [TS/equipartition]
@@ -3179,7 +3179,7 @@ const EXAMS = [
           "4R"
         ],
         "answer": "B",
-        "explanation": "Equipartition assigns ½R per mole per active quadratic degree of freedom: three translational and two rotational give 5R/2. The trap is 7R/2, which includes the two vibrational degrees of freedom (kinetic and potential) that only switch on at temperatures high enough to excite the vibrational quantum. ⏱ 90-second route: memorize ½R per active degree of freedom and the count 3 + 2 for a rigid diatomic. The inference that earns the point is the freezing-out argument: vibrational quanta are large compared with kT at 300 K, so those modes are inaccessible, which is exactly why classical equipartition failed historically and why this question specifies the temperature regime at all."
+        "explanation": "WORKED SOLUTION\nEquipartition gives ½R per mole per active quadratic degree of freedom: three translational plus two rotational is 5R/2. The trap is 7R/2, which includes the two vibrational degrees that switch on only at much higher temperature.\n\n90-SECOND SOLUTION\nCount active degrees of freedom and multiply by ½R. The temperature specification is doing real work — it tells you the vibrational modes are frozen out.\n\nWHAT TO MEMORIZE\n½R per active degree of freedom, and the count 3 + 2 for a rigid diatomic."
       },
 
       // [TS/mean free path]
@@ -3193,7 +3193,7 @@ const EXAMS = [
           "increases by a factor of 4"
         ],
         "answer": "B",
-        "explanation": "The mean free path is λ = 1/(√2 nσ), depending on number density but not directly on speed or temperature. At fixed temperature the ideal gas law makes n proportional to P, so halving the pressure halves the density and doubles the mean free path. The trap is 'is halved', from confusing λ's inverse dependence on density with a direct one. ⏱ 90-second route: memorize λ ∝ 1/n and n = P/kT; the √2 and the cross-section are constants that cancel in any ratio question, so do not waste time on them. The inference is the physical picture: fewer molecules in the way means longer free flights, which is why a good vacuum has a mean free path of metres rather than nanometres."
+        "explanation": "WORKED SOLUTION\nλ = 1/(√2 nσ) depends on number density, and at fixed temperature the ideal gas law makes n proportional to P — so halving the pressure doubles the mean free path. The trap is 'is halved', from confusing an inverse dependence with a direct one.\n\n90-SECOND SOLUTION\nUse only the proportionality; the √2 and the cross-section cancel in any ratio question. Fewer molecules in the way means longer free flights.\n\nWHAT TO MEMORIZE\nλ ∝ 1/n and n = P/kT."
       },
 
       // [TS/second law & entropy]
@@ -3207,7 +3207,7 @@ const EXAMS = [
           "23 J/K"
         ],
         "answer": "C",
-        "explanation": "Free expansion does no work and transfers no heat, so the temperature of an ideal gas is unchanged, but entropy is a state function and can be computed along any reversible path connecting the same endpoints — an isothermal expansion gives ΔS = nR ln 2 = 2(8.31)(0.693) ≈ 12 J/K. The trap is 'zero', which follows from the true statement Q = 0 combined with the false assumption that ΔS = Q/T applies to an irreversible process. ⏱ 90-second route: memorize ΔS = nR ln(V₂/V₁) for isothermal expansion of an ideal gas, and ln 2 ≈ 0.69. The inference that carries the question is that entropy is a state function, so you may substitute a reversible path; recognizing that free expansion is irreversible and therefore must increase entropy rules out 'zero' before any calculation."
+        "explanation": "WORKED SOLUTION\nFree expansion does no work and transfers no heat, so an ideal gas keeps its temperature; but entropy is a state function, so compute along a reversible isothermal path: ΔS = nR ln 2 = 2(8.31)(0.693) ≈ 12 J/K. The trap is 'zero', from combining the true Q = 0 with the false assumption that ΔS = Q/T applies to an irreversible process.\n\n90-SECOND SOLUTION\nSubstitute a reversible path and apply the formula. Recognising that free expansion is irreversible, and must therefore raise entropy, rules out 'zero' before any calculation.\n\nWHAT TO MEMORIZE\nΔS = nR ln(V₂/V₁) for isothermal expansion, ln 2 ≈ 0.69, and that entropy is a state function."
       },
 
       // [OW/diffraction & gratings]
@@ -3221,7 +3221,7 @@ const EXAMS = [
           "5.9 nm"
         ],
         "answer": "A",
-        "explanation": "The chromatic resolving power of a grating is R = λ/Δλ = mN, here 2 × 5,000 = 10,000, so Δλ = 590/10,000 = 0.059 nm — comfortably enough to split the sodium D doublet, whose separation is about 0.6 nm. The trap is 0.12 nm, from using N alone and forgetting the order, or 0.59 nm from dropping a factor of ten. ⏱ 90-second route: memorize R = mN. That is the whole question; the rest is one division. Worth carrying alongside it is the companion formula for a prism, R = b(dn/dλ), and the fact that gratings beat prisms in practice precisely because N can be made enormous."
+        "explanation": "WORKED SOLUTION\nThe chromatic resolving power is R = λ/Δλ = mN = 2 × 5,000 = 10,000, so Δλ = 590/10,000 = 0.059 nm — enough to split the sodium D doublet at about 0.6 nm. The traps are 0.12 nm, from using N alone, and 0.59 nm.\n\n90-SECOND SOLUTION\nOne division after R = mN. Nothing else is involved.\n\nWHAT TO MEMORIZE\nR = mN, and its prism counterpart R = b(dn/dλ)."
       },
 
       // [OW/single-slit diffraction]
@@ -3235,7 +3235,7 @@ const EXAMS = [
           "2.4 cm"
         ],
         "answer": "E",
-        "explanation": "The first minimum lies at sin θ = λ/a, so on a distant screen it is displaced by Lλ/a = (2.0)(6.0 × 10⁻⁷)/(1.0 × 10⁻⁴) = 0.012 m. The central maximum spans both sides, so its full width is twice that, 2.4 cm. The trap is 1.2 cm, the half-width, which is what the formula gives directly and what most students stop at. ⏱ 90-second route: memorize a sin θ = mλ for single-slit minima — note it is minima, the opposite of the double-slit condition, and mixing the two up is the most common error in this topic. The factor of 2 for full width is inference from reading the question. The small-angle step, sin θ ≈ y/L, is automatic at these scales."
+        "explanation": "WORKED SOLUTION\nThe first minimum sits at sin θ = λ/a, displaced by Lλ/a = 0.012 m on the screen, and the central maximum spans both sides, so its full width is 2.4 cm. The trap is 1.2 cm, the half-width that the formula gives directly.\n\n90-SECOND SOLUTION\nCompute the half-width, then double it because the question says 'between the first minima'. The small-angle step sin θ ≈ y/L is automatic at these scales.\n\nWHAT TO MEMORIZE\na sin θ = mλ for single-slit minima — note it gives minima, the opposite of the double-slit condition."
       },
 
       // [OW/wave reflection & transmission at boundary]
@@ -3249,7 +3249,7 @@ const EXAMS = [
           "absent, since all the energy is transmitted"
         ],
         "answer": "A",
-        "explanation": "Reflection from a boundary with a denser medium inverts the pulse, exactly as reflection from a rigid wall does, since the heavy string is the limiting case of a fixed end. Some energy is transmitted into the heavy string, so the reflected pulse is smaller than the incident one. The trap is 'upright and smaller', which describes reflection at a boundary with a lighter string — the opposite ordering of densities. ⏱ 90-second route: memorize the rule that reflection off a denser medium inverts and reflection off a lighter one does not, and anchor it to the two limiting cases you can picture: a string tied to a wall inverts, a string ending in a free ring does not. The amplitude part is inference from energy conservation. The identical rule governs light reflecting off a higher-index medium, which is why thin-film problems carry a π shift at exactly one surface."
+        "explanation": "WORKED SOLUTION\nReflection from a boundary with a denser medium inverts the pulse, the heavy string being the limiting case of a fixed end, and some energy is transmitted onward so the reflected pulse is smaller. The trap is 'upright and smaller', which describes reflection off a lighter string.\n\n90-SECOND SOLUTION\nRecall the inversion rule and get the amplitude from energy conservation. The same rule governs light hitting a higher-index medium, which is why thin films carry a π shift at exactly one surface.\n\nWHAT TO MEMORIZE\nReflection off a denser medium inverts; off a lighter one it does not. Anchor it to a string tied to a wall versus one ending in a free ring."
       },
 
       // [OW/dispersion]
@@ -3263,7 +3263,7 @@ const EXAMS = [
           "deviated more, because the index of refraction is higher at shorter wavelengths"
         ],
         "answer": "E",
-        "explanation": "In normal dispersion the index of refraction rises as wavelength falls, so violet light sees a larger n, refracts more strongly at both surfaces, and emerges with the greater deviation. The choice invoking a faster speed in glass inverts the physics: a larger index means a slower phase speed in the medium, not a faster one. ⏱ 90-second route: memorize the direction of normal dispersion — n larger for blue — and anchor it to the rainbow, where violet sits on the inside of the primary bow because it bends most. No formula is required. The only inference is connecting a larger n to a larger deviation through Snell's law, which you can confirm in five seconds by imagining n → ∞ and watching the ray bend hard toward the normal."
+        "explanation": "WORKED SOLUTION\nIn normal dispersion n rises as wavelength falls, so violet sees a larger index, refracts more strongly at both surfaces, and deviates most. The choice invoking a faster speed in glass inverts the physics: a larger index means a slower phase speed.\n\n90-SECOND SOLUTION\nNo formula. Anchor to the rainbow, where violet sits on the inside of the primary bow because it bends most. Connecting larger n to larger deviation takes five seconds via Snell's law — imagine n → ∞ and watch the ray bend hard toward the normal.\n\nWHAT TO MEMORIZE\nThe direction of normal dispersion: n is larger for blue."
       },
 
       // [SP/radioactive decay & half-life]
@@ -3277,7 +3277,7 @@ const EXAMS = [
           "15 minutes"
         ],
         "answer": "D",
-        "explanation": "The rate falls by a factor of 8 = 2³, so three half-lives have elapsed in 30 minutes, giving a half-life of 10 minutes. The trap is 3.75 minutes, from dividing 30 by 8 as though the decay were linear rather than exponential. ⏱ 90-second route: memorize nothing beyond the definition of half-life; the trick is to express the ratio as a power of 2 rather than reaching for N = N₀e^(−λt). Recognizing 800/100 = 8 = 2³ makes this a mental-arithmetic problem. When the ratio is not a clean power of two, then use the exponential form with λ = ln2/T½, but check first — the exam usually chooses clean ratios deliberately."
+        "explanation": "WORKED SOLUTION\nThe rate falls by a factor of 8 = 2³, so three half-lives have passed in 30 minutes and the half-life is 10 minutes. The trap is 3.75 minutes, from dividing 30 by 8 as though the decay were linear.\n\n90-SECOND SOLUTION\nExpress the ratio as a power of 2 rather than reaching for N = N₀e^(−λt) — that makes it mental arithmetic. Check first: the exam usually chooses clean ratios deliberately.\n\nWHAT TO MEMORIZE\nOnly the definition of half-life. Keep λ = ln2/T½ in reserve for ratios that are not powers of two."
       },
 
       // [SP/crystal structure & bragg]
@@ -3291,7 +3291,7 @@ const EXAMS = [
           "49°"
         ],
         "answer": "C",
-        "explanation": "Bragg's law is 2d sin θ = mλ, so for m = 1, sin θ = 0.15/(2 × 0.20) = 0.375 and θ ≈ 22°. The trap is 49°, which is what you get by using cos θ, or by measuring the angle from the normal rather than from the planes — Bragg's angle is defined from the plane, unlike every other angle in optics. ⏱ 90-second route: memorize 2d sin θ = mλ and, crucially, that θ is measured from the crystal plane, not the normal. The rest is one inverse sine. A quick sanity check: first-order diffraction requires λ ≤ 2d, which is why X-rays and not visible light are used for crystals — if the arithmetic ever hands you sin θ > 1, that is the physics telling you the wavelength is too long."
+        "explanation": "WORKED SOLUTION\nBragg's law 2d sin θ = mλ gives sin θ = 0.15/0.40 = 0.375 and θ ≈ 22°. The trap is 49°, from using cos θ or from measuring the angle from the normal — Bragg's angle is measured from the plane, unlike every other angle in optics.\n\n90-SECOND SOLUTION\nOne inverse sine. Sanity check: first-order diffraction needs λ ≤ 2d, so if the arithmetic ever gives sin θ > 1, the wavelength is simply too long.\n\nWHAT TO MEMORIZE\n2d sin θ = mλ, and that θ is measured from the crystal plane, not the normal."
       },
 
       // [SP/specific heat of solids (debye/einstein)]
@@ -3305,7 +3305,7 @@ const EXAMS = [
           "1"
         ],
         "answer": "B",
-        "explanation": "In the Debye low-temperature regime the lattice heat capacity goes as T³, so halving T reduces C by 2³ = 8. The trap is ½, which assumes the classical Dulong-Petit behaviour where C is constant — that limit applies far above the Debye temperature, not below it. The specification 'non-metallic' matters: in a metal the electronic term γT would dominate at sufficiently low T and give a linear dependence instead. ⏱ 90-second route: memorize the two limits — Dulong-Petit C = 3R above, Debye C ∝ T³ below — and the metallic addition of a linear γT term. Then this is one cube. The word 'non-metallic' is not decoration; noticing it is the difference between the T³ answer and the linear one."
+        "explanation": "WORKED SOLUTION\nIn the Debye regime the lattice heat capacity goes as T³, so halving T divides C by 8. The trap is ½, which assumes the classical Dulong-Petit behaviour that applies far above the Debye temperature. 'Non-metallic' matters: in a metal the electronic γT term would dominate at low enough T.\n\n90-SECOND SOLUTION\nIdentify the regime from the wording, then cube. Noticing 'non-metallic' is the difference between the T³ answer and a linear one.\n\nWHAT TO MEMORIZE\nThe two limits — Dulong-Petit C = 3R above, Debye C ∝ T³ below — plus the metallic γT addition."
       },
 
       // [SP/particle classification & quarks]
@@ -3319,7 +3319,7 @@ const EXAMS = [
           "us̄"
         ],
         "answer": "A",
-        "explanation": "A meson is a quark-antiquark pair, which automatically gives baryon number ⅓ − ⅓ = 0. To reach charge +1 we need +⅔ from a u and +⅓ from an anti-d, so the content is ud̄. The trap is uud, which is the proton — a baryon with three quarks and baryon number 1, failing the stated condition. ⏱ 90-second route: memorize the quark charges (+⅔ for u, c, t and −⅓ for d, s, b) and the rule that mesons are qq̄ while baryons are qqq. The rest is inference: baryon number 0 forces a two-quark combination, which eliminates one choice instantly, and then only charge arithmetic remains. Note that uū and dd̄ are neutral, so the charge condition finishes the job in seconds."
+        "explanation": "WORKED SOLUTION\nA meson is a quark-antiquark pair, which gives baryon number ⅓ − ⅓ = 0 automatically; charge +1 then needs +⅔ from a u and +⅓ from an anti-d, so the content is ud̄. The trap is uud, the proton, which is a baryon and fails the stated condition.\n\n90-SECOND SOLUTION\nBaryon number 0 forces a two-quark combination, eliminating one choice instantly; then charge arithmetic finishes it. uū and dd̄ are neutral, so the whole thing takes seconds.\n\nWHAT TO MEMORIZE\nQuark charges (+⅔ for u, c, t; −⅓ for d, s, b) and that mesons are qq̄ while baryons are qqq."
       },
 
       // [SP/fourier analysis]
@@ -3333,7 +3333,7 @@ const EXAMS = [
           "only odd harmonics"
         ],
         "answer": "E",
-        "explanation": "The wave has zero mean, which kills the constant term, and it satisfies the half-wave antisymmetry f(t + T/2) = −f(t), a condition that annihilates every even harmonic. What survives is the odd harmonics, with amplitudes falling as 1/n — the familiar sine, third, fifth, and so on. The trap is 'all harmonics', which would be true for a general asymmetric waveform such as a sawtooth. ⏱ 90-second route: memorize the result for the square wave directly — odd harmonics, amplitudes as 1/n — since it appears constantly in electronics and signal questions. If you would rather infer it, check the symmetry: shifting by half a period flips the sign, and only odd harmonics do that. The 1/n falloff is also worth carrying, because it explains why a square wave rings when passed through a band-limited amplifier."
+        "explanation": "WORKED SOLUTION\nThe wave has zero mean, killing the constant term, and satisfies f(t + T/2) = −f(t), which annihilates every even harmonic. What survives are the odd harmonics with amplitudes falling as 1/n. The trap is 'all harmonics', true for an asymmetric waveform such as a sawtooth.\n\n90-SECOND SOLUTION\nCheck the symmetry: shifting by half a period flips the sign, and only odd harmonics do that. The 1/n falloff explains why a square wave rings through a band-limited amplifier.\n\nWHAT TO MEMORIZE\nFor the square wave: odd harmonics only, amplitudes as 1/n."
       },
 
       // [SR/time dilation]
@@ -3347,7 +3347,7 @@ const EXAMS = [
           "13 years"
         ],
         "answer": "B",
-        "explanation": "In Earth's frame the trip takes 8.0/0.80 = 10 years. The spacecraft's clock measures proper time, shorter by the factor 1/γ = √(1 − 0.64) = 0.60, giving 6.0 years. Equivalently, in the ship's frame the distance is contracted to 4.8 light-years and is covered at 0.80c in 6.0 years — the two pictures must agree. The trap is 10 years, the Earth-frame time, and 13 years, obtained by multiplying by γ instead of dividing. ⏱ 90-second route: memorize γ = 5/3 for v = 0.80c — this speed appears constantly and its γ is worth knowing without computing. Then the only decision is which way the factor goes, and the reliable inference is that the travelling clock always reads less. Cross-checking with the length-contraction picture takes ten seconds and catches sign errors."
+        "explanation": "WORKED SOLUTION\nIn Earth's frame the trip takes 8.0/0.80 = 10 years, and the ship's clock measures proper time, shorter by 1/γ = 0.60, giving 6.0 years. Equivalently the distance contracts to 4.8 light-years and is covered at 0.80c in 6.0 years. The traps are 10 years, the Earth-frame time, and 13 years, from multiplying by γ.\n\n90-SECOND SOLUTION\nCompute the Earth-frame time and divide by γ. The direction is reliable inference — the travelling clock always reads less — and cross-checking with the length-contraction picture takes ten seconds.\n\nWHAT TO MEMORIZE\nγ = 5/3 at v = 0.80c. This speed recurs constantly and its γ is worth knowing without computing."
       },
 
       // [SR/four-vectors]
@@ -3361,7 +3361,7 @@ const EXAMS = [
           "There exists a frame in which the two events occur at the same time"
         ],
         "answer": "E",
-        "explanation": "The invariant interval is s² = c²Δt² − Δx² = 9 − 25 = −16 in units of light-seconds squared, which is negative and therefore spacelike. Spacelike separation means no signal at or below light speed can connect the events, so they cannot be causally related and their time order is frame-dependent; there is, however, a frame in which they are simultaneous. The trap is the first choice, which is the property of timelike separation, not spacelike. ⏱ 90-second route: memorize the classification — timelike means same place is achievable, spacelike means same time is achievable, and lightlike means neither. Computing s² takes ten seconds. The inference chain is worth rehearsing once: spacelike implies no causal link, which implies the ordering is not absolute, which is exactly why relativity does not violate causality."
+        "explanation": "WORKED SOLUTION\nThe invariant interval is s² = c²Δt² − Δx² = 9 − 25 = −16, negative and therefore spacelike. Spacelike separation means no signal can connect the events, so they cannot be causally related and their time order is frame-dependent — but a frame exists in which they are simultaneous. The trap is 'same place', which is the property of timelike separation.\n\n90-SECOND SOLUTION\nCompute s², read off the sign, and map it: timelike allows same place, spacelike allows same time, lightlike allows neither. Ten seconds.\n\nWHAT TO MEMORIZE\ns² = c²Δt² − Δx² and the three-way classification it produces."
       },
 
       // [SR/relativistic energy & momentum]
@@ -3375,7 +3375,7 @@ const EXAMS = [
           "0.94c"
         ],
         "answer": "D",
-        "explanation": "Kinetic energy is (γ − 1)mc², so setting it equal to mc² gives γ = 2, and from γ = 1/√(1 − v²/c²) we get v = c√(1 − ¼) = (√3/2)c ≈ 0.87c. The trap is 0.71c, which is where γ = √2 and the kinetic energy is only about 0.41mc². ⏱ 90-second route: memorize the γ-to-v shortcut v/c = √(1 − 1/γ²), and the handful of common pairs: γ = 2 at 0.87c, γ = 5/3 at 0.80c, γ = 7 at 0.99c. The only inference is translating 'kinetic energy equals rest energy' into γ = 2, which is the step the question is really testing — total energy is then 2mc², a fact worth stating to yourself explicitly to avoid the off-by-one that produces 0.71c."
+        "explanation": "WORKED SOLUTION\nKinetic energy is (γ − 1)mc², so setting it equal to mc² gives γ = 2 and v = c√(1 − ¼) = (√3/2)c ≈ 0.87c. The trap is 0.71c, where γ = √2 and the kinetic energy is only about 0.41mc².\n\n90-SECOND SOLUTION\nTranslate the condition into γ = 2 — that is the step being tested — then use v/c = √(1 − 1/γ²). Stating 'total energy is 2mc²' out loud avoids the off-by-one that produces 0.71c.\n\nWHAT TO MEMORIZE\nv/c = √(1 − 1/γ²), and the common pairs: γ = 2 at 0.87c, γ = 5/3 at 0.80c, γ = 7 at 0.99c."
       },
 
       // [LM/data fitting & graph reading]
@@ -3389,7 +3389,7 @@ const EXAMS = [
           "y = 2.0x^1.5"
         ],
         "answer": "E",
-        "explanation": "A straight line on log-log axes means log y = m log x + b, which exponentiates to y = 10^b x^m, a power law. The slope gives the exponent 1.5 and the intercept gives the prefactor 10^0.30 ≈ 2.0. The trap is 0.30x^1.5, which uses the intercept directly instead of raising ten to it. ⏱ 90-second route: memorize the two diagnostic rules — log-log straight line means power law with the slope as the exponent, semi-log straight line means exponential. That distinction alone eliminates the two exponential choices here. The prefactor requires knowing 10^0.3 ≈ 2, a value worth memorizing because it recurs constantly, being the same fact as 'a factor of 2 is 3 dB'."
+        "explanation": "WORKED SOLUTION\nA straight line on log-log axes means log y = m log x + b, which exponentiates to a power law y = 10^b x^m. The slope gives the exponent 1.5 and the intercept gives 10^0.30 ≈ 2.0. The trap is 0.30x^1.5, using the intercept directly instead of raising ten to it.\n\n90-SECOND SOLUTION\nDiagnose the plot type first: log-log straight means power law, semi-log straight means exponential. That alone eliminates the two exponential choices before any reading.\n\nWHAT TO MEMORIZE\nThe two plot diagnostics, and 10^0.3 ≈ 2 — the same fact as 'a factor of 2 is 3 dB'."
       },
 
       // [LM/dimensional analysis]
@@ -3403,7 +3403,7 @@ const EXAMS = [
           "√(σR/ρ)"
         ],
         "answer": "A",
-        "explanation": "Surface tension has dimensions of mass per time squared, so ρR³/σ has dimensions of (mass)(mass⁻¹)(time²) = time², and its square root is the only combination of the three quantities with the dimensions of time. The trap is the reciprocal, √(σ/ρR³), which is a frequency rather than a period. ⏱ 90-second route: memorize that surface tension is force per length, hence mass per time squared — that single conversion is the crux. Then the inference is mechanical: ρR³ is the drop's mass, so the group is √(mass/σ), which is the same structure as √(m/k) for a spring. Recognizing surface tension as playing the role of a spring constant makes the answer obvious without any algebra, and it also tells you the period grows as the drop gets bigger."
+        "explanation": "WORKED SOLUTION\nSurface tension has dimensions of mass per time squared, so ρR³/σ has dimensions of time squared and its square root is the only combination with the dimensions of a period. The trap is √(σ/ρR³), which is a frequency rather than a period.\n\n90-SECOND SOLUTION\nNote that ρR³ is the drop's mass, so the group is √(mass/σ) — the same structure as √(m/k) for a spring. Seeing surface tension as the spring constant gives the answer with no algebra, and tells you the period grows with drop size.\n\nWHAT TO MEMORIZE\nThat surface tension is force per length, hence mass per time squared. That single conversion is the crux."
       },
 
       // [LM/amplifiers & op-amps]
@@ -3417,7 +3417,7 @@ const EXAMS = [
           "−20 V"
         ],
         "answer": "D",
-        "explanation": "The ideal op-amp holds its inverting input at virtual ground, so the input current is 0.20/10 kΩ = 20 μA, all of which flows through the feedback resistor, producing a drop of 20 μA × 100 kΩ = 2.0 V below ground: the output is −2.0 V. Equivalently the gain is −R_f/R_in = −10. The trap is +2.0 V, which has the right magnitude but ignores the inversion the configuration is named for. ⏱ 90-second route: memorize the two ideal-op-amp rules — no current into the inputs, and negative feedback drives the inputs to equal voltage — and the inverting gain −R_f/R_in follows in seconds. The sign is the entire trap here. The virtual-ground derivation is worth being able to reproduce, because the same two rules give every other standard configuration without further memorization."
+        "explanation": "WORKED SOLUTION\nThe ideal op-amp holds its inverting input at virtual ground, so 0.20 V across 10 kΩ drives 20 μA through the feedback resistor, producing 2.0 V below ground: the output is −2.0 V. Equivalently the gain is −R_f/R_in = −10. The trap is +2.0 V, right in magnitude but missing the inversion the configuration is named for.\n\n90-SECOND SOLUTION\nApply the gain formula and then check the sign, which is the entire trap. The virtual-ground derivation is worth being able to reproduce, since the same two rules give every other standard configuration.\n\nWHAT TO MEMORIZE\nThe two ideal-op-amp rules — no input current, and feedback drives the inputs to equal voltage — plus inverting gain −R_f/R_in."
       }
 
     ]
@@ -3438,7 +3438,7 @@ const EXAMS = [
           "66°"
         ],
         "answer": "B",
-        "explanation": "In the cyclist's frame the rain acquires a horizontal component of 3.0 m/s directed backward, added to its 4.0 m/s downward component, so the angle from the vertical satisfies tan θ = 3.0/4.0 and θ ≈ 37°. The trap is 53°, the complement, which is what you get by measuring from the horizontal instead of the vertical as the question specifies. ⏱ 90-second route: memorize nothing — this is pure vector addition, and the 3-4-5 triangle is chosen so the angle is one of the two you should know by sight, 37° and 53°. The only real decision is which leg is opposite the angle being asked for, so read the phrase 'from the vertical' before computing. Sketching the two vectors takes ten seconds and eliminates the complement error entirely."
+        "explanation": "WORKED SOLUTION\nIn the cyclist's frame the rain gains a 3.0 m/s backward horizontal component alongside its 4.0 m/s downward one, so tan θ = 3.0/4.0 and θ ≈ 37°. The trap is 53°, the complement, from measuring off the horizontal instead of the vertical.\n\n90-SECOND SOLUTION\nSketch the two vectors — ten seconds — and read the angle. The 3-4-5 triangle is chosen so the answer is one of the two angles you should know by sight. The only real decision is which leg is opposite the angle asked for.\n\nWHAT TO MEMORIZE\nNothing. This is pure vector addition; just know 37° and 53° as the 3-4-5 angles."
       },
 
       // [CM/newton's laws / friction]
@@ -3452,7 +3452,7 @@ const EXAMS = [
           "1,200 N"
         ],
         "answer": "D",
-        "explanation": "Moving downward while slowing means the acceleration points upward, so the normal force must exceed the weight: N = m(g + a) = 60(11.8) ≈ 710 N. The trap is 470 N, which is m(g − a) and applies to an elevator that is speeding up downward — the same velocity direction but the opposite acceleration. ⏱ 90-second route: memorize N = m(g ± a) and spend your time deciding the sign, which is the entire question. The reliable inference is to ignore the velocity completely and ask only which way the acceleration points: slowing while moving down means accelerating up, so you feel heavier. Anyone who reasons from 'the elevator is going down' rather than from the acceleration picks the wrong sign."
+        "explanation": "WORKED SOLUTION\nMoving down while slowing means the acceleration points up, so the normal force exceeds the weight: N = m(g + a) = 60(11.8) ≈ 710 N. The trap is 470 N, which is m(g − a) and describes an elevator speeding up downward.\n\n90-SECOND SOLUTION\nIgnore the velocity entirely and ask only which way the acceleration points. Slowing while descending means accelerating upward, so you feel heavier. Anyone reasoning from 'the elevator is going down' gets the sign wrong.\n\nWHAT TO MEMORIZE\nN = m(g ± a). Spend your time on the sign, not the formula."
       },
 
       // [CM/work-energy]
@@ -3466,7 +3466,7 @@ const EXAMS = [
           "98 kW"
         ],
         "answer": "C",
-        "explanation": "At constant speed the engine's power goes entirely into gaining gravitational potential energy. The vertical speed is 20 × 0.050 = 1.0 m/s, so P = mgv_vertical = (1,000)(9.8)(1.0) ≈ 9.8 kW. The trap is 98 kW, from using the full speed of 20 m/s rather than its vertical component. ⏱ 90-second route: memorize P = Fv and, more usefully, the habit of computing the rate of energy change directly. The inference is that only the vertical component of velocity matters against gravity, and a 5% grade means the vertical speed is 5% of the road speed. Constant speed is the key phrase: it tells you kinetic energy is not changing, so the entire output is going into height."
+        "explanation": "WORKED SOLUTION\nAt constant speed all the engine's power goes into gaining height. The vertical speed is 20 × 0.050 = 1.0 m/s, so P = mgv_vertical ≈ 9.8 kW. The trap is 98 kW, from using the full 20 m/s instead of its vertical component.\n\n90-SECOND SOLUTION\nCompute the rate of potential-energy gain directly. A 5% grade means the vertical speed is 5% of the road speed; 'constant speed' tells you kinetic energy is fixed, so everything goes into height.\n\nWHAT TO MEMORIZE\nP = Fv, and the habit of computing rate of energy change rather than hunting for a force."
       },
 
       // [CM/SHM]
@@ -3480,7 +3480,7 @@ const EXAMS = [
           "longer, by a factor that depends on the amplitude"
         ],
         "answer": "A",
-        "explanation": "Gravity's component along the incline is constant, so it merely shifts the equilibrium position to a new point where the spring is pre-stretched; measured from that new equilibrium the restoring force is still −kx, so ω = √(k/m) exactly as on the horizontal surface. The trap is any answer involving g, which reflects a false analogy with the pendulum, whose period genuinely does depend on g. ⏱ 90-second route: memorize the general principle rather than the case — adding a constant force to a linear restoring force shifts the equilibrium but never changes the frequency. That single idea covers the vertical spring, the spring on an incline, and a charged mass on a spring in a uniform electric field, all of which are asked interchangeably. Recognizing the pattern takes ten seconds; deriving it takes two minutes."
+        "explanation": "WORKED SOLUTION\nGravity's component along the incline is constant, so it only shifts the equilibrium to a pre-stretched point; measured from there the restoring force is still −kx and ω = √(k/m), exactly as on the horizontal. The trap is any answer involving g, a false analogy with the pendulum.\n\n90-SECOND SOLUTION\nRecognise the pattern rather than deriving: adding a constant force to a linear restoring force shifts the equilibrium but never the frequency. Ten seconds instead of two minutes.\n\nWHAT TO MEMORIZE\nThe principle itself. It covers the vertical spring, the spring on an incline, and a charged mass on a spring in a uniform field — all asked interchangeably."
       },
 
       // [CM/rotational dynamics]
@@ -3494,7 +3494,7 @@ const EXAMS = [
           "hoop, sphere, cylinder"
         ],
         "answer": "A",
-        "explanation": "Energy conservation gives v² = 2gh/(1 + I/MR²), so the body with the smallest I/MR² is fastest. Those coefficients are ⅖ for the sphere, ½ for the cylinder and 1 for the hoop, so the sphere wins and the hoop trails. Mass and radius cancel completely, which is why the trap 'they all arrive together' is wrong for a reason different from the one most students assume — it is the shape, not the size or weight, that decides. ⏱ 90-second route: memorize the three coefficients ⅖, ½, 1, and the rule that more inertia relatively far from the axis means more energy diverted into spinning and less into translating. No calculation is needed to order them. The deeper point worth carrying is that the answer is independent of the incline angle and of g, so any choice implying otherwise can be discarded on sight."
+        "explanation": "WORKED SOLUTION\nEnergy conservation gives v² = 2gh/(1 + I/MR²), so the smallest I/MR² wins: ⅖ for the sphere, ½ for the cylinder, 1 for the hoop. Mass and radius cancel entirely, so 'they all arrive together' fails for a subtler reason than most students assume — shape decides, not size or weight.\n\n90-SECOND SOLUTION\nOrder the three coefficients; no calculation required. More inertia far from the axis means more energy diverted into spinning.\n\nWHAT TO MEMORIZE\nThe three coefficients ⅖, ½, 1, and that the result is independent of incline angle and of g."
       },
 
       // [CM/gravitation]
@@ -3508,7 +3508,7 @@ const EXAMS = [
           "the mass of the satellite as well as that of the planet"
         ],
         "answer": "A",
-        "explanation": "Setting GMm/R² = m4π²R/T² with M = ρ(4/3)πR³ makes the radius cancel entirely, leaving T = √(3π/Gρ). Two planets of the same density therefore have the same low-orbit period whatever their size — about 84 minutes for anything with Earth's density. The trap is the fourth choice, which is true of the general formula T² = 4π²R³/GM but misses that M and R are not independent once the density is fixed and the orbit is grazing. ⏱ 90-second route: memorize the grazing-orbit result T = √(3π/Gρ) if you can, but it is faster to infer: write Kepler's third law, substitute M ∝ ρR³, and watch R³ cancel. That substitution takes fifteen seconds and is the whole question. The same cancellation explains why the period of an object dropped through a tunnel in a planet matches the grazing orbital period."
+        "explanation": "WORKED SOLUTION\nSetting GMm/R² = m4π²R/T² with M = ρ(4/3)πR³ cancels the radius completely, leaving T = √(3π/Gρ) — about 84 minutes for anything of Earth's density. The trap is 'both mass and radius', true of T² = 4π²R³/GM but missing that the two are linked once density is fixed.\n\n90-SECOND SOLUTION\nWrite Kepler's third law, substitute M ∝ ρR³, watch R³ cancel. Fifteen seconds, and it is the whole question.\n\nWHAT TO MEMORIZE\nKepler's third law and the substitution M ∝ ρR³. The grazing-orbit result T = √(3π/Gρ) if you can hold it."
       },
 
       // [CM/fluids]
@@ -3522,7 +3522,7 @@ const EXAMS = [
           "twice its previous value"
         ],
         "answer": "A",
-        "explanation": "Buoyancy arises from the pressure gradient in the fluid, and in an accelerating frame that gradient is set by the effective gravity g + a = 1.5g rather than g. Since the buoyant force is ρ_fluid V g_eff, it rises by the factor 1.5. The trap is 'unchanged', which follows from thinking of buoyancy as a fixed property of the object rather than as a consequence of fluid weight. ⏱ 90-second route: memorize Archimedes' law in the form F = ρVg_eff and the general principle that a uniformly accelerating frame simply replaces g by g + a everywhere in a hydrostatics problem. Then the answer is one multiplication. The same substitution handles the free-fall limit, where g_eff = 0 and buoyancy vanishes entirely — a useful check, since it confirms the force must scale with g_eff rather than being constant."
+        "explanation": "WORKED SOLUTION\nBuoyancy comes from the fluid's pressure gradient, which in an accelerating frame is set by g_eff = g + a = 1.5g, so the force rises by 1.5. The trap is 'unchanged', from treating buoyancy as a fixed property of the object rather than a consequence of fluid weight.\n\n90-SECOND SOLUTION\nReplace g by g + a everywhere and multiply. Check it against the free-fall limit, where g_eff = 0 and buoyancy vanishes — confirming the force scales with g_eff rather than being constant.\n\nWHAT TO MEMORIZE\nF = ρVg_eff, and that a uniformly accelerating frame simply replaces g by g + a in any hydrostatics problem."
       },
 
       // [CM/hamiltonian]
@@ -3536,7 +3536,7 @@ const EXAMS = [
           "the constraints are independent of time and the potential is independent of velocity"
         ],
         "answer": "E",
-        "explanation": "H equals T + V when the transformation to generalized coordinates carries no explicit time dependence — so that the kinetic energy is a homogeneous quadratic function of the generalized velocities — and the potential does not depend on velocity. The trap is the choice citing no explicit time dependence in L, which confuses two distinct statements: no explicit time dependence in L guarantees that H is conserved, but says nothing about whether H equals the energy. A bead on a wire spun at a prescribed rate is the standard counterexample, where H is conserved but is not the energy. ⏱ 90-second route: memorize the two separate conditions and, above all, the distinction between them: 'H is conserved' and 'H is the energy' are independent statements, and essentially every exam question in this family tests exactly that separation. There is no derivation short enough to attempt here, so recognize which of the two is being asked and answer from the pair."
+        "explanation": "WORKED SOLUTION\nH equals T + V when the coordinate transformation carries no explicit time dependence — making the kinetic energy a homogeneous quadratic in the generalized velocities — and the potential is velocity-independent. The trap is 'L has no explicit time dependence', which guarantees H is conserved but says nothing about whether H is the energy. A bead on a wire spun at a prescribed rate is the standard counterexample.\n\n90-SECOND SOLUTION\nNo derivation is short enough. Decide which of the two statements is being asked — 'H is conserved' or 'H is the energy' — and answer from the pair.\n\nWHAT TO MEMORIZE\nThe two conditions, and above all that they are independent statements. Essentially every question here tests that separation."
       },
 
       // [CM/momentum & collisions]
@@ -3550,7 +3550,7 @@ const EXAMS = [
           "180°"
         ],
         "answer": "D",
-        "explanation": "Momentum conservation gives v₀ = v₁ + v₂ and kinetic energy conservation gives v₀² = v₁² + v₂². Squaring the first and comparing leaves 2v₁·v₂ = 0, so the outgoing velocities are perpendicular. This is why elastic billiard-ball tracks and bubble-chamber photographs of equal-mass elastic scattering always show a right angle. The trap is 180°, which describes the special head-on case where one particle stops — excluded here by the stipulation that neither ends at rest. ⏱ 90-second route: memorize the 90° result outright; it is one of the highest-yield facts in classical mechanics and appears in nuclear-scattering contexts as often as in mechanics ones. If you must derive it, the vector-squaring argument above takes about forty seconds. Note the two hypotheses it needs — equal masses and elastic — since removing either destroys the result."
+        "explanation": "WORKED SOLUTION\nMomentum gives v₀ = v₁ + v₂ and energy gives v₀² = v₁² + v₂²; squaring the first and comparing leaves 2v₁·v₂ = 0, so the outgoing velocities are perpendicular. It is why equal-mass elastic tracks in a bubble chamber always show a right angle. The trap is 180°, the head-on case where one particle stops — excluded by the stipulation that neither ends at rest.\n\n90-SECOND SOLUTION\nRecall the 90° result outright. If you must derive it, the vector-squaring argument takes about forty seconds.\n\nWHAT TO MEMORIZE\nThat equal-mass elastic collisions separate at 90°, and the two hypotheses it needs — equal masses and elastic."
       },
 
       // [CM/non-inertial frames & coriolis]
@@ -3564,7 +3564,7 @@ const EXAMS = [
           "45 s"
         ],
         "answer": "C",
-        "explanation": "The required centripetal acceleration is ω²R = 9.8, so ω = √(9.8/50) ≈ 0.44 rad/s and T = 2π/ω ≈ 14 s. The trap is 4.5 s, obtained by forgetting the factor of 2π and quoting 1/ω, and 28 s, from using the diameter in place of the radius. ⏱ 90-second route: memorize a = ω²R and T = 2π/ω; the whole problem is those two relations in sequence. The inference worth making before computing is a rough estimate: a 50 m station is comparable to a pendulum of that length, whose period is 2π√(L/g) ≈ 14 s — the same expression, since demanding a = g makes the two problems identical. That observation gives the answer without the intermediate step."
+        "explanation": "WORKED SOLUTION\nThe required centripetal acceleration is ω²R = 9.8, so ω ≈ 0.44 rad/s and T = 2π/ω ≈ 14 s. The traps are 4.5 s, from quoting 1/ω and forgetting 2π, and 28 s, from using the diameter.\n\n90-SECOND SOLUTION\nEstimate before computing: demanding a = g makes this identical to a pendulum of length 50 m, whose period is 2π√(L/g) ≈ 14 s. That observation gives the answer with no intermediate step.\n\nWHAT TO MEMORIZE\na = ω²R and T = 2π/ω."
       },
 
       // [EM/coulomb's law & E-field]
@@ -3578,7 +3578,7 @@ const EXAMS = [
           "R√2"
         ],
         "answer": "C",
-        "explanation": "On the axis E = kQz/(z² + R²)^(3/2), which vanishes at the centre by symmetry and falls as 1/z² far away, so it peaks in between; setting the derivative to zero gives z = R/√2. The trap is 'zero', which is where the potential is greatest but where the field vanishes — confusing the maximum of V with the maximum of E is the standard error here. ⏱ 90-second route: memorize the result z = R/√2 for the charged ring, since the derivative is not something you want to take under time pressure. If you have forgotten it, you can still eliminate three choices in fifteen seconds by inference: the field must be zero at the centre and zero at infinity, so the maximum lies strictly between, which kills 'zero' immediately and makes any answer of order R the only candidate."
+        "explanation": "WORKED SOLUTION\nOn the axis E = kQz/(z² + R²)^(3/2), which vanishes at the centre by symmetry and falls as 1/z² far away, so it peaks between; the derivative gives z = R/√2. The trap is 'zero', where the potential peaks but the field does not — confusing the maximum of V with the maximum of E.\n\n90-SECOND SOLUTION\nDo not differentiate under time pressure. Infer instead: the field is zero at the centre and zero at infinity, so the maximum lies strictly between, which eliminates 'zero' at once and leaves only answers of order R.\n\nWHAT TO MEMORIZE\nThe result z = R/√2 for a charged ring, since the derivative is not worth taking in the time available."
       },
 
       // [EM/gauss's law]
@@ -3592,7 +3592,7 @@ const EXAMS = [
           "dependent on the detailed shape of the cavity"
         ],
         "answer": "A",
-        "explanation": "Charge −q is induced on the cavity wall and +q on the outer surface, and since the field inside the conducting material must vanish, the outer surface charge redistributes to a configuration determined only by that outer surface's geometry, retaining no memory of where the cavity sits. For a spherical outer boundary the exterior field is exactly that of a centred point charge +q. The trap is the third choice, which incorrectly assumes the interior geometry shows through the conductor. ⏱ 90-second route: memorize the screening principle — a conductor's exterior field depends only on the total enclosed charge and the outer surface shape, never on the interior arrangement. That single statement answers the whole family of cavity questions. The inference chain, from E = 0 in the metal to no information transmitted outward, is worth rehearsing once so you can trust it under pressure."
+        "explanation": "WORKED SOLUTION\nCharge −q is induced on the cavity wall and +q on the outer surface, and since E = 0 in the metal, that outer charge redistributes according to the outer surface alone, keeping no memory of where the cavity sits. The trap is 'at the actual position of the charge', which assumes the interior geometry shows through.\n\n90-SECOND SOLUTION\nApply the screening principle directly. The chain — E = 0 in the metal, so no information is transmitted outward — is worth rehearsing once so you can trust it cold.\n\nWHAT TO MEMORIZE\nA conductor's exterior field depends only on the total enclosed charge and the outer surface shape, never on the interior arrangement."
       },
 
       // [EM/electric potential]
@@ -3606,7 +3606,7 @@ const EXAMS = [
           "E is largest where V is largest"
         ],
         "answer": "A",
-        "explanation": "The field is the negative gradient of the potential, so what matters is how V varies, not its value. Midway between two equal positive point charges the field cancels by symmetry while the potential is a positive maximum, giving exactly the situation described. The trap is the claim that E = 0 throughout a region forces V = 0 there, which is nearly right — E = 0 throughout a region does force V to be constant there, but that constant need not be zero, since the zero of potential is arbitrary. ⏱ 90-second route: memorize E = −∇V and read every choice through it. No numbers are involved; the entire question is whether you treat potential as a value or as a slope. Having one concrete counterexample ready — the midpoint of two like charges — lets you dispatch these in under thirty seconds rather than reasoning through five abstract statements."
+        "explanation": "WORKED SOLUTION\nThe field is the negative gradient of the potential, so what matters is how V varies, not its value. Midway between two equal positive charges the field cancels by symmetry while V is a positive maximum. The near-miss is 'E = 0 throughout a region forces V = 0': it forces V to be constant, but the zero of potential is arbitrary.\n\n90-SECOND SOLUTION\nRead every choice through E = −∇V. Keep one concrete counterexample ready — the midpoint of two like charges — and these take under thirty seconds instead of five abstract arguments.\n\nWHAT TO MEMORIZE\nE = −∇V, and that potential is a slope, not a value."
       },
 
       // [EM/DC circuits]
@@ -3620,7 +3620,7 @@ const EXAMS = [
           "450 Ω"
         ],
         "answer": "D",
-        "explanation": "Balance requires the two arms to divide the voltage in the same ratio, so 100/200 = 150/R, giving R = 300 Ω. The trap is 75 Ω, from inverting the proportion. Note that balance is independent of the supply voltage and of the galvanometer's resistance, which is precisely why the bridge is a precision instrument. ⏱ 90-second route: memorize the balance condition as 'the ratios along the two arms must match', and write it as a proportion rather than a memorized cross-product so you cannot invert it. The whole calculation is one line. The inference worth having ready is why the method is accurate: it is a null measurement, so it depends on resistance ratios alone and not on any calibration of the detector."
+        "explanation": "WORKED SOLUTION\nBalance requires the two arms to divide the voltage in the same ratio: 100/200 = 150/R, so R = 300 Ω. The trap is 75 Ω, from inverting the proportion. Balance is independent of supply voltage and galvanometer resistance, which is what makes the bridge precise.\n\n90-SECOND SOLUTION\nWrite it as a proportion rather than a memorized cross-product, so it cannot be inverted. One line.\n\nWHAT TO MEMORIZE\nThe balance condition as 'the ratios along the two arms must match'."
       },
 
       // [EM/RC circuits]
@@ -3634,7 +3634,7 @@ const EXAMS = [
           "dependent on R in a way that cannot be determined without knowing the time constant"
         ],
         "answer": "A",
-        "explanation": "All the stored energy ends up as heat once the capacitor is fully discharged, and that stored energy is ½CV² = ½(10 × 10⁻⁶)(100)² = 50 mJ. The resistance sets how quickly the dissipation happens, through τ = RC, but not how much. The trap is the last choice, which mistakes the rate for the total. ⏱ 90-second route: memorize U = ½CV² and apply energy conservation, which is the entire problem. The inference that saves time is recognizing that the question offers three numerically identical answers hedged by different conditions — that pattern is a signal that the point being tested is the independence, not the arithmetic. Answer the conceptual question first and the number second."
+        "explanation": "WORKED SOLUTION\nAll the stored energy becomes heat once discharge is complete, and that is ½CV² = ½(10 × 10⁻⁶)(100)² = 50 mJ. The resistance sets how fast through τ = RC, not how much. The trap is the choice claiming R-dependence, which mistakes the rate for the total.\n\n90-SECOND SOLUTION\nNotice the question offers three numerically identical answers hedged by different conditions — a signal that independence, not arithmetic, is the point. Answer the conceptual question first.\n\nWHAT TO MEMORIZE\nU = ½CV², plus energy conservation."
       },
 
       // [EM/RLC & AC circuits]
@@ -3648,7 +3648,7 @@ const EXAMS = [
           "1,000 Ω"
         ],
         "answer": "C",
-        "explanation": "The capacitive reactance is X_C = 1/ωC = 1/(1,000 × 10⁻⁵) = 100 Ω, and impedances in series add in quadrature for perpendicular components: |Z| = √(100² + 100²) ≈ 140 Ω. The trap is 200 Ω, from adding R and X_C arithmetically as though they were resistances in series. ⏱ 90-second route: memorize X_C = 1/ωC, X_L = ωL, and the quadrature rule |Z| = √(R² + X²). Those three cover every AC-impedance question on this exam. The inference that matters is why the addition is in quadrature: the capacitor's voltage lags the current by 90°, so the two voltage phasors are perpendicular. Since R and X_C happen to be equal here, the phase angle is 45° — a detail worth noticing, as the follow-up question often asks for it."
+        "explanation": "WORKED SOLUTION\nX_C = 1/ωC = 1/(1,000 × 10⁻⁵) = 100 Ω, and resistance and reactance add in quadrature: |Z| = √(100² + 100²) ≈ 140 Ω. The trap is 200 Ω, from adding them arithmetically.\n\n90-SECOND SOLUTION\nCompute the reactance, then add in quadrature. Since R and X_C happen to be equal, the phase angle is 45° — worth noting, as the follow-up usually asks for it.\n\nWHAT TO MEMORIZE\nX_C = 1/ωC, X_L = ωL, and |Z| = √(R² + X²). Those three cover every AC-impedance question here."
       },
 
       // [EM/magnetic force on charges/currents]
@@ -3662,7 +3662,7 @@ const EXAMS = [
           "2.0 × 10⁻³ N/m, attractive"
         ],
         "answer": "A",
-        "explanation": "The force per length is μ₀I₁I₂/2πd = (2 × 10⁻⁷)(100)/(0.10) = 2.0 × 10⁻⁴ N/m, and parallel currents in the same direction attract. The trap is the repulsive version: the sign convention is opposite to the electrostatic one, where like charges repel, and reversing it by analogy is the most common error in this topic. ⏱ 90-second route: memorize F/L = μ₀I₁I₂/2πd, the shortcut μ₀/2π = 2 × 10⁻⁷, and the direction rule 'parallel currents attract'. The direction is worth anchoring physically rather than by formula: this attraction is the definition on which the old SI ampere was based. If you distrust your memory, one application of the right-hand rule followed by F = IL × B settles it in about twenty seconds."
+        "explanation": "WORKED SOLUTION\nF/L = μ₀I₁I₂/2πd = (2 × 10⁻⁷)(100)/(0.10) = 2.0 × 10⁻⁴ N/m, and parallel currents in the same direction attract. The trap is the repulsive version: the convention is opposite to electrostatics, where like charges repel, and reversing it by analogy is the standard error.\n\n90-SECOND SOLUTION\nOne division, then fix the direction. If you distrust the rule, one right-hand rule plus F = IL × B settles it in twenty seconds.\n\nWHAT TO MEMORIZE\nF/L = μ₀I₁I₂/2πd, μ₀/2π = 2 × 10⁻⁷, and 'parallel currents attract' — the definition the old SI ampere rested on."
       },
 
       // [EM/EM waves & poynting]
@@ -3676,7 +3676,7 @@ const EXAMS = [
           "1.0 × 10⁻³ Pa"
         ],
         "answer": "C",
-        "explanation": "For a perfect absorber the pressure is I/c, but a perfect reflector reverses the photon momentum and therefore receives twice the impulse: P = 2I/c = 2,000/(3.0 × 10⁸) ≈ 6.7 × 10⁻⁶ Pa. The trap is 3.3 × 10⁻⁶ Pa, the absorber value, which omits the factor of 2. ⏱ 90-second route: memorize the pair — I/c for absorption, 2I/c for reflection — since the factor of 2 is the only thing this question ever tests. The inference is the momentum argument: reversing a momentum changes it by twice its magnitude, exactly as a ball bouncing elastically off a wall delivers twice the impulse of one that sticks. That analogy makes the factor impossible to forget."
+        "explanation": "WORKED SOLUTION\nA perfect absorber feels I/c, but a reflector reverses the photon momentum and so receives twice the impulse: P = 2I/c = 2,000/(3.0 × 10⁸) ≈ 6.7 × 10⁻⁶ Pa. The trap is 3.3 × 10⁻⁶ Pa, the absorber value.\n\n90-SECOND SOLUTION\nPick the right member of the pair, then divide once. The analogy makes the factor unforgettable: a ball bouncing elastically off a wall delivers twice the impulse of one that sticks.\n\nWHAT TO MEMORIZE\nThe pair I/c for absorption and 2I/c for reflection."
       },
 
       // [EM/maxwell's equations]
@@ -3690,7 +3690,7 @@ const EXAMS = [
           "2.0 A"
         ],
         "answer": "E",
-        "explanation": "Maxwell introduced the displacement current ε₀ dΦ_E/dt precisely so that the total current would be continuous: the changing electric field between the plates carries exactly the 2.0 A that the wire delivers, so Ampère's law gives the same answer for any surface bounded by the same loop. The trap is 'zero', which is true of the conduction current but not of the displacement current the question asks about. ⏱ 90-second route: memorize the punchline rather than the formula — displacement current in the gap equals the conduction current in the wire. That single fact answers essentially every question on this topic. The inference underneath it is worth one rehearsal: without it, Ampère's law would give different answers for two surfaces sharing the same boundary, which is exactly the inconsistency Maxwell was repairing."
+        "explanation": "WORKED SOLUTION\nMaxwell introduced the displacement current ε₀ dΦ_E/dt precisely so total current would be continuous: the changing field between the plates carries exactly the 2.0 A the wire delivers, so Ampère's law gives the same result for any surface bounded by the same loop. The trap is 'zero', true of the conduction current but not of the displacement current asked about.\n\n90-SECOND SOLUTION\nRecall the punchline — displacement current in the gap equals conduction current in the wire — and stop. The underlying reason is worth one rehearsal: without it, Ampère's law would give different answers for two surfaces sharing a boundary.\n\nWHAT TO MEMORIZE\nThat displacement current in the gap equals the conduction current in the wire."
       },
 
       // [QM/infinite square well]
@@ -3704,7 +3704,7 @@ const EXAMS = [
           "4"
         ],
         "answer": "C",
-        "explanation": "The levels are E ∝ n_x² + n_y² + n_z², so the ground state (1,1,1) has 3 and the first excited state (2,1,1) has 6, giving a ratio of 2. The trap is 4, the ratio for a one-dimensional box where the first excited state is simply n = 2 — in three dimensions only one quantum number is promoted, not all three. ⏱ 90-second route: memorize E ∝ n_x² + n_y² + n_z² for the cubical box, which is the only fact required. The counting is inference: the lowest allowed value of each n is 1, not 0, so the ground state is (1,1,1) and the cheapest excitation raises a single index. Noticing that the first excited level is threefold degenerate is a useful byproduct, since it is the other half of what this topic asks."
+        "explanation": "WORKED SOLUTION\nLevels go as n_x² + n_y² + n_z², so the ground state (1,1,1) sits at 3 and the first excited state (2,1,1) at 6 — a ratio of 2. The trap is 4, the one-dimensional answer where the first excited state is simply n = 2.\n\n90-SECOND SOLUTION\nNote that the lowest allowed value of each n is 1, not 0, so the cheapest excitation promotes a single index. Counting beats recalling. The threefold degeneracy of that level is a useful byproduct.\n\nWHAT TO MEMORIZE\nE ∝ n_x² + n_y² + n_z² for the cubical box."
       },
 
       // [QM/potential barrier & tunneling]
@@ -3718,7 +3718,7 @@ const EXAMS = [
           "10⁻⁸"
         ],
         "answer": "E",
-        "explanation": "In the thick-barrier limit T ≈ e^(−2κL), so doubling L squares the transmission: (10⁻⁴)² = 10⁻⁸. The trap is 2 × 10⁻⁴ or 5 × 10⁻⁵, both of which treat the dependence as linear rather than exponential. ⏱ 90-second route: memorize the form T ~ e^(−2κL) — the constants inside κ almost never matter, but the exponential dependence on width always does. Then the inference is one line of algebra: doubling the exponent squares the result. This extreme sensitivity is the physical content worth carrying, since it explains why scanning tunnelling microscopes resolve single atoms and why alpha-decay half-lives span twenty orders of magnitude."
+        "explanation": "WORKED SOLUTION\nIn the thick-barrier limit T ≈ e^(−2κL), so doubling L squares the transmission: (10⁻⁴)² = 10⁻⁸. The traps are 2 × 10⁻⁴ and 5 × 10⁻⁵, both treating the dependence as linear.\n\n90-SECOND SOLUTION\nDouble the exponent, square the result — one line of algebra. The extreme sensitivity is the physical content: it is why scanning tunnelling microscopes resolve single atoms and why alpha-decay half-lives span twenty orders of magnitude.\n\nWHAT TO MEMORIZE\nThe form T ~ e^(−2κL). The constants inside κ rarely matter; the exponential dependence on width always does."
       },
 
       // [QM/spin & pauli matrices]
@@ -3732,7 +3732,7 @@ const EXAMS = [
           "±ħ/2 only"
         ],
         "answer": "E",
-        "explanation": "Every component operator for spin-½ has eigenvalues ±ħ/2, whichever axis is chosen — a consequence of the algebra alone, not of any special direction. What changes with the choice of axis is the probability of each outcome, never the set of outcomes. The trap is the last choice, which imagines a classical vector projecting continuously; measurement of a spin component is always dichotomous. ⏱ 90-second route: memorize that spin components are quantized in units of ħ/2 with 2s + 1 = 2 outcomes. The inference worth stating explicitly is the isotropy: no axis is special, so if ±ħ/2 are the results along z they must be the results along every direction. Recognizing that immediately eliminates any choice implying a continuum or an axis dependence."
+        "explanation": "WORKED SOLUTION\nEvery spin-½ component operator has eigenvalues ±ħ/2 whichever axis is chosen — a consequence of the algebra, not of any special direction. Choosing a different axis changes the probabilities, never the outcomes. The trap is the continuous range, which imagines a classical vector projecting smoothly.\n\n90-SECOND SOLUTION\nUse isotropy: no axis is special, so if the results along z are ±ħ/2 they are the same along every direction. That eliminates anything implying a continuum or an axis dependence.\n\nWHAT TO MEMORIZE\nSpin components are quantized in units of ħ/2, with 2s + 1 = 2 outcomes."
       },
 
       // [QM/uncertainty principle]
@@ -3746,7 +3746,7 @@ const EXAMS = [
           "1 eV"
         ],
         "answer": "B",
-        "explanation": "The energy-time uncertainty relation gives ΔE ≈ ħ/τ = 1.05 × 10⁻³⁴/10⁻⁸ ≈ 10⁻²⁶ J, which is about 6.6 × 10⁻⁸ eV, of order 10⁻⁸ eV. This natural linewidth is what sets the ultimate sharpness of a spectral line, and it is far narrower than typical Doppler broadening. The trap is answers near 1 eV, which confuse the width of the level with the energy of the transition itself. ⏱ 90-second route: memorize ΔEΔt ≈ ħ and the conversion 1 eV = 1.6 × 10⁻¹⁹ J. The inference is that longer-lived states are sharper — a metastable state has an extremely narrow line, while a state that decays in femtoseconds is badly smeared. Sanity-check the magnitude: any answer comparable to an atomic transition energy would mean the level is not a level at all."
+        "explanation": "WORKED SOLUTION\nΔE ≈ ħ/τ = 1.05 × 10⁻³⁴/10⁻⁸ ≈ 10⁻²⁶ J, about 6.6 × 10⁻⁸ eV. This natural linewidth sets the ultimate sharpness of a spectral line and is far narrower than Doppler broadening. The trap is answers near 1 eV, confusing the width of a level with the energy of the transition.\n\n90-SECOND SOLUTION\nOne division and one unit conversion. Sanity-check the magnitude: anything comparable to an atomic transition energy would mean the level is not a level at all.\n\nWHAT TO MEMORIZE\nΔEΔt ≈ ħ, and 1 eV = 1.6 × 10⁻¹⁹ J. Longer-lived states are sharper."
       },
 
       // [QM/addition of angular momentum]
@@ -3760,7 +3760,7 @@ const EXAMS = [
           "3/2 and 5/2"
         ],
         "answer": "E",
-        "explanation": "Adding spin ½ to orbital angular momentum 2 gives j = l + s and j = l − s, that is 5/2 and 3/2, which is the spin-orbit doublet responsible for the fine structure of d states. The trap is '2 only', which forgets the electron's spin entirely, and '5/2 only', which keeps only the stretched combination. ⏱ 90-second route: memorize the addition rule that j runs from |l − s| to l + s in integer steps — for s = ½ that always yields exactly two values, l ± ½. The inference is a parity check: combining an integer l with a half-integer s must give half-integer j, which eliminates the choices containing integers before you do any arithmetic. That check alone leaves only two candidates."
+        "explanation": "WORKED SOLUTION\nAdding spin ½ to orbital angular momentum 2 gives j = l ± s, that is 5/2 and 3/2 — the spin-orbit doublet behind the fine structure of d states. The traps are '2 only', forgetting spin entirely, and '5/2 only', keeping just the stretched combination.\n\n90-SECOND SOLUTION\nRun a parity check before any arithmetic: integer l plus half-integer s must give half-integer j, which eliminates every choice containing integers and leaves two candidates.\n\nWHAT TO MEMORIZE\nj runs from |l − s| to l + s in integer steps; for s = ½ that always gives exactly l ± ½."
       },
 
       // [QM/hydrogen atom]
@@ -3774,7 +3774,7 @@ const EXAMS = [
           "41 eV"
         ],
         "answer": "A",
-        "explanation": "The bound-state energies are E_n = −13.6/n² eV, so E₃ = −13.6/9 ≈ −1.5 eV, and the ionization energy from that level is +1.5 eV. The trap is 12 eV, which is the energy of the n = 1 to n = 3 transition, 13.6 − 1.5 — a different quantity that the question does not ask for. ⏱ 90-second route: memorize E_n = −13.6/n² eV, the single most-used formula in atomic physics. The only inference is reading precisely: ionization from a level means going from that level to zero, so the answer is just |E_n|. Questions in this family almost always offer both the level energy and a transition energy among the choices, so identify which endpoint pair is being asked before computing."
+        "explanation": "WORKED SOLUTION\nE_n = −13.6/n² eV gives E₃ ≈ −1.5 eV, so removing the electron from that level costs +1.5 eV. The trap is 12 eV, the n = 1 to n = 3 transition energy — a different quantity.\n\n90-SECOND SOLUTION\nRead precisely: ionization from a level means going to zero, so the answer is just |E_n|. These questions always offer both a level energy and a transition energy among the choices, so identify the endpoints before computing.\n\nWHAT TO MEMORIZE\nE_n = −13.6/n² eV — the most-used formula in atomic physics."
       },
 
       // [QM/bohr model]
@@ -3788,7 +3788,7 @@ const EXAMS = [
           "−109 eV"
         ],
         "answer": "D",
-        "explanation": "Hydrogen-like energies scale as Z², so doubling the nuclear charge multiplies the binding by 4: −13.6 × 4 = −54.4 eV. The trap is −27.2 eV, from scaling linearly in Z, which is what the Coulomb force law alone would suggest before you account for the orbit also shrinking by a factor of Z. ⏱ 90-second route: memorize the hydrogen-like scalings together: E ∝ Z² and r ∝ 1/Z. They come as a pair and each explains the other. The inference that fixes the exponent is that the electron is both more strongly attracted and closer in, so two factors of Z compound. Note this is a different scaling from the muonic-atom case, where the mass changes rather than the charge."
+        "explanation": "WORKED SOLUTION\nHydrogen-like energies scale as Z², so doubling the nuclear charge multiplies the binding by 4: −54.4 eV. The trap is −27.2 eV, from scaling linearly in Z — what the force law alone suggests before you account for the orbit also shrinking by Z.\n\n90-SECOND SOLUTION\nSquare the charge ratio. The exponent is fixed by inference: the electron is both more strongly attracted and closer in, so two factors of Z compound.\n\nWHAT TO MEMORIZE\nThe hydrogen-like pair E ∝ Z² and r ∝ 1/Z. Note this differs from the muonic case, where the mass changes instead."
       },
 
       // [QM/wavefunction & normalization]
@@ -3802,7 +3802,7 @@ const EXAMS = [
           "ψ must vanish as x approaches ±∞"
         ],
         "answer": "D",
-        "explanation": "Wavefunctions are in general complex — a travelling wave e^(ikx) is the standard example — and nothing in the formalism requires ψ to be real. The other four are genuine requirements, following from the probability interpretation and from the Schrödinger equation being second order. It is true that bound stationary states of a real potential can always be chosen real, but 'can be chosen' is not 'must be'. ⏱ 90-second route: memorize the standard list of admissibility conditions and note what is absent from it. The inference that settles this in ten seconds is producing one counterexample: any state carrying nonzero momentum has a complex wavefunction, so reality cannot be a requirement. For NOT-questions, hunting a single counterexample is always faster than validating the other four choices."
+        "explanation": "WORKED SOLUTION\nWavefunctions are in general complex — a travelling wave e^(ikx) is the standard example — so reality is not a requirement. The other four follow from the probability interpretation and from the Schrödinger equation being second order. Bound stationary states of a real potential can be chosen real, but 'can be chosen' is not 'must be'.\n\n90-SECOND SOLUTION\nFor NOT-questions, hunt one counterexample rather than validating four choices. Any state carrying nonzero momentum has a complex wavefunction — ten seconds.\n\nWHAT TO MEMORIZE\nThe standard admissibility list: single-valued, continuous, square-integrable, vanishing at infinity. Note what is absent from it."
       },
 
       // [QM/harmonic oscillator]
@@ -3816,7 +3816,7 @@ const EXAMS = [
           "5"
         ],
         "answer": "D",
-        "explanation": "The oscillator eigenfunctions are a Hermite polynomial of degree n times a Gaussian, and a degree-n polynomial has exactly n real roots, so the n = 4 state has 4 nodes. The Gaussian factor never vanishes at finite x and the asymptotic decay does not count as a node. The trap is 3, from applying the n − 1 rule that belongs to the infinite square well when its states are labelled from n = 1. ⏱ 90-second route: memorize the node count n for the oscillator, whose ground state is n = 0, and contrast it with the box, whose ground state is n = 1 and has n − 1 nodes. The discrepancy is entirely a labelling convention, and knowing which convention goes with which system is the actual content. The general principle worth carrying is that node count increases with energy in any one-dimensional potential."
+        "explanation": "WORKED SOLUTION\nThe eigenfunctions are a degree-n Hermite polynomial times a Gaussian, and a degree-n polynomial has exactly n real roots, so n = 4 gives 4 nodes. The Gaussian never vanishes at finite x. The trap is 3, applying the n − 1 rule that belongs to the box.\n\n90-SECOND SOLUTION\nIdentify which labelling convention the system uses — that is the whole question. The oscillator's ground state is n = 0; the box's is n = 1.\n\nWHAT TO MEMORIZE\nNode count n for the oscillator versus n − 1 for the box, and that the discrepancy is purely a labelling convention."
       },
 
       // [QM/time evolution]
@@ -3830,7 +3830,7 @@ const EXAMS = [
           "(E₂ − E₁)/ħ"
         ],
         "answer": "E",
-        "explanation": "Each stationary state carries a phase e^(−iEt/ħ), and squaring the sum produces a cross term whose phase is the difference of the two, so the interference term oscillates at (E₂ − E₁)/ħ. The individual phases are unobservable — a single stationary state has a probability density that does not move at all, which is what makes it stationary. The trap is E₂/ħ, which mistakes an individual phase for an observable frequency. ⏱ 90-second route: memorize the rule that only energy differences are observable in quantum mechanics; the overall phase never is. That principle alone selects the answer. The inference confirming it is the classical correspondence: this is the same frequency the atom radiates when it makes the transition, since Bohr's condition ΔE = ħω is exactly the statement being tested here."
+        "explanation": "WORKED SOLUTION\nEach stationary state carries a phase e^(−iEt/ħ), and squaring the sum produces a cross term whose phase is the difference — so the interference term oscillates at (E₂ − E₁)/ħ. Individual phases are unobservable, which is exactly what makes a single stationary state stationary. The trap is E₂/ħ, mistaking an individual phase for an observable.\n\n90-SECOND SOLUTION\nApply the rule that only energy differences are observable; that alone selects the answer. Confirm by correspondence: this is the frequency the atom radiates on the transition, so ΔE = ħω.\n\nWHAT TO MEMORIZE\nThat only energy differences are observable in quantum mechanics — the overall phase never is."
       },
 
       // [QM/de broglie waves]
@@ -3844,7 +3844,7 @@ const EXAMS = [
           "9.1 nm"
         ],
         "answer": "B",
-        "explanation": "With V = 54, √V ≈ 7.35, so λ ≈ 1.23/7.35 ≈ 0.17 nm — comparable to atomic spacings, which is exactly why the Davisson-Germer experiment saw diffraction and thereby confirmed the de Broglie hypothesis. The trap is 1.2 nm, from quoting the numerator without dividing. ⏱ 90-second route: memorize the shortcut λ = 1.23 nm/√V for non-relativistic electrons; it saves you from rebuilding λ = h/√(2meV) under time pressure. The inference that makes the answer meaningful is the comparison with lattice spacings of a few tenths of a nanometre: any answer far from that scale would not have produced diffraction at all, which lets you sanity-check before committing."
+        "explanation": "WORKED SOLUTION\nWith V = 54, √V ≈ 7.35 and λ ≈ 1.23/7.35 ≈ 0.17 nm — comparable to atomic spacings, which is why Davisson-Germer saw diffraction and confirmed de Broglie. The trap is 1.2 nm, quoting the numerator without dividing.\n\n90-SECOND SOLUTION\nOne division using the shortcut, which saves rebuilding λ = h/√(2meV). Sanity-check against lattice spacings of a few tenths of a nanometre — anything far off that scale would not have diffracted.\n\nWHAT TO MEMORIZE\nλ = 1.23 nm/√V for non-relativistic electrons."
       },
 
       // [TS/heat engines & efficiency]
@@ -3858,7 +3858,7 @@ const EXAMS = [
           "10 J"
         ],
         "answer": "E",
-        "explanation": "The coefficient of performance of a reversible heat pump is T_hot/(T_hot − T_cold) = 300/30 = 10, so one joule of work delivers ten joules of heat into the house — nine of them pumped from the cold outside air. The trap is 9.0 J, which is the COP of the same device used as a refrigerator, T_cold/(T_hot − T_cold), and the two differ by exactly the work input. ⏱ 90-second route: memorize the two coefficients and, more reliably, derive whichever you need from energy conservation: Q_hot = Q_cold + W, and the reversible condition Q_hot/Q_cold = T_hot/T_cold. That pair regenerates both formulas in thirty seconds and cannot be misremembered. The inference to check your answer is that a heat pump must beat a resistive heater, so the number has to exceed 1."
+        "explanation": "WORKED SOLUTION\nThe reversible heat-pump coefficient is T_hot/(T_hot − T_cold) = 300/30 = 10, so one joule of work delivers ten joules of heat, nine of them pumped from outside. The trap is 9.0 J, the refrigerator coefficient T_cold/(T_hot − T_cold) — the two differ by exactly the work input.\n\n90-SECOND SOLUTION\nRather than choosing between two memorized coefficients, rebuild from Q_hot = Q_cold + W and Q_hot/Q_cold = T_hot/T_cold. Thirty seconds and impossible to misremember. Check that the answer exceeds 1, since a heat pump must beat a resistive heater.\n\nWHAT TO MEMORIZE\nEnergy conservation plus the reversible ratio Q_hot/Q_cold = T_hot/T_cold. The two coefficients follow."
       },
 
       // [TS/blackbody radiation]
@@ -3872,7 +3872,7 @@ const EXAMS = [
           "17,000 nm"
         ],
         "answer": "B",
-        "explanation": "Wien's law gives λ_max = 2.9 × 10⁻³/5,800 = 5.0 × 10⁻⁷ m = 500 nm, in the green, near the centre of the visible band — which is unlikely to be a coincidence given how eyes evolved. The trap is 50 nm, a factor-of-ten slip that lands in the extreme ultraviolet. ⏱ 90-second route: memorize Wien's constant, 2.9 × 10⁻³ m·K, and the anchor result that a 5,800 K body peaks at about 500 nm. Carrying that one pair lets you handle any variant by scaling: peak wavelength is inversely proportional to temperature, so a 2,900 K filament peaks at 1,000 nm, in the infrared, which is why incandescent bulbs are inefficient. The inverse relation is the inference; the constant is the recall."
+        "explanation": "WORKED SOLUTION\nWien's law gives λ_max = 2.9 × 10⁻³/5,800 = 500 nm, in the green near the centre of the visible band — unlikely to be a coincidence given how eyes evolved. The trap is 50 nm, a factor-of-ten slip into the extreme ultraviolet.\n\n90-SECOND SOLUTION\nOne division, or scale from the anchor: peak wavelength is inversely proportional to temperature, so a 2,900 K filament peaks at 1,000 nm in the infrared, which is why incandescent bulbs are inefficient.\n\nWHAT TO MEMORIZE\nWien's constant 2.9 × 10⁻³ m·K, and the anchor that 5,800 K peaks near 500 nm."
       },
 
       // [TS/first law & work]
@@ -3886,7 +3886,7 @@ const EXAMS = [
           "3,700 J"
         ],
         "answer": "C",
-        "explanation": "For a reversible isothermal expansion W = nRT ln(V₂/V₁) = (1)(8.31)(300)(0.693) ≈ 1,700 J. Because the temperature is constant the internal energy of an ideal gas does not change, so exactly this much heat must flow in from the reservoir. The trap is 2,500 J, which is nRT itself, obtained by dropping the logarithm. ⏱ 90-second route: memorize W = nRT ln(V₂/V₁) and ln 2 ≈ 0.69. The useful intermediate to hold in your head is RT ≈ 2,500 J/mol at room temperature — a number that recurs constantly in this subject — after which the answer is 2,500 × 0.69 in one step. The inference is that ΔU = 0 for an isothermal ideal gas, so Q = W, which is what a follow-up question usually asks."
+        "explanation": "WORKED SOLUTION\nFor reversible isothermal expansion W = nRT ln(V₂/V₁) = (1)(8.31)(300)(0.693) ≈ 1,700 J. Since the temperature is fixed, an ideal gas's internal energy does not change, so exactly this much heat flows in. The trap is 2,500 J, which is nRT with the logarithm dropped.\n\n90-SECOND SOLUTION\nHold RT ≈ 2,500 J/mol at room temperature in your head — a number that recurs constantly — then the answer is 2,500 × 0.69 in one step.\n\nWHAT TO MEMORIZE\nW = nRT ln(V₂/V₁), ln 2 ≈ 0.69, and that ΔU = 0 for an isothermal ideal gas so Q = W."
       },
 
       // [TS/heat capacity]
@@ -3900,7 +3900,7 @@ const EXAMS = [
           "60 °C"
         ],
         "answer": "B",
-        "explanation": "With no heat lost, the energy given up by the hot water equals that taken up by the cold: 100(80 − T) = 200(T − 20), so 8,000 − 100T = 200T − 4,000 and T = 40 °C. The trap is 50 °C, the simple average of the two temperatures, which would be correct only for equal masses. ⏱ 90-second route: memorize nothing beyond 'heat lost equals heat gained'; the specific heat of water cancels because both sides are water. The faster inference is to compute the mass-weighted average directly: the final temperature must lie twice as close to the 20 °C water as to the 80 °C water, because there is twice as much of it, which gives 40 °C in about ten seconds without algebra."
+        "explanation": "WORKED SOLUTION\nHeat lost equals heat gained: 100(80 − T) = 200(T − 20), so T = 40 °C. The trap is 50 °C, the plain average, correct only for equal masses.\n\n90-SECOND SOLUTION\nSkip the algebra — take the mass-weighted average. The result must sit twice as close to the 20 °C water because there is twice as much of it, giving 40 °C in ten seconds.\n\nWHAT TO MEMORIZE\nOnly 'heat lost equals heat gained'. The specific heat cancels because both sides are water."
       },
 
       // [TS/thermodynamic processes]
@@ -3914,7 +3914,7 @@ const EXAMS = [
           "steeper, by a factor that depends on the number of moles"
         ],
         "answer": "D",
-        "explanation": "An isotherm obeys PV = constant, giving slope −P/V, while an adiabat obeys PV^γ = constant, giving slope −γP/V. Since γ > 1 the adiabat is always steeper, by exactly the factor γ. Physically, expanding adiabatically also cools the gas, so its pressure falls faster than isothermal expansion alone would require. The trap is the first choice, which inverts the ratio. ⏱ 90-second route: memorize the two curve equations and differentiate mentally — the slope ratio drops out as γ with no numbers involved. The physical inference is worth having as a check: adiabatic expansion loses both the volume effect and the temperature effect, so pressure must drop faster, meaning steeper. That argument gets you the direction even if you cannot recall which exponent goes where."
+        "explanation": "WORKED SOLUTION\nAn isotherm obeys PV = constant with slope −P/V; an adiabat obeys PV^γ = constant with slope −γP/V. Since γ > 1 the adiabat is steeper by exactly γ. Physically, adiabatic expansion also cools the gas, so its pressure falls faster. The trap is the choice inverting the ratio.\n\n90-SECOND SOLUTION\nDifferentiate both curve equations mentally; the ratio drops out as γ with no numbers. If the exponents desert you, the physical argument still gives the direction: adiabatic expansion loses both the volume and the temperature effect, so it must be steeper.\n\nWHAT TO MEMORIZE\nPV = constant for an isotherm and PV^γ = constant for an adiabat."
       },
 
       // [OW/superposition & phase]
@@ -3928,7 +3928,7 @@ const EXAMS = [
           "neither, since the amplitudes are unequal"
         ],
         "answer": "B",
-        "explanation": "The wavelength is v/f = 1.0 m, and the path difference is 4.5 − 3.0 = 1.5 m, which is 1.5 wavelengths — a half-integer, so the waves arrive exactly out of phase and cancel. The trap is the third choice: being driven in phase determines the phase at the sources, not at the listener, where the extra travel of one wave is what decides the outcome. ⏱ 90-second route: memorize the interference conditions in terms of path difference — integer wavelengths for constructive, half-integer for destructive — and compute λ = v/f first, always. The inference that catches people is that 1.5 wavelengths counts as a half-integer, so the fourth choice's reasoning ('exceeds one wavelength') is irrelevant. Convert the path difference into wavelengths before deciding anything."
+        "explanation": "WORKED SOLUTION\nThe wavelength is v/f = 1.0 m and the path difference is 4.5 − 3.0 = 1.5 m, a half-integer number of wavelengths, so the waves arrive out of phase and cancel. The trap is 'constructive, since the speakers are driven in phase': that fixes the phase at the sources, not at the listener, where the extra travel decides.\n\n90-SECOND SOLUTION\nCompute λ = v/f first, always, then convert the path difference into wavelengths before deciding anything. Note 1.5 counts as a half-integer, which is why the 'exceeds one wavelength' reasoning is irrelevant.\n\nWHAT TO MEMORIZE\nThe interference conditions in terms of path difference: integer wavelengths constructive, half-integer destructive."
       },
 
       // [OW/double slit & interference]
@@ -3942,7 +3942,7 @@ const EXAMS = [
           "increases by a factor of about 1.77"
         ],
         "answer": "A",
-        "explanation": "Fringe spacing is λL/d, and immersion changes only the wavelength, which shortens to λ/n inside the water while the geometry stays fixed. The fringes therefore crowd together by the factor 1.33. The trap is 'unchanged', which follows from thinking that the source's frequency and the slit geometry are all that matter — but interference depends on path difference measured in wavelengths, and it is the wavelength in the medium that counts. ⏱ 90-second route: memorize Δy = λL/d and the rule λ_medium = λ_vacuum/n. The inference is identifying which quantity in the formula the medium touches, which is the wavelength alone. It is worth noting the frequency does not change on entering a medium — only the wavelength and the speed do — because a question phrased in terms of frequency is testing the same distinction from the other side."
+        "explanation": "WORKED SOLUTION\nFringe spacing is λL/d, and immersion changes only the wavelength, which shortens to λ/n inside the water while the geometry stays fixed — so the fringes crowd together by 1.33. The trap is 'unchanged', from thinking the source frequency and slit geometry are all that matter; interference depends on path difference measured in wavelengths, and it is the wavelength in the medium that counts.\n\n90-SECOND SOLUTION\nIdentify which quantity in Δy = λL/d the medium actually touches — the wavelength alone — and scale by 1/n. Everything else in the formula is untouched.\n\nWHAT TO MEMORIZE\nΔy = λL/d and λ_medium = λ_vacuum/n. Note the frequency does not change on entering a medium; only the wavelength and speed do."
       },
 
       // [OW/wave equation & propagation]
@@ -3956,7 +3956,7 @@ const EXAMS = [
           "1,800 m/s"
         ],
         "answer": "C",
-        "explanation": "Comparing with y = A sin(kx − ωt) gives k = 6.0 rad/m and ω = 300 rad/s, so v = ω/k = 50 m/s and the wave travels in the +x direction. The trap is 300 m/s, quoting ω as though it were the speed, and 1,800 m/s, from multiplying rather than dividing. ⏱ 90-second route: memorize v = ω/k and the standard form y = A sin(kx − ωt), including the sign convention that a minus sign means motion in the +x direction. Reading off the two coefficients takes five seconds. The dimensional check is instant and worth doing: ω is in radians per second and k in radians per meter, so only their ratio can be a speed, which eliminates three choices before you compute."
+        "explanation": "WORKED SOLUTION\nComparing with y = A sin(kx − ωt) gives k = 6.0 rad/m and ω = 300 rad/s, so v = ω/k = 50 m/s, travelling in the +x direction. The traps are 300 m/s, quoting ω as a speed, and 1,800 m/s, from multiplying.\n\n90-SECOND SOLUTION\nRead off two coefficients and divide — five seconds. The dimensional check is instant: ω is radians per second and k radians per metre, so only their ratio can be a speed.\n\nWHAT TO MEMORIZE\nv = ω/k and the standard form y = A sin(kx − ωt), including that a minus sign means motion in +x."
       },
 
       // [OW/resolution & rayleigh criterion]
@@ -3970,7 +3970,7 @@ const EXAMS = [
           "2.8 × 10⁻⁶ rad"
         ],
         "answer": "B",
-        "explanation": "The Rayleigh criterion for a circular aperture is θ ≈ 1.22λ/D = 1.22(5.5 × 10⁻⁷)/2.0 ≈ 3.4 × 10⁻⁷ rad, or about 0.07 arcseconds. The trap is 2.8 × 10⁻⁷ rad, which is λ/D without the factor of 1.22 that distinguishes a circular aperture from a slit. ⏱ 90-second route: memorize θ = 1.22λ/D and that the 1.22 belongs to circular apertures only. Everything else is one division. The inference worth carrying is the scaling: resolution improves linearly with aperture and degrades with wavelength, which is why radio telescopes must be enormous and why adaptive optics matters — ground-based seeing, not diffraction, is usually the real limit at this aperture."
+        "explanation": "WORKED SOLUTION\nThe Rayleigh criterion for a circular aperture is θ ≈ 1.22λ/D = 1.22(5.5 × 10⁻⁷)/2.0 ≈ 3.4 × 10⁻⁷ rad, about 0.07 arcseconds. The trap is 2.8 × 10⁻⁷ rad, which is λ/D without the 1.22 that distinguishes a circular aperture from a slit.\n\n90-SECOND SOLUTION\nOne division. The scaling is the part worth carrying: resolution improves linearly with aperture and degrades with wavelength, which is why radio telescopes must be enormous — though at this aperture atmospheric seeing, not diffraction, is usually the real limit.\n\nWHAT TO MEMORIZE\nθ = 1.22λ/D, and that the 1.22 belongs to circular apertures only."
       },
 
       // [SP/nuclear binding energy]
@@ -3984,7 +3984,7 @@ const EXAMS = [
           "fusion releases energy for light nuclei and fission releases energy for heavy ones"
         ],
         "answer": "E",
-        "explanation": "Energy is released whenever the products are more tightly bound than the reactants, that is, whenever a reaction moves nucleons up the curve toward the peak. Light nuclei climb toward it by fusing and heavy nuclei climb toward it by splitting, which is why iron-group nuclei are the endpoint of stellar nucleosynthesis and why nothing beyond them releases energy by either route. The trap is the claim that nuclei near A = 56 are the least stable, which inverts the meaning of the peak: maximum binding per nucleon means maximum stability. ⏱ 90-second route: memorize the shape of the curve and the location of its maximum near iron. No calculation is possible or needed. The inference is a single rule — reactions run toward higher binding energy per nucleon — from which both fusion and fission follow without memorizing them separately."
+        "explanation": "WORKED SOLUTION\nEnergy is released whenever the products are more tightly bound, that is, whenever nucleons move up the curve toward the peak — light nuclei climb by fusing, heavy nuclei by splitting. It is why iron-group nuclei end stellar nucleosynthesis. The trap is 'nuclei near A = 56 are least stable', which inverts the meaning of the peak.\n\n90-SECOND SOLUTION\nApply one rule — reactions run toward higher binding energy per nucleon — and both fusion and fission follow without memorizing them separately. No calculation is possible.\n\nWHAT TO MEMORIZE\nThe shape of the curve and that its maximum sits near iron."
       },
 
       // [SP/band theory & semiconductors]
@@ -3998,7 +3998,7 @@ const EXAMS = [
           "an n-type semiconductor, with electrons as the majority carriers"
         ],
         "answer": "E",
-        "explanation": "Each phosphorus atom contributes one electron beyond what the four covalent bonds require, and that electron sits in a donor level just below the conduction band, from which room-temperature thermal energy easily promotes it. The majority carriers are therefore negative, making the material n-type. The trap is the claim that the material becomes a metal: doping concentrations are parts per million, so the conduction band is nowhere near filled and the material remains a semiconductor. ⏱ 90-second route: memorize the mnemonic that donors have more valence electrons and give n-type, while acceptors like boron have fewer and give p-type. Counting valence electrons — five versus four — is the whole inference. Note that doping barely changes the band gap; it adds shallow levels inside it, which is the distinction the band-gap choice is testing."
+        "explanation": "WORKED SOLUTION\nEach phosphorus atom contributes one electron beyond the four covalent bonds, sitting in a donor level just below the conduction band from which room-temperature energy easily promotes it. Majority carriers are negative, so the material is n-type. The trap is 'a metal': doping is parts per million, so the conduction band is nowhere near filled.\n\n90-SECOND SOLUTION\nCount valence electrons — five versus four — and apply the mnemonic. Note doping barely changes the gap; it adds shallow levels inside it, which is what the band-gap choice is testing.\n\nWHAT TO MEMORIZE\nDonors have more valence electrons and give n-type; acceptors like boron have fewer and give p-type."
       },
 
       // [SP/crystal structure & bragg]
@@ -4012,7 +4012,7 @@ const EXAMS = [
           "14"
         ],
         "answer": "C",
-        "explanation": "The atom at the centre of the cube has the eight corner atoms as its nearest neighbours, along the body diagonals at a distance of (√3/2)a — closer than the six next-nearest atoms one full lattice constant away. The trap is 6, the coordination number of the simple cubic lattice, and 12, that of face-centred cubic and hexagonal close packing. ⏱ 90-second route: memorize the three coordination numbers together — simple cubic 6, body-centred cubic 8, face-centred cubic 12 — since questions in this family are almost always a straight lookup. The inference available if you blank is geometric: draw the cube, put an atom at the centre, and count the corners, which takes about fifteen seconds and gives 8 directly. Checking that the body diagonal half-length is less than a confirms those are the nearest."
+        "explanation": "WORKED SOLUTION\nThe atom at the cube's centre has the eight corners as nearest neighbours, along the body diagonals at (√3/2)a — closer than the six atoms one full lattice constant away. The traps are 6, the simple-cubic number, and 12, that of FCC and hexagonal close packing.\n\n90-SECOND SOLUTION\nIf the number deserts you, draw the cube, put an atom at the centre and count corners — fifteen seconds. Checking that half the body diagonal is less than a confirms those are nearest.\n\nWHAT TO MEMORIZE\nThe three coordination numbers together: simple cubic 6, body-centred cubic 8, face-centred cubic 12."
       },
 
       // [SP/feynman diagrams & interactions]
@@ -4026,7 +4026,7 @@ const EXAMS = [
           "the weak interaction, mediated by W bosons"
         ],
         "answer": "E",
-        "explanation": "Beta decay changes a down quark into an up quark, altering the electric charge of the quark, so the mediator must be charged: it is the W boson, and the process is a charged-current weak interaction. The trap is the Z boson, which mediates weak processes too but carries no charge and therefore cannot change a quark's flavour in the way beta decay requires. The long neutron lifetime of about 15 minutes is itself the signature of a weak process. ⏱ 90-second route: memorize the mediator list — gluons for the strong force, photons for the electromagnetic, W and Z for the weak — and the rule that charge-changing means W. That distinction is the entire question. The inference from the lifetime is a useful cross-check: strong decays take about 10⁻²³ s and electromagnetic ones about 10⁻¹⁶ s, so anything living for minutes is unmistakably weak."
+        "explanation": "WORKED SOLUTION\nBeta decay turns a down quark into an up quark, changing the quark's charge, so the mediator must itself be charged: the W boson, in a charged-current weak interaction. The trap is the Z boson, which mediates weak processes but is neutral and cannot change flavour this way. The 15-minute neutron lifetime is itself the signature of a weak process.\n\n90-SECOND SOLUTION\nApply the rule that charge-changing means W. Cross-check with the lifetime: strong decays take about 10⁻²³ s and electromagnetic ones about 10⁻¹⁶ s, so anything living for minutes is unmistakably weak.\n\nWHAT TO MEMORIZE\nThe mediator list — gluons strong, photons electromagnetic, W and Z weak — and that charge-changing means W."
       },
 
       // [SP/vector calculus]
@@ -4040,7 +4040,7 @@ const EXAMS = [
           "∇ × A = 0 whenever ∇ · A = 0"
         ],
         "answer": "B",
-        "explanation": "The curl of any gradient vanishes identically, which is why a conservative field can be written as a gradient and why the electrostatic field satisfies ∇ × E = 0. The trap is the first choice: ∇ · (∇f) is the Laplacian ∇²f, which is zero only for harmonic functions, not in general. The other identity worth pairing with this one is ∇ · (∇ × A) = 0, the divergence of any curl, which is what makes magnetic field lines close on themselves. ⏱ 90-second route: memorize the two vanishing identities — curl of a gradient and divergence of a curl — since they are the only ones that hold universally and each underwrites a Maxwell equation. Everything else on the list is a distractor built by permuting the operators. Recognizing which two combinations are the real ones is the entire question; no computation is possible in the time available."
+        "explanation": "WORKED SOLUTION\nThe curl of any gradient vanishes identically, which is why a conservative field can be written as a gradient and why ∇ × E = 0 electrostatically. The trap is ∇ · (∇f) = 0: that is the Laplacian, zero only for harmonic functions. Its partner ∇ · (∇ × A) = 0 is what makes magnetic field lines close.\n\n90-SECOND SOLUTION\nNo computation is possible in the time. Recognise which two operator combinations are the real identities; everything else on the list is built by permuting them.\n\nWHAT TO MEMORIZE\nThe two vanishing identities — curl of a gradient, divergence of a curl — each of which underwrites a Maxwell equation."
       },
 
       // [SR/simultaneity]
@@ -4054,7 +4054,7 @@ const EXAMS = [
           "neither strike can be assigned a definite time"
         ],
         "answer": "B",
-        "explanation": "Applying the Lorentz transformation to two events simultaneous in the platform frame but separated along the direction of motion gives Δt′ = −γvΔx/c², so the event at the larger x — the front of the train — occurs earlier in the train frame. Equivalently, the train is moving toward the light from the front strike and away from the light from the rear. The trap is the fourth choice: the answer is a property of the frame, not of where an observer happens to be standing, since each observer corrects for light travel time. ⏱ 90-second route: memorize the relativity-of-simultaneity rule as 'leading clocks lag' — in the frame in which the train moves forward, its front clock reads behind. Then the front event, occurring at the same platform time, must have happened earlier by the train's reckoning. Having a fixed mnemonic matters here because the sign is easy to invert under pressure and the algebra takes longer than it is worth."
+        "explanation": "WORKED SOLUTION\nApplying the Lorentz transformation to events simultaneous in the platform frame but separated along the motion gives Δt′ = −γvΔx/c², so the event at larger x — the front — happens earlier in the train frame. The trap is making it depend on where the observer stands: it is a property of the frame, since each observer corrects for light travel time.\n\n90-SECOND SOLUTION\nUse a fixed mnemonic — 'leading clocks lag' — so the front clock reads behind and the front event must have happened earlier. The sign is easy to invert under pressure and the algebra takes longer than it is worth.\n\nWHAT TO MEMORIZE\nRelativity of simultaneity as 'leading clocks lag'."
       },
 
       // [SR/lorentz transformation]
@@ -4068,7 +4068,7 @@ const EXAMS = [
           "1.5c"
         ],
         "answer": "D",
-        "explanation": "The second postulate of special relativity asserts that light travels at c in every inertial frame regardless of the motion of its source, so the Earth observer measures exactly c. The trap is 1.5c, the Galilean sum, and 0.80c, which is what relativistic velocity addition gives for two material speeds of 0.50c — but feeding v = c into that formula returns c for any frame speed, as it must. What does change is the light's frequency, through the Doppler effect, not its speed. ⏱ 90-second route: memorize the postulate; there is nothing to compute. The inference worth having ready is that the velocity-addition formula (u + v)/(1 + uv/c²) is built precisely so that u = c gives c, so the postulate and the formula are consistent rather than competing. Any answer other than c would make the speed of light frame-dependent, which is the assumption relativity discards."
+        "explanation": "WORKED SOLUTION\nThe second postulate asserts that light travels at c in every inertial frame regardless of source motion, so Earth measures exactly c. The traps are 1.5c, the Galilean sum, and 0.80c, which is what velocity addition gives for two material speeds of 0.50c. What does change is the frequency, through the Doppler effect.\n\n90-SECOND SOLUTION\nNothing to compute. Note that (u + v)/(1 + uv/c²) is built so that u = c returns c for any frame speed, so the postulate and the formula agree rather than compete.\n\nWHAT TO MEMORIZE\nThe second postulate. Any other answer would make light speed frame-dependent, which is the assumption relativity discards."
       },
 
       // [SR/relativistic doppler]
@@ -4082,7 +4082,7 @@ const EXAMS = [
           "750 nm"
         ],
         "answer": "D",
-        "explanation": "The relativistic Doppler formula for recession is λ_obs = λ_source√((1 + β)/(1 − β)) = 500√(1.2/0.8) = 500√1.5 ≈ 610 nm. The trap is 550 nm, which is the non-relativistic estimate λ(1 + β) = 500(1.2) and is noticeably off by this speed. The 410 nm choice inverts the ratio and would describe an approaching source. ⏱ 90-second route: memorize the Doppler factor √((1 + β)/(1 − β)) and the direction convention: receding means redshift, so the wavelength must grow. That direction check alone eliminates two choices before any arithmetic. The remaining work is one square root, and knowing √1.5 ≈ 1.22 makes it mental. Note the observed wavelength exceeds the naive (1 + β) estimate, because time dilation adds to the classical effect rather than cancelling it."
+        "explanation": "WORKED SOLUTION\nThe relativistic Doppler formula for recession gives λ_obs = 500√(1.2/0.8) = 500√1.5 ≈ 610 nm. The trap is 550 nm, the non-relativistic λ(1 + β), noticeably off at this speed; 410 nm inverts the ratio and would describe approach.\n\n90-SECOND SOLUTION\nFix the direction first — receding means redshift, so the wavelength must grow — which eliminates two choices before any arithmetic. Then one square root, and √1.5 ≈ 1.22 makes it mental.\n\nWHAT TO MEMORIZE\nThe Doppler factor √((1 + β)/(1 − β)), and that time dilation adds to the classical effect rather than cancelling it."
       },
 
       // [LM/statistics & uncertainty]
@@ -4096,7 +4096,7 @@ const EXAMS = [
           "1,000"
         ],
         "answer": "D",
-        "explanation": "The standard error of the mean falls as σ/√N, so halving it requires quadrupling N: 4 × 100 = 400. The trap is 200, from assuming a linear relationship, which is the most expensive misconception in experimental work — it badly underestimates the cost of improving precision. ⏱ 90-second route: memorize SEM = σ/√N and nothing else. The inference is a single inversion: to gain a factor of k in precision you pay a factor of k² in measurements. The diminishing return is the physical content: going from 0.020 to 0.010 costs 300 extra runs, and the next halving would cost 1,200 more, which is why beyond some point one improves the apparatus rather than repeating the measurement."
+        "explanation": "WORKED SOLUTION\nThe standard error of the mean falls as σ/√N, so halving it requires quadrupling N: 400. The trap is 200, assuming a linear relationship — the most expensive misconception in experimental work, since it badly underestimates the cost of precision.\n\n90-SECOND SOLUTION\nInvert the square root once: gaining a factor k in precision costs k² in measurements. The diminishing return is the real content — the next halving would cost 1,200 more runs, which is when you improve the apparatus instead.\n\nWHAT TO MEMORIZE\nSEM = σ/√N."
       },
 
       // [LM/interferometers & optical instruments]
@@ -4110,7 +4110,7 @@ const EXAMS = [
           "1,600"
         ],
         "answer": "C",
-        "explanation": "Moving the mirror by d changes the optical path by 2d, because the light traverses that arm twice, so the number of fringes is 2d/λ = 2(1.0 × 10⁻⁴)/(5.0 × 10⁻⁷) = 400. The trap is 200, from forgetting the round trip — the same factor of 2 that makes the instrument twice as sensitive as its geometry naively suggests. ⏱ 90-second route: memorize N = 2d/λ, and remember that the factor of 2 is the whole point of the instrument. The rest is one division. The inference worth carrying is why this measurement is precise: counting several hundred fringes lets you determine a displacement to a small fraction of a wavelength, which is how the interferometer became the standard length comparator and, at far greater scale, a gravitational-wave detector."
+        "explanation": "WORKED SOLUTION\nMoving the mirror by d changes the optical path by 2d, since the light traverses that arm twice, so the count is 2d/λ = 2(1.0 × 10⁻⁴)/(5.0 × 10⁻⁷) = 400. The trap is 200, forgetting the round trip — the same factor of 2 that makes the instrument twice as sensitive as its geometry suggests.\n\n90-SECOND SOLUTION\nOne division, provided you double the displacement first. Counting several hundred fringes pins a displacement to a small fraction of a wavelength, which is how this became the standard length comparator and, scaled up, a gravitational-wave detector.\n\nWHAT TO MEMORIZE\nN = 2d/λ, and that the factor of 2 is the whole point of the instrument."
       },
 
       // [LM/measurement technique]
@@ -4124,7 +4124,7 @@ const EXAMS = [
           "10 V"
         ],
         "answer": "B",
-        "explanation": "The voltmeter's 1.0 MΩ sits in parallel with the resistor being measured, giving 0.50 MΩ, so the divider now splits 10 V between 1.0 MΩ and 0.50 MΩ and the reading is 10 × 0.50/1.50 ≈ 3.3 V. The true unloaded voltage is 5.0 V, which is the trap: the act of measuring has changed the circuit. ⏱ 90-second route: memorize the parallel-combination rule and the principle that a voltmeter must have a resistance much larger than that of the element it measures. The inference is to compute the loaded divider rather than the ideal one. The comparison worth internalizing is the ratio: here the meter resistance equals the circuit resistance, a catastrophic mismatch, whereas a real 10 MΩ digital meter would read 4.8 V — an error of a few percent rather than a third."
+        "explanation": "WORKED SOLUTION\nThe meter's 1.0 MΩ sits in parallel with the resistor being measured, giving 0.50 MΩ, so the divider splits 10 V between 1.0 and 0.50 MΩ and reads 10 × 0.50/1.50 ≈ 3.3 V. The true unloaded voltage is 5.0 V — the act of measuring changed the circuit.\n\n90-SECOND SOLUTION\nCompute the loaded divider, not the ideal one. Judge by the ratio: here meter and circuit resistance are equal, a catastrophic mismatch, whereas a real 10 MΩ meter would read 4.8 V — an error of a few percent rather than a third.\n\nWHAT TO MEMORIZE\nThe parallel-combination rule, and that a voltmeter must have resistance far larger than the element it measures."
       }
 
     ]
