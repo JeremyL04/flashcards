@@ -4128,5 +4128,432 @@ const EXAMS = [
       }
 
     ]
+  },
+
+  {
+    "name": "Conceptual Drill",
+    "cards": [
+
+      // [CM/non-inertial frames]
+      {
+        "question": "In a frame rotating at constant angular velocity ω, which statement about the Coriolis force on a particle is NOT true?",
+        "choices": [
+          "It is perpendicular to the particle's velocity as measured in the rotating frame.",
+          "It vanishes for a particle at rest in the rotating frame.",
+          "It does work on a particle moving in the rotating frame.",
+          "It reverses direction if the sense of the rotation is reversed.",
+          "It does not depend on where in the frame the particle is located."
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe Coriolis term is −2m ω × v′, where v′ is the velocity in the rotating frame. A cross product with v′ is always perpendicular to v′, so the force can bend a trajectory but can never change the speed, and it does no work: C is the false statement and therefore the answer. It is zero when v′ = 0, it flips when ω flips, and it contains no position vector at all, so A, B, D and E are all true. Students who call E the false one are confusing Coriolis with the centrifugal force mω²r, which is the term that depends on position and not on velocity.\n\n90-SECOND SOLUTION\nWrite −2m ω × v′ once and read the four true choices straight off it: perpendicular to v′, zero when v′ = 0, odd in ω, no r anywhere. Perpendicular to velocity means zero power, so the work statement is the odd one out. This is a ten-second question, well under 90.\n\nWHAT TO MEMORIZE\nRotating-frame fictitious forces: centrifugal mω²r outward, position-dependent and able to do work; Coriolis −2m ω × v′, velocity-dependent, perpendicular to v′ and always doing zero work."
+      },
+
+      // [CM/damped & driven oscillator]
+      {
+        "question": "A damped oscillator of natural frequency ω₀ is driven by F₀cos(ωt) and has reached steady state. As ω is swept at fixed damping, which response is largest at exactly ω = ω₀, for every value of the damping?",
+        "choices": [
+          "The displacement amplitude",
+          "The velocity amplitude",
+          "The acceleration amplitude",
+          "The phase lag of the displacement behind the driving force",
+          "None of these, unless the damping is zero"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe steady-state displacement amplitude is (F₀/m)/√((ω₀² − ω²)² + 4β²ω²), which peaks below ω₀, at √(ω₀² − 2β²). Multiplying by ω to get the velocity amplitude turns the denominator into √((ω₀² − ω²)²/ω² + 4β²), whose first term vanishes at ω = ω₀ for any β, so velocity resonance sits exactly at ω₀ and so does the average absorbed power. Choice A is the standard error of assuming ω₀ is where every response function peaks; the acceleration amplitude ω²A peaks above ω₀, and the phase lag rises monotonically through 90° at ω₀ rather than having a maximum there.\n\n90-SECOND SOLUTION\nRemember the ordering: displacement resonance below ω₀, velocity and power resonance exactly at ω₀, acceleration resonance above ω₀. Equivalently, at ω₀ the springlike and masslike parts of the response cancel, so the oscillator looks purely resistive and takes the most power. Recognition, not algebra: a few seconds.\n\nWHAT TO MEMORIZE\nVelocity amplitude and average power absorbed both peak at exactly ω = ω₀ for any damping; the displacement amplitude peaks at √(ω₀² − 2β²), which is lower, and the acceleration amplitude peaks higher."
+      },
+
+      // [CM/rocket & variable mass]
+      {
+        "question": "A rocket in free space burns fuel at a constant rate, expelling it at constant speed u relative to the rocket. Which statement is true?",
+        "choices": [
+          "The thrust grows as the rocket becomes lighter.",
+          "The acceleration is constant while the fuel burns.",
+          "The final speed is greater if the same fuel is burned more quickly.",
+          "The thrust is constant and the acceleration increases.",
+          "The rocket's final speed cannot exceed u."
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThrust is u times the mass flow rate, and both are constant, so the thrust is constant; the mass in a = thrust/m keeps falling, so the acceleration climbs. That is D. The rocket equation Δv = u ln(m₀/m_f) contains no burn rate, killing C, and its logarithm is unbounded, killing E. Choice E is the common misreading that a rocket cannot outrun its own exhaust: u is measured relative to the rocket, not relative to the launch frame, so once Δv exceeds u the exhaust simply moves forward in the original frame.\n\n90-SECOND SOLUTION\nTwo remembered facts settle all five choices: thrust = u × (mass flow), and Δv depends only on the mass ratio. Constant thrust with shrinking mass gives rising acceleration, and nothing about the burn rate can appear in the final speed. Ten seconds, no algebra.\n\nWHAT TO MEMORIZE\nThrust = u |dm/dt|; Δv = u ln(m₀/m_f), which depends on the mass ratio alone and is not capped by u. Burn rate changes how long the burn takes, not the final speed in free space."
+      },
+
+      // [CM/statics]
+      {
+        "question": "A uniform rigid plank of weight W rests horizontally on three identical rigid supports: one under each end and one under the midpoint. The upward force exerted by the middle support is",
+        "choices": [
+          "zero",
+          "one third of W",
+          "one half of W",
+          "equal to W",
+          "not determinable from the information given"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThere are three unknown support forces, but planar rigid-body statics supplies only two useful equations here: vertical force balance and one torque balance, since no horizontal forces act. Three unknowns and two equations leave the problem statically indeterminate, so the load sharing depends on the elasticity of the plank and the supports, information the problem does not give: E. Choice B is what you get by wrongly assuming the three supports must share equally, and C by assuming a symmetric plank rests half on its middle support.\n\n90-SECOND SOLUTION\nCount unknown reactions against available equilibrium equations before doing anything else. Three unknowns, two equations, everything rigid, so no statics answer exists and the 'cannot be determined' option is the correct physics rather than a trap. This is a recognition question and should take well under 90 seconds.\n\nWHAT TO MEMORIZE\nA rigid body in a plane has exactly three equilibrium equations, two force components and one torque. When the number of unknown reactions exceeds the number of independent equations, the problem is statically indeterminate and needs material stiffness, not statics, to solve."
+      },
+
+      // [CM/moment of inertia]
+      {
+        "question": "Consider: I. Among all parallel axes in a given direction, the moment of inertia is smallest about the one through the centre of mass. II. For a plane lamina in the xy-plane, I_z = I_x + I_y for the three axes meeting at one point of the lamina. III. I = I_cm + Md² relates the moments of inertia about any two parallel axes a distance d apart. Which are correct?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and III only",
+          "I and II only",
+          "I, II and III"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe parallel-axis theorem I = I_cm + Md² adds a non-negative term to I_cm, which proves I, and the perpendicular-axis theorem I_z = I_x + I_y is exactly statement II for a flat body. III is false because the theorem is anchored to the centre of mass: for two parallel axes at distances d₁ and d₂ from the centre of mass the correct relation is I₂ = I₁ + M(d₂² − d₁²), not Md² between them. Choosing E is precisely that error, applying the theorem from an arbitrary axis rather than from the centre-of-mass axis.\n\n90-SECOND SOLUTION\nTest III with a case you know: a thin rod, from the end axis ML²/3 to the far end a distance L away, would give ML²/3 + ML², whereas the two end axes must be equal by symmetry. III dies instantly, and only choice D keeps both surviving statements. A single counterexample decides this in seconds.\n\nWHAT TO MEMORIZE\nParallel-axis theorem: one of the two axes must pass through the centre of mass, and the centre-of-mass axis always gives the minimum. Perpendicular-axis theorem: I_z = I_x + I_y for plane laminas only."
+      },
+
+      // [CM/fluids]
+      {
+        "question": "Two open vessels stand on a table, each with a flat horizontal base of area A, and each holds water to the same depth h. One vessel flares outward toward the top, the other tapers inward, so they hold different volumes of water. Which is true?",
+        "choices": [
+          "The base pressures are equal, and the downward forces of the water on the two bases are equal.",
+          "The downward force on the base is greater for the flaring vessel, which holds more water.",
+          "The downward force on the base equals the weight of the water in each vessel.",
+          "The base pressure is greater in the tapering vessel, since its water column is narrower.",
+          "Nothing can be decided without the exact wall profiles."
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nHydrostatic pressure depends only on depth, so the gauge pressure at each base is ρgh and the downward force on each base is ρghA, identical for the two vessels even though the contained weights differ. This is the hydrostatic paradox: choice C is the classic error of equating base force to the weight of contained water, which holds only for straight-sided vessels. The imbalance is carried by the walls, which push up on the water in the flaring vessel and push down on it in the tapering one, so the table still supports each vessel's true weight.\n\n90-SECOND SOLUTION\nSay 'pressure depends on depth alone' and stop comparing volumes. Same depth and same base area force the same base pressure and the same base force, which is choice A immediately. Seconds, not minutes.\n\nWHAT TO MEMORIZE\nGauge pressure p = ρgh depends only on depth, so the force on a horizontal base is ρghA whatever the vessel's shape. Any difference between that force and the weight of the liquid is supplied by the vertical components of the forces from the sloping walls."
+      },
+
+      // [EM/waveguides]
+      {
+        "question": "A hollow rectangular waveguide with perfectly conducting walls carries a mode at a frequency above its cutoff. Which statement about the phase velocity and the group velocity in the guide is correct?",
+        "choices": [
+          "The phase velocity and the group velocity are both equal to c.",
+          "The phase velocity and the group velocity are equal to each other and less than c.",
+          "The phase velocity is less than c, the group velocity is greater than c, and their product is c².",
+          "The phase velocity is greater than c, the group velocity is less than c, and their product is c².",
+          "The phase velocity and the group velocity both exceed c, so signals travel faster than light."
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe guide dispersion relation is ω² = ω₀² + c²k², with ω₀ the cutoff frequency. Then the phase velocity ω/k always exceeds c, the group velocity dω/dk = c²k/ω is always less than c, and multiplying the two gives exactly c². Choice E is the classic error of reading a superluminal phase velocity as a superluminal signal speed; choice B treats the guide as if it were simply filled with a dielectric of index greater than 1, which would slow both velocities together.\n\n90-SECOND SOLUTION\nTake the limit at cutoff, where k → 0: the phase velocity ω/k blows up and the group velocity dω/dk goes to zero. Any choice that keeps the phase velocity at or below c, or that puts the group velocity above c, is dead on that limit alone. That leaves one option. This should take about fifteen seconds with no algebra at all.\n\nWHAT TO MEMORIZE\nWaveguide: ω² = ω₀² + c²k²; phase velocity × group velocity = c², with phase velocity > c > group velocity above cutoff. Below cutoff the mode is evanescent and carries no energy."
+      },
+
+      // [EM/radiation & dipole]
+      {
+        "question": "An electric dipole oscillates sinusoidally along the z-axis at angular frequency ω with fixed dipole amplitude. Consider the following statements about the radiation zone. I. The power radiated per unit solid angle vanishes along the z-axis. II. The total radiated power is proportional to ω⁴. III. The electric field falls off as 1/r². Which are true?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "II and III only",
+          "I, II and III"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nDipole radiation carries a sin²θ angular pattern measured from the dipole axis, so it is maximal broadside and vanishes along the axis — statement I holds. The Larmor result gives total power proportional to ω⁴, which is why the sky is blue, so II holds. But in the radiation zone the field falls as 1/r, not 1/r²; it is the intensity, going as the square of the field, that falls as 1/r². Statement III confuses the two, and that confusion is the whole question.\n\n90-SECOND SOLUTION\nCheck III first, since it is the cheapest to settle: radiated power must fall as 1/r² for energy conservation across spheres of growing radius, so the field must go as 1/r. That single observation kills every choice containing III and leaves only two candidates. Ten seconds more on the sin²θ pattern finishes it — an antenna does not transmit off its own tip.\n\nWHAT TO MEMORIZE\nThe sin²θ dipole pattern with a null along the axis, P ∝ ω⁴, and that radiation fields fall as 1/r while static fields fall faster."
+      },
+
+      // [EM/dielectrics]
+      {
+        "question": "Two linear dielectrics of different permittivity meet at the plane z = 0, with no free charge on the interface. Consider: I. the normal component of E; II. the tangential component of E; III. the normal component of D. Which are continuous across the interface?",
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "I and III only",
+          "II and III only"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\n∇ × E = 0 in statics forces the tangential component of E to be continuous, and ∇·D = free charge density with no free surface charge forces the normal component of D to be continuous. The normal component of E is not continuous: it jumps by the ratio of the permittivities, and that jump is exactly what the bound surface charge represents. Choosing I and III is the standard confusion of E with D, applying flux continuity to the wrong field.\n\n90-SECOND SOLUTION\nStore the pair as one phrase: E tangential, D normal. Then just read the roman numerals off. Under fifteen seconds. The only trap is the reflex that a divergence law makes the normal field continuous, which is true for D here but never for E when the permittivity changes.\n\nWHAT TO MEMORIZE\nAt any interface: tangential E is always continuous; normal D is continuous when there is no free surface charge; normal B is always continuous; tangential H is continuous when there is no free surface current."
+      },
+
+      // [EM/EM waves & poynting]
+      {
+        "question": "A long straight cylindrical wire of finite conductivity carries a steady current. Just outside its curved surface, the Poynting vector points",
+        "choices": [
+          "along the current, parallel to the wire",
+          "radially inward, toward the axis of the wire",
+          "radially outward, away from the axis of the wire",
+          "azimuthally, circling the wire",
+          "nowhere: it is zero, because the fields are static"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAt the surface the tangential E points along the current (E = ρJ inside the resistive wire, and tangential E is continuous), while B circles the wire by the right-hand rule. E × B then points radially inward at every point of the surface, which is how the ohmic heat gets into the wire: energy arrives from the surrounding field, it does not flow down the wire with the carriers. Choice A is exactly that intuitive but wrong picture; choice E confuses time-independent fields with zero energy flux.\n\n90-SECOND SOLUTION\nUse energy conservation instead of a cross product. The wire dissipates I²R, so energy must be entering it, so the Poynting flux at the surface must be inward. Every other choice either delivers no net energy to the wire or delivers it in the wrong sign. Fifteen seconds, no vectors drawn.\n\nWHAT TO MEMORIZE\nS = (1/μ₀) E × B. For a resistive current-carrying wire S is radially inward, and its total inward flux over the surface equals I²R exactly."
+      },
+
+      // [EM/inductance]
+      {
+        "question": "A closed wire loop of zero resistance and self-inductance L lies in a uniform magnetic field. The external field is then slowly reduced to zero. Afterwards,",
+        "choices": [
+          "a persistent current flows, of just the size that keeps the total flux through the loop at its original value",
+          "a persistent current flows, of just the size that makes the total flux through the loop zero",
+          "no current flows, because zero resistance means the loop can support no emf",
+          "a current flows briefly and then decays to zero",
+          "the result cannot be determined without knowing the resistance of the loop"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe loop equation is IR = −dΦ/dt, and with R = 0 the left side vanishes, so dΦ/dt = 0: the total flux, external plus the self-flux LI, is frozen. As the external contribution falls to zero the current rises to exactly the value with LI equal to the original flux, and with no resistance it never decays. Choice B is the Meissner-effect error, applying B = 0 inside a superconducting body to the area of a loop; choice D imports the usual L/R transient intuition when that time constant is infinite here.\n\n90-SECOND SOLUTION\nPut R = 0 into the loop equation and read what is left: dΦ/dt = 0. Flux conservation, so pick the choice that says the total flux is unchanged. Under twenty seconds. The 'cannot be determined' option is pure bait, since the resistance is given and is zero.\n\nWHAT TO MEMORIZE\nFlux through a loop of zero resistance is conserved: external flux + LI = constant, and the induced current persists indefinitely. This is flux freezing, not the Meissner condition B = 0 inside the material."
+      },
+
+      // [EM/conductors & capacitance]
+      {
+        "question": "Two conducting spheres, of radii R and 2R, are far apart and joined by a long thin conducting wire. A net charge is placed on the system. Which of the following is true?",
+        "choices": [
+          "The two spheres carry equal charges.",
+          "The smaller sphere is at the higher potential.",
+          "The surface charge density is greater on the larger sphere.",
+          "The electric field just outside the surface has the same magnitude at both spheres.",
+          "The electric field just outside the surface is twice as large at the smaller sphere."
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe wire makes the two spheres one conductor at a single potential, and since an isolated sphere has V = q/4πε₀R, equal potentials mean q ∝ R. The surface density σ = q/4πR² then goes as 1/R, so the smaller sphere, with half the charge but a quarter of the area, has twice the density and twice the field just outside, since E = σ/ε₀. Choice B is the common error of inferring a higher potential from the stronger field, and choice C reverses the 1/R scaling by remembering only that the bigger sphere holds more charge.\n\n90-SECOND SOLUTION\nEqual potential means charge is proportional to radius, so density is proportional to 1/radius. The smaller sphere wins by exactly the ratio of radii, a factor of 2. This is the lightning-rod fact in disguise: sharper curvature, stronger field. Fifteen seconds and no arithmetic beyond that factor.\n\nWHAT TO MEMORIZE\nConnected conductors share one potential; for spheres q ∝ R, σ ∝ 1/R, and the field just outside any conductor is σ/ε₀. Field and surface charge concentrate where the surface curves most sharply."
+      },
+
+      // [QM/perturbation theory]
+      {
+        "question": "A system has a nondegenerate ground state. In time-independent perturbation theory, the second-order correction to the ground-state energy is",
+        "choices": [
+          "always zero whenever the first-order shift is zero",
+          "never positive",
+          "never negative",
+          "always of the same sign as the first-order shift",
+          "positive for repulsive perturbations and negative for attractive ones"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe second-order shift of the ground state is the sum over excited states n of |⟨n|H'|0⟩|²/(E₀ − Eₙ). Every numerator is a squared magnitude and every denominator is negative, because E₀ is the lowest energy, so the sum can only be negative or zero. Choice C is the sign error of writing the denominator as Eₙ − E₀; choice A is the error of assuming that a vanishing diagonal element ⟨0|H'|0⟩ forces the off-diagonal elements to vanish too.\n\n90-SECOND SOLUTION\nYou need only the sign structure: numerators ≥ 0, denominators E₀ − Eₙ < 0 for every term because the ground state is the lowest level. The sign of the whole sum is then fixed, and the answer takes a few seconds with nothing written down. The physical statement is level repulsion: interaction with higher levels always pushes the lowest level down.\n\nWHAT TO MEMORIZE\nSecond order: E⁽²⁾ for state n is the sum over m ≠ n of |⟨m|H'|n⟩|²/(Eₙ − E_m). For the ground state this is always ≤ 0."
+      },
+
+      // [QM/molecular rotational spectra]
+      {
+        "question": "A diatomic molecule is a rigid rotor with E_J = ħ²J(J+1)/2I. Its electric-dipole rotational spectrum, for which ΔJ = ±1, consists of",
+        "choices": [
+          "a single line at ħ²/I",
+          "lines whose spacing grows as J²",
+          "a continuum, because J is unbounded",
+          "lines whose spacing falls off as 1/J",
+          "equally spaced lines"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA transition from J+1 down to J releases ħ²(J+1)/I, so the lines sit at ħ²/I, 2ħ²/I, 3ħ²/I, and so on: a uniform comb of spacing ħ²/I. Choice B is the error of reading level positions as line positions, since the levels themselves do spread out like J², but a spectrum probes differences of levels, and the difference of J(J+1) between successive J is 2(J+1), which is linear in J.\n\n90-SECOND SOLUTION\nDifferentiate the pattern rather than the levels: successive values of J(J+1) differ by 2(J+1), linear in J, so successive differences change by a constant. Constant increments mean a constant line spacing. Ten seconds, no pencil.\n\nWHAT TO MEMORIZE\nRigid rotor E_J = ħ²J(J+1)/2I with ΔJ = ±1 gives equally spaced lines separated by ħ²/I, which is why microwave rotational spectra look like a ladder of evenly spaced peaks."
+      },
+
+      // [QM/identical particles]
+      {
+        "question": "Two identical noninteracting particles occupy the distinct orbitals ψ_a and ψ_b. Compared with distinguishable particles in the same two orbitals, the probability of finding the pair at nearly the same point is",
+        "choices": [
+          "larger if the spatial state is symmetric, smaller if it is antisymmetric",
+          "smaller if the spatial state is symmetric, larger if it is antisymmetric",
+          "the same in both cases, since the particles do not interact",
+          "zero in both cases, by the Pauli exclusion principle",
+          "larger in both cases, since exchange always adds a second term"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nPut x₁ = x₂ in ψ_a(x₁)ψ_b(x₂) ± ψ_b(x₁)ψ_a(x₂): the antisymmetric combination vanishes identically, while the symmetric one is twice the single product, so its probability density at coincidence is enhanced. Symmetric spatial states bunch and antisymmetric ones anti-bunch, purely from interference of the exchange term. Choice C is the standard error of assuming that noninteracting means the statistics cannot influence relative positions; choice D applies the exclusion principle to every identical pair rather than only to fermions with an antisymmetric spatial state.\n\n90-SECOND SOLUTION\nEvaluate the two-particle amplitude at equal coordinates. The minus sign gives exactly zero, the plus sign gives a doubled amplitude, and the answer follows with one substitution and no integration, in well under 90 seconds.\n\nWHAT TO MEMORIZE\nExchange is an interference effect, not a force: symmetric spatial state means bunching, antisymmetric means a node whenever the two coordinates coincide."
+      },
+
+      // [QM/potential barrier & tunneling]
+      {
+        "question": "An electron, a muon and a proton, each of kinetic energy E, are incident on the same rectangular barrier of height V₀ > E and width L, wide enough that the transmission is well approximated by e^(−2κL). Their transmission probabilities satisfy",
+        "choices": [
+          "all three are equal, since E and the barrier are the same",
+          "proton > muon > electron",
+          "electron > muon > proton",
+          "muon largest, electron and proton equal",
+          "cannot be determined without a value for V₀ − E"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe decay constant is κ = √(2m(V₀ − E))/ħ, so at fixed E and fixed barrier κ scales as √m and the exponent −2κL punishes mass exponentially. The lightest particle therefore tunnels far the best: electron, then muon, then proton. Choice A is the error of thinking transmission depends only on the energy deficit V₀ − E; choice B is the classical picture in which the heavier, higher-momentum particle bulls its way through.\n\n90-SECOND SOLUTION\nOnly one ingredient carries the mass: κ ∝ √m. Larger mass means larger κ means exponentially smaller T, so rank by mass and invert. This is a five-second question once you see that the ranking is inverse to mass, and nothing is computed.\n\nWHAT TO MEMORIZE\nκ = √(2m(V₀ − E))/ħ and T ≈ e^(−2κL). Tunneling rates fall exponentially with √m, which is why tunneling is an electron phenomenon and essentially never a proton one at the same barrier."
+      },
+
+      // [QM/de broglie waves]
+      {
+        "question": "An electron and a proton have the same de Broglie wavelength. Consider: I. They have equal momenta. II. The electron has the greater kinetic energy. III. They have equal speeds. Which are correct?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II",
+          "I and III",
+          "I, II and III"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nλ = h/p fixes the momentum alone, so I is correct. Nonrelativistically K = p²/2m, so at common p the lighter electron carries the larger kinetic energy and II is correct. Equal momentum with unequal mass forces unequal speeds, so III fails. Choice D is the error of reading λ = h/mv as a statement about v rather than about the product mv.\n\n90-SECOND SOLUTION\nTranslate the given fact into the one quantity it actually constrains, p, then read off K = p²/2m and v = p/m, both of which depend on mass at fixed p. Two ratios in your head, no arithmetic, well under 90 seconds.\n\nWHAT TO MEMORIZE\nλ = h/p, so equal wavelength means equal momentum. At fixed p, K ∝ 1/m and v ∝ 1/m; at fixed kinetic energy instead, λ = h/√(2mK)."
+      },
+
+      // [QM/x-rays]
+      {
+        "question": "The accelerating voltage of an X-ray tube is raised, with the same target and the same tube current. Consider: I. The short-wavelength cutoff moves to shorter wavelength. II. The characteristic lines move to shorter wavelength. III. The intensity of the continuous spectrum increases. Which occur?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II",
+          "I and III",
+          "I, II and III"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe cutoff comes from an electron converting all its kinetic energy into one photon, λ_min = hc/eV, so raising V pushes the cutoff to shorter wavelength, and more energetic electrons radiate more bremsstrahlung at the same current, so the continuum brightens: I and III. The characteristic lines come from inner-shell vacancies in the target atoms, so their energies are set by Z through Moseley's law and do not move at all once the voltage exceeds threshold, which makes choice C the classic error of tying line positions to the tube voltage.\n\n90-SECOND SOLUTION\nSort the spectrum by what each part depends on: the continuum belongs to the electrons, hence to V, while the lines belong to the atom, hence to Z. Anything that changes only the electrons cannot shift a characteristic line. That single sorting answers the question in about ten seconds.\n\nWHAT TO MEMORIZE\nλ_min = hc/eV for the bremsstrahlung cutoff, and Moseley: characteristic X-ray energies go as (Z − 1)², independent of the accelerating voltage once it is above threshold."
+      },
+
+      // [TS/heat engines & efficiency]
+      {
+        "question": "Engine 1 runs reversibly between reservoirs at T₁ and T₂, and all of the heat it rejects at T₂ is taken in by engine 2, which runs reversibly between T₂ and T₃, with T₁ > T₂ > T₃. The efficiency of the pair, total work out divided by heat drawn from T₁, is",
+        "choices": [
+          "the sum of the two separate efficiencies",
+          "the product of the two separate efficiencies",
+          "the efficiency of engine 1 alone",
+          "the same as that of one reversible engine working between T₁ and T₃",
+          "dependent on T₂, and greatest when T₂ lies midway between T₁ and T₃"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe pair as a whole takes heat only from T₁, rejects heat only at T₃, and every step is reversible, so it is itself a reversible engine between T₁ and T₃; by Carnot's theorem its efficiency is 1 minus the ratio of the cold to the hot absolute temperature, and T₂ cancels out. The first choice is the classic error of adding efficiencies: engine 2 does not receive the full input heat, only the fraction left over after engine 1 has done its work, so the correct combination is η₁ + η₂ − η₁η₂, not η₁ + η₂. The last choice invents a T₂ dependence that the cancellation removes.\n\n90-SECOND SOLUTION\nDo not compute anything. Carnot's theorem says every reversible engine operating between the same two reservoirs has the same efficiency, so the answer cannot depend on the intermediate temperature at all. That single remark eliminates four of the five choices at once, since each of them still contains T₂. A few seconds.\n\nWHAT TO MEMORIZE\nReversible efficiency is 1 minus cold temperature over hot temperature, both absolute, and all reversible engines between the same pair of reservoirs share it. Staged efficiencies never simply add, because each stage only sees what the previous stage passed on."
+      },
+
+      // [TS/phase transitions & latent heat]
+      {
+        "question": "For a certain pure substance the solid is less dense than the liquid at the melting point. As the pressure on a solid-liquid mixture of it is raised, the melting temperature",
+        "choices": [
+          "rises, because the latent heat of fusion is positive",
+          "falls, because higher pressure favours the denser liquid",
+          "is unchanged, because a pure substance melts at a fixed temperature",
+          "rises, because the liquid has the greater entropy",
+          "cannot be determined without the value of the latent heat"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAlong a coexistence line the Clausius-Clapeyron relation gives dP/dT = L/(T ΔV), and for melting the latent heat L is always positive, so only the sign of ΔV can flip the slope. Here the solid floats, so the liquid is denser and the volume change on melting is negative, making dP/dT negative: the melting curve leans backwards and squeezing the mixture melts it at a lower temperature, exactly as for water and ice. The first and fourth choices come from assuming ΔV is positive, which is true of most substances but not this one, and from reading only the sign of L or of the entropy change; the third confuses melting at a fixed temperature for a given pressure with independence of pressure.\n\n90-SECOND SOLUTION\nForget the formula. Pressure always favours the phase that takes up less room, and here that is the liquid, so raising the pressure pushes the system towards melting and the melting temperature must drop. Under twenty seconds, and it is the reason a pressurized ice skate slides.\n\nWHAT TO MEMORIZE\ndP/dT = L/(T ΔV) on any coexistence curve. For melting, L > 0 always, so the solid-liquid line slopes backwards precisely for those substances whose solid floats on their own liquid."
+      },
+
+      // [TS/mean free path]
+      {
+        "question": "A fixed sample of an ideal gas is heated in a rigid sealed container until its absolute temperature doubles. Consider: I. The mean free path is unchanged. II. The mean number of collisions suffered per molecule per second increases. III. The root-mean-square molecular speed doubles. Which are correct?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "II and III only",
+          "I, II and III"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe mean free path is 1/(√2 nσ), which depends only on number density and collision cross-section; a rigid sealed container fixes both the particle number and the volume, so n and hence the mean free path do not change, and I is correct. The molecules do move faster, and with the same distance between collisions the collision frequency, which is mean speed divided by mean free path, must rise, so II is correct. Statement III is the standard error of taking speed proportional to T instead of to √T; the rms speed is √(3kT/m), so doubling T multiplies it by √2, not by 2.\n\n90-SECOND SOLUTION\nAsk only what the mean free path depends on: density and cross-section, never temperature at fixed volume. That fixes I, and then II follows immediately because the same path is now covered faster. III falls to a one-line recall that speed goes as the square root of temperature. Well under 90 seconds and no arithmetic.\n\nWHAT TO MEMORIZE\nMean free path is 1/(√2 nσ); collision rate is mean speed over mean free path; rms speed is √(3kT/m). At constant volume the mean free path is temperature-independent, whereas at constant pressure n ∝ 1/T and the mean free path grows in proportion to T."
+      },
+
+      // [SR/relativistic doppler]
+      {
+        "question": "A source of proper frequency f₀ moves in a straight line past a detector. Consider the light emitted at the instant when, in the detector's frame, the source's velocity is exactly perpendicular to the line from source to detector. The frequency measured when that light arrives is",
+        "choices": [
+          "less than f₀",
+          "equal to f₀",
+          "greater than f₀",
+          "equal to f₀ if v ≪ c, and greater than f₀ otherwise",
+          "not determinable without the distance of closest approach"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWith the emission chosen so that the velocity has no component along the line of sight in the detector's frame, the first-order Doppler term vanishes and only time dilation is left: the source's clock, and with it the oscillation that produces the light, runs slow by the factor γ, so the received frequency is f₀/γ, a redshift. The second choice is what the classical Doppler formula predicts, since that formula responds only to the radial component of the velocity, and the discrepancy is exactly why the transverse Doppler effect is used as a direct laboratory test of time dilation. The last choice is a trap: the shift depends on the speed, not on how far away the source passes.\n\n90-SECOND SOLUTION\nRecognise this as the transverse Doppler effect and recall that it is a redshift. If you cannot recall it, argue by symmetry: the answer cannot depend on which perpendicular direction the source moves, and a moving clock can only ever be slowed, so a blueshift is impossible and no shift would contradict time dilation. Seconds.\n\nWHAT TO MEMORIZE\nTransverse Doppler: f = f₀/γ, a pure time-dilation redshift of order v²/c², entirely absent from the classical formula."
+      },
+
+      // [SR/velocity addition]
+      {
+        "question": "A laser at the origin rotates at a constant angular speed, sweeping its beam across a distant screen. Beyond a certain distance the illuminated spot travels along the screen faster than c. Which of the following is true?",
+        "choices": [
+          "This cannot happen; the spot's speed saturates at c however distant the screen.",
+          "The spot does move faster than c, so a signal can be sent along the screen faster than light.",
+          "The spot moves faster than c in the laser's frame only; in the screen's frame it moves slower than c.",
+          "Relativistic velocity addition applied to the rotating beam gives a spot speed below c.",
+          "The spot does move faster than c, but no matter, energy or information moves along the screen, so nothing is violated."
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe spot is not an object: each illuminated point is lit by its own photon that travelled radially outward from the laser at c, and nothing passes from one point of the screen to the next. The speed of a geometric pattern is unbounded, so the second choice fails, since someone standing at one end of the screen cannot influence the light that later strikes the other end. The fourth choice misapplies velocity addition, which transforms the velocity of a particle or signal between frames and has nothing to say about the motion of an intersection point.\n\n90-SECOND SOLUTION\nAsk the one question that decides every superluminal puzzle: does anything actually travel along the path in question? Here nothing does, so there is no conflict, and the same reasoning covers the scissors-blade intersection, a shadow sweeping a wall, and a phase velocity above c. Under thirty seconds.\n\nWHAT TO MEMORIZE\nRelativity bounds the speed of matter, energy and information, not the speed of shadows, spots, intersection points or phase fronts. No memorized formula is needed here; the whole question is that distinction."
+      },
+
+      // [SR/time dilation]
+      {
+        "question": "Two observers move apart with constant relative velocity, each of them inertial throughout. Each finds the other's clock to be running slow. This is not a contradiction because",
+        "choices": [
+          "only the observer who accelerated is genuinely time dilated",
+          "each observer uses a different set of simultaneous events when comparing the distant clock with his own",
+          "the effect is an artifact of light travel time and disappears once that delay is subtracted",
+          "the clocks actually tick alike, and each reading is distorted by the Doppler shift",
+          "one clock really is slower, but which one cannot be determined without a third observer"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSaying that a clock runs slow means comparing one moving clock against two clocks synchronised in your own frame at two different places, and the two observers disagree about which distant events are simultaneous, so they are not comparing the same pairs of readings; both statements are correct measurements and the symmetry is genuine. The third and fourth choices treat time dilation as a propagation or Doppler artifact, but the effect survives after every light travel delay is removed. The first choice imports acceleration, which is irrelevant because both observers remain inertial for the whole comparison.\n\n90-SECOND SOLUTION\nAny time mutual time dilation looks paradoxical, the resolution is the relativity of simultaneity. Notice also that the stem declares both observers inertial, which by itself kills every choice appealing to acceleration or to a preferred clock. Seconds.\n\nWHAT TO MEMORIZE\nTime dilation compares one clock with two synchronised clocks, and different frames synchronise differently. The asymmetry lives in the vΔx/c² term of Δt' = γ(Δt − vΔx/c²)."
+      },
+
+      // [OW/doppler]
+      {
+        "question": "Sound of frequency f₀ travels in still air of sound speed v. In case 1 the source moves toward a stationary observer at speed u < v; in case 2 the observer moves toward a stationary source at the same u. The frequency received in case 1, compared with case 2, is",
+        "choices": [
+          "higher, the two already differing in the term linear in u/v",
+          "higher, although the two agree in the term linear in u/v",
+          "lower, although the two agree in the term linear in u/v",
+          "exactly equal for every u, since only the relative motion matters",
+          "higher if u < v/2 and lower if u > v/2"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith the air at rest, motion of the observer changes the numerator, f = f₀(v + u)/v, while motion of the source changes the denominator, f = f₀v/(v − u). Since (1 − u/v)(1 + u/v) = 1 − u²/v² < 1, the moving-source case gives the larger frequency; but 1/(1 − u/v) = 1 + u/v + u²/v² + ... agrees with 1 + u/v through the linear term, so the two cases first differ at order u²/v². Choice D is the relativistic intuition that only relative velocity can matter, which is true for light in vacuum and false for sound, because the air picks out a preferred frame. Choice A is the error of noticing the asymmetry but assuming it shows up already at first order.\n\n90-SECOND SOLUTION\nWrite the two expressions and look only at where u sits. A factor 1/(1 − x) always exceeds 1 + x, and the two match to first order in x. That comparison takes seconds and needs no numbers at all.\n\nWHAT TO MEMORIZE\nf = f₀(v ± u of observer)/(v ∓ u of source): observer speed in the numerator, source speed in the denominator. The two are equivalent only to first order; for light in vacuum there is no medium and only the relative speed enters."
+      },
+
+      // [OW/geometric optics: lenses]
+      {
+        "question": "A thin converging lens forms a sharp real image of a small object on a screen. An opaque card is then held against the lens, covering its upper half completely. The image on the screen is best described as",
+        "choices": [
+          "only the upper half of the original image, at the original brightness",
+          "only the lower half of the original image, at the original brightness",
+          "the whole image at the original brightness, but halved in linear size",
+          "the whole image at its original place and size, but dimmer",
+          "absent, the screen now showing only a blur"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEvery point of the object sends a cone of rays that fills the whole aperture, and the lens returns that entire cone to a single image point. Covering half the aperture removes half of every cone, so each image point receives less light and the image is dimmer, but no part of the image is lost, and the image position, fixed by 1/s + 1/s' = 1/f, and the magnification −s'/s are untouched. Choices A and B come from drawing only the two or three principal rays and then assuming that the ray crossing the blocked part of the lens carried a particular half of the image. Choice C confuses the size of the aperture with the size of the image.\n\n90-SECOND SOLUTION\nAsk what determines where the image sits and how big it is: only the object distance and the focal length, neither of which a card touches. An aperture stop can change only how much light arrives, and its diffraction and aberration effects. Pick the complete-but-dimmer option on sight.\n\nWHAT TO MEMORIZE\nPosition and size come from 1/s + 1/s' = 1/f and m = −s'/s; the aperture governs brightness and resolution only. Blocking part of a lens never removes part of an image."
+      },
+
+      // [SP/rutherford scattering]
+      {
+        "question": "Alpha particles of kinetic energy E are scattered by the nuclei of a thin gold foil. At a fixed scattering angle θ, the number counted per unit solid angle varies with E as",
+        "choices": [
+          "1/E²",
+          "1/E",
+          "1/E⁴",
+          "E², so that faster alphas scatter more often",
+          "no power of E, the rate being independent of E"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Rutherford result is dσ/dΩ ∝ (Z₁Z₂e²/E)² sin⁻⁴(θ/2), so at fixed θ the yield falls as 1/E². Choice B is what a student gets by recalling only that the distance of closest approach scales as 1/E and forgetting that a cross section is an area and therefore goes as the square of that length. Choice C comes from squaring twice, or from importing the exponent 4 of the sin⁻⁴(θ/2) factor into the energy dependence. Choice D is the intuition that a faster projectile interacts more.\n\n90-SECOND SOLUTION\nNo formula is needed. The only length the Coulomb problem supplies is the closest-approach distance d ∝ Z₁Z₂e²/E, and a differential cross section has the dimensions of area, so it must go as d² ∝ 1/E². That dimensional argument takes about fifteen seconds.\n\nWHAT TO MEMORIZE\ndσ/dΩ ∝ (Z₁Z₂e²/E)²/sin⁴(θ/2). Two facts cover nearly every Rutherford question: 1/E² at fixed angle, and the steep sin⁻⁴(θ/2) divergence toward small angles, which reflects the infinite range of the Coulomb force."
+      },
+
+      // [SP/fission & fusion]
+      {
+        "question": "In the core of the Sun the mean thermal energy is of order 1 keV, while the Coulomb barrier between two protons is of order 1 MeV. Which of the following statements about hydrogen burning there are correct?\nI. The reactions are dominated by protons drawn from the high-energy tail of the thermal distribution, far above the mean energy.\nII. Barrier penetration by tunnelling is essential, since classically almost no pair has enough energy.\nIII. The first step, p + p → ²H + e⁺ + neutrino, is a weak-interaction process, and its slowness sets the rate of the whole chain.",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II only",
+          "II and III only",
+          "I, II and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAll three hold. At kT of order 1 keV essentially no proton pair can climb a 1 MeV barrier, so fusion proceeds only by tunnelling, and because the tunnelling probability climbs steeply with energy while the Maxwell-Boltzmann population falls steeply, the product peaks well above kT at the Gamow peak. The first step must convert a proton into a neutron, emitting a positron and a neutrino, which is a weak process; its minute rate is why the Sun burns steadily for billions of years instead of consuming itself. Rejecting III is the usual error: students assume that every step of a fusion chain is governed by the strong interaction because the final binding is nuclear.\n\n90-SECOND SOLUTION\nI and II are the standard Gamow-peak picture and go down easily, so the whole question is whether you accept III. Recall that two protons cannot form a deuteron without turning one into a neutron, which requires a weak vertex, and take the all-three option.\n\nWHAT TO MEMORIZE\nThermonuclear rate = tunnelling probability rising with E times a Maxwell tail falling with E, giving a narrow peak far above kT. The pp chain opens with the weak reaction p + p → ²H + e⁺ + neutrino, the bottleneck of solar burning."
+      },
+
+      // [LM/detectors & counters]
+      {
+        "question": "A Geiger-Müller tube, unlike a proportional counter, cannot be used to measure the energy deposited by the particles it detects. The reason is that",
+        "choices": [
+          "its detection efficiency for ionizing radiation is too low for a spectrum to be accumulated",
+          "its dead time is too long for individual events to be separated",
+          "the avalanche saturates, so every pulse has essentially the same amplitude however much energy was deposited",
+          "the fill gas is at too low a pressure for a particle to be stopped inside the active volume",
+          "it collects only the primary ion pairs, with no gas multiplication, so the signal is lost in the noise"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIn the Geiger region the field is high enough that one initial ion pair sets off an avalanche that spreads along the whole anode wire and is choked off by its own positive space charge. The output pulse is therefore large and essentially the same size whether the initiating event deposited a few keV or a few MeV, so the tube counts events but carries no energy information. A proportional counter is run at lower voltage, where the gas gain is a fixed multiplier and pulse height stays proportional to the primary ionization. Choice B names a genuine Geiger limitation, dead times of order 100 μs that distort high count rates, but that limits rate, not energy measurement; choice E describes an ionization chamber, which has no multiplication at all.\n\n90-SECOND SOLUTION\nRun down the three operating regions of a gas counter and ask in which one the pulse height stops depending on the primary ionization. That is the Geiger plateau, and naming it is the whole answer. Pure recall, a few seconds.\n\nWHAT TO MEMORIZE\nIonization chamber: no multiplication, tiny signal proportional to energy. Proportional counter: constant gas gain, pulse height proportional to energy. Geiger-Müller: saturated avalanche, large uniform pulses, no energy information, long dead time."
+      },
+
+      // [LM/statistics & uncertainty]
+      {
+        "question": "A student measures a time interval repeatedly with a stopwatch whose oscillator runs 2 percent slow, and averages the readings. As the number of readings N is increased, which of the following happens?",
+        "choices": [
+          "Both the random and the systematic contributions to the error of the mean fall as 1/√N.",
+          "The random error of the mean falls as 1/√N, while the 2 percent systematic error of the mean is unchanged.",
+          "The standard deviation of the individual readings falls as 1/√N, while the 2 percent systematic error is unchanged.",
+          "The mean converges on the true interval, because the stopwatch error averages away like any other.",
+          "Nothing improves, since an average of miscalibrated readings is no better than a single one."
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAveraging N independent readings shrinks the random scatter of the mean as σ/√N, but a calibration fault shifts every reading in the same direction by the same fraction, so it survives averaging untouched and the mean converges on a value 2 percent from the truth. Choice D is the standard blunder of treating all errors as random. Choice C confuses the spread of the individual readings, which tends to a fixed value set by the student's reaction time and does not shrink, with the standard deviation of the mean, which is the quantity that falls as 1/√N. Choice E overcorrects: precision does improve with N, only accuracy does not.\n\n90-SECOND SOLUTION\nSeparate the two contributions before reading the options: random shrinks as 1/√N, systematic does not shrink at all. Exactly one option says both of those things, so no arithmetic is needed at all.\n\nWHAT TO MEMORIZE\nStandard deviation of the mean = σ/√N, where σ, the spread of single readings, is independent of N. Repetition buys precision, never accuracy; a systematic error is removed only by calibration or by changing the method."
+      }
+
+    ]
   }
 ];
