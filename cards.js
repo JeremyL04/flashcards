@@ -3,6 +3,8 @@
 //
 //  Each exam:
 //    name  : shown on the menu tile
+//    group : OPTIONAL. Exams sharing a group start on their own row of the
+//            menu board and are colour-coded together (see .tile-short).
 //    cards : the questions (the tile counts them for you)
 //
 //  Each card:
@@ -4559,6 +4561,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 1",
+    "group": "short",
     "cards": [
 
       // [CM/newton's laws & friction]
@@ -4846,6 +4849,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 2",
+    "group": "short",
     "cards": [
 
       // [CM/SHM]
@@ -5133,6 +5137,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 3",
+    "group": "short",
     "cards": [
 
       // [EM/current & resistance]

@@ -9,6 +9,7 @@
 const PER_PAGE = 4;
 const SHUFFLE_CHOICES_ON_RETRY = true;
 const MENU_SLOTS = 25; // 5x5 board
+const MENU_COLS = 5;
 const STORAGE_KEY = "flashcards-progress";
 const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
 const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
@@ -481,11 +482,19 @@ function renderMenu() {
 
   const board = document.createElement("div");
   board.className = "board";
+  let slots = 0;
 
-  EXAMS.forEach((exam) => {
+  const emptyTile = (isPad) => {
+    const el = document.createElement("div");
+    el.className = "tile tile-empty" + (isPad ? " tile-pad" : "");
+    el.setAttribute("aria-hidden", "true");
+    return el;
+  };
+
+  const examTile = (exam) => {
     const tile = document.createElement("button");
     tile.type = "button";
-    tile.className = "tile";
+    tile.className = "tile" + (exam.group ? ` tile-${exam.group}` : "");
 
     const name = document.createElement("span");
     name.className = "tile-name";
@@ -497,14 +506,31 @@ function renderMenu() {
 
     tile.append(name, count);
     tile.addEventListener("click", () => showIntro(exam));
-    board.appendChild(tile);
+    return tile;
+  };
+
+  EXAMS.filter((e) => !e.group).forEach((exam) => {
+    board.appendChild(examTile(exam));
+    slots++;
   });
 
-  for (let i = EXAMS.length; i < MENU_SLOTS; i++) {
-    const empty = document.createElement("div");
-    empty.className = "tile tile-empty";
-    empty.setAttribute("aria-hidden", "true");
-    board.appendChild(empty);
+  // Each group starts on a row of its own, padded with spacers that drop
+  // out on narrow screens where the board is not five wide.
+  const groups = [...new Set(EXAMS.filter((e) => e.group).map((e) => e.group))];
+  groups.forEach((group) => {
+    while (slots % MENU_COLS !== 0) {
+      board.appendChild(emptyTile(true));
+      slots++;
+    }
+    EXAMS.filter((e) => e.group === group).forEach((exam) => {
+      board.appendChild(examTile(exam));
+      slots++;
+    });
+  });
+
+  while (slots < MENU_SLOTS) {
+    board.appendChild(emptyTile(false));
+    slots++;
   }
 
   appEl.appendChild(board);
