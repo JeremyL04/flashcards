@@ -4555,5 +4555,866 @@ const EXAMS = [
       }
 
     ]
+  },
+
+  {
+    "name": "Short Practice Test 1",
+    "cards": [
+
+      // [CM/newton's laws & friction]
+      {
+        "question": "A block rests without sliding on a plane inclined at an angle θ to the horizontal, with θ less than the critical angle for slipping and μ the coefficient of static friction. Which of the following is NOT true?",
+        "choices": [
+          "The friction force on the block has magnitude mg sinθ.",
+          "The normal force on the block has magnitude mg cosθ.",
+          "Increasing μ at fixed θ leaves the friction force unchanged.",
+          "The total contact force from the plane on the block is vertical, of magnitude mg.",
+          "The friction force on the block has magnitude μmg cosθ."
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBelow the critical angle the block is in equilibrium, so friction takes exactly the value equilibrium demands along the surface, mg sinθ, while μmg cosθ is only the upper bound it has not yet reached. The last choice is true and worth noticing: normal force and friction together must cancel the weight, so their vector sum is mg straight up.\n\n90-SECOND SOLUTION\nThe words \"less than the critical angle\" are the entire question. Static friction obeys an inequality, f ≤ μN, and becomes an equality only at impending slip, so pick the choice that writes it as an equality.\n\nWHAT TO MEMORIZE\nStatic friction is f ≤ μN, determined by equilibrium rather than by μ; the critical angle is tanθ = μ."
+      },
+
+      // [QM/photoelectric effect]
+      {
+        "question": "Light of wavelength 310 nm ejects photoelectrons of maximum kinetic energy 1.0 eV from a metal surface. Taking hc = 1240 eV·nm, the maximum kinetic energy of photoelectrons ejected from the same surface by 620 nm light is",
+        "choices": [
+          "0.25 eV",
+          "0.50 eV",
+          "1.0 eV",
+          "2.0 eV",
+          "Zero; no photoelectrons are emitted"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAt 310 nm the photon energy is 1240/310 = 4.0 eV, so the work function is W = 4.0 − 1.0 = 3.0 eV. At 620 nm the photon carries only 2.0 eV, which is below W, so no electrons come off at all. The choice 0.50 eV is the error of scaling the kinetic energy with the photon energy — kinetic energy is not proportional to hc/λ, because W must be subtracted first.\n\n90-SECOND SOLUTION\nDoubling the wavelength halves the photon energy, 4.0 eV → 2.0 eV. Compare that with the threshold before doing anything else: 2.0 eV < 3.0 eV, so the answer is no emission.\n\nWHAT TO MEMORIZE\nKE_max = hc/λ − W, with no emission when hc/λ < W; hc = 1240 eV·nm."
+      },
+
+      // [SR/lorentz transformation]
+      {
+        "question": "In frame S, event A occurs at x = 0, t = 0 and event B at x = 6.0 light-years, t = 2.0 years. Frame S′ moves at 0.60c in the +x direction of S. In S′, the time of B minus the time of A is",
+        "choices": [
+          "+7.0 years",
+          "+2.5 years",
+          "+2.0 years",
+          "−1.6 years",
+          "−2.0 years"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWith γ = 1/√(1 − 0.36) = 1.25, Δt′ = γ(Δt − vΔx/c²) = 1.25(2.0 − 0.60 × 6.0) = 1.25(−1.6) = −2.0 years, so B precedes A in S′. Choice D, −1.6 years, is the error of dropping the factor γ, and choice B, +2.5 years, is the error of keeping only γΔt and forgetting the vΔx/c² term entirely.\n\n90-SECOND SOLUTION\nThe interval is spacelike (6 > 2 in light-years and years), so the order of the events is frame-dependent and a sign flip is allowed; that alone points at a negative answer. Then vΔx/c² = 0.6 × 6 = 3.6 years beats Δt = 2.0 years, and γ = 1.25 is the standard 3-4-5 value, so the magnitude is 1.25 × 1.6.\n\nWHAT TO MEMORIZE\nΔt′ = γ(Δt − vΔx/c²) with x measured in light-years and t in years so that c = 1; γ = 1.25 at 0.6c and γ = 5/3 at 0.8c."
+      },
+
+      // [CM/lagrangian]
+      {
+        "question": "A particle of mass m moves in a plane under a central potential U(r). In polar coordinates the Lagrangian is L = ½m[(dr/dt)² + r²(dθ/dt)²] − U(r). The Lagrange equation for r is",
+        "choices": [
+          "m(d²r/dt²) = m r (dθ/dt)² − dU/dr",
+          "m(d²r/dt²) = −dU/dr",
+          "m(d²r/dt²) = −m r (dθ/dt)² − dU/dr",
+          "m(d²r/dt²) = m r (dθ/dt)² + dU/dr",
+          "m(d²r/dt²) = ½m r (dθ/dt)² − dU/dr"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWith ∂L/∂(dr/dt) = m(dr/dt), the left side is m(d²r/dt²); with ∂L/∂r = m r (dθ/dt)² − dU/dr, the right side carries both the centrifugal term and the force. The distractor carrying −m r (dθ/dt)² treats the centrifugal term as inward, and the ½ version wrongly keeps the ½ from the kinetic energy after differentiating r².\n\n90-SECOND SOLUTION\nDo not differentiate anything: the extra term beyond −dU/dr must be the outward centrifugal term +mr(dθ/dt)² = +ℓ²/mr³, which is what keeps an orbiting particle from falling in. Only one choice has it with a plus sign and no stray factor.\n\nWHAT TO MEMORIZE\nd/dt(∂L/∂q̇) = ∂L/∂q, and the radial equation m r̈ = mrθ̇² − dU/dr for central motion."
+      },
+
+      // [QM/lasers & stimulated emission]
+      {
+        "question": "A gas of atoms is in thermal equilibrium at 300 K, where k_BT = 0.025 eV. An excited level lies 1.15 eV above the ground level and has the same degeneracy. The ratio of its population to the ground-level population is most nearly (take ln 10 = 2.3)",
+        "choices": [
+          "10⁻²⁰",
+          "10⁻¹⁰",
+          "10⁻⁴",
+          "0.02",
+          "0.5"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nEqual degeneracies make the ratio the bare Boltzmann factor e^(−ΔE/k_BT). Here ΔE/k_BT = 1.15/0.025 = 46, and 46/2.3 = 20, so the ratio is e⁻⁴⁶ = 10⁻²⁰. The choice 0.02 is the error of taking the ratio to be linear, k_BT/ΔE, instead of exponential; 10⁻¹⁰ comes from using half the exponent, ΔE/2k_BT.\n\n90-SECOND SOLUTION\nOnly the exponent matters. Divide 1.15 by 0.025 to get 46, then convert to a power of ten by dividing by 2.3 to get 20. Thermal population of an optical-frequency level at room temperature is always astronomically small — which is exactly why a laser needs pumping rather than heating.\n\nWHAT TO MEMORIZE\nPopulation ratio = (g₂/g₁) e^(−ΔE/k_BT), with k_BT = 0.025 eV at room temperature; e⁻ˣ = 10^(−x/2.3)."
+      },
+
+      // [OW/total internal reflection]
+      {
+        "question": "Light travelling inside a glass block strikes a flat glass-air face at 60° from the normal to that face. The smallest index of refraction of the glass for which the light is totally reflected is most nearly",
+        "choices": [
+          "1.15",
+          "1.33",
+          "1.41",
+          "1.73",
+          "2.00"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTotal internal reflection needs the incidence angle to be at or beyond the critical angle, sin θ_c = 1/n, so 1/n ≤ sin 60° = √3/2 and n ≥ 2/√3 ≈ 1.15. The choice 2.00 is 1/sin 30°, the value you get by measuring the ray's angle from the surface instead of from the normal; 1.41 = 1/sin 45° and 1.33 is water's index recalled rather than derived.\n\n90-SECOND SOLUTION\nBigger incidence angle means an easier escape from total reflection, so a large 60° should demand only a small index. That kills 1.41, 1.73 and 2.00 at once, and 1.33 is a memory trap, leaving 1.15. Only the sin 60° = 0.87 step is real work: 1/0.87 ≈ 1.15.\n\nWHAT TO MEMORIZE\nsin θ_c = n₂/n₁ for light going from dense to rare, and the sines of 30°, 45°, 60° by sight."
+      },
+
+      // [SP/fourier analysis]
+      {
+        "question": "A periodic voltage is V(t) = 2 + 2cos(ωt) + 2cos(2ωt), in volts. Its root-mean-square value is",
+        "choices": [
+          "2√2 V",
+          "√6 V",
+          "2√3 V",
+          "6 V",
+          "3√2 V"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nDistinct harmonics are orthogonal over a period, so mean squares add: ⟨V²⟩ = (DC)² + ½(amplitude)² for each sinusoid = 4 + 2 + 2 = 8, giving V_rms = 2√2 ≈ 2.8 V. Choosing √6 comes from wrongly applying the ½ to the constant term as well; 2√3 comes from omitting the ½ on the two cosines; 6 V is just adding the three amplitudes, which ignores that cross terms average to zero.\n\n90-SECOND SOLUTION\nBound it before computing. The rms must exceed the DC level 2 V and lie far below the peak 6 V, which kills 6 V and √6 ≈ 2.4 is suspiciously close to a pure-DC answer. Write ⟨V²⟩ = 4 + 2 + 2 = 8 in one line and take the root.\n\nWHAT TO MEMORIZE\nParseval for a Fourier series: ⟨V²⟩ = a₀² + ½Σ(aₙ² + bₙ²). Constant term enters squared with no ½; every sinusoid enters with a ½."
+      },
+
+      // [CM/moment of inertia]
+      {
+        "question": "A uniform disk of mass M and radius R lies in the xy-plane with its centre at the origin. Its moment of inertia about a line that lies in the plane of the disk and is tangent to its rim is",
+        "choices": [
+          "MR²/4",
+          "3MR²/4",
+          "5MR²/4",
+          "3MR²/2",
+          "2MR²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBy the perpendicular-axis theorem for a lamina, I_x + I_y = I_z = MR²/2, and by symmetry each in-plane diameter gives MR²/4. The parallel-axis theorem then shifts that axis a distance R to the rim: I = MR²/4 + MR² = 5MR²/4. The distractor 3MR²/2 comes from using MR²/2, the symmetry-axis value, for a diameter.\n\n90-SECOND SOLUTION\nRecall the two disk numbers, MR²/2 about the symmetry axis and MR²/4 about a diameter, then just add MR². Anything smaller than MR² is impossible, since the parallel-axis shift alone contributes MR².\n\nWHAT TO MEMORIZE\nPerpendicular-axis theorem I_z = I_x + I_y for a flat lamina, plus disk values MR²/2 and MR²/4."
+      },
+
+      // [EM/electric potential]
+      {
+        "question": "A nonconducting sphere of radius R carries total charge Q spread uniformly through its volume. The potential at the centre exceeds the potential at the surface by",
+        "choices": [
+          "0",
+          "Q/(12πε₀R)",
+          "Q/(8πε₀R)",
+          "Q/(4πε₀R)",
+          "3Q/(8πε₀R)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a uniformly charged ball, V(0) = 3Q/(8πε₀R) and V(R) = Q/(4πε₀R) = 2Q/(8πε₀R), so the difference is Q/(8πε₀R). Choosing 3Q/(8πε₀R) means quoting the centre potential itself rather than the difference, and choosing 0 means treating the insulating ball as a conductor, where the interior is indeed an equipotential.\n\n90-SECOND SOLUTION\nIntegrate the interior field E(r) = Qr/(4πε₀R³) from 0 to R: the result is half of Q/(4πε₀R) because the linear field averages to half its surface value. That single line gives Q/(8πε₀R) without ever needing V(0).\n\nWHAT TO MEMORIZE\nInside a uniform ball E rises linearly to the surface value, so V(0) − V(R) = ½ × (surface potential) = Q/(8πε₀R), and V(0) = 3/2 times the surface potential."
+      },
+
+      // [QM/molecular rotational spectra]
+      {
+        "question": "A diatomic molecule is a rigid rotor with E_J = ħ²J(J+1)/2I. Its J = 1 → 0 emission line has frequency 1.2 × 10¹¹ Hz. The frequency of its J = 5 → 4 line is",
+        "choices": [
+          "1.2 × 10¹¹ Hz",
+          "4.8 × 10¹¹ Hz",
+          "6.0 × 10¹¹ Hz",
+          "1.8 × 10¹² Hz",
+          "3.0 × 10¹² Hz"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nE_J − E_(J−1) = (ħ²/2I)[J(J+1) − J(J−1)] = ħ²J/I, so the line frequency is proportional to the upper J: five times 1.2 × 10¹¹ Hz = 6.0 × 10¹¹ Hz. The value 4.8 × 10¹¹ Hz comes from using the lower level J = 4, and 1.8 × 10¹² Hz from scaling the frequency as J(J+1), that is by 30/2 = 15.\n\n90-SECOND SOLUTION\nRotational lines form a ladder equally spaced by ħ²/I, with the first line one spacing up from zero. So the J → J−1 line sits at J times the first line: 5 × 1.2 × 10¹¹ Hz.\n\nWHAT TO MEMORIZE\nΔE(J → J−1) = ħ²J/I: the pure rotational spectrum is a set of equally spaced lines."
+      },
+
+      // [TS/second law & entropy]
+      {
+        "question": "Six distinguishable noninteracting particles each have exactly two states, of energy 0 and ε. The total energy of the system is 2ε. The entropy of the system is",
+        "choices": [
+          "k_B ln 6",
+          "k_B ln 12",
+          "k_B ln 15",
+          "k_B ln 30",
+          "6k_B ln 2"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTotal energy 2ε means exactly two of the six particles are excited, and since the particles are distinguishable the number of ways is C(6,2) = 15, so S = k_B ln 15. Choice D, k_B ln 30, counts 6 × 5 ordered pairs and forgets that the two excited particles are not themselves ordered. Choice E, 6k_B ln 2 = k_B ln 64, is the total number of configurations at all energies, which is the maximum entropy, not the entropy at fixed energy.\n\n90-SECOND SOLUTION\nBoltzmann entropy is k_B ln Ω, and Ω is a binomial coefficient the moment you see two-state particles at fixed energy. Recognize 2ε as 'choose 2 of 6' and stop.\n\nWHAT TO MEMORIZE\nS = k_B ln Ω. For N distinguishable two-state particles with n excited, Ω = C(N,n) = N!/(n!(N−n)!)."
+      },
+
+      // [CM/angular momentum]
+      {
+        "question": "A particle of mass m moves with constant velocity v in the +x direction along the line y = b, with b > 0, in the xy-plane. Consider: I. Its angular momentum about the origin is zero. II. Its angular momentum about the origin has magnitude mvb and points in the −z direction. III. Its angular momentum about the point (0, b) is zero. Which are true?",
+        "choices": [
+          "I only",
+          "II and III only",
+          "I and III only",
+          "II only",
+          "III only"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAngular momentum about a point is mv times the perpendicular distance from that point to the line of motion, so it is mvb about the origin and zero about (0, b), which lies on the line. With r = (x, b, 0) and p = (mv, 0, 0), the cross product gives L_z = −mvb, into the page, and it does not change with time even though r grows. Statement I is the standard error of assuming straight-line motion carries no angular momentum.\n\n90-SECOND SOLUTION\nNo torque acts, so L must be constant about every fixed point; the only question is which points give zero, and that is exactly the points on the line of motion. That settles III immediately and rules out I.\n\nWHAT TO MEMORIZE\nL = mvd, with d the perpendicular distance from the reference point to the line of motion, constant for free motion."
+      },
+
+      // [EM/RC circuits]
+      {
+        "question": "A 5.0 μF capacitor is connected in parallel with a 2.0 kΩ resistor, and that combination is joined through a 4.0 kΩ resistor and a switch to a 12 V battery of negligible internal resistance. Long after the switch is closed it is opened again. The capacitor then discharges with time constant",
+        "choices": [
+          "6.7 ms",
+          "10 ms",
+          "20 ms",
+          "30 ms",
+          "60 ms"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOnce the switch is opened the battery and the 4.0 kΩ resistor are no longer part of any closed loop, so the capacitor sees only the 2.0 kΩ resistor and τ = RC = 2.0 × 10³ × 5.0 × 10⁻⁶ = 10 ms. The 30 ms choice adds the two resistors in series, which is the charging time constant, not the discharging one; 6.7 ms puts them in parallel.\n\n90-SECOND SOLUTION\nTrace the discharge loop with a finger: capacitor, 2.0 kΩ, back to the capacitor. Nothing else is in it, so multiply 2 kΩ by 5 μF and stop. The 12 V is a red herring, since a time constant never depends on the source voltage.\n\nWHAT TO MEMORIZE\nτ = R_eff C, where R_eff is the Thevenin resistance seen by the capacitor in the configuration that actually exists at that moment."
+      },
+
+      // [TS/heat engines & efficiency]
+      {
+        "question": "An engine takes in 900 J per cycle from a reservoir at 600 K and rejects 700 J to a reservoir at 400 K, returning to its initial state each cycle. The total entropy change of the universe per cycle is",
+        "choices": [
+          "0",
+          "0.25 J/K",
+          "0.50 J/K",
+          "1.75 J/K",
+          "It cannot be determined from the information given"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe working substance is back in its initial state after a cycle, so its entropy change is zero and only the two reservoirs matter: ΔS = −900/600 + 700/400 = −1.50 + 1.75 = +0.25 J/K. Choice A is what you get by assuming the engine is reversible, but it is not: its efficiency is 200/900 ≈ 0.22 while the Carnot limit here is 1 − 400/600 = 0.33, and that shortfall is exactly the entropy generated. Choice E is a trap; the reservoir temperatures and heats are all that a total entropy change needs.\n\n90-SECOND SOLUTION\nWrite two fractions and subtract: 900/600 = 1.5 out of the hot reservoir, 700/400 = 1.75 into the cold one. Positive difference, small number. Any answer larger than about 1 J/K would require an efficiency far from the Carnot value, so the arithmetic barely needs checking.\n\nWHAT TO MEMORIZE\nA reservoir at fixed T gaining heat Q changes entropy by Q/T. Over one full cycle ΔS_universe = Σ Q_i/T_i for the reservoirs alone, and it is ≥ 0 with equality only for a reversible cycle."
+      },
+
+      // [OW/wave equation & propagation]
+      {
+        "question": "A plane wave of vacuum wavelength 500 nm passes at normal incidence through a slab of glass of index 1.50 and thickness 1.0 mm. Compared with an identical wave that travels the same 1.0 mm in vacuum, the wave emerging from the slab is retarded by",
+        "choices": [
+          "500 wavelengths",
+          "1,000 wavelengths",
+          "1,500 wavelengths",
+          "2,000 wavelengths",
+          "3,000 wavelengths"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe extra optical path is (n − 1)t = 0.50 × 1.0 mm = 0.50 × 10⁻³ m, and dividing by the vacuum wavelength 5.0 × 10⁻⁷ m gives 1,000 wavelengths. The 3,000 answer is nt/λ, the total number of wavelengths inside the glass rather than the difference from vacuum; 2,000 is t/λ, the vacuum count alone.\n\n90-SECOND SOLUTION\nOnly the factor (n − 1) matters. Write (n − 1)t/λ, note 0.5 × 10⁻³ / (5 × 10⁻⁷) = 10³, and stop. The two large choices are the two halves of that subtraction, so seeing 3,000 − 2,000 = 1,000 among the options is itself the check.\n\nWHAT TO MEMORIZE\nOptical path length is nt, and a slab retards a wave by (n − 1)t/λ_vacuum wavelengths. The frequency, not the wavelength, is what stays fixed on entering the glass."
+      },
+
+      // [SP/matrices & eigenvalues]
+      {
+        "question": "The 2 × 2 matrix M has first row (4, 1) and second row (2, 3), acting on column vectors (x, y). An eigenvector belonging to the larger eigenvalue of M is",
+        "choices": [
+          "(1, −2)",
+          "(1, 1)",
+          "(2, 1)",
+          "(1, −1)",
+          "(1, 2)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe characteristic equation is λ² − (trace)λ + det = λ² − 7λ + 10 = 0, so λ = 5 and λ = 2. For λ = 5 the first row gives (4 − 5)x + y = 0, i.e. y = x, so (1, 1) works: M(1, 1) = (5, 5). The choice (1, −2) is the eigenvector of the smaller eigenvalue λ = 2 — the standard error is solving for the wrong root, or reading the rows as columns.\n\n90-SECOND SOLUTION\nDo not diagonalize. Just hit each candidate with M and see which comes back parallel to itself: M(1, 1) = (5, 5) on the first try. With five short 2 × 2 multiplications this is faster than the characteristic polynomial, and the \"larger eigenvalue\" condition is then confirmed by the factor 5 that pops out.\n\nWHAT TO MEMORIZE\nFor a 2 × 2 matrix, sum of eigenvalues = trace, product = determinant. That alone gives 5 and 2 here with no algebra. An eigenvector is anything M merely rescales, so testing the choices is always legal."
+      },
+
+      // [EM/inductance]
+      {
+        "question": "Two coils wound on a common core have self-inductances 2.0 H and 8.0 H and a coefficient of coupling k = 0.50. They are connected in series so that their fluxes add. The inductance of the combination is",
+        "choices": [
+          "6.0 H",
+          "10 H",
+          "12 H",
+          "14 H",
+          "18 H"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe mutual inductance is M = k√(L₁L₂) = 0.50 × √16 = 2.0 H, and for fluxes that add, L = L₁ + L₂ + 2M = 2.0 + 8.0 + 4.0 = 14 H. The 18 H choice is the error of setting M = √(L₁L₂) and ignoring k; 10 H drops the coupling term altogether; 6.0 H is the series-opposing connection.\n\n90-SECOND SOLUTION\n√(2 × 8) = 4, halved by k gives M = 2. Aiding fluxes must give more than the bare sum 10 H, which eliminates two choices instantly, and adding 2M = 4 lands on 14 H.\n\nWHAT TO MEMORIZE\nM = k√(L₁L₂) with 0 ≤ k ≤ 1, and L_series = L₁ + L₂ ± 2M, plus sign for aiding fluxes."
+      },
+
+      // [QM/angular momentum & spherical harmonics]
+      {
+        "question": "An electron is in an orbital state with l = 2 and m = 1. The expectation value of L_x² + L_y² is",
+        "choices": [
+          "0",
+          "ħ²",
+          "5ħ²/2",
+          "5ħ²",
+          "6ħ²"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nL_x² + L_y² = L² − L_z², and the state is a simultaneous eigenstate of both, so the expectation value is [l(l+1) − m²]ħ² = (6 − 1)ħ² = 5ħ². The choice 5ħ²/2 is ⟨L_x²⟩ alone, since symmetry splits the total evenly between x and y; 6ħ² is ⟨L²⟩ with the subtraction of ⟨L_z²⟩ forgotten.\n\n90-SECOND SOLUTION\nRewrite the operator as L² − L_z² on sight and read off the eigenvalues 6ħ² and ħ². Do not attempt ladder operators; the rewriting is the whole problem.\n\nWHAT TO MEMORIZE\nL²|l,m⟩ = l(l+1)ħ²|l,m⟩ and L_z|l,m⟩ = mħ|l,m⟩, hence ⟨L_x²⟩ = ⟨L_y²⟩ = [l(l+1) − m²]ħ²/2 while ⟨L_x⟩ = ⟨L_y⟩ = 0."
+      },
+
+      // [EM/conductors & capacitance]
+      {
+        "question": "An isolated conducting sphere of radius R carries total charge Q. The outward electrostatic force per unit area on its surface is",
+        "choices": [
+          "Q²/(4πε₀R⁴)",
+          "Q²/(8π²ε₀R⁴)",
+          "Q²/(16π²ε₀R⁴)",
+          "Q²/(32π²ε₀R⁴)",
+          "Q²/(64π²ε₀R⁴)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe electrostatic pressure on a conductor is σ²/2ε₀, because a surface element feels only the field produced by the rest of the conductor, which is half the total surface field. With σ = Q/(4πR²) this gives Q²/(32π²ε₀R⁴). The choice Q²/(16π²ε₀R⁴) is exactly the factor-of-two error of multiplying σ by the full field σ/ε₀.\n\n90-SECOND SOLUTION\nRecall that the pressure equals the energy density of the surface field, ε₀E²/2 with E = σ/ε₀, which is the same σ²/2ε₀. Then just square σ = Q/4πR² and look for the 32π² in the denominator.\n\nWHAT TO MEMORIZE\nElectrostatic pressure on any conductor surface is σ²/2ε₀ = ε₀E²/2, always outward, and the factor of one-half is the point of the problem."
+      },
+
+      // [LM/detectors & counters]
+      {
+        "question": "A counter with a nonparalyzable dead time of 50 μs records 4.0 × 10³ counts per second. The true event rate is most nearly",
+        "choices": [
+          "3.2 × 10³ s⁻¹",
+          "4.0 × 10³ s⁻¹",
+          "4.8 × 10³ s⁻¹",
+          "5.0 × 10³ s⁻¹",
+          "8.0 × 10³ s⁻¹"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe counter is dead for a fraction mτ = (4.0 × 10³)(50 × 10⁻⁶) = 0.20 of each second, so it is live only 0.80 of the time and the true rate is n = m/(1 − mτ) = 4,000/0.80 = 5.0 × 10³ s⁻¹. The 4.8 × 10³ choice is the first-order estimate m(1 + mτ), which is what you get by correcting the recorded rate instead of solving for the true one; 3.2 × 10³ applies the correction with the wrong sign.\n\n90-SECOND SOLUTION\nLosses can only make the true rate larger than the recorded rate, which removes 3.2 × 10³ and 4.0 × 10³ at once. Then note that 20 percent dead time means dividing by 0.8, not multiplying by 1.2, which separates 5.0 × 10³ from 4.8 × 10³.\n\nWHAT TO MEMORIZE\nNonparalyzable dead time: m = n/(1 + nτ), equivalently n = m/(1 − mτ). The dead fraction of the running time is mτ."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Short Practice Test 2",
+    "cards": [
+
+      // [CM/SHM]
+      {
+        "question": "A particle of mass m moves in one dimension in a potential U(x) with a single minimum at x₀, where the curvature is U″(x₀) = k > 0. The particle is released from rest at x₀ + A, where A is not small. The period of the resulting oscillation is",
+        "choices": [
+          "2π√(m/k)",
+          "greater than 2π√(m/k)",
+          "less than 2π√(m/k)",
+          "2π√(m/k), provided the motion stays bounded",
+          "not determined by the information given"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\n2π√(m/k) is the small-oscillation limit only; at finite amplitude the period depends on the anharmonic part of U, which is not specified. A pendulum well softens and its period grows with amplitude, while a well with a positive quartic term stiffens and its period shrinks, so both \"greater\" and \"less\" are attainable. Choosing 2π√(m/k) is the error of assuming every minimum is exactly parabolic.\n\n90-SECOND SOLUTION\nAsk whether the period is amplitude-independent: that is true only for an exact parabola. Two counterexamples pulling in opposite directions kill the \"greater\" and \"less\" options, leaving the cannot-determine choice.\n\nWHAT TO MEMORIZE\nω = √(U″(x₀)/m) holds only for small oscillations; isochronism is a special property of the harmonic potential."
+      },
+
+      // [QM/atomic spectra & selection rules]
+      {
+        "question": "An atom in its ground state absorbs a photon of energy 3.0 eV. It later returns to the ground state by emitting two photons, of energies 1.8 eV and 1.2 eV. The ionization energy of the atom is",
+        "choices": [
+          "1.8 eV",
+          "3.0 eV",
+          "4.2 eV",
+          "6.0 eV",
+          "It cannot be determined from the information given"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nSpectral lines fix only differences between levels: the data place one excited level 3.0 eV above the ground state and an intermediate level 1.2 eV above it, and say nothing about where the continuum lies. Answering 3.0 eV is the error of treating the highest level that happens to have been populated as the series limit; 4.2 eV comes from adding 3.0 and 1.2, quantities that are not both measured from the ground state in that sense.\n\n90-SECOND SOLUTION\nAsk what the experiment measures. Absorption and emission energies are level differences; ionization energy is the distance from the ground state to the continuum, which no line in this cascade probes. Choose the cannot-be-determined option.\n\nWHAT TO MEMORIZE\nOptical spectra give level spacings, not absolute energies; the ionization energy is read from the series limit, where the line spacing goes to zero."
+      },
+
+      // [OW/wave reflection & transmission at boundary]
+      {
+        "question": "Two long strings under the same tension are tied together. The second string has four times the linear mass density of the first. A sinusoidal wave travelling on the first string reaches the junction. The fraction of the incident power transmitted into the second string is",
+        "choices": [
+          "1/9",
+          "2/9",
+          "4/9",
+          "2/3",
+          "8/9"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWith the same tension, v = √(T/μ), so v₂ = v₁/2. The amplitude reflection coefficient is (v₂ − v₁)/(v₂ + v₁) = −1/3, so the reflected power fraction is (1/3)² = 1/9 and the transmitted fraction is 1 − 1/9 = 8/9. The trap answers are 2/3, which is the transmitted amplitude ratio 2v₂/(v₁ + v₂) mistaken for a power fraction, and 4/9, that amplitude ratio squared without the impedance factor that makes power fractions add to 1.\n\n90-SECOND SOLUTION\nCompute the reflected fraction, not the transmitted one: only the amplitude ratio −1/3 is needed, giving 1/9 reflected, so 8/9 is transmitted. A mismatch of only 2:1 in wave speed is mild, so almost everything must get through — 8/9 is the only choice near 1.\n\nWHAT TO MEMORIZE\nr = (v₂ − v₁)/(v₂ + v₁), R = r², T = 1 − R, and v = √(T/μ) on a string."
+      },
+
+      // [EM/EM waves & poynting]
+      {
+        "question": "A plane light wave travelling in air is normally incident on the flat surface of glass of index of refraction 1.5. The fraction of the incident intensity that is reflected is most nearly",
+        "choices": [
+          "0.04",
+          "0.10",
+          "0.16",
+          "0.20",
+          "0.25"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAt normal incidence the amplitude reflection coefficient is r = (n₁ − n₂)/(n₁ + n₂) = (1 − 1.5)/(2.5) = −0.20, and intensity goes as the square of amplitude, so R = 0.04. The 0.20 choice is the classic error of reporting the amplitude coefficient as an intensity fraction; 0.25 comes from using (n₁ − n₂)/n₂ squared.\n\n90-SECOND SOLUTION\nThe famous number for an air-glass surface is four percent per surface, which is why lens coatings exist. If you must derive it, compute 0.5/2.5 = 0.2 and square it.\n\nWHAT TO MEMORIZE\nR = [(n₁ − n₂)/(n₁ + n₂)]² at normal incidence, giving 4 percent for air to glass, and R + T = 1."
+      },
+
+      // [QM/spin & pauli matrices]
+      {
+        "question": "A spin-½ particle is prepared at t = 0 in the eigenstate of S_x with eigenvalue +ħ/2, and evolves under H = ωS_z. At t = π/ω, a measurement of S_x gives +ħ/2 with probability",
+        "choices": [
+          "0",
+          "¼",
+          "½",
+          "¾",
+          "1"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn the S_z basis the initial state is (|↑⟩ + |↓⟩)/√2, and the two components acquire opposite phases ∓ωt/2. At ωt = π the state is proportional to (|↑⟩ − |↓⟩)/√2, which is the S_x = −ħ/2 eigenstate, so the probability of +ħ/2 is zero. Choosing 1 is the error of assuming the state repeats after ωt = π; the spinor needs ωt = 2π. The value ½ belongs to t = π/2ω, where the spin points along ±y.\n\n90-SECOND SOLUTION\nUse Larmor precession: ⟨S⟩ rotates about z at angular frequency ω. In time π/ω it has swept through half a turn, carrying +x to −x, so a measurement of S_x can only give −ħ/2.\n\nWHAT TO MEMORIZE\nUnder H = ωS_z the mean spin precesses about z with angular frequency ω; the state vector itself only returns to itself after ωt = 2π."
+      },
+
+      // [SR/simultaneity]
+      {
+        "question": "Two clocks at rest in frame S lie on the x-axis 6.0 light-seconds apart and are synchronized in S. In frame S′, which moves at 0.50c along the +x direction of S, the readings of the two clocks at any single instant of S′ differ by",
+        "choices": [
+          "3.0 s",
+          "3.5 s",
+          "4.5 s",
+          "6.0 s",
+          "6.9 s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFrom t′ = γ(t − vx/c²), two clocks that read the same in S at separation L differ in S′ by Δt = vL/c² = 0.50 × 6.0 = 3.0 s, with the trailing clock reading ahead. The factor γ cancels because the readings compared are proper times of the clocks themselves, so choice B, γvL/c² ≈ 3.5 s, is the error of inserting a time dilation factor that does not belong. Choice D, 6.0 s, mistakes the light-travel time L/c for the offset.\n\n90-SECOND SOLUTION\nUse the one-line rule 'leading clocks lag by vL/c²' and just multiply 0.5 by 6, taking c = 1 in light-second and second units. No γ appears anywhere, which eliminates every choice carrying an awkward factor of 1.15.\n\nWHAT TO MEMORIZE\nClocks synchronized and a distance L apart in their own rest frame are out of step by vL/c² in a frame moving along their separation, the leading one behind."
+      },
+
+      // [SP/feynman diagrams & interactions]
+      {
+        "question": "Take the K mesons to have strangeness +1 and the Λ and Σ hyperons strangeness −1. Consider: I. π⁻ + p → K⁰ + Λ.  II. Σ⁰ → Λ + γ.  III. K⁺ → μ⁺ + ν_μ. Which proceed by the strong interaction?",
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "I and II only",
+          "I and III only"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nProcess I conserves charge, baryon number and strangeness (0 → +1 − 1 = 0), the signature of strong associated production. Process II emits a real photon, so it is electromagnetic no matter what else is conserved — that is the trap behind \"I and II only,\" since II does conserve strangeness. Process III produces leptons and changes strangeness by one unit, so it must be weak.\n\n90-SECOND SOLUTION\nScan for tell-tales rather than checking quantum numbers one by one: a photon in the final state means electromagnetic, leptons in the final state mean weak, and a strangeness change means weak. That instantly disqualifies II and III and leaves I only; then confirm I balances strangeness at 0 on both sides.\n\nWHAT TO MEMORIZE\nStrong and electromagnetic interactions conserve strangeness; only the weak interaction changes it (by one unit). Photons signal electromagnetic; final-state leptons signal weak."
+      },
+
+      // [CM/terminal velocity & drag]
+      {
+        "question": "A small sphere is released from rest in a fluid that exerts a drag force −bv, with b/m = 1.0 s⁻¹. Buoyancy is negligible and g = 9.8 m/s². Its speed 1.0 s after release is most nearly (take e ≈ 2.7)",
+        "choices": [
+          "3.6 m/s",
+          "4.9 m/s",
+          "6.2 m/s",
+          "8.5 m/s",
+          "9.8 m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nHere the terminal speed is v_t = mg/b = 9.8 m/s and the time constant is τ = m/b = 1.0 s, so the release time is exactly one time constant: v = v_t(1 − 1/e) ≈ 9.8(0.63) ≈ 6.2 m/s. The distractor 9.8 m/s is both the terminal speed and the drag-free value gt, and 3.6 m/s is v_t/e, the exponential written the wrong way round.\n\n90-SECOND SOLUTION\nRecognise t = τ and quote the universal 63 percent: after one time constant any exponential approach has covered 0.63 of its range. Then 0.63 × 9.8 ≈ 6.2, and no further arithmetic is needed.\n\nWHAT TO MEMORIZE\nv(t) = v_t[1 − exp(−t/τ)] with v_t = mg/b and τ = m/b; 1 − 1/e ≈ 0.63."
+      },
+
+      // [EM/induction & faraday]
+      {
+        "question": "A conducting bar of mass m slides without friction on two horizontal rails a distance L apart in a uniform vertical magnetic field of magnitude B. The rails have negligible resistance and are joined at one end by an uncharged capacitor of capacitance C. A constant horizontal force F is applied to the bar, at rest at t = 0. The acceleration of the bar is",
+        "choices": [
+          "F/m",
+          "F/(m + CBL)",
+          "F/(m + CB²L²)",
+          "F/(m − CB²L²)",
+          "not determinable without the resistance of the circuit"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe motional emf is BLv, so the capacitor charge is q = CBLv and the current is i = dq/dt = CBLa; the magnetic force on the bar is BiL = CB²L²a, opposing F. Newton's law F − CB²L²a = ma gives a = F/(m + CB²L²), a constant. Choosing F/m ignores the back reaction, and the last choice is the trap of remembering the resistive version of this problem, where the drag depends on v and the bar approaches a terminal speed.\n\n90-SECOND SOLUTION\nThe capacitor makes the current proportional to acceleration rather than to velocity, so its reaction acts exactly like extra inertia: the bar behaves as though its mass were m + CB²L². Check the dimensions of CB²L² or take C → 0 to recover F/m, and only one choice survives both tests.\n\nWHAT TO MEMORIZE\nWith a resistor the induced current goes as v and produces damping; with a capacitor it goes as a and produces an effective added mass CB²L²."
+      },
+
+      // [QM/finite well & bound states]
+      {
+        "question": "A particle of mass m moves in one dimension in the potential V(x) = A|x|, where A is a positive constant. Its ground-state energy is proportional to",
+        "choices": [
+          "ħ(A/m)^½",
+          "(ħ²A/m)^⅓",
+          "(ħ²A²/m)^⅓",
+          "(ħA²/m)^⅓",
+          "ħ²A²/m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nOnly ħ, m and A are available, and A has units of energy per length. Writing E ∝ ħ^a A^b m^c and matching units gives a = ⅔, b = ⅔, c = −⅓, i.e. E ∝ (ħ²A²/m)^⅓. Choosing ħ(A/m)^½ is the error of importing the oscillator answer ħω with A misread as a force constant; A has the wrong dimensions for that, since V is linear rather than quadratic.\n\n90-SECOND SOLUTION\nDo not solve the Airy equation. Check the scaling instead: a heavier particle must sit lower and a steeper potential must push the level up, and only the option that behaves as A^⅔ m^(−⅓) does both while carrying units of energy.\n\nWHAT TO MEMORIZE\nNothing specific to this potential. For V = A|x|^n dimensional analysis gives E ∝ (ħ²/m)^(n/(n+2)) A^(2/(n+2)); check it against n = 2, where it returns ħ√(A/m)."
+      },
+
+      // [SP/nuclear gamma transitions & mossbauer]
+      {
+        "question": "A free nucleus of mass number 100, initially at rest, emits a 2.0 MeV gamma ray. Taking the nuclear rest energy to be 931.5 MeV per nucleon, the recoil kinetic energy of the nucleus is most nearly",
+        "choices": [
+          "0.2 eV",
+          "2 eV",
+          "20 eV",
+          "200 eV",
+          "2 keV"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nMomentum conservation gives the nucleus p = E_γ/c, and since the recoil is utterly nonrelativistic, E_R = p²/2M = E_γ²/2Mc² = (2.0)²/(2 × 9.3 × 10⁴) MeV ≈ 2 × 10⁻⁵ MeV ≈ 20 eV. Answers near 2 keV come from taking the recoil to be of order (m_e/M)E_γ or from dropping a power of ten in Mc²; 2 eV comes from using E_γ/2Mc² scaling with a single power of E_γ.\n\n90-SECOND SOLUTION\nRecognize the standard Mossbauer ratio E_R/E_γ = E_γ/2Mc². Here that is 2/(1.86 × 10⁵) ≈ 10⁻⁵, so the recoil is 10⁻⁵ of 2 MeV = 20 eV. One division, no algebra — and note the answer is eV-scale, which is exactly why gamma resonance absorption fails for a free nucleus and needs a lattice.\n\nWHAT TO MEMORIZE\nE_R = E_γ²/2Mc², with Mc² ≈ 931.5 MeV × A. The fractional recoil E_R/E_γ = E_γ/2Mc² is the number that decides whether recoilless (Mossbauer) absorption matters."
+      },
+
+      // [CM/gravitation]
+      {
+        "question": "A projectile is fired straight up from the surface of an airless spherical planet of radius R with a speed equal to half the escape speed. Neglecting the planet's rotation, its maximum height above the surface is",
+        "choices": [
+          "R/4",
+          "R/3",
+          "R/2",
+          "2R/3",
+          "R"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith v = v_esc/2, the kinetic energy per unit mass is ¼v_esc²/2 = GM/4R, so energy conservation gives GM/4R − GM/R = −GM/r_max, hence r_max = 4R/3 and the height is R/3. The distractor R/4 is what the uniform-gravity formula h = v²/2g gives; it fails because the rise is comparable to R and gravity weakens over it.\n\n90-SECOND SOLUTION\nQuarter of the escape speed squared means the projectile supplies only a quarter of the energy needed to escape, so three quarters of the binding energy remains: −GMm/r = −(3/4)GMm/R gives r = 4R/3 at once. Also note the true answer must exceed the constant-g estimate R/4, which eliminates it and anything smaller.\n\nWHAT TO MEMORIZE\nv_esc = √(2GM/R), and E = ½mv² − GMm/r conserved on a radial trajectory."
+      },
+
+      // [EM/RLC & AC circuits]
+      {
+        "question": "A series RLC circuit has L = 2.0 mH, C = 2.0 nF and R = 20 Ω and is driven by a source of fixed amplitude and variable angular frequency ω. The full width of the average-power resonance curve between its half-power points, in rad/s, is",
+        "choices": [
+          "5.0 × 10³",
+          "1.0 × 10⁴",
+          "2.0 × 10⁴",
+          "5.0 × 10⁵",
+          "1.0 × 10⁶"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe full width at half power of a series RLC resonance is R/L = 20/(2.0 × 10⁻³) = 1.0 × 10⁴ rad/s. The 5.0 × 10³ choice is R/2L, the half-width rather than the full width, and 5.0 × 10⁵ is the resonant frequency itself, which the question does not ask for.\n\n90-SECOND SOLUTION\nThe capacitance is a red herring for the width, since only the ratio R/L sets it. Divide 20 by 2 × 10⁻³ and stop; if you prefer, ω₀ = 1/√(LC) = 5 × 10⁵ and Q = ω₀L/R = 50, so the width ω₀/Q is again 10⁴.\n\nWHAT TO MEMORIZE\nFull width at half power = R/L = ω₀/Q for a series RLC, with ω₀ = 1/√(LC) and Q = ω₀L/R."
+      },
+
+      // [TS/heat capacity]
+      {
+        "question": "Equal numbers of moles of a monatomic ideal gas (c_V = 3R/2) and a diatomic ideal gas (c_V = 5R/2) are mixed. For the mixture, c_P/c_V is",
+        "choices": [
+          "1.40",
+          "1.50",
+          "1.53",
+          "1.60",
+          "1.67"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nHeat capacities are extensive, so the molar c_V of the mixture is the mole-weighted mean, (3R/2 + 5R/2)/2 = 2R. Mayer's relation still holds for the mixture, c_P = c_V + R = 3R, so γ = 3R/2R = 1.50. Choice C, 1.53, is the common error of averaging the two γ values, (5/3 + 7/5)/2, instead of averaging the heat capacities; γ is a ratio and does not average.\n\n90-SECOND SOLUTION\nAverage the c_V values, not the gammas: 2R. Add R for c_P and divide. The answer must lie strictly between 1.40 and 1.67, and the naive average of the gammas, 1.53, is offered precisely as the trap, so pick the clean 3/2.\n\nWHAT TO MEMORIZE\nc_P − c_V = R per mole for any ideal gas, including a mixture; mixtures add heat capacities, weighted by mole fraction."
+      },
+
+      // [LM/dimensional analysis]
+      {
+        "question": "A cold cloud of negligible pressure and uniform mass density ρ collapses under its own gravity. Taking the collapse time to depend only on ρ and the gravitational constant G, that time is proportional to",
+        "choices": [
+          "√(Gρ)",
+          "1/√(Gρ)",
+          "1/(Gρ)",
+          "√(G/ρ)",
+          "√(ρ/G)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nG has units m³·kg⁻¹·s⁻² and ρ has kg·m⁻³, so the product Gρ has units s⁻² and nothing else — mass and length cancel exactly. The only combination with units of time is therefore (Gρ)⁻¹/², i.e. 1/√(Gρ). The choice √(ρ/G) keeps a leftover kg·m⁻³ and is what you get by inverting only ρ instead of the whole product; 1/(Gρ) has units of time squared.\n\n90-SECOND SOLUTION\nForm Gρ, see immediately that it is a pure inverse-square-time, and take the inverse square root. No exponent algebra is needed, and any choice that is not a power of the single product Gρ can be dropped without checking.\n\nWHAT TO MEMORIZE\nGρ has dimensions of 1/time², so free-fall or dynamical times in self-gravitating systems always go as 1/√(Gρ). It is worth carrying [G] = m³·kg⁻¹·s⁻² in memory."
+      },
+
+      // [CM/non-inertial frames]
+      {
+        "question": "A block of mass m sits on the frictionless face of a wedge inclined at 30° to the horizontal. The wedge is accelerated horizontally so that the block stays at the same point on the face. The normal force on the block is",
+        "choices": [
+          "(√3/2)mg",
+          "mg",
+          "(3/2)mg",
+          "2mg/√3",
+          "2mg"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe block has no vertical acceleration, so the vertical components balance: N cos30° = mg, giving N = mg/cos30° = 2mg/√3 ≈ 1.15mg. The horizontal component then supplies ma, so a = g tan30°. The distractor (√3/2)mg = mg cos30° is the value for a stationary wedge, where the block's acceleration is along the surface, not zero.\n\n90-SECOND SOLUTION\nThe surface now has to hold the full weight up and push the block sideways as well, so N must exceed mg — eliminate (√3/2)mg and mg on sight. Then N = mg/cosθ is the only combination that reduces to mg as θ → 0.\n\nWHAT TO MEMORIZE\nBlock riding on a frictionless incline of angle θ with the incline accelerating horizontally: a = g tanθ and N = mg/cosθ."
+      },
+
+      // [EM/magnetic dipole & field lines]
+      {
+        "question": "Two small identical current loops are held coaxially with their planes parallel, separated by a distance d that is large compared with their radii. The magnitude of the force between them varies with separation as",
+        "choices": [
+          "d⁻¹",
+          "d⁻²",
+          "d⁻³",
+          "d⁻⁴",
+          "d⁻⁶"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEach loop is a magnetic dipole whose field falls off as d⁻³, so the interaction energy U = −m·B goes as d⁻³ and the force, being the negative gradient of U, goes as d⁻⁴. The d⁻³ choice is the common error of quoting the field dependence instead of differentiating it; d⁻⁶ comes from multiplying two dipole fields together as if each loop supplied one factor.\n\n90-SECOND SOLUTION\nAny time you know an interaction energy scaling, take one more power of 1/d for the force. Dipole field is 1/d³, so the force is 1/d⁴, and there is nothing to compute.\n\nWHAT TO MEMORIZE\nDipole field ~ 1/r³, dipole-dipole energy ~ 1/r³, dipole-dipole force ~ 1/r⁴. Force is always one power steeper than energy."
+      },
+
+      // [QM/identical particles]
+      {
+        "question": "Two identical spin-1 bosons occupy the same spatial orbital. The possible values of the total spin quantum number S are",
+        "choices": [
+          "0 only",
+          "1 only",
+          "2 only",
+          "0 and 2 only",
+          "0, 1, and 2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe total state of two bosons must be symmetric under exchange, and putting both in the same orbital makes the spatial factor symmetric, so the spin factor must be symmetric too. Coupling two spin-1 particles gives S = 2 (5 states, symmetric), S = 1 (3 states, antisymmetric) and S = 0 (1 state, symmetric). Choosing 0, 1, and 2 is the error of listing the coupling result while ignoring the exchange constraint.\n\n90-SECOND SOLUTION\nCount symmetric spin states directly: 3 × 3 = 9 states split into 6 symmetric and 3 antisymmetric, and 6 = 5 + 1 can only be S = 2 plus S = 0. Alternatively use the alternating rule — the top multiplet is symmetric, the next antisymmetric, and so on.\n\nWHAT TO MEMORIZE\nFor two identical particles in the same orbital the spin state carries the whole exchange symmetry: symmetric for bosons, antisymmetric for fermions. Coupled multiplets alternate in symmetry with the top one (S = 2j) symmetric."
+      },
+
+      // [TS/thermodynamic processes]
+      {
+        "question": "An ideal gas is taken from state A to state B along two different quasi-static paths. Which of the following must have the same value for both paths?\nI. ΔU\nII. ΔS\nIII. Q",
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "I and II only",
+          "I, II, and III"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nU and S are state functions, so ΔU and ΔS are fixed once the endpoints A and B are fixed, whatever route is taken. Q is a path function: only the combination Q − W = ΔU is forced to be the same, so two paths with different work carry different heat. Choosing I and III only is the standard error of treating heat as something a state possesses rather than something a process transfers.\n\n90-SECOND SOLUTION\nAsk of each entry: is it written as a difference of a property of the state, or as an amount transferred during the process? ΔU and ΔS are differences of state functions; Q and W are transfers. Answer the two differences. A one-line counterexample kills III: an isothermal path from A to B has Q ≠ 0 while an adiabat plus an isochore reaching the same B has a different Q.\n\nWHAT TO MEMORIZE\nU, S, H, F, G, T, P, V are state functions; Q and W are not. Only their combination Q − W = ΔU is path-independent."
+      },
+
+      // [OW/diffraction & gratings]
+      {
+        "question": "A transmission grating ruled with 5,000 lines per centimeter is illuminated at normal incidence by light of wavelength 500 nm. The total number of principal maxima that appear, counting the central one and both sides, is",
+        "choices": [
+          "3",
+          "4",
+          "5",
+          "7",
+          "9"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe ruling spacing is d = 1 cm/5,000 = 2.0 × 10⁻⁶ m = 2,000 nm, so d/λ = 4 exactly. Since d sin θ = mλ requires |m| ≤ d/λ, and m = ±4 would need sin θ = 1, i.e. θ = 90°, only m = 0, ±1, ±2, ±3 emerge: 7 maxima. The answer 9 is the classic error of counting the grazing m = ±4 orders as observable; 4 is d/λ itself, the highest order rather than the number of spots.\n\n90-SECOND SOLUTION\nGet d/λ = 4 in one step, then write 2m_max + 1 with m_max = 3 because the fourth order lies exactly at 90°. Answer 2(3) + 1 = 7.\n\nWHAT TO MEMORIZE\nd sin θ = mλ, so m_max is the largest integer strictly less than d/λ, and the count of maxima is 2m_max + 1."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Short Practice Test 3",
+    "cards": [
+
+      // [EM/current & resistance]
+      {
+        "question": "A steady current flows along a solid copper wire whose cross-sectional area decreases gradually from one end to the other. Which of the following is NOT true?",
+        "choices": [
+          "The current is the same through every cross-section.",
+          "The current density is greater where the cross-section is smaller.",
+          "The electron drift speed is greater where the cross-section is smaller.",
+          "The electric field inside the wire is stronger where the cross-section is smaller.",
+          "The potential drop per unit length is the same everywhere along the wire."
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nCharge conservation in the steady state forces the same current I through every cross-section, so J = I/A grows where A shrinks, and with J = nev_d and J = σE both the drift speed and the internal field grow with it. The potential drop per unit length is exactly E, which therefore varies along the wire, so the last statement is false. Choosing one of the first four usually comes from imagining a uniform field inside a conductor, which holds only for uniform cross-section.\n\n90-SECOND SOLUTION\nWrite the chain I fixed → J = I/A → E = ρJ → v_d = J/ne. Everything except I varies as 1/A, and dV/dx is just E, so the statement claiming it is constant is the odd one out.\n\nWHAT TO MEMORIZE\nIn a steady current, I is the same at every cross-section, not J or E; J = I/A = nev_d = σE, and the potential gradient equals E."
+      },
+
+      // [QM/uncertainty principle]
+      {
+        "question": "Which of the following is NOT a consequence of the uncertainty principle Δx Δp ≥ ħ/2 or its energy-time counterpart?",
+        "choices": [
+          "The zero-point energy of a quantum harmonic oscillator.",
+          "The natural linewidth of light emitted by a state of finite lifetime.",
+          "The finite size of the hydrogen atom in its ground state.",
+          "The angular spreading of a particle beam after it passes through a narrow slit.",
+          "The discreteness of the bound-state energy levels of a particle in a potential well."
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nDiscreteness comes from imposing boundary conditions on a wave equation in a confined region, not from the uncertainty relation: the uncertainty principle sets the scale of the lowest level but says nothing about the levels being separated at all. The other four are standard uncertainty estimates — zero-point energy, ΔE ≈ ħ/τ for a finite lifetime, minimizing p²/2m − e²/4πε₀r to get the Bohr radius, and Δp_transverse ≈ ħ/Δx at a slit. Choosing the zero-point energy is the usual trap, since it looks like a quantization statement but is in fact the uncertainty principle at work.\n\n90-SECOND SOLUTION\nAsk of each option whether it is an order-of-magnitude estimate built from ħ and a confinement scale. Four are; the one that is a statement about the pattern of levels rather than their scale is the exception.\n\nWHAT TO MEMORIZE\nΔx Δp ≥ ħ/2 and ΔE Δt ≥ ħ/2 give magnitudes — minimum energies, spreads, linewidths. Quantization of levels comes instead from boundary conditions on the wavefunction."
+      },
+
+      // [SP/astrophysics & cosmology]
+      {
+        "question": "Two stars have equal luminosity, but one is four times as far from Earth as the other. Given that a flux ratio of 100 corresponds to exactly 5 magnitudes and that log₁₀2 = 0.30, the more distant star is fainter by how many magnitudes?",
+        "choices": [
+          "0.75",
+          "1.5",
+          "2.0",
+          "It cannot be determined without the stars' surface temperatures.",
+          "3.0"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEqual luminosity means the flux ratio is set by the inverse square law alone: 4² = 16. A factor 100 in flux is 5 magnitudes, so Δm = 2.5 log₁₀(16) = 2.5 × 4 × 0.30 = 3.0. The trap is 1.5, which is 2.5 log₁₀(4) — using the distance ratio in place of the flux ratio and forgetting to square. Temperatures are a red herring; luminosity is already given as equal, so nothing about the spectra is needed.\n\n90-SECOND SOLUTION\nCount factors of 2. Four times the distance is 16 times fainter = 2⁴, and each factor of 2 in flux is 2.5 × 0.30 = 0.75 magnitude, so 4 × 0.75 = 3.0. Doing it in powers of 2 avoids logs entirely and immediately exposes 0.75 (one factor of 2) and 1.5 (two factors) as partial answers.\n\nWHAT TO MEMORIZE\nΔm = 2.5 log₁₀(F₁/F₂), larger m = fainter, and F ∝ L/d². Useful anchors: a factor 100 in flux is 5 mag, a factor 2 is about 0.75 mag."
+      },
+
+      // [EM/gauss's law]
+      {
+        "question": "A point charge +q sits at the centre of a cube of edge length a. Consider the following statements. I. The electric flux through one face is q/6ε₀. II. The flux through the entire cube depends on a. III. The magnitude of E is the same at every point of a given face. Which are true?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II",
+          "I and III",
+          "I, II, and III"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nGauss's law gives total flux q/ε₀ with no reference to size or shape, so II is false, and symmetry among the six identical faces splits that equally, making I true. Statement III is false because a face corner is farther from the charge than the face centre and the field there is also more oblique; students who accept III are importing the uniformity of a spherical surface into a flat one.\n\n90-SECOND SOLUTION\nGauss's law depends only on enclosed charge, which kills II at once and eliminates two choices. Since I is plainly right by six-fold symmetry, only I only and I and III survive, and a sketch of the field at a face corner settles it.\n\nWHAT TO MEMORIZE\nTotal flux = q_enc/ε₀ regardless of surface size or shape, and symmetry can divide flux among identical faces even when the field on each face is not uniform."
+      },
+
+      // [TS/phase transitions & latent heat]
+      {
+        "question": "Ice melts at 273 K with latent heat of fusion 3.4 × 10⁵ J/kg, and on melting the specific volume decreases by 1.0 × 10⁻⁴ m³/kg. From dP/dT = L/(T Δv), the slope of the melting curve is most nearly",
+        "choices": [
+          "−1.2 × 10⁷ Pa/K",
+          "−3.4 × 10⁹ Pa/K",
+          "−1.2 × 10⁵ Pa/K",
+          "+1.2 × 10⁷ Pa/K",
+          "+3.4 × 10⁹ Pa/K"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nGoing solid → liquid the volume drops, so Δv = −1.0 × 10⁻⁴ m³/kg while L is positive, and the slope is negative: dP/dT = 3.4 × 10⁵ / (273 × (−1.0 × 10⁻⁴)) ≈ 3.4 × 10⁵ / (−2.7 × 10⁻²) ≈ −1.2 × 10⁷ Pa/K. The +1.2 × 10⁷ choice is the sign error of using the magnitude of Δv, and −3.4 × 10⁹ is what you get by forgetting to divide by T.\n\n90-SECOND SOLUTION\nFix the sign first from physics you already know: raising the pressure on ice makes it melt at a lower temperature, so the melting curve leans backwards and dP/dT < 0. That eliminates two choices instantly. Then only the order of magnitude is left: 3.4 × 10⁵ divided by roughly 3 × 10⁻² is about 10⁷.\n\nWHAT TO MEMORIZE\nClausius-Clapeyron, dP/dT = L/(T Δv), with Δv the volume change per unit mass in the same direction as L is absorbed. Water is the anomalous case: the solid is less dense, Δv < 0 on melting, slope negative."
+      },
+
+      // [OW/standing waves on strings]
+      {
+        "question": "A string of length L fixed at both ends vibrates in its third harmonic at frequency f. Consider the statements: I. The wavelength is 2L/3. II. The midpoint of the string is a node. III. Doubling the tension doubles f. Which are correct?",
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "I and II",
+          "I, II, and III"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe third harmonic fits three half-wavelengths in L, so λ = 2L/3 and I is right. Its nodes sit at 0, L/3, 2L/3 and L, so the midpoint is an antinode, not a node — statement II is the even-harmonic picture applied to an odd one. Since f ∝ √(T/μ), doubling T multiplies f by √2, not 2, so III is the standard forgotten-square-root error.\n\n90-SECOND SOLUTION\nSketch three humps mentally: the middle hump is centred on L/2, so II dies immediately, and any frequency-versus-tension statement that is linear rather than square-root dies with it. That leaves I only, without checking I in detail.\n\nWHAT TO MEMORIZE\nλ_n = 2L/n and f_n = (n/2L)√(T/μ) for a string fixed at both ends; frequency scales as the square root of tension."
+      },
+
+      // [CM/rotational dynamics]
+      {
+        "question": "A uniform rod of mass M and length L hangs horizontally at rest, held by two vertical strings, one at each end. One string is cut. Immediately afterward the tension in the remaining string is",
+        "choices": [
+          "Mg",
+          "3Mg/4",
+          "Mg/4",
+          "Mg/3",
+          "Mg/2"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAt the instant of the cut the still-supported end has not yet moved, so it serves as an instantaneous pivot: α = (MgL/2)/(ML²/3) = 3g/2L, and the centre of mass accelerates downward at a = αL/2 = 3g/4. Newton's second law for the rod, Mg − T = M(3g/4), then gives T = Mg/4. The choice Mg/2 is the statics answer; it assumes the rod is still in equilibrium, but the centre of mass is in fact falling at three quarters of g.\n\n90-SECOND SOLUTION\nThe centre of mass must accelerate downward, so the surviving tension has to be less than the old Mg/2 — that alone kills Mg, 3Mg/4 and Mg/2. Then use the standard released-rod result a_cm = 3g/4 and read off T = M(g − 3g/4).\n\nWHAT TO MEMORIZE\nI = ML²/3 for a uniform rod about one end, and the trick that a support point which is still momentarily at rest can be used as a pivot."
+      },
+
+      // [EM/magnetic materials]
+      {
+        "question": "A ferromagnetic transformer core of volume 1.0 × 10⁻³ m³ is driven at 60 Hz. Its B-H hysteresis loop encloses an area of 500 J/m³. The power dissipated in the core by hysteresis is most nearly",
+        "choices": [
+          "0.50 W",
+          "15 W",
+          "30 W",
+          "60 W",
+          "3.0 × 10⁴ W"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe area enclosed by the B-H loop is the energy dissipated per unit volume per cycle, so P = (loop area) × (volume) × (frequency) = 500 × 1.0 × 10⁻³ × 60 = 30 W. The 0.50 W choice is the energy per cycle in joules misread as a power, that is, forgetting the factor of frequency; 3.0 × 10⁴ W forgets the volume.\n\n90-SECOND SOLUTION\nCheck units instead of recalling a formula: B·H has units (T)(A/m) = J/m³, so the loop area is an energy density per cycle. The only way to build a watt from 500 J/m³, 10⁻³ m³ and 60 s⁻¹ is to multiply all three.\n\nWHAT TO MEMORIZE\nHysteresis loss per cycle per unit volume equals the area of the B-H loop; multiply by volume and by driving frequency for average power."
+      },
+
+      // [QM/de broglie waves]
+      {
+        "question": "A photon and a nonrelativistic electron each have wavelength 1.0 nm. Taking hc = 1240 eV·nm and λ = 1.23 nm/√V for an electron accelerated from rest through V volts, the ratio of the photon's energy to the electron's kinetic energy is most nearly",
+        "choices": [
+          "1",
+          "30",
+          "8 × 10²",
+          "4 × 10⁴",
+          "6 × 10⁵"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe photon carries 1240 eV·nm / 1.0 nm = 1240 eV. For the electron, λ = 1.23 nm/√V gives √V = 1.23, so V ≈ 1.5 volts and the kinetic energy is about 1.5 eV. The ratio is 1240/1.5 ≈ 8 × 10². Answering 1 is the error of using E = hc/λ for the electron as well; that relation holds only for massless particles, while a massive particle has E = h²/2mλ².\n\n90-SECOND SOLUTION\nForm the ratio symbolically first: (hc/λ) ÷ (h²/2mλ²) = 2mcλ/h = 2λ/λ_C, where λ_C = h/m_ec = 2.4 × 10⁻³ nm. So the ratio is 2(1.0)/0.0024 ≈ 800 — one division, no constants plugged in.\n\nWHAT TO MEMORIZE\nhc = 1240 eV·nm; λ = 1.23 nm/√V for slow electrons; electron Compton wavelength 2.4 pm. Photon energy goes as 1/λ, massive-particle kinetic energy as 1/λ²."
+      },
+
+      // [TS/heat conduction]
+      {
+        "question": "Two identical laterally insulated bars connect a hot reservoir to a cold one, side by side, and in the steady state they transfer heat at a total rate of 12 W. The bars are then joined end to end to form a single bar spanning the same two reservoirs. The rate of heat flow is now",
+        "choices": [
+          "1.0 W",
+          "1.5 W",
+          "3.0 W",
+          "6.0 W",
+          "12 W"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nHeat current is kAΔT/L, so side by side the two bars give twice the current of one bar: each carries 6 W. Joined end to end across the same reservoirs, the conducting path has the cross-section of one bar and twice the length, so the current is half of 6 W, or 3.0 W. Choice D, 6.0 W, is the error of counting only the loss of area while forgetting that the length also doubled; choice E treats heat current as if it depended only on the amount of material.\n\n90-SECOND SOLUTION\nTreat it as resistors: identical bars in parallel carry 12 W, so in series across the same temperature difference they carry a quarter of that, since series doubles the resistance while parallel had halved it. Two factors of 2 in the same direction, so divide 12 by 4.\n\nWHAT TO MEMORIZE\nH = kAΔT/L, with thermal resistance L/kA adding in series and conductances kA/L adding in parallel, exactly like electrical resistance with ΔT playing the role of voltage."
+      },
+
+      // [CM/center of mass]
+      {
+        "question": "A 60 kg man stands at one end of a 120 kg boat of length 3.0 m floating at rest on still water. He walks to the other end. Neglecting water resistance, how far does the man move relative to the water?",
+        "choices": [
+          "1.0 m",
+          "2.0 m",
+          "1.5 m",
+          "2.5 m",
+          "3.0 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nNo horizontal external force acts, so the centre of mass of man plus boat stays fixed in the water. If the boat slides back a distance d, the man's displacement relative to the water is 3.0 − d, and 60(3.0 − d) = 120d gives d = 1.0 m, so the man moves 2.0 m. The distractor 1.0 m is the boat's displacement, and 3.0 m is the displacement relative to the boat, not to the water.\n\n90-SECOND SOLUTION\nThe two displacements split the 3.0 m in inverse proportion to the masses, 2:1 in the man's favour because the boat is twice as heavy. Write down 2.0 m and 1.0 m without solving anything.\n\nWHAT TO MEMORIZE\nWith zero net external force the centre of mass does not move: m₁Δx₁ = −m₂Δx₂, and the two displacements sum to the relative displacement."
+      },
+
+      // [EM/dielectrics]
+      {
+        "question": "A parallel-plate capacitor with plate separation d is charged and then disconnected from its battery. A slab of dielectric constant 3.0 and thickness d/2 is then inserted so that it fills half of the gap, vacuum filling the rest. The ratio of the potential difference across the vacuum region to that across the slab is",
+        "choices": [
+          "9.0",
+          "3.0",
+          "1.0",
+          "1/3",
+          "1/9"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith no free charge on the slab faces, D is the same in both regions, so E_vac = D/ε₀ while E_slab = D/(κε₀), and since the two regions have the same thickness d/2, the voltage ratio equals κ = 3.0. The 1/3 choice is the sign-flipped version of the same reasoning, and 1.0 comes from wrongly assuming E rather than D is continuous across the interface.\n\n90-SECOND SOLUTION\nRecall that a dielectric weakens the field inside it by κ. The vacuum half therefore carries the larger share of the voltage, which immediately rules out every choice below 1, and the factor is just κ.\n\nWHAT TO MEMORIZE\nAt a charge-free interface the normal component of D is continuous, so E drops by κ inside a linear dielectric. Whether the battery is still attached does not affect this ratio."
+      },
+
+      // [QM/zeeman & stark effects]
+      {
+        "question": "Ignoring electron spin, an atom is placed in a weak uniform magnetic field and a spectral line arising from an l = 2 → l = 1 transition is observed. With the electric-dipole rule Δm = 0, ±1, into how many distinct frequencies does the line split?",
+        "choices": [
+          "Two",
+          "Three",
+          "Five",
+          "Nine",
+          "Fifteen"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEach sublevel is shifted by ΔE = m μ_B B, so the emitted photon energy is shifted by (m_final − m_initial) μ_B B = Δm μ_B B, which takes only the three values 0 and ±μ_B B. Nine counts the allowed m → m' pairs (1 + 2 + 3 + 2 + 1) and fifteen counts all 5 × 3 pairs; both mistake distinct transitions for distinct frequencies. Five is just the number of sublevels of the l = 2 level.\n\n90-SECOND SOLUTION\nThe photon energy depends only on Δm, and the selection rule allows three values of Δm. Any normal Zeeman line becomes a triplet no matter what l values are involved — answer three without counting sublevels.\n\nWHAT TO MEMORIZE\nNormal Zeeman effect: shift = Δm μ_B B with Δm = 0, ±1, so every line splits into three components."
+      },
+
+      // [OW/group & phase velocity]
+      {
+        "question": "Electromagnetic waves in a plasma obey ω² = ω_p² + c²k², where ω_p is a constant. At a frequency where the index of refraction is 0.60, the group velocity is most nearly (c = 3.0 × 10⁸ m/s)",
+        "choices": [
+          "1.1 × 10⁸ m/s",
+          "1.8 × 10⁸ m/s",
+          "3.0 × 10⁸ m/s",
+          "5.0 × 10⁸ m/s",
+          "It cannot be determined without the value of ω_p."
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nDifferentiating ω² = ω_p² + c²k² gives 2ω dω = 2c²k dk, so v_g = dω/dk = c²k/ω = c·(ck/ω) = cn = 0.60 × 3.0 × 10⁸ = 1.8 × 10⁸ m/s. The 5.0 × 10⁸ m/s choice is the phase velocity c/n, the standard slip of quoting v_p when v_g was asked; 1.1 × 10⁸ m/s is cn², from squaring the index twice. Nothing superluminal is carried here: v_p v_g = c², so v_p > c forces v_g < c.\n\n90-SECOND SOLUTION\nRecall v_p v_g = c² for this dispersion relation and read v_p = c/n straight off the definition of index; then v_g = cn immediately. If ω_p were really needed the index could not have been quoted, so eliminate the last choice on sight.\n\nWHAT TO MEMORIZE\nFor ω² = ω_p² + c²k² (also the waveguide relation with ω_c), v_p = c/n, v_g = cn, and v_p v_g = c²."
+      },
+
+      // [LM/signal transmission & impedance matching]
+      {
+        "question": "A short pulse is launched into one end of a 50 Ω coaxial cable whose far end is left open, and the reflected pulse returns to the launching end 200 ns later. Taking the signal speed in the cable to be 2.0 × 10⁸ m/s, the length of the cable is most nearly",
+        "choices": [
+          "10 m",
+          "20 m",
+          "30 m",
+          "40 m",
+          "60 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe pulse travels the cable twice, so the one-way transit time is 100 ns and L = vt/2 = (2.0 × 10⁸)(1.0 × 10⁻⁷) = 20 m. The 40 m choice is the whole 200 ns treated as a one-way trip, the standard forgotten factor of 2; 30 m comes from using c instead of the slower signal speed in the dielectric. The 50 Ω is a red herring — the characteristic impedance sets how much of the pulse comes back, not when.\n\n90-SECOND SOLUTION\nRound trip means halve the time before multiplying: 100 ns × 2 × 10⁸ m/s = 20 m, and 10⁻⁷ × 10⁸ = 10 makes it a one-line mental product. Any choice built from 3 × 10⁸ is wrong because a speed was handed to you.\n\nWHAT TO MEMORIZE\nTime-domain reflectometry: L = vt/2 for a round trip. Signals in coax travel at roughly two-thirds of c, and an open end reflects with the same sign while a short reflects inverted; a cable terminated in its characteristic impedance reflects nothing."
+      },
+
+      // [CM/rocket & variable mass]
+      {
+        "question": "A rocket in free space starts from rest and burns fuel until its speed equals twice the exhaust speed relative to the rocket. The fraction of the initial total mass that was propellant is most nearly (take e ≈ 2.7)",
+        "choices": [
+          "0.50",
+          "0.63",
+          "0.75",
+          "0.86",
+          "0.95"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe rocket equation Δv = u ln(m₀/m) with Δv = 2u gives m₀/m = e² ≈ 7.4, so the surviving mass is about 0.14 of the original and the propellant fraction is about 0.86. The distractor 0.63 = 1 − 1/e is the answer for Δv = u; it comes from dropping the factor of 2 in the exponent.\n\n90-SECOND SOLUTION\ne² is a little over 7, so barely one seventh of the rocket is left at burnout. One seventh is 0.14, so the fuel fraction is just under 0.9.\n\nWHAT TO MEMORIZE\nΔv = u ln(m₀/m_final), and e ≈ 2.7, e² ≈ 7.4."
+      },
+
+      // [QM/compton scattering]
+      {
+        "question": "Monochromatic X-rays Compton-scatter from free electrons at rest. Consider: I. The wavelength shift at a given scattering angle does not depend on the incident wavelength. II. At a scattering angle of 90° the scattered photon and the recoil electron always carry away equal energies. III. The fraction of its energy the photon loses at a given angle grows as the incident photon energy is increased. Which are true?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II",
+          "I and III",
+          "I, II, and III"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nΔλ = (h/m_ec)(1 − cos θ) contains no reference to the incident wavelength, so I is true, and the fractional energy loss Δλ/λ' grows as λ shrinks, so III is true. Statement II holds only at one special energy: at 90° the scattered photon has E' = E/(1 + E/m_ec²), which equals E/2 only when E = m_ec² = 511 keV. Picking II is the error of reading a fixed wavelength shift as a fixed energy split.\n\n90-SECOND SOLUTION\nCompton's formula is a shift in wavelength, not in energy — that single fact settles I and kills II. Then check the visible-light limit: a 2 eV photon barely changes wavelength in relative terms and loses almost nothing, so the fractional loss must grow with energy, giving III.\n\nWHAT TO MEMORIZE\nΔλ = (h/m_ec)(1 − cos θ) with h/m_ec = 2.43 pm, maximum 2λ_C at 180°."
+      },
+
+      // [CM/hamiltonian]
+      {
+        "question": "A particle of mass m moves in one dimension with Hamiltonian H = p²/(2m) + U(x). For the quantity G = xp, the time derivative dG/dt is",
+        "choices": [
+          "0",
+          "p²/(2m) − x dU/dx",
+          "p²/m + x dU/dx",
+          "p²/m − x dU/dx",
+          "−x dU/dx"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nUse Hamilton's equations directly: dx/dt = ∂H/∂p = p/m and dp/dt = −∂H/∂x = −dU/dx, so dG/dt = (dx/dt)p + x(dp/dt) = p²/m − x dU/dx. The choice keeping p²/(2m) is the common slip of copying the kinetic energy instead of differentiating it, since dx/dt = p/m gives p·p/m = 2 × (kinetic energy), not the kinetic energy itself. The choice 0 assumes xp is conserved, which is true only on average over a full period of bounded motion.\n\n90-SECOND SOLUTION\nJust apply the product rule with ẋ = p/m and ṗ = −dU/dx; no Poisson brackets are needed. The force term must enter with a minus sign because ṗ = −dU/dx, which alone removes two options, and the kinetic piece is p·(p/m), which removes the ½.\n\nWHAT TO MEMORIZE\nHamilton's equations ẋ = ∂H/∂p, ṗ = −∂H/∂x. Time-averaging this same result over a bounded orbit, where ⟨dG/dt⟩ = 0, is exactly the virial theorem 2⟨T⟩ = ⟨x dU/dx⟩."
+      },
+
+      // [SR/relativistic collisions]
+      {
+        "question": "Protons in a beam strike protons at rest in a target, and a proton-antiproton pair is created in addition to the two original protons. Taking the proton rest energy to be 940 MeV, the minimum beam kinetic energy is most nearly",
+        "choices": [
+          "0.94 GeV",
+          "1.9 GeV",
+          "2.8 GeV",
+          "5.6 GeV",
+          "7.5 GeV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt threshold the four final protons move together, so the invariant s equals (4m c²)². In the lab, s = (E + mc²)² − (pc)² = 2E mc² + 2(mc²)², and setting that equal to 16(mc²)² gives E = 7mc², i.e. a kinetic energy of 6mc² ≈ 6 × 940 MeV ≈ 5.6 GeV. Choice B, 1.9 GeV, is the classic error of paying only the rest energy of the new pair, 2mc², which ignores the kinetic energy the products must keep because momentum is conserved.\n\n90-SECOND SOLUTION\nMemorize the result for a fixed target: making a pair of mass equal to the beam particle's costs 6mc² of kinetic energy, not 2mc². If it is not memorized, note only that the answer must exceed 2mc² = 1.9 GeV by a large factor, which leaves 5.6 GeV or 7.5 GeV, and the threshold multiple is even.\n\nWHAT TO MEMORIZE\ns = (ΣE)² − (Σpc)² is invariant; evaluate it in the lab and again in the centre-of-momentum frame where all products are at rest. For p + p → p + p + p + p̅ on a fixed target, T_threshold = 6m_p c²."
+      },
+
+      // [SP/superconductivity]
+      {
+        "question": "A superconducting ring of area 1.0 × 10⁻⁴ m² encloses a uniform trapped field of 2.0 × 10⁻⁵ T. Taking h = 6.63 × 10⁻³⁴ J·s and e = 1.6 × 10⁻¹⁹ C, the number of flux quanta threading the ring is most nearly",
+        "choices": [
+          "1 × 10³",
+          "2 × 10⁵",
+          "5 × 10⁵",
+          "1 × 10⁶",
+          "4 × 10⁶"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe trapped flux is Φ = BA = 2.0 × 10⁻⁹ Wb, and the superconducting flux quantum is Φ₀ = h/2e = 6.63 × 10⁻³⁴/3.2 × 10⁻¹⁹ ≈ 2.1 × 10⁻¹⁵ Wb, so n = Φ/Φ₀ ≈ 1 × 10⁶. The choice 5 × 10⁵ is the classic error of using h/e instead of h/2e — forgetting that the current is carried by Cooper pairs of charge 2e, which halves the quantum and doubles the count.\n\n90-SECOND SOLUTION\nMemorize Φ₀ ≈ 2 × 10⁻¹⁵ Wb and the problem is one division: 2 × 10⁻⁹ divided by 2 × 10⁻¹⁵ = 10⁶. If you only recall h/e ≈ 4 × 10⁻¹⁵ Wb, remember pairing and halve it before dividing.\n\nWHAT TO MEMORIZE\nΦ₀ = h/2e ≈ 2.07 × 10⁻¹⁵ Wb, and flux through a superconducting loop is quantized in units of it. The 2e is the whole physics content: it is direct evidence for Cooper pairing."
+      }
+
+    ]
   }
 ];

@@ -13,9 +13,13 @@ const STORAGE_KEY = "flashcards-progress";
 const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
 const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
 
+// One-at-a-time mode: every question gets its own budget, then moves on.
+const TIMED_QUESTION_SECONDS = 120;
+const TIMED_WARN_SECONDS = 90;
+
 // Not real security: this file is public, so anyone who views the page
 // source can read it. It only keeps casual visitors out.
-const PASSWORD = "ilovepaula";
+const PASSWORD = "paulaisbreathtakinglybeautiful";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 const answerIndex = (card) => LETTERS.indexOf(card.answer);
@@ -71,14 +75,21 @@ function paintTimer() {
   timerEl.hidden = !show;
   if (!show) return;
 
-  const used = elapsedMs();
+  // In one-at-a-time mode the clock on screen is the current question's
+  // budget; the whole-set total still accrues and appears with the score.
+  const perQuestion = state.mode === "timed" && state.phase === "quiz";
+  const used = perQuestion ? Date.now() - state.qSince : elapsedMs();
+  const limit = perQuestion ? TIMED_QUESTION_SECONDS * 1000 : t.limit;
+
   timerEl.innerHTML = `<span></span><span class="timer-limit"></span>`;
   timerEl.firstElementChild.textContent = formatClock(used);
-  timerEl.lastElementChild.textContent = ` / ${formatClock(t.limit)}`;
+  timerEl.lastElementChild.textContent = ` / ${formatClock(limit)}`;
 
-  const ratio = t.limit > 0 ? used / t.limit : 0;
-  timerEl.classList.toggle("warn", ratio >= WARN_AT && ratio < 1);
-  timerEl.classList.toggle("over", ratio >= 1);
+  const warn = perQuestion
+    ? used >= TIMED_WARN_SECONDS * 1000
+    : limit > 0 && used / limit >= WARN_AT;
+  timerEl.classList.toggle("warn", warn && used < limit);
+  timerEl.classList.toggle("over", limit > 0 && used >= limit);
 }
 
 let ticksSinceSave = 0;
@@ -87,6 +98,7 @@ function syncTicking() {
   const shouldTick = state && state.phase === "quiz";
   if (shouldTick && !tickHandle) {
     tickHandle = setInterval(() => {
+      if (advanceIfQuestionExpired()) return;
       paintTimer();
       // Bank the elapsed total periodically so closing the tab mid-page
       // loses at most a few seconds of credit.
@@ -99,6 +111,26 @@ function syncTicking() {
     clearInterval(tickHandle);
     tickHandle = null;
   }
+}
+
+// A timed question moves on by itself once its budget runs out; whatever is
+// selected at that moment stands.
+function advanceIfQuestionExpired() {
+  if (!state || state.mode !== "timed" || state.phase !== "quiz") return false;
+  if (Date.now() - state.qSince < TIMED_QUESTION_SECONDS * 1000) return false;
+  goToPage(state.page + 1);
+  return true;
+}
+
+// Moving past the last page ends the pass.
+function goToPage(page) {
+  if (page > pageCount(state.items.length) - 1) {
+    submitPass();
+    return;
+  }
+  state.page = page;
+  state.qSince = Date.now();
+  render();
 }
 
 function shuffled(arr) {
@@ -127,8 +159,14 @@ function isCorrect(item) {
   return item.selected !== null && item.order[item.selected] === answerIndex(item.card);
 }
 
+// One question to a page in timed mode, four otherwise. Review always
+// uses PER_PAGE directly, so answers are shown four up in either mode.
+function perPage() {
+  return state && state.mode === "timed" ? 1 : PER_PAGE;
+}
+
 function pageCount(n) {
-  return Math.ceil(n / PER_PAGE);
+  return Math.ceil(n / perPage());
 }
 
 function setProgress(fraction) {
@@ -179,6 +217,7 @@ function save() {
           : null,
         second: state.second ?? null,
         missedIndexes: state.missedIndexes ? [...state.missedIndexes] : null,
+        mode: state.mode ?? null,
         // Bank the running total so a closed tab does not accrue time.
         timer: state.timer
           ? { banked: elapsedMs(), running: state.timer.running, limit: state.timer.limit }
@@ -220,6 +259,10 @@ function restore() {
       : null,
     second: saved.second,
     missedIndexes: saved.missedIndexes ? new Set(saved.missedIndexes) : null,
+    mode: saved.mode ?? null,
+    // A restored question gets its full budget back rather than resuming
+    // mid-countdown, so a refresh can never skip a question instantly.
+    qSince: Date.now(),
     // Resume paused; render restarts the clock if a pass is on screen.
     timer: saved.timer
       ? { banked: saved.timer.banked, running: false, since: 0, limit: saved.timer.limit }
@@ -252,16 +295,18 @@ function showIntro(exam) {
   render();
 }
 
-function startExam(exam) {
+function startExam(exam, mode) {
   state = {
     phase: "quiz",
     greeted: true,
     exam,
+    mode,
     pass: 1,
     first: null,
     second: null,
     items: exam.cards.map((card, i) => makeItem(card, i, false)),
     page: 0,
+    qSince: Date.now(),
     timer: { banked: 0, running: false, since: 0, limit: recommendedMs(exam) },
   };
   render();
@@ -273,6 +318,7 @@ function startSecondPass() {
     phase: "quiz",
     pass: 2,
     page: 0,
+    qSince: Date.now(),
     items: shuffled(
       state.first.missed.map((it) =>
         makeItem(it.card, it.deckIndex, SHUFFLE_CHOICES_ON_RETRY)
@@ -385,16 +431,31 @@ function renderIntro() {
       <span class="intro-clock-time"></span>
       <span class="intro-clock-note"></span>
     </div>
-    <ul>
-      <li>A clock starts when you begin and runs in the corner of the screen.</li>
-      <li>Next to it is the recommended time for the whole set.</li>
-      <li>It turns <span class="swatch warn"></span> amber once you have used
-          three quarters of that time, and
-          <span class="swatch over"></span> red once you go past it.</li>
-      <li><strong>Nothing stops when time runs out.</strong> The clock keeps
-          counting and you can keep working — it is a pacing guide, not a limit.</li>
-      <li>The clock pauses while you are reading your score or the answers.</li>
-    </ul>`;
+    <p class="intro-lead">Choose how you want to take it.</p>
+    <div class="modes">
+      <div class="mode">
+        <h3>Regular</h3>
+        <ul>
+          <li>Four questions to a page, and you can move back and forth.</li>
+          <li>One clock for the whole set, counting up beside the recommendation.</li>
+          <li>It turns <span class="swatch warn"></span> amber at three quarters
+              and <span class="swatch over"></span> red once you pass it, but
+              never stops you.</li>
+        </ul>
+      </div>
+      <div class="mode">
+        <h3>One at a time</h3>
+        <ul>
+          <li>A single question on screen with its own two-minute budget.</li>
+          <li>The clock turns <span class="swatch warn"></span> amber at 1:30,
+              and at 2:00 the question moves on by itself.</li>
+          <li>Whatever is selected when it moves on is your answer, and you
+              cannot go back to it.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="intro-foot">Either way, the second pass works the same as the
+      first, and the answers are shown four to a page at the end.</p>`;
 
   box.querySelector("h2").textContent = exam.name;
   box.querySelector(".intro-sub").textContent =
@@ -404,7 +465,10 @@ function renderIntro() {
 
   const actions = document.createElement("div");
   actions.className = "intro-actions";
-  actions.appendChild(button("Start", "btn primary", () => startExam(exam)));
+  actions.append(
+    button("Start regular", "btn primary", () => startExam(exam, "regular")),
+    button("Start one at a time", "btn", () => startExam(exam, "timed"))
+  );
   box.appendChild(actions);
 
   appEl.appendChild(box);
@@ -452,7 +516,8 @@ function renderQuiz() {
   const { items, page, pass, exam } = state;
   const total = pageCount(items.length);
   const lastPage = page === total - 1;
-  const visible = items.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+  const per = perPage();
+  const visible = items.slice(page * per, page * per + per);
 
   titleEl.textContent = exam.name;
   phaseEl.textContent =
@@ -464,9 +529,10 @@ function renderQuiz() {
   appEl.innerHTML = "";
 
   const grid = document.createElement("div");
-  grid.className = "grid";
+  // A lone question would otherwise sit in the left column of a two-up grid.
+  grid.className = per === 1 ? "grid grid-single" : "grid";
   visible.forEach((item, i) => {
-    grid.appendChild(questionCard(item, page * PER_PAGE + i + 1, items.length));
+    grid.appendChild(questionCard(item, page * per + i + 1, items.length));
   });
   appEl.appendChild(grid);
 
@@ -480,22 +546,24 @@ function renderQuiz() {
   const nav = document.createElement("div");
   nav.className = "nav";
 
-  const back = button("Back", "btn", () => {
-    state.page--;
-    render();
-  });
-  back.disabled = page === 0;
+  const timed = state.mode === "timed";
+
+  const back = button("Back", "btn", () => goToPage(state.page - 1));
+  // Going back would hand a question a second budget, so timed runs only
+  // move forward.
+  back.disabled = page === 0 || timed;
 
   const info = document.createElement("span");
   info.className = "nav-info";
-  info.textContent = `Page ${page + 1} of ${total}`;
+  info.textContent = timed
+    ? `Question ${page + 1} of ${items.length}`
+    : `Page ${page + 1} of ${total}`;
 
   const next = lastPage
     ? button("Submit answers", "btn primary", submitPass)
-    : button("Next", "btn primary", () => {
-        state.page++;
-        render();
-      });
+    : button(timed ? "Next question" : "Next", "btn primary", () =>
+        goToPage(state.page + 1)
+      );
 
   nav.append(back, info, next);
   appEl.appendChild(nav);
@@ -633,7 +701,7 @@ function toReview() {
 
 function renderReview() {
   const cards = state.exam.cards;
-  const total = pageCount(cards.length);
+  const total = Math.ceil(cards.length / PER_PAGE);
   const start = state.page * PER_PAGE;
   const visible = cards.slice(start, start + PER_PAGE);
 
