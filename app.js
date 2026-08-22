@@ -15,6 +15,12 @@ const CATEGORIES = [
   { key: "topic", label: "By topic" },
 ];
 const STORAGE_KEY = "flashcards-progress";
+// Separate from STORAGE_KEY on purpose: colors are keyed by exam name, not
+// by the whole-deck hash, so adding or editing other exams never touches
+// them. Renaming an exam orphans its saved color, which is an accepted
+// trade-off here.
+const COLOR_KEY = "flashcards-colors";
+const PALETTE = ["red", "orange", "amber", "green", "teal", "blue", "purple", "pink"];
 const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
 const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
 
@@ -283,6 +289,63 @@ function clearSaved() {
   }
 }
 
+// ---------- tile colors ----------
+
+function loadColors() {
+  try {
+    return JSON.parse(localStorage.getItem(COLOR_KEY) || "{}");
+  } catch (e) {
+    return {};
+  }
+}
+
+function setExamColor(examName, color) {
+  const colors = loadColors();
+  if (color) colors[examName] = color;
+  else delete colors[examName];
+  try {
+    localStorage.setItem(COLOR_KEY, JSON.stringify(colors));
+  } catch (e) {
+    /* private mode or full quota — the pick just will not persist */
+  }
+}
+
+function closeColorPopover() {
+  document.querySelector(".color-popover")?.remove();
+}
+
+function openColorPopover(anchorBtn, exam) {
+  closeColorPopover();
+  const current = loadColors()[exam.name] || null;
+
+  const pop = document.createElement("div");
+  pop.className = "color-popover";
+
+  const makeSwatch = (color) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "swatch-btn" + (color === current ? " selected" : "");
+    b.dataset.swatch = color || "none";
+    b.setAttribute("aria-label", color ? `Set color to ${color}` : "Remove color");
+    b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setExamColor(exam.name, color);
+      closeColorPopover();
+      renderMenu();
+    });
+    return b;
+  };
+
+  pop.appendChild(makeSwatch(null));
+  PALETTE.forEach((c) => pop.appendChild(makeSwatch(c)));
+  anchorBtn.parentElement.appendChild(pop);
+
+  // Dismiss on an outside click, but not on the click that just opened it.
+  setTimeout(() => {
+    document.addEventListener("click", closeColorPopover, { once: true });
+  }, 0);
+}
+
 // ---------- top-level navigation ----------
 
 function showLogin() {
@@ -494,10 +557,17 @@ function formatAdded(iso) {
 function renderMenu() {
   appEl.innerHTML = "";
 
+  const colors = loadColors();
+
   const examTile = (exam) => {
+    const wrap = document.createElement("div");
+    wrap.className = "tile-wrap";
+
     const tile = document.createElement("button");
     tile.type = "button";
     tile.className = "tile";
+    const color = colors[exam.name];
+    if (color) tile.dataset.color = color;
 
     const name = document.createElement("span");
     name.className = "tile-name";
@@ -517,7 +587,18 @@ function renderMenu() {
     }
 
     tile.addEventListener("click", () => showIntro(exam));
-    return tile;
+
+    const colorBtn = document.createElement("button");
+    colorBtn.type = "button";
+    colorBtn.className = "color-btn";
+    colorBtn.setAttribute("aria-label", `Choose a color for ${exam.name}`);
+    colorBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openColorPopover(colorBtn, exam);
+    });
+
+    wrap.append(tile, colorBtn);
+    return wrap;
   };
 
   CATEGORIES.forEach(({ key, label }) => {
