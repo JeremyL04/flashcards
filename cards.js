@@ -1315,6 +1315,1064 @@ const EXAMS = [
   },
 
   {
+    "name": "Classical Mechanics Test",
+    "added": "2026-08-22",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A boat can move at 5.0 m/s relative to the water. It is used to cross a straight river 120 m wide in which the current flows at 3.0 m/s parallel to the banks. If the boat is steered so that its bow points straight across the river (perpendicular to the banks) the whole time, the time required to reach the far bank is most nearly",
+        "choices": [
+          "24 s",
+          "15 s",
+          "21 s",
+          "40 s",
+          "60 s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe current only carries the boat downstream; it has no component perpendicular to the bank and so cannot help or hinder the crossing itself. The boat's velocity component across the river is fixed at 5.0 m/s by how it is steered, so the crossing time is simply width divided by that component: t = 120 m / 5.0 m/s = 24 s. The 15 s option comes from adding the boat and current speeds (5.0+3.0=8.0 m/s) and using that as if it were the across-river speed. The 21 s option comes from using the resultant ground speed √(5.0²+3.0²) ≈ 5.8 m/s instead of just the across-river component. The 60 s option comes from subtracting the speeds (5.0−3.0=2.0 m/s), confusing this with an upstream-angled crossing problem, which this is not.\n\n90-SECOND SOLUTION\nDecompose velocities into across-river and along-river components. Steering straight across means all 5.0 m/s is the across-river component; the current is entirely along-river and irrelevant to crossing time. t = 120/5.0 = 24 s.\n\nWHAT TO MEMORIZE\nIn river-crossing problems, only the velocity component perpendicular to the bank sets the crossing time; a current parallel to the bank is a red herring for that question (though it does set the downstream drift)."
+      },
+
+      {
+        "question": "A particle moves along the x-axis with speed given as a function of position by v(x) = c/x, where c = 4.0 m²/s and x > 0. The time required for the particle to move from x = 1.0 m to x = 3.0 m is most nearly",
+        "choices": [
+          "0.50 s",
+          "0.75 s",
+          "1.0 s",
+          "2.0 s",
+          "4.0 s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nSince v = dx/dt = c/x, separate variables: x dx = c dt. Integrating from x = 1.0 m to x = 3.0 m on the left and 0 to t on the right gives (x₂² − x₁²)/2 = ct, so t = (9.0 − 1.0)/(2·4.0) = 1.0 s. The 0.50 s option comes from treating v as constant at its initial value v(1.0)=4.0 m/s and using distance/speed. The 0.75 s option comes from averaging the speeds at the two endpoints, v(1.0)=4.0 m/s and v(3.0)=4/3 m/s, and using distance/average-speed instead of integrating properly — a shortcut that fails here because v(x) is not linear in x. The 2.0 s option doubles the correct integral by forgetting the factor of ½ from ∫x dx, and the 4.0 s option forgets to divide by c altogether.\n\n90-SECOND SOLUTION\nRecognize v(x) means chain-rule/separation-of-variables is required, not direct division of distance by speed. x dx = c dt integrates to a clean quadratic-in-x result; plug endpoints directly: (9−1)/8 = 1.0 s.\n\nWHAT TO MEMORIZE\nWhen velocity is given as a function of position rather than time, find time via ∫x dx = ∫c dt (separation of variables), not by using distance/average-speed shortcuts."
+      },
+
+      {
+        "question": "A projectile is launched from level ground at 35 m/s, at an angle above the horizontal whose cosine is 0.80. Neglecting air resistance and taking g = 9.8 m/s², the radius of curvature of the trajectory at its highest point is most nearly",
+        "choices": [
+          "45 m",
+          "80 m",
+          "125 m",
+          "160 m",
+          "250 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAt the highest point the velocity is purely horizontal, with magnitude v_top = v₀cosθ = 35 × 0.80 = 28 m/s. At that instant the only acceleration is g, directed straight down — perpendicular to the velocity — so g is entirely centripetal there: g = v_top²/R, giving R = v_top²/g = 28²/9.8 = 80 m. The 45 m option mistakenly divides by g using the vertical component of the initial velocity (v₀sinθ = 21 m/s) instead of v_top. The 125 m option uses the full launch speed, 35², instead of the horizontal component. The 160 m and 250 m options repeat the vtop-squared and full-speed errors respectively, each additionally using g/2 in the denominator instead of g.\n\n90-SECOND SOLUTION\nOnly at the apex is velocity perpendicular to the (constant) acceleration g, making the curvature formula R = v²/a directly applicable with v = v_top. R = (35·0.8)²/9.8 = 784/9.8 = 80 m — the smallest of the choices, since every distractor here plugs in too large a speed, too small a g, or both.\n\nWHAT TO MEMORIZE\nRadius of curvature R = v²/a_perp, where a_perp is the acceleration component perpendicular to velocity. At a projectile's apex, all of g is perpendicular to the (horizontal) velocity."
+      },
+
+      {
+        "question": "A 2.0 kg block A sits on top of a 6.0 kg block B; B rests on a frictionless floor. The coefficient of static friction between A and B is 0.40, and there is no friction between B and the floor. A horizontal force F is applied directly to the BOTTOM block B. Taking g = 9.8 m/s², the maximum value of F for which A does not slide on B is most nearly",
+        "choices": [
+          "7.8 N",
+          "16 N",
+          "24 N",
+          "31 N",
+          "47 N"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFriction is the only horizontal force on the top block A, so A's acceleration is limited by the maximum static friction it can receive: a_max = μg = 0.40 × 9.8 = 3.92 m/s². Since B is pushed directly and the floor is frictionless, the two blocks share this same acceleration as long as they move together, so the maximum total force is F_max = (m_A + m_B)a_max = 8.0 × 3.92 ≈ 31 N. The 24 N option results from using only block B's mass (m_B·a_max = 6.0 × 3.92 ≈ 24 N) instead of the total mass being accelerated. The 7.8 N option is the maximum friction force itself, μm_Ag = 0.40(2.0)(9.8) ≈ 7.8 N, mistaken for the applied force F even though F must also accelerate the much heavier block B.\n\n90-SECOND SOLUTION\nWhichever block friction acts on directly sets the ceiling on system acceleration: a_max = μg regardless of the masses. Then F_max = (total mass)(a_max) = 8.0(3.92) ≈ 31 N.\n\nWHAT TO MEMORIZE\nFor stacked blocks, the maximum shared acceleration before slipping is set by μg for the block relying on friction, independent of which block the driving force is applied to; multiply by the TOTAL mass being accelerated to get the force."
+      },
+
+      {
+        "question": "A crate is dragged at constant velocity across a rough horizontal floor by a rope that makes an angle θ with the floor. The coefficient of kinetic friction between crate and floor is 0.75. The angle θ (measured above the horizontal) that minimizes the tension required in the rope is most nearly",
+        "choices": [
+          "0°",
+          "22°",
+          "37°",
+          "53°",
+          "75°"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWith tension T at angle θ, vertical equilibrium gives the normal force N = mg − T sinθ, and horizontal equilibrium at constant velocity gives T cosθ = μN = μ(mg − T sinθ). Solving, T = μmg/(cosθ + μ sinθ). Minimizing T means maximizing the denominator; its derivative −sinθ + μcosθ = 0 gives tanθ = μ = 0.75, so θ = arctan(0.75) ≈ 37°. Choice A (0°, pulling horizontally) is the naive guess that ignores how lifting the rope reduces the normal force and hence friction. Choice E overshoots by lifting so much that the horizontal pulling component itself becomes too small.\n\n90-SECOND SOLUTION\nRecall the standard result tanθ_opt = μ for this classic optimization. μ = 0.75 = 3/4 is a 3-4-5 triangle, so θ = arctan(3/4) = 37°.\n\nWHAT TO MEMORIZE\nFor dragging an object with a rope at constant velocity against kinetic friction μ, the pulling force is minimized when tanθ = μ — memorize this standard result to avoid re-deriving it under time pressure."
+      },
+
+      {
+        "question": "Three blocks of mass m, 2m, and 3m lie in a line on a frictionless horizontal floor, connected in series by two light strings (the 3m block is at the front, pulled by a horizontal force F; behind it, via a string, is the 2m block; behind that, via a second string, is the m block). Let T₁ be the tension in the string connecting the 3m and 2m blocks, and T₂ be the tension in the string connecting the 2m and m blocks. The ratio T₁/T₂ is",
+        "choices": [
+          "1",
+          "3/2",
+          "2",
+          "3",
+          "6"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAll three blocks share a common acceleration a = F/(6m). The string tension between any two blocks equals (mass of everything behind that string) × a, since that string is the only horizontal force on the mass(es) behind it. T₂ pulls only the rearmost mass m, so T₂ = ma. T₁ pulls both the 2m and m blocks (total 3m) via that string, so T₁ = 3ma. The ratio is T₁/T₂ = 3. Choice C (2) results from mistakenly using only the 2m block's mass for T₁ instead of the combined 3m behind it. Choice E (6) comes from comparing T₁ to F instead of to T₂.\n\n90-SECOND SOLUTION\nCut the system at each string: the tension there equals (mass trailing that cut) × a. T₁ trails 2m+m=3m; T₂ trails just m. Ratio = 3m/m = 3.\n\nWHAT TO MEMORIZE\nIn a train of masses pulled by a single force, the tension in any connecting string equals the combined mass of everything behind it, times the common acceleration — no need to solve simultaneous equations."
+      },
+
+      {
+        "question": "Two masses, 5.0 kg and 3.0 kg, hang from the two ends of a light cord that passes over an ideal massless, frictionless pulley — except that the pulley's axle itself provides a constant frictional resistance to the motion of the cord equivalent to a force of 2.0 N. Taking g = 9.8 m/s², the magnitude of the acceleration of the system is most nearly",
+        "choices": [
+          "1.95 m/s²",
+          "2.2 m/s²",
+          "2.3 m/s²",
+          "2.45 m/s²",
+          "2.7 m/s²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWithout friction this would be a standard Atwood machine with a = (m₁−m₂)g/(m₁+m₂) = (2.0)(9.8)/8.0 = 2.45 m/s². The axle friction opposes the motion (it resists the cord sliding over the pulley), effectively subtracting a constant retarding force f = 2.0 N from the net driving force before dividing by the total mass: a = [(m₁−m₂)g − f]/(m₁+m₂) = [(2.0)(9.8) − 2.0]/8.0 = 2.2 m/s². The 2.45 m/s² option is the frictionless answer, ignoring the given resistance entirely. The 1.95 m/s² option comes from subtracting f twice (once for each side of the cord) instead of once from the net equation, and the 2.7 m/s² option comes from a sign error that adds f to the net driving force instead of subtracting it.\n\n90-SECOND SOLUTION\nTake the frictionless Atwood acceleration as a baseline (2.45 m/s²) and subtract the friction's effect, f/(m₁+m₂) = 2.0/8.0 = 0.25 m/s², giving 2.2 m/s².\n\nWHAT TO MEMORIZE\nA constant resistive force f in an Atwood-type system simply subtracts from the net driving force (m₁−m₂)g before dividing by the total mass; it does not change the effective masses."
+      },
+
+      {
+        "question": "Block A (mass 4.0 kg) rests on a frictionless plane inclined at angle θ to the horizontal, connected by a light cord over a frictionless pulley at the top of the incline to block B (mass 2.0 kg), which hangs vertically. For what value of θ is the system in equilibrium?",
+        "choices": [
+          "20°",
+          "30°",
+          "48°",
+          "60°",
+          "63°"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor the hanging block B, equilibrium requires the cord tension to equal its weight: T = m_B g. For block A on the frictionless incline, equilibrium along the incline requires T = m_A g sinθ. Setting these equal: m_B g = m_A g sinθ, so sinθ = m_B/m_A = 2.0/4.0 = 0.50, giving θ = 30°. The 20° option comes from using the total mass in the denominator, sinθ = m_B/(m_A+m_B) = 1/3, instead of m_B/m_A. The 48° and 60° options both come from writing the ratio with cosine instead of sine — cosθ = m_A/(m_A+m_B) gives 48°, and cosθ = m_B/m_A gives 60°. The 63° option comes from inverting the mass ratio, arctan(m_A/m_B), instead of using sinθ with the correct ratio.\n\n90-SECOND SOLUTION\nEquilibrium on a frictionless incline connected to a hanging mass always reduces to sinθ = m_hanging/m_incline. Here that's 2/4 = 1/2, so θ = 30° — a standard angle, no calculator needed.\n\nWHAT TO MEMORIZE\nFor a mass on a frictionless incline balanced by a hanging mass over a pulley, equilibrium requires sinθ = m_hang/m_incline — derived directly from equal tensions, not tanθ or cosθ."
+      },
+
+      {
+        "question": "A 1.0 kg block, initially at rest on a frictionless horizontal surface, is pushed by a force that varies with position as F(x) = A − Bx, with A = 5.0 N and B = 1.0 N/m, over the interval from x = 0 to x = 2.0 m. The block's speed at x = 2.0 m is most nearly",
+        "choices": [
+          "2.4 m/s",
+          "2.8 m/s",
+          "3.0 m/s",
+          "3.5 m/s",
+          "4.0 m/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe work done is the area under F(x): W = ∫₀² (A − Bx)dx = A(2.0) − B(2.0)²/2 = 10 − 2 = 8.0 J. By the work-energy theorem, this equals the kinetic energy gained (block starts at rest): 8.0 = ½(1.0)v² gives v = 4.0 m/s. The 3.5 m/s option comes from treating F(x=2.0) = 3.0 N as if it were constant over the whole distance, W = 3.0×2.0 = 6.0 J, giving v = √12 ≈ 3.5 m/s. The 3.0 m/s option comes from misreading the distance as 1.0 m instead of 2.0 m. The 2.8 m/s option comes from correctly finding W = 8.0 J but forgetting the factor of 2 in v = √(2W/m), using √W instead. The 2.4 m/s option comes from averaging F(0) and F(x=2.0) but mistakenly treating the force as zero at x = 0, giving W = 3.0 J and v = √6 ≈ 2.4 m/s.\n\n90-SECOND SOLUTION\nThe work is simply the trapezoid area under F(x): average force is (F(0)+F(2))/2 = (5+3)/2 = 4.0 N (valid since F is linear), times distance 2.0 m gives W = 8.0 J. Then v = √(2W/m) = 4.0 m/s — the largest of the choices, since each distractor drops or misreads part of the calculation and so underestimates the true work.\n\nWHAT TO MEMORIZE\nFor a linearly varying force, work equals (average force)×(distance); for a general F(x), work is always the area under the F-x curve, which then feeds the work-energy theorem directly."
+      },
+
+      {
+        "question": "A pump lifts water from a well 15 m deep and delivers it to the surface at a steady rate of 20 kg/s through a pipe of negligible diameter. Neglecting the kinetic energy imparted to the water and any frictional losses, the minimum power the pump must supply is most nearly",
+        "choices": [
+          "290 W",
+          "1500 W",
+          "1960 W",
+          "2250 W",
+          "2900 W"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe pump does work against gravity to raise each kilogram of water a height h = 15 m. In steady state, power equals the rate of potential energy increase: P = (dm/dt)·g·h = 20 × 9.8 × 15 = 2940 W, most nearly 2900 W. The 290 W option comes from omitting g entirely and computing only (dm/dt)·h = 20×15 = 300 W. The 1500 W option comes from halving the correct power (as if only half the water column's weight needed lifting). The 1960 W option comes from misreading the well depth as 10 m instead of 15 m (20×9.8×10 = 1960 W), and the 2250 W option comes from misreading the flow rate as 15 kg/s while also rounding g to 10 (15×10×15 = 2250 W).\n\n90-SECOND SOLUTION\nPower to lift a mass flow rate ṁ through height h against gravity is always P = ṁgh. Plug in directly: 20 × 9.8 × 15 ≈ 2900 W — clearly the largest of the choices, since every distractor here drops or misreads one of the three factors.\n\nWHAT TO MEMORIZE\nFor continuous mass flow raised through a height, power = (mass flow rate) × g × height — the fluid-dynamics analog of W = mgh, applied per unit time."
+      },
+
+      {
+        "question": "A 2.0 kg block is pressed against a spring of force constant k = 800 N/m, compressing it 0.35 m, and is then released on a horizontal surface. The first 2.5 m of the surface (measured from the point where the block leaves the spring) is rough, with coefficient of kinetic friction 0.20; beyond that the surface is frictionless and rises into a smooth ramp. Taking g = 9.8 m/s², the maximum height above the rough section that the block reaches on the ramp is most nearly",
+        "choices": [
+          "2.0 m",
+          "2.5 m",
+          "3.0 m",
+          "4.0 m",
+          "4.5 m"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe spring's stored energy is ½kx² = ½(800)(0.35)² = 49.0 J. Crossing the rough patch removes friction work μmg·d = 0.20(2.0)(9.8)(2.5) = 9.8 J, leaving kinetic energy 49.0 − 9.8 = 39.2 J at the base of the frictionless ramp. All of this converts to gravitational PE at the highest point: h = 39.2/(mg) = 39.2/19.6 = 2.0 m. The 2.5 m option comes from ignoring the friction loss entirely (49.0/19.6 ≈ 2.5 m). The 3.0 m option comes from adding the friction loss instead of subtracting it, (49.0+9.8)/19.6 ≈ 3.0 m. The 4.0 m option comes from forgetting the mass m in the final height conversion, using h = KE/g instead of h = KE/(mg). The 4.5 m option comes from forgetting the factor of ½ in the spring's stored energy, using kx² = 98.0 J instead of ½kx².\n\n90-SECOND SOLUTION\nTrack energy through each stage: spring PE (49 J) → subtract friction loss (9.8 J) → remaining KE (39.2 J) → convert fully to height using mgh: h = 39.2/19.6 = 2.0 m — the smallest of the choices, since every distractor here comes from omitting or misapplying one loss or one factor, always making the reported height too large.\n\nWHAT TO MEMORIZE\nMulti-stage energy problems are just energy bookkeeping: add sources (spring PE), subtract losses (friction work), and set what remains equal to the final form of energy (height × mg)."
+      },
+
+      {
+        "question": "A small block starts from rest at the top of a frictionless track and slides down into a circular loop of radius R = 4.0 m in a vertical plane, the loop being at the bottom of the track. Taking g = 9.8 m/s², the minimum height above the bottom of the loop from which the block must be released for it to maintain contact with the track at the top of the loop is most nearly",
+        "choices": [
+          "8.0 m",
+          "10 m",
+          "12 m",
+          "16 m",
+          "20 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAt the top of the loop, the minimum speed occurs when gravity alone supplies the centripetal force: mg = mv²_top/R, so v²_top = gR. Energy conservation from the release height h down to the top of the loop (height 2R) gives mgh = mg(2R) + ½mv²_top = mg(2R) + ½mgR = (5/2)mgR. Thus h = 2.5R = 2.5(4.0) = 10 m. The 8.0 m option uses h = 2R, forgetting to add the extra kinetic energy term required at the top. The 12 m option comes from forgetting the factor of ½ on the kinetic-energy term, using v²_top·m instead of ½mv²_top, giving h = 3R. The 16 m option compounds this by also taking the minimum-speed condition as v²_top = 4gR instead of gR, giving h = 4R. The 20 m option instead comes from correctly finding h = 2.5R but then substituting the loop's diameter (2R) in place of R at the very last step.\n\n90-SECOND SOLUTION\nMemorize the standard loop-the-loop result: minimum release height = 2.5R above the bottom of the loop. With R = 4.0 m, h = 10 m directly — near the low end of the choices, since most of the distractors here come from adding extra height rather than dropping it.\n\nWHAT TO MEMORIZE\nFor a vertical circular loop of radius R, the minimum release height (measured from the bottom of the loop, frictionless track) for the object to maintain contact at the top is h = 2.5R — a frequently reused GRE result."
+      },
+
+      {
+        "question": "A mass on a spring undergoes simple harmonic motion with amplitude A and total mechanical energy E. When the mass is at x = A/3 from equilibrium, the fraction of the total energy that is kinetic is",
+        "choices": [
+          "1/9",
+          "1/3",
+          "2/3",
+          "8/9",
+          "1"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIn SHM the potential energy is U(x) = ½kx² = E(x/A)², since E = ½kA². At x = A/3, U/E = (1/3)² = 1/9, so the kinetic fraction is 1 − 1/9 = 8/9. Choice B (1/3) mistakes the fractional displacement x/A itself for the kinetic energy fraction. Choice A (1/9) is the potential energy fraction, the complementary (wrong) quantity to what's asked.\n\n90-SECOND SOLUTION\nKE fraction = 1 − (x/A)² always in SHM. With x/A = 1/3: 1 − 1/9 = 8/9.\n\nWHAT TO MEMORIZE\nIn SHM, PE/E = (x/A)² and KE/E = 1 − (x/A)², directly from E = ½kA² and U = ½kx² — no need to compute k, m, or ω separately for energy-fraction questions."
+      },
+
+      {
+        "question": "A simple pendulum has period T on the surface of the Earth. If the same pendulum is taken to the surface of a moon where the gravitational acceleration is exactly 1/6 that of Earth's, its new period is",
+        "choices": [
+          "T/6",
+          "T/√6",
+          "T",
+          "T√6",
+          "6T"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe period of a simple pendulum is T = 2π√(L/g); L is unchanged, so T ∝ 1/√g. With g reduced by a factor of 6, the period increases by a factor of √6: T_moon = T√6. Choice A (T/6) incorrectly assumes T ∝ g. Choice B (T/√6) inverts the correct dependence, assuming period decreases when gravity weakens.\n\n90-SECOND SOLUTION\nWeaker gravity means a slower restoring force and hence a longer period — eliminate any answer where T decreases. T ∝ g^(−1/2), so a 6-fold weaker g gives a √6-fold longer period.\n\nWHAT TO MEMORIZE\nPendulum period T ∝ 1/√g: weaker gravity means a longer period. Sanity-check the direction before trusting the algebra."
+      },
+
+      {
+        "question": "Two identical simple pendulums, each of length a = 0.80 m and bob mass m = 0.50 kg, hang side by side and are coupled by a light horizontal spring of force constant k = 2.0 N/m connecting the two bobs, attached so the spring is at its natural length when both pendulums hang vertically. Taking g = 9.8 m/s², the angular frequency of the antisymmetric normal mode (in which the two bobs swing with equal amplitude but opposite phase) is most nearly",
+        "choices": [
+          "3.5 rad/s",
+          "4.0 rad/s",
+          "4.5 rad/s",
+          "5.3 rad/s",
+          "5.7 rad/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIn the antisymmetric mode, the bobs move in opposite directions, so the spring stretches and compresses by twice the single-pendulum displacement, doubling its restoring contribution per unit mass: ω² = g/a + 2k/m. Computing: g/a = 9.8/0.80 = 12.25 s⁻², and 2k/m = 2(2.0)/0.50 = 8.0 s⁻², so ω² = 20.25, giving ω = 4.5 rad/s. The 3.5 rad/s option is the symmetric-mode frequency ω = √(g/a), which ignores the spring entirely (correct for that other mode, wrong mode here). The 4.0 rad/s option comes from forgetting the factor of 2 in the coupling term, using ω = √(g/a + k/m) instead. The 5.3 rad/s option comes from using 4k/m instead of 2k/m (double-counting the coupling), and the 5.7 rad/s option comes from mistakenly doubling the g/a term as well, ω = √(2g/a + 2k/m).\n\n90-SECOND SOLUTION\nSymmetric mode never stretches the spring: ω₁ = √(g/a) = 3.5 rad/s. Antisymmetric mode doubles the spring's effect: ω₂ = √(g/a + 2k/m) = √(12.25+8.0) = √20.25 = 4.5 rad/s.\n\nWHAT TO MEMORIZE\nFor two identical coupled oscillators joined by a spring k, the antisymmetric (higher) mode frequency picks up an extra 2k/m term beyond the single-oscillator frequency, because each oscillator sees the spring stretch by twice its own displacement."
+      },
+
+      {
+        "question": "A lightly damped harmonic oscillator has its amplitude reduced to exactly half its initial value after 5 complete cycles of oscillation. Assuming the same exponential decay continues, the number of complete cycles required for the amplitude to fall to 1/8 of its initial value is",
+        "choices": [
+          "8",
+          "10",
+          "12",
+          "15",
+          "20"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAmplitude decay is exponential in time (and hence in cycle count, since the period is essentially unchanged for light damping), so equal numbers of cycles produce equal multiplicative factors. Since 1/8 = (1/2)³, three successive halvings are needed, each requiring 5 cycles: 3 × 5 = 15 cycles. Choice C (12) comes from incorrectly treating the decay as additive (subtracting amplitude in equal steps) rather than multiplicative. Choice A (8) adds 5+3 by conflating the exponent 3 with an extra 3 cycles rather than 3 full halvings.\n\n90-SECOND SOLUTION\n1/8 = (1/2)³, so it takes exactly 3 'half-life' intervals. Each interval is 5 cycles, so 3×5 = 15 cycles total.\n\nWHAT TO MEMORIZE\nDamped-amplitude decay is exponential: reaching (1/2)ⁿ of the initial amplitude always takes n times the number of cycles needed to reach one half — treat it exactly like radioactive half-life reasoning."
+      },
+
+      {
+        "question": "A uniform solid disk of mass M and radius R = 0.30 m is free to swing in its own vertical plane about a frictionless horizontal axis through a point on its rim (perpendicular to the disk's face). Taking g = 9.8 m/s², the period of small oscillations about the lowest position is most nearly",
+        "choices": [
+          "0.78 s",
+          "1.1 s",
+          "1.3 s",
+          "1.6 s",
+          "1.9 s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThis is a physical pendulum with moment of inertia about the pivot given by the parallel-axis theorem: I = I_cm + MR² = ½MR² + MR² = (3/2)MR², and the distance from pivot to center of mass is d = R. The period is T = 2π√(I/(Mgd)) = 2π√((3/2)MR²/(MgR)) = 2π√(3R/2g). Substituting: 3(0.30)/(2·9.8) = 0.0459 s², √0.0459 ≈ 0.214, so T ≈ 2π(0.214) ≈ 1.35 s, most nearly 1.3 s. The 0.78 s option comes from using I_cm = ½MR² alone at this pivot, forgetting the parallel-axis shift entirely. The 1.6 s option comes from using I = 2MR² (the hoop's pivot-edge moment of inertia) instead of the disk's (3/2)MR².\n\n90-SECOND SOLUTION\nRecall T = 2π√(3R/2g) for a disk pivoted at its rim (derived from I = (3/2)MR² and d = R). Plug in directly: √(0.9/19.6) ≈ 0.214, T ≈ 1.3 s.\n\nWHAT TO MEMORIZE\nPhysical pendulum period: T = 2π√(I_pivot/Mgd). For a disk pivoted at its rim, I_pivot = (3/2)MR² (parallel-axis from ½MR²), giving T = 2π√(3R/2g) — distinct from a hoop's 2π√(2R/g)."
+      },
+
+      {
+        "question": "A simple pendulum consists of a small uniform sphere of radius r attached to the end of a massless string, so that the sphere's center is a distance L from the pivot. Treating the sphere's own rotational inertia about its center (⅖mr²) correctly rather than treating it as a point mass, the ratio of its actual period to the period of an idealized point-mass pendulum of the same length L is, to leading order in r/L,",
+        "choices": [
+          "1 − (2/5)(r/L)²",
+          "1 − (1/5)(r/L)²",
+          "1",
+          "1 + (1/5)(r/L)²",
+          "1 + (2/5)(r/L)²"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe sphere's moment of inertia about the pivot is I = ⅖mr² + mL² (parallel-axis theorem), so the period is T = 2π√(I/(mgL)) = 2π√(L/g)·√(1 + (2/5)(r/L)²). Using the small-x expansion √(1+x) ≈ 1 + x/2 with x = (2/5)(r/L)², the ratio to the point-mass period 2π√(L/g) is 1 + (1/5)(r/L)². Choice E doubles the correction by skipping the ½ from the square-root expansion. Choice A gets both the sign and the coefficient wrong.\n\n90-SECOND SOLUTION\nThe sphere's own rotational inertia can only add to I, so the ratio must exceed 1 — eliminate any choice below 1. Then apply √(1+x) ≈ 1+x/2 with x = (2/5)(r/L)² to get the coefficient 1/5.\n\nWHAT TO MEMORIZE\nA physical bob's finite size always makes a pendulum's true period slightly longer than the point-mass formula predicts; the correction uses parallel-axis theorem plus the small-x expansion √(1+x) ≈ 1+x/2."
+      },
+
+      {
+        "question": "A uniform solid disk and a uniform thin hoop, both of mass M and radius R, are released from rest simultaneously at the top of the same incline and roll without slipping to the bottom. The ratio of the time taken by the hoop to the time taken by the disk is",
+        "choices": [
+          "1",
+          "√(4/3) = 2/√3",
+          "√2",
+          "4/3",
+          "2"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a body rolling without slipping down an incline, a = g sinθ/(1 + I/MR²). For the disk, I/MR² = 1/2, giving a_disk = g sinθ/1.5. For the hoop, I/MR² = 1, giving a_hoop = g sinθ/2. Both start from rest, so distance d = ½at² gives t ∝ 1/√a. Thus t_hoop/t_disk = √(a_disk/a_hoop) = √(2/1.5) = √(4/3) = 2/√3 ≈ 1.15. Choice D (4/3) mistakes the acceleration ratio itself for the time ratio, forgetting the square root from d = ½at². Choice A (1) incorrectly assumes rolling shapes all take equal time regardless of moment of inertia, confusing this with the (false) claim that mass and radius don't matter (they don't — but shape does).\n\n90-SECOND SOLUTION\nThe disk has a larger fraction of its KE available for translation (smaller I/MR²) than the hoop, so it accelerates faster and arrives first — eliminate any ratio equal to or less than 1. The exact factor is √(a_disk/a_hoop) = √(4/3).\n\nWHAT TO MEMORIZE\nRolling acceleration down an incline is a = g sinθ/(1+I/MR²); since t ∝ 1/√a for objects released from rest over the same distance, time ratios pick up a square root relative to the acceleration ratio — don't forget it."
+      },
+
+      {
+        "question": "A uniform solid cylinder (pulley) of mass 4.0 kg and radius 0.20 m rotates about a fixed axle, resisted by a constant frictional torque of 1.0 N·m at the axle. A light cord wrapped around the cylinder is attached to a hanging mass of 4.0 kg, which is released from rest. Taking g = 9.8 m/s², the resulting downward acceleration of the hanging mass is most nearly",
+        "choices": [
+          "4.3 m/s²",
+          "5.7 m/s²",
+          "6.1 m/s²",
+          "6.4 m/s²",
+          "6.5 m/s²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nLet T be the cord tension and a the (common) linear acceleration. For the hanging mass: mg − T = ma. For the cylinder (I = ½MR²): TR − τ_f = Iα = ½MR²(a/R), so T = τ_f/R + ½Ma. Substituting: mg − τ_f/R − ½Ma = ma, giving a = (mg − τ_f/R)/(m + M/2) = (4.0·9.8 − 1.0/0.20)/(4.0+2.0) = (39.2−5.0)/6.0 = 5.7 m/s². The 6.4 m/s² option comes from forgetting to divide the friction torque by R, subtracting τ_f directly from mg instead of τ_f/R. The 6.5 m/s² option ignores the axle friction entirely (the plain frictionless-pulley answer). The 4.3 m/s² option comes from using I = MR² (the hoop's moment of inertia) instead of the disk's ½MR², and the 6.1 m/s² option comes from halving the friction torque by mistake.\n\n90-SECOND SOLUTION\nConvert the friction torque to an equivalent force at the rim, τ_f/R = 1.0/0.20 = 5.0 N, then treat it exactly like a force reducing the net driving force: a = (mg − τ_f/R)/(m+M/2) = 34.2/6.0 = 5.7 m/s².\n\nWHAT TO MEMORIZE\nFor a hanging mass driving a pulley of moment of inertia I=½MR² via a cord, a = (mg − τ_f/R)/(m + M/2) when a resisting torque τ_f (axle friction) opposes rotation — the torque must be divided by R before it can be combined with mg, since mg is a force, not a torque."
+      },
+
+      {
+        "question": "A uniform thin rod of mass M and length L rotates about a fixed axis perpendicular to the rod, passing through a point located a distance L/4 from the center of the rod (i.e., midway between the center and one end). The moment of inertia of the rod about this axis is",
+        "choices": [
+          "ML²/48",
+          "ML²/12",
+          "7ML²/48",
+          "ML²/6",
+          "ML²/3"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe moment of inertia about the center of mass is I_cm = ML²/12. By the parallel-axis theorem, I = I_cm + Md², where d = L/4 is the distance from the center to the new axis: I = ML²/12 + M(L/4)² = ML²/12 + ML²/16. With common denominator 48: 4ML²/48 + 3ML²/48 = 7ML²/48. Choice B (ML²/12) is just I_cm, forgetting the parallel-axis shift entirely. Choice E (ML²/3) is the moment of inertia about one END of the rod (d = L/2), the wrong reference point for this question.\n\n90-SECOND SOLUTION\nStart from I_cm = ML²/12 and add M(L/4)² = ML²/16 by the parallel-axis theorem. Common denominator 48: 4/48+3/48 = 7/48.\n\nWHAT TO MEMORIZE\nI_cm for a uniform rod is ML²/12; any off-center axis adds Md² via the parallel-axis theorem — this is the workhorse for these questions, faster than re-deriving from an integral."
+      },
+
+      {
+        "question": "A flywheel with moment of inertia 0.40 kg·m² starts from rest and is brought up to an angular speed of 10 rad/s by a motor applying a constant torque, during which the flywheel turns through exactly 10 radians. The magnitude of the applied torque is most nearly",
+        "choices": [
+          "0.20 N·m",
+          "1.0 N·m",
+          "2.0 N·m",
+          "4.0 N·m",
+          "8.0 N·m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nUsing the rotational work-energy theorem, the work done by the constant torque equals the kinetic energy gained: τθ = ½Iω². Solving for τ: τ = Iω²/(2θ) = (0.40)(10)²/(2·10) = 40/20 = 2.0 N·m. The 0.20 N·m option comes from forgetting to square ω, using τ = Iω/(2θ) instead. The 1.0 N·m option comes from dividing by 4θ instead of 2θ. The 4.0 N·m option comes from omitting the factor of ½ in the energy relation entirely (using τθ = Iω² instead of ½Iω²), and the 8.0 N·m option comes from multiplying by 2 where the formula calls for dividing by 2θ.\n\n90-SECOND SOLUTION\nThis is just F·d = ½mv² in rotational form: τ = Iω²/(2θ) = 0.4(100)/20 = 2.0 N·m.\n\nWHAT TO MEMORIZE\nRotational work-energy theorem: τθ = ½Iω² − ½Iω₀² for constant torque — the direct rotational analog of the linear work-energy theorem, often faster than finding α and using τ=Iα separately."
+      },
+
+      {
+        "question": "On a frictionless horizontal surface, a 2.0 kg puck moving at 6.0 m/s along the +x direction collides with a 3.0 kg puck moving at 4.0 m/s in a direction 37° below the +x axis (that is, with components 3.2 m/s in +x and 2.4 m/s in −y, since cos 37° ≈ 0.80 and sin 37° ≈ 0.60). The two pucks stick together. The angle that the combined velocity makes with the +x axis after the collision is most nearly",
+        "choices": [
+          "12° below +x",
+          "18° below +x",
+          "27° below +x",
+          "37° below +x",
+          "45° below +x"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTotal momentum components: p_x = (2.0)(6.0) + (3.0)(4.0)(0.80) = 12.0 + 9.6 = 21.6 kg·m/s; p_y = (3.0)(4.0)(−0.60) = −7.2 kg·m/s. The direction of the combined momentum (and hence velocity, since it's one combined mass) is θ = arctan(|p_y|/p_x) = arctan(7.2/21.6) = arctan(1/3) ≈ 18° below the +x axis. Choice D (37°) is the angle of the second puck's own initial velocity, not the combined result — a tempting but wrong carry-over. Choice A (12°) results from swapping which puck's momentum dominates the x-component in the ratio.\n\n90-SECOND SOLUTION\nAdd momentum components directly (mass conservation makes velocity direction track momentum direction exactly for a stuck-together system): p_y/p_x = −7.2/21.6 = −1/3, so the angle is arctan(1/3) ≈ 18° below +x.\n\nWHAT TO MEMORIZE\nFor 2D perfectly inelastic collisions, add momentum vectors by components first; the final velocity direction is just the direction of the total momentum vector, since a single combined mass moves in a single direction."
+      },
+
+      {
+        "question": "A firecracker at rest explodes in a horizontal plane into exactly three fragments. Fragment A carries momentum of magnitude 6.0 kg·m/s directed along +x. Fragment B carries momentum of magnitude 8.0 kg·m/s directed along +y. The magnitude of fragment C's momentum is",
+        "choices": [
+          "10 kg·m/s",
+          "14 kg·m/s",
+          "20 kg·m/s",
+          "48 kg·m/s",
+          "100 kg·m/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nSince the firecracker starts at rest, total momentum is conserved at zero: p_A + p_B + p_C = 0, so p_C = −(p_A + p_B). Its components are (−6.0, −8.0) kg·m/s, and its magnitude is √(6.0² + 8.0²) = √(36+64) = √100 = 10 kg·m/s. The 14 kg·m/s option comes from simply adding the two given magnitudes (6+8), ignoring that momentum is a vector and the two given fragments move in perpendicular directions. The 20 kg·m/s option doubles the correct magnitude. The 48 kg·m/s option comes from multiplying the two magnitudes instead of combining them by the Pythagorean sum, and the 100 kg·m/s option comes from computing 6²+8² correctly but forgetting to take the final square root.\n\n90-SECOND SOLUTION\n6-8-10 is a Pythagorean triple: with A and B's momenta perpendicular, C's momentum (needed to cancel their vector sum) has magnitude √(6²+8²) = 10 kg·m/s — the smallest of the choices, since every distractor here comes from a step that inflates the true value.\n\nWHAT TO MEMORIZE\nFor an explosion from rest into multiple fragments, total momentum must sum to zero as a VECTOR — combine the known fragments' momenta by components (not by adding magnitudes) to find what the remaining fragment must supply."
+      },
+
+      {
+        "question": "A long uniform chain with mass per unit length λ = 2.0 kg/m lies in a loose heap on a frictionless horizontal floor. One end is pulled horizontally so that it moves at a constant speed v = 3.0 m/s, picking up links from the heap one at a time (each link starts at rest and is accelerated essentially instantaneously to speed v). The horizontal force required to keep the moving end at constant speed v, once the chain is partway picked up, is",
+        "choices": [
+          "6.0 N, and increases as more chain is picked up",
+          "18 N, independent of how much chain has been picked up",
+          "9.0 N, independent of how much chain has been picked up",
+          "18 N, and increases as more chain is picked up",
+          "36 N, and decreases as more chain is picked up"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe force needed equals the rate of momentum increase of the system: F = d(mv)/dt = v·(dm/dt), since v is constant. The mass pickup rate is dm/dt = λv (each new bit of chain, of length v·dt, is picked up in time dt), so F = v·λv = λv² = (2.0)(3.0)² = 18 N. Since λ and v are both constant, this force does not depend on how much chain has already been picked up — it takes the same 'kick' to accelerate each new bit of chain from rest to v, over and over, regardless of the length already moving. The '18 N, and increases' option is the trap: it's tempting to assume the force must grow as more chain moves (as it would for a chain being lifted vertically against gravity), but here — since the surface is horizontal and frictionless — there's no weight to support, only the discrete momentum kick delivered to each fresh link. The '9.0 N' option comes from a factor-of-2 slip in λv².\n\n90-SECOND SOLUTION\nF = v dm/dt = v(λv) = λv² is constant in time since λ and v don't change; no need to track how much chain has already been gathered. F = 2.0(3.0)² = 18 N.\n\nWHAT TO MEMORIZE\nFor mass being picked up (not lifted) at constant velocity on a horizontal surface, the required force is F = λv², constant in time — contrast with a chain being lifted vertically at constant speed, where the force does grow because it must also support the weight of the chain already raised."
+      },
+
+      {
+        "question": "A 2.0 kg cart moving at 4.0 m/s collides head-on with a 1.0 kg cart moving at 2.0 m/s in the opposite direction. The two carts stick together upon collision. The fraction of the total initial kinetic energy that is lost in the collision is most nearly",
+        "choices": [
+          "1/9",
+          "1/3",
+          "2/3",
+          "3/4",
+          "8/9"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTaking the 2.0 kg cart's direction as positive, initial momentum is p = (2.0)(4.0) + (1.0)(−2.0) = 8.0 − 2.0 = 6.0 kg·m/s. Since the carts stick, the final velocity is v_f = p/(m₁+m₂) = 6.0/3.0 = 2.0 m/s. Initial KE = ½(2.0)(4.0)² + ½(1.0)(2.0)² = 16 + 2 = 18 J. Final KE = ½(3.0)(2.0)² = 6.0 J. The fraction lost is (18−6)/18 = 12/18 = 2/3. The 1/3 option is the fraction of energy that REMAINS, not the fraction lost — a common answer-swap error. The 1/9 option squares that remaining-fraction error again. The 8/9 option comes from using only the smaller cart's mass in the final kinetic energy (½m₂v_f² = 2 J instead of ½(m₁+m₂)v_f² = 6 J), and the 3/4 option comes from a flawed shortcut that computes (v₁²−v₂²)/v₁² instead of properly tracking momentum and energy separately.\n\n90-SECOND SOLUTION\nCompute p and v_f first (6.0 kg·m/s, 2.0 m/s), then compare KE before (18 J) and after (6.0 J): lost fraction = (18−6)/18 = 2/3.\n\nWHAT TO MEMORIZE\nFor any perfectly inelastic collision, always find the final velocity from momentum conservation FIRST, then compute both kinetic energies directly — there's no shortcut formula that handles arbitrary initial directions and masses as reliably as this two-step approach."
+      },
+
+      {
+        "question": "A planet orbits a star of mass 4M_sun in a circular orbit of the same radius as Earth's orbit around the Sun (mass M_sun). The planet's orbital period, in years, is most nearly",
+        "choices": [
+          "0.25",
+          "0.50",
+          "1.0",
+          "2.0",
+          "4.0"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nKepler's third law for a circular orbit follows from GMm/r² = m(4π²/T²)r, giving T² = 4π²r³/(GM), so T ∝ 1/√M at fixed r. Increasing the central mass by a factor of 4 while holding r fixed decreases T by a factor of √4 = 2: T = 1 year/2 = 0.50 year. Choice D (2.0 years) inverts the relationship, assuming a more massive star gives a longer period. Choice E (4.0 years) mistakes T for scaling directly with M rather than 1/√M.\n\n90-SECOND SOLUTION\nA more massive star pulls harder, so the orbit must move faster to stay in equilibrium at the same radius — period should decrease, eliminating any answer above 1.0. T ∝ M^(−1/2): a factor of 4 in mass gives a factor of 2 decrease. T = 0.5 yr.\n\nWHAT TO MEMORIZE\nKepler's third law: T² ∝ r³/M. At fixed orbital radius, period scales as 1/√M — heavier central body means shorter period, not longer."
+      },
+
+      {
+        "question": "A comet moves in an elliptical orbit about the Sun with perihelion distance 0.20 AU and aphelion distance 1.8 AU. The ratio of its speed at perihelion to its speed at aphelion is",
+        "choices": [
+          "1/9",
+          "1/3",
+          "3",
+          "6",
+          "9"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAt the two apsides (perihelion and aphelion), the velocity is purely tangential (perpendicular to the radius), so angular momentum conservation reduces to L = mv·r at each point: v_p·r_p = v_a·r_a. Thus v_p/v_a = r_a/r_p = 1.8/0.20 = 9. Choice B (1/3) inverts the ratio incorrectly using √(r_a/r_p) as if this were a circular-orbit speed relation rather than the direct angular momentum ratio. Choice D (6) is a plausible-looking but incorrect intermediate value from a units slip.\n\n90-SECOND SOLUTION\nAt perihelion (closer) the comet must move faster to conserve angular momentum — eliminate any ratio less than 1. The exact ratio is just r_a/r_p = 1.8/0.2 = 9.\n\nWHAT TO MEMORIZE\nAt the apsides of any orbit (points of closest and farthest approach), velocity is purely tangential, so v_p r_p = v_a r_a directly from angular momentum conservation — no need for the vis-viva equation for a speed RATIO question."
+      },
+
+      {
+        "question": "A particle of mass m moves under an attractive central force F(r) = −kr (k > 0), directed toward the origin, in a circular orbit of radius r₀. Taking k = 50 N/m and m = 2.0 kg, the period of this circular orbit is most nearly",
+        "choices": [
+          "0.20 s",
+          "0.25 s",
+          "0.63 s",
+          "0.89 s",
+          "1.3 s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a circular orbit, the central force supplies exactly the centripetal force: kr₀ = mω²r₀, so ω = √(k/m), independent of r₀ — the orbit radius is a red herring here since it cancels. ω = √(50/2.0) = √25 = 5.0 rad/s, so T = 2π/ω = 2π/5.0 ≈ 1.3 s. The 0.20 s option comes from forgetting the factor of 2π entirely and reporting T = 1/ω. The 0.25 s option comes from computing T correctly and then mistakenly dividing by ω a second time. The 0.63 s option comes from using ω = √(km) (multiplying instead of dividing), and the 0.89 s option comes from using ω = √(2k/m), doubling k without justification.\n\n90-SECOND SOLUTION\nSince F=−kr behaves like a 3D Hooke's-law spring, ω = √(k/m) regardless of orbit radius — exactly as with any harmonic oscillator. ω = √(25) = 5.0 rad/s, T = 2π/5 ≈ 1.3 s — clearly the largest of the choices, since every distractor here either omits the 2π factor or inflates ω.\n\nWHAT TO MEMORIZE\nFor the central force F = −kr, circular-orbit angular frequency is ω = √(k/m), completely independent of the orbit radius — the same result as the isotropic 3D harmonic oscillator, and a classic 'irrelevant given quantity' GRE trap when r₀ is provided but cancels."
+      },
+
+      {
+        "question": "A thin, uniform spherical SHELL of mass M and radius R (all the mass on the surface, none inside) creates a gravitational field. The ratio of the magnitude of the gravitational force it exerts on a test mass located at r = R/2 (inside the shell) to the force it exerts on the same test mass at r = 2R (outside the shell) is",
+        "choices": [
+          "0",
+          "1/8",
+          "1/4",
+          "1/2",
+          "4"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBy the shell theorem, a uniform spherical shell exerts exactly zero gravitational force on any point strictly inside it, since the contributions from all parts of the shell cancel. Outside the shell, it behaves as a point mass at the center, giving a nonzero force ∝ 1/r². The ratio of the force at r=R/2 (inside, hence zero) to the force at r=2R (outside, hence nonzero) is therefore 0/(nonzero) = 0. Choice C (1/4) is the ratio you'd get if BOTH points were treated as outside the shell using inverse-square scaling (as would apply for a solid sphere at r=R/2 only if it behaved like a point mass there, which it does not for a shell). Choice E (4) inverts that same wrong assumption.\n\n90-SECOND SOLUTION\nRecognize immediately: shell theorem gives exactly zero field anywhere inside a shell, regardless of how close to the surface. The numerator is zero, so the whole ratio is zero without computing the denominator at all.\n\nWHAT TO MEMORIZE\nThe shell theorem: a uniform spherical SHELL has zero gravitational field everywhere inside it, and behaves as a point mass at its center for points outside. This is a sharper (and different) statement than the corresponding result for a uniform SOLID sphere, where the interior field is nonzero and grows linearly with r."
+      },
+
+      {
+        "question": "Two spherical planets have the same uniform mass density but different radii, R and 2R. The ratio of the surface gravitational acceleration of the larger planet to that of the smaller planet is",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nSurface gravity is g = GM/R² = G(ρ·4πR³/3)/R² = (4πGρ/3)R, which is directly proportional to R at fixed density ρ. Doubling the radius while keeping density fixed doubles the mass by a factor of 8 (since M ∝ R³) but also increases R² by a factor of 4 in the denominator, leaving a net factor of 8/4 = 2. Choice E (4) mistakenly treats g as proportional to R² (as if mass were held fixed rather than density). Choice A (1/4) inverts the correct scaling.\n\n90-SECOND SOLUTION\nAt fixed density, g ∝ R directly (mass grows as R³, but dividing by R² leaves one power of R). Doubling R doubles g: ratio = 2.\n\nWHAT TO MEMORIZE\nAt fixed density, surface gravity scales linearly with radius: g ∝ R (since M ∝ R³ and g = GM/R² ∝ R). This is a common GRE scaling trap — don't assume g ∝ M or g ∝ R² without accounting for how M itself depends on R via density."
+      },
+
+      {
+        "question": "A particle is located at position vector r = (2.0 m)x̂ + (3.0 m)ẑ relative to the origin, and a force F = (4.0 N)ŷ acts on it. The torque about the origin, τ = r × F, is",
+        "choices": [
+          "(12 x̂ − 8 ẑ) N·m",
+          "(−12 x̂ − 8 ẑ) N·m",
+          "(8 x̂ − 12 ẑ) N·m",
+          "(−8 x̂ + 12 ẑ) N·m",
+          "(−12 x̂ + 8 ẑ) N·m"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWith r = (2, 0, 3) and F = (0, 4, 0), compute the cross product component by component: τ_x = r_y F_z − r_z F_y = (0)(0) − (3)(4) = −12; τ_y = r_z F_x − r_x F_z = (3)(0) − (2)(0) = 0; τ_z = r_x F_y − r_y F_x = (2)(4) − (0)(0) = 8. So τ = (−12, 0, 8) N·m = −12x̂ + 8ẑ N·m. The '12x̂ − 8ẑ' option has the correct magnitudes but the wrong overall sign, a common error from misordering the cross product (computing F × r instead of r × F). The '8x̂ − 12ẑ' option swaps the x̂ and ẑ components, likely from mismatching which position component pairs with which force component.\n\n90-SECOND SOLUTION\nSince F has only a y-component, only the x and z components of r contribute, each via a single cross product with ŷ: x̂ × ŷ = ẑ and ẑ × ŷ = −x̂. So r × F = 2(4)(x̂×ŷ) + 3(4)(ẑ×ŷ) = 8ẑ − 12x̂, matching −12x̂ + 8ẑ.\n\nWHAT TO MEMORIZE\nCross products: x̂×ŷ=ẑ, ŷ×ẑ=x̂, ẑ×x̂=ŷ (cyclic), and reversing order flips the sign. For a force along a single axis, only the perpendicular position components contribute to torque, each rotated 90° by the cross product."
+      },
+
+      {
+        "question": "A particle moves along a helical path given by x(t) = A cos(ωt), y(t) = A sin(ωt), z(t) = Bt, where A = 3.0 m, ω = 4.0 rad/s, and B = 9.0 m/s. The particle's speed is",
+        "choices": [
+          "9.0 m/s",
+          "12 m/s",
+          "15 m/s",
+          "21 m/s",
+          "not constant in time"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nDifferentiating: vx = −Aω sin(ωt), vy = Aω cos(ωt), vz = B. The speed is √(vx²+vy²+vz²) = √((Aω)²(sin²+cos²) + B²) = √((Aω)² + B²), which is constant in time since sin²+cos²=1 removes all time dependence. With Aω = (3.0)(4.0) = 12 m/s and B = 9.0 m/s: speed = √(12²+9²) = √(144+81) = √225 = 15 m/s. Choice E is the trap for students who assume any non-straight-line 3D path must have varying speed — but the circular (xy) component has constant speed Aω, and the linear z-component has constant speed B, so their combination is also constant. Choice B (12 m/s) reports only the xy-plane (circular) component of the speed, forgetting the z-component entirely.\n\n90-SECOND SOLUTION\nThis is uniform circular motion in the xy-plane (speed Aω = 12 m/s) combined with uniform motion along z (speed B = 9.0 m/s) — two constant, mutually perpendicular speed components combine via Pythagoras: √(12²+9²) = 15 m/s, constant.\n\nWHAT TO MEMORIZE\nFor helical motion, the speed is constant even though the velocity direction constantly changes: speed = √((Aω)² + B²), the Pythagorean combination of the (constant) circular-component speed and the (constant) axial speed."
+      },
+
+      {
+        "question": "A block of mass m slides without friction on a horizontal table, attached to a spring of force constant k whose other end is fixed to a wall. The wall itself is driven so that its point of attachment moves horizontally as x_wall(t) = A cos(Ωt), where A and Ω are given constants. Taking x as the block's position (measured on the same axis, with x_wall = 0 corresponding to the spring's natural length when the block is at x = 0), the correct equation of motion for x(t), obtained from the Lagrangian L = ½mẋ² − ½k(x − A cos Ωt)², is",
+        "choices": [
+          "mẍ + kx = kA cos(Ωt)",
+          "mẍ + kx = 0",
+          "mẍ + kx = −kA cos(Ωt)",
+          "mẍ − kx = kA cos(Ωt)",
+          "mẍ + kx = kAΩ² cos(Ωt)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nApplying the Euler-Lagrange equation d/dt(∂L/∂ẋ) − ∂L/∂x = 0: ∂L/∂ẋ = mẋ, so d/dt(∂L/∂ẋ) = mẍ. And ∂L/∂x = −k(x − A cos Ωt). Setting mẍ − [−k(x−A cos Ωt)] = 0 gives mẍ + k(x − A cos Ωt) = 0, i.e., mẍ + kx = kA cos(Ωt). The 'mẍ + kx = 0' option ignores the moving wall entirely, treating it as if A = 0. The option with an extra Ω² factor incorrectly inserts the wall's acceleration amplitude in place of its displacement amplitude, which is what actually appears in the spring's potential energy.\n\n90-SECOND SOLUTION\nThe potential only depends on the spring's stretch, x − x_wall(t); differentiating the standard spring Lagrangian with x replaced by (x − x_wall) simply moves x_wall(t) to the force side unchanged: mẍ + kx = k·x_wall(t) = kA cos(Ωt).\n\nWHAT TO MEMORIZE\nFor a spring with a moving support, write U = ½k(x−x_wall(t))² directly in the Lagrangian; the Euler-Lagrange equation then automatically produces a driven-oscillator equation with the wall's own displacement (not velocity or acceleration) appearing as the forcing term."
+      },
+
+      {
+        "question": "A particle of mass m moves in a plane under a central attractive potential U(r) = −k/r (k > 0), described in polar coordinates by the Lagrangian L = ½m(ṙ² + r²θ̇²) + k/r. In terms of the canonical momenta p_r and p_θ, the Hamiltonian of the system is",
+        "choices": [
+          "p_r²/(2m) + p_θ²/(2mr²) + k/r",
+          "p_r²/(2m) + p_θ²/(2m) − k/r",
+          "p_r² + p_θ²/r² − k/r",
+          "p_r²/(2m) − p_θ²/(2mr²) − k/r",
+          "p_r²/(2m) + p_θ²/(2mr²) − k/r"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe canonical momenta are p_r = ∂L/∂ṙ = mṙ and p_θ = ∂L/∂θ̇ = mr²θ̇, so ṙ = p_r/m and θ̇ = p_θ/(mr²). The Hamiltonian for this time-independent, natural (velocity-quadratic kinetic energy) system equals the total energy T+U: H = ½m(ṙ²+r²θ̇²) − k/r, and substituting the momenta gives H = p_r²/(2m) + p_θ²/(2mr²) − k/r. The option with '+k/r' has the sign of the potential term flipped, forgetting that U(r) = −k/r as originally stated (the +k/r in the given L is because L = T−U = T+k/r). The option missing the 1/r² factor on the angular term omits the essential factor that converts angular momentum into a term with correct units of energy.\n\n90-SECOND SOLUTION\nFor any Lagrangian of the standard form L = T(q,q̇) − U(q) with T quadratic in velocities, H = T + U automatically; just re-express T in terms of momenta (p_r²/2m and p_θ²/2mr² from the kinetic energy's two terms) and keep U(r) = −k/r as originally given.\n\nWHAT TO MEMORIZE\nFor a natural system (time-independent constraints, T quadratic in velocities), H = T + U always; the sole task is converting each velocity term in T to its conjugate momentum via p_q = ∂L/∂q̇, term by term."
+      },
+
+      {
+        "question": "A particle moves in the xy-plane under a potential energy U(x,y) that depends only on x (it is completely independent of y). Which of the following quantities is necessarily conserved as the particle moves?",
+        "choices": [
+          "The particle's total kinetic energy",
+          "The x-component of the particle's linear momentum",
+          "The particle's angular momentum about the origin",
+          "The particle's x-coordinate",
+          "The y-component of the particle's linear momentum"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Lagrangian is L = ½m(ẋ²+ẏ²) − U(x), which does not depend on y itself (only on ẏ) — y is a cyclic (ignorable) coordinate. By the Euler-Lagrange equation d/dt(∂L/∂ẏ) = ∂L/∂y = 0, the conjugate momentum p_y = mẏ is conserved. The x-component of momentum is the tempting mirror-image error: p_x is NOT conserved here, since the force −∂U/∂x is generally nonzero. Angular momentum about the origin would be conserved only for a central (rotationally symmetric) potential, not a translationally symmetric one like this.\n\n90-SECOND SOLUTION\nA potential that ignores y entirely creates translational symmetry along y (not x, and not rotational symmetry), so by Noether's theorem the conserved quantity must be the momentum conjugate to y, namely p_y = mẏ.\n\nWHAT TO MEMORIZE\nWhichever coordinate is absent from the Lagrangian (only its time-derivative appears) is 'cyclic,' and its conjugate momentum is conserved — match the symmetry direction to the correct component of momentum, not just 'some momentum is conserved.'"
+      },
+
+      {
+        "question": "A particle of mass m moves on the inside surface of a frictionless cone whose axis is vertical and apex points down, such that on the surface the height above the apex is related to the distance r from the axis by z = kr, where k is a positive constant (k = cot α, with α the cone's half-angle). Using r and θ (the usual cylindrical angle about the axis) as generalized coordinates, the correct Lagrangian for the particle (under gravity, g downward) is",
+        "choices": [
+          "L = ½m(1+k²)(ṙ²+r²θ̇²) − mgkr",
+          "L = ½mṙ² + ½mr²θ̇² − mgkr",
+          "L = ½m(1+k²)ṙ² + ½mr²θ̇² − mgr/k",
+          "L = ½m(1+k²)ṙ² + ½mr²θ̇² − mgkr",
+          "L = ½mk²ṙ² + ½mr²θ̇² − mgkr"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIn cylindrical coordinates, x = r cosθ, y = r sinθ, z = kr, so ẋ² + ẏ² + ż² = ṙ² + r²θ̇² + (kṙ)² = (1+k²)ṙ² + r²θ̇², since ż = kṙ (only the radial motion changes the height, not the angular motion). The kinetic energy is T = ½m[(1+k²)ṙ² + r²θ̇²]. The potential energy is U = mgz = mgkr. So L = T − U = ½m(1+k²)ṙ² + ½mr²θ̇² − mgkr. The option lacking the (1+k²) factor entirely treats the constraint as if the particle moved on a flat horizontal plane instead of a slanted cone surface. The option applying (1+k²) to BOTH the radial and angular terms incorrectly extends the slope correction to the angular kinetic energy term too, but θ̇ produces purely horizontal motion (r sets the radius of the circle, but the height doesn't depend on θ at all), so that term is unaffected by the cone's slope.\n\n90-SECOND SOLUTION\nOnly radial motion carries the particle up or down the slanted surface (z=kr couples to r, not θ), so only the ṙ² term picks up the extra (1+k²) factor from the constraint; the r²θ̇² (purely azimuthal) term is unaffected, and U = mgz = mgkr directly.\n\nWHAT TO MEMORIZE\nWhen a constraint ties one coordinate's motion partly to another (here z = kr means moving in r also changes height), only the affected velocity term in the kinetic energy is modified by the constraint — check each generalized velocity's physical meaning separately rather than applying a blanket correction factor."
+      },
+
+      {
+        "question": "A horizontal turntable rotates at a constant angular speed of 0.50 rad/s. A person standing on the turntable walks radially outward at a constant speed of 2.0 m/s relative to the turntable. The magnitude of the Coriolis acceleration (as evaluated in the rotating frame of the turntable) experienced by the person at the moment described is",
+        "choices": [
+          "0.50 m/s²",
+          "1.0 m/s²",
+          "2.0 m/s²",
+          "4.0 m/s²",
+          "8.0 m/s²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe Coriolis acceleration in a rotating frame is a_cor = −2Ω × v_rel, with magnitude 2Ωv_rel when Ω (along the rotation axis) and v_rel (the velocity relative to the rotating frame) are perpendicular, which they are here since the person's radial velocity is entirely in the horizontal plane, perpendicular to the vertical rotation axis. Magnitude: 2Ωv_rel = 2(0.50)(2.0) = 2.0 m/s². Choice A (0.50 m/s²) omits the factor of 2 and also drops v. Choice E (8.0 m/s²) mistakenly uses 2Ω²v with an extra factor of Ω.\n\n90-SECOND SOLUTION\nCoriolis acceleration magnitude is always 2Ωv when the relative velocity is perpendicular to the rotation axis — plug in directly: 2(0.50)(2.0) = 2.0 m/s².\n\nWHAT TO MEMORIZE\nCoriolis acceleration magnitude: a_cor = 2Ωv_rel sin(angle between Ω and v_rel); for purely radial motion on a turntable (v_rel in the rotation plane, perpendicular to Ω), this simplifies to 2Ωv_rel."
+      },
+
+      {
+        "question": "Water (density 1000 kg/m³) flows steadily through a horizontal pipe that narrows smoothly from a wide section to a section with one-third the cross-sectional area. In the wide section, the flow speed is 2.0 m/s. Neglecting viscosity, the pressure in the wide section exceeds the pressure in the narrow section by most nearly",
+        "choices": [
+          "4000 Pa",
+          "8000 Pa",
+          "12,000 Pa",
+          "16,000 Pa",
+          "32,000 Pa"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBy continuity, A₁v₁ = A₂v₂; since A₂ = A₁/3, the speed in the narrow section is v₂ = 3v₁ = 6.0 m/s. Applying Bernoulli's equation for horizontal flow, P₁ + ½ρv₁² = P₂ + ½ρv₂², so P₁ − P₂ = ½ρ(v₂² − v₁²) = ½(1000)(36−4) = ½(1000)(32) = 16,000 Pa. The 8000 Pa option comes from using (v₂−v₁)² in place of (v₂²−v₁²). The 4000 Pa option comes from applying the area ratio as v₂=v₁√3 rather than v₂=3v₁. The 12,000 Pa option comes from using the wrong area ratio (v₂=2v₁ instead of 3v₁) while also forgetting the factor of ½ in Bernoulli's equation, and the 32,000 Pa option comes from forgetting that factor of ½ altogether while keeping the correct v₂=3v₁.\n\n90-SECOND SOLUTION\nContinuity triples the speed (area ratio 3), so v₂²=9v₁². Bernoulli: ΔP = ½ρv₁²(9−1) = ½(1000)(4)(8) = 16,000 Pa.\n\nWHAT TO MEMORIZE\nCombine continuity (A₁v₁=A₂v₂) with Bernoulli (P+½ρv² constant along a horizontal streamline) — the pressure drop depends on v₂²−v₁², not on the speed difference itself."
+      },
+
+      {
+        "question": "A large flat iceberg floats in seawater. In this idealized problem, take the density of the ice to be 900 kg/m³ and the density of the seawater to be 1000 kg/m³. The fraction of the iceberg's volume that is visible ABOVE the surface of the water is",
+        "choices": [
+          "1/10",
+          "1/9",
+          "1/5",
+          "1/2",
+          "9/10"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a floating object in equilibrium, the weight of displaced fluid equals the object's weight: ρ_water · V_submerged · g = ρ_ice · V_total · g, so V_submerged/V_total = ρ_ice/ρ_water = 900/1000 = 0.90. The fraction above the surface is 1 − 0.90 = 0.10 = 1/10. Choice E (9/10) is the submerged fraction, the complement of what's actually asked (a common answer-swap trap). Choice B (1/9) results from incorrectly taking the ratio of the two densities' difference to the ice density instead of to the water density.\n\n90-SECOND SOLUTION\nSubmerged fraction = ρ_object/ρ_fluid = 900/1000 = 9/10; the question asks for the visible fraction ABOVE, which is the complement: 1 − 9/10 = 1/10.\n\nWHAT TO MEMORIZE\nFloating equilibrium: submerged fraction = ρ_object/ρ_fluid. Always double-check whether the question asks for the submerged or the exposed fraction before selecting an answer — both fractions are always offered as tempting distractors."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Electromagnetism Test",
+    "added": "2026-08-22",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "Three identical point charges, each +2.0 μC, are held fixed at the corners of an equilateral triangle with sides of length 0.30 m. Taking 1/4πε₀ = 8.99 × 10⁹ N·m²/C², the total electrostatic potential energy of the configuration is most nearly",
+        "choices": [
+          "0.12 J",
+          "0.18 J",
+          "0.24 J",
+          "0.30 J",
+          "0.36 J"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEach of the three pairs contributes U = kq²/a, and all three pairwise separations equal the side length a. Total energy is U = 3kq²/a = 3(8.99×10⁹)(2.0×10⁻⁶)²/0.30 ≈ 0.36 J. Choice A is kq²/a for a single pair only (forgetting to multiply by the number of pairs); choice B is half the correct total (a stray factor of 2 somewhere in the bookkeeping); choice C comes from using 2 pairs instead of 3.\n\n90-SECOND SOLUTION\nCount pairs: 3 charges give C(3,2) = 3 identical pairs at the same separation, so just triple the two-charge result kq²/a.\n\nWHAT TO MEMORIZE\nAssembly energy of N point charges is the sum over all pairs, U = Σ kqᵢqⱼ/rᵢⱼ; for identical charges and equal spacing this is just (number of pairs) × kq²/r."
+      },
+
+      {
+        "question": "A conducting rod slides without friction along two horizontal rails a distance w = 0.30 m apart, moving at a constant speed v = 4.0 m/s. The rails lie in a region where the magnetic field is perpendicular to the plane of the rails but is spatially nonuniform, increasing linearly with position as B(x) = B₀x/L, with B₀ = 0.80 T and L = 0.50 m (x measured from the rails' starting edge, where B = 0). At the instant the rod is at x = 0.20 m, the magnitude of the induced emf is most nearly",
+        "choices": [
+          "0.096 V",
+          "0.19 V",
+          "0.24 V",
+          "0.38 V",
+          "0.64 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe flux enclosed between the starting edge and the rod's position x is Φ(x) = w∫₀ˣ B(x')dx' = w(B₀/L)(x²/2). The emf is dΦ/dt = w(B₀/L)·x·(dx/dt) = wB₀xv/L (using the chain rule on x², which brings down a factor of x, not x²/2). Plugging in: emf = (0.30)(0.80)(0.20)(4.0)/0.50 = 0.384 V ≈ 0.38 V. Choice C results from using the average field over the swept region, ½B(x), instead of correctly differentiating the flux integral, which does not simply reduce to a 'B(x) times swept area' shortcut when B itself depends on position.\n\n90-SECOND SOLUTION\nWrite flux as an explicit integral of a position-dependent B before differentiating — resist the urge to use the simple motional-emf formula emf = BLv, which only holds when B is uniform over the whole swept region.\n\nWHAT TO MEMORIZE\nFor a rod sweeping through a spatially varying field, first build Φ(x) = w∫B(x')dx′, then use emf = dΦ/dt = (dΦ/dx)(dx/dt) = w·B(x)·v — the instantaneous emf depends on the local field B(x) at the rod's current position, not the field profile it already swept through."
+      },
+
+      {
+        "question": "A thin flat disk of radius R carries a uniform surface charge density σ. A point on the disk's axis is a distance R from the center of the disk. In terms of σ and ε₀, the magnitude of the electric field at that point is most nearly",
+        "choices": [
+          "σ/(2ε₀)",
+          "0.29 σ/(2ε₀)",
+          "0.71 σ/(2ε₀)",
+          "σ/(4ε₀)",
+          "σ/(√2 ε₀)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe on-axis field of a uniformly charged disk is E(z) = (σ/2ε₀)[1 − z/√(z²+R²)]. At z = R, z/√(z²+R²) = 1/√2 ≈ 0.707, so the bracket is 1 − 0.707 ≈ 0.293. Thus E ≈ 0.29·σ/(2ε₀). Choice A is the infinite-sheet limit (forgetting the disk is finite); choice C uses z/√(z²+R²) itself instead of 1 minus it.\n\n90-SECOND SOLUTION\nRecall the disk formula and just evaluate the geometric factor 1 − 1/√2 ≈ 0.29 — no need to rederive the integral.\n\nWHAT TO MEMORIZE\nOn-axis disk field E = (σ/2ε₀)[1 − z/√(z²+R²)]; as z → ∞ it falls to the point-charge form, and as z → 0 it reduces to the infinite-sheet result σ/2ε₀."
+      },
+
+      {
+        "question": "A charged particle is released from rest at the origin, in a region where a uniform electric field E and a uniform magnetic field B are both directed along the +z-axis (parallel to each other). Neglecting gravity, the subsequent trajectory of the particle is",
+        "choices": [
+          "a circle in the xy-plane",
+          "a cycloid in a plane containing the z-axis",
+          "a helix of constant pitch, axis along z",
+          "a straight line along the z-axis",
+          "a straight line, but not along the z-axis"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe magnetic force is qv×B, which vanishes whenever v is parallel to B. Since the particle starts at rest, its velocity is zero at t=0, and E (parallel to B) can only ever accelerate it along the z-axis — so v stays parallel to B for all time, meaning v×B remains zero forever. The particle simply undergoes 1D uniform acceleration along z under E alone. Choice C is the trap: it's the correct trajectory only if the particle had a nonzero initial velocity component perpendicular to B, which it does not here (it starts from rest).\n\n90-SECOND SOLUTION\nWhenever 'released from rest' appears alongside parallel E and B fields, check immediately whether v×B can ever become nonzero — if the only force is along the field direction and the particle starts with zero velocity, it never picks up a transverse component at all.\n\nWHAT TO MEMORIZE\nThe magnetic force can never impart velocity along B, and it can never create motion out of a state with v ∥ B — a charge starting at rest in parallel E and B fields moves in a straight line, not a helix."
+      },
+
+      {
+        "question": "Two concentric thin spherical shells are centered on the origin: the inner shell, radius a, carries charge +2Q, and the outer shell, radius b (b > a), carries charge −Q. Just inside the outer shell (r slightly less than b) and just outside it (r slightly greater than b), the ratio of the electric field magnitudes E(b⁻)/E(b⁺) is",
+        "choices": [
+          "1/2",
+          "2",
+          "3",
+          "4",
+          "9"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBy Gauss's law, a Gaussian sphere of radius r < b encloses only the inner shell's charge, +2Q, giving E(b⁻) = 2Q/(4πε₀b²). A Gaussian sphere with r > b encloses +2Q − Q = +Q, giving E(b⁺) = Q/(4πε₀b²). The ratio is 2Q/Q = 2. Choice A inverts the ratio; choice C mistakenly uses the outer shell's own charge magnitude added instead of net-enclosed, 2Q+Q=3Q, as if the two shells' charges simply summed; choice E squares the charge ratio (2Q/Q)² as if the field itself, rather than the enclosed charge, needed squaring.\n\n90-SECOND SOLUTION\nField magnitude just depends on enclosed charge: 2Q inside the gap, Q outside — ratio is simply 2Q/Q.\n\nWHAT TO MEMORIZE\nFor nested shells, E at any radius depends only on the total charge enclosed within that radius, by Gauss's law — the field is discontinuous by σ/ε₀ exactly at each shell, but its value in each region is set purely by enclosed charge."
+      },
+
+      {
+        "question": "A circular conducting loop lies in a plane perpendicular to a spatially uniform magnetic field. At a certain instant, the field has magnitude 0.40 T and is decreasing at a rate of 0.050 T/s, while the loop's radius is 0.10 m and is simultaneously expanding at a rate of 0.020 m/s. The magnitude of the induced emf at that instant is most nearly",
+        "choices": [
+          "0.63 mV",
+          "1.6 mV",
+          "3.5 mV",
+          "5.0 mV",
+          "6.6 mV"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nSince both B and the area A = πr² change with time, apply the product rule to Φ = B(t)A(t): dΦ/dt = (dB/dt)A + B(dA/dt) = (dB/dt)(πr²) + B(2πr)(dr/dt). Term 1: (−0.050)(π)(0.10)² ≈ −1.57×10⁻³ V. Term 2: (0.40)(2π)(0.10)(0.020) ≈ 5.03×10⁻³ V. These partially cancel (the shrinking field and the growing area contribute with opposite sign to the flux's rate of change): total ≈ 3.46×10⁻³ V ≈ 3.5 mV. Choice D adds the magnitudes of the two terms instead of accounting for their opposite signs.\n\n90-SECOND SOLUTION\nWhenever both B and the area change together, the product rule is unavoidable — compute each term's sign carefully: a shrinking B works to decrease flux while a growing A works to increase it, so the two terms here partially offset rather than reinforce.\n\nWHAT TO MEMORIZE\nΦ = B(t)A(t) ⟹ dΦ/dt = ḂA + BȦ (product rule) whenever both factors vary — never assume only one factor is changing without checking the problem statement."
+      },
+
+      {
+        "question": "A solid sphere of radius R carries volume charge density ρ(r) = ρ₀(1 − r/R), where ρ₀ is a constant and r is the distance from the center. The magnitude of the electric field at r = R/2 is",
+        "choices": [
+          "5ρ₀R/(48ε₀)",
+          "ρ₀R/(6ε₀)",
+          "ρ₀R/(4ε₀)",
+          "ρ₀R/(3ε₀)",
+          "ρ₀R/(2ε₀)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nEnclosed charge: Q_enc(r) = ∫₀ʳ ρ₀(1 − r'/R)4πr'² dr' = 4πρ₀[r³/3 − r⁴/(4R)]. Then E(r) = Q_enc/(4πε₀r²) = ρ₀r(4R−3r)/(12Rε₀). At r = R/2: E = ρ₀(R/2)(4R−3R/2)/(12Rε₀) = ρ₀(R/2)(5R/2)/(12Rε₀) = 5ρ₀R/(48ε₀). Choice C (ρ₀R/4ε₀) results from treating ρ as uniform at value ρ₀ throughout (dropping the (1−r/R) taper entirely) and using the standard uniform-sphere formula E=ρr/3ε₀ at r=R/2; choice E (ρ₀R/2ε₀) is the field of a uniformly charged sphere with density ρ₀ evaluated at the full surface r=R, not at R/2.\n\n90-SECOND SOLUTION\nSet up Q_enc(r) as a single integral of ρ(r')4πr'²dr' and divide by 4πε₀r² — the linear taper only adds one extra term (an r⁴ piece) beyond the uniform-density r³ result, so track that term explicitly. The tapered density puts less charge near the center than a uniform sphere would, so the correct answer should come out smaller than the naive uniform-sphere shortcuts — a useful sign check for picking out choice A.\n\nWHAT TO MEMORIZE\nFor any spherically symmetric ρ(r), E(r) = Q_enc(r)/(4πε₀r²) with Q_enc(r) = ∫₀ʳ ρ(r')4πr'²dr' — always integrate charge first, never assume the uniform-sphere r-scaling for a non-uniform profile."
+      },
+
+      {
+        "question": "A proton, initially at rest, is accelerated from rest through a potential difference of 500 V and then enters a region of uniform magnetic field of magnitude 0.20 T, with its velocity perpendicular to the field. Taking mₚ = 1.67 × 10⁻²⁷ kg and e = 1.6 × 10⁻¹⁹ C, the radius of its circular path is most nearly",
+        "choices": [
+          "1.6 cm",
+          "3.2 cm",
+          "4.8 cm",
+          "6.5 cm",
+          "8.1 cm"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFrom energy conservation, qV = ½mv², so v = √(2qV/m) = √(2(1.6×10⁻¹⁹)(500)/(1.67×10⁻²⁷)) ≈ 3.1×10⁵ m/s. The radius of circular motion is r = mv/(qB) = (1.67×10⁻²⁷)(3.1×10⁵)/[(1.6×10⁻¹⁹)(0.20)] ≈ 1.6×10⁻² m = 1.6 cm. Choice B is exactly double the correct value, from mistakenly using B/2 in place of B in the radius formula (an easy slip if a diameter and a radius get confused somewhere upstream); choices C, D, and E continue that same pattern at 3×, 4×, and 5× the correct radius, corresponding to using B/3, B/4, and B/5.\n\n90-SECOND SOLUTION\nChain the two standard relations directly: v from qV=½mv², then r=mv/(qB) — no need to simplify into one combined formula, just substitute numbers in two clean steps.\n\nWHAT TO MEMORIZE\nAccelerate-then-curve problems always chain qV = ½mv² (get v) with r = mv/(qB) (get r); memorize both relations separately rather than trying to recall a combined formula."
+      },
+
+      {
+        "question": "A permanent electric dipole of moment p = 2.0 × 10⁻⁹ C·m is oriented along the x-axis in a region where the electric field is also along the x-axis but has a nonzero gradient dE/dx = 5.0 × 10⁴ N/(C·m) at the dipole's location. The magnitude of the net force on the dipole is most nearly",
+        "choices": [
+          "2.5 × 10⁻⁵ N",
+          "5.0 × 10⁻⁵ N",
+          "7.5 × 10⁻⁵ N",
+          "1.0 × 10⁻⁴ N",
+          "1.0 × 10⁻¹ N"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA dipole aligned with a nonuniform field experiences a net force F = p(dE/dx) along the field's gradient direction (the two charges sit at slightly different field strengths, so their equal-and-opposite forces don't fully cancel). F = (2.0×10⁻⁹)(5.0×10⁴) = 1.0×10⁻⁴ N. Choice A is only a quarter of the correct value (as if using p/4 in place of p, a plausible slip if the two point charges' separation were mistakenly halved twice); choice C is three-quarters of the correct value from a similar partial-cancellation bookkeeping error.\n\n90-SECOND SOLUTION\nIn a uniform field a dipole feels only a torque, never a net force; the moment a gradient is mentioned, reach for F = p·(dE/dx) directly rather than modeling two separate point charges.\n\nWHAT TO MEMORIZE\nDipole in uniform E: torque τ = p × E, zero net force. Dipole in nonuniform E: additional net force F = ∇(p·E), which reduces to p(dE/dx) when p and the gradient are both along x."
+      },
+
+      {
+        "question": "A real battery of emf 9.0 V and internal resistance 1.0 Ω is connected across two resistors, 2.0 Ω and 6.0 Ω, wired in parallel with each other. The power dissipated in the 2.0 Ω resistor is most nearly",
+        "choices": [
+          "4.9 W",
+          "8.1 W",
+          "14.6 W",
+          "24.3 W",
+          "40.5 W"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe parallel combination is (2.0×6.0)/(2.0+6.0) = 1.5 Ω. Total circuit current from the battery is I = 9.0/(1.0+1.5) = 3.6 A, so the terminal voltage across the parallel pair is 3.6×1.5 = 5.4 V. The current through the 2.0 Ω branch is 5.4/2.0 = 2.7 A, giving P = I²R = (2.7)²(2.0) ≈ 14.6 W. Choice A is instead the power in the 6.0 Ω branch; choice E ignores the internal resistance entirely, using the full 9.0 V across the 2.0 Ω branch.\n\n90-SECOND SOLUTION\nReduce to a single loop first (battery, r, and R_parallel in series) to get the terminal voltage, then split that voltage across the two known parallel resistors — don't try to find each branch current before collapsing the parallel pair.\n\nWHAT TO MEMORIZE\nWith internal resistance present, always find the terminal voltage from the full-circuit loop first; the branch currents in a parallel load only follow once you know the voltage actually delivered to that load."
+      },
+
+      {
+        "question": "Two large grounded conducting planes meet at a right angle, occupying the half-planes x = 0 (y > 0) and y = 0 (x > 0). A point charge +q sits in the region between them at the point (d, d), equidistant from both planes. Using the method of images, the magnitude of the net electrostatic force on the charge is",
+        "choices": [
+          "kq²/(4d²)",
+          "kq²(2√2 − 1)/(8d²)",
+          "kq²/(2d²)",
+          "kq²√2/(4d²)",
+          "kq²(√2 − 1)/(4d²)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThree images reproduce the grounded corner: −q at (−d, d), −q at (d, −d), and +q at (−d, −d). The two negative images each pull with force kq²/(2d)² along an axis; the positive image pushes along the diagonal at distance 2√2 d with force kq²/(2√2 d)² = kq²/(8d²). Resolving everything into x- and y-components (each equal by symmetry) and adding gives a net magnitude kq²(2√2−1)/(8d²), directed along the diagonal toward the corner. Choice A keeps only the two negative images and forgets the repulsive third image entirely; choice C double-counts one attractive image.\n\n90-SECOND SOLUTION\nBy symmetry (charge on the diagonal) the two negative images contribute equal x- and y-pulls, and the lone positive image pushes back along the same diagonal — the answer must reduce to that structure, which immediately eliminates any choice missing a √2 or a combination of two distinct terms.\n\nWHAT TO MEMORIZE\nA charge in a grounded right-angle corner requires three images (two negative, one positive) — not one. Forgetting the positive corner image is the single most common error in this configuration."
+      },
+
+      {
+        "question": "A rigid rectangular wire loop rotates at constant angular speed about an axis that lies in the plane of the loop and is parallel to a uniform external magnetic field B (the rotation axis and B point in the same fixed direction in space). Throughout the motion, the magnitude of the emf induced in the loop is",
+        "choices": [
+          "sinusoidal, with the same frequency as the rotation",
+          "sinusoidal, with twice the frequency of the rotation",
+          "constant and nonzero",
+          "a square wave",
+          "zero at all times"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe loop's normal vector is always perpendicular to the rotation axis (true for any flat loop rotating about an axis in its own plane). Because the rotation axis is parallel to B, rotating about it can never tilt the normal vector toward B — the normal only sweeps around in the plane perpendicular to B, so its component along B, and hence the flux Φ = B·A, remains exactly zero at every instant. With Φ ≡ 0, dΦ/dt ≡ 0 as well: no emf is ever induced, no matter how fast the loop spins. Choice A is the answer for the standard AC-generator geometry, where the rotation axis is perpendicular to B instead — the trap here is applying that familiar result without checking that the axis orientation has changed.\n\n90-SECOND SOLUTION\nPicture the loop's normal vector as it rotates: an axis in the loop's own plane forces the normal to stay in the plane perpendicular to that axis. If B lies along the axis itself, the normal can never acquire a component along B — flux is identically zero.\n\nWHAT TO MEMORIZE\nThe textbook AC generator (sinusoidal emf) requires the rotation axis to be perpendicular to B. Rotating instead about an axis parallel to B produces no emf at all — check the axis orientation relative to B before assuming the standard sinusoidal-generator result applies."
+      },
+
+      {
+        "question": "A thin insulating rod of length L = 0.60 m carries a uniform charge Q = 4.0 nC. A point P lies on the perpendicular bisector of the rod, a distance d = 0.40 m from the rod. Taking 1/4πε₀ = 8.99 × 10⁹ N·m²/C², the magnitude of the electric field at P is most nearly",
+        "choices": [
+          "90 N/C",
+          "140 N/C",
+          "180 N/C",
+          "220 N/C",
+          "360 N/C"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nOn the perpendicular bisector of a uniform line charge, E = kQ / [d√(d² + (L/2)²)] (the components along the rod cancel by symmetry, leaving only the perpendicular component). With d = 0.40, L/2 = 0.30: √(0.16+0.09) = 0.50, so E = (8.99×10⁹)(4.0×10⁻⁹)/(0.40×0.50) ≈ 180 N/C. Choice A treats the rod as a point charge at distance d alone (E = kQ/d²), ignoring its finite length; choice E omits the extra 1/√(d²+(L/2)²) geometric factor entirely.\n\n90-SECOND SOLUTION\nRecognize the 3-4-5 right triangle (0.30, 0.40, 0.50) hiding in the geometry — it makes the algebra land on a round number, a strong sign this is the intended route.\n\nWHAT TO MEMORIZE\nPerpendicular-bisector field of a finite uniform line charge: E = kQ / [d√(d²+(L/2)²)], reducing to kQ/d² for d ≫ L (point charge) and to λ/(2πε₀d) for d ≪ L (infinite line)."
+      },
+
+      {
+        "question": "A single square loop of wire, 0.20 m on a side, carries a steady current of 3.0 A. Taking μ₀ = 4π × 10⁻⁷ T·m/A, the magnitude of the magnetic field at the center of the loop is most nearly",
+        "choices": [
+          "4.7 × 10⁻⁶ T",
+          "9.4 × 10⁻⁶ T",
+          "1.7 × 10⁻⁵ T",
+          "3.0 × 10⁻⁵ T",
+          "4.7 × 10⁻⁵ T"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nEach side is a finite straight segment a distance d = a/2 from the center, subtending equal half-angles of 45° on either side. One side contributes B = [μ₀I/(4πd)]·2sin45°, and by symmetry all four sides add directly: B_total = 2√2μ₀I/(πa) = 2√2(4π×10⁻⁷)(3.0)/(π×0.20) ≈ 1.7×10⁻⁵ T. Choice A uses only one side's contribution instead of all four; choice D mistakenly uses the formula for a circular loop of the same 'radius' a, μ₀I/(2a).\n\n90-SECOND SOLUTION\nRecall (or quickly rebuild) that a square loop's center field is 2√2 times μ₀I/(2πa) — noticeably larger than a circular loop of the same characteristic size because every point on a square's perimeter is closer to the center on average.\n\nWHAT TO MEMORIZE\nSquare loop, center field: B = 2√2μ₀I/(πa). Don't default to the circular-loop formula μ₀I/(2R) just because a loop-center field is being asked for — check the actual geometry."
+      },
+
+      {
+        "question": "A resistor R = 40 Ω, an inductor L = 0.20 H, and a capacitor C = 1.11 × 10⁻⁴ F are all connected in series across an AC source of angular frequency ω = 300 rad/s. The phase angle by which the source voltage leads the current is most nearly",
+        "choices": [
+          "0°",
+          "16.7°",
+          "36.9°",
+          "53.1°",
+          "90°"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCompute the reactances: X_L = ωL = (300)(0.20) = 60 Ω, and X_C = 1/(ωC) = 1/[(300)(1.11×10⁻⁴)] ≈ 30 Ω. The net reactance is X_L − X_C = 30 Ω, and the impedance is Z = R + j(X_L−X_C) = 40 + j30 Ω. The phase angle is φ = arctan(30/40) = arctan(0.75) ≈ 36.9° (voltage leads current, since the circuit is net inductive). Choice D swaps the legs of the 3-4-5 triangle, giving arctan(40/30) instead of arctan(30/40).\n\n90-SECOND SOLUTION\nRecognize the 3-4-5 right triangle hiding in R=40, (X_L−X_C)=30: that pair of legs always gives 36.9°/53.1°, and since X_L > X_C the circuit is inductive, so voltage leads current (a positive angle).\n\nWHAT TO MEMORIZE\nSeries RLC phase angle: φ = arctan[(X_L−X_C)/R], positive (voltage leads) when the circuit is net inductive (X_L>X_C), negative (current leads) when net capacitive (X_C>X_L)."
+      },
+
+      {
+        "question": "An electron moves in a uniform magnetic field of magnitude 2.0 × 10⁻³ T, with a velocity component perpendicular to the field. Taking mₑ = 9.11 × 10⁻³¹ kg and e = 1.6 × 10⁻¹⁹ C, the time required for the electron to complete one full circular revolution (the cyclotron period) is most nearly",
+        "choices": [
+          "8.9 × 10⁻⁹ s",
+          "1.8 × 10⁻⁸ s",
+          "3.6 × 10⁻⁸ s",
+          "5.7 × 10⁻⁸ s",
+          "1.1 × 10⁻⁷ s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe cyclotron period is T = 2πm/(qB) — notably independent of the electron's speed. T = 2π(9.11×10⁻³¹)/[(1.6×10⁻¹⁹)(2.0×10⁻³)] ≈ 1.79×10⁻⁸ s. Choice A is off by a factor of 2 (using π instead of 2π); choice D incorrectly assumes T depends on the (unstated) speed and tries to work backward from an assumed radius.\n\n90-SECOND SOLUTION\nNo speed or radius is given precisely because none is needed — the cyclotron period T = 2πm/(qB) doesn't depend on v, so don't go looking for a missing velocity value.\n\nWHAT TO MEMORIZE\nCyclotron period T = 2πm/(qB) and cyclotron frequency f = qB/(2πm) are both independent of the particle's speed — this is exactly the principle that makes a fixed-frequency cyclotron accelerator possible (nonrelativistically)."
+      },
+
+      {
+        "question": "A parallel-plate capacitor with circular plates of area 0.050 m² and plate separation 2.0 mm has the voltage across it increasing at a constant rate of 1.0 × 10⁶ V/s, with the charge remaining uniformly distributed over the plates. Taking ε₀ = 8.85 × 10⁻¹² F/m, the magnitude of the displacement current between the plates is most nearly",
+        "choices": [
+          "0.22 mA",
+          "0.44 mA",
+          "0.66 mA",
+          "0.88 mA",
+          "1.1 mA"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe displacement current equals the conduction current that would flow in the wires charging the capacitor: I_d = C(dV/dt), where C = ε₀A/d = (8.85×10⁻¹²)(0.050)/(2.0×10⁻³) ≈ 2.21×10⁻¹⁰ F. So I_d = (2.21×10⁻¹⁰)(1.0×10⁶) ≈ 2.21×10⁻⁴ A ≈ 0.22 mA. Choices B, C, D, and E are 2×, 3×, 4×, and 5× this value — the kind of clean-multiple error that results from a slipped factor in the capacitance calculation (for instance, using the plate separation as if it doubled, tripled, or otherwise scaled incorrectly).\n\n90-SECOND SOLUTION\nRecognize that I_d = ε₀A(dE/dt) = ε₀A·d(V/d)/dt = (ε₀A/d)(dV/dt) = C(dV/dt) — it's just the ordinary capacitor charging current, computed via the capacitance rather than by separately finding dE/dt and multiplying by area.\n\nWHAT TO MEMORIZE\nDisplacement current through a capacitor gap always equals the real conduction current in the leads: I_d = ε₀A(dE/dt) = C(dV/dt). This equivalence is exactly what makes Ampère's law consistent for any surface bounded by a loop around the wire, whether that surface passes through the wire or through the gap."
+      },
+
+      {
+        "question": "A 1000 Ω potentiometer (a resistor with a sliding tap) is connected across a 12 V ideal battery. The tap is set exactly at the midpoint, dividing the potentiometer into two 500 Ω halves. A load resistor of 1000 Ω is connected between the tap and the battery's negative terminal, in parallel with the lower half of the potentiometer. The voltage across the load resistor is most nearly",
+        "choices": [
+          "2.4 V",
+          "3.0 V",
+          "3.6 V",
+          "4.0 V",
+          "4.8 V"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe load (1000 Ω) is in parallel with the lower 500 Ω half, giving (1000×500)/1500 = 333 Ω. This combination is in series with the upper 500 Ω half, for a total of 833 Ω across the battery. Current from the battery is 12/833 = 0.0144 A, and the voltage across the 333 Ω combination (which is the load voltage) is 0.0144×333 ≈ 4.8 V. Choice A is exactly half this value, from a stray factor of 2 dropped somewhere in the parallel-combination arithmetic; choice D (4.0 V) comes from ignoring the upper half's voltage drop entirely and using only the naive divider 12×500/(500+1000) with the load resistor substituted directly in place of the lower half's parallel combination.\n\n90-SECOND SOLUTION\nAny load connected to a potentiometer tap always pulls the output below the naive unloaded proportional value of 12×(500/1000)=6.0 V — so 6.0 V (and anything close to it) should be eliminated on sight as the answer to a question that explicitly adds a load.\n\nWHAT TO MEMORIZE\nA potentiometer only delivers the simple fractional voltage V×(R_lower/R_total) when unloaded; with a finite load resistor, first combine the load in parallel with the lower section, then treat the whole thing as a simple two-resistor series divider."
+      },
+
+      {
+        "question": "A parallel-plate capacitor has plate area 0.020 m² and the gap between the plates is completely filled by two dielectric slabs stacked in series (each slab spanning the full plate area): a 1.0 mm-thick slab of dielectric constant κ = 2.0 against the top plate, and a 2.0 mm-thick slab of κ = 4.0 against the bottom plate. Taking ε₀ = 8.85 × 10⁻¹² F/m, the capacitance is most nearly",
+        "choices": [
+          "177 pF",
+          "236 pF",
+          "354 pF",
+          "472 pF",
+          "708 pF"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTwo dielectrics stacked in the direction of the field act as two capacitors in series, each with Cᵢ = κᵢε₀A/dᵢ: C₁ = (2.0)(8.85×10⁻¹²)(0.020)/(1.0×10⁻³) = 3.54×10⁻¹⁰ F, C₂ = (4.0)(8.85×10⁻¹²)(0.020)/(2.0×10⁻³) = 3.54×10⁻¹⁰ F. These happen to be equal, so C_series = C₁/2 = 1.77×10⁻¹⁰ F ≈ 177 pF. Choice B (236 pF) comes from using only the larger dielectric constant κ=4.0 across the full gap thickness d₁+d₂ instead of treating the two layers separately; choices C and E (354 pF and 708 pF) come from mistakenly combining the two individual layer capacitances C₁ and C₂ in parallel (adding them, or taking one of the equal individual values, as if the slabs sat side by side rather than stacked through the gap).\n\n90-SECOND SOLUTION\nStacked slabs (same plate area, splitting the gap thickness) are always in series — combine as 1/C = 1/C₁ + 1/C₂ — while slabs side-by-side (splitting the plate area) are in parallel. Here it's stacked, so use the series rule.\n\nWHAT TO MEMORIZE\nEffective capacitance for series dielectric layers of the same area: 1/C = Σ dᵢ/(κᵢε₀A) — equivalent to treating each layer as its own parallel-plate capacitor and combining as resistors would combine in series."
+      },
+
+      {
+        "question": "Two coils have a mutual inductance M = 0.30 H. The current in coil 1 is ramped linearly from 0 to 10 A over 2.0 s, and then held constant at 10 A. The magnitude of the emf induced in coil 2 is most nearly",
+        "choices": [
+          "0 V during the ramp, then 1.5 V after",
+          "3.0 V during the ramp, then 3.0 V after",
+          "1.5 V during the ramp, then 0 V after",
+          "1.5 V during the ramp, then 1.5 V after",
+          "0 V at all times, since coil 1's current never exceeds 10 A"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nMutually induced emf depends only on the rate of change of the driving current: emf₂ = M(di₁/dt). During the ramp, di₁/dt = 10/2.0 = 5.0 A/s, so emf₂ = (0.30)(5.0) = 1.5 V. Once the current becomes constant, di₁/dt = 0, so emf₂ = 0 exactly — mutual inductance produces no emf from a steady current, no matter how large. Choice B mistakes the emf for something that should scale with the coil's stored magnetic energy or the final current value rather than its rate of change.\n\n90-SECOND SOLUTION\nMutual inductance is a coupling between the *rate of change* of one current and the emf in the other coil — a constant current, however large, induces exactly zero emf.\n\nWHAT TO MEMORIZE\nemf₂ = M(di₁/dt), and emf₁ = M(di₂/dt) — completely symmetric in the two coils, and completely dependent on di/dt, never on i itself."
+      },
+
+      {
+        "question": "Two identical circular loops of radius R = 5.0 cm, coaxial and separated by a distance R, each carry a steady current I = 2.0 A in the same sense (Helmholtz-like arrangement). Taking μ₀ = 4π × 10⁻⁷ T·m/A, the magnitude of the magnetic field at the midpoint on the common axis, halfway between the two loops, is most nearly",
+        "choices": [
+          "1.8 × 10⁻⁵ T",
+          "3.6 × 10⁻⁵ T",
+          "5.0 × 10⁻⁵ T",
+          "7.2 × 10⁻⁵ T",
+          "1.4 × 10⁻⁴ T"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEach loop's on-axis field at distance z from itself is B = μ₀IR²/[2(R²+z²)^(3/2)]. The midpoint sits a distance z = R/2 from each loop, so R²+z² = R²(1+1/4) = 1.25R². One loop gives B₁ = μ₀IR²/[2(1.25R²)^(3/2)] = μ₀I/(2×1.25^1.5×R) ≈ 1.8×10⁻⁵ T, and since both loops' fields point the same way on-axis (same current sense), they add: B_total ≈ 3.6×10⁻⁵ T. Choice A gives only one loop's contribution, forgetting the second loop adds equally at the midpoint by symmetry.\n\n90-SECOND SOLUTION\nBy the mirror symmetry of the setup, both loops are the same distance from the midpoint and contribute equal, same-direction fields — compute one and double it, rather than integrating both from scratch.\n\nWHAT TO MEMORIZE\nOn-axis field of a single loop: B(z) = μ₀IR²/[2(R²+z²)^(3/2)]. For coaxial loops with currents in the same sense, on-axis fields simply superpose (add); opposite sense would instead partially cancel."
+      },
+
+      {
+        "question": "A resistor R = 200 Ω, an inductor L = 0.020 H, and a capacitor C = 5.0 μF are all connected in PARALLEL with each other, and this combination is driven by an ideal AC current source of variable angular frequency ω. At the resonant frequency ω₀ = 1/√(LC), the magnitude of the combination's impedance is",
+        "choices": [
+          "R, and this is the maximum impedance the circuit can have at any frequency",
+          "zero — the impedance is minimized at resonance, just as for a series RLC circuit",
+          "R, and this is the minimum impedance the circuit can have at any frequency",
+          "√(L/C), independent of R",
+          "infinite, since the inductor and capacitor branches short out the resistor"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor elements in parallel, admittances add: Y = 1/R + j(ωC − 1/(ωL)). At resonance ω₀ = 1/√(LC), the reactive (imaginary) part vanishes exactly, leaving Y = 1/R, so Z = R. Away from resonance, the nonzero reactive term only adds to |Y| in quadrature, which can only increase |Y| and therefore decrease |Z| below R. So Z = R is the circuit's maximum possible impedance — the opposite behavior from a series RLC circuit, where Z = R is the minimum impedance at resonance. Choice B applies the series-RLC intuition to the wrong topology.\n\n90-SECOND SOLUTION\nSeries and parallel RLC circuits behave as duals of each other: series minimizes impedance (maximizes current) at resonance, while parallel maximizes impedance (minimizes current drawn from the source) at resonance — memorize them as opposites, not as the same behavior in different clothing.\n\nWHAT TO MEMORIZE\nParallel RLC: |Z| is maximum (= R) at resonance. Series RLC: |Z| is minimum (= R) at resonance. Both resonate at the same ω₀ = 1/√(LC), but the impedance behavior is inverted between the two topologies."
+      },
+
+      {
+        "question": "A proton with kinetic energy 2.0 MeV moves in a circular path of radius 0.50 m under a uniform magnetic field perpendicular to its velocity. Taking mₚc² = 938 MeV (so the motion is safely nonrelativistic) and mₚ = 1.67 × 10⁻²⁷ kg, the magnitude of the magnetic field is most nearly",
+        "choices": [
+          "0.041 T",
+          "0.082 T",
+          "0.16 T",
+          "0.41 T",
+          "0.82 T"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFirst find v from KE = ½mv²: v = √(2·KE/m) = √(2(2.0×10⁶)(1.6×10⁻¹⁹)/(1.67×10⁻²⁷)) ≈ 1.96×10⁷ m/s (about 6.5% of c, confirming the nonrelativistic treatment is reasonable). Then B = mv/(qr) = (1.67×10⁻²⁷)(1.96×10⁷)/[(1.6×10⁻¹⁹)(0.50)] ≈ 0.41 T. Choice B is smaller by a factor of √2 from forgetting the factor of 2 inside the square root when solving for v from the kinetic energy.\n\n90-SECOND SOLUTION\nCombine directly: B = √(2mKE)/(qr), avoiding an intermediate decimal for v — fewer rounding steps means less risk of a stray factor of √2 creeping in.\n\nWHAT TO MEMORIZE\nMagnetic rigidity relation: B = p/(qr) with p = √(2mKE) in the nonrelativistic regime — always sanity-check v/c to confirm the nonrelativistic formula is actually appropriate before trusting the answer."
+      },
+
+      {
+        "question": "In a source-free region of vacuum, a plane electromagnetic wave has electric field E = E₀cos(kx − ωt)ŷ, where ω = ck. Using Faraday's law (∇×E = −∂B/∂t) to determine the associated magnetic field, B is",
+        "choices": [
+          "−(E₀/c)cos(kx − ωt)ẑ",
+          "(E₀/c)sin(kx − ωt)ẑ",
+          "(E₀/c)cos(kx − ωt)ẑ",
+          "(E₀c)cos(kx − ωt)ẑ",
+          "(E₀/c)cos(kx − ωt)ŷ"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor E = E₀cos(kx−ωt)ŷ, the curl has only a z-component: (∇×E)_z = ∂E_y/∂x = −E₀k·sin(kx−ωt). Faraday's law requires (∇×E)_z = −∂B_z/∂t, so ∂B_z/∂t = E₀k·sin(kx−ωt); integrating over t gives B_z = (E₀k/ω)cos(kx−ωt) = (E₀/c)cos(kx−ωt), with no extra sign flip and the same cosine phase as E. This matches the general plane-wave rule B = (k̂×E)/c: the wave travels along +x (k̂ = x̂), and x̂×ŷ = ẑ, so B points along +ẑ with amplitude E₀/c, confirming the direct calculation. Choice A introduces a sign that the calculation does not actually produce; choice E keeps B parallel to E, which is impossible since B must be perpendicular to both E and the direction of propagation.\n\n90-SECOND SOLUTION\nSkip the calculus: for any vacuum plane wave, B = (k̂×E)/c. Here k̂ = x̂ and E ∝ ŷ, so k̂×E ∝ x̂×ŷ = ẑ — B must be along +ẑ with the same cosine phase and amplitude E₀/c, which is choice C on inspection.\n\nWHAT TO MEMORIZE\nFor a vacuum plane wave, |B| = |E|/c always, B = (k̂×E)/c exactly (same phase as E, no extra sign), and E, B, and k̂ form a right-handed triad."
+      },
+
+      {
+        "question": "A wire of uniform resistivity carries a steady current I. Along its length, the wire has two sections of different, constant cross-sectional area: section 1 has area 2.0 × 10⁻⁶ m² and section 2 has area 0.50 × 10⁻⁶ m². The ratio of the current density in section 2 to that in section 1, J₂/J₁, is",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nCharge conservation requires the same current I through both sections in series (no branching), so J = I/A means J₂/J₁ = A₁/A₂ = 2.0/0.50 = 4. Choice A inverts the ratio by using A₂/A₁ instead of A₁/A₂; choice C assumes current density is uniform along the wire, which holds only if area is also uniform.\n\n90-SECOND SOLUTION\nCurrent I is the same everywhere in a series wire; current density is just I spread over less or more area, so the narrower section (smaller area) must have the larger J — go straight to the area ratio.\n\nWHAT TO MEMORIZE\nIn a wire carrying a steady current in series, I is conserved along the length but J = I/A is not — J scales inversely with local cross-sectional area."
+      },
+
+      {
+        "question": "A classical model treats an electron as a point charge undergoing simple harmonic oscillation, x(t) = x₀cos(ωt), with amplitude x₀ = 1.0 × 10⁻¹⁰ m and angular frequency ω = π × 10¹⁶ rad/s. Taking q = 1.6 × 10⁻¹⁹ C, m = 9.11 × 10⁻³¹ kg, ε₀ = 8.85 × 10⁻¹² F/m, and c = 3.0 × 10⁸ m/s, the time-averaged power radiated (via the Larmor formula) is most nearly",
+        "choices": [
+          "7 × 10⁻¹⁰ W",
+          "1.4 × 10⁻⁸ W",
+          "2.8 × 10⁻⁸ W",
+          "5.5 × 10⁻⁸ W",
+          "1.1 × 10⁻⁷ W"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe acceleration is a(t) = −ω²x₀cos(ωt), with peak value a₀ = ω²x₀ = (π×10¹⁶)²(1.0×10⁻¹⁰) ≈ 9.87×10²² m/s². The Larmor formula gives instantaneous power P(t) = q²a(t)²/(6πε₀c³); time-averaging cos² contributes a factor of ½: ⟨P⟩ = q²a₀²/(12πε₀c³) = (1.6×10⁻¹⁹)²(9.87×10²²)²/[12π(8.85×10⁻¹²)(3.0×10⁸)³] ≈ 2.8×10⁻⁸ W. Choice E is high by a factor of 2 from forgetting the time-average factor of ½ on a₀² (i.e., using the peak power instead of the average power).\n\n90-SECOND SOLUTION\nGet the peak acceleration first (a₀ = ω²x₀ — straightforward from the SHM form), then apply Larmor with an explicit ½ for the time average; keep the exponents separate from the mantissas throughout to avoid a power-of-ten slip in this many-factor formula.\n\nWHAT TO MEMORIZE\nLarmor formula: P = q²a²/(6πε₀c³) instantaneously, ⟨P⟩ = q²a₀²/(12πε₀c³) time-averaged for sinusoidal motion — radiated power depends only on charge and acceleration, never directly on velocity or position amplitude alone (amplitude enters only through a₀ = ω²x₀)."
+      },
+
+      {
+        "question": "A plane electromagnetic wave in vacuum has an electric field amplitude E₀ = 200 V/m. Taking ε₀ = 8.85 × 10⁻¹² F/m and c = 3.0 × 10⁸ m/s, the time-averaged intensity (magnitude of the time-averaged Poynting vector) of the wave is most nearly",
+        "choices": [
+          "13 W/m²",
+          "27 W/m²",
+          "40 W/m²",
+          "48 W/m²",
+          "53 W/m²"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe time-averaged intensity of a plane wave is I = ½ε₀cE₀² = ½(8.85×10⁻¹²)(3.0×10⁸)(200)² ≈ 53.1 W/m². Choices A, B, C, and D are one-quarter, one-half, three-quarters, and nine-tenths of the correct value — each traceable to dropping or misapplying part of the ½ε₀cE₀² formula (for instance, using only ε₀c without the ½, then applying an extra incorrect scale-down).\n\n90-SECOND SOLUTION\nThe formula I = ½ε₀cE₀² is worth having memorized outright — plugging in three given numbers with one multiplication is faster than rederiving it from S = E×B/μ₀ and B₀ = E₀/c under time pressure.\n\nWHAT TO MEMORIZE\nTime-averaged intensity of a vacuum plane wave: I = ½ε₀cE₀² = ½(E₀B₀/μ₀) = E_rms²/(μ₀c). The factor of ½ always comes from time-averaging a squared sinusoid — don't forget it when going from peak to average."
+      },
+
+      {
+        "question": "A point charge Q sits at the center of a sphere (an imaginary Gaussian surface, not a physical shell). Consider the electric flux through the spherical cap that subtends a half-angle of 60° as measured from the center. Taking ε₀ = 8.85 × 10⁻¹² F/m and Q = 6.0 nC, the flux through that cap is most nearly",
+        "choices": [
+          "42 N·m²/C",
+          "85 N·m²/C",
+          "127 N·m²/C",
+          "148 N·m²/C",
+          "170 N·m²/C"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe flux through any patch of a sphere centered on the charge is proportional to the solid angle it subtends: Φ = (Q/ε₀)·(Ω/4π), and the solid angle of a cap of half-angle θ is Ω = 2π(1−cosθ). So Φ = (Q/2ε₀)(1−cosθ) = (6.0×10⁻⁹)/(2×8.85×10⁻¹²) × (1−0.5) ≈ 339 × 0.5 ≈ 170 N·m²/C. Choices A, B, and C are one-quarter, one-half, and three-quarters of the correct value respectively, and choice D is seven-eighths — each the result of misjudging the cap's solid-angle fraction (Ω/4π) by a simple wrong guess instead of computing (1−cosθ)/2 explicitly.\n\n90-SECOND SOLUTION\nFraction of total flux = fraction of the sphere's solid angle covered = (1−cosθ)/2; at θ=60° that fraction is exactly 1/4, so the answer is simply Q/(4ε₀).\n\nWHAT TO MEMORIZE\nFlux from a point charge through any cap is proportional to solid angle: Φ_cap = (Q/4πε₀)·Ω. Cap solid angle Ω = 2π(1−cosθ); a full sphere (θ=180°) recovers Ω=4π and Φ=Q/ε₀, confirming the formula."
+      },
+
+      {
+        "question": "A conducting bar of mass 0.050 kg slides without friction down two long vertical conducting rails separated by 0.25 m, in a uniform horizontal magnetic field of magnitude 0.60 T perpendicular to the plane of the rails. A resistor connects the rails at the top. The bar is released from rest and is observed to reach a terminal velocity of 2.0 m/s. Taking g = 9.8 m/s², the resistance of the resistor is most nearly",
+        "choices": [
+          "0.023 Ω",
+          "0.046 Ω",
+          "0.069 Ω",
+          "0.092 Ω",
+          "0.37 Ω"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt terminal velocity the net force is zero: the magnetic braking force balances gravity, mg = BIL = B(BLv/R)L = B²L²v/R. Solving for R: R = B²L²v/(mg) = (0.60)²(0.25)²(2.0)/[(0.050)(9.8)] ≈ 0.092 Ω. Choices A, B, and C are one-quarter, one-half, and three-quarters of the correct value, respectively — each traceable to using only part of the B²L² product correctly (e.g. squaring only one of B or L); choice E is 4× the correct value, from inverting one of the two squared factors in the denominator instead of the numerator.\n\n90-SECOND SOLUTION\nSet the induced magnetic force B²L²v/R equal to mg and solve directly for R — this is the standard falling-rod terminal-velocity relation run backward, so just isolate R rather than re-deriving v_terminal and inverting afterward.\n\nWHAT TO MEMORIZE\nFalling-rod terminal velocity: v_term = mgR/(B²L²), equivalently R = B²L²v_term/(mg) — memorize the relation once and solve for whichever variable the question asks for."
+      },
+
+      {
+        "question": "An infinite flat slab of thickness 2a carries a uniform volume current density J, directed out of the page, distributed through its entire thickness (the slab is centered on the plane x = 0, occupying −a < x < a). Using Ampère's law with a rectangular loop, the magnitude of the magnetic field at x = a/2 (inside the slab) is",
+        "choices": [
+          "μ₀Ja/4",
+          "μ₀Ja/2",
+          "μ₀Ja",
+          "2μ₀Ja",
+          "μ₀Ja²/2"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBy symmetry, B is parallel to the slab's face (perpendicular to both x̂ and Ĵ), has equal magnitude on the two sides of the center plane, and points in opposite senses there. Take a rectangular Ampèrian loop of length L straddling the center plane, with its two long sides at +x and −x: both sides contribute B(x)·L in the same rotational sense, so the loop integral is 2B(x)L. The enclosed current is the current in the strip from −x to +x, namely J·(2x)·L. Ampère's law gives 2B(x)L = μ₀J(2x)L, so B(x) = μ₀Jx. At x = a/2, B = μ₀J(a/2) = μ₀Ja/2. Choice A (μ₀Ja/4) comes from enclosing only the current from 0 to x instead of the full strip from −x to x, which halves the enclosed current; choice C (μ₀Ja) is instead the field at the outer face x = a, not at the midpoint of the slab's half-thickness.\n\n90-SECOND SOLUTION\nInside a uniform-J slab, B rises linearly from zero at the center plane to its maximum μ₀Ja at the outer faces — exactly like the linearly-rising B inside a long straight wire of uniform current density. At the midpoint of one half (x = a/2) it must be exactly half that maximum: μ₀Ja/2.\n\nWHAT TO MEMORIZE\nInfinite current slab of half-thickness a, density J: B(x) = μ₀Jx for |x| < a (rising linearly from the center plane), and B = μ₀Ja (constant) for |x| > a — the magnetic analog of the linearly-rising E field inside a uniformly charged sphere via Gauss's law."
+      },
+
+      {
+        "question": "A simple RC low-pass filter consists of a resistor R = 2.2 kΩ in series with a capacitor C = 0.10 μF, with the output taken across the capacitor. The frequency at which the output amplitude falls to 1/√2 of its low-frequency value (the −3 dB cutoff frequency) is most nearly",
+        "choices": [
+          "72 Hz",
+          "230 Hz",
+          "360 Hz",
+          "540 Hz",
+          "720 Hz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe cutoff (half-power, −3 dB) frequency of a simple RC filter occurs where X_C = R, i.e., 1/(2πf_cC) = R, giving f_c = 1/(2πRC) = 1/[2π(2200)(0.10×10⁻⁶)] ≈ 723 Hz ≈ 720 Hz. Choice B is low by a factor of π (a common slip: using f_c = 1/(4RC), which drops a factor of π/2 somewhere in the algebra); choice A is low by a full factor of 10, a stray decimal-point/decade error; choices C and D are 1/2 and 3/4 of the correct value, from other partial-factor slips in the same formula.\n\n90-SECOND SOLUTION\nMemorize f_c = 1/(2πRC) directly for a single-pole RC filter — no need to re-derive the transfer function |H(ω)| = 1/√(1+(ωRC)²) and set it equal to 1/√2 from scratch every time.\n\nWHAT TO MEMORIZE\nSingle-pole RC filter cutoff frequency: f_c = 1/(2πRC), always — whether the filter is low-pass (output across C) or high-pass (output across R), the cutoff frequency formula is identical; only the pass-band location differs."
+      },
+
+      {
+        "question": "A charged particle passes undeflected through a velocity selector with crossed fields E₁ = 3000 V/m and B₁ = 0.15 T. It is then sent into a second velocity selector with crossed fields E₂ = 4000 V/m and B₂ = 0.20 T, oriented the same way. What happens in the second selector?",
+        "choices": [
+          "The particle passes through the second selector undeflected as well",
+          "The particle is deflected toward the direction of the electric force, since E₂ > E₁",
+          "The particle is deflected toward the direction of the magnetic force, since B₂ > B₁",
+          "The particle is deflected, but the direction depends on the sign of its charge",
+          "The particle cannot pass through unless E₂/B₂ is reduced to equal E₁/B₁"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA velocity selector passes undeflected only particles with speed v = E/B. From the first selector, v = E₁/B₁ = 3000/0.15 = 20,000 m/s. The second selector passes speed v = E₂/B₂ = 4000/0.20 = 20,000 m/s — exactly the same value. Since the particle's actual speed (fixed by the first selector) matches the second selector's required speed, it passes through the second one undeflected too. Choices B and C both wrongly assume a mismatch must occur just because the individual field values changed, without checking whether their ratio did.\n\n90-SECOND SOLUTION\nA velocity selector's selection is entirely set by the ratio E/B, not by the individual field values — compute both ratios first; if they match, nothing else about the fields' absolute sizes matters.\n\nWHAT TO MEMORIZE\nVelocity selector condition: qE = qvB ⟹ v = E/B, independent of the sign or magnitude of q. Two selectors with different E and B but the same E/B ratio select the same speed."
+      },
+
+      {
+        "question": "A parallel-plate capacitor is being charged by a steady conduction current in the connecting wires. A single Amperian loop encircles the wire on one side of the capacitor gap. Without the displacement-current term in Ampère's law, applying the law to this loop gives an inconsistent result because",
+        "choices": [
+          "the magnetic field would have to be zero everywhere near the capacitor",
+          "the electric field between the plates would have to be zero",
+          "the capacitor would be unable to store any charge",
+          "a flat surface bounded by the loop (crossing the wire) encloses the conduction current, but a bulging surface passing through the gap between the plates encloses no current at all",
+          "the wire's resistance would have to be exactly zero"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAmpère's law (∮B·dl = μ₀I_enc) is supposed to give the same answer regardless of which surface — bounded by the same loop — is used to evaluate I_enc. A flat disk that intersects the wire encloses the full conduction current I. But a surface that instead bulges through the gap between the capacitor's plates (still bounded by the same loop) encloses no conduction current at all, since no charge physically crosses the gap — this gives a contradiction (∮B·dl can't depend on the choice of surface). Maxwell resolved this by adding the displacement current ε₀(dΦ_E/dt) through the gap-crossing surface, which exactly equals the conduction current I and restores consistency. Choice A and B both misidentify which quantity actually becomes ill-defined — B and E themselves are perfectly well-behaved; it's the enclosed-current bookkeeping that breaks.\n\n90-SECOND SOLUTION\nThe paradox is purely about surface-independence: any two surfaces sharing the same boundary loop must give the same enclosed current for Ampère's law to be self-consistent, and a flat vs. a gap-crossing surface near a charging capacitor visibly do not — that's the motivation for displacement current, not some claim that fields themselves vanish.\n\nWHAT TO MEMORIZE\nThe historical motivation for Maxwell's displacement-current term is exactly this surface-independence paradox at a charging capacitor — memorize the scenario itself, since it is the standard way this conceptual point is tested."
+      },
+
+      {
+        "question": "Two wires are made of the same resistive material and have the same length. Wire 1 has diameter d, and wire 2 has diameter 2d. The two wires are connected in parallel across the same ideal voltage source. The ratio of the power dissipated in wire 2 to that dissipated in wire 1 is",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nResistance R = ρL/A with A ∝ diameter², so R₂/R₁ = (d₁/d₂)² = (1/2)² = 1/4, meaning R₂ = R₁/4. Since both wires see the same voltage V (they're in parallel), P = V²/R, so P₂/P₁ = R₁/R₂ = 4. Choice A inverts this by treating the wires as if they were in series (same current, not same voltage), which would instead give P ∝ R and P₂/P₁ = 1/4.\n\n90-SECOND SOLUTION\nSame voltage means the thicker (lower-resistance) wire draws more current and dissipates more power — the answer must be greater than 1, immediately ruling out A and B.\n\nWHAT TO MEMORIZE\nFor fixed voltage, P = V²/R (favors low resistance); for fixed current, P = I²R (favors high resistance) — whether a wider or narrower wire dissipates more power depends entirely on which of these two conditions (same V or same I) actually applies to the arrangement."
+      },
+
+      {
+        "question": "Two ideal electric dipoles, each of moment magnitude p, point in opposite directions and are separated by a small distance s along the line joining them (this arrangement — a linear electric quadrupole — has zero net charge and zero net dipole moment). Far from the arrangement, at distance r ≫ s, the electric field magnitude falls off as",
+        "choices": [
+          "1/r",
+          "1/r²",
+          "1/r³",
+          "1/r⁴",
+          "1/r⁵"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThis is the general pattern of a multipole expansion: each successive term falls off one power of r faster than the last, and vanishing lower moments skip straight to the next nonzero one. A monopole (net charge) gives E ∝ 1/r²; a dipole (net charge zero, dipole moment nonzero) gives E ∝ 1/r³; a quadrupole (net charge and dipole moment both zero, quadrupole moment nonzero) gives E ∝ 1/r⁴. Since two oppositely oriented dipoles precisely cancel both net charge and net dipole moment while leaving a nonzero quadrupole moment, the field falls off as 1/r⁴. Choice C is the ordinary single-dipole falloff — the trap for anyone who notices 'two dipoles' and stops there without checking that their moments have canceled.\n\n90-SECOND SOLUTION\nCount how many lower moments vanish before reaching this configuration: monopole zero, dipole zero, quadrupole nonzero — that's two levels past the monopole term (1/r²), landing on 1/r⁴.\n\nWHAT TO MEMORIZE\nMultipole falloff ladder for E: monopole 1/r², dipole 1/r³, quadrupole 1/r⁴, octupole 1/r⁵ — each vanishing lower moment bumps the leading far-field behavior to the next power."
+      },
+
+      {
+        "question": "Light of frequency 6.0 × 10¹⁴ Hz travels from vacuum into a transparent medium of refractive index n = 1.5. Taking c = 3.0 × 10⁸ m/s, the wavelength of the light inside the medium is most nearly",
+        "choices": [
+          "220 nm",
+          "330 nm",
+          "500 nm",
+          "750 nm",
+          "1100 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFrequency is unchanged on entering a medium (only the speed and wavelength change): the vacuum wavelength is λ_vac = c/f = (3.0×10⁸)/(6.0×10¹⁴) = 500 nm. Inside the medium the speed drops to v = c/n, so the wavelength shrinks by the same factor: λ_medium = λ_vac/n = 500/1.5 ≈ 333 nm ≈ 330 nm. Choice C is the unshifted vacuum wavelength, forgetting that the medium changes λ; choice D multiplies by n instead of dividing, treating the wavelength as if it stretched rather than compressed on entering a denser medium.\n\n90-SECOND SOLUTION\nFrequency is the invariant quantity crossing an interface; get λ_vac = c/f first, then simply divide by n — never multiply, since light always slows down (and its wavelength shrinks) in a medium with n > 1.\n\nWHAT TO MEMORIZE\nCrossing into a medium of index n: f is unchanged, v → c/n, and λ → λ_vac/n. Frequency is the quantity to anchor on; everything else follows from v = fλ."
+      },
+
+      {
+        "question": "A small charged conducting sphere of radius a, carrying charge +Q, sits at the center of a much larger, electrically neutral, uncharged conducting spherical shell of inner radius b and outer radius c (concentric, with a < b < c). Taking 1/4πε₀ = 8.99 × 10⁹ N·m²/C², Q = 5.0 nC, and c = 0.15 m, the electric potential of the outer shell is most nearly",
+        "choices": [
+          "0 V",
+          "150 V",
+          "220 V",
+          "300 V",
+          "450 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe outer shell is a single conductor, so it is an equipotential; its potential equals the potential just outside it, at r = c, where the enclosed charge is simply +Q (the shell is neutral overall — its induced −Q on the inner face and +Q on the outer face contribute net zero from outside r=c, leaving the field there identical to that of the point charge alone). V = kQ/c = (8.99×10⁹)(5.0×10⁻⁹)/0.15 ≈ 300 V. Choice A wrongly assumes the shell must be at ground/zero potential just because it's neutral; only a grounded conductor is fixed at zero.\n\n90-SECOND SOLUTION\nOutside a neutral shell, the field and potential depend only on the total enclosed charge Q — the shell's own zero net charge doesn't change anything about the exterior; treat it as a point charge Q at c.\n\nWHAT TO MEMORIZE\nNeutral ≠ grounded. A neutral (isolated, uncharged) conductor still floats to whatever potential the enclosed charge dictates at its own surface; only an explicitly grounded conductor is pinned to V = 0."
+      },
+
+      {
+        "question": "A horizontal, non-magnetic conducting ring is held above a solenoid whose axis is vertical. The solenoid's current is steadily increasing, driving increasing magnetic flux upward through the ring. Which statement correctly describes the induced current in the ring and the resulting force on it?",
+        "choices": [
+          "The induced current creates a magnetic moment aligned with the solenoid's field, and the ring is pulled down toward the solenoid",
+          "The induced current creates a magnetic moment opposed to the solenoid's field, and the ring is pushed up, away from the solenoid",
+          "No current is induced, since the ring is not moving relative to the solenoid",
+          "The induced current oscillates in direction even though the flux increases monotonically",
+          "The induced current creates a magnetic moment opposed to the solenoid's field, and the ring is pulled down, toward the solenoid"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBy Faraday's law, a current is induced whenever flux through the ring changes — the ring need not be moving, only the flux need vary, and here it does because the solenoid's current (and hence its field) is increasing. By Lenz's law, the induced current opposes the increase, so it flows in the sense that makes the ring's own magnetic moment point opposite to the solenoid's field. Two magnetic dipoles with opposed moments, one above the other, repel — so the ring is pushed away (up), just as two magnets with facing like poles repel. Choice C is the trap: it assumes induction requires physical motion, but Faraday's law only requires changing flux, which a stationary ring near a solenoid with changing current still experiences.\n\n90-SECOND SOLUTION\nTreat the induced ring current as a small bar magnet: Lenz's law always makes that magnet oppose the change that created it, and opposing dipoles (moments pointing away from each other) repel — so the ring must be pushed away from the source of the increasing field.\n\nWHAT TO MEMORIZE\nFaraday's law needs only a changing flux, not relative motion — a stationary loop near a solenoid with a time-varying current is a completely valid (and common) induction scenario. Lenz's law then always predicts a repulsive response to increasing flux from an external source."
+      },
+
+      {
+        "question": "A long solenoid has 2000 turns per meter and carries a free current of 0.50 A. Its core is completely filled with a magnetic material of relative permeability μᵣ = 800. Taking μ₀ = 4π × 10⁻⁷ T·m/A, the magnitude of the magnetic field B inside the solenoid is most nearly",
+        "choices": [
+          "1.0 T",
+          "1.3 T",
+          "1.6 T",
+          "2.0 T",
+          "2.5 T"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe auxiliary field H inside a long solenoid depends only on the free current, regardless of the core material: H = nI = (2000)(0.50) = 1000 A/m. The actual field is B = μᵣμ₀H = (800)(4π×10⁻⁷)(1000) ≈ 1.01 T ≈ 1.0 T. Choices B through E are 1.3×, 1.6×, 2.0×, and 2.5× the correct value — the kind of spread that results from misreading or mis-multiplying the given relative permeability μᵣ = 800 rather than from any error in the underlying H = nI relation.\n\n90-SECOND SOLUTION\nH = nI is set purely by the winding and the free current, exactly as in vacuum; only at the last step do you multiply by μᵣμ₀ instead of μ₀ alone to account for the material's response — don't try to fold μᵣ into an 'effective current' calculation.\n\nWHAT TO MEMORIZE\nInside a solenoid with a magnetic core, H = nI (free current only, same as vacuum), while B = μH = μᵣμ₀H picks up the material's relative permeability — H is the free-current field, B is the true field including the material's magnetization response."
+      },
+
+      {
+        "question": "Two long straight parallel wires carry currents I₁ = 4.0 A and I₂ = 6.0 A, both perpendicular to the page. A closed path in the page encircles wire 1 twice in the counterclockwise sense and wire 2 once in the clockwise sense. Taking μ₀ = 4π × 10⁻⁷ T·m/A, the magnitude of ∮B·dl around this path is most nearly",
+        "choices": [
+          "2.5 × 10⁻⁶ T·m",
+          "5.0 × 10⁻⁶ T·m",
+          "1.3 × 10⁻⁵ T·m",
+          "1.8 × 10⁻⁵ T·m",
+          "2.5 × 10⁻⁵ T·m"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAmpère's law counts each enclosed current with a sign and a multiplicity equal to how many times the path winds around it: ∮B·dl = μ₀I_enc, where I_enc = (+2)(4.0) + (−1)(6.0) = 8.0 − 6.0 = 2.0 A (wire 1 counted twice since the path winds around it twice, wire 2 counted with a minus sign for the opposite sense). So ∮B·dl = (4π×10⁻⁷)(2.0) ≈ 2.5×10⁻⁶ T·m. Choice C simply adds the magnitudes 2(4.0)+6.0 = 14 A without applying the sign for the opposite winding sense.\n\n90-SECOND SOLUTION\nAmpère's law only cares about net signed enclosed current, counted once per winding — treat 'twice around, counterclockwise' as literally +2I₁ and 'once, clockwise' as −I₂, then just add.\n\nWHAT TO MEMORIZE\n∮B·dl = μ₀I_enc generalizes beyond a simple single loop: a path that winds around a wire n times multiplies that wire's contribution by n, and opposite winding senses subtract rather than add."
+      }
+
+    ]
+  },
+
+  {
     "name": "Practice Test 1",
     "added": "2026-08-13",
     "category": "practice",
