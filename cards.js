@@ -4560,6 +4560,1067 @@ const EXAMS = [
   },
 
   {
+    "name": "Condensed Matter Physics",
+    "cards": [
+
+      {
+        "question": "A copper strip of thickness 1.0 mm carries a current of 2.0 A along its length in a uniform magnetic field of 0.50 T directed perpendicular to the strip's flat face. Taking the conduction electron density of copper to be 8.5 × 10²⁸ m⁻³, the resulting Hall voltage across the strip is most nearly",
+        "choices": [
+          "7 × 10⁻⁸ V",
+          "7 × 10⁻¹⁰ V",
+          "7 × 10⁻⁶ V",
+          "7 × 10⁻⁴ V",
+          "7 × 10⁻² V"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Hall field balances the magnetic force on the drifting carriers, giving V_H = IB/(net). With I = 2.0 A, B = 0.50 T, n = 8.5 × 10²⁸ m⁻³, e = 1.6 × 10⁻¹⁹ C, and t = 1.0 × 10⁻³ m, V_H ≈ 7.4 × 10⁻⁸ V. The trap is dropping the thickness t from the denominator (using the strip's length or width instead), which shifts the answer by orders of magnitude.\n\n90-SECOND SOLUTION\nPlug directly into V_H = IB/(net); no intermediate steps needed. Sanity check: metals have huge carrier densities, so Hall voltages in ordinary lab fields are always in the microvolt range or smaller — instantly rules out the two largest choices.\n\nWHAT TO MEMORIZE\nV_H = IB/(net), and that metallic Hall voltages are characteristically microvolt-scale because n is so large."
+      },
+
+      {
+        "question": "Copper K-alpha X-rays of wavelength 0.154 nm undergo first-order Bragg reflection from a set of crystal planes at a glancing angle of 32° (measured from the plane). The interplanar spacing is most nearly",
+        "choices": [
+          "0.081 nm",
+          "0.145 nm",
+          "0.245 nm",
+          "0.291 nm",
+          "0.363 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBragg's law is 2d sinθ = nλ. With n = 1, λ = 0.154 nm, θ = 32°: d = λ/(2 sinθ) = 0.154/(2 × 0.530) ≈ 0.145 nm. The 0.291 nm distractor comes from forgetting the factor of 2; 0.081 nm comes from inverting sine and cosine (θ is measured from the plane, not the normal).\n\n90-SECOND SOLUTION\nOne division after looking up sin32° ≈ 0.53. Sanity check: the answer should land near typical atomic spacings (a few tenths of a nanometer) — instantly rules out 0.081 nm as too small.\n\nWHAT TO MEMORIZE\n2d sinθ = nλ with θ measured from the crystal plane itself, not the surface normal."
+      },
+
+      {
+        "question": "Pure silicon has a band gap of approximately 1.1 eV. The longest photon wavelength capable of exciting an electron across the gap (the intrinsic absorption edge) is most nearly",
+        "choices": [
+          "270 nm",
+          "550 nm",
+          "1100 nm",
+          "700 nm",
+          "2200 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe cutoff wavelength satisfies hc/λ = Eg, so λ = hc/Eg = 1240 eV·nm / 1.1 eV ≈ 1100 nm. This lies just past the red end of the visible spectrum, in the near infrared — consistent with silicon photodiodes being infrared-sensitive. The 550 nm distractor doubles the correct answer's exponent-scale error by using 2Eg; 2200 nm comes from a stray factor of 2 the other way.\n\n90-SECOND SOLUTION\nMemorize hc ≈ 1240 eV·nm and divide by the gap directly. Any longer-wavelength (lower-energy) photon simply cannot promote an electron across a 1.1 eV gap.\n\nWHAT TO MEMORIZE\nhc ≈ 1240 eV·nm, and λ_cutoff = hc/Eg defines a semiconductor's intrinsic absorption edge."
+      },
+
+      {
+        "question": "Modeling the conduction electrons in copper as a free electron gas with number density 8.5 × 10²⁸ m⁻³, the Fermi energy is most nearly",
+        "choices": [
+          "0.07 eV",
+          "0.7 eV",
+          "70 eV",
+          "7 eV",
+          "700 eV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a free electron gas, E_F = (ħ²/2m)(3π²n)^(2/3). Plugging in n = 8.5 × 10²⁸ m⁻³ gives E_F ≈ 7.1 eV, matching the well-known textbook value for copper. Off-by-one-decade distractors come from forgetting to cube-root the 3π²n factor or from mishandling the exponent 2/3.\n\n90-SECOND SOLUTION\nRecognize this as the standard free-electron-gas result and know that metallic Fermi energies cluster in the few-eV range (roughly 2–12 eV across common metals) — that alone picks out 7 eV without finishing the arithmetic.\n\nWHAT TO MEMORIZE\nE_F = (ħ²/2m)(3π²n)^(2/3), and that typical metallic Fermi energies are a few eV — far above room-temperature kT ≈ 0.025 eV, which is why conduction electrons are degenerate."
+      },
+
+      {
+        "question": "A 54 g block of aluminum (molar mass 27 g/mol) is warmed by 10 K well above its Debye temperature, where the Dulong–Petit law applies. The heat absorbed is most nearly",
+        "choices": [
+          "12 J",
+          "50 J",
+          "250 J",
+          "1500 J",
+          "500 J"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nDulong–Petit gives a molar heat capacity of 3R per mole regardless of the element. With 54 g / 27 g/mol = 2.0 mol and ΔT = 10 K: Q = (2.0)(3 × 8.314)(10) ≈ 499 J. The 250 J distractor drops the factor of 3 (using R instead of 3R); 1500 J triples it again by mis-substituting.\n\n90-SECOND SOLUTION\nMemorize the high-temperature molar heat capacity as 3R ≈ 25 J/(mol·K), independent of which solid it is, then multiply by moles and ΔT — three multiplications, no lookups beyond R.\n\nWHAT TO MEMORIZE\nDulong–Petit: C_molar → 3R at high temperature (T ≫ Θ_D) for any monatomic crystalline solid; this is the classical limit that both Debye and Einstein theories reduce to."
+      },
+
+      {
+        "question": "In a face-centered cubic crystal, the atomic packing fraction (fraction of the cell volume occupied by hard spheres in contact along the face diagonal) is most nearly",
+        "choices": [
+          "0.74",
+          "0.52",
+          "0.68",
+          "0.86",
+          "1.00"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn FCC, spheres touch along the face diagonal, so 4r = a√2, giving r = a√2/4. With 4 atoms per conventional cell, the packing fraction works out to π/(3√2) ≈ 0.74 — the densest possible packing of identical spheres. The 0.68 distractor is the BCC value (spheres touching along the body diagonal instead); 0.52 is simple cubic.\n\n90-SECOND SOLUTION\nRecall the three standard packing fractions as a set (SC 0.52, BCC 0.68, FCC/HCP 0.74) rather than rederiving the geometry — FCC and HCP share the maximal value.\n\nWHAT TO MEMORIZE\nPacking fractions: simple cubic 0.52, body-centered cubic 0.68, face-centered cubic (and hexagonal close-packed) 0.74 — the densest sphere packing achievable."
+      },
+
+      {
+        "question": "Niobium becomes superconducting below Tc = 9.2 K. Using the BCS weak-coupling relation 2Δ(0) ≈ 3.5 kT_c for the zero-temperature energy gap, Δ(0) is most nearly",
+        "choices": [
+          "0.02 meV",
+          "1.4 meV",
+          "0.2 meV",
+          "14 meV",
+          "140 meV"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nΔ(0) = 3.5 kT_c/2 = 1.75 × (8.617 × 10⁻⁵ eV/K)(9.2 K) ≈ 1.4 × 10⁻³ eV = 1.4 meV. The 14 meV distractor drops the factor of 2 in the BCS relation; 0.2 meV divides by 3.5 instead of multiplying.\n\n90-SECOND SOLUTION\nUse kT_c in eV directly (k ≈ 8.6 × 10⁻⁵ eV/K is worth having memorized), multiply by 3.5, halve it — three steps, no unit conversion needed since eV was used throughout.\n\nWHAT TO MEMORIZE\nBCS weak-coupling relation 2Δ(0) ≈ 3.5 kT_c, connecting the microscopic pairing gap to the macroscopically measured transition temperature."
+      },
+
+      {
+        "question": "In a certain n-type semiconductor the electrons behave as if they had an effective mass m* = 0.067 mₑ (typical of GaAs). In a magnetic field of 0.80 T, the cyclotron resonance angular frequency of these electrons is most nearly",
+        "choices": [
+          "1.4 × 10¹¹ rad/s",
+          "1.4 × 10¹³ rad/s",
+          "2.1 × 10¹² rad/s",
+          "2.1 × 10¹⁴ rad/s",
+          "1.4 × 10¹⁵ rad/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCyclotron frequency is ω_c = eB/m*, exactly the free-electron formula but with the band effective mass substituted for mₑ. Here m* = 0.067 × 9.11 × 10⁻³¹ kg, giving ω_c = (1.6 × 10⁻¹⁹)(0.80)/(6.1 × 10⁻³²) ≈ 2.1 × 10¹² rad/s. Using the bare electron mass instead of m* is the standard trap and gives an answer smaller by a factor of ~15.\n\n90-SECOND SOLUTION\nStart from the free-electron cyclotron frequency for B = 0.8 T (order 10¹¹ rad/s) and scale up by 1/0.067 ≈ 15, since ω_c ∝ 1/m*. Confirms the answer lands in the 10¹² range.\n\nWHAT TO MEMORIZE\nω_c = eB/m*, with m* (not mₑ) controlling the resonance — this is precisely how cyclotron resonance experiments measure effective mass."
+      },
+
+      {
+        "question": "X-rays of wavelength 0.090 nm are directed at a crystal whose relevant planes are spaced 0.25 nm apart. The largest order n for which a Bragg reflection maximum can occur is",
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBragg's law requires sinθ = nλ/(2d) ≤ 1, so the order n is capped at n ≤ 2d/λ = 2(0.25)/0.090 ≈ 5.6. Since n must be an integer, the largest allowed order is n = 5: checking directly, sinθ = 5(0.090)/(2×0.25) = 0.90, which is a valid angle, while n = 6 would require sinθ = 1.08, impossible. So n = 5 is the answer.\n\n90-SECOND SOLUTION\nCompute 2d/λ and round down to the nearest integer — one division and a floor operation.\n\nWHAT TO MEMORIZE\nThe integer constraint sinθ ≤ 1 caps the diffraction order at n_max = ⌊2d/λ⌋; this ceiling is a common wrinkle GRE problems use to test whether sinθ > 1 is recognized as forbidden."
+      },
+
+      {
+        "question": "Diamond is an electrical insulator with an exceptionally high melting point and extreme hardness. These properties are best explained by which type of bonding between the carbon atoms?",
+        "choices": [
+          "Metallic bonding, with a delocalized electron sea",
+          "Ionic bonding between oppositely charged carbon ions",
+          "Van der Waals bonding from induced dipole fluctuations",
+          "Hydrogen bonding between adjacent lattice sites",
+          "Covalent bonding, with strongly directional, localized shared electron pairs"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEach carbon atom in diamond forms four strong, directional sp³ covalent bonds to its neighbors. These localized shared-electron bonds both resist deformation (extreme hardness) and leave no free carriers (insulating), while requiring enormous energy to break (very high melting point). Metallic bonding would instead give good conductivity, and van der Waals bonding (correct for a noble-gas solid like solid argon) would give a very low melting point, not a high one.\n\n90-SECOND SOLUTION\nMatch the property triad — hard, high-melting, insulating — directly to covalent bonding; none of the other bonding types produces an insulator with these mechanical properties simultaneously.\n\nWHAT TO MEMORIZE\nBonding-to-property associations: metallic (conducting, malleable), ionic (hard, brittle, often soluble), van der Waals (soft, low melting point, e.g. solid noble gases), covalent network (hard, high melting point, often insulating, e.g. diamond)."
+      },
+
+      {
+        "question": "A metal's work function is 4.5 eV. The longest wavelength of light that can still eject photoelectrons from its surface is most nearly",
+        "choices": [
+          "280 nm",
+          "28 nm",
+          "180 nm",
+          "450 nm",
+          "1400 nm"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nPhotoemission requires hc/λ ≥ W, so the threshold wavelength is λ = hc/W = 1240 eV·nm/4.5 eV ≈ 276 nm, in the ultraviolet. The 450 nm distractor divides 1240 by 4.5 incorrectly by a factor related to eV/J confusion patterns; 1400 nm is off by roughly a factor of 5.\n\n90-SECOND SOLUTION\nOne division using hc ≈ 1240 eV·nm. Sanity check: a few-eV work function should give a UV threshold, since visible light tops out around 3.1 eV (400 nm) — rules out any answer at or above 400 nm.\n\nWHAT TO MEMORIZE\nPhotoemission threshold: λ_max = hc/W, with hc ≈ 1240 eV·nm; typical metallic work functions (4–5 eV) put the threshold in the near ultraviolet."
+      },
+
+      {
+        "question": "An electron in a one-dimensional periodic lattice has a band energy E(k) = E₀ − A cos(ka), where A = 1.0 eV and a = 0.30 nm. Near the bottom of the band (k ≈ 0), the effective mass of the electron is most nearly",
+        "choices": [
+          "0.02 mₑ",
+          "0.85 mₑ",
+          "0.08 mₑ",
+          "8.5 mₑ",
+          "85 mₑ"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe effective mass is defined by 1/m* = (1/ħ²) d²E/dk². Differentiating twice gives d²E/dk² = Aa²cos(ka), which at k = 0 equals Aa². Substituting A = 1.0 eV and a = 0.30 nm gives m* ≈ 0.85 mₑ — a physically reasonable value near the free-electron mass, since a shallow, wide band (small A, or large a) tracks free-electron-like dispersion. Choice E (85 mₑ) comes from forgetting to square a; choice A comes from an inverted definition.\n\n90-SECOND SOLUTION\nDifferentiate the cosine twice (a standard pattern worth recognizing on sight: −Acos(ka) → second derivative Aa²cos(ka) at the extremum), then plug into m* = ħ²/(Aa²) directly.\n\nWHAT TO MEMORIZE\nm* = ħ²/(d²E/dk²), evaluated at the band extremum of interest; a tight-binding cosine band gives d²E/dk² = Aa² at the band bottom (k=0) and −Aa² at the band top (k=π/a), which is why effective mass can even come out formally negative near a band top."
+      },
+
+      {
+        "question": "Two samples of the same superconducting element are prepared from different isotopes, with atomic masses 200 u and 202 u respectively. The isotope with mass 200 u has a critical temperature of 4.00 K. According to the BCS isotope effect (Tc ∝ M^(−1/2)), the critical temperature of the 202 u sample is most nearly",
+        "choices": [
+          "3.92 K",
+          "4.00 K",
+          "3.98 K",
+          "4.02 K",
+          "4.08 K"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nT_c ∝ M^(−1/2), so T_c(202) = T_c(200) × √(200/202) ≈ 4.00 × 0.9950 ≈ 3.98 K. The heavier isotope has a slightly lower critical temperature — direct evidence that lattice vibrations (phonons), which depend on ionic mass, mediate the pairing interaction. This small shift is exactly what historically helped establish the phonon-mediated mechanism behind BCS theory.\n\n90-SECOND SOLUTION\nRecognize the shift must be small (a 1% mass change under a square root gives a ~0.5% frequency/Tc change) and pick the closest answer just below 4.00 K, without needing a precise calculation.\n\nWHAT TO MEMORIZE\nThe isotope effect T_c ∝ 1/√M is direct experimental evidence that electron-phonon coupling (not purely electronic effects) mediates conventional superconductivity."
+      },
+
+      {
+        "question": "A crystalline solid has a Debye temperature of 400 K. The corresponding Debye (maximum phonon) angular frequency is most nearly",
+        "choices": [
+          "5 × 10⁸ rad/s",
+          "5 × 10¹⁰ rad/s",
+          "5 × 10¹⁶ rad/s",
+          "5 × 10¹³ rad/s",
+          "5 × 10¹⁹ rad/s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe Debye temperature is defined through ħω_D = kΘ_D, so ω_D = kΘ_D/ħ = (1.38 × 10⁻²³)(400)/(1.055 × 10⁻³⁴) ≈ 5.2 × 10¹³ rad/s. This lands squarely in the range of real phonon frequencies (comparable to infrared vibrational frequencies), which is a useful anchor for order-of-magnitude sanity checks.\n\n90-SECOND SOLUTION\nOne division, ħω = kT converted directly to ω = kT/ħ, then plug in Θ_D for T.\n\nWHAT TO MEMORIZE\nħω_D = kΘ_D defines the Debye frequency as the highest phonon frequency the lattice supports; typical Debye temperatures (200–500 K for most solids) correspond to ω_D in the 10¹³–10¹⁴ rad/s range, the same scale as molecular vibrational frequencies."
+      },
+
+      {
+        "question": "A doped semiconductor sample shows electrical resistivity that decreases as temperature increases, over a wide range near room temperature. This behavior indicates that the sample is most likely",
+        "choices": [
+          "a metal, since resistivity always falls with rising temperature",
+          "a superconductor approaching its critical temperature from above",
+          "an insulator, since insulators have temperature-independent resistivity",
+          "impossible to determine without knowing the carrier sign",
+          "a semiconductor, since increasing thermal energy promotes more carriers across the gap or ionizes more dopants"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nIn a semiconductor, carrier concentration grows exponentially with temperature (∝ e^(−Eg/2kT) in the intrinsic regime, or via increasing dopant ionization in the extrinsic regime), and this effect overwhelms the mild increase in scattering, so resistivity falls as T rises. Metals show the opposite trend: fixed carrier density but increasing phonon scattering makes resistivity rise with T. Choice A gets the metal behavior backwards and misapplies it here.\n\n90-SECOND SOLUTION\nMemorize the qualitative contrast directly: metal resistivity rises with T (more scattering, same carrier count); semiconductor resistivity falls with T (more carriers, dominating any scattering increase).\n\nWHAT TO MEMORIZE\nMetals: ρ increases with T (scattering-dominated). Semiconductors: ρ decreases with T (carrier-generation-dominated) — this sign difference is a fast, purely qualitative way to distinguish the two from a single resistivity-vs-temperature trend."
+      },
+
+      {
+        "question": "In the free electron model, the density of states g(E) for a three-dimensional electron gas is proportional to E^(1/2). If the Fermi energy of a metal were somehow doubled while the electron density stayed the same, the density of states at the (new) Fermi level relative to its original value would be scaled by a factor of",
+        "choices": [
+          "√2",
+          "1/√2",
+          "1",
+          "2",
+          "2√2"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\ng(E) ∝ E^(1/2), so g(2E_F)/g(E_F) = (2E_F/E_F)^(1/2) = √2. This is a direct substitution once the E^(1/2) dependence is recalled; the scenario is hypothetical (doubling E_F while holding n fixed isn't physically self-consistent) purely to isolate the scaling law being tested.\n\n90-SECOND SOLUTION\nApply the power law directly: doubling the input to a square-root function scales the output by √2, no other information needed.\n\nWHAT TO MEMORIZE\nFree-electron density of states g(E) ∝ √E in three dimensions (a consequence of the k-space volume enclosed scaling as k³ ∝ E^(3/2), and dN/dE differentiating that down to E^(1/2))."
+      },
+
+      {
+        "question": "At absolute zero, a free electron gas fills all single-particle states up to the Fermi energy and none above it. If the same gas is instead described using Maxwell–Boltzmann (classical) statistics at the same temperature and density, the classical model would incorrectly predict that",
+        "choices": [
+          "the electron gas exerts zero pressure at T = 0",
+          "most electrons have kinetic energy of order kT, when in fact most have energy of order the (much larger) Fermi energy",
+          "electrons obey the Pauli exclusion principle more strictly than they actually do",
+          "the total energy of the gas would be higher than the true quantum-mechanical value",
+          "the specific heat would vanish at all temperatures, matching the true low-temperature behavior"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nClassically, equipartition assigns each electron kinetic energy of order kT. But Pauli exclusion forces electrons to stack up to the Fermi energy, which for real metals is several eV — vastly larger than room-temperature kT ≈ 0.025 eV. The classical picture is therefore qualitatively wrong about the typical electron's energy scale, which is why classical theories badly mispredict metallic specific heat and thermal properties.\n\n90-SECOND SOLUTION\nThe defining failure of classical statistics for conduction electrons is always this same energy-scale mismatch (kT vs E_F) — recognize the pattern rather than re-deriving it.\n\nWHAT TO MEMORIZE\nDegenerate Fermi gas: typical electron energy ~E_F (several eV) ≫ kT, the opposite of the classical equipartition expectation — this single fact explains why the electronic contribution to metallic heat capacity is so much smaller than the classical 3R/2 per electron would suggest."
+      },
+
+      {
+        "question": "A simple cubic lattice has a lattice constant a = 0.35 nm. The magnitude of the shortest reciprocal lattice vector is most nearly",
+        "choices": [
+          "0.35 nm⁻¹",
+          "1.4 nm⁻¹",
+          "18 nm⁻¹",
+          "9.0 nm⁻¹",
+          "36 nm⁻¹"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a simple cubic direct lattice with constant a, the reciprocal lattice is also simple cubic, with constant 2π/a. The shortest reciprocal lattice vector therefore has magnitude 2π/a = 2π/0.35 nm ≈ 18 nm⁻¹. The 9.0 nm⁻¹ distractor drops the factor of 2; 0.35 nm⁻¹ confuses a with 1/a directly without the 2π.\n\n90-SECOND SOLUTION\nRecall that simple cubic is self-dual in reciprocal space with spacing 2π/a, and divide.\n\nWHAT TO MEMORIZE\nReciprocal lattice vectors have magnitude 2π/(real-space spacing); for simple cubic specifically, the reciprocal lattice is itself simple cubic with constant 2π/a."
+      },
+
+      {
+        "question": "Electrons of kinetic energy 54 eV are directed at a nickel crystal and a strong diffracted beam is observed at a particular angle, consistent with Bragg reflection from atomic planes (the Davisson–Germer experiment). This result is most directly explained by",
+        "choices": [
+          "the photoelectric effect, showing light has particle character",
+          "the Compton effect, showing photons carry momentum",
+          "the uncertainty principle, limiting how precisely the electron's position is known",
+          "the de Broglie hypothesis, showing electrons have an associated wavelength capable of diffracting like X-rays",
+          "blackbody radiation, showing quantization of electromagnetic energy"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nDavisson and Germer observed that electrons scattering off a nickel crystal produced an intensity pattern with maxima at angles matching the Bragg condition, exactly as X-rays would — direct confirmation that particles carry a wave character with wavelength λ = h/p, as de Broglie proposed. None of the other listed effects concern matter waves at all.\n\n90-SECOND SOLUTION\n\"Electron diffraction from a crystal\" is a fixed keyword association with de Broglie/wave-particle duality — no calculation needed to identify it.\n\nWHAT TO MEMORIZE\nDavisson–Germer: electron diffraction from a crystal lattice is the landmark confirmation of the de Broglie relation λ = h/p for matter."
+      },
+
+      {
+        "question": "A type-I superconducting sphere is placed in a weak external magnetic field while held below its critical temperature. Which statement correctly describes the field inside the sphere?",
+        "choices": [
+          "The field inside equals the applied field, since superconductors are perfect conductors",
+          "The field inside depends on whether the field was applied before or after cooling below Tc",
+          "The field inside is twice the applied field, due to flux concentration",
+          "The field inside oscillates at the cyclotron frequency of the trapped electrons",
+          "The field inside is expelled to zero by surface (Meissner) currents, regardless of the sphere's history"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Meissner effect is the active expulsion of magnetic flux from the bulk of a type-I superconductor below Tc, and critically, the final field-free state is the same whether the field was applied before or after cooling — this path-independence is what distinguishes a true superconductor from a hypothetical 'perfect conductor,' which would merely freeze in whatever flux was present at the moment resistance vanished.\n\n90-SECOND SOLUTION\n'Path-independent, always zero inside' is the single fact that defines the Meissner effect and separates it from the weaker perfect-conductor prediction — recognize the phrase and answer immediately.\n\nWHAT TO MEMORIZE\nMeissner effect: B = 0 inside a type-I superconductor below Tc, independent of field-then-cool vs. cool-then-field order — this history-independence is the experimental signature that a material is a true superconductor, not just a zero-resistance conductor."
+      }
+
+    ]
+  },
+
+  {
+    "name": "General Practice Set 1",
+    "cards": [
+
+      {
+        "question": "A block of mass 3.0 kg and a block of mass 5.0 kg hang from opposite ends of a light string draped over a pulley of mass 2.0 kg, radius R, which may be treated as a uniform disk (I = ½MR²) that rotates without slipping. The magnitude of the acceleration of the system is most nearly",
+        "choices": [
+          "2.2 m/s²",
+          "1.2 m/s²",
+          "1.8 m/s²",
+          "2.5 m/s²",
+          "3.3 m/s²"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWriting Newton's second law for each block and torque for the pulley (with a = Rα) gives a = (m₂−m₁)g/(m₁+m₂+M/2), where the M/2 term is the pulley's rotational inertia contribution. Substituting m₁=3, m₂=5, M=2: a = (2)(9.8)/(3+5+1) ≈ 2.18 m/s². Treating the pulley as massless (dropping the M/2 term) would instead give the larger, wrong value of 2.45 m/s².\n\n90-SECOND SOLUTION\nRecognize the pulley's rotational inertia simply adds M/2 to the effective total mass in the denominator of the standard Atwood formula — one modified formula, one substitution.\n\nWHAT TO MEMORIZE\nAtwood machine with a massive disk pulley: a = (m₂−m₁)g/(m₁+m₂+M/2); the M/2 comes directly from I=½MR² for a disk."
+      },
+
+      {
+        "question": "A projectile is launched at 40° above the horizontal with speed 25 m/s from the base of a long incline that rises at 20° above the horizontal. The distance along the incline to where the projectile lands is most nearly",
+        "choices": [
+          "18 m",
+          "38 m",
+          "27 m",
+          "52 m",
+          "64 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nUsing the range-on-an-incline formula R = 2v₀²cosθ sin(θ−α)/(g cos²α), with θ=40°, α=20°, v₀=25 m/s: R ≈ 37.8 m. The key idea is that the landing condition is y = x tanα rather than y=0, which shifts both the effective launch angle and the effective gravity component along the incline.\n\n90-SECOND SOLUTION\nPlug directly into the incline-range formula (worth deriving once and keeping): it reduces exactly to the flat-ground range formula when α→0, which is a fast way to check you have the right structure.\n\nWHAT TO MEMORIZE\nRange along an incline of angle α: R = 2v₀²cosθ sin(θ−α)/(g cos²α); reduces to the familiar v₀²sin(2θ)/g when α = 0."
+      },
+
+      {
+        "question": "A uniform thin rod of length 1.2 m swings as a physical pendulum about a horizontal axis 0.30 m from its center. The period of small oscillations is most nearly",
+        "choices": [
+          "1.1 s",
+          "1.4 s",
+          "1.7 s",
+          "2.1 s",
+          "2.6 s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a physical pendulum, T = 2π√(I/(Mgd)), where I about the pivot is I_cm + Md² (parallel axis theorem), I_cm = ML²/12 for a rod, and d is the pivot's distance from the center of mass. With L=1.2 m, d=0.30 m: I/M = (1.2)²/12 + (0.3)² = 0.12+0.09 = 0.21 m², giving T = 2π√(0.21/(9.8×0.3)) ≈ 1.68 s. Forgetting the parallel-axis term entirely would give a shorter, wrong period.\n\n90-SECOND SOLUTION\nCompute I_cm/M and d² separately, add, then take one square root — the mass itself cancels throughout so never needs a numeric value.\n\nWHAT TO MEMORIZE\nPhysical pendulum: T = 2π√(I_pivot/(Mgd)) with I_pivot from the parallel axis theorem; for a uniform rod, I_cm = ML²/12."
+      },
+
+      {
+        "question": "A 2.0 kg object and a 6.0 kg object approach each other with a relative speed of 10 m/s along a line, with no external forces acting. The kinetic energy associated with their relative motion (i.e., the energy available for a possible perfectly inelastic collision to convert to other forms) is most nearly",
+        "choices": [
+          "15 J",
+          "38 J",
+          "150 J",
+          "75 J",
+          "300 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe kinetic energy of relative motion is KE_rel = ½μv_rel², where μ = m₁m₂/(m₁+m₂) is the reduced mass. Here μ = (2)(6)/8 = 1.5 kg, so KE_rel = ½(1.5)(10)² = 75 J. This is exactly the energy that would be dissipated (as heat, deformation, etc.) in a perfectly inelastic collision between these two objects, since the center-of-mass kinetic energy is unaffected by the collision.\n\n90-SECOND SOLUTION\nCompute the reduced mass, then apply ½μv_rel² directly — this shortcut avoids separately tracking each object's momentum and kinetic energy before and after.\n\nWHAT TO MEMORIZE\nKE_rel = ½μv_rel² with μ = m₁m₂/(m₁+m₂); in a perfectly inelastic collision, exactly this amount of energy is lost, while the center-of-mass kinetic energy is conserved throughout."
+      },
+
+      {
+        "question": "Two satellites orbit the same planet in circular orbits. Satellite B's orbital radius is 4 times satellite A's. The ratio of satellite B's orbital period to satellite A's period is",
+        "choices": [
+          "2",
+          "4",
+          "16",
+          "64",
+          "8"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nKepler's third law gives T² ∝ r³, so T_B/T_A = (r_B/r_A)^(3/2) = 4^(3/2) = 8. The trap answers come from using the wrong power: squaring the radius ratio directly (16) or forgetting to raise to the 3/2 power at all (4).\n\n90-SECOND SOLUTION\nRaise the radius ratio to the 3/2 power directly: 4^(3/2) = (4^(1/2))³ = 2³ = 8, computable without a calculator.\n\nWHAT TO MEMORIZE\nKepler's third law: T² ∝ r³ for any circular orbit about the same central mass, regardless of the orbiting body's own mass."
+      },
+
+      {
+        "question": "Two identical masses m are connected to each other by a spring of constant k, and each mass is also connected by an identical spring k to a fixed wall on its outside. Considering only motion along the line connecting the masses, the higher of the two normal mode angular frequencies is",
+        "choices": [
+          "√(3k/m)",
+          "√(k/m)",
+          "√(2k/m)",
+          "√(4k/m)",
+          "2√(k/m)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn the symmetric mode (masses move together, in phase) the coupling spring never stretches, giving ω₁ = √(k/m). In the antisymmetric mode (masses move oppositely) the coupling spring's effect doubles the restoring force on each mass, giving ω₂ = √(3k/m). The higher frequency mode is therefore √(3k/m), not simply double the lower one.\n\n90-SECOND SOLUTION\nRecognize the standard two-mass, three-spring (wall–k–m–k–m–k–wall) result directly: normal frequencies √(k/m) and √(3k/m) — a configuration common enough to memorize outright.\n\nWHAT TO MEMORIZE\nTwo equal masses, three identical springs (wall-mass-mass-wall): symmetric mode ω=√(k/m) (coupling spring inactive), antisymmetric mode ω=√(3k/m) (coupling spring fully engaged, tripling the effective restoring constant)."
+      },
+
+      {
+        "question": "A parallel-plate capacitor of plate area 0.020 m² and separation 1.0 mm has a slab of dielectric constant κ = 4.0 inserted so that it exactly fills half the plate area (leaving the other half as air gap), with the full plate separation maintained throughout. The capacitance is most nearly",
+        "choices": [
+          "18 pF",
+          "443 pF",
+          "89 pF",
+          "177 pF",
+          "885 pF"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith the dielectric filling half the area side-by-side with air (not stacked in series), this is two capacitors in parallel: C = ε₀(A/2)/d × (1+κ) = (8.85×10⁻¹²)(0.010)/(0.001) × 5.0 ≈ 4.4×10⁻¹⁰ F = 443 pF. The trap is treating the two regions as in series (dielectric stacked on top of air) rather than side-by-side, which would use a completely different combination formula.\n\n90-SECOND SOLUTION\nRecognize the geometry: dielectric filling half the *area* (not half the *gap*) means parallel combination, so just add the two half-area capacitances (air half + dielectric half) directly.\n\nWHAT TO MEMORIZE\nSide-by-side (area-split) dielectric insertion combines as capacitors in parallel; a dielectric slab stacked within the gap (thickness-split) instead combines as capacitors in series — the geometry alone decides which combination rule applies."
+      },
+
+      {
+        "question": "A circular current loop of radius 5.0 cm carries a current of 3.0 A and is placed in a uniform magnetic field of 0.40 T, with its magnetic moment initially perpendicular to the field. The maximum torque on the loop is most nearly",
+        "choices": [
+          "0.0024 N·m",
+          "0.019 N·m",
+          "0.0094 N·m",
+          "0.038 N·m",
+          "0.094 N·m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe magnetic moment of the loop is μ = IA = I·πr² = (3.0)(π)(0.05)² ≈ 0.0236 A·m². Torque is τ = μB sinφ, maximized when the moment is perpendicular to B (sinφ=1, the stated initial condition): τ_max = μB = (0.0236)(0.40) ≈ 0.0094 N·m. Forgetting to square the radius when computing area is the most common arithmetic slip here.\n\n90-SECOND SOLUTION\nCompute μ = Iπr² first (one number worth having as an intermediate checkpoint), then multiply by B directly since sinφ=1 is given by the setup.\n\nWHAT TO MEMORIZE\nτ = μ × B, with μ = IA for a current loop and maximum torque occurring when the moment is perpendicular to the field (τ = μB in that orientation)."
+      },
+
+      {
+        "question": "A 2.0 μF capacitor is charged and then discharged through a 1000 Ω resistor. The time required for the charge on the capacitor to fall to half its initial value is most nearly",
+        "choices": [
+          "0.7 ms",
+          "2.0 ms",
+          "2.8 ms",
+          "1.4 ms",
+          "4.0 ms"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe RC discharge time constant is τ = RC = (1000)(2.0×10⁻⁶) = 2.0×10⁻³ s. Since Q(t) = Q₀e^(−t/τ), the half-life is t_½ = τ ln2 ≈ (2.0 ms)(0.693) ≈ 1.4 ms. Using τ itself as the half-time (skipping the ln2 factor) is the standard trap, giving 2.0 ms instead.\n\n90-SECOND SOLUTION\nCompute RC, then multiply by the memorized constant ln2 ≈ 0.693 — same structure as radioactive half-life, since both follow exponential decay.\n\nWHAT TO MEMORIZE\nExponential decay half-life is always (time constant) × ln2 ≈ 0.693 × τ, whether the decay is RC discharge, radioactivity, or any other first-order process."
+      },
+
+      {
+        "question": "Point charge +4.0 μC is fixed at the origin and point charge +1.0 μC is fixed at x = 30 cm on the same axis. Besides the region between the charges, there is one other point on the x-axis where the net electric field is zero. Its distance beyond the +1.0 μC charge (i.e., at x > 30 cm) is most nearly",
+        "choices": [
+          "10 cm",
+          "20 cm",
+          "45 cm",
+          "60 cm",
+          "30 cm"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBetween two like charges, the field never cancels (both point the same way in that region), so the null point lies outside, beyond the smaller charge. Setting kq₁/(L+x)² = kq₂/x² with q₁=4μC, q₂=1μC, L=30 cm and solving √q₁·x = √q₂·(L+x) gives x = L·√q₂/(√q₁−√q₂) = 30(1)/(2−1) = 30 cm beyond the 1.0 μC charge.\n\n90-SECOND SOLUTION\nSince q₁ = 4q₂ exactly, √q₁ = 2√q₂, which makes the algebra collapse to x = L — a clean special case worth recognizing when the charge ratio is a perfect square.\n\nWHAT TO MEMORIZE\nFor two like charges, the field-null point on the axis always lies outside the pair, closer to the smaller charge, at the location satisfying √q₁/(L+x) = √q₂/x — never between them."
+      },
+
+      {
+        "question": "A solenoid has 500 turns wound uniformly over a length of 0.25 m, with cross-sectional area 1.0 × 10⁻³ m². Its self-inductance is most nearly",
+        "choices": [
+          "1.3 mH",
+          "12 μH",
+          "125 μH",
+          "630 μH",
+          "6.3 mH"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nSolenoid inductance is L = μ₀N²A/ℓ = (4π×10⁻⁷)(500)²(1.0×10⁻³)/(0.25) ≈ 1.26×10⁻³ H ≈ 1.3 mH. The N² dependence (not N) is the detail most often dropped, which would understate the answer by a factor of 500.\n\n90-SECOND SOLUTION\nPlug directly into L = μ₀N²A/ℓ; keep track that N is squared, since doubling the turns quadruples the inductance, not doubles it.\n\nWHAT TO MEMORIZE\nSolenoid self-inductance L = μ₀N²A/ℓ — quadratic in turn count, linear in area, inverse in length."
+      },
+
+      {
+        "question": "An electron is confined to a one-dimensional infinite square well of width 0.10 nm (roughly atomic scale). The energy of the photon emitted in a transition from the n=2 to the n=1 level is most nearly",
+        "choices": [
+          "4 eV",
+          "113 eV",
+          "38 eV",
+          "76 eV",
+          "150 eV"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nInfinite-well energies are E_n = n²h²/(8mL²). With L=0.10 nm: E₁ ≈ 37.7 eV and E₂ ≈ 150.6 eV, so the emitted photon carries ΔE = E₂−E₁ ≈ 113 eV. This large value (compared to atomic optical transitions of a few eV) reflects how tightly confined the electron is — a box this small pushes energies well into the extreme UV/soft X-ray range.\n\n90-SECOND SOLUTION\nSince E_n ∝ n², the gap between n=1 and n=2 is simply 3×E₁ (because 4−1=3), so compute E₁ once and multiply by 3.\n\nWHAT TO MEMORIZE\nInfinite square well: E_n = n²h²/(8mL²); consecutive-level gaps scale as (n+1)²−n² = 2n+1 times E₁, so E₂−E₁ = 3E₁ specifically."
+      },
+
+      {
+        "question": "In Compton scattering, a photon scatters off a free electron at rest through an angle of exactly 90°. The resulting increase in the photon's wavelength is most nearly",
+        "choices": [
+          "1.2 pm",
+          "4.9 pm",
+          "2.4 pm",
+          "12 pm",
+          "24 pm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe Compton shift formula is Δλ = (h/m_ec)(1−cosθ). At θ=90°, cosθ=0, so Δλ reduces to exactly the Compton wavelength h/m_ec ≈ 2.43×10⁻¹² m = 2.4 pm. This special case (90°) is worth recognizing on sight, since the (1−cosθ) factor becomes exactly 1.\n\n90-SECOND SOLUTION\nAt 90° specifically, no arithmetic is needed beyond recalling the Compton wavelength itself, h/m_ec ≈ 2.4 pm — memorize this one number.\n\nWHAT TO MEMORIZE\nCompton wavelength h/m_ec ≈ 2.43 pm; Δλ = (h/m_ec)(1−cosθ) reduces to this value exactly at 90°, to twice this value at 180° (backscatter), and to zero at 0° (forward, no scattering)."
+      },
+
+      {
+        "question": "According to the Bohr model, the radius of the n=3 orbit in a hydrogen atom is most nearly",
+        "choices": [
+          "0.053 nm",
+          "0.16 nm",
+          "0.32 nm",
+          "0.48 nm",
+          "0.64 nm"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBohr radii scale as r_n = n²a₀, where a₀ ≈ 0.0529 nm is the Bohr radius. For n=3: r₃ = 9 × 0.0529 ≈ 0.476 nm, closest to 0.48 nm. The n³ trap answer would come from confusing the radius scaling with the (incorrect) assumption that it matches the n³ dependence seen in some other Bohr-model quantities (like the classical orbital period, which does go as n³).\n\n90-SECOND SOLUTION\nSquare n and multiply by the memorized Bohr radius — one squaring, one multiplication.\n\nWHAT TO MEMORIZE\nBohr model radius: r_n = n²a₀ with a₀ ≈ 0.053 nm; radius grows as n², while orbital energy falls as 1/n² and (classical) orbital period grows as n³ — three different scalings worth keeping straight."
+      },
+
+      {
+        "question": "An electron is confined to a region the size of an atomic nucleus (Δx ≈ 1.0 × 10⁻¹⁴ m). Using the Heisenberg uncertainty principle to estimate the minimum kinetic energy such confinement would require, the result is most nearly",
+        "choices": [
+          "1 eV",
+          "1 keV",
+          "1 MeV",
+          "10 GeV",
+          "100 MeV"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe minimum momentum uncertainty is Δp ≈ ħ/(2Δx), giving Δp ≈ 5.3×10⁻²¹ kg·m/s, and treating this as the characteristic momentum, KE ≈ (Δp)²/2m_e ≈ 1.5×10⁻¹¹ J ≈ 95 MeV. This huge value (compared to the few-MeV binding energies actually observed in nuclei) is the classic argument for why electrons cannot be confined inside a nucleus — nuclear beta decay must therefore create the electron at the moment of emission rather than releasing a pre-existing one.\n\n90-SECOND SOLUTION\nRecognize this exact argument as a standard qualitative-reasoning setup with a known punchline (~100 MeV, far exceeding nuclear binding energies), even if the intermediate arithmetic is done quickly rather than precisely.\n\nWHAT TO MEMORIZE\nConfining an electron (small mass) to nuclear dimensions via Δx·Δp ≥ ħ/2 forces a kinetic energy of order 100 MeV — this is the standard argument that electrons are not pre-existing constituents of the nucleus, unlike protons and neutrons, for which the same calculation gives a far smaller, physically reasonable energy."
+      },
+
+      {
+        "question": "In the hydrogen atom, a transition from the n=4 level to the n=2 level emits a photon. Its wavelength is most nearly",
+        "choices": [
+          "486 nm",
+          "97 nm",
+          "122 nm",
+          "410 nm",
+          "656 nm"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nHydrogen energy levels are E_n = −13.6 eV/n². The transition energy is E₂−E₄ = −13.6/4 − (−13.6/16) = −3.40 − (−0.85) = 2.55 eV. The wavelength is λ = hc/E = 1240 eV·nm/2.55 eV ≈ 486 nm — this is the well-known Balmer-series Hβ line, in the blue-green part of the visible spectrum.\n\n90-SECOND SOLUTION\nRecognize n=4→2 as a Balmer series line; if the specific Balmer wavelengths (656, 486, 434, 410 nm for Hα, Hβ, Hγ, Hδ) are memorized, n=4→2 is immediately identified as Hβ without recomputing.\n\nWHAT TO MEMORIZE\nHydrogen energy levels E_n = −13.6 eV/n²; the Balmer series (transitions down to n=2) falls in the visible range, with Hα (3→2, 656 nm), Hβ (4→2, 486 nm), and Hγ (5→2, 434 nm) worth recognizing by name."
+      },
+
+      {
+        "question": "An electron with orbital angular momentum quantum number l = 2 has its orbital and spin angular momenta coupled. The possible values of the total angular momentum quantum number j are",
+        "choices": [
+          "1 and 2",
+          "3/2 and 5/2",
+          "2 and 3",
+          "1/2 and 3/2",
+          "5/2 only"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a single electron, spin s = 1/2 always, and coupling with orbital l gives j = l + 1/2 or j = l − 1/2 (when l > 0). With l = 2: j = 2.5 or j = 1.5, i.e., 5/2 and 3/2. Choice A (integers 1 and 2) forgets that j must be half-integer whenever an odd number of spin-1/2 particles is involved.\n\n90-SECOND SOLUTION\nAdd and subtract 1/2 from l directly: l ± 1/2 = 2 ± 1/2 = 5/2, 3/2 — one mental calculation, no vector-coupling diagram needed for a single electron.\n\nWHAT TO MEMORIZE\nSingle-electron spin-orbit coupling: j = l ± 1/2 (only these two values, except j = 1/2 alone when l = 0); j is always half-integer for a lone electron."
+      },
+
+      {
+        "question": "An electron in the ground state of an infinite square well of width L experiences a small additional potential V₀ that is nonzero only in the middle third of the well (L/3 < x < 2L/3) and zero elsewhere. To first order in perturbation theory, the shift in the ground-state energy is most nearly",
+        "choices": [
+          "0.33 V₀",
+          "0.39 V₀",
+          "0.61 V₀",
+          "0.50 V₀",
+          "0.67 V₀"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFirst-order perturbation theory gives ΔE = ⟨ψ₁|V|ψ₁⟩ = V₀ ∫_(L/3)^(2L/3) |ψ₁(x)|² dx, with ψ₁(x) = √(2/L) sin(πx/L). Unlike a perturbation over exactly half the well, this integral has no shortcut from symmetry alone — evaluating it numerically gives about 0.61, i.e., ΔE ≈ 0.61 V₀. The ground state's probability density is concentrated toward the center of the well, so the middle third captures noticeably more than the naive 1/3 an unweighted (uniform) distribution would give.\n\n90-SECOND SOLUTION\nRecognize that the ground state's probability peaks at the well's center, so any centered perturbation region captures a probability fraction larger than its geometric fraction of the well — here L/3 of the width but well over a third (about 0.61) of the probability — which alone rules out the naive 0.33 answer.\n\nWHAT TO MEMORIZE\nFirst-order energy shift ΔE⁽¹⁾ = ⟨ψ|V|ψ⟩; only a perturbation covering exactly half the well (split symmetrically about the center) gives the clean shortcut V₀/2 by symmetry — any other sub-region requires actually evaluating ∫|ψ|²dx over that region, weighted by where the ground state's probability density is concentrated."
+      },
+
+      {
+        "question": "Two moles of an ideal gas at 300 K expand isothermally and reversibly from a volume of 0.010 m³ to 0.030 m³. The work done by the gas is most nearly",
+        "choices": [
+          "1400 J",
+          "2700 J",
+          "3600 J",
+          "5500 J",
+          "8300 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor an isothermal reversible expansion, W = nRT ln(V₂/V₁) = (2)(8.314)(300) ln(3.0) ≈ (4988)(1.099) ≈ 5480 J. Using log base 10 instead of the natural log is the most common slip, and would understate the answer significantly.\n\n90-SECOND SOLUTION\nCompute nRT once, multiply by ln(3) ≈ 1.10 (a volume ratio of 3 is common enough on this exam to have ln(3) ≈ 1.1 memorized).\n\nWHAT TO MEMORIZE\nIsothermal reversible work: W = nRT ln(V₂/V₁); requires the natural logarithm, not log₁₀."
+      },
+
+      {
+        "question": "A heat engine operates between a hot reservoir at 600 K and a cold reservoir at 300 K. Its maximum possible (Carnot) efficiency is",
+        "choices": [
+          "25%",
+          "33%",
+          "67%",
+          "75%",
+          "50%"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nCarnot efficiency is η = 1 − T_c/T_h = 1 − 300/600 = 1 − 0.5 = 0.50, or 50%. Using Celsius temperatures instead of Kelvin (a classic trap not present here since both are already in Kelvin) would give a very different, wrong answer — always double-check the temperature scale.\n\n90-SECOND SOLUTION\nThe ratio 300/600 = 1/2 simplifies instantly; 1 − 1/2 = 1/2 = 50%, no calculator needed.\n\nWHAT TO MEMORIZE\nCarnot efficiency η = 1 − T_c/T_h, with both temperatures in kelvin — this is the fundamental upper bound no real engine operating between those two reservoirs can exceed."
+      },
+
+      {
+        "question": "Oxygen gas (molar mass 32 g/mol) is at a temperature of 300 K. The root-mean-square speed of an oxygen molecule is most nearly",
+        "choices": [
+          "480 m/s",
+          "48 m/s",
+          "150 m/s",
+          "280 m/s",
+          "680 m/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe rms speed is v_rms = √(3RT/M), with M in kg/mol. Here M = 0.032 kg/mol, so v_rms = √(3×8.314×300/0.032) ≈ 484 m/s. This is comparable to (but somewhat faster than) the speed of sound in air, which is a useful sanity check on the order of magnitude.\n\n90-SECOND SOLUTION\nPlug directly into v_rms = √(3RT/M); recall that room-temperature diatomic gas molecules move at several hundred m/s as an order-of-magnitude anchor.\n\nWHAT TO MEMORIZE\nv_rms = √(3RT/M) with M as the molar mass in kg/mol (not g/mol) — a very common unit-conversion trap."
+      },
+
+      {
+        "question": "Monochromatic light of wavelength 500 nm passes through a single slit of width 0.020 mm. The angle to the first diffraction minimum is most nearly",
+        "choices": [
+          "0.7°",
+          "1.4°",
+          "2.9°",
+          "5.7°",
+          "11°"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSingle-slit minima occur at a sinθ = mλ. For the first minimum (m=1): sinθ = λ/a = (500×10⁻⁹)/(0.020×10⁻³) = 0.025, so θ ≈ 1.43°. The small-angle approximation is well justified here since sinθ is small, so sinθ ≈ θ (in radians) would give essentially the same answer.\n\n90-SECOND SOLUTION\nCompute λ/a directly, then convert the small angle from radians to degrees (multiply by 180/π ≈ 57.3) — or just recognize small angles in radians are already close to their degree-scaled sine value for a rough check.\n\nWHAT TO MEMORIZE\nSingle-slit diffraction minima: a sinθ = mλ (opposite convention from double-slit maxima, which use d sinθ = mλ) — a frequent source of confusion between single- and double-slit problems."
+      },
+
+      {
+        "question": "A thin film of a transparent coating with index of refraction 1.4 sits on glass of higher index (about 1.5), with air (index 1.0) above the film. For light of wavelength 600 nm (in vacuum) to be strongly reflected due to constructive interference, the minimum nonzero film thickness is most nearly",
+        "choices": [
+          "54 nm",
+          "107 nm",
+          "214 nm",
+          "300 nm",
+          "428 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe film's index (1.4) lies between air's (1.0) and the glass's (1.5), so both reflections are low-to-high and both pick up a π phase shift; the two shifts cancel each other out. The interference is then governed purely by the path-length phase from the round trip through the film, 2nt, and constructive reflection requires 2nt = mλ. The minimum nonzero thickness (m=1) is t_min = λ/(2n) = 600/(2×1.4) ≈ 214 nm. The 107 nm distractor (λ/4n) is the condition that applies instead when the film index is higher (or lower) than both surrounding media, so only one interface flips.\n\n90-SECOND SOLUTION\nCheck whether the film's index sits between its two neighbors' indices: here it does (1.0 < 1.4 < 1.5), so both reflections flip, the shifts cancel, and the simpler t = λ/(2n) condition applies directly.\n\nWHAT TO MEMORIZE\nCompare the film's index to both neighbors. If it lies between them (as here), both interfaces flip, the shifts cancel, and constructive reflection occurs at t = λ/(2n), 2λ/(2n).... If it does not lie between them (film index higher, or lower, than both surroundings), only one interface flips, and constructive reflection instead occurs at the smaller thicknesses t = λ/(4n), 3λ/(4n)...."
+      },
+
+      {
+        "question": "A radioactive sample has a half-life of 5.0 years. The fraction of the original sample remaining after 15 years is most nearly",
+        "choices": [
+          "1/16",
+          "1/12",
+          "1/4",
+          "1/8",
+          "1/3"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\n15 years is exactly 3 half-lives (15/5 = 3), so the remaining fraction is (1/2)³ = 1/8. The 1/16 distractor comes from treating 15 years as 4 half-lives by an off-by-one error.\n\n90-SECOND SOLUTION\nDivide the elapsed time by the half-life to get an integer number of half-lives (3 here), then just halve repeatedly: 1 → 1/2 → 1/4 → 1/8.\n\nWHAT TO MEMORIZE\nRemaining fraction after n half-lives is (1/2)ⁿ; always convert elapsed time to a number of half-lives first (t/T_½) before applying the exponential decay law."
+      },
+
+      {
+        "question": "A beam of particles passes through a thin foil containing 1.0 × 10²⁰ scattering centers per cm³, with an interaction cross section of 1.0 × 10⁻²⁴ cm² per center. The mean free path for an interaction is most nearly",
+        "choices": [
+          "0.0001 cm",
+          "0.01 cm",
+          "1 cm",
+          "10000 cm",
+          "100 cm"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe mean free path is λ = 1/(nσ), where n is the number density and σ the cross section. Here λ = 1/[(1.0×10²⁰)(1.0×10⁻²⁴)] = 1/(1.0×10⁻⁴) = 10⁴ cm = 10000 cm. Multiplying n and σ instead of taking their reciprocal product is the most common structural error here.\n\n90-SECOND SOLUTION\nMultiply the exponents (10²⁰ × 10⁻²⁴ = 10⁻⁴), then invert — two quick steps, no need to carry the full numbers through.\n\nWHAT TO MEMORIZE\nMean free path λ = 1/(nσ); this same relation underlies mean free path calculations across nuclear, particle, and even classical kinetic-theory contexts."
+      },
+
+      {
+        "question": "In a nuclear reaction, the binding energy per nucleon generally increases from very light nuclei up to iron (A≈56), then slowly decreases for heavier nuclei. This trend explains why",
+        "choices": [
+          "fusion of light nuclei and fission of heavy nuclei can both release energy",
+          "only fusion reactions can release nuclear energy",
+          "only fission reactions can release nuclear energy",
+          "iron nuclei are radioactive",
+          "the strong nuclear force does not act on nucleons near iron"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBecause binding energy per nucleon peaks near iron, moving toward iron from either direction increases the average binding energy per nucleon, releasing energy: light nuclei fusing together (moving up the curve) release energy, and heavy nuclei splitting apart (moving down the curve toward iron) also release energy. Iron itself is near the peak and is the most stable nucleus in this sense, not radioactive.\n\n90-SECOND SOLUTION\nVisualize the binding-energy-per-nucleon curve as a peak at iron: any process that moves nuclei closer to that peak releases energy, whether from below (fusion) or above (fission) — no calculation needed.\n\nWHAT TO MEMORIZE\nThe binding-energy-per-nucleon curve peaks near iron/nickel (A≈56–62); this single shape explains why both fusion (light elements) and fission (heavy elements) are exothermic, while fusing elements heavier than iron or fissioning elements lighter than iron would require energy input rather than releasing it."
+      },
+
+      {
+        "question": "A muon is created in the upper atmosphere and travels toward the ground at speed v = 0.80c. In the muon's own rest frame, its proper lifetime is 10 μs before it decays. As measured by an observer on the ground, the muon's lifetime is most nearly",
+        "choices": [
+          "6.0 μs",
+          "17 μs",
+          "8.0 μs",
+          "10 μs",
+          "13 μs"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTime dilation gives the ground-frame lifetime as t = γt₀, with γ = 1/√(1−v²/c²) = 1/√(1−0.64) = 1/√0.36 ≈ 1.667. So t = (1.667)(10 μs) ≈ 16.7 μs, closest to 17 μs. The 6.0 μs distractor comes from applying the dilation factor in the wrong direction (dividing instead of multiplying), which would incorrectly shorten rather than lengthen the observed lifetime.\n\n90-SECOND SOLUTION\nRecall γ for v=0.8c as a standard reference value (γ=5/3 ≈ 1.667, from the 3-4-5 triangle: √(1−0.64)=0.6=3/5, so γ=5/3) and multiply directly.\n\nWHAT TO MEMORIZE\nv = 0.6c and v = 0.8c give the classic 'nice' Lorentz factors γ = 5/4 and γ = 5/3 respectively (both from 3-4-5 right triangles) — worth memorizing outright since they recur constantly on this exam. The moving object's own clock always runs slow as seen by other frames: t_observed = γt_proper > t_proper."
+      },
+
+      {
+        "question": "A particle of rest mass m moves at speed 0.60c. Its relativistic momentum, in units of mc, is most nearly",
+        "choices": [
+          "0.48",
+          "0.60",
+          "0.75",
+          "1.00",
+          "1.25"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRelativistic momentum is p = γmv, with γ = 1/√(1−0.36) = 1/0.8 = 1.25 at v=0.6c. So p/mc = γ(v/c) = (1.25)(0.6) = 0.75. Using the non-relativistic p=mv (giving simply 0.60) ignores the γ factor and understates the true momentum.\n\n90-SECOND SOLUTION\nUse the memorized γ=5/4 for v=0.6c, multiply by 0.6: (5/4)(0.6) = 0.75 — no square roots needed if the standard γ value is already known.\n\nWHAT TO MEMORIZE\nRelativistic momentum p = γmv = γ(v/c)·mc; always includes the γ factor, unlike the non-relativistic p=mv which is only a low-speed approximation."
+      },
+
+      {
+        "question": "A physical quantity is computed as R = AB², where A is measured with a 2.0% relative uncertainty and B is measured with a 3.0% relative uncertainty, and A and B are measured independently. The relative uncertainty in R is most nearly",
+        "choices": [
+          "5.0%",
+          "7.2%",
+          "8.0%",
+          "6.3%",
+          "9.0%"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor independent, uncorrelated errors in a product/power expression, relative uncertainties add in quadrature after accounting for the exponent: (δR/R)² = (δA/A)² + (2δB/B)², since B is squared. Here: √(0.02² + (2×0.03)²) = √(0.0004+0.0036) = √0.0040 ≈ 0.0632, or 6.3%. Simply adding the relative errors linearly (2%+6%=8%) overstates the true combined uncertainty for independent errors.\n\n90-SECOND SOLUTION\nDouble B's relative error (because of the square), then add both contributions in quadrature (Pythagorean sum), not linearly.\n\nWHAT TO MEMORIZE\nFor R = A^m B^n with independent errors, (δR/R)² = (m·δA/A)² + (n·δB/B)² — errors from a power law scale by the exponent before being combined in quadrature."
+      },
+
+      {
+        "question": "In a counting experiment, 900 radioactive decay events are recorded in a fixed time interval. Assuming Poisson counting statistics, the relative (fractional) uncertainty in this count is most nearly",
+        "choices": [
+          "1.1%",
+          "9.0%",
+          "11%",
+          "33%",
+          "3.3%"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor Poisson statistics, the standard deviation of a count N is √N, so here σ = √900 = 30. The relative uncertainty is σ/N = 30/900 ≈ 0.033, or 3.3%. This √N scaling is why counting experiments need many more total counts to shrink the *relative* error, even though the absolute error grows with more counts.\n\n90-SECOND SOLUTION\nTake the square root of the count (30), divide by the count itself (900) — recognizing 900 is a perfect square makes this especially fast.\n\nWHAT TO MEMORIZE\nPoisson counting statistics: absolute uncertainty σ = √N, relative uncertainty σ/N = 1/√N — to halve the relative uncertainty, four times as many counts are needed, not twice."
+      }
+
+    ]
+  },
+
+  {
+    "name": "General Practice Set 2",
+    "cards": [
+
+      {
+        "question": "A 4.0 kg block sits on a frictionless incline at 30° above horizontal, connected by a string over a pulley at the top to a 6.0 kg mass hanging vertically off the incline. The tension in the string is most nearly",
+        "choices": [
+          "35 N",
+          "20 N",
+          "26 N",
+          "44 N",
+          "59 N"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWriting Newton's second law for each mass with common acceleration a: for the hanging mass, m₂g − T = m₂a; for the block on the incline, T − m₁g sinθ = m₁a. Adding: a = (m₂g − m₁g sinθ)/(m₁+m₂) = (58.8−19.6)/10 ≈ 3.92 m/s². Substituting back: T = m₁(g sinθ + a) = 4.0(4.9+3.92) ≈ 35.3 N. Forgetting the sinθ factor for the incline block (treating it as if on a vertical string) is the most common error.\n\n90-SECOND SOLUTION\nSolve the combined-system acceleration first (net driving force over total mass), then substitute into either single-body equation — using the incline-block equation to solve for T is usually the cleaner of the two.\n\nWHAT TO MEMORIZE\nFor a mass on a frictionless incline connected over a pulley to a hanging mass: a = (m₂g − m₁g sinθ)/(m₁+m₂); always include sinθ for the component of gravity along the incline, never the full g."
+      },
+
+      {
+        "question": "A ball is thrown straight up and reaches a maximum height of 20 m above its launch point. Neglecting air resistance, the total time the ball spends in the air before returning to its starting height is most nearly",
+        "choices": [
+          "1.4 s",
+          "4.0 s",
+          "2.0 s",
+          "2.9 s",
+          "5.7 s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe time to rise to maximum height satisfies h = ½gt_up², so t_up = √(2h/g) = √(40/9.8) ≈ 2.02 s. By symmetry, the fall takes the same time, so the total flight time is 2t_up ≈ 4.0 s. Reporting only t_up (2.0 s) instead of the full round trip is the most common slip.\n\n90-SECOND SOLUTION\nCompute t_up = √(2h/g), then simply double it — the up and down trips are symmetric in time for projectile motion without air resistance.\n\nWHAT TO MEMORIZE\nTotal flight time for straight-up-and-down motion is 2√(2h/g), exactly twice the time to reach the peak, by time-reversal symmetry of the trajectory."
+      },
+
+      {
+        "question": "A uniform solid disk (I = ½MR²) is released from rest and rolls without slipping down an incline, descending a vertical height of 2.0 m. Its speed at the bottom is most nearly",
+        "choices": [
+          "3.6 m/s",
+          "4.4 m/s",
+          "5.1 m/s",
+          "6.3 m/s",
+          "6.9 m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nEnergy conservation for rolling without slipping gives Mgh = ½Mv² + ½Iω² = ½Mv² + ½(½MR²)(v/R)² = ¾Mv². Solving: v = √(4gh/3) = √(4×9.8×2.0/3) ≈ 5.11 m/s. This is slower than the frictionless-sliding result √(2gh) ≈ 6.26 m/s, since rolling diverts some of the potential energy into rotational kinetic energy.\n\n90-SECOND SOLUTION\nMemorize the rolling-disk speed formula v = √(4gh/3) directly (equivalently, v = √(2gh/(1+I/MR²)) with I/MR²=½ for a disk), rather than rederiving the energy balance each time.\n\nWHAT TO MEMORIZE\nRolling without slipping down a height h: v = √(2gh/(1 + I/MR²)); a solid disk (I/MR²=½) gives v=√(4gh/3), a hoop (I/MR²=1) gives the smaller v=√(gh), and frictionless sliding (no rotation) gives the largest, v=√(2gh)."
+      },
+
+      {
+        "question": "A figure skater spinning with moment of inertia 4.0 kg·m² at 2.0 rad/s pulls her arms in, reducing her moment of inertia to 1.0 kg·m². Assuming no external torques, her new angular velocity is most nearly",
+        "choices": [
+          "0.5 rad/s",
+          "2.0 rad/s",
+          "4.0 rad/s",
+          "8.0 rad/s",
+          "16 rad/s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWith no external torque, angular momentum L = Iω is conserved: I₁ω₁ = I₂ω₂, so ω₂ = I₁ω₁/I₂ = (4.0)(2.0)/1.0 = 8.0 rad/s. The skater's rotation rate quadruples as her moment of inertia drops to a quarter of its original value — angular momentum conservation, not energy conservation, governs this (kinetic energy actually increases, supplied by the muscular work of pulling the arms in).\n\n90-SECOND SOLUTION\nApply I₁ω₁ = I₂ω₂ directly — a single ratio, no need to consider energy at all.\n\nWHAT TO MEMORIZE\nAngular momentum L = Iω is conserved with no external torque; rotational kinetic energy is NOT automatically conserved in this scenario, since internal (muscular) work changes the moment of inertia."
+      },
+
+      {
+        "question": "A planet has mass 6.0 × 10²⁴ kg and radius 6.4 × 10⁶ m. The escape velocity from its surface is most nearly",
+        "choices": [
+          "3.5 km/s",
+          "7.9 km/s",
+          "16 km/s",
+          "22 km/s",
+          "11 km/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEscape velocity is v_esc = √(2GM/R) = √(2×6.674×10⁻¹¹×6.0×10²⁴/6.4×10⁶) ≈ 11,200 m/s ≈ 11 km/s — recognizably Earth's escape velocity, since these are Earth's actual mass and radius. The 7.9 km/s distractor is Earth's low-orbit circular speed, a related but different quantity (escape velocity is always √2 times the circular orbital speed at the same radius).\n\n90-SECOND SOLUTION\nPlug directly into v_esc = √(2GM/R); recognizing these as Earth's parameters lets you check the answer against the well-known ~11.2 km/s value.\n\nWHAT TO MEMORIZE\nv_esc = √(2GM/R); Earth's escape velocity ≈ 11.2 km/s is worth memorizing as a reference point, and v_esc = √2 × (circular orbital speed) at the same radius."
+      },
+
+      {
+        "question": "A simple pendulum of length L hangs from a support that is itself accelerating horizontally with constant acceleration a. Using a Lagrangian approach with generalized coordinate θ (the pendulum's angle from vertical), the equation of motion in the small-angle limit is",
+        "choices": [
+          "θ̈ + (g/L)θ = a/L",
+          "θ̈ + (g/L)θ = 0",
+          "θ̈ − (g/L)θ = 0",
+          "θ̈ + (g/L)θ = −a/L",
+          "θ̈ + (a/L)θ = g/L"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn the accelerating (non-inertial) frame of the support, the pendulum bob feels an effective gravitational field that is the vector sum of real gravity g (downward) and a fictitious force −a (opposing the support's acceleration). Writing the Lagrangian with this effective force and expanding to small θ gives θ̈ + (g/L)θ = a/L — the acceleration acts as a constant forcing term, shifting the equilibrium angle away from vertical rather than changing the oscillation frequency.\n\n90-SECOND SOLUTION\nRecognize that a uniformly accelerating support is equivalent (by the equivalence principle) to an extra constant 'tilt' in the effective gravity — this shifts the equilibrium point (nonzero right-hand side) without changing the natural frequency √(g/L) that multiplies θ on the left.\n\nWHAT TO MEMORIZE\nAn accelerating pendulum support adds a constant forcing term (proportional to the support's acceleration) to the standard SHM equation, shifting the equilibrium angle to arctan(a/g) but leaving the oscillation frequency √(g/L) unchanged."
+      },
+
+      {
+        "question": "A charged particle moving through a region with a uniform electric field of 2000 V/m and a perpendicular uniform magnetic field of 0.050 T passes straight through undeflected (a velocity selector). The particle's speed must be most nearly",
+        "choices": [
+          "100 m/s",
+          "4 × 10⁴ m/s",
+          "1000 m/s",
+          "10⁵ m/s",
+          "4 × 10⁶ m/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor the electric and magnetic forces to exactly cancel, qE = qvB, so v = E/B = 2000/0.050 = 40,000 m/s = 4×10⁴ m/s. The charge itself cancels out of the condition entirely, which is exactly why velocity selectors work for any charge (positive or negative, any magnitude).\n\n90-SECOND SOLUTION\nOne division, E/B — no charge or mass values are ever needed for a velocity selector.\n\nWHAT TO MEMORIZE\nVelocity selector condition: v = E/B, independent of the particle's charge or mass — only particles at exactly this speed pass through undeflected."
+      },
+
+      {
+        "question": "Two long, straight, parallel wires 2.0 cm apart carry currents of 5.0 A and 8.0 A in the same direction. The force per unit length between them is most nearly",
+        "choices": [
+          "4 × 10⁻⁶ N/m",
+          "4 × 10⁻² N/m",
+          "4 × 10⁻⁴ N/m",
+          "4 N/m",
+          "40 N/m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe force per length between parallel current-carrying wires is F/L = μ₀I₁I₂/(2πd) = (4π×10⁻⁷)(5.0)(8.0)/(2π×0.020) = 4.0×10⁻⁴ N/m. Since the currents flow in the same direction, this force is attractive. Missing the factor of 2π in the denominator (or leaving it in the numerator from μ₀=4π×10⁻⁷) is the most common bookkeeping slip.\n\n90-SECOND SOLUTION\nThe 4π in μ₀ and the 2π in the denominator partially cancel, simplifying to F/L = 2×10⁻⁷ I₁I₂/d — a streamlined version worth memorizing to skip a step.\n\nWHAT TO MEMORIZE\nF/L = μ₀I₁I₂/(2πd) = 2×10⁻⁷I₁I₂/d (SI units); same-direction currents attract, opposite-direction currents repel — this relation is also literally how the ampere used to be defined."
+      },
+
+      {
+        "question": "A 5.0 μF capacitor is charged to a potential difference of 100 V. The energy stored in the capacitor is most nearly",
+        "choices": [
+          "0.0005 J",
+          "0.005 J",
+          "0.25 J",
+          "0.025 J",
+          "2.5 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEnergy stored in a capacitor is U = ½CV² = ½(5.0×10⁻⁶)(100)² = ½(5.0×10⁻⁶)(10,000) = 0.025 J. Using U=CV (missing both the ½ and the square) is the most common structural error.\n\n90-SECOND SOLUTION\nSquare the voltage first (100² = 10⁴), multiply by C, then halve — order of operations chosen to keep the numbers manageable without a calculator.\n\nWHAT TO MEMORIZE\nCapacitor energy: U = ½CV² = ½QV = Q²/(2C) — three equivalent forms; pick whichever variables are given directly to avoid an extra substitution step."
+      },
+
+      {
+        "question": "An infinite line of charge has linear charge density 3.0 μC/m. The magnitude of the electric field at a perpendicular distance of 10 cm from the line is most nearly",
+        "choices": [
+          "2.7 × 10³ N/C",
+          "2.7 × 10⁴ N/C",
+          "1.1 × 10⁶ N/C",
+          "2.7 × 10⁷ N/C",
+          "5.4 × 10⁵ N/C"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nGauss's law for an infinite line charge gives E = λ/(2πε₀r) = (3.0×10⁻⁶)/(2π×8.85×10⁻¹²×0.10) ≈ 5.4×10⁵ N/C. This 1/r falloff (rather than the point-charge 1/r² falloff) is the defining signature of the infinite-line geometry, and comes directly from choosing a cylindrical Gaussian surface.\n\n90-SECOND SOLUTION\nPlug directly into E = λ/(2πε₀r); remembering 1/(2πε₀) ≈ 1.8×10¹⁰ N·m/C as a single combined constant saves a step.\n\nWHAT TO MEMORIZE\nInfinite line charge: E = λ/(2πε₀r), falling off as 1/r — contrast with a point charge's 1/r² and an infinite plane's r-independence; all three follow directly from the symmetry of the chosen Gaussian surface."
+      },
+
+      {
+        "question": "A series RLC circuit has R = 100 Ω, L = 0.50 H, and C = 10 μF, driven at a frequency of 60 Hz. The magnitude of the circuit's total impedance is most nearly",
+        "choices": [
+          "126 Ω",
+          "100 Ω",
+          "188 Ω",
+          "265 Ω",
+          "320 Ω"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAt ω = 2π(60) ≈ 377 rad/s: X_L = ωL ≈ 188 Ω and X_C = 1/(ωC) ≈ 265 Ω. The total impedance is |Z| = √(R² + (X_L−X_C)²) = √(100² + (188−265)²) = √(10000+5929) ≈ 126 Ω. Adding X_L and X_C instead of subtracting (they act in opposite phase) is the most common structural error.\n\n90-SECOND SOLUTION\nCompute X_L and X_C separately, subtract (not add), square, add to R², square root — the reactances partially cancel here since they're comparable in size.\n\nWHAT TO MEMORIZE\nSeries RLC impedance: |Z| = √(R² + (X_L − X_C)²), with X_L = ωL and X_C = 1/(ωC); the circuit is at resonance (purely resistive, minimum |Z|) exactly when X_L = X_C."
+      },
+
+      {
+        "question": "Light of wavelength 400 nm strikes a metal surface with work function 2.0 eV. The maximum kinetic energy of the ejected photoelectrons is most nearly",
+        "choices": [
+          "0.6 eV",
+          "1.1 eV",
+          "1.6 eV",
+          "2.1 eV",
+          "3.1 eV"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nPhoton energy is E = hc/λ = 1240 eV·nm/400 nm = 3.1 eV. The maximum photoelectron kinetic energy is then KE_max = E − W = 3.1 − 2.0 = 1.1 eV, by Einstein's photoelectric equation. Reporting the photon energy itself (3.1 eV) without subtracting the work function is the most common omission.\n\n90-SECOND SOLUTION\nCompute hc/λ using 1240 eV·nm, then subtract the given work function directly — two steps.\n\nWHAT TO MEMORIZE\nEinstein photoelectric equation: KE_max = hc/λ − W, where W is the work function; no photoelectrons are emitted at all if hc/λ < W, regardless of the light's intensity."
+      },
+
+      {
+        "question": "A hydrogen atom is in its first excited state (n=2). The additional energy required to fully ionize it from this state is most nearly",
+        "choices": [
+          "0.85 eV",
+          "1.5 eV",
+          "3.4 eV",
+          "6.8 eV",
+          "13.6 eV"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe binding energy at level n is |E_n| = 13.6 eV/n². For n=2: |E₂| = 13.6/4 = 3.4 eV. This is the energy needed to remove the electron from the n=2 level to a free (E=0) state — less than the 13.6 eV needed from the ground state, since the electron is already partially excited.\n\n90-SECOND SOLUTION\nDivide 13.6 eV by n²=4 directly — one division, using the memorized hydrogen ground-state energy.\n\nWHAT TO MEMORIZE\nHydrogen binding energy at level n: |E_n| = 13.6 eV/n²; ionization energy from any excited state is simply this value, always less than the 13.6 eV needed from the ground state."
+      },
+
+      {
+        "question": "A quantum harmonic oscillator has angular frequency ω = 2.0 × 10¹⁴ rad/s. The spacing between adjacent energy levels is most nearly",
+        "choices": [
+          "0.033 eV",
+          "0.066 eV",
+          "0.26 eV",
+          "0.13 eV",
+          "0.53 eV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAdjacent energy levels of a quantum harmonic oscillator are spaced by exactly ħω (constant spacing, independent of quantum number, unlike hydrogen's shrinking level spacing). Here ħω = (1.055×10⁻³⁴)(2.0×10¹⁴)/(1.6×10⁻¹⁹) ≈ 0.132 eV. This equal-spacing feature is what makes the harmonic oscillator spectrum qualitatively different from hydrogen's.\n\n90-SECOND SOLUTION\nMultiply ħ by ω and convert to eV by dividing by 1.6×10⁻¹⁹ — a single formula, no need to compute the ground-state energy ½ħω separately since only the spacing (not an absolute level) is asked.\n\nWHAT TO MEMORIZE\nQuantum harmonic oscillator levels: E_n = (n+½)ħω, evenly spaced by ħω — contrast with hydrogen, whose level spacing shrinks as n increases."
+      },
+
+      {
+        "question": "An electron in a magnetic field of 2.0 T experiences a Zeeman energy splitting between adjacent magnetic sublevels of most nearly",
+        "choices": [
+          "5.8 × 10⁻⁶ eV",
+          "1.2 × 10⁻⁴ eV",
+          "1.2 × 10⁻² eV",
+          "5.8 × 10⁻² eV",
+          "5.8 × 10⁻⁴ eV"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Zeeman splitting between adjacent m_l sublevels is ΔE = μ_B B, where μ_B ≈ 9.274×10⁻²⁴ J/T is the Bohr magneton. With B=2.0 T: ΔE = (9.274×10⁻²⁴)(2.0)/(1.6×10⁻¹⁹) ≈ 1.16×10⁻⁴ eV. This is tiny compared to typical atomic energy level spacings (a few eV), which is exactly why the Zeeman effect is treated as a small perturbation.\n\n90-SECOND SOLUTION\nMultiply the memorized Bohr magneton (in eV/T, μ_B ≈ 5.8×10⁻⁵ eV/T) by the field strength directly: (5.8×10⁻⁵)(2.0) ≈ 1.2×10⁻⁴ eV — avoids a unit conversion.\n\nWHAT TO MEMORIZE\nZeeman splitting ΔE = μ_B B between adjacent m_l levels; μ_B ≈ 5.8×10⁻⁵ eV/T is worth memorizing directly in eV/T to skip a joule-to-eV conversion."
+      },
+
+      {
+        "question": "For the hydrogen atom's ground state, the radial probability density P(r) = |ψ|²·4πr² is maximized at a radius r that is most nearly",
+        "choices": [
+          "a₀",
+          "0",
+          "a₀/2",
+          "2a₀",
+          "4a₀"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThough the wavefunction |ψ(r)|² itself is largest at r=0, the radial probability density includes the geometric factor 4πr² (the volume of a thin spherical shell), which vanishes at r=0 and grows initially before the exponential wavefunction decay takes over. Maximizing P(r) = 4πr²|ψ|² for the 1s state gives exactly r = a₀, the Bohr radius — a case where the most probable radius coincides exactly with the (classically motivated) Bohr model radius, even though the two theories describe the electron completely differently.\n\n90-SECOND SOLUTION\nRecall the specific, well-known result directly: for hydrogen's ground state, the most probable radius equals the Bohr radius a₀, a fact worth memorizing rather than differentiating 4πr²e^(−2r/a₀) under time pressure.\n\nWHAT TO MEMORIZE\nDistinguish |ψ(r)|² (largest at r=0 for the 1s state) from the radial probability density 4πr²|ψ(r)|² (peaked at r=a₀, the Bohr radius) — a frequently tested conceptual distinction."
+      },
+
+      {
+        "question": "For the hydrogen atom's 3p state (n=3, l=1), the number of radial nodes in the wavefunction (excluding r=0 and r=∞) is",
+        "choices": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe number of radial nodes for a hydrogen wavefunction is given by n − l − 1. For the 3p state, n=3 and l=1, so the number of radial nodes is 3 − 1 − 1 = 1. This is separate from angular nodes (of which there are l=1 here); the total node count (radial plus angular) always equals n−1.\n\n90-SECOND SOLUTION\nApply n−l−1 directly: 3−1−1=1 — a one-line formula worth having memorized rather than sketching the radial wavefunction.\n\nWHAT TO MEMORIZE\nHydrogen radial nodes = n−l−1; angular nodes = l; total nodes = n−1, split between the two types according to l."
+      },
+
+      {
+        "question": "Counting all quantum states (including the two spin orientations) available to an electron in the hydrogen atom's n=3 shell, the total number of such states is",
+        "choices": [
+          "3",
+          "6",
+          "18",
+          "9",
+          "36"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a given n, the allowed l values run from 0 to n−1, and each l has (2l+1) values of m_l, each doubled by the two spin states. Summing: for n=3, l=0,1,2 give (2×0+1)+(2×1+1)+(2×2+1) = 1+3+5 = 9 orbital states, and doubling for spin gives 18 total states. This matches the general shortcut formula 2n² = 2(9) = 18.\n\n90-SECOND SOLUTION\nUse the shortcut 2n² directly: 2×3² = 18 — no need to sum the individual l subshells separately.\n\nWHAT TO MEMORIZE\nTotal number of quantum states in shell n (including spin) is 2n²; this is also the pattern behind the lengths of the periods in the periodic table (though real atoms fill subshells out of strict n-order once transition metals begin)."
+      },
+
+      {
+        "question": "A monatomic ideal gas at 300 K and volume 0.020 m³ is compressed adiabatically and reversibly to a volume of 0.010 m³. Its final temperature is most nearly",
+        "choices": [
+          "190 K",
+          "240 K",
+          "480 K",
+          "380 K",
+          "600 K"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a reversible adiabatic process, TV^(γ−1) = constant, with γ=5/3 for a monatomic ideal gas. So T₂ = T₁(V₁/V₂)^(γ−1) = 300×(2.0)^(2/3) ≈ 300×1.587 ≈ 476 K. Using γ itself as the exponent (instead of γ−1) is the most common error, and would give a substantially different, wrong answer.\n\n90-SECOND SOLUTION\nRecall 2^(2/3) ≈ 1.587 as a standard cube-root-of-4 value, and multiply directly by the initial temperature.\n\nWHAT TO MEMORIZE\nAdiabatic reversible process: TV^(γ−1) = constant (equivalently PV^γ = constant); γ = 5/3 monatomic, 7/5 diatomic — always use γ−1 as the exponent when relating T and V directly."
+      },
+
+      {
+        "question": "A 0.50 kg mass of water (specific heat 4186 J/(kg·K)) is slowly heated at constant pressure from 300 K to 350 K. The entropy change of the water is most nearly",
+        "choices": [
+          "70 J/K",
+          "150 J/K",
+          "700 J/K",
+          "1500 J/K",
+          "320 J/K"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a substance heated reversibly at constant pressure with roughly constant specific heat, ΔS = mc ln(T₂/T₁) = (0.50)(4186) ln(350/300) ≈ (2093)(0.154) ≈ 323 J/K. Using ΔT/T (a linearized approximation) instead of the exact ln(T₂/T₁) is a common simplification that would give a noticeably different value here since the temperature ratio isn't extremely close to 1.\n\n90-SECOND SOLUTION\nCompute mc first, then multiply by ln(350/300) ≈ 0.15 — recognizing this natural-log form (not a linear ΔT/T) is the key structural point.\n\nWHAT TO MEMORIZE\nEntropy change for constant-pressure heating with constant c: ΔS = mc ln(T₂/T₁) — the natural logarithm of the temperature ratio, not simply ΔT/T (which is only a small-ΔT approximation to it)."
+      },
+
+      {
+        "question": "For an ideal gas obeying the Maxwell–Boltzmann speed distribution, the ratio of the most probable speed to the root-mean-square speed is most nearly",
+        "choices": [
+          "0.82",
+          "0.71",
+          "0.87",
+          "1.00",
+          "1.22"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe most probable speed is v_p = √(2kT/m) and the rms speed is v_rms = √(3kT/m), so their ratio is √(2/3) ≈ 0.816. This ordering (v_p < v_avg < v_rms) always holds for the Maxwell-Boltzmann distribution, reflecting its asymmetric shape with a long high-speed tail that pulls the rms value above the peak location.\n\n90-SECOND SOLUTION\nTake the square root of 2/3 directly — a clean, memorable ratio worth having on hand rather than rederiving both speed formulas.\n\nWHAT TO MEMORIZE\nThree characteristic Maxwell-Boltzmann speeds, in increasing order: most probable v_p=√(2kT/m) < average v_avg=√(8kT/πm) < rms v_rms=√(3kT/m); their ratios are fixed numbers (√(2/3), √(8/3π), 1) independent of temperature or mass."
+      },
+
+      {
+        "question": "Light of wavelength 633 nm illuminates a double slit with slit separation 0.50 mm. On a screen 2.0 m away, the spacing between adjacent bright fringes is most nearly",
+        "choices": [
+          "0.63 mm",
+          "2.5 mm",
+          "1.3 mm",
+          "1.9 mm",
+          "3.2 mm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFringe spacing in the small-angle (far-field) approximation is Δy = λL/d = (633×10⁻⁹)(2.0)/(0.50×10⁻³) ≈ 2.53×10⁻³ m ≈ 2.5 mm. Confusing d (slit separation) with the slit width, or forgetting the screen distance L entirely, are the common structural errors.\n\n90-SECOND SOLUTION\nPlug directly into Δy = λL/d, keeping units consistent (nm, m, mm all appear here, so convert carefully).\n\nWHAT TO MEMORIZE\nDouble-slit fringe spacing: Δy = λL/d, valid in the small-angle approximation (d ≪ L); larger slit separation d gives closer-together fringes, an inverse relationship worth sanity-checking."
+      },
+
+      {
+        "question": "A sound source emitting at 500 Hz moves toward a stationary observer at 30 m/s, in air where the speed of sound is 340 m/s. The frequency heard by the observer is most nearly",
+        "choices": [
+          "440 Hz",
+          "460 Hz",
+          "548 Hz",
+          "500 Hz",
+          "610 Hz"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a source moving toward a stationary observer, the Doppler-shifted frequency is f' = f₀·v/(v−v_s) = 500×340/(340−30) = 500×340/310 ≈ 548 Hz. The frequency increases because each successive wavefront is emitted from a position closer to the observer, compressing the wavelength. Using v+v_s in the denominator (the formula for a receding source) would give a lower, wrong frequency.\n\n90-SECOND SOLUTION\nSource approaching means smaller denominator (v−v_s), hence higher frequency — check the sign matches this physical expectation before finalizing the answer.\n\nWHAT TO MEMORIZE\nDoppler effect for sound, moving source: f' = f₀v/(v∓v_s), minus sign for source approaching (raises frequency), plus sign for receding (lowers it); the same ∓/± convention applies symmetrically to a moving observer with a different formula, f' = f₀(v±v_o)/v."
+      },
+
+      {
+        "question": "A nuclear reaction converts 0.10 atomic mass units of rest mass into kinetic energy of the products. The energy released is most nearly",
+        "choices": [
+          "9.3 MeV",
+          "18.6 MeV",
+          "186 MeV",
+          "93 MeV",
+          "931 MeV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEach atomic mass unit corresponds to 931.5 MeV via E=mc². With Δm = 0.10 u: E = 0.10 × 931.5 ≈ 93.2 MeV. This single conversion factor (1 u ↔ 931.5 MeV) is the standard shortcut for nuclear energy-release problems, avoiding a full SI-unit calculation with c².\n\n90-SECOND SOLUTION\nMultiply the mass defect directly by 931.5 MeV/u — one multiplication, no unit conversions to SI needed.\n\nWHAT TO MEMORIZE\n1 atomic mass unit = 931.5 MeV/c² exactly (by definition of the MeV/c² energy-mass unit system used throughout nuclear and particle physics) — memorize this conversion factor outright."
+      },
+
+      {
+        "question": "A distant galaxy's spectral lines are observed to be redshifted with z = 0.10. Using the non-relativistic approximation, the galaxy's recession velocity is most nearly",
+        "choices": [
+          "3,000 km/s",
+          "10,000 km/s",
+          "100,000 km/s",
+          "300,000 km/s",
+          "30,000 km/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor small redshifts, z ≈ v/c, so v ≈ zc = 0.10 × (3.0×10⁵ km/s) = 3.0×10⁴ km/s = 30,000 km/s. This non-relativistic approximation is reasonably good for z=0.10 (only about a 5% correction from the full relativistic formula would be needed at this redshift), but it becomes invalid for z approaching or exceeding 1.\n\n90-SECOND SOLUTION\nMultiply z directly by the speed of light — one multiplication, using the non-relativistic approximation explicitly stated in the problem.\n\nWHAT TO MEMORIZE\nNon-relativistic redshift approximation: z ≈ v/c, valid only for z ≪ 1; the full relativistic Doppler formula must be used for larger redshifts, where this linear approximation breaks down."
+      },
+
+      {
+        "question": "A 2×2 matrix has diagonal entries both equal to 2 and off-diagonal entries both equal to 1. Its eigenvalues are",
+        "choices": [
+          "1 and 3",
+          "0 and 4",
+          "1 and 2",
+          "2 and 2",
+          "−1 and 3"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe characteristic equation is det(M−λI) = (2−λ)² − 1 = 0, so (2−λ)² = 1, giving 2−λ = ±1, i.e., λ = 1 or λ = 3. As a check, the trace (sum of diagonal entries) should equal the sum of eigenvalues: 2+2=4, and indeed 1+3=4; the determinant (2×2−1×1=3) should equal the product of eigenvalues: 1×3=3. Both checks confirm the answer.\n\n90-SECOND SOLUTION\nSet up (2−λ)² = 1 directly from the symmetric 2×2 structure, take the square root of both sides, and solve the two resulting linear equations — faster than expanding the full quadratic.\n\nWHAT TO MEMORIZE\nFor any 2×2 matrix, eigenvalues satisfy λ₁+λ₂ = trace and λ₁λ₂ = determinant — a fast way to verify (or even directly find, via a small quadratic) eigenvalues without fully expanding the characteristic polynomial."
+      },
+
+      {
+        "question": "A meter stick moves past a stationary observer at speed 0.90c, oriented along its direction of motion. The length of the stick as measured by the stationary observer is most nearly",
+        "choices": [
+          "22 cm",
+          "44 cm",
+          "56 cm",
+          "78 cm",
+          "90 cm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nLength contraction gives L = L₀/γ, with γ = 1/√(1−0.81) = 1/√0.19 ≈ 2.29 at v=0.9c. So L = 100 cm/2.29 ≈ 43.6 cm, closest to 44 cm. Using L = L₀γ (multiplying instead of dividing) is the standard sign-of-effect error, and would incorrectly lengthen rather than contract the stick.\n\n90-SECOND SOLUTION\nCompute γ for v=0.9c (a value worth having as a reference point, γ≈2.3), then divide the proper length by it.\n\nWHAT TO MEMORIZE\nLength contraction: L = L₀/γ ≤ L₀, always a contraction (never an elongation) as measured by an observer relative to whom the object is moving; only the dimension along the direction of motion contracts."
+      },
+
+      {
+        "question": "In the lab frame, one particle moves at 0.50c and a second particle moves at 0.50c in the same direction relative to the first particle (i.e., the second particle's speed relative to the first is 0.50c). The second particle's speed as measured in the lab frame is most nearly",
+        "choices": [
+          "0.50c",
+          "0.67c",
+          "0.80c",
+          "0.94c",
+          "1.00c"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRelativistic velocity addition gives u = (u'+v)/(1+u'v/c²), with u'=v=0.50c here: u = (0.50+0.50)/(1+0.25) = 1.00/1.25 = 0.80c. Simple (Galilean) addition would incorrectly give 1.00c, right at the light-speed limit — the relativistic formula always keeps combined velocities strictly below c, which is exactly its defining feature.\n\n90-SECOND SOLUTION\nAdd the two velocities in the numerator, divide by 1 plus their product (in units of c) in the denominator — the denominator is what prevents the sum from ever reaching or exceeding c.\n\nWHAT TO MEMORIZE\nRelativistic velocity addition: u = (u'+v)/(1+u'v/c²); always yields a result strictly less than c when combining two sub-light speeds, unlike naive Galilean addition."
+      },
+
+      {
+        "question": "An amplifier increases a signal's power from 1.0 W to 100 W. The power gain expressed in decibels is most nearly",
+        "choices": [
+          "2 dB",
+          "10 dB",
+          "50 dB",
+          "20 dB",
+          "100 dB"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nPower gain in decibels is dB = 10 log₁₀(P₂/P₁) = 10 log₁₀(100) = 10×2 = 20 dB. Forgetting the factor of 10 (reporting just log₁₀(100)=2) or confusing the power-ratio formula with the amplitude-ratio formula (which instead uses 20 log₁₀, appropriate for voltage or amplitude ratios, not power) are both common mistakes.\n\n90-SECOND SOLUTION\nRecognize 100 as a power of 10 (10²), so log₁₀(100)=2 exactly, then multiply by 10 — no calculator needed for round-number ratios.\n\nWHAT TO MEMORIZE\nPower ratio in decibels: dB = 10 log₁₀(P₂/P₁). For amplitude/voltage ratios instead, the formula uses 20 log₁₀ — mixing up these two forms is the most common decibel error."
+      },
+
+      {
+        "question": "A student measures the same quantity 4 times, obtaining a sample standard deviation s. To reduce the standard error of the mean by a factor of 2 (using the same measurement technique), the student should take a total of approximately how many measurements?",
+        "choices": [
+          "6",
+          "8",
+          "12",
+          "32",
+          "16"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe standard error of the mean scales as s/√N. To halve it, N must increase by a factor of 4 (since √4=2), so the student needs 4×4=16 total measurements. This is the same √N scaling that governs Poisson counting statistics and underlies why increasing precision gets progressively more expensive in measurement time.\n\n90-SECOND SOLUTION\nHalving an error that scales as 1/√N requires quadrupling N — apply that factor of 4 directly to the original count of 4.\n\nWHAT TO MEMORIZE\nStandard error of the mean ∝ 1/√N; to improve precision by a factor of k, the number of measurements must increase by a factor of k² — a general result applying to any averaging-based error reduction, not just counting statistics."
+      }
+
+    ]
+  },
+
+  {
     "name": "Short Practice Test 1",
     "group": "short",
     "cards": [
