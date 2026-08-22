@@ -3,8 +3,9 @@
 //
 //  Each exam:
 //    name  : shown on the menu tile
-//    group : OPTIONAL. Exams sharing a group start on their own row of the
-//            menu board and are colour-coded together (see .tile-short).
+//    category : which section of the home page the exam appears under —
+//               "practice" for the mixed practice tests, "topic" for the
+//               subject-specific sets.
 //    cards : the questions (the tile counts them for you)
 //
 //  Each card:
@@ -39,6 +40,7 @@
 const EXAMS = [
   {
     "name": "Classical Mechanics - Medium / Hard",
+    "category": "topic",
     "cards": [
 
       // VARIES: GR9277 Q66 winds a hanging chain UP onto an axle (work via
@@ -387,6 +389,7 @@ const EXAMS = [
 // ============================================================
   {
     "name": "Geometric Optics & Quantum Stat. Mech.",
+    "category": "topic",
     "cards": [
 
       {
@@ -568,6 +571,7 @@ const EXAMS = [
 // ============================================================
   {
     "name": "Classical Mechanics II",
+    "category": "topic",
     "cards": [
 
       {
@@ -949,6 +953,7 @@ const EXAMS = [
 // ============================================================
   {
     "name": "Electromagnetism I",
+    "category": "topic",
     "cards": [
 
       // [1] Electrostatics
@@ -1306,6 +1311,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 1",
+    "category": "practice",
     "cards": [
 
       // [CM/work-energy]
@@ -2013,6 +2019,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 2",
+    "category": "practice",
     "cards": [
 
       // [CM/SHM]
@@ -2720,6 +2727,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 3",
+    "category": "practice",
     "cards": [
 
       // [CM/rotational dynamics]
@@ -3427,6 +3435,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 4",
+    "category": "practice",
     "cards": [
 
       // [CM/kinematics]
@@ -4134,6 +4143,7 @@ const EXAMS = [
 
   {
     "name": "Conceptual Drill",
+    "category": "practice",
     "cards": [
 
       // [CM/non-inertial frames]
@@ -4561,6 +4571,7 @@ const EXAMS = [
 
   {
     "name": "Condensed Matter Physics",
+    "category": "topic",
     "cards": [
 
       {
@@ -4828,6 +4839,7 @@ const EXAMS = [
 
   {
     "name": "General Practice Set 1",
+    "category": "practice",
     "cards": [
 
       {
@@ -5225,6 +5237,7 @@ const EXAMS = [
 
   {
     "name": "General Practice Set 2",
+    "category": "practice",
     "cards": [
 
       {
@@ -5622,7 +5635,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 1",
-    "group": "short",
+    "category": "practice",
     "cards": [
 
       // [CM/newton's laws & friction]
@@ -5910,7 +5923,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 2",
-    "group": "short",
+    "category": "practice",
     "cards": [
 
       // [CM/SHM]
@@ -6198,7 +6211,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 3",
-    "group": "short",
+    "category": "practice",
     "cards": [
 
       // [EM/current & resistance]

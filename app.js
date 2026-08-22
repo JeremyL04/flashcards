@@ -8,8 +8,12 @@
 
 const PER_PAGE = 4;
 const SHUFFLE_CHOICES_ON_RETRY = true;
-const MENU_SLOTS = 25; // 5x5 board
-const MENU_COLS = 5;
+// The home page is split into these sections, in this order. An exam's
+// "category" field decides which one it lands in.
+const CATEGORIES = [
+  { key: "practice", label: "Practice tests" },
+  { key: "topic", label: "By topic" },
+];
 const STORAGE_KEY = "flashcards-progress";
 const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
 const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
@@ -480,21 +484,10 @@ function renderIntro() {
 function renderMenu() {
   appEl.innerHTML = "";
 
-  const board = document.createElement("div");
-  board.className = "board";
-  let slots = 0;
-
-  const emptyTile = (isPad) => {
-    const el = document.createElement("div");
-    el.className = "tile tile-empty" + (isPad ? " tile-pad" : "");
-    el.setAttribute("aria-hidden", "true");
-    return el;
-  };
-
   const examTile = (exam) => {
     const tile = document.createElement("button");
     tile.type = "button";
-    tile.className = "tile" + (exam.group ? ` tile-${exam.group}` : "");
+    tile.className = "tile";
 
     const name = document.createElement("span");
     name.className = "tile-name";
@@ -509,31 +502,45 @@ function renderMenu() {
     return tile;
   };
 
-  EXAMS.filter((e) => !e.group).forEach((exam) => {
-    board.appendChild(examTile(exam));
-    slots++;
+  CATEGORIES.forEach(({ key, label }) => {
+    const exams = EXAMS.filter((e) => e.category === key);
+    if (!exams.length) return;
+
+    const section = document.createElement("section");
+    section.className = "shelf";
+
+    const heading = document.createElement("h2");
+    heading.className = "shelf-title";
+    heading.textContent = label;
+
+    const count = document.createElement("span");
+    count.className = "shelf-count";
+    count.textContent = `${exams.length} ${exams.length === 1 ? "set" : "sets"}`;
+    heading.appendChild(count);
+
+    const board = document.createElement("div");
+    board.className = "board";
+    exams.forEach((exam) => board.appendChild(examTile(exam)));
+
+    section.append(heading, board);
+    appEl.appendChild(section);
   });
 
-  // Each group starts on a row of its own, padded with spacers that drop
-  // out on narrow screens where the board is not five wide.
-  const groups = [...new Set(EXAMS.filter((e) => e.group).map((e) => e.group))];
-  groups.forEach((group) => {
-    while (slots % MENU_COLS !== 0) {
-      board.appendChild(emptyTile(true));
-      slots++;
-    }
-    EXAMS.filter((e) => e.group === group).forEach((exam) => {
-      board.appendChild(examTile(exam));
-      slots++;
-    });
-  });
-
-  while (slots < MENU_SLOTS) {
-    board.appendChild(emptyTile(false));
-    slots++;
+  // Anything without a recognised category would otherwise vanish silently.
+  const known = new Set(CATEGORIES.map((c) => c.key));
+  const orphans = EXAMS.filter((e) => !known.has(e.category));
+  if (orphans.length) {
+    const section = document.createElement("section");
+    section.className = "shelf";
+    const heading = document.createElement("h2");
+    heading.className = "shelf-title";
+    heading.textContent = "Other";
+    const board = document.createElement("div");
+    board.className = "board";
+    orphans.forEach((exam) => board.appendChild(examTile(exam)));
+    section.append(heading, board);
+    appEl.appendChild(section);
   }
-
-  appEl.appendChild(board);
 }
 
 // ---------- quiz ----------
