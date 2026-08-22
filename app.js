@@ -481,6 +481,16 @@ function renderIntro() {
 
 // ---------- menu ----------
 
+// "2026-08-09" -> "Aug 9, 2026". Parsed by hand rather than with Date so
+// the result does not shift with the reader's time zone.
+const MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function formatAdded(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!m) return iso;
+  return `${MONTH_NAMES[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}`;
+}
+
 function renderMenu() {
   appEl.innerHTML = "";
 
@@ -498,6 +508,14 @@ function renderMenu() {
     count.textContent = `${exam.cards.length} questions`;
 
     tile.append(name, count);
+
+    if (exam.added) {
+      const added = document.createElement("span");
+      added.className = "tile-added";
+      added.textContent = `Added ${formatAdded(exam.added)}`;
+      tile.appendChild(added);
+    }
+
     tile.addEventListener("click", () => showIntro(exam));
     return tile;
   };

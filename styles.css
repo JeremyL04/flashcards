@@ -663,6 +663,13 @@ button.tile:hover { border-color: var(--accent); background: var(--accent-soft);
   font-variant-numeric: tabular-nums;
 }
 
+.tile-added {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
 .tile-empty {
   background: transparent;
   border-style: dashed;

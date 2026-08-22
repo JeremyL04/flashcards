@@ -3,6 +3,7 @@
 //
 //  Each exam:
 //    name  : shown on the menu tile
+//    added    : ISO date the set went on the site, shown on its tile.
 //    category : which section of the home page the exam appears under —
 //               "practice" for the mixed practice tests, "topic" for the
 //               subject-specific sets.
@@ -40,6 +41,7 @@
 const EXAMS = [
   {
     "name": "Classical Mechanics - Medium / Hard",
+    "added": "2026-08-09",
     "category": "topic",
     "cards": [
 
@@ -389,6 +391,7 @@ const EXAMS = [
 // ============================================================
   {
     "name": "Geometric Optics & Quantum Stat. Mech.",
+    "added": "2026-08-10",
     "category": "topic",
     "cards": [
 
@@ -571,6 +574,7 @@ const EXAMS = [
 // ============================================================
   {
     "name": "Classical Mechanics II",
+    "added": "2026-08-11",
     "category": "topic",
     "cards": [
 
@@ -953,6 +957,7 @@ const EXAMS = [
 // ============================================================
   {
     "name": "Electromagnetism I",
+    "added": "2026-08-12",
     "category": "topic",
     "cards": [
 
@@ -1311,6 +1316,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 1",
+    "added": "2026-08-13",
     "category": "practice",
     "cards": [
 
@@ -2019,6 +2025,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 2",
+    "added": "2026-08-13",
     "category": "practice",
     "cards": [
 
@@ -2727,6 +2734,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 3",
+    "added": "2026-08-14",
     "category": "practice",
     "cards": [
 
@@ -3435,6 +3443,7 @@ const EXAMS = [
 
   {
     "name": "Practice Test 4",
+    "added": "2026-08-14",
     "category": "practice",
     "cards": [
 
@@ -4143,6 +4152,7 @@ const EXAMS = [
 
   {
     "name": "Conceptual Drill",
+    "added": "2026-08-17",
     "category": "practice",
     "cards": [
 
@@ -4571,6 +4581,7 @@ const EXAMS = [
 
   {
     "name": "Condensed Matter Physics",
+    "added": "2026-08-22",
     "category": "topic",
     "cards": [
 
@@ -4839,6 +4850,7 @@ const EXAMS = [
 
   {
     "name": "General Practice Set 1",
+    "added": "2026-08-22",
     "category": "practice",
     "cards": [
 
@@ -5237,6 +5249,7 @@ const EXAMS = [
 
   {
     "name": "General Practice Set 2",
+    "added": "2026-08-22",
     "category": "practice",
     "cards": [
 
@@ -5635,6 +5648,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 1",
+    "added": "2026-08-18",
     "category": "practice",
     "cards": [
 
@@ -5923,6 +5937,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 2",
+    "added": "2026-08-18",
     "category": "practice",
     "cards": [
 
@@ -6211,6 +6226,7 @@ const EXAMS = [
 
   {
     "name": "Short Practice Test 3",
+    "added": "2026-08-18",
     "category": "practice",
     "cards": [
 
