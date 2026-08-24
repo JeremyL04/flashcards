@@ -2373,6 +2373,210 @@ const EXAMS = [
   },
 
   {
+    "name": "Classical Mechanics - Composite Systems & Pulleys",
+    "added": "2026-08-24",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A block of mass 3.0 kg rests on a frictionless horizontal table. A light string runs horizontally from the block to a fixed pulley at the table's edge, then down and under a movable pulley from which a 2.0 kg mass hangs, then back up to a fixed point above. Taking g = 9.8 m/s², the magnitude of the 3.0 kg block's acceleration is most nearly",
+        "choices": [
+          "1.4 m/s²",
+          "2.45 m/s²",
+          "2.8 m/s²",
+          "3.9 m/s²",
+          "4.9 m/s²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBecause the hanging mass rides on a movable pulley fed by both segments of string, it moves only half as far (and half as fast, and half as fast-accelerating) as the block: a2 = a1/2. The tension T is the same throughout the single string. For the block: T = m1a1. For the movable pulley and its load, two strands of tension support it: m2g − 2T = m2a2 = m2(a1/2). Substituting T: m2g − 2m1a1 = m2a1/2, so a1 = 2m2g/(4m1+m2) = 2(2.0)(9.8)/(4(3.0)+2.0) = 39.2/14 = 2.8 m/s². The 1.4 m/s² option is a2, the hanging mass's own (smaller) acceleration, mistaken for the block's. The 3.9 m/s² option is the answer you'd get treating this as an ordinary single-pulley Atwood machine, m2g/(m1+m2), which ignores the mechanical advantage of the movable pulley entirely. The 4.9 m/s² option comes from forgetting the factor of 2 on tension in the movable-pulley equation. The 2.45 m/s² option comes from keeping that factor of 2 on tension but forgetting to halve the movable pulley's own acceleration in the same equation.\n\n90-SECOND SOLUTION\nMovable-pulley systems always split into two facts: the string tension is uniform, and the loaded end moves at half the rate of the pulled end. Write both block equations, substitute, and the factors of 2 and 4 fall out cleanly: a1 = 2m2g/(4m1+m2).\n\nWHAT TO MEMORIZE\nA movable pulley halves the load's acceleration relative to the pulling end and doubles the effective supporting tension (2T instead of T) — both effects must be included together, not just one."
+      },
+
+      {
+        "question": "Three blocks are connected by two pulleys: an 8.0 kg block hangs from a string that passes over a fixed pulley; the other end of that string supports a second, massless movable pulley, over which a second string passes carrying a 3.0 kg block on one side and a 2.0 kg block on the other. All strings and pulleys are ideal. Taking g = 9.8 m/s², the magnitude of the 8.0 kg block's acceleration is most nearly",
+        "choices": [
+          "1.6 m/s²",
+          "2.3 m/s²",
+          "2.45 m/s²",
+          "3.5 m/s²",
+          "7.2 m/s²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nLet T1 be the tension supporting the 8.0 kg block and T2 the tension in the string over the movable pulley; since that pulley is massless, T1 = 2T2. If the movable pulley accelerates upward at ap while the 8.0 kg block accelerates downward at a1, the string over the fixed pulley forces ap = −a1. The 3.0 kg and 2.0 kg blocks accelerate at ap ± arel relative to the ground, where arel is their acceleration relative to the movable pulley. Writing Newton's second law for all three masses and eliminating T2, ap, and arel gives a1 = g(m1m2+m1m3−4m2m3)/(m1m2+m1m3+4m2m3). With m1=8.0, m2=3.0, m3=2.0: numerator = 9.8[(8)(3)+(8)(2)−4(3)(2)] = 9.8[24+16−24]=9.8(16)=156.8; denominator = (8)(3)+(8)(2)+4(3)(2)=24+16+24=64; a1 = 156.8/64 = 2.45 m/s². The 2.3 m/s² option comes from treating the 3.0 kg and 2.0 kg blocks as a single combined 5.0 kg mass and solving an ordinary two-mass Atwood machine against the 8.0 kg block, which discards the internal double-pulley structure. The 7.2 m/s² option comes from forgetting that the movable pulley doubles the supporting tension (using T1 = T2 instead of T1 = 2T2), which changes both the numerator and denominator of the governing equation.\n\n90-SECOND SOLUTION\nA double (compound) Atwood machine always reduces to one governing formula once the massless-pulley tension relation (T1=2T2) and the two kinematic constraints are substituted in; the 4m2m3 terms are the fingerprint of the movable pulley's factor-of-2 tension doubled again in the force balance. Plug in directly rather than re-deriving from scratch under time pressure.\n\nWHAT TO MEMORIZE\nIn a compound Atwood machine, the tension in the string over the outer (fixed) pulley is always twice the tension in the string over an inner massless movable pulley — this factor of 2 propagates into the combined formula as a factor of 4 on the product of the two masses sharing the inner pulley."
+      },
+
+      {
+        "question": "A 6.0 kg mass and a 2.0 kg mass hang from opposite ends of a light cord over an ideal frictionless pulley. The pulley's support is itself being accelerated upward at a constant 1.4 m/s² by an external mechanism. Taking g = 9.8 m/s², the magnitude of the 6.0 kg mass's acceleration relative to the ground is most nearly",
+        "choices": [
+          "2.8 m/s²",
+          "4.2 m/s²",
+          "4.55 m/s²",
+          "4.9 m/s²",
+          "5.6 m/s²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nMeasuring downward as positive for both masses and letting the pulley's own (upward) acceleration be a0, the string's fixed length requires a1 + a2 + 2a0 = 0, i.e., a2 = −2a0 − a1. With tension T: m1g − T = m1a1 and m2g − T = m2a2 = m2(−2a0−a1). Eliminating T gives a1 = [g(m1−m2) − 2a0m2]/(m1+m2) = [9.8(4.0) − 2(1.4)(2.0)]/8.0 = (39.2−5.6)/8.0 = 33.6/8.0 = 4.2 m/s². The 4.9 m/s² option is the plain-Atwood answer that ignores the accelerating support entirely. The 5.6 m/s² option comes from a sign error that adds the support's acceleration term instead of subtracting it. The 4.55 m/s² option comes from forgetting the factor of 2 in the constraint (using a0m2 instead of 2a0m2). The 2.8 m/s² option comes from correctly keeping the factor of 2 but applying the acceleration correction to the wrong mass (m1 instead of m2).\n\n90-SECOND SOLUTION\nCheck the a0=0 limit first: the formula must collapse to the ordinary Atwood result (m1−m2)g/(m1+m2) = 4.9 m/s², which it does. Then note the accelerating support subtracts 2a0m2/(m1+m2) = 0.7 m/s² from that baseline, giving 4.9−0.7 = 4.2 m/s².\n\nWHAT TO MEMORIZE\nWhen an Atwood machine's pulley support itself accelerates at a0, the string-length constraint becomes a1+a2 = −2a0 (instead of a1=−a2), which is what introduces the extra 2a0 term into the standard Atwood formula — always sanity-check against the a0=0 limit."
+      },
+
+      {
+        "question": "A 4.0 kg block rests on a horizontal table and is connected by a light string over a pulley at the table's edge to a 1.0 kg mass hanging freely. The coefficient of kinetic friction between the block and the table is not the relevant quantity here; instead, taking g = 9.8 m/s², the minimum coefficient of static friction between the block and the table for which the system remains in equilibrium (does not begin to move) is most nearly",
+        "choices": [
+          "0.15",
+          "0.20",
+          "0.25",
+          "0.35",
+          "0.60"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor the system to stay at rest, the static friction on the table block must exactly balance the string tension, which in turn must support the hanging mass's full weight: f = T = m2g. The maximum static friction available is f_max = μsm1g. Equilibrium is possible only if μsm1g ≥ m2g, i.e., μs ≥ m2/m1 = 1.0/4.0 = 0.25. The 0.20 option comes from using m2/(m1+m2) instead of m2/m1, mistakenly normalizing by the total mass rather than just the table block's mass (which is the only mass friction acts on). The 0.60 option comes from using (m1−m2)/(m1+m2) instead of the correct ratio.\n\n90-SECOND SOLUTION\nAt the threshold, tension equals the hanging weight exactly (m2g), and that tension must be matched by friction on the table block, whose own weight sets the available friction: μs,min = m2/m1 directly, no need to solve for acceleration at all since the question only asks about the boundary of equilibrium.\n\nWHAT TO MEMORIZE\nFor a hanging-mass-over-pulley system to stay in equilibrium, friction need only balance the hanging weight, so the threshold coefficient is simply the ratio of the hanging mass to the mass that friction acts on — don't reach for the normalized (m1+m2) denominator, which belongs to acceleration problems, not equilibrium ones."
+      },
+
+      {
+        "question": "On a frictionless horizontal table, a 2.0 kg block is connected by a short string to a 3.0 kg block directly behind it; a second string connects the 2.0 kg block, over a pulley at the table's edge, to a 5.0 kg mass hanging vertically. Taking g = 9.8 m/s², the tension in the string connecting the 2.0 kg and 3.0 kg blocks is most nearly",
+        "choices": [
+          "9.8 N",
+          "12 N",
+          "14.7 N",
+          "19.6 N",
+          "24.5 N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAll three masses share a common acceleration, found by treating the whole system as one: a = m3g/(m1+m2+m3) = (5.0)(9.8)/10.0 = 4.9 m/s². The string between the 2.0 kg and 3.0 kg blocks is the only horizontal force accelerating whichever mass is behind that connection point — here, the 3.0 kg block — so its tension is just that block's mass times the common acceleration: T = (3.0)(4.9) = 14.7 N. The 24.5 N option is the tension in the OTHER string, between the 2.0 kg block and the hanging mass, which must accelerate the combined 5.0 kg of both table blocks: (2.0+3.0)(4.9)=24.5 N — a real quantity in this system, just not the one asked for. The 12 N option comes from mistakenly averaging the two correct tensions (14.7 and 24.5) instead of computing the requested one directly. The 9.8 N option comes from using the 2.0 kg block's mass instead of the 3.0 kg block's in the isolate-the-piece step.\n\n90-SECOND SOLUTION\nFind the common acceleration from the whole system first (a = m3g/M_total = 4.9 m/s²), then isolate only the block(s) trailing the string in question: the string nearer the pulley carries (m1+m2)a = 24.5 N, while the string between the two table blocks carries only m2a = 14.7 N, since it only needs to accelerate the block behind it.\n\nWHAT TO MEMORIZE\nIn a train of blocks pulled by a single hanging mass, the tension in any string equals (mass trailing that string) × (common acceleration) — always identify exactly which masses a given string is responsible for before multiplying."
+      },
+
+      {
+        "question": "A 2.0 kg block sits on top of a 4.0 kg block, which in turn rests on a frictionless horizontal floor. The coefficient of static friction between the two blocks is 0.50, and a horizontal force F is applied directly to the TOP block. Taking g = 9.8 m/s², the maximum value of F for which the two blocks move together without slipping is most nearly",
+        "choices": [
+          "9.8 N",
+          "14.7 N",
+          "19.6 N",
+          "29.4 N",
+          "58.8 N"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe bottom block has no applied force and a frictionless floor, so the only horizontal force on it is the friction reaction from the top block; the two blocks share a common acceleration a = F/(mtop+mbottom) as long as they move together. The friction needed to accelerate the bottom block is f = mbottom·a = mbottom·F/(mtop+mbottom). This friction acts between the two blocks, where the normal force is set by the top block's weight alone: fmax = μmtopg. Setting f = fmax and solving: Fmax = μmtopg(mtop+mbottom)/mbottom = (0.50)(2.0)(9.8)(6.0)/4.0 = 14.7 N. The 19.6 N option comes from using the bottom block's mass in the friction limit (μmbottomg) instead of the top block's, forgetting that the contact normal force between the blocks depends only on the top block's weight. The 29.4 N option is the answer for pushing the BOTTOM block instead — μ(mtop+mbottom)g — which is a different, more familiar problem that doesn't apply when the force is on top. The 9.8 N option is simply the maximum available friction force itself, μmtopg, mistaken for Fmax without scaling by the mass ratio. The 58.8 N option combines the two errors above.\n\n90-SECOND SOLUTION\nPulling the top block is the mirror image of pushing the bottom one: here the bottom block is dragged along by friction alone, so it's the LIMITING piece, and the relevant normal force is still just the top block's weight. Fmax = μmtopg×(mtop+mbottom)/mbottom — note this is smaller than the familiar push-the-bottom-block answer of μ(mtop+mbottom)g, since less force is needed to reach the same friction threshold.\n\nWHAT TO MEMORIZE\nWhich block the external force is applied to matters: pushing the bottom block gives Fmax = μ(mtop+mbottom)g, but pulling the top block gives a different formula, μmtopg(mtop+mbottom)/mbottom, because in the second case the bottom block is dragged entirely by friction and is the limiting piece."
+      },
+
+      {
+        "question": "A 4.0 kg block sits on top of a 6.0 kg block inside a freight elevator; the coefficient of static friction between the two blocks is 0.25, and the floor beneath the 6.0 kg block is frictionless. A horizontal force F is applied to the bottom block while the elevator accelerates upward at a constant 2.0 m/s². Taking g = 9.8 m/s², the maximum value of F for which the top block does not slide is most nearly",
+        "choices": [
+          "11.8 N",
+          "14.7 N",
+          "19.5 N",
+          "24.5 N",
+          "29.5 N"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nIn the elevator's accelerating frame, the top block's effective weight is increased: its vertical equilibrium (in that frame) requires the normal force between the blocks to be N = mtop(g+aelevator), larger than the ordinary mtopg. This larger normal force raises the maximum available friction to fmax = μmtop(g+aelevator). Horizontally, the blocks still share a common acceleration a = F/(mtop+mbottom) exactly as on the ground, so the threshold condition is μmtop(g+aelevator) = mtop·F/(mtop+mbottom), giving Fmax = μ(g+aelevator)(mtop+mbottom) = (0.25)(9.8+2.0)(10.0) = (0.25)(11.8)(10.0) = 29.5 N. The 24.5 N option ignores the elevator's acceleration entirely, using only g. The 19.5 N option makes a sign error, using (g−aelevator) as if upward elevator acceleration reduced the effective weight instead of increasing it. The 11.8 N option drops the bottom block's mass from the final multiplication, using only mtop instead of the total mass while still (correctly) including the elevator's acceleration. The 14.7 N option uses only the bottom block's mass and forgets the elevator's acceleration entirely.\n\n90-SECOND SOLUTION\nAn elevator accelerating upward increases effective gravity for everything inside it, including how tightly friction can grip — substitute (g+aelevator) for g everywhere gravity appears in the ordinary stacked-block formula, here raising the max force from 24.5 N (ground value) up to 29.5 N.\n\nWHAT TO MEMORIZE\nInside a vertically accelerating frame, replace g with (g+a) for upward acceleration (or g−a for downward) wherever it sets a normal force or a friction limit; this is the same effective-gravity trick used for scale readings and pendulum periods in accelerating elevators."
+      },
+
+      {
+        "question": "A 4.0 kg block sits on top of a 2.0 kg block; the coefficient of static friction between them is 0.30. The 2.0 kg block rests on a frictionless incline that makes an angle of 37° with the horizontal, and a force F, directed up along the incline surface, is applied to the 2.0 kg (lower) block. Taking g = 9.8 m/s² and cos 37° ≈ 0.80, the maximum value of F for which the upper block does not slide relative to the lower one is most nearly",
+        "choices": [
+          "4.7 N",
+          "11 N",
+          "14 N",
+          "18 N",
+          "28 N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTreat the two blocks together first: along the incline, F − (mtop+mbottom)g sinθ = (mtop+mbottom)a, so a = F/(mtop+mbottom) − g sinθ. Now isolate the top block alone: along the incline it feels only friction f (up-slope, from the bottom block) and its own gravity component (down-slope), so f − mtopg sinθ = mtopa. Substituting a from above, the g sinθ terms cancel exactly: f = mtopF/(mtop+mbottom), independent of the incline angle. The normal force between the blocks, however, is reduced by the tilt: N = mtopg cosθ. Setting f = μN at the threshold: mtopFmax/(mtop+mbottom) = μmtopg cosθ, so Fmax = μ(mtop+mbottom)g cosθ = (0.30)(6.0)(9.8)(0.80) ≈ 14.1 N, most nearly 14 N. The 18 N option comes from forgetting the cosθ factor entirely, treating the incline as if it were flat. The 11 N option mistakenly uses sinθ (≈0.60) instead of cosθ in the normal-force step. The 4.7 N option uses only the top block's mass instead of the combined mass in the final formula.\n\n90-SECOND SOLUTION\nThe cleanest feature of this problem is what cancels: because the whole system's incline-gravity component and the top block's own incline-gravity component enter with the same sign and magnitude per unit mass, they cancel when isolating the top block, leaving the threshold governed only by μ and cosθ (via the normal force) — sinθ never appears in the final answer, a genuine trap for anyone expecting it.\n\nWHAT TO MEMORIZE\nWhen two blocks on a frictionless incline are pushed together along the slope, gravity's along-incline pull cancels out of the internal-friction condition entirely; only the incline's effect on the NORMAL force (via cosθ) survives into the threshold force."
+      },
+
+      {
+        "question": "A small block rests on top of a larger block; the two are centered together at radius 0.50 m on a horizontal turntable that co-rotates them rigidly (the lower block does not slip on the turntable). The coefficient of static friction between the two blocks is 0.25. Taking g = 9.8 m/s², the maximum angular speed of the turntable for which the upper block does not slide off is most nearly",
+        "choices": [
+          "1.6 rad/s",
+          "2.2 rad/s",
+          "3.1 rad/s",
+          "4.4 rad/s",
+          "4.9 rad/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe upper block needs a horizontal centripetal force directed toward the axis, mupprω², and the only horizontal force available to supply it is friction from the block beneath. The normal force between the two blocks is simply muppg (an ordinary flat, horizontal contact, unaffected by the rotation), so the maximum available friction is μmuppg. At the threshold, mupprω²max = μmuppg; the upper block's own mass cancels completely, leaving ωmax = √(μg/r) = √[(0.25)(9.8)/0.50] = √4.9 ≈ 2.2 rad/s. The 4.9 rad/s option comes from forgetting to take the square root. The 3.1 rad/s option comes from using r/2 instead of r (accidentally halving the radius). The 1.6 rad/s and 4.4 rad/s options both come from doubling or omitting r inside the square root in different ways.\n\n90-SECOND SOLUTION\nBecause the upper block's own mass drops out of ωmax = √(μg/r), you never need to know it — a classic GRE-style irrelevant-quantity trap. Just plug in μ, g, and r directly.\n\nWHAT TO MEMORIZE\nFor an object resting on another rotating object, the maximum angular speed before slipping is ωmax = √(μg/r), with the riding object's own mass canceling out — identical in form to the single-block-on-a-turntable result, since only the friction-vs-mass ratio at the relevant interface matters."
+      },
+
+      {
+        "question": "A 3.0 kg block sits on top of a 5.0 kg block on a frictionless floor; the coefficient of static friction between the two blocks is 0.50 (more than enough to prevent sliding in what follows). A horizontal force of 12 N is applied to the bottom block. Taking g = 9.8 m/s², the friction force that the bottom block exerts on the top block is most nearly",
+        "choices": [
+          "4.5 N",
+          "6.0 N",
+          "7.5 N",
+          "12 N",
+          "14.7 N"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nSince the blocks move together, find their common acceleration first by treating the two as a single 8.0 kg system: a = F/(mtop+mbottom) = 12/8.0 = 1.5 m/s². The top block has no applied force directly on it, so the only horizontal force accelerating it is the friction from the block below: f = mtop·a = (3.0)(1.5) = 4.5 N. The coefficient of friction given is a red herring here — it only confirms the blocks CAN move together (since the maximum available friction, μmtopg = (0.50)(3.0)(9.8) = 14.7 N, comfortably exceeds the 4.5 N actually needed), but it plays no role in the calculation itself. The 12 N option mistakes the total applied force for the force on just the top block. The 7.5 N option uses the bottom block's mass instead of the top block's in the final step. The 14.7 N option is the MAXIMUM available friction, μmtopg, mistaken for the actual friction force in this particular scenario.\n\n90-SECOND SOLUTION\nThis is the two-pass method in its cleanest form: whole system first (a = F/Mtotal = 1.5 m/s²), then isolate the piece with no direct force on it (the top block) to read off the friction it needs: f = mtop·a = 4.5 N. No threshold calculation is required at all since F is stated to be safely below the slipping limit.\n\nWHAT TO MEMORIZE\nWhen a problem gives you a coefficient of friction but the applied force is well below the slipping threshold, the coefficient may be there only to confirm the blocks move together — the actual internal force is found from F = ma on the isolated piece, not from μN."
+      },
+
+      {
+        "question": "Two blocks are in contact on a rough horizontal floor: a 2.0 kg block in front and a 5.0 kg block behind it, both driven forward by a 35 N horizontal force applied to the rear block. The coefficient of kinetic friction is 0.10 beneath the front block and 0.35 beneath the rear block. Taking g = 9.8 m/s², the contact force between the two blocks is most nearly",
+        "choices": [
+          "4.5 N",
+          "6.5 N",
+          "10 N",
+          "11 N",
+          "17.5 N"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTreat the two blocks as one 7.0 kg system first: the net force is the applied force minus BOTH friction forces (each block's own weight sets its own friction, since each has its own floor contact): a = [F − μfrontmfrontg − μrearmreatg]/(mfront+mrear) = [35 − (0.10)(2.0)(9.8) − (0.35)(5.0)(9.8)]/7.0 = [35−1.96−17.15]/7.0 = 15.89/7.0 ≈ 2.27 m/s². Isolating the front block alone, the contact force N from the rear block must supply everything beyond what its own friction contributes: N − μfrontmfrontg = mfronta, so N = (0.10)(2.0)(9.8) + (2.0)(2.27) = 1.96 + 4.54 ≈ 6.5 N. The 10 N option comes from ignoring friction entirely when isolating the front block (using N = mfronta with the correctly-found a, but dropping its own friction term). The 11 N option comes from mistakenly applying the REAR block's (larger) friction coefficient to the front block's isolate-the-piece equation. The 17.5 N option is simply F/2, a naive guess that splits the applied force evenly with no dynamics at all.\n\n90-SECOND SOLUTION\nWith two different friction coefficients, both must appear in the whole-system pass (each block's own weight times its own μ), and then only the FRONT block's own friction reappears when isolating it — do not let the rear block's friction leak into the front block's free-body diagram.\n\nWHAT TO MEMORIZE\nWhen blocks in contact sit on surfaces with different friction coefficients, each block contributes its own μmg term to the whole-system equation, but only that same block's own μmg term reappears when it is isolated afterward — keep the two friction terms assigned to the correct block throughout."
+      },
+
+      {
+        "question": "Three blocks are stacked on a frictionless floor: block A (2.0 kg) on top of block B (3.0 kg), which is on top of block C (5.0 kg). The coefficient of static friction is 0.30 between A and B, and 0.50 between B and C. A horizontal force F is applied directly to block C. Taking g = 9.8 m/s², the maximum value of F for which all three blocks move together is most nearly",
+        "choices": [
+          "5.9 N",
+          "14.7 N",
+          "29.4 N",
+          "39.2 N",
+          "49 N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIf all three move together, their common acceleration is a = F/(mA+mB+mC). Each interface has its own slipping threshold: the A-B interface fails when a exceeds μABg = (0.30)(9.8) = 2.94 m/s² (found by isolating A alone, whose only horizontal force is friction from B). The B-C interface fails when the combined A+B system's needed friction exceeds μBC(mA+mB)g, which reduces to the same condition a ≤ μBCg = (0.50)(9.8) = 4.9 m/s² (isolating A+B together, since the normal force at that interface is the weight of everything above it). The SMALLER of the two limits governs, since it is reached first as F increases: acrit = min(2.94, 4.9) = 2.94 m/s² (the A-B interface, despite not touching the floor, is the weaker link). Fmax = (mA+mB+mC)·acrit = (10.0)(2.94) = 29.4 N. The 49 N option comes from mistakenly using the LARGER threshold (4.9 m/s², the B-C limit) instead of the smaller one. The 39.2 N option comes from averaging the two μ values before computing acrit. The 14.7 N option comes from applying the correct acrit but only to the mass above the weaker interface (mA+mB) instead of the full three-block system that F must actually accelerate.\n\n90-SECOND SOLUTION\nEach interface in a multi-block stack has its own μg threshold on the shared acceleration, regardless of how much mass sits above or below it; the smallest such μg value anywhere in the stack sets the overall limit, and the maximum force is that critical acceleration times the TOTAL mass of the whole stack (since F must drive everything).\n\nWHAT TO MEMORIZE\nIn a multi-layer stack, compare μg at every interface — not just the one nearest the applied force — and use the smallest value as the binding constraint; a higher interface can fail before a lower one even though it carries less weight, because what matters is the ratio of friction to the mass it alone must accelerate."
+      },
+
+      {
+        "question": "A 3.0 kg block sits on top of a 5.0 kg block; the coefficient of static friction between them is 0.50. The coefficient of kinetic friction between the bottom block and the floor is 0.20. Starting from rest, a horizontal force F is applied to the bottom block and slowly increased. Taking g = 9.8 m/s², the value of F at which the top block first begins to slip relative to the bottom one is most nearly",
+        "choices": [
+          "16 N",
+          "24 N",
+          "34 N",
+          "39 N",
+          "55 N"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWhile the whole stack remains stationary (a=0), block A needs no friction at all to stay in equilibrium, since it has no other horizontal force acting on it — so it cannot begin slipping until the stack itself starts accelerating. The stack starts moving once F exceeds the floor's maximum static friction, μfloor(mA+mB)g. Beyond that point, as F increases further, the system's acceleration grows as a = [F−μfloor(mA+mB)g]/(mA+mB), and block A slips once the friction it needs, mAa, reaches its own maximum, μAB·mAg — that is, once a reaches μABg. Setting a = μABg and solving for F: F = (mA+mB)g(μfloor+μAB) = (8.0)(9.8)(0.20+0.50) = (8.0)(9.8)(0.70) = 54.88 N, most nearly 55 N. The 39 N option accounts for the internal A-B threshold but forgets that floor friction must first be overcome just to get the stack moving at all. The 16 N option is only the force needed to overcome floor friction, ignoring the internal threshold entirely. The 24 N option comes from subtracting the two friction contributions instead of adding them.\n\n90-SECOND SOLUTION\nBlock A cannot slip while the system is static — it feels zero net horizontal demand until the stack accelerates — so this is really two thresholds added together: the force to overcome floor friction, plus the extra force needed to push the resulting acceleration up to A's own slipping point. F = (mA+mB)g(μfloor+μAB).\n\nWHAT TO MEMORIZE\nA block resting on another block that itself sits on a frictional floor cannot begin to slip until the WHOLE system is already accelerating; find the floor's breakaway force first, then add what's needed to push the resulting acceleration up to the internal interface's own μg limit."
+      },
+
+      {
+        "question": "A block rests on the frictionless-looking but actually rough inclined face of a wedge; the incline makes a 30° angle with the horizontal, and the coefficient of static friction between block and wedge is 0.20. The wedge is accelerated horizontally (in the direction that the incline rises) by an external force. Taking g = 9.8 m/s², the maximum acceleration of the wedge for which the block does not slide up the incline face is most nearly",
+        "choices": [
+          "2.0 m/s²",
+          "3.3 m/s²",
+          "5.7 m/s²",
+          "6.8 m/s²",
+          "8.6 m/s²"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWork in the wedge's (non-inertial) frame, where the block is in equilibrium under gravity, the normal force, friction, and a pseudo-force ma directed opposite the wedge's acceleration. At the threshold of sliding UP the face, friction acts down the slope at its maximum, μN. Resolving along and perpendicular to the incline and eliminating N gives amax = g(sinθ+μcosθ)/(cosθ−μsinθ). With θ=30°, μ=0.20: amax = 9.8(0.50+0.20·0.866)/(0.866−0.20·0.50) = 9.8(0.673)/(0.766) ≈ 8.6 m/s². The 5.7 m/s² option is the FRICTIONLESS critical acceleration, g tanθ, which ignores friction's stabilizing effect entirely (it would be correct only if μ=0). The 3.3 m/s² option is the formula for the opposite threshold — the MINIMUM acceleration below which the block instead slides DOWN the face, g(sinθ−μcosθ)/(cosθ+μsinθ) — answering the wrong one of the two thresholds this setup actually has. The 2.0 m/s² option is the naive (and dimensionally suspicious) product gμ.\n\n90-SECOND SOLUTION\nA block on an accelerating wedge's face has TWO critical accelerations, not one: below the lower one it slides down, above the upper one it slides up, and in between friction holds it in place without even needing to be at its maximum. The question asks for the upper limit, amax = g(sinθ+μcosθ)/(cosθ−μsinθ) — always identify which of the two thresholds is being asked for before plugging in.\n\nWHAT TO MEMORIZE\nFor a block on an accelerating wedge face with friction, there is a RANGE of accelerations (not a single value) for which the block stays put; the upper bound is g(sinθ+μcosθ)/(cosθ−μsinθ) and the lower bound swaps both ± signs — mixing them up is the most common error."
+      },
+
+      {
+        "question": "A 4.0 kg block sits on top of a 6.0 kg block, which is sliding across a rough floor (coefficient of kinetic friction 0.30) and decelerating due to that floor friction alone; no other horizontal force acts on either block. Taking g = 9.8 m/s², the minimum coefficient of static friction between the two blocks for which the top block does not slide forward during this deceleration is most nearly",
+        "choices": [
+          "0.15",
+          "0.18",
+          "0.30",
+          "0.45",
+          "0.60"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe floor's kinetic friction acts on the bottom block over the combined weight of both blocks (the floor supports the entire stack), so the whole system decelerates at a = μfloor(mtop+mbottom)g/(mtop+mbottom) = μfloorg = (0.30)(9.8) = 2.94 m/s², independent of either individual mass. For the top block to decelerate at this same rate, it needs a backward-directed friction force from the block beneath it of magnitude mtop·a = mtop·μfloorg. The maximum available friction at that interface is μtop,minmtopg. Setting these equal: μtop,minmtopg = mtopμfloorg, so μtop,min = μfloor = 0.30 — the mass of either block cancels completely. The 0.18 option comes from mistakenly using only the bottom block's weight (not the combined weight) when finding the system's deceleration, which understates it. The 0.60 and 0.15 options come from doubling or halving the correct value, plausible if a factor of (mtop+mbottom)/mtop or similar is inserted where it doesn't belong.\n\n90-SECOND SOLUTION\nBecause floor friction depends on the TOTAL weight it supports, the deceleration of the whole stack is just μfloorg — the same as it would be for a single block on that floor. The top block then needs exactly that same deceleration supplied by friction from below, and since its own friction limit is also proportional to its own weight, the mass cancels and μtop,min = μfloor exactly.\n\nWHAT TO MEMORIZE\nWhen a stack decelerates due to floor friction alone, the whole stack's deceleration is simply μfloorg regardless of the mass split between blocks; the minimum interface friction needed to keep the top block from sliding forward is then numerically equal to μfloor itself — a clean, mass-independent result worth recognizing on sight rather than re-deriving."
+      }
+
+    ]
+  },
+
+  {
     "name": "Practice Test 1",
     "added": "2026-08-13",
     "category": "practice",
