@@ -2577,6 +2577,210 @@ const EXAMS = [
   },
 
   {
+    "name": "Classical Mechanics - Torque & Rotation",
+    "added": "2026-08-25",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A uniform door of mass 25 kg and width 0.80 m is mounted on two hinges, one 2.0 m directly above the other, both on the same vertical edge. The lower hinge alone supports the door's entire weight; the upper hinge exerts a purely horizontal force. Taking g = 9.8 m/s², the magnitude of the horizontal force on the upper hinge is most nearly",
+        "choices": [
+          "36 N",
+          "44 N",
+          "49 N",
+          "55 N",
+          "63 N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTaking torques about the lower hinge eliminates it from the equation entirely, since a force applied there has zero lever arm. The door's weight (25)(9.8) = 245 N acts at its center of mass, horizontally 0.40 m (half the width) from the hinge edge. The upper hinge's horizontal force Ftop acts at a lever arm of 2.0 m (the vertical hinge separation). Balancing torques: Ftop(2.0) = (245)(0.40), so Ftop = 98.0/2.0 = 49 N. The 44 N and 55 N options come from off-by-a-bit errors in the width term (using 0.35 m or 0.45 m instead of the correct half-width 0.40 m). The 36 N option comes from using the full door width (0.80 m) divided by the hinge separation squared, mismatching units. The 63 N option comes from adding rather than isolating the torque contributions correctly.\n\n90-SECOND SOLUTION\nThe key simplification is stated in the problem: since the lower hinge takes all the vertical load, only ONE torque equation (about the lower hinge) is needed, and only the door's weight and the upper hinge's horizontal force appear in it. Ftop = W(w/2)/h = 245(0.40)/2.0 = 49 N.\n\nWHAT TO MEMORIZE\nWhen a problem states that one support carries all of one force component, take torques about THAT support — it drops out of the equation and leaves a single clean relation for the other support, instead of a full two-hinge system of equations."
+      },
+
+      {
+        "question": "A uniform plank of mass 8.0 kg and length 3.0 m leans at 45° above the horizontal, its lower end resting on a frictionless floor and its upper end resting against a frictionless vertical wall. It is kept from sliding by a horizontal rope tied from the plank's lower end to the base of the wall. Taking g = 9.8 m/s², the tension in the rope is most nearly",
+        "choices": [
+          "19.6 N",
+          "27.7 N",
+          "33.9 N",
+          "39.2 N",
+          "55.4 N"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nSince both the wall and floor are frictionless, the only horizontal forces are the wall's normal force (pushing the top of the plank away from the wall) and the rope tension (pulling the bottom toward the wall); force balance gives Nwall = T. Taking torques about the plank's lower end (where it touches the floor) eliminates the floor's normal force and the rope tension itself (both act at that point), leaving only gravity and the wall's normal force: Nwall(L sinθ) = Mg(L cosθ/2), where L sinθ is the height where the wall pushes and L cosθ/2 is the horizontal distance from the base to the center of mass. Solving: Nwall = Mg/(2 tanθ). At θ=45°, tanθ=1, so T = Nwall = (8.0)(9.8)/2 = 39.2 N. Notice the plank's length never actually appears in the final answer — it cancels, a genuine red herring here. The 19.6 N option comes from forgetting the factor of 2 differently (using Mg/(4tanθ)). The 33.9 N and 27.7 N options come from using sinθ or cosθ alone in place of tanθ. The 55.4 N option comes from using tanθ in the numerator instead of the denominator.\n\n90-SECOND SOLUTION\nTorque about the base kills two of the four unknowns at once (floor normal and rope tension), leaving a one-line relation between the wall's push and gravity's pull: T = Nwall = Mg/(2tanθ). At 45° this is just Mg/2.\n\nWHAT TO MEMORIZE\nFor a leaning object on frictionless supports held by a rope or cable, always take torques about the point where the MOST unknowns act — that single choice often eliminates two forces simultaneously and leaves a one-line solve."
+      },
+
+      {
+        "question": "A uniform beam of mass 12 kg and length 4.0 m rests horizontally on two supports, one at each end. A 20 kg load is placed on the beam at a point 3.0 m from the left support (and 1.0 m from the right support). Taking g = 9.8 m/s², the upward force exerted by the LEFT support is most nearly",
+        "choices": [
+          "49 N",
+          "59 N",
+          "108 N",
+          "157 N",
+          "206 N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTaking torques about the RIGHT support eliminates that support's unknown force, leaving only the two weights and the left support's force. The beam's own weight (12)(9.8)=117.6 N acts at its center, 2.0 m from the right support; the load's weight (20)(9.8)=196 N acts 1.0 m from the right support. Balancing torques about the right support: NLeft(4.0) = 117.6(2.0) + 196(1.0) = 235.2+196 = 431.2, so NLeft = 431.2/4.0 = 107.8 N, most nearly 108 N. The 206 N option comes from measuring the load's lever arm from the LEFT support (3.0 m) instead of the right support when taking torques about the right one — mismatching which distance belongs to which pivot. The 157 N option comes from averaging the beam's and load's weights instead of properly weighting each by its own lever arm. The 49 N option comes from crediting the left support with only the load's share of weight and ignoring the beam's own weight entirely. The 59 N option is half the beam's own weight, mistaken for the full answer.\n\n90-SECOND SOLUTION\nTorque about the support you are NOT solving for always isolates the one you want. Each weight contributes (its magnitude) × (its distance from the far support), and the near support's force is that sum divided by the full beam length.\n\nWHAT TO MEMORIZE\nFor a beam on two supports, always take torques about the support whose force you are NOT solving for — this eliminates it immediately, and each weight's contribution uses its distance from THAT pivot, not from the support you're solving for."
+      },
+
+      {
+        "question": "A uniform beam of mass 12 kg and length 4.0 m is held horizontal by two vertical strings, one at each end. A 20 kg load can be hung from any point along the beam. Taking g = 9.8 m/s², if the LEFT string breaks at a tension of 156.8 N, the range of positions (measured from the left end) at which the load can safely hang is",
+        "choices": [
+          "0 ≤ x ≤ 2.0 m",
+          "x ≥ 0.8 m",
+          "1.0 m ≤ x ≤ 3.0 m",
+          "the load can be placed anywhere without breaking the string",
+          "x ≥ 2.0 m"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTaking torques about the right end (as in the two-support problem above), the left string's tension is TLeft = [Mg(L/2) + mg(L−x)]/L, which DECREASES as the load moves farther from the left string (larger x). The breaking condition is TLeft ≤ 156.8 N: [117.6(2.0) + 196(4.0−x)]/4.0 ≤ 156.8, giving 235.2 + 784 − 196x ≤ 627.2, so 196x ≥ 392, x ≥ 2.0 m. Since TLeft is largest when the load is CLOSE to the left string and smallest when it's far away, the safe region is the far half of the beam, x ≥ 2.0 m — not the near half. The '0 ≤ x ≤ 2.0 m' option has exactly this direction reversed, a natural mistake since it's the half nearer the string in question. The 'x ≥ 0.8 m' option comes from forgetting to include the beam's own weight in the torque balance, using only the load's contribution. The '1.0 m ≤ x ≤ 3.0 m' option mistakes this for a two-sided band rather than a one-sided threshold.\n\n90-SECOND SOLUTION\nThe closer the load sits to a given string, the MORE of the load's weight that string must carry (matching ordinary intuition) — so the left string is most stressed when the load is near the LEFT end, and safest when the load is far from it. Solve the equality for the boundary, then keep the far side.\n\nWHAT TO MEMORIZE\nWhen a problem asks for a range rather than a single value, first identify which direction makes the quantity larger or smaller using physical intuition (here: closer to a string means more tension in that string) — this catches an inequality flipped the wrong way before you even finish the algebra."
+      },
+
+      {
+        "question": "A uniform hollow cylindrical shell of mass M and radius R (all the mass concentrated at the rim, like a pipe) has a light string wound around it. The free end of the string is held fixed, and the cylinder is released from rest, falling straight down as the string unwinds without slipping. In terms of M and g, the tension in the string while the cylinder falls is most nearly",
+        "choices": [
+          "Mg/4",
+          "Mg/2",
+          "Mg/3",
+          "2Mg/3",
+          "Mg"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTwo equations, two unknowns (a and T). Newton's second law on the falling cylinder: Mg - T = Ma. Torque about the center from the string tension (acting at the rim, radius R): TR = Iα. For this thin-shell cylinder, I = MR², and the no-slip unwinding constraint gives α = a/R, so TR = MR²(a/R) = MRa, i.e. T = Ma. Substituting into the first equation: Mg - Ma = Ma, so Mg = 2Ma, giving a = g/2. Then T = Ma = Mg/2. Notice the mass cancels out of the RATIO but the tension itself is still proportional to M — a heavier cylinder needs more string tension to give it the same fraction of g. The Mg/3 option comes from using a SOLID cylinder's moment of inertia (I=½MR²) instead of this hollow shell's I=MR², which gives T=Mg/3 — the wrong shape for this problem. The Mg option is what you'd get if the string were a rigid, non-stretching support with the cylinder not accelerating at all (as if simply hanging), which ignores that the cylinder is in free fall along the string's direction. The 2Mg/3 option comes from solving the torque equation with R canceled incorrectly (mixing up which radius the torque and the inertia constraint use). The Mg/4 option comes from a stray factor-of-2 error in the moment-of-inertia term.\n\n90-SECOND SOLUTION\nFor an unwinding string, the tension equation is always T = M·a with a found from Mg - T = Ma and T = Iα/R = (I/R²)a. For this shell, I/R² = M, so the 'effective mass' resisting linear acceleration is 2M (M from translation plus M from the I/R² term), giving a = g/2 and T = Mg/2.\n\nWHAT TO MEMORIZE\nA falling object unwinding a string is a coupled translation-rotation problem, not a free-fall or a static-hang problem. Always write Newton's second law for the center of mass AND the torque equation about the center separately, then combine using the no-slip constraint a = αR — do not assume the string is either massless-and-slack or rigid-and-static."
+      },
+
+      {
+        "question": "A spool of mass 4.0 kg consists of a central axle of radius 0.12 m rigidly joined to two larger end disks of radius 0.30 m; it rests on a horizontal floor, in contact along the rims of the end disks, and its moment of inertia about its own axis is ½MR² using the outer radius R = 0.30 m. A light string wound around the central axle leaves the axle at its LOWEST point and is pulled with a horizontal force of 8.0 N. If the spool rolls without slipping, the magnitude and direction of its resulting acceleration are most nearly",
+        "choices": [
+          "0.8 m/s², toward the person pulling",
+          "0.6 m/s², toward the person pulling",
+          "1.3 m/s², away from the person pulling",
+          "0.8 m/s², away from the person pulling",
+          "1.3 m/s², toward the person pulling"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTaking torques about the floor contact point (valid for rolling without slipping, since that point is instantaneously at rest) eliminates both friction and the normal force. The string, pulled horizontally from the axle's lowest point, acts at a perpendicular distance (R−r) below the center — NOT at distance R — because it leaves the axle, not the outer rim. Torque about the contact point: F(R−r) = Ipivot·α, where Ipivot = Icm + MR² = ½MR² + MR² = (3/2)MR². Since this torque is in the same rotational sense as rolling toward the puller, α = F(R−r)/[(3/2)MR²], and a = αR = 2F(R−r)/(3MR) = 2(8.0)(0.18)/[3(4.0)(0.30)] = 2.88/3.6 = 0.8 m/s², directed TOWARD the person pulling — the same direction the string is pulled, which surprises many students expecting the spool to roll away. The 'away from the puller' options apply the correct magnitude but the intuitive (and wrong) direction. The 0.6 m/s² option comes from mistakenly using I=MR² (a hoop) instead of ½MR² for the spool's own moment of inertia. The 1.3 m/s² option comes from using the full outer radius R as the string's lever arm instead of (R−r), forgetting the string leaves the inner axle.\n\n90-SECOND SOLUTION\nA classic 'weird' result: pulling a spool's string horizontally off the BOTTOM of its axle makes it roll TOWARD you, not away — because the torque about the contact point (the only pivot that matters for rolling without slipping) acts in the rolling-toward-you sense whenever the string's lever arm (R−r) is measured from below the axle.\n\nWHAT TO MEMORIZE\nFor rolling-without-slipping problems, take torques about the instantaneous contact point (it has zero velocity, so τ=Iα applies directly with Ipivot=Icm+MR²) — this sidesteps solving for the unknown friction force entirely, but the sign of the result (which direction it rolls) still needs a careful geometric check, since spool problems are notorious for surprising directions."
+      },
+
+      {
+        "question": "A uniform rod of mass 2.0 kg and length 1.0 m lies at rest on a frictionless horizontal table. A 0.50 kg lump of putty, moving at 8.0 m/s perpendicular to the rod, strikes and sticks to the rod at a point 0.30 m from the rod's center (not at its end). Immediately after the collision, the velocity of the END of the rod farthest from where the putty struck is most nearly",
+        "choices": [
+          "0 (momentarily at rest)",
+          "1.05 m/s, in the same direction the putty was moving",
+          "1.6 m/s, in the same direction the putty was moving",
+          "2.0 m/s, opposite to the direction the putty was moving",
+          "1.05 m/s, opposite to the direction the putty was moving"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThis requires combining linear and angular momentum conservation, since the rod is free (not pivoted). Linear momentum gives the velocity of the COMBINED center of mass: vcm = mv/(M+m) = (0.50)(8.0)/2.5 = 1.6 m/s, in the putty's original direction. But the rod's own center is not the system's center of mass once the putty sticks off-center; the true system CM sits slightly toward the putty. Working out the angular momentum about that shifted CM and combining it with vcm to find the far end's velocity (v = vcm + ωr, evaluated at the far end's position relative to the shifted CM) gives −1.05 m/s — meaning it moves BACKWARD, opposite to the putty's original motion. This happens because the collision imparts so much spin, relative to the modest translation, that the far end's rotational velocity contribution exceeds and reverses the translational part. The 1.6 m/s option is just vcm, mistaken for the far end's velocity. The '1.05 m/s, same direction' option comes from correctly finding the magnitude but missing the sign flip. The 0 option assumes the struck point happens to be the rod's center of percussion, which it is not at this particular distance. The 2.0 m/s option comes from skipping the center-of-mass shift and using the rod's own geometric center as if it were the system's CM.\n\n90-SECOND SOLUTION\nDon't assume a struck free rod's far end always moves forward — check the actual combination v = vcm + ω×r. When the impact point is close enough to the center (as it is here, 0.30 m out of a 0.50 m half-length), the imparted spin can be large enough that a point on the OPPOSITE side actually reverses direction.\n\nWHAT TO MEMORIZE\nFor a free object struck off-center, ALWAYS combine translation (vcm from linear momentum) with rotation (ω from angular momentum about the true, possibly shifted, system CM) vectorially to find any specific point's velocity — a point can end up moving opposite to the impact, which is easy to miss if you only compute vcm or only compute ω."
+      },
+
+      {
+        "question": "A uniform thin hoop (all its mass at radius R, I=MR²) is spun about its own symmetry axis to some angular speed ω0, with its center initially at rest, and is then gently set down on a rough horizontal floor. Once it reaches rolling without slipping, the fraction of its ORIGINAL kinetic energy that has been dissipated by friction is most nearly",
+        "choices": [
+          "1/3",
+          "1/2",
+          "2/3",
+          "5/7",
+          "all of it"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe hoop starts with purely rotational kinetic energy, ½Iω0² = ½MR²ω0². Friction converts some of this into translation while slowing the spin, until v=ωR. Using the general spin-to-rolling result vfinal=Rω0β/(β+1) with β=I/MR², a hoop has β=1, giving vfinal=Rω0/2 and ωfinal=ω0/2. The final kinetic energy is ½Mvfinal²+½Iωfinal² = ½M(Rω0/2)²+½MR²(ω0/2)² = ¼MR²ω0², exactly half the original ½MR²ω0² — so the fraction dissipated is exactly 1/2, independent of M, R, ω0, and μ entirely; only the hoop's shape (β=1) matters. The 2/3 option is the fraction that would be lost for a disk (β=½) instead of a hoop. The 5/7 option is the fraction for a solid sphere (β=2/5). The 1/3 option is a plausible-looking guess with no real derivation behind it. The 'all of it' option assumes rolling without slipping somehow means all the original spin energy is used up, rather than being partly preserved as the final rolling motion's KE.\n\n90-SECOND SOLUTION\nThe general result for energy lost when a purely-spinning object is set down and reaches rolling is (fraction lost) = 1/(β+1), where β=I/MR² is the shape factor — for a hoop (β=1) this is exactly 1/2, a clean shape-only result with no numbers to plug in at all.\n\nWHAT TO MEMORIZE\nWhen an object is set down spinning and friction brings it to rolling without slipping, the FRACTION of kinetic energy dissipated depends only on the shape (via β=I/MR²), never on the mass, radius, angular speed, or friction coefficient — those only set how long the process takes, not how much energy is lost."
+      },
+
+      {
+        "question": "A solid sphere of radius 0.20 m slides forward at 5.0 m/s on a rough horizontal floor while spinning backward (in the sense opposite to rolling) so fast that its contact point slides forward relative to the floor at a large speed; the product Rω0 for this backspin is 16 m/s. Once kinetic friction has brought the sphere to rolling without slipping, its final velocity is most nearly",
+        "choices": [
+          "1.0 m/s, opposite to its original direction of motion",
+          "2.0 m/s, in its original direction of motion",
+          "1.3 m/s, in its original direction of motion",
+          "0 (it comes to rest)",
+          "2.0 m/s, opposite to its original direction of motion"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBecause the contact point slides forward relative to the floor (both translation and the backspin's contribution push it that way), kinetic friction acts backward on the sphere — decelerating the forward translation AND fighting the backspin, driving both v and ω toward the rolling condition v=−ωR (using the sign convention where forward-rolling spin is negative). Working through momentum and angular momentum for a solid sphere (I=(2/5)MR²) gives vfinal = (5v0 − 2Rω0)/7 = [5(5.0) − 2(16)]/7 = (25−32)/7 = −1.0 m/s — the sphere ends up moving BACKWARD, opposite to its initial direction, because the backspin was strong enough to fully reverse it once rolling sets in. This is the same surprising reversal seen when a cue ball is struck with heavy backspin. The '1.3 m/s, original direction' option comes from a factor-of-2 slip in the Rω0 term. The '2.0 m/s, opposite direction' option comes from a sign error that doubles the backspin's effect. The '0' option assumes the sphere simply decelerates to rest and stops there, missing that friction keeps acting (and reversing the motion) as long as the contact point is still sliding, even after v passes through zero.\n\n90-SECOND SOLUTION\nStrong enough backspin can reverse a sliding object's direction entirely once friction brings it to rolling — don't assume friction only ever slows something down to zero and stops; as long as slipping continues, friction keeps acting in the same direction, potentially driving the object backward.\n\nWHAT TO MEMORIZE\nFor combined initial translation and backspin, solve for both v(t) and ω(t) under friction and find where v=−ωR (or v=ωR, depending on your sign convention) — the final speed can come out negative relative to the initial motion, which is a real and well-known result (this is exactly how backspin reverses a cue ball), not a sign to be discarded."
+      },
+
+      {
+        "question": "A uniform rod of mass 2.0 kg and length 1.2 m is free to rotate about a frictionless horizontal pivot located 0.30 m from the rod's center (not at either end). It is released from rest with the rod horizontal. Taking g = 9.8 m/s², the rod's angular speed as it swings through the vertical position is most nearly",
+        "choices": [
+          "4.95 rad/s",
+          "5.29 rad/s",
+          "7.0 rad/s",
+          "7.48 rad/s",
+          "8.08 rad/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThis is a physical pendulum problem, not the more commonly memorized end-pivot case. The moment of inertia about the pivot uses the parallel-axis theorem from the rod's own center: Ipivot = ML²/12 + Md² = (2.0)(1.2)²/12 + (2.0)(0.30)² = 0.24+0.18 = 0.42 kg·m². As the rod swings from horizontal to vertical, its center of mass drops by exactly d = 0.30 m (the pivot-to-center distance), not by L/2. Energy conservation: Mgd = ½Ipivotω², so ω = √(2Mgd/Ipivot) = √(2(2.0)(9.8)(0.30)/0.42) = √28 ≈ 5.29 rad/s. The 4.95 rad/s option comes from mistakenly using the familiar end-pivot formula (d=L/2, I=ML²/3) instead of this problem's actual off-center pivot. The 7.0 rad/s option forgets the parallel-axis term entirely, using only Icm. The 8.08 rad/s option goes further and treats the rod as a point mass, I=Md². The 7.48 rad/s option uses the correct Ipivot but the wrong height drop (L/2 instead of d).\n\n90-SECOND SOLUTION\nWhenever a pivot is NOT at the rod's end, both the moment of inertia (via parallel axis from the CENTER, not the end) and the height the center of mass drops (equal to the pivot-to-center distance d, not L/2) must be recalculated from scratch — don't reach for the memorized end-pivot formulas.\n\nWHAT TO MEMORIZE\nFor a physical pendulum pivoted at an arbitrary point, Ipivot = Icm + Md² and the CM's height drop from horizontal to vertical equals d itself — both quantities depend on the ACTUAL pivot location, and neither should be assumed to match the more familiar end-pivot or center-pivot special cases."
+      },
+
+      {
+        "question": "A solid sphere rolls without slipping at a constant speed of 6.0 m/s (radius 0.20 m) along a rough horizontal floor, then smoothly transitions onto an adjoining horizontal section of floor that is completely frictionless. Once on the frictionless section, the sphere's angular speed is most nearly",
+        "choices": [
+          "0 (it stops spinning)",
+          "12 rad/s",
+          "15 rad/s",
+          "30 rad/s",
+          "45 rad/s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe key realization is that nothing changes at all when the sphere crosses onto the frictionless section. While rolling without slipping on a flat, horizontal, rough floor, the contact point has zero velocity relative to the floor — so kinetic friction was never actually being used to maintain the rolling (static friction, if any, would be zero here since no net horizontal force is needed to keep the sphere moving at constant velocity). Removing the floor's friction entirely therefore changes nothing: with no horizontal force at all, the translational speed stays 6.0 m/s, and with no torque at all, the angular speed stays exactly what it was, ω = v/R = 6.0/0.20 = 30 rad/s. The 0 rad/s option assumes friction was actively 'driving' the rotation and so removing it stops the spin — but rolling without slipping at constant velocity requires no such driving force. The 15 rad/s and 45 rad/s options come from assuming the KE redistributes between translation and rotation according to the solid sphere's 5:2 energy ratio, which doesn't apply since no energy conversion is triggered by entering the frictionless region. The 12 rad/s option comes from a stray factor of 2/5 (the sphere's I/MR² ratio) applied where it doesn't belong.\n\n90-SECOND SOLUTION\nRolling without slipping at CONSTANT velocity on a flat floor requires zero net force and zero net torque — meaning friction's actual role there is already zero. Taking the friction away changes nothing about v or ω; this is a pure conceptual check, not a calculation.\n\nWHAT TO MEMORIZE\nDon't assume friction is always 'doing something' just because it's present in a rolling-without-slipping scenario — on a flat, level surface at constant speed, the friction force required is exactly zero, so removing the friction (or the surface's roughness) has no effect on the motion at all."
+      },
+
+      {
+        "question": "A uniform rod of mass 2.0 kg and length 1.2 m is pivoted at one end and hangs at rest straight down. A motor attached at the pivot applies a constant torque of 20 N·m, causing the rod to swing upward. Taking g = 9.8 m/s², the rod's angular speed once it has swung up to the horizontal position (a quarter turn) is most nearly",
+        "choices": [
+          "6.4 rad/s",
+          "8.1 rad/s",
+          "9.5 rad/s",
+          "10.3 rad/s",
+          "11.7 rad/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTrying to solve this by integrating α(θ) = [τ0 − Mg(L/2)sinθ]/I directly is needlessly hard, since the torque from gravity varies with angle. Energy conservation sidesteps this entirely: work done by a CONSTANT torque is simply τ0 times the angle swept (in radians), regardless of how the rod's orientation changes along the way. Work by the motor: τ0(π/2) = 20(1.5708) = 31.42 J. Work by gravity (negative, since the center of mass rises by L/2 = 0.60 m): −Mg(L/2) = −(2.0)(9.8)(0.60) = −11.76 J. Net kinetic energy gained: 31.42−11.76 = 19.66 J = ½Ipivotω², with Ipivot=ML²/3=0.96 kg·m². Solving: ω = √(2×19.66/0.96) ≈ 6.4 rad/s. The 8.1 rad/s option ignores gravity's work entirely. The 9.5 rad/s option makes a sign error and ADDS gravity's work instead of subtracting it. The 10.3 rad/s and 11.7 rad/s options come from using the wrong angle (π instead of π/2) for the motor's work, or the wrong moment of inertia.\n\n90-SECOND SOLUTION\nWhenever multiple torque sources act together (here, a constant motor torque plus gravity's varying one), don't try to solve the equation of motion directly — add up each source's WORK over the angle traveled instead, since work-energy handles a varying torque (gravity) and a constant one (the motor) with equal ease.\n\nWHAT TO MEMORIZE\nThe work done by a constant torque is τ×Δθ, exactly analogous to force times distance; when a problem mixes a constant torque with gravity's angle-dependent one, energy conservation (summing each source's work) is almost always faster and safer than integrating the angular acceleration directly."
+      },
+
+      {
+        "question": "A 0.20 kg puck slides at 6.0 m/s on a frictionless table and strikes the free end of a 1.5 kg, 0.80 m uniform rod that is pivoted at its OTHER end. The puck does not stick; it bounces straight back at 2.0 m/s. The rod's angular speed immediately after the collision is most nearly",
+        "choices": [
+          "1.3 rad/s",
+          "2.0 rad/s",
+          "3.0 rad/s",
+          "4.0 rad/s",
+          "16 rad/s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe pivot exerts an impulsive force during the brief collision, but that force acts AT the pivot, so it contributes no torque about the pivot — angular momentum about the pivot is conserved even though linear momentum is not. Before the collision, only the puck has angular momentum about the pivot: mv0L = (0.20)(6.0)(0.80) = 0.96 kg·m²/s. After the collision, the puck moves backward at v1=2.0 m/s (angular momentum in the OPPOSITE sense, −mv1L) while the rod rotates at ω: mv0L = −mv1L + Ipivotω, where Ipivot=ML²/3=(1.5)(0.80)²/3=0.32 kg·m². Solving: Ipivotω = mv0L + mv1L = m(v0+v1)L = (0.20)(8.0)(0.80)=1.28, so ω=1.28/0.32=4.0 rad/s. The 2.0 rad/s option comes from mistakenly subtracting the puck's rebound momentum instead of adding it — an easy sign slip since the puck 'lost' speed, but its angular momentum actually REVERSED sign, so it adds to what the rod must supply. The 16 rad/s option comes from using the rod's center-of-mass moment of inertia, ML²/12, instead of the correct pivoted-end value ML²/3. The 1.3 rad/s option ignores the bounce entirely, treating the collision as if the puck stuck (v1=0).\n\n90-SECOND SOLUTION\nA bounce, not a stick, means the incoming object's momentum both LEAVES (in reverse) and must still be accounted for — the rod ends up needing to absorb the sum m(v0+v1)L of angular momentum, not the difference, because reversing the puck's velocity reverses the SIGN of its angular momentum contribution.\n\nWHAT TO MEMORIZE\nFor a rebounding (not sticking) collision, the angular momentum the pivoted body must acquire is m(v0+v1)L₀, using the SUM of incoming and outgoing speeds — the same logic as an elastic ball bouncing off a wall needing to absorb 2mv of momentum, not mv."
+      },
+
+      {
+        "question": "A 50 kg person stands at the rim of a 150 kg, 2.0 m-radius circular platform (moment of inertia ½MR² about its frictionless central axis) that is initially at rest. The person then begins walking along the rim at a constant 2.0 m/s relative to the platform. The resulting angular speed of the platform is most nearly",
+        "choices": [
+          "0.4 rad/s, in the same direction the person is walking",
+          "0.67 rad/s, opposite to the direction the person is walking",
+          "0.4 rad/s, opposite to the direction the person is walking",
+          "1.0 rad/s, opposite to the direction the person is walking",
+          "1.0 rad/s, in the same direction the person is walking"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWith no external torque about the vertical axis, total angular momentum stays zero (both start at rest). If the platform rotates at angular speed Ω, the person's velocity relative to the GROUND is u+ΩR (their walking speed relative to the platform, plus whatever the platform itself contributes at the rim). Setting total angular momentum to zero: m(u+ΩR)R + IplatformΩ = 0, i.e., m(u+ΩR)R + ½MR²Ω = 0. Solving: Ω = −2mu/[R(M+2m)] = −2(50)(2.0)/[2.0(150+100)] = −200/500 = −0.4 rad/s — the negative sign means the platform turns OPPOSITE to the direction the person walks, exactly as everyday experience with rotating platforms suggests (walk one way, the platform drifts the other way beneath you). The 'same direction' option with the correct magnitude 0.4 rad/s is the intuitive-seeming but wrong choice. The 0.67 rad/s option comes from forgetting the person's own moment-of-inertia contribution to the total (using only Iplatform in the denominator). The 1.0 rad/s option comes from a cruder approximation, Ω=u/R, that ignores the mass ratio between person and platform entirely.\n\n90-SECOND SOLUTION\nAngular momentum conservation with zero total L means the person and platform must always rotate in OPPOSITE senses — like two people pushing off each other on ice, whichever way one goes, the other recoils oppositely. Solve for Ω from m(u+ΩR)R = −½MR²Ω.\n\nWHAT TO MEMORIZE\nWhen someone walks along the rim of a freely rotating platform starting from rest, the person's velocity relative to the GROUND includes both their own walking speed AND the platform's own rim speed — don't use the walking speed alone as if the platform stayed motionless underneath them."
+      },
+
+      {
+        "question": "A solid ball rolls without slipping up a ramp, decelerating under gravity, momentarily stops, and rolls back down without ever slipping at any point. Its speed at the bottom of the ramp was 6.0 m/s just before starting up. Its speed at the bottom of the ramp, just after returning, is most nearly",
+        "choices": [
+          "0 (it does not return with any speed)",
+          "3.0 m/s",
+          "5.4 m/s",
+          "cannot be determined without knowing the ramp's angle",
+          "6.0 m/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nRolling without slipping means the friction at the contact point is STATIC friction, not kinetic — the contact point has zero relative velocity throughout, so friction does zero work on the ball at every instant, up and back down. With no other dissipative forces mentioned, total mechanical energy (translational KE + rotational KE + gravitational PE) is exactly conserved throughout the entire round trip. Since the ball starts and ends at the same height (the bottom of the ramp) with the same rolling constraint (v=ωR) applying both times, its speed on return must equal its initial speed: 6.0 m/s. The 'cannot be determined' option is the tempting trap — the ramp's angle does affect how FAR up the ball goes and how LONG the round trip takes, but it does not affect the return speed at the same height, since energy conservation only cares about the height change, not the path. The 5.4 m/s and 3.0 m/s options assume some fixed fraction of energy is lost to 'rolling friction,' confusing static friction (which does no work here) with a genuine dissipative mechanism. The 0 option assumes the ball simply stops at the top and never returns, ignoring that it was stated to roll back down.\n\n90-SECOND SOLUTION\nStatic friction during rolling without slipping never dissipates energy — it's easy to expect some loss because 'friction' is present, but the defining feature of NOT slipping is exactly that friction does zero work. Energy conservation alone (no need for the ramp's angle) gives the return speed as unchanged.\n\nWHAT TO MEMORIZE\nRolling friction that maintains v=ωR (i.e., true rolling WITHOUT slipping) does no work and dissipates no energy, unlike kinetic friction during slipping — a round trip up and back down a ramp under pure rolling returns the object to its original speed at the original height, regardless of the ramp's angle."
+      }
+
+    ]
+  },
+
+  {
     "name": "Practice Test 1",
     "added": "2026-08-13",
     "category": "practice",
