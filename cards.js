@@ -3067,6 +3067,286 @@ const EXAMS = [
   },
 
   {
+    "name": "Circuits Test 2",
+    "added": "2026-08-26",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "In the circuit shown, the battery is ideal. What is the current through the 12 Ω resistor?",
+        "image": "images/circuits-2/circuit_q1.png",
+        "choices": [
+          "0.5 A",
+          "1.0 A",
+          "1.5 A",
+          "2.0 A",
+          "3.0 A"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe 8 Ω and 4 Ω resistors are in series, forming a 12 Ω branch that runs from node A to ground — the same node the 12 Ω resistor connects to. So the 12 Ω resistor and the 8+4 = 12 Ω branch are in parallel with each other:\nR_p = (12 × 12)/(12 + 12) = 6 Ω.\nTotal resistance = 3 Ω (series) + 6 Ω = 9 Ω, so the battery delivers I = 18/9 = 2.0 A.\nThat splits the voltage: V_A = 18 − 2.0 × 3 = 12 V across the parallel section.\nSince the two parallel branches (12 Ω, and 8+4 Ω) are equal, they split the 2.0 A evenly: 1.0 A each.\nCurrent through the 12 Ω resistor = 1.0 A.\n\n90-SECOND SOLUTION\nThe right branch is 8+4 = 12 Ω, matching the middle 12 Ω exactly — two equal resistors in parallel, so R_p = 6 Ω. Total 9 Ω, total current 2.0 A, split evenly between two equal branches: 1.0 A each.\n\nWHAT TO MEMORIZE\nNothing new — for parallel resistors 1/R_p = Σ(1/Rᵢ), and equal branches split the current equally. The only thing worth flagging is the trap: the right branch isn't a single resistor, it's two in series, so don't parallel-combine the 12 Ω against the 8 Ω alone. Redraw the network first and identify what's actually in parallel with what before doing any arithmetic."
+      },
+
+      {
+        "question": "In the circuit shown, the battery is ideal and the power dissipated in the 4 Ω resistor is 16 W. What is the battery's emf?",
+        "image": "images/circuits-2/circuit_q2.png",
+        "choices": [
+          "4 V",
+          "8 V",
+          "12 V",
+          "16 V",
+          "24 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nPower in the 4 Ω resistor gives its current: P = I²R → 16 = I²(4) → I = 2.0 A. Since the 4 Ω resistor carries the full battery current (it's the series element), the battery current is also 2.0 A.\nThe 12 Ω and 6 Ω resistors are in parallel: R_p = (12 × 6)/(12 + 6) = 4 Ω.\nTotal resistance = 4 + 4 = 8 Ω.\nemf = I × R_total = 2.0 × 8 = 16 V.\n\n90-SECOND SOLUTION\nP = I²R on the 4 Ω gives I = 2 A for the whole circuit. Parallel pair is 4 Ω, so total resistance is 8 Ω, and emf = 2 × 8 = 16 V.\n\nWHAT TO MEMORIZE\nNo new formula — this is P = I²R run in reverse to recover the current, followed by an ordinary series-parallel reduction and V = IR. The skill worth practicing is starting from a power or energy statement instead of a voltage or current statement; recognize that P = I²R = V²/R = IV are three routes to the same current, and pick whichever one the given quantity unlocks directly."
+      },
+
+      {
+        "question": "Six identical resistors, each of resistance R, form the edges of a regular tetrahedron (four nodes, every pair of nodes connected by one resistor). What is the equivalent resistance measured between any two nodes?",
+        "image": "images/circuits-2/circuit_q3.png",
+        "choices": [
+          "R/2",
+          "2R/3",
+          "R",
+          "3R/2",
+          "2R"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nLabel the two measured nodes A and B, and the other two C and D. By the symmetry of the tetrahedron, swapping C and D leaves the network unchanged, so C and D must sit at the same potential. That means the resistor directly between C and D carries no current and can be deleted.\nWhat remains: A connects directly to B (one R), and A connects to B through two parallel two-resistor paths, A→C→B and A→D→B, each of resistance 2R, which combine to (2R)(2R)/(2R+2R) = R.\nSo A and B are joined by two paths in parallel: the direct edge (R) and the C/D detour (R). Combining: R_eq = (R × R)/(R + R) = R/2.\n\n90-SECOND SOLUTION\nBy symmetry, the edge between the two \"spectator\" nodes carries no current — delete it. What's left is the direct A–B edge (R) in parallel with a 2R detour through the other two nodes, giving R ∥ 2R... wait, work it as: direct edge R, detour path 2R‖2R = R, and those two R's are themselves in parallel: R/2.\n\nWHAT TO MEMORIZE\nIf two nodes are equivalent by symmetry, the element joining them carries no current and can be removed — this is one of the highest-value tricks in DC circuits, since it turns an irreducible-looking network into ordinary series-parallel pieces. Look for it whenever the network has an exchange symmetry between two nodes that both connect identically to the two terminals you're measuring across."
+      },
+
+      {
+        "question": "In the circuit shown, the battery is ideal. Which resistor dissipates the MOST power?",
+        "image": "images/circuits-2/circuit_q4.png",
+        "choices": [
+          "R₁ (1 Ω)",
+          "R₃ (6 Ω)",
+          "R₁ and R₃ dissipate equally",
+          "R₂ and R₁ dissipate equally",
+          "R₂ (3 Ω)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nR₂ ∥ R₃ = (3 × 6)/(3 + 6) = 2 Ω, so total resistance is 1 + 2 = 3 Ω and the battery current is 18/3 = 6 A.\nR₁ carries the full 6 A: P₁ = I²R = 6² × 1 = 36 W.\nThe parallel group has 6 × 2 = 12 V across it, so\nP₂ = V²/R = 12²/3 = 48 W and P₃ = 12²/6 = 24 W.\nThe most is R₂, at 48 W — even though R₁ carries more current than either parallel branch alone.\n\n90-SECOND SOLUTION\nR₁ carries all 6 A, so P₁ = I²R = 36 W. The parallel pair shares 12 V, so the smaller resistance (R₂ = 3 Ω) gets more power: P₂ = 144/3 = 48 W, beating both R₁ and R₃.\n\nWHAT TO MEMORIZE\nP = IV = I²R = V²/R. Pick the form by what's shared: same current (series) → P = I²R, bigger R dissipates more; same voltage (parallel) → P = V²/R, smaller R dissipates more. A series resistor carrying \"the most current in the circuit\" is not automatically the biggest power dissipator — compare all three numerically once you know the topology, rather than guessing from current alone."
+      },
+
+      {
+        "question": "An ideal current source drives two identical resistors. The resistors are first connected in series with the source, then reconnected in parallel with the source (same current source both times). By what factor does the total power delivered change?",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1 (no change)",
+          "2",
+          "4"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nLet each resistor be R and the source current be I. A current source forces the same current I through whatever it drives.\nSeries: the full current I flows through both resistors in turn (total resistance 2R): P_series = I²(2R).\nParallel: the source current I splits evenly between the two identical resistors, so each carries I/2, and total power is P_parallel = 2 × (I/2)²R = 2 × I²R/4 = I²R/2.\nRatio = P_parallel/P_series = (I²R/2)/(2I²R) = 1/4.\n\n90-SECOND SOLUTION\nA current source fixes the current, so use P = I²R_total, and power scales directly with total resistance (opposite of the voltage-source case). Series has 4× the resistance of parallel (2R vs R/2), so parallel dissipates 1/4 the power of series.\n\nWHAT TO MEMORIZE\nUnder a fixed CURRENT source, P = I²R_total — more total resistance means more power, the reverse of the fixed-voltage case where P = V²/R_total. Whether power goes up or down when you rearrange resistors depends entirely on whether the source is holding voltage or current fixed; check which one before trusting your intuition, since the two source types give exactly opposite answers to the same rearrangement."
+      },
+
+      {
+        "question": "A series RLC circuit is driven off resonance by a source of emf amplitude 100 V. The circuit's impedance has magnitude 50 Ω, and the current lags the emf by 60°. What is the average power delivered to the circuit?",
+        "choices": [
+          "25 W",
+          "50 W",
+          "87 W",
+          "100 W",
+          "200 W"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCurrent amplitude: I₀ = ε₀/|Z| = 100/50 = 2.0 A.\nAverage power for a general phase angle φ: P_avg = ½I₀ε₀cos φ = ½(2.0)(100)cos 60° = 100 × 0.5 = 50 W.\nCross-check using P_avg = ½I₀²R: since R = |Z|cos φ = 50 × 0.5 = 25 Ω, P_avg = ½(2.0)²(25) = 50 W. Same answer.\n\n90-SECOND SOLUTION\nI₀ = 100/50 = 2 A. P_avg = ½I₀ε₀cos φ = ½(2)(100)(0.5) = 50 W.\n\nWHAT TO MEMORIZE\nP_avg = ½I₀ε₀cos φ = I_rms ε_rms cos φ, valid at any phase angle, not just at resonance. The resonance case (φ = 0, cos φ = 1) is the special case where this reduces to ½I₀²R — it is not a separate formula, just this one with cos φ = 1. Whenever a problem hands you a phase angle directly, use it here rather than trying to first extract R and reactance separately; 100 W is the trap of dropping the cos φ factor entirely."
+      },
+
+      {
+        "question": "In the circuit shown, the capacitor is initially uncharged and the switch S (not shown, assume closed at t = 0) connects the battery. What is the voltage across the 3 Ω resistor immediately after t = 0, and a long time later?",
+        "image": "images/circuits-2/circuit_q7.png",
+        "choices": [
+          "0 V and 0 V",
+          "6 V and 6 V",
+          "12 V and 0 V",
+          "6 V and 0 V",
+          "0 V and 6 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt t = 0 the capacitor is uncharged, so it behaves as a plain wire (zero voltage across it). Current then flows through the 3 Ω resistor freely, so that branch is just a 3 Ω resistor to ground, in parallel with the 6 Ω resistor: R_p = (6 × 3)/(6 + 3) = 2 Ω.\nBattery current: I = 12/(2 + 2) = 3 A. Voltage at node A: V_A = 3 × 2 = 6 V. Since the capacitor is a wire, the full 6 V appears across the 3 Ω resistor.\nAfter a long time, the capacitor is fully charged and carries no current, so no current flows through the 3 Ω resistor at all — it drops 0 V (all the branch voltage sits across the now-open capacitor instead).\n\n90-SECOND SOLUTION\nCapacitor starts as a wire, so the 3 Ω resistor sees the full node-A voltage: 6||3 → node at 6 V → 6 V across the 3 Ω. Capacitor ends as an open, no current in that branch, so 0 V across the resistor.\n\nWHAT TO MEMORIZE\nAn initially uncharged capacitor acts as a short (wire) at t = 0 and an open circuit at t = ∞. Once you know those two endpoint rules, you can read off the initial and final values of any voltage or current in a first-order RC transient without setting up a differential equation — just redraw the circuit twice, once with the capacitor replaced by a wire and once with it removed."
+      },
+
+      {
+        "question": "In the circuit shown, the circuit has been connected for a long time and the capacitor is fully charged to V₀. At t = 0 the switch S is opened, disconnecting the battery. How long after opening does the capacitor's voltage first fall to 25% of V₀?",
+        "image": "images/circuits-2/circuit_q8.png",
+        "choices": [
+          "14 ms",
+          "20 ms",
+          "28 ms",
+          "40 ms",
+          "55 ms"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWith the switch open, the battery and R₁ are disconnected entirely — that branch is simply gone. The capacitor now discharges through whatever resistance remains connected to it, which is R₂ and R₃ in parallel:\nR_discharge = (6 kΩ × 12 kΩ)/(6 kΩ + 12 kΩ) = 4 kΩ.\nτ = R_discharge × C = 4 kΩ × 5 μF = 20 ms.\nThe voltage during discharge follows V(t) = V₀e^(−t/τ). Setting V/V₀ = 1/4:\ne^(−t/τ) = 1/4 → t = τ ln 4 = 20 ms × 1.386 ≈ 28 ms.\n\n90-SECOND SOLUTION\nSwitch open removes the battery branch, leaving R₂ ‖ R₃ = 4 kΩ across the capacitor, so τ = 4 kΩ × 5 μF = 20 ms. Falling to 1/4 of V₀ takes ln 4 ≈ 1.39 time constants: t ≈ 20 × 1.39 ≈ 28 ms.\n\nWHAT TO MEMORIZE\nτ = RC, where R is whatever resistance the capacitor is actually connected to at the moment being asked about — with the source disconnected, only the resistors still forming a closed loop with the capacitor count. The classic topology error is reusing the charging-phase resistance for a discharge that runs through a different (here smaller) sub-network. Separately, ln 2 ≈ 0.69 (time to fall to half) and ln 4 = 2 ln 2 ≈ 1.39 (time to fall to a quarter) are worth having on quick recall, since \"time to reach some fraction of V₀\" questions are common and always reduce to τ times a log you can compute in your head from ln 2 alone."
+      },
+
+      {
+        "question": "In the circuit shown, two resistor dividers are connected across the same 24 V ideal battery, and a capacitor bridges nodes A and B as shown (neither node is grounded). In steady state, what is the charge on the capacitor?",
+        "image": "images/circuits-2/circuit_q9.png",
+        "choices": [
+          "8.0 μC",
+          "12 μC",
+          "16 μC",
+          "24 μC",
+          "32 μC"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn steady state no current flows into the capacitor, so each divider carries its own independent current, unaffected by the other side or by the capacitor.\nLeft divider: V_A = 24 × 4kΩ/(2kΩ + 4kΩ) = 24 × (2/3) = 16 V.\nRight divider: V_B = 24 × 6kΩ/(6kΩ + 6kΩ) = 24 × (1/2) = 12 V.\nThe capacitor sees the potential difference between the two nodes: V_AB = 16 − 12 = 4 V.\nQ = CV = 2 μF × 4 V = 8.0 μC.\n\n90-SECOND SOLUTION\nEach divider works independently since no steady current crosses the capacitor. Left gives 16 V, right gives 12 V, so the cap sees 4 V, and Q = 2 μF × 4 V = 8.0 μC.\n\nWHAT TO MEMORIZE\nIn DC steady state a capacitor carries no current, so any branch leading only to a capacitor can be treated as a dead end when solving for currents elsewhere in the circuit — here that means the two dividers can be analyzed completely separately, each as an ordinary voltage divider, and only at the end do you subtract their outputs to get the capacitor's voltage. This \"two independent dividers bridged by a capacitor\" pattern is really just two applications of Q = CV wrapped around a subtraction; nothing new to memorize beyond the two rules already listed."
+      },
+
+      {
+        "question": "A capacitor is charged to V₀ through a resistor R. How long after the switch closes does the energy stored on the capacitor first reach 25% of its final (fully-charged) value?",
+        "choices": [
+          "0.14 RC",
+          "0.29 RC",
+          "0.69 RC",
+          "1.0 RC",
+          "1.4 RC"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWhile charging, V(t) = V₀(1 − e^(−t/RC)), so energy U(t) = ½CV(t)² = U_final(1 − e^(−t/RC))².\nSetting U/U_final = 1/4: (1 − e^(−t/RC))² = 1/4 → 1 − e^(−t/RC) = 1/2 → e^(−t/RC) = 1/2 → t = RC ln 2 ≈ 0.69 RC.\n(Energy reaching 25% of final means the voltage itself has only reached 50% of final — the square root of 1/4 — which is exactly the standard half-charge time.)\n\n90-SECOND SOLUTION\nEnergy ∝ V², so 25% energy means V is at 50% of final, i.e., the ordinary half-charge point: t = RC ln 2 ≈ 0.69 RC.\n\nWHAT TO MEMORIZE\nEnergy on a capacitor goes as V², so any energy fraction translates to a voltage fraction by taking a square root (or vice versa by squaring) before you touch the exponential at all. Recognizing \"25% of the energy\" as \"50% of the voltage\" turns this into the same t = RC ln 2 you already know for a standard half-charge or half-discharge problem, rather than a new formula to memorize."
+      },
+
+      {
+        "question": "In the circuit shown, C₁ = 4 μF and C₂ = 12 μF are in series, and that combination is in parallel with C₃ = 5 μF, all across a 12 V ideal battery. What is the charge on C₁?",
+        "image": "images/circuits-2/circuit_q11.png",
+        "choices": [
+          "15 μC",
+          "24 μC",
+          "30 μC",
+          "36 μC",
+          "48 μC"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nC₁ and C₂ in series combine as 1/C_ser = 1/4 + 1/12 = 3/12 + 1/12 = 4/12, so C_ser = 3 μF.\nThe full 12 V appears across this series combination (it's directly across the battery, in parallel with C₃).\nCapacitors in series carry the SAME charge as their series combination: Q_ser = C_ser × V = 3 μF × 12 V = 36 μC.\nThat charge is the charge on C₁ specifically (and also on C₂) — series capacitors don't split charge, they split voltage.\n\n90-SECOND SOLUTION\nSeries pair combines to 3 μF, full 12 V across it, so Q = 3 × 12 = 36 μC — and that's the charge on EACH series capacitor, including C₁.\n\nWHAT TO MEMORIZE\nCapacitors in series all carry the same charge as their series combination (charge doesn't \"split\" the way current does in parallel resistors); they instead split the voltage in inverse proportion to their capacitance. The trap here is computing C₁ × V_full = 4 × 12 = 48 μC, which wrongly assumes the entire 12 V appears across C₁ alone — it doesn't, because C₂ takes a share of that voltage too. Always reduce to the equivalent capacitance first and use ITS charge as the shared series charge."
+      },
+
+      {
+        "question": "In the circuit shown, the current through the inductor is zero before the switch is closed at t = 0. A long time after the switch closes, what is the current through the 6 Ω resistor (R₂)?",
+        "image": "images/circuits-2/circuit_q12.png",
+        "choices": [
+          "0.5 A",
+          "1.0 A",
+          "1.5 A",
+          "2.0 A",
+          "3.0 A"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA long time after closing, the inductor carries a steady current and produces no back-emf, so it behaves as a plain wire. The 3 Ω resistor is then in series with that wire, forming a 3 Ω branch in parallel with R₂ = 6 Ω.\nR_p = (6 × 3)/(6 + 3) = 2 Ω. Total resistance = 2 + 2 = 4 Ω, so battery current = 12/4 = 3.0 A.\nVoltage at node A: V_A = 3.0 × 2 = 6 V.\nCurrent through R₂ = 6/6 = 1.0 A.\n(At t = 0, the inductor was open, so all the current would have gone through R₂ alone: I(0) = 12/(2+6) = 1.5 A — a different, larger value, since the inductor's branch wasn't yet contributing.)\n\n90-SECOND SOLUTION\nLong after closing, the inductor is a wire, so the 3 Ω branch is live: 6‖3 = 2 Ω, total 4 Ω, battery current 3 A, node-A voltage 6 V, and I_R2 = 6/6 = 1.0 A.\n\nWHAT TO MEMORIZE\nAn inductor with zero initial current acts as an OPEN circuit at t = 0 and as a plain WIRE at t = ∞ — the mirror image of a capacitor's short-then-open behavior. Once you know those two endpoints, redraw the circuit twice (inductor removed, then inductor replaced by a wire) and solve each as an ordinary resistor network — no differential equation needed for either endpoint value."
+      },
+
+      {
+        "question": "A 30 mH inductor is connected in series with a 60 Ω resistor and an ideal battery through a switch that closes at t = 0. At what time does the voltage across the inductor fall to 1/e of its initial value?",
+        "choices": [
+          "0.17 ms",
+          "0.28 ms",
+          "0.50 ms",
+          "0.83 ms",
+          "1.4 ms"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe inductor's voltage decays purely exponentially from the moment the switch closes: V_L(t) = ε e^(−t/τ), with τ = L/R.\nτ = 30 × 10⁻³/60 = 5.0 × 10⁻⁴ s = 0.50 ms.\nV_L falls to 1/e of its initial value exactly when t = τ, by definition of the time constant — no further algebra needed.\nt = 0.50 ms.\n\n90-SECOND SOLUTION\nτ = L/R = 30 mH/60 Ω = 0.50 ms, and \"falls to 1/e\" is the definition of one time constant, so the answer is τ itself: 0.50 ms.\n\nWHAT TO MEMORIZE\nτ = L/R for an RL circuit (L divided by R — units check: henry/ohm = second). The inductor's own voltage, unlike the circuit's current, decays as a pure exponential from t = 0 with no \"rise\" phase, so \"reaches 1/e of its initial value\" is asking for τ itself, not a multiple of it. Confusing this with the current's rise-to-half-value question (which needs the extra factor of ln 2) is the standard way to answer wrong on this exact wording."
+      },
+
+      {
+        "question": "In the circuit shown, R₁ = 2 Ω is in series with an inductor L = 10 mH, and R₂ = 10 Ω has a capacitor C = 50 μF connected across it, all driven by a 24 V ideal battery. In steady state, what is the ratio of the energy stored in the inductor to the energy stored in the capacitor?",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIn steady state the inductor is a wire and the capacitor is an open, so the only current path is through R₁ and R₂ in series:\nI = 24/(2 + 10) = 2.0 A.\nEnergy in the inductor: U_L = ½LI² = ½(0.010)(2.0)² = 0.020 J.\nThe capacitor sits across R₂, which carries the same 2.0 A, so V_C = I × R₂ = 2.0 × 10 = 20 V.\nEnergy in the capacitor: U_C = ½CV² = ½(50×10⁻⁶)(20)² = 0.010 J.\nRatio U_L/U_C = 0.020/0.010 = 2.\n\n90-SECOND SOLUTION\nSteady state: I = 24/12 = 2 A everywhere in the loop. U_L = ½(0.01)(4) = 0.02 J. V_C = 2×10 = 20 V, U_C = ½(50e-6)(400) = 0.01 J. Ratio = 2.\n\nWHAT TO MEMORIZE\nU_L = ½LI² and U_C = ½CV² — the same \"one-half times the element constant times the square of its natural variable\" structure for both. The DC steady-state shortcut (inductor → wire, capacitor → open) is what lets you find the single current I first, after which both energies drop out directly. No need to memorize anything about ratios specifically; just apply both energy formulas to the same steady-state current/voltage."
+      },
+
+      {
+        "question": "A series RLC circuit is to be tuned to resonate at an angular frequency of 2.0 × 10⁵ rad/s using a capacitor of 50 nF. What inductance is required?",
+        "choices": [
+          "0.10 mH",
+          "0.50 mH",
+          "1.0 mH",
+          "2.0 mH",
+          "5.0 mH"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nResonance: ω₀ = 1/√(LC), so L = 1/(ω₀²C).\nω₀² = (2.0 × 10⁵)² = 4.0 × 10¹⁰ s⁻².\nL = 1/(4.0 × 10¹⁰ × 50 × 10⁻⁹) = 1/(2.0 × 10³) = 5.0 × 10⁻⁴ H = 0.50 mH.\n\n90-SECOND SOLUTION\nL = 1/(ω²C) = 1/((2×10⁵)² × 50×10⁻⁹) = 1/(4×10¹⁰ × 5×10⁻⁸) = 1/2000 H = 0.50 mH.\n\nWHAT TO MEMORIZE\nω₀ = 1/√(LC), equivalently f₀ = 1/(2π√(LC)) — the single highest-yield formula in circuits on this exam, since resonance conditions are asked for repeatedly across the released tests, sometimes solving for ω or f directly and sometimes (as here) solving for one of the components. Notice this problem gave ω directly, not f, so no factor of 2π was needed at all — always check which one you were handed before reaching for a 2π."
+      },
+
+      {
+        "question": "A series RLC circuit has resonant frequency f₀. If the inductance is quadrupled and the capacitance is halved at the same time, the new resonant frequency is:",
+        "choices": [
+          "f₀/4",
+          "f₀/2",
+          "f₀",
+          "√2 f₀",
+          "f₀/√2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nf₀ = 1/(2π√(LC)), so f₀ ∝ (LC)^(−1/2).\nNew product: L_new C_new = (4L)(C/2) = 2LC — twice the original LC product.\nf_new = f₀ × (LC/(2LC))^(1/2) = f₀/√2.\n\n90-SECOND SOLUTION\nThe LC product doubles (4× from L, ÷2 from C → net ×2), and frequency scales as (LC)^(−1/2), so f_new = f₀/√2.\n\nWHAT TO MEMORIZE\nDon't memorize this specific result — memorize the habit of reading the scaling exponent straight off f₀ = 1/(2π√(LC)): since f₀ ∝ (LC)^(−1/2), track only how the PRODUCT LC changes, multiply the individual factors together first, then apply the −1/2 power once at the end. These \"how does resonant frequency change\" questions are common because they can be answered in seconds without a calculator by anyone who trusts the formula's structure rather than re-deriving numbers."
+      },
+
+      {
+        "question": "An ideal LC circuit (no resistance) oscillates with period T. What fraction of each period does the capacitor hold MORE than half of the total stored energy?",
+        "choices": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nLet the charge be Q(t) = Q₀cos(ωt). The capacitor's energy is U_C = Q²/2C = U_total cos²(ωt).\nU_C exceeds half the total energy whenever cos²(ωt) > 1/2, i.e., |cos(ωt)| > 1/√2, which happens whenever ωt lies within π/4 of a multiple of π (0, π, 2π, ...).\nAround each such point the \"within π/4\" window has width π/2, and there are two such points (near 0 and near π) in each full cycle of 2π, for a total angular measure of 2 × (π/2) = π out of 2π.\nFraction of the period = π/2π = 1/2.\n\n90-SECOND SOLUTION\ncos²(ωt) > 1/2 whenever |cos(ωt)| > 1/√2, which by symmetry is exactly half of every cycle (cos² spends equal time above and below its own average of 1/2). Fraction = 1/2.\n\nWHAT TO MEMORIZE\nIn an LC oscillator, the energy in each element oscillates as cos²(ωt) or sin²(ωt) — squares of sinusoids — and any such function spends exactly half of every period above its average value and half below, by symmetry. That symmetry argument (not a computed integral) is the fast route here: since 1/2 of the total energy IS the average value of U_C over a cycle, the capacitor is above average exactly half the time, no calculation of the crossing points required."
+      },
+
+      {
+        "question": "In the two-port network shown, an inductor L and capacitor C are connected in parallel with each other, and that parallel combination forms the series (top) branch of the network; a resistor R forms the shunt (bottom) branch to the output. As the driving frequency is swept from very low to very high, this network acts as a:",
+        "image": "images/circuits-2/circuit_q18.png",
+        "choices": [
+          "low-pass filter",
+          "high-pass filter",
+          "band-pass filter",
+          "all-pass network (no filtering)",
+          "band-stop (notch) filter"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAt very low frequency, the inductor's impedance (ωL) is small, so the inductor dominates the parallel LC combination and acts like a short — the series branch passes signal freely, and the output is close to the input.\nAt very high frequency, the capacitor's impedance (1/ωC) is small, so the capacitor dominates and again acts like a short — the series branch again passes signal freely.\nExactly at resonance (ω₀ = 1/√(LC)), a parallel LC combination has infinite impedance — it becomes an open circuit, blocking that one frequency almost entirely from reaching the output.\nSo the network passes both low and high frequencies but blocks a narrow band around ω₀: a band-stop (notch) filter.\n\n90-SECOND SOLUTION\nA parallel LC is a SHORT away from resonance (whichever element has the smaller impedance dominates) and an OPEN exactly at resonance. Placed in the series arm, that means everything passes except a narrow band near ω₀ — band-stop.\n\nWHAT TO MEMORIZE\nA series LC combination is a SHORT at resonance (used to build a band-pass filter when placed in the series arm, or a notch when placed in the shunt arm). A parallel LC combination is the opposite: an OPEN at resonance (used to build a band-stop/notch filter when placed in the series arm, or a band-pass when placed in the shunt arm). Checking the two limits ω → 0 and ω → ∞ first, then checking what happens exactly at resonance, classifies almost any simple LC filter by inspection without ever writing a transfer function."
+      },
+
+      {
+        "question": "In the RL filter shown, the output is taken across the inductor. R = 2.0 kΩ and L = 40 mH. At what angular frequency does the output amplitude equal 1/√2 of the input amplitude?",
+        "image": "images/circuits-2/circuit_q19.png",
+        "choices": [
+          "5.0 × 10⁴ rad/s",
+          "1.25 × 10⁴ rad/s",
+          "8.0 × 10³ rad/s",
+          "2.5 × 10⁵ rad/s",
+          "4.0 × 10⁴ rad/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe output is taken across the inductor, so this is a voltage divider between R and the inductive reactance:\n|V_out/V_in| = ωL/√(R² + (ωL)²) = 1/√(1 + (R/ωL)²).\nSetting this to 1/√2 requires (R/ωL)² = 1, so ω = R/L.\nω = 2000/0.040 = 5.0 × 10⁴ rad/s.\n\n90-SECOND SOLUTION\nThe corner of a single-pole RL filter (output across L) sits at ω = R/L. Here that's 2000/0.04 = 5.0 × 10⁴ rad/s.\n\nWHAT TO MEMORIZE\nA single-pole RL filter has its corner at ω = R/L (note: R divided by L, the reverse ratio from an RC filter's ω = 1/RC — a quick units check, ohm/henry = 1/second, confirms which way the ratio goes). At that corner the amplitude ratio is exactly 1/√2 regardless of whether the circuit is RC or RL, low-pass or high-pass — this \"half-power point\" definition is universal to any single-pole filter, only the formula for ω_c itself depends on which components and which output node you have."
+      },
+
+      {
+        "question": "A series RLC circuit has R = 25 Ω, L = 100 mH, and C = 0.10 μF. What is the quality factor Q of this circuit?",
+        "choices": [
+          "4.0",
+          "20",
+          "25",
+          "40",
+          "100"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFirst find the resonant frequency: ω₀ = 1/√(LC) = 1/√(0.100 × 0.10×10⁻⁶) = 1/√(1.0×10⁻⁸) = 1.0×10⁴ rad/s.\nThe quality factor of a series RLC circuit is Q = ω₀L/R:\nQ = (1.0×10⁴)(0.100)/25 = 1000/25 = 40.\n\n90-SECOND SOLUTION\nω₀ = 1/√(LC) = 1/√(1.0×10⁻⁸) = 10⁴ rad/s. Q = ω₀L/R = (10⁴)(0.1)/25 = 40.\n\nWHAT TO MEMORIZE\nFor a series RLC circuit, Q = ω₀L/R = 1/(ω₀RC) = (1/R)√(L/C) — three equivalent forms of the same dimensionless number, useful depending on which quantities a problem hands you. Q measures how sharp the resonance is (large Q means a narrow, tall peak) and is also the half-power bandwidth ratio Q = ω₀/Δω, though the bandwidth itself is not what's being asked here. Don't confuse Q with ω₀ or with R/L — it only becomes a clean number after you divide out the resonant frequency by R and multiply by L, so compute ω₀ first, then plug into Q = ω₀L/R rather than trying to shortcut the two steps into one."
+      }
+
+    ]
+  },
+
+  {
     "name": "Practice Test 1",
     "added": "2026-08-13",
     "category": "practice",
