@@ -398,6 +398,9 @@ function startSecondPass() {
 
 function render() {
   window.scrollTo(0, 0);
+  // An enlarged figure belongs to the card that is going away — in a timed run
+  // the clock can advance the question out from under it.
+  closeLightbox();
   const chromeless = state.phase === "login" || state.phase === "menu";
   topbarEl.hidden = chromeless;
 
@@ -711,6 +714,73 @@ function updateUnansweredNote() {
   note.textContent = onLastPage && blanks > 0 ? `${blanks} unanswered` : "";
 }
 
+// ---------- figures ----------
+
+// A card may carry an "image": a diagram the prompt refers to, shown in the
+// quiz and again in the review. The art is black-on-white line work and is
+// blended into the card rather than sitting on a plate of its own — styles.css
+// also inverts it in dark mode, which only works because it carries no colour.
+// Clicking enlarges it, since four-to-a-page leaves a circuit fairly small.
+function questionFigure(card, number) {
+  if (!card.image) return null;
+
+  const fig = document.createElement("figure");
+  fig.className = "figure";
+
+  const img = document.createElement("img");
+  img.src = card.image;
+  img.alt = `Figure for question ${number}`;
+  // Loaded eagerly on purpose: they are small and same-origin, and arriving
+  // late would shove the choices down under a reader already pointing at them.
+  img.decoding = "async";
+  img.addEventListener("click", (e) => {
+    // A review card toggles its answer when clicked; enlarging must not.
+    e.stopPropagation();
+    openLightbox(card.image, img.alt);
+  });
+
+  fig.appendChild(img);
+  return fig;
+}
+
+let lightboxEl = null;
+
+function openLightbox(src, alt) {
+  closeLightbox();
+
+  const box = document.createElement("div");
+  box.className = "lightbox";
+  box.setAttribute("role", "dialog");
+  box.setAttribute("aria-modal", "true");
+  box.setAttribute("aria-label", alt);
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = alt;
+
+  const hint = document.createElement("p");
+  hint.className = "lightbox-hint";
+  hint.textContent = "Click anywhere to close";
+
+  box.append(img, hint);
+  box.addEventListener("click", closeLightbox);
+
+  document.body.appendChild(box);
+  document.body.classList.add("no-scroll");
+  lightboxEl = box;
+}
+
+function closeLightbox() {
+  if (!lightboxEl) return;
+  lightboxEl.remove();
+  lightboxEl = null;
+  document.body.classList.remove("no-scroll");
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLightbox();
+});
+
 function questionCard(item, number, total) {
   const card = document.createElement("section");
   card.className = "card";
@@ -722,6 +792,8 @@ function questionCard(item, number, total) {
   const q = document.createElement("p");
   q.className = "question";
   q.textContent = item.card.question;
+
+  const figure = questionFigure(item.card, number);
 
   const choices = document.createElement("div");
   choices.className = "choices";
@@ -751,7 +823,9 @@ function questionCard(item, number, total) {
     choices.appendChild(btn);
   });
 
-  card.append(num, q, choices);
+  card.append(num, q);
+  if (figure) card.appendChild(figure);
+  card.appendChild(choices);
   return card;
 }
 
@@ -896,6 +970,8 @@ function reviewCard(card, deckIndex) {
     q.className = "question";
     q.textContent = card.question;
 
+    const figure = questionFigure(card, deckIndex + 1);
+
     const choices = document.createElement("div");
     choices.className = "choices";
     card.choices.forEach((text, i) => {
@@ -906,7 +982,9 @@ function reviewCard(card, deckIndex) {
       choices.appendChild(row);
     });
 
-    el.append(num, q, choices);
+    el.append(num, q);
+    if (figure) el.appendChild(figure);
+    el.appendChild(choices);
 
     if (open) {
       const panel = document.createElement("div");

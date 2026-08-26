@@ -193,6 +193,67 @@ main {
 
 .question { margin: 0 0 1rem; font-size: 0.95rem; }
 
+/* ---------- question figure ---------- */
+
+/* The diagrams are black-on-white line art with no colour of their own, which
+   is what lets the two blend modes below work: multiply drops the white ground
+   into a white card, and in dark mode the image is inverted first so screen
+   drops the now-black ground instead. Either way the figure sits directly on
+   the card with no plate around it, and the strokes take the card's contrast. */
+.figure {
+  margin: 0 0 1rem;
+  padding: 0.25rem 0;
+}
+
+.figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 260px;
+  cursor: zoom-in;
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-color-scheme: dark) {
+  .figure img { filter: invert(1); mix-blend-mode: screen; }
+}
+
+/* ---------- enlarged figure ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(12, 15, 20, 0.82);
+  cursor: zoom-out;
+}
+
+/* On its own dark ground the figure needs its white card back, rather than
+   the blending the in-card copy uses. */
+.lightbox img {
+  max-width: 100%;
+  max-height: calc(100vh - 8rem);
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.lightbox-hint {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.no-scroll { overflow: hidden; }
+
 .choices { display: flex; flex-direction: column; gap: 0.4rem; }
 
 .choice {
