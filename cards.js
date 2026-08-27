@@ -559,6 +559,275 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Optics & Waves Test",
+    "added": "2026-08-27",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "Unpolarized light of intensity I₀ passes through three ideal linear polarizers in a row. The first is oriented vertically, the second at 30° to the first, and the third at a further 30° beyond the second (60° from the first). What fraction of the original intensity I₀ emerges?",
+        "choices": [
+          "1/16",
+          "3/16",
+          "1/4",
+          "9/32",
+          "1/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nUnpolarized light through the FIRST ideal polarizer always loses exactly half its intensity, regardless of the polarizer's orientation:\nI₁ = I₀/2.\nAfter that, every polarizer obeys Malus's law using the angle between it and the light's CURRENT polarization direction — not the angle from the original beam. Each subsequent stage in this problem is a 30° step:\nI₂ = I₁cos²(30°) = I₁ × (3/4) = (I₀/2)(3/4).\nI₃ = I₂cos²(30°) = (I₀/2)(3/4)(3/4) = I₀ × 9/32.\n\nNUMERICS WITHOUT A CALCULATOR\ncos(30°) = √3/2 is worth having memorized, so cos²(30°) = 3/4 exactly — no decimals needed. The whole calculation is then (1/2) × (3/4) × (3/4) = 9/32. Multiply numerators (1×3×3=9) and denominators (2×4×4=32) separately.\n\n90-SECOND SOLUTION\nFirst polarizer always halves unpolarized light. Then apply cos²(30°) = 3/4 twice: (1/2)(3/4)(3/4) = 9/32.\n\nWHAT TO MEMORIZE\nTwo rules cover almost every polarizer-chain question: unpolarized light loses exactly half its intensity through the FIRST ideal polarizer no matter its angle, and every polarizer AFTER that follows Malus's law, I = I₀cos²θ, using the angle from the CURRENT polarization direction (the previous polarizer's axis), not from the original beam. Chaining several small angle steps is not the same as one big step — cos²(30°)cos²(30°) ≠ cos²(60°), which is exactly why inserting a polarizer between two crossed ones can let light through that would otherwise be completely blocked."
+      },
+
+      {
+        "question": "Unpolarized light is incident on two crossed ideal polarizers (axes at 90° to each other), so no light emerges. A third ideal polarizer is now inserted between them, oriented at 45° to each. What fraction of the ORIGINAL unpolarized intensity now emerges?",
+        "choices": [
+          "1/8",
+          "1/4",
+          "1/2",
+          "0",
+          "3/8"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe first polarizer halves the unpolarized light: I₁ = I₀/2.\nThe middle polarizer sits at 45° to the first, so I₂ = I₁cos²(45°) = I₁ × (1/2) = I₀/4.\nThe middle polarizer is also at 45° to the LAST polarizer (since 90° − 45° = 45°), so the same factor applies again:\nI₃ = I₂cos²(45°) = (I₀/4)(1/2) = I₀/8.\n\nWithout the middle polarizer, crossed polarizers (90° apart) transmit cos²(90°) = 0 — completely dark. Inserting a polarizer at an intermediate angle creates a path where some light survives each step, even though no single step is a small rotation.\n\n90-SECOND SOLUTION\nEach 45° stage costs a factor of cos²(45°) = 1/2. Two stages after the initial halving: (1/2)(1/2)(1/2) = 1/8.\n\nWHAT TO MEMORIZE\nThis is the classic demonstration that polarizers are NOT simply \"gates\" that block light past some threshold angle — a polarizer at 45° to crossed polarizers restores transmission that would otherwise be zero, because each stage only cares about the angle to its immediate predecessor. The maximum possible boost from a single inserted polarizer occurs at 45° (splitting the 90° gap evenly), giving cos²(45°)cos²(45°) = 1/4 as the best possible middle-stage transmission — worth recognizing as the ceiling on this type of question."
+      },
+
+      {
+        "question": "A magnesium fluoride coating (index 1.38) is applied to a camera lens (index 1.50) to minimize reflection at a wavelength of 550 nm in air. What is the minimum coating thickness that accomplishes this?",
+        "choices": [
+          "55 nm",
+          "100 nm",
+          "140 nm",
+          "200 nm",
+          "280 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBoth reflections here occur at a low-to-high index boundary (air 1.00 → coating 1.38, and coating 1.38 → glass 1.50), so BOTH reflected rays pick up the same π phase shift. The two shifts cancel relative to each other, leaving only the path-length difference (2t, traveled inside the coating) to control interference.\nDestructive interference (minimum reflection) requires that extra path to be a half-integer number of wavelengths INSIDE the coating:\n2t = (m + ½)(λ/n), minimized at m = 0:\nt = λ/(4n) = 550/(4 × 1.38).\n\nNUMERICS WITHOUT A CALCULATOR\nRound n = 1.38 to 1.4 for estimation: 4 × 1.4 = 5.6, and 550/5.6 ≈ 98. That's close enough to identify 100 nm as the answer among choices spread by factors of ~1.4–2. (The exact value using n = 1.38 is 99.6 nm — the rounding changes the third digit, not which choice is correct.)\n\n90-SECOND SOLUTION\nBoth interfaces are low-to-high index, so the phase shifts cancel and you need t = λ/4n. With n ≈ 1.4: 550/5.6 ≈ 100 nm.\n\nWHAT TO MEMORIZE\nFor a thin-film problem, ALWAYS check both interfaces for the π phase shift (which occurs only going from lower to higher index) before writing the interference condition — if both interfaces shift or neither does, the shifts cancel and you use the \"ordinary\" condition (2t = mλ/n for destructive, as used here); if exactly one interface shifts, the condition flips (2t = mλ/n becomes constructive instead). An anti-reflection coating is specifically designed as the double-shift case, so t = λ/4n minimizes reflection at m = 0. The trap 137.5 nm ≈ λ/4 comes from forgetting to divide by n at all."
+      },
+
+      {
+        "question": "A soap film (index 1.33) suspended vertically in air is viewed in reflected white light. At the thinnest visible part of the film — where a first bright (constructive) reflection band appears — the corresponding wavelength is 600 nm. What is the film's thickness there?",
+        "choices": [
+          "110 nm",
+          "150 nm",
+          "225 nm",
+          "300 nm",
+          "450 nm"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA soap film in air has air on BOTH sides (n = 1.00), so the top reflection (air → film, low to high index) picks up a π phase shift, while the bottom reflection (film → air, high to low index) does NOT. The two reflected rays are therefore already out of phase by half a wavelength before any path difference is considered — the shifts do NOT cancel here, unlike the anti-reflection coating case.\nWith one shift present, the CONSTRUCTIVE condition becomes:\n2nt = (m + ½)λ, minimized at m = 0:\nt = λ/(4n) = 600/(4 × 1.33).\n\nNUMERICS WITHOUT A CALCULATOR\n4 × 1.33 ≈ 5.3, and 600/5.3 ≈ 113. Rounding n down slightly to 1.3 gives 4×1.3=5.2 and 600/5.2 ≈ 115 — either estimate lands close to 110–115 nm, clearly closest to the 110 nm choice among options spread by factors of 1.3 or more.\n\n90-SECOND SOLUTION\nOne-shift case (air-film-air): constructive needs t = λ/4n = 600/(4×1.33) ≈ 113 nm ≈ 110 nm.\n\nWHAT TO MEMORIZE\nA film surrounded by the SAME medium on both sides (soap film in air, oil film with air above and water below only if their indices differ appropriately) has exactly ONE phase-shifting interface, so the interference conditions for bright and dark reflection are the OPPOSITE of a coating between two different media on a lens. Here bright (constructive) reflection needs 2nt = (m+½)λ rather than 2nt = mλ. Always draw both interfaces and check the index on each side before choosing which condition applies — the anti-reflection coating (Q3) and this soap film use the same t = λ/4n formula but for logically opposite reasons."
+      },
+
+      {
+        "question": "A double-slit experiment (slit spacing 0.40 mm, screen distance 2.0 m) is first run with light of wavelength 600 nm, producing a fringe spacing of 3.0 mm. Without moving anything else, the light source is switched to a wavelength of 450 nm. What is the new fringe spacing?",
+        "choices": [
+          "1.5 mm",
+          "2.0 mm",
+          "2.25 mm",
+          "3.0 mm",
+          "4.0 mm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFringe spacing is Δy = λL/d, so with L and d held fixed, Δy is directly proportional to λ.\nΔy_new/Δy_old = λ_new/λ_old = 450/600 = 3/4.\nΔy_new = 3.0 × (3/4) = 2.25 mm.\n\nNUMERICS WITHOUT A CALCULATOR\n450/600 simplifies to 3/4 by dividing both by 150 (or by inspection: 450 is three-quarters of 600). Then 3.0 × 3/4 = 2.25 mm — a clean fraction multiplication with no decimals to estimate.\n\n90-SECOND SOLUTION\nΔy ∝ λ. Ratio 450/600 = 3/4, so Δy_new = 3.0 × 3/4 = 2.25 mm.\n\nWHAT TO MEMORIZE\nFringe spacing Δy = λL/d scales linearly with wavelength (with d and L fixed), which makes ratio reasoning the fastest route whenever a problem changes only one variable — set up Δy_new/Δy_old as a ratio and let everything but the changed quantity cancel, rather than recomputing λL/d from scratch. This same proportional reasoning is what lets you handle a changed screen distance, slit spacing, or (as in a different question) a changed medium, all with one relation."
+      },
+
+      {
+        "question": "An ambulance siren emits sound at 400 Hz. The ambulance moves toward a stationary listener at a speed equal to 1/5 of the speed of sound. What frequency does the listener hear?",
+        "choices": [
+          "320 Hz",
+          "500 Hz",
+          "480 Hz",
+          "333 Hz",
+          "420 Hz"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a moving source approaching a stationary observer, the Doppler formula is\nf_obs = f_source × v/(v − v_source).\nHere v_source = v/5, so v − v_source = v − v/5 = (4/5)v.\nf_obs = 400 × v/((4/5)v) = 400 × (5/4) = 500 Hz.\nThe v's cancel completely — only the RATIO of source speed to sound speed matters, not either value individually.\n\nNUMERICS WITHOUT A CALCULATOR\nSince v_source = v/5, the denominator (v − v/5) is exactly 4/5 of v. Dividing by 4/5 is the same as multiplying by 5/4, so f_obs = 400 × 5/4 = 500 Hz — pure fraction arithmetic, no actual speed of sound value ever needed.\n\n90-SECOND SOLUTION\nSource speed is v/5, so f_obs = f × v/(4v/5) = f × 5/4 = 400 × 1.25 = 500 Hz.\n\nWHAT TO MEMORIZE\nf_obs = f_source(v ± v_observer)/(v ∓ v_source), with the sign chosen by physical reasoning (motion toward each other always raises the observed frequency, motion apart always lowers it) rather than memorized as a sign convention. A source approaching uses v − v_source in the denominator (denominator shrinks, frequency rises); a source receding uses v + v_source. Writing the source speed as a FRACTION of v (here 1/5) rather than a numerical value is a strong hint that the problem wants you to do the algebra symbolically and let v cancel — reach for that instead of plugging in 343 m/s."
+      },
+
+      {
+        "question": "A stationary train whistle emits sound at 300 Hz. A person on a second train moves directly toward the whistle at a speed equal to 1/4 of the speed of sound. What frequency does that person hear?",
+        "choices": [
+          "225 Hz",
+          "240 Hz",
+          "300 Hz",
+          "360 Hz",
+          "375 Hz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a moving OBSERVER and a stationary source, the Doppler formula is\nf_obs = f_source × (v ± v_observer)/v,\nwith the PLUS sign because the observer is moving TOWARD the source (motion together always raises the observed frequency).\nf_obs = 300 × (v + v/4)/v = 300 × (5/4) = 375 Hz.\nThe speed of sound itself cancels completely — only the ratio v_observer/v = 1/4 matters.\n\nNUMERICS WITHOUT A CALCULATOR\n(v + v/4)/v = 5/4 exactly, so f_obs = 300 × 5/4 = 375 Hz — multiply by 5, then divide by 4 (or divide first: 300/4 = 75, then 300+75 = 375).\n\n90-SECOND SOLUTION\nObserver approaching: f_obs = f(v + v_o)/v = 300 × 5/4 = 375 Hz.\n\nWHAT TO MEMORIZE\nKeep the MOVING-SOURCE and MOVING-OBSERVER Doppler formulas structurally distinct even though they look similar: for a moving source, the speed adjustment sits in the DENOMINATOR (v ∓ v_source); for a moving observer, it sits in the NUMERATOR (v ± v_observer). Both reduce to the same physical rule — approaching raises frequency, receding lowers it — but mixing up which term gets the adjustment is the single most common Doppler error. When both source and observer move, combine both adjustments in one formula: f_obs = f(v ± v_observer)/(v ∓ v_source)."
+      },
+
+      {
+        "question": "Light of wavelength 600 nm passes through a single slit and forms a diffraction pattern on a distant screen. The first diffraction minimum is observed at an angle of 3.0 mrad from the central axis. What is the width of the slit?",
+        "choices": [
+          "0.10 mm",
+          "0.20 mm",
+          "0.30 mm",
+          "0.60 mm",
+          "1.2 mm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe single-slit diffraction minima occur at\na sin θ = mλ, m = 1, 2, 3, ...\nThe first minimum is m = 1, and at this small angle sin θ ≈ θ:\na = λ/θ = (600 × 10⁻⁹)/(3.0 × 10⁻³).\n\nNUMERICS WITHOUT A CALCULATOR\nWrite both in the same power-of-ten form: 600 × 10⁻⁹ / 3.0 × 10⁻³ = (600/3.0) × 10⁻⁶ = 200 × 10⁻⁶ m = 2.0 × 10⁻⁴ m = 0.20 mm. Dividing 600 by 3 is a one-step mental calculation.\n\n90-SECOND SOLUTION\na = λ/θ = 600nm/3.0mrad = (600/3.0) × 10⁻⁶ m = 0.20 mm.\n\nWHAT TO MEMORIZE\nSingle-slit minima: a sin θ = mλ (the OPPOSITE convention from double-slit/grating maxima, d sin θ = mλ). This formula is symmetric in what it solves for — given any two of {a, θ, λ}, solve for the third the same way, which is exactly the flexibility GRE problems exploit by sometimes asking for the slit width instead of the angle. Keep sin θ ≈ θ in mind at these milliradian scales, and always convert wavelength and slit width to the SAME power of ten before dividing to avoid a units slip."
+      },
+
+      {
+        "question": "The human eye has a pupil diameter of about 5.0 mm. Given the Rayleigh criterion θ_min = 1.22λ/D and taking λ = 500 nm for visible light, what is the smallest angular separation the eye can theoretically resolve?",
+        "choices": [
+          "1.2 × 10⁻⁵ rad",
+          "6.1 × 10⁻⁵ rad",
+          "1.2 × 10⁻⁴ rad",
+          "6.1 × 10⁻⁴ rad",
+          "1.2 × 10⁻³ rad"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nθ_min = 1.22λ/D = 1.22 × (500 × 10⁻⁹)/(5.0 × 10⁻³).\nFirst reduce λ/D: 500×10⁻⁹/5.0×10⁻³ = 100×10⁻⁶ = 1.0×10⁻⁴.\nθ_min = 1.22 × 1.0 × 10⁻⁴ ≈ 1.2 × 10⁻⁴ rad.\n\nNUMERICS WITHOUT A CALCULATOR\nλ/D = 500×10⁻⁹/5.0×10⁻³: the mantissas divide evenly (500/5.0 = 100), and the exponents subtract (10⁻⁹/10⁻³ = 10⁻⁶), giving 100×10⁻⁶ = 1.0×10⁻⁴. Multiplying by 1.22 barely changes the leading digits: 1.22×10⁻⁴ rounds to 1.2×10⁻⁴ rad.\n\n90-SECOND SOLUTION\nθ_min = 1.22 × 500nm/5.0mm = 1.22 × 1.0×10⁻⁴ ≈ 1.2×10⁻⁴ rad.\n\nWHAT TO MEMORIZE\nθ_min = 1.22λ/D is the Rayleigh criterion for any circular aperture — telescope, camera lens, or the eye's own pupil — with the 1.22 factor coming from the first zero of the circular (Airy) diffraction pattern rather than the plain single-slit result. A SMALLER aperture gives WORSE resolution (larger θ_min); this is why the eye's angular resolution, at roughly 10⁻⁴ rad, is far worse than a large telescope's, at roughly 10⁻⁶–10⁻⁷ rad — a useful order-of-magnitude anchor for sanity-checking any resolution answer."
+      },
+
+      {
+        "question": "An object is placed 30 cm in front of a converging lens of focal length 10 cm. A second converging lens of focal length 15 cm is placed 40 cm beyond the first lens, on the same axis. Where does the FINAL image form, measured from the second lens?",
+        "choices": [
+          "15 cm behind the second lens",
+          "37.5 cm behind the second lens",
+          "25 cm behind the second lens",
+          "60 cm behind the second lens",
+          "The final image is virtual, in front of the second lens"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nHandle each lens in turn, treating the first lens's image as the object for the second.\nLENS 1: 1/d_i = 1/f − 1/d_o = 1/10 − 1/30 = 3/30 − 1/30 = 2/30, so d_i = 15 cm (a real image, 15 cm past lens 1).\nThis image becomes the object for lens 2. Since the lenses are 40 cm apart and the image sits 15 cm past lens 1, the object distance for lens 2 is 40 − 15 = 25 cm (a real object, since the image formed before reaching lens 2).\nLENS 2: 1/d_i = 1/f − 1/d_o = 1/15 − 1/25 = 5/75 − 3/75 = 2/75, so d_i = 75/2 = 37.5 cm.\nThe final image forms 37.5 cm behind the second lens.\n\nNUMERICS WITHOUT A CALCULATOR\nBoth steps use the same trick: find a common denominator for the two fractions, subtract, then flip. For lens 1: 1/10 − 1/30 uses denominator 30 (1/10 = 3/30), giving 2/30 → invert to 30/2 = 15. For lens 2: 1/15 − 1/25 uses denominator 75 (1/15 = 5/75, 1/25 = 3/75), giving 2/75 → invert to 75/2 = 37.5. Picking the LCD deliberately (30, then 75) keeps every step in whole numbers until the final division.\n\n90-SECOND SOLUTION\nLens 1: 1/10 − 1/30 = 2/30 → d_i = 15 cm. Object for lens 2 is 40−15 = 25 cm away. Lens 2: 1/15 − 1/25 = 2/75 → d_i = 37.5 cm.\n\nWHAT TO MEMORIZE\nMulti-lens systems are always solved lens by lens, in order, with each lens's image becoming the next lens's object — there is no shortcut formula worth memorizing instead. The one genuinely tricky bookkeeping step is finding each new object distance: it is the SEPARATION BETWEEN LENSES minus the previous image distance (if the previous image formed before the next lens), and if that previous image would have formed PAST the next lens, the object distance goes negative (a \"virtual object,\" still handled by the same lens equation). Always sketch which side of each lens the previous image lands on before computing the next step."
+      },
+
+      {
+        "question": "A converging lens forms a real image of an object. If the object is moved closer to the lens, but is kept farther away than the focal point, what happens to the image distance and the image size?",
+        "choices": [
+          "Image distance increases; image size decreases",
+          "Image distance decreases; image size decreases",
+          "Image distance increases; image size increases",
+          "Image distance decreases; image size stays the same",
+          "Image distance stays the same; image size increases"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nStart from the lens equation 1/d_i = 1/f − 1/d_o. As the object distance d_o decreases (object moves closer, but stays beyond f), the term 1/d_o INCREASES, which makes 1/f − 1/d_o SMALLER, so 1/d_i decreases and d_i INCREASES — the image moves farther from the lens.\nMagnification is m = −d_i/d_o. Since d_i is increasing while d_o is decreasing, the ratio d_i/d_o grows, so the image gets LARGER.\nPhysically this matches everyday experience: bringing an object closer to a projector lens (while still outside the focal length) makes the projected image both farther away and bigger — which is exactly what you do when you want a larger projection.\n\n90-SECOND SOLUTION\n1/d_i = 1/f − 1/d_o: smaller d_o means larger 1/d_o, so 1/d_i shrinks and d_i grows. Magnification |d_i/d_o| then grows too — image distance and size both increase.\n\nWHAT TO MEMORIZE\nFor a converging lens with the object beyond f, moving the object toward f makes the image move away and grow, while moving the object toward infinity makes the image approach f and shrink toward a point — this trade-off (larger image ⟺ farther image, for a fixed lens) is worth knowing qualitatively without re-deriving it every time, since many GRE optics questions ask for a DIRECTION of change rather than a number. As the object approaches f exactly, d_i → ∞, consistent with parallel rays emerging (no image forms) — a good limiting-case check on this reasoning."
+      },
+
+      {
+        "question": "A thin converging lens of focal length 20 cm forms a real image of an object. The image is measured to be exactly 4 times the size of the object. How far is the object from the lens?",
+        "choices": [
+          "25 cm",
+          "16 cm",
+          "80 cm",
+          "5 cm",
+          "100 cm"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a real image, the magnification magnitude is |m| = d_i/d_o = 4, so d_i = 4d_o.\nSubstitute into the lens equation:\n1/f = 1/d_o + 1/d_i = 1/d_o + 1/(4d_o) = (4 + 1)/(4d_o) = 5/(4d_o).\nSo d_o = 5f/4 = 5(20)/4 = 25 cm.\n\nNUMERICS WITHOUT A CALCULATOR\n1/d_o + 1/(4d_o) combines to 5/(4d_o) by simple fraction addition (common denominator 4d_o). Setting that equal to 1/20 gives 4d_o = 5×20 = 100, so d_o = 25 cm — the whole problem reduces to one cross-multiplication.\n\n90-SECOND SOLUTION\nd_i = 4d_o for a real image of 4× magnification. Then 1/f = 1/d_o + 1/4d_o = 5/4d_o, so d_o = 5f/4 = 25 cm.\n\nWHAT TO MEMORIZE\nWhen a problem gives you a magnification ratio instead of a distance, immediately write d_i = |m|d_o (real image) or d_i = −|m|d_o (virtual image, same-side/upright case) and substitute directly into the lens equation — this avoids solving two unknowns from two separate equations. A real, magnified image (|m| > 1) always means the object sits between f and 2f, which is a fast sanity check: here d_o = 25 cm indeed falls between f = 20 cm and 2f = 40 cm."
+      },
+
+      {
+        "question": "A converging lens of focal length 20 cm is placed in direct contact with a diverging lens of focal length 30 cm, forming a single combined optical element. What is the focal length of the combination?",
+        "choices": [
+          "10 cm",
+          "12 cm",
+          "60 cm",
+          "−10 cm",
+          "50 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor two thin lenses in direct contact, their powers (P = 1/f) simply add — the combination behaves as one thin lens whose focal length satisfies\n1/f_combo = 1/f₁ + 1/f₂.\nThe diverging lens contributes a NEGATIVE focal length:\n1/f_combo = 1/20 + 1/(−30) = 3/60 − 2/60 = 1/60.\nf_combo = 60 cm (a net converging lens, but much weaker than the 20 cm lens alone).\n\nNUMERICS WITHOUT A CALCULATOR\nCommon denominator 60 makes both fractions clean integers: 1/20 = 3/60 and 1/30 = 2/60. Subtracting (since the second lens is diverging): 3/60 − 2/60 = 1/60, so f_combo = 60 cm — no decimals anywhere.\n\n90-SECOND SOLUTION\nPowers add: 1/f = 1/20 − 1/30 = 3/60 − 2/60 = 1/60, so f = 60 cm.\n\nWHAT TO MEMORIZE\nFor thin lenses in direct contact, POWERS ADD: P_combo = P₁ + P₂ = 1/f₁ + 1/f₂, with a diverging lens always contributing a negative power. This is exactly analogous to how you'd combine two thin prisms' bending powers, and it is much faster than running the two-lens system through the lens equation twice (which is necessary only when the lenses are SEPARATED, as in a telescope). A converging lens combined with a weaker diverging lens always remains net converging (positive combined power) but with a longer focal length than the converging lens alone — exactly the achromatic-doublet idea used to correct chromatic aberration in real optical instruments."
+      },
+
+      {
+        "question": "A light ray travels inside a glass block of index n = √2 ≈ 1.41 and strikes the flat glass-air boundary from inside. What is the critical angle for total internal reflection, measured from the normal?",
+        "choices": [
+          "30°",
+          "45°",
+          "54.7°",
+          "60°",
+          "There is no critical angle for this index"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTotal internal reflection occurs when light traveling in a denser medium strikes a boundary with a less dense medium at an angle beyond the critical angle, where the refracted ray would graze the boundary at exactly 90°.\nApply Snell's law with the refraction angle fixed at 90°:\nn sin θ_c = (1) sin 90° = 1.\nsin θ_c = 1/n = 1/√2.\nθ_c = 45°.\n\nNUMERICS WITHOUT A CALCULATOR\n1/√2 = √2/2 ≈ 0.707 is one of the standard angles worth having memorized: sin(45°) = √2/2 exactly. Recognizing n = √2 as a deliberately clean value (rather than needing to estimate an arcsine) is itself a signal that the answer is a \"nice\" angle.\n\n90-SECOND SOLUTION\nsin θ_c = 1/n = 1/√2, and sin(45°) = 1/√2 exactly, so θ_c = 45°.\n\nWHAT TO MEMORIZE\nThe critical angle formula sin θ_c = n₂/n₁ (light going from denser n₁ to less-dense n₂) follows directly from setting the refraction angle to 90° in Snell's law — it is a special case, not a separate law to memorize. Recognize √2, √3, and simple fractions (1/2, 2/3) as signals that a problem wants a standard angle (30°, 45°, 60°) rather than a decimal you need to estimate. TIR requires going from HIGHER to LOWER index; light traveling from air into glass has no critical angle at all, since it can always refract through."
+      },
+
+      {
+        "question": "A light ray in air strikes the flat surface of a glass block (index 1.5) at an angle of incidence whose sine is exactly 0.90. What is the sine of the angle of refraction inside the glass?",
+        "choices": [
+          "0.90",
+          "0.75",
+          "1.35",
+          "0.45",
+          "0.60"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nSnell's law: n₁ sin θ₁ = n₂ sin θ₂, with n₁ = 1 (air) and n₂ = 1.5 (glass):\n(1)(0.90) = (1.5) sin θ₂.\nsin θ₂ = 0.90/1.5 = 0.60.\n\nNUMERICS WITHOUT A CALCULATOR\n0.90/1.5 = 9/15 = 3/5 = 0.60 — recognize this as simplifying a fraction rather than performing division. (Bonus structure: sin θ₂ = 0.60 and the corresponding cos θ₂ = 0.80 form a 3-4-5 right triangle, since 0.6² + 0.8² = 0.36 + 0.64 = 1 — useful if a follow-up question asks for the refraction angle itself, which would be exactly 36.87°.)\n\n90-SECOND SOLUTION\nsin θ₂ = sin θ₁ × (n₁/n₂) = 0.90 × (1/1.5) = 0.90/1.5 = 0.60.\n\nWHAT TO MEMORIZE\nSnell's law is fundamentally a statement about the PRODUCT n sinθ being conserved across a boundary — write it as n₁sinθ₁ = n₂sinθ₂ and solve for whichever piece is missing, rather than memorizing a directional \"bends toward/away from normal\" rule as your primary tool (though that remains a fast sanity check: going into a higher-index medium, the ray bends TOWARD the normal, and indeed 0.60 < 0.90 confirms the refracted ray is closer to the normal). Recognizing 0.6–0.8 and other Pythagorean-triple sine/cosine pairs (3-4-5, 5-12-13) speeds up any follow-up angle or trigonometric work substantially."
+      },
+
+      {
+        "question": "A string of length 1.0 m and linear mass density 1.0 × 10⁻³ kg/m is held under a tension of 10 N, fixed at both ends. What is the frequency of its fundamental (lowest) standing-wave mode?",
+        "choices": [
+          "25 Hz",
+          "35 Hz",
+          "50 Hz",
+          "100 Hz",
+          "200 Hz"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWave speed on a string: v = √(T/μ) = √(10/(1.0 × 10⁻³)) = √(10,000) = 100 m/s.\nFor a string fixed at both ends, the fundamental mode has a wavelength of twice the string length: λ₁ = 2L.\nf₁ = v/λ₁ = v/(2L) = 100/(2 × 1.0) = 50 Hz.\n\nNUMERICS WITHOUT A CALCULATOR\nT/μ = 10/0.001 = 10,000, and √10,000 = 100 exactly (moving the decimal: √(10⁴) = 10²). Then f₁ = 100/2 = 50 Hz — every step is either a clean square root of a power of ten or a simple division.\n\n90-SECOND SOLUTION\nv = √(T/μ) = √10000 = 100 m/s. f₁ = v/2L = 100/2 = 50 Hz.\n\nWHAT TO MEMORIZE\nWave speed on a string is v = √(T/μ), and this ALONE determines nothing about frequency until you also fix a wavelength from the boundary conditions — for a string fixed at both ends, λ_n = 2L/n, giving f_n = nv/(2L) = n·f₁. The fundamental always has ONE antinode (half a wavelength fits the string). Keep this structurally distinct from a pipe open at both ends (same λ_n = 2L/n, all harmonics present) versus a pipe closed at one end (λ_n = 4L/n, only ODD harmonics present) — mixing up which boundary condition applies to which physical system is the most common error in this topic."
+      },
+
+      {
+        "question": "An organ pipe closed at one end and open at the other has a fundamental frequency of 220 Hz. Which of the following is the next-lowest resonant frequency the pipe can produce above the fundamental?",
+        "choices": [
+          "330 Hz",
+          "440 Hz",
+          "550 Hz",
+          "660 Hz",
+          "880 Hz"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA pipe closed at one end supports only the ODD harmonics of its fundamental: f₁, 3f₁, 5f₁, .... This is because the closed end must be a displacement node and the open end must be a displacement antinode, a boundary condition that only odd-numbered quarter-wavelength patterns satisfy.\nThe next resonance above f₁ = 220 Hz is therefore the 3rd harmonic:\nf₃ = 3 × 220 = 660 Hz.\n(440 Hz — the 2nd harmonic — is a trap: it is a resonance for a pipe OPEN at both ends, or a string, but it does NOT exist for a pipe closed at one end.)\n\nNUMERICS WITHOUT A CALCULATOR\n3 × 220 = 660 — a single-digit multiplication once you know which harmonic number to use.\n\n90-SECOND SOLUTION\nClosed-open pipe: only odd harmonics. Next one after f₁ is 3f₁ = 3 × 220 = 660 Hz.\n\nWHAT TO MEMORIZE\nA pipe (or any system) closed at one end and open at the other supports ONLY ODD harmonics of its fundamental — the even harmonics are simply absent, not just weak. This is different from a pipe open at both ends (or a string fixed at both ends), which supports every integer harmonic. Whenever a problem mentions \"closed at one end,\" immediately restrict your harmonic list to 1, 3, 5, 7, ... — reaching for 2f₁ here is the single most common wrong answer on this exact question type."
+      },
+
+      {
+        "question": "A traveling wave is described by y(x,t) = A sin(kx − ωt), where A, k, and ω are all positive constants. Which of the following correctly describes this wave?",
+        "choices": [
+          "It travels in the −x direction with speed ω/k",
+          "It travels in the +x direction with speed k/ω",
+          "It is a standing wave, not a traveling wave",
+          "It travels in the +x direction with speed ω/k",
+          "It travels in the +x direction with speed ωk"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA function of the form f(kx − ωt) describes a disturbance that moves in the +x direction: as time t increases, the ARGUMENT kx − ωt stays constant (and the wave shape is preserved) only if x increases along with t — meaning the whole pattern shifts toward +x.\nTo find the speed, track a point of constant phase: kx − ωt = constant. Differentiating with respect to time: k(dx/dt) − ω = 0, so dx/dt = ω/k. This is the wave's propagation speed.\n(A function of kx + ωt, by contrast, would travel in the −x direction — the sign between the two terms determines the direction.)\n\n90-SECOND SOLUTION\nkx − ωt form travels in +x (need x to grow as t grows to keep the argument fixed); speed is ω/k from setting the argument's time-derivative to zero.\n\nWHAT TO MEMORIZE\nFor y = f(kx ∓ ωt): a MINUS sign between kx and ωt means +x propagation, a PLUS sign means −x propagation — this is worth having as an instant reflex rather than re-deriving every time, since GRE questions often just flash the functional form and ask for direction. The propagation speed is always ω/k (equivalently λf, or λ/T), regardless of the sign. Do not confuse this phase velocity ω/k with the group velocity dω/dk — they coincide only when ω is directly proportional to k (a non-dispersive medium), which is the implicit assumption unless a dispersion relation is given explicitly."
+      },
+
+      {
+        "question": "A wave has a dispersion relation ω² = c²k² + m²c⁴/ℏ², where c and m are positive constants. In the limit of very large k (short wavelength), what happens to the group velocity dω/dk?",
+        "choices": [
+          "It approaches 0",
+          "It approaches ∞",
+          "It approaches c/2",
+          "It remains equal to the phase velocity ω/k for all k",
+          "It approaches c"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThis is the relativistic energy-momentum dispersion relation in disguise (ℏω = E, ℏk = p, giving E² = p²c² + m²c⁴), so the physical answer is already known: at very high momentum, a massive particle behaves like a massless one, and its group velocity (which represents the physical speed of the wave packet, i.e., the particle) approaches c.\nTo see it directly: differentiate ω² = c²k² + m²c⁴/ℏ² implicitly with respect to k:\n2ω(dω/dk) = 2c²k, so dω/dk = c²k/ω = c²k/√(c²k² + m²c⁴/ℏ²).\nAs k → ∞, the m²c⁴/ℏ² term becomes negligible compared to c²k² inside the square root, so ω → ck, and\ndω/dk → c²k/(ck) = c.\n\n90-SECOND SOLUTION\nAt large k, the mass term becomes negligible next to c²k², so ω ≈ ck (like a massless wave), and the group velocity dω/dk approaches c.\n\nWHAT TO MEMORIZE\nWhenever a dispersion relation has the form ω² = c²k² + (mass term), it is the relativistic E² = p²c² + m²c⁴ relation written in wave language — recognizing this immediately tells you the physical behavior (group velocity → c at high k/high momentum, group velocity → 0 at low k, where the particle is essentially at rest) without needing to grind through the calculus. More generally, group velocity dω/dk is what carries energy and information and cannot exceed c, while phase velocity ω/k can exceed c without any physical contradiction — a useful distinction whenever a problem's phase velocity comes out faster than light."
+      },
+
+      {
+        "question": "Two tuning forks are struck simultaneously. One is known to vibrate at exactly 440 Hz. The combined sound is heard to swell and fade 6 times per second. What are the two possible frequencies of the second fork?",
+        "choices": [
+          "434 Hz or 446 Hz",
+          "437 Hz or 443 Hz",
+          "428 Hz or 452 Hz",
+          "440 Hz exactly (only one possibility)",
+          "220 Hz or 880 Hz"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe \"swelling and fading\" of combined sound is the beat phenomenon, and the beat frequency is simply the absolute difference between the two individual frequencies:\nf_beat = |f₁ − f₂|.\n6 = |440 − f₂|.\nThis gives two solutions: f₂ = 440 − 6 = 434 Hz, or f₂ = 440 + 6 = 446 Hz. Beats alone cannot distinguish whether the unknown fork is sharp or flat relative to the known one — that ambiguity is exactly why beat measurements are often combined with a second technique (like slightly loading one fork with wax and observing whether the beat rate increases or decreases) to determine which side it's on.\n\n90-SECOND SOLUTION\nf_beat = |f₁ − f₂| = 6 Hz, so f₂ = 440 ± 6 = 434 or 446 Hz — both are valid without more information.\n\nWHAT TO MEMORIZE\nBeat frequency is always just the absolute difference of two nearby frequencies, f_beat = |f₁ − f₂| — no factor of 2, no averaging, nothing more elaborate. Because it's an absolute value, a beat measurement by itself is inherently AMBIGUOUS about which frequency is higher: there are always two symmetric solutions, f_known ± f_beat, unless the problem gives you extra information (a resolving technique, or an independent constraint) to pick one. Watch for GRE questions that specifically test whether you recognize this ambiguity, rather than confidently reporting only one answer."
+      }
+
+    ]
+  },
+
 
 // ============================================================
 //
