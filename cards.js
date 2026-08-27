@@ -2377,6 +2377,275 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Electromagnetism Test 2",
+    "added": "2026-08-27",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A uniform electric field of magnitude 500 N/C points in the +z direction. A hemispherical surface of radius 0.20 m is placed with its flat circular face perpendicular to the field, so that the field enters through the flat face and exits through the curved dome. What is the magnitude of the electric flux through the CURVED (dome) portion alone?",
+        "choices": [
+          "0",
+          "31 N·m²/C",
+          "63 N·m²/C",
+          "126 N·m²/C",
+          "251 N·m²/C"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe hemisphere encloses no charge, so the flux through the CLOSED surface (dome + flat face) is zero by Gauss's law. That means the flux out through the dome must exactly cancel the flux in through the flat face:\n|Φ_dome| = |Φ_flat| = E × (area of the flat circular face) = E πR².\nThe dome's own curved area (2πR²) never enters the calculation — only its projection onto a plane perpendicular to the field, which is the flat disk of radius R.\nΦ = 500 × π × (0.20)² = 500 × π × 0.040 = 20π ≈ 63 N·m²/C.\n\nNUMERICS WITHOUT A CALCULATOR\n(0.20)² = 0.040 exactly. Then 500 × 0.040 = 20, so the answer is 20π. Since π ≈ 3.14, 20π ≈ 62.8, which rounds to 63. Notice you never need a decimal expansion of π beyond two digits — the choices are spread by factors of 2, so 20 × 3 = 60 already identifies the right one.\n\n90-SECOND SOLUTION\nNo enclosed charge means net flux through the closed surface is zero, so the dome carries the same flux as the flat disk: EπR² = 500π(0.04) = 20π ≈ 63.\n\nWHAT TO MEMORIZE\nFor flux in a uniform field, only the area PROJECTED perpendicular to the field matters — Φ = E·A_projected — so any curved cap spanning the same rim carries the same flux as the flat disk that closes it. This is the fastest way to handle \"flux through a dome/cone/irregular cap\" questions, and it follows directly from Gauss's law with zero enclosed charge. The trap 126 N·m²/C comes from using the dome's actual surface area 2πR² instead of its projection πR²."
+      },
+
+      {
+        "question": "An isolated conducting sphere of radius 9.0 cm sits far from any other object. Taking 1/(4πε₀) = 9.0 × 10⁹ N·m²/C², its capacitance is most nearly",
+        "choices": [
+          "1.0 pF",
+          "10 pF",
+          "100 pF",
+          "1000 pF",
+          "10,000 pF"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAn isolated sphere carrying charge Q sits at potential V = kQ/R relative to infinity. Capacitance is defined as C = Q/V, so\nC = Q/(kQ/R) = R/k.\nEquivalently C = 4πε₀R.\nC = 0.090 m / (9.0 × 10⁹) = 1.0 × 10⁻¹¹ F = 10 pF.\n\nNUMERICS WITHOUT A CALCULATOR\nBecause C = R/k, the 9's cancel by design: 0.090/9.0 = 0.010, and 10⁰/10⁹ gives 10⁻⁹, so C = 0.010 × 10⁻⁹ = 1.0 × 10⁻¹¹ F. Converting, 10⁻¹¹ F = 10 × 10⁻¹² F = 10 pF. No long division is needed — just cancel the leading digits and count powers of ten.\n\n90-SECOND SOLUTION\nC = R/k = 0.090/(9 × 10⁹) = 10⁻¹¹ F = 10 pF.\n\nWHAT TO MEMORIZE\nA conductor does not need a second plate to have capacitance: an isolated sphere has C = 4πε₀R = R/k. Writing it as R/k is the version worth carrying, since k = 9 × 10⁹ makes the arithmetic collapse instantly. The useful order-of-magnitude anchor is that a sphere of laboratory size (≈10 cm) has a capacitance of ≈10 pF — real capacitors reach microfarads only by using large plate areas and very small separations."
+      },
+
+      {
+        "question": "A conducting sphere of radius 0.10 m carries a total charge of 2.0 μC. Taking 1/(4πε₀) = 9.0 × 10⁹ N·m²/C², how much energy is stored in the electric field surrounding the sphere?",
+        "choices": [
+          "0.18 J",
+          "0.36 J",
+          "0.72 J",
+          "1.8 J",
+          "3.6 J"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAll the charge on a conductor sits on its surface, so the field is zero inside and the entire field energy lies outside r = R. The stored energy equals the work needed to assemble the charge, which for a conducting sphere is\nU = kQ²/(2R).\n(The factor of ½ appears because the sphere's potential rises from 0 to its final value as the charge is brought in — you pay the average potential, not the final one.)\nU = (9.0 × 10⁹)(2.0 × 10⁻⁶)²/(2 × 0.10)\n  = (9.0 × 10⁹)(4.0 × 10⁻¹²)/(0.20)\n  = 3.6 × 10⁻²/0.20 = 0.18 J.\n\nNUMERICS WITHOUT A CALCULATOR\nSquare first: (2.0 × 10⁻⁶)² = 4.0 × 10⁻¹². Multiply by k: 9 × 4 = 36 and 10⁹ × 10⁻¹² = 10⁻³, giving 36 × 10⁻³ = 0.036. Dividing by 2R = 0.20 is the same as multiplying by 5: 0.036 × 5 = 0.18 J. Every step is a one-digit multiplication.\n\n90-SECOND SOLUTION\nU = kQ²/2R = (9e9)(4e-12)/0.2 = 0.036/0.2 = 0.18 J.\n\nWHAT TO MEMORIZE\nThe assembly energy of a charged conductor is U = ½QV, and for a sphere (V = kQ/R) that becomes U = kQ²/2R. The ½ is the whole point and is the single most common thing to drop — omitting it gives 0.36 J, the first distractor. The same ½QV expression covers every capacitor: U = ½QV = ½CV² = Q²/2C, all three being the same statement."
+      },
+
+      {
+        "question": "An isolated parallel-plate capacitor in vacuum carries charge +Q on one plate and −Q on the other. The plates each have area A and are separated by a distance small compared with their size. What is the magnitude of the attractive force between the plates?",
+        "choices": [
+          "Q²/(2ε₀A²)",
+          "Q²/(ε₀A)",
+          "2Q²/(ε₀A)",
+          "Q²/(4ε₀A)",
+          "Q²/(2ε₀A)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe field BETWEEN the plates is E = σ/ε₀ = Q/(ε₀A), but that total field is produced by BOTH plates together. A plate cannot exert force on itself, so the force on one plate comes only from the field produced by the OTHER plate, which is half the total:\nE_other = σ/(2ε₀) = Q/(2ε₀A).\nForce on a plate carrying charge Q sitting in that field:\nF = Q × E_other = Q²/(2ε₀A).\n\nAn independent check by energy: the stored energy is U = Q²/(2C) with C = ε₀A/x at separation x, so U = Q²x/(2ε₀A). Since the charge is fixed (the capacitor is isolated), F = −dU/dx = −Q²/(2ε₀A) — the same magnitude, negative meaning attractive. Two independent routes agreeing is a strong confirmation.\n\n90-SECOND SOLUTION\nEach plate sits in the OTHER plate's field, σ/2ε₀, not the full σ/ε₀. So F = Q·σ/(2ε₀) = Q²/(2ε₀A). The factor-of-two answer Q²/(ε₀A) is what you get by wrongly using the total field.\n\nWHAT TO MEMORIZE\nA charge distribution never exerts a net force on itself, so when computing the force on a plate (or on any charged surface) use only the field produced by everything ELSE — for a parallel-plate capacitor that is exactly half the interior field. Equivalently, the electrostatic pressure on any conducting surface is σ²/2ε₀. The energy route F = −dU/dx at fixed charge is the reliable cross-check, and it is worth remembering that you must hold Q fixed (isolated) rather than V fixed (battery attached), since those give different-looking derivatives."
+      },
+
+      {
+        "question": "Two protons are released from rest when they are 1.0 nm apart, and they then fly apart under their mutual repulsion. Given that ke² = 1.44 eV·nm, what is the kinetic energy of EACH proton when they are very far apart?",
+        "choices": [
+          "0.36 eV",
+          "0.72 eV",
+          "1.44 eV",
+          "2.88 eV",
+          "14.4 eV"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe initial electrostatic potential energy of the pair is\nU = ke²/r = (1.44 eV·nm)/(1.0 nm) = 1.44 eV.\nBoth protons start at rest, so all of this converts to kinetic energy at infinite separation. But that 1.44 eV is the energy of the PAIR — by symmetry the two identical protons share it equally (equal masses, equal and opposite momenta, so equal speeds and equal kinetic energies).\nKE each = 1.44/2 = 0.72 eV.\n\nNUMERICS WITHOUT A CALCULATOR\nThe constant ke² = 1.44 eV·nm is built so that no unit conversion is needed: divide by the separation in nanometers and read the answer in electron volts. Here 1.44/1.0 = 1.44 eV total, and halving gives 0.72 eV. If the separation had been 2.0 nm you would get 0.72 eV total and 0.36 eV each — the whole calculation stays one division and one halving.\n\n90-SECOND SOLUTION\nU = 1.44 eV·nm / 1.0 nm = 1.44 eV total, split evenly between two identical particles: 0.72 eV each.\n\nWHAT TO MEMORIZE\nCarry ke² = 1.44 eV·nm (equivalently 1.44 MeV·fm). It converts Coulomb energies into electron volts with no powers of ten to track, and it is the single most useful electrostatics constant for atomic- and nuclear-scale estimates. The conceptual trap here is answering 1.44 eV: energy conservation gives the total released, and you must then ask how it divides — equal masses share equally, but if the two particles had unequal masses the lighter one would carry the larger share (equal and opposite momenta means KE = p²/2m favors small m)."
+      },
+
+      {
+        "question": "Eight identical point charges, each +q, are fixed at the eight corners of a cube of edge length a. What are the electric field and the electric potential at the exact center of the cube? (Take the potential to be zero infinitely far away, and let k = 1/4πε₀.)",
+        "choices": [
+          "E = 0 and V = 0",
+          "E = 0 and V = 8kq/a",
+          "E = 8kq/a² and V = 16kq/(√3 a)",
+          "E = 0 and V = 16kq/(√3 a)",
+          "E = 0 and V = 4kq/(√3 a)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFIELD: The eight corners come in four pairs that are diametrically opposite through the center. Each pair contributes two field vectors of equal magnitude pointing in exactly opposite directions, so every pair cancels. E = 0 at the center.\n\nPOTENTIAL: Potential is a scalar, so there is no cancellation — the eight contributions simply add. The distance from the center to any corner is half the body diagonal:\nd = ½ × (a√3) = (√3/2)a.\nV = 8 × kq/d = 8kq/((√3/2)a) = 16kq/(√3 a).\n\nSo E = 0 while V is decidedly nonzero.\n\n90-SECOND SOLUTION\nOpposite corners cancel in pairs, so E = 0. Potentials just add: eight charges each a distance (√3/2)a away give V = 8kq/((√3/2)a) = 16kq/(√3 a).\n\nWHAT TO MEMORIZE\nE = 0 and V = 0 are independent conditions — neither implies the other. A symmetric arrangement routinely gives zero field with nonzero potential (this cube, or the center of a uniformly charged ring), while a point midway between +q and −q gives zero potential with nonzero field. Also worth having automatic: the body diagonal of a cube of edge a is a√3, so center-to-corner is (√3/2)a; the face diagonal is a√2. The choice V = 0 is the trap of assuming the symmetry that kills the vector sum must also kill the scalar sum."
+      },
+
+      {
+        "question": "An infinite flat sheet lying in the xy-plane carries a uniform surface current density of 20 A/m flowing in the +x direction. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what is the magnitude of the magnetic field at a point 5.0 cm above the sheet?",
+        "choices": [
+          "1.3 × 10⁻⁵ T",
+          "2.5 × 10⁻⁵ T",
+          "5.0 × 10⁻⁵ T",
+          "1.3 × 10⁻⁴ T",
+          "2.5 × 10⁻⁴ T"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nApply Ampère's law to a rectangular loop straddling the sheet, with two sides of length L parallel to the sheet (one above, one below) and the short sides perpendicular. By symmetry B is parallel to the sheet, perpendicular to the current, equal in magnitude above and below, and reversed in direction across the sheet. The perpendicular sides contribute nothing.\n∮B·dl = B L + B L = 2BL = μ₀ I_enclosed = μ₀ K L,\nso B = μ₀K/2.\nB = (4π × 10⁻⁷)(20)/2 = (4π × 10⁻⁷)(10) = 4π × 10⁻⁶ ≈ 1.3 × 10⁻⁵ T.\nCrucially, the distance 5.0 cm never enters — the field of an infinite current sheet is uniform and independent of how far away you are.\n\nNUMERICS WITHOUT A CALCULATOR\nμ₀K/2 = (4π × 10⁻⁷)(20)/2. Do the integers first: 20/2 = 10, and 4 × 10 = 40, so you have 40π × 10⁻⁷ = 4π × 10⁻⁶. With π ≈ 3.14, 4π ≈ 12.6, giving 12.6 × 10⁻⁶ = 1.26 × 10⁻⁵ ≈ 1.3 × 10⁻⁵ T. The only real arithmetic is 4 × 3.14.\n\n90-SECOND SOLUTION\nB = μ₀K/2 = (4π×10⁻⁷)(10) = 4π×10⁻⁶ ≈ 1.3 × 10⁻⁵ T, independent of distance.\n\nWHAT TO MEMORIZE\nAn infinite sheet of current produces a UNIFORM field B = μ₀K/2 on each side, pointing in opposite directions above and below — the exact magnetic analogue of the infinite charged sheet's uniform E = σ/2ε₀. Both are distance-independent, and in both cases the factor of ½ is what gets dropped (giving the distractor 2.5 × 10⁻⁵ T here). Recognizing that a given quantity does NOT depend on a number the problem supplies is itself a useful check that you have identified the right geometry."
+      },
+
+      {
+        "question": "A thin insulating ring of radius 0.10 m carries a total charge of 1.0 μC spread uniformly around it. The ring is spun about its own axis at a constant angular velocity of 1000 rad/s. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what is the magnitude of the magnetic field at the center of the ring?",
+        "choices": [
+          "1.0 × 10⁻¹⁰ T",
+          "1.0 × 10⁻⁹ T",
+          "6.3 × 10⁻⁹ T",
+          "1.0 × 10⁻⁸ T",
+          "6.3 × 10⁻⁸ T"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA rotating ring of charge is a current loop. The whole charge Q passes any fixed point once per revolution, and the period is T = 2π/ω, so the equivalent steady current is\nI = Q/T = Qω/(2π).\nThe field at the center of a circular loop is B = μ₀I/(2R). Substituting:\nB = μ₀Qω/(4πR).\nB = (4π × 10⁻⁷)(1.0 × 10⁻⁶)(1000)/(4π × 0.10).\nThe 4π cancels top and bottom:\nB = (10⁻⁷)(10⁻⁶)(10³)/(0.10) = 10⁻¹⁰/0.10 = 1.0 × 10⁻⁹ T.\n\nNUMERICS WITHOUT A CALCULATOR\nWrite μ₀ as 4π × 10⁻⁷ and notice the 4π in the denominator cancels it exactly — this is why the answer is a clean power of ten with no π left over. Then just add exponents: 10⁻⁷ × 10⁻⁶ × 10³ = 10⁻¹⁰, and dividing by 0.10 multiplies by 10, giving 10⁻⁹ T. Whenever μ₀ appears over a 4π, expect the π's to vanish and look for a pure power-of-ten answer.\n\n90-SECOND SOLUTION\nSpinning charge means current I = Qω/2π. Then B = μ₀I/2R = μ₀Qω/4πR, the 4π cancels μ₀, and you are left with 10⁻⁷·10⁻⁶·10³/0.1 = 1.0 × 10⁻⁹ T.\n\nWHAT TO MEMORIZE\nAny charge in periodic motion is a current: I = q/T = qω/2π = qf. That one substitution converts rotating rings, orbiting electrons, and spinning shells into ordinary current loops you already know how to handle. Pair it with B = μ₀I/2R at the center of a loop. This \"moving charge equals current\" step is the entire content of such problems — everything after it is a formula you already have."
+      },
+
+      {
+        "question": "A point charge of 1.6 × 10⁻¹⁹ C moves with speed 1.0 × 10⁶ m/s. What is the magnitude of the magnetic field it produces at a point 1.0 × 10⁻¹⁰ m away, in the direction perpendicular to its velocity? (Take μ₀/4π = 1.0 × 10⁻⁷ T·m/A.)",
+        "choices": [
+          "1.6 × 10⁻⁴ T",
+          "1.6 × 10⁻³ T",
+          "1.6 × 10⁻² T",
+          "1.6 × 10⁻¹ T",
+          "1.6 T"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA slowly moving point charge produces the field\nB = (μ₀/4π) q v sin θ / r²,\nwhich is the Biot–Savart law with the current element I dl replaced by qv. At a point perpendicular to the velocity, sin θ = 1 (this is where the field is strongest).\nB = (1.0 × 10⁻⁷)(1.6 × 10⁻¹⁹)(1.0 × 10⁶)/(1.0 × 10⁻¹⁰)²\n  = (1.0 × 10⁻⁷)(1.6 × 10⁻¹³)/(1.0 × 10⁻²⁰)\n  = (1.0 × 10⁻⁷)(1.6 × 10⁷) = 1.6 T.\n\nNUMERICS WITHOUT A CALCULATOR\nTrack the exponents separately from the 1.6. Numerator: 10⁻¹⁹ × 10⁶ = 10⁻¹³. Denominator: (10⁻¹⁰)² = 10⁻²⁰ — squaring doubles the exponent, the step most often fumbled. Dividing: 10⁻¹³/10⁻²⁰ = 10⁷. Finally 10⁻⁷ × 10⁷ = 10⁰ = 1, so the answer is just 1.6 T. Since every choice shares the leading 1.6, the entire question is a power-of-ten bookkeeping exercise.\n\n90-SECOND SOLUTION\nB = 10⁻⁷ × qv/r² = 10⁻⁷ × (1.6×10⁻¹³)/(10⁻²⁰) = 10⁻⁷ × 1.6×10⁷ = 1.6 T.\n\nWHAT TO MEMORIZE\nFor a point charge moving well below light speed, B = (μ₀/4π) qv × r̂/r², the direct analogue of Coulomb's law with an extra cross product. Keep μ₀/4π = 10⁻⁷ T·m/A on instant recall — it is the magnetic partner of k = 9 × 10⁹ and turns most Biot–Savart estimates into exponent arithmetic. The tesla-scale answer here is not an accident: at atomic distances, the field a single moving electron produces really is of order teslas, which is why internal magnetic fields matter so much in atomic fine structure."
+      },
+
+      {
+        "question": "A long straight solid cylindrical wire of radius 2.0 mm carries a steady current of 10 A distributed uniformly over its cross-section. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what is the magnitude of the magnetic field at a point 1.0 mm from the axis — that is, INSIDE the wire?",
+        "choices": [
+          "1.0 × 10⁻⁴ T",
+          "2.5 × 10⁻⁴ T",
+          "3.1 × 10⁻⁴ T",
+          "5.0 × 10⁻⁴ T",
+          "1.0 × 10⁻³ T"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nApply Ampère's law to a circle of radius r inside the wire. Only the current passing through that circle counts, and since the current is spread uniformly over the cross-section, the enclosed fraction is the area ratio:\nI_enc = I (πr²)/(πR²) = I r²/R².\nThen B(2πr) = μ₀I r²/R², so\nB = μ₀I r/(2πR²).\nNote the field grows LINEARLY with r inside the wire (it does not blow up at the center), then falls off as 1/r outside.\nB = (2 × 10⁻⁷)(10)(1.0 × 10⁻³)/(2.0 × 10⁻³)²\n  = (2 × 10⁻⁶)(1.0 × 10⁻³)/(4.0 × 10⁻⁶) = (2 × 10⁻⁶)(250) = 5.0 × 10⁻⁴ T.\n\nNUMERICS WITHOUT A CALCULATOR\nThe cleanest route is to find the surface field first and then scale. At the surface, B = μ₀I/2πR = (2 × 10⁻⁷)(10)/(2.0 × 10⁻³) = 2 × 10⁻⁶/2 × 10⁻³ = 1.0 × 10⁻³ T. Since B grows linearly with r inside, the point at r = R/2 has exactly half the surface value: 5.0 × 10⁻⁴ T. Using μ₀/2π = 2 × 10⁻⁷ (rather than carrying 4π × 10⁻⁷ and dividing) removes π from the arithmetic entirely.\n\n90-SECOND SOLUTION\nInside a uniform wire B ∝ r, so the field at half the radius is half the surface field. Surface: μ₀I/2πR = 2×10⁻⁷(10)/2×10⁻³ = 1.0 × 10⁻³ T. Half of that is 5.0 × 10⁻⁴ T.\n\nWHAT TO MEMORIZE\nAmpère's law counts only the current actually enclosed, so for a uniformly filled conductor the enclosed current scales as r²/R², giving B ∝ r inside and B ∝ 1/r outside, with the two matching at the surface. Carry μ₀/2π = 2 × 10⁻⁷ T·m/A as a working constant — it turns straight-wire problems into one-line arithmetic. The distractor 1.0 × 10⁻³ T is the surface (or outside) value, which is what you get by using the full current instead of the enclosed fraction."
+      },
+
+      {
+        "question": "Two long straight parallel wires are 0.40 m apart. One carries a steady current of 2.0 A and the other carries 6.0 A, both in the SAME direction. At what distance from the 2.0 A wire, along the line joining them, is the net magnetic field zero?",
+        "choices": [
+          "0.05 m",
+          "0.10 m",
+          "0.13 m",
+          "0.20 m",
+          "0.30 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBetween two wires carrying current in the same direction, the two fields point in OPPOSITE directions, so a cancellation point exists somewhere between them. (Outside the pair both fields point the same way and can never cancel.)\nLet x be the distance from the 2.0 A wire; the distance to the 6.0 A wire is (0.40 − x). Each wire gives B = μ₀I/2πr, so setting the magnitudes equal:\nI₁/x = I₂/(0.40 − x)\n2.0/x = 6.0/(0.40 − x)\n2.0(0.40 − x) = 6.0x\n0.80 − 2.0x = 6.0x\n0.80 = 8.0x → x = 0.10 m.\n\nNUMERICS WITHOUT A CALCULATOR\nEvery constant (μ₀, 2π) cancels because both wires use the same formula — only the ratio of currents matters. The currents are in the ratio 1:3, so the null point must be three times closer to the weaker wire; splitting 0.40 m in the ratio 1:3 gives 0.10 m and 0.30 m. The point sits 0.10 m from the 2.0 A wire. You can do this entirely by proportion without writing an equation.\n\n90-SECOND SOLUTION\nCurrents 2:6 = 1:3, so the null is three times nearer the smaller current: 0.40 × (1/4) = 0.10 m from the 2.0 A wire.\n\nWHAT TO MEMORIZE\nB = μ₀I/2πr for a long straight wire, and the structural fact that a field null between two like sources always splits the separation in the ratio of the source strengths — the null sits closer to the weaker one. Same-direction currents give a null BETWEEN the wires; opposite-direction currents give a null OUTSIDE, beyond the weaker wire. Deciding which region can host the null before doing algebra saves the most time, and 0.30 m is the trap of measuring from the wrong wire."
+      },
+
+      {
+        "question": "A straight conducting rod 1.2 m long moves at a constant 5.0 m/s through a uniform 0.50 T magnetic field, with the rod, its velocity, and the field all mutually perpendicular. The rod is completely isolated — it is not connected to any circuit. What is the potential difference between its two ends?",
+        "choices": [
+          "0.60 V",
+          "1.2 V",
+          "1.5 V",
+          "2.4 V",
+          "3.0 V"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEvery free charge inside the moving rod feels a magnetic force qv × B directed along the rod's length. Charge therefore piles up at one end and depletes at the other, and that separation builds an internal electric field opposing further accumulation.\nEquilibrium is reached almost instantly, when the electric force balances the magnetic force on a charge:\nqE = qvB → E = vB.\nThis field is uniform along the rod, so the potential difference between the ends is\nV = EL = vBL = (5.0)(0.50)(1.2) = 3.0 V.\n\nBecause the rod is isolated there is no closed circuit, so NO current flows in the steady state — the rod simply sits polarized, behaving like a small battery on open circuit.\n\nNUMERICS WITHOUT A CALCULATOR\nReorder the factors to make the multiplication trivial: (0.50)(1.2) = 0.60, and then 0.60 × 5.0 = 3.0 V. Multiplying by 0.50 is just halving, so pairing it with the 1.2 first avoids any decimal work.\n\n90-SECOND SOLUTION\nCharges separate until qE = qvB, so E = vB and V = BLv = (0.5)(1.2)(5.0) = 3.0 V. No current flows — there is no circuit.\n\nWHAT TO MEMORIZE\nMotional emf is BLv whenever the rod, velocity, and field are mutually perpendicular, and this holds whether or not a circuit is attached — the emf is a property of the moving conductor, while the CURRENT depends on whether there is a closed path. For an isolated rod the answer is a steady polarization set by the equilibrium condition qE = qvB, with no current and no dissipation. Recognizing that \"no circuit\" changes the current but not the emf is the conceptual core; if the rod's ends were connected through a resistance R, the same 3.0 V would drive I = 3.0/R."
+      },
+
+      {
+        "question": "A square loop of wire, 0.20 m on a side and with total resistance 0.20 Ω, is being pulled at a constant 4.0 m/s out of a region of uniform 0.50 T magnetic field directed perpendicular to the loop. While one side of the loop is still inside the field region and the opposite side is outside, what external force is required to keep the loop moving at constant speed?",
+        "choices": [
+          "0.05 N",
+          "0.10 N",
+          "0.20 N",
+          "0.40 N",
+          "0.80 N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nOnly the side still inside the field contributes motional emf:\nemf = BLv = 0.50 × 0.20 × 4.0 = 0.40 V.\nInduced current: I = emf/R = 0.40/0.20 = 2.0 A.\nThat current flows through the in-field side, which then feels a magnetic force F = BIL opposing the motion (Lenz's law):\nF = 0.50 × 2.0 × 0.20 = 0.20 N.\nSince the loop moves at constant speed, the external force must exactly balance this: F_ext = 0.20 N.\nCombining the steps gives the compact form F = B²L²v/R = (0.25)(0.04)(4.0)/(0.20) = 0.20 N.\n\nNUMERICS WITHOUT A CALCULATOR\nTake it one stage at a time with round numbers: BLv = 0.5 × 0.2 × 4 = 0.4 V. Then I = 0.4/0.2 = 2 A. Then F = BIL = 0.5 × 2 × 0.2 = 0.2 N. Each step is a single multiplication of one- or two-digit numbers. Using the combined formula instead requires squaring 0.5 and 0.2, which is more error-prone — the staged route is faster by hand.\n\n90-SECOND SOLUTION\nemf = BLv = 0.4 V → I = 2 A → F = BIL = 0.2 N, and at constant speed the applied force equals this.\n\nWHAT TO MEMORIZE\nFor a loop leaving a field region, F = B²L²v/R, but the reliable route is the three-step chain emf = BLv, then I = emf/R, then F = BIL — it uses only relations you already know and it makes the direction argument (Lenz: the force always opposes the motion) obvious. Note also that the power you supply, P = Fv = 0.80 W, exactly equals the I²R = (2)²(0.2) = 0.80 W dissipated in the loop, which is a free consistency check worth running whenever a problem gives you both force and resistance."
+      },
+
+      {
+        "question": "A long solenoid of radius 2.0 cm has 1000 turns per meter. The current in it is increasing at a steady rate of 100 A/s. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what is the magnitude of the induced electric field at a point 4.0 cm from the solenoid's axis — that is, OUTSIDE the windings?",
+        "choices": [
+          "1.6 × 10⁻⁴ V/m",
+          "3.1 × 10⁻⁴ V/m",
+          "6.3 × 10⁻⁴ V/m",
+          "1.3 × 10⁻³ V/m",
+          "2.5 × 10⁻³ V/m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe magnetic field is confined to the solenoid's interior, where dB/dt = μ₀n(dI/dt):\ndB/dt = (4π × 10⁻⁷)(1000)(100) = 4π × 10⁻² ≈ 0.126 T/s.\nApply Faraday's law in integral form to a circular path of radius r = 4.0 cm centered on the axis. The flux threading that path comes ONLY from the solenoid's cross-section (area πa², with a = 2.0 cm), because B = 0 outside:\n∮E·dl = E(2πr) = |dΦ/dt| = (dB/dt)(πa²).\nE = (dB/dt) a²/(2r) = (0.126)(2.0 × 10⁻²)²/(2 × 4.0 × 10⁻²)\n = (0.126)(4.0 × 10⁻⁴)/(8.0 × 10⁻²) = 6.3 × 10⁻⁴ V/m.\n\nNUMERICS WITHOUT A CALCULATOR\nFirst dB/dt = 4π × 10⁻⁷ × 10⁵ = 4π × 10⁻² ≈ 0.126 T/s (using 4π ≈ 12.6). Then note a²/(2r) = (0.02)²/(0.08) = 0.0004/0.08 = 0.005 exactly. Multiplying: 0.126 × 0.005 = 6.3 × 10⁻⁴ V/m. Keeping the geometric factor a²/2r as one clean number (0.005) avoids juggling powers of ten mid-calculation.\n\n90-SECOND SOLUTION\ndB/dt = μ₀n(dI/dt) = 4π×10⁻² ≈ 0.126 T/s. Outside, the enclosed flux is fixed at (dB/dt)πa², so E = (dB/dt)a²/2r = 0.126 × 0.005 = 6.3 × 10⁻⁴ V/m.\n\nWHAT TO MEMORIZE\nA changing magnetic field induces a circulating electric field even where B itself is ZERO — outside a solenoid, B = 0 but E ≠ 0. The working rule is E(2πr) = |dΦ_enclosed/dt|: inside the windings the enclosed flux grows as r², giving E ∝ r, while outside the enclosed flux is capped at the solenoid's own cross-section, giving E ∝ 1/r. Recognizing which regime you are in — and that only the flux ACTUALLY ENCLOSED counts — is the whole problem."
+      },
+
+      {
+        "question": "Three identical light bulbs are connected to an ideal battery: bulb X is in series with the battery, and bulbs Y and Z are connected in parallel with each other, with that parallel pair in series with X. Assuming the bulbs' resistances do not change with temperature, how do their brightnesses compare, and what happens to bulb Y if bulb Z burns out (becomes an open circuit)?",
+        "choices": [
+          "X is brightest; Y and Z are equal and dimmer. If Z burns out, Y gets brighter.",
+          "X is brightest; Y and Z are equal and dimmer. If Z burns out, Y gets dimmer.",
+          "All three are equally bright. If Z burns out, Y is unchanged.",
+          "Y and Z are brightest and equal; X is dimmer. If Z burns out, Y gets dimmer.",
+          "Y and Z are brightest and equal; X is dimmer. If Z burns out, Y gets brighter."
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBRIGHTNESS RANKING. Let each bulb have resistance R. Bulb X carries the full battery current I. That current then splits evenly between Y and Z, so each of them carries I/2.\nBrightness is power dissipated, P = I²R, and all three have the same R, so brightness is set entirely by the current each carries:\nP_X = I²R, while P_Y = P_Z = (I/2)²R = I²R/4.\nX is four times as bright as either Y or Z, and Y and Z are equally bright.\n\nWHAT HAPPENS WHEN Z BURNS OUT. With Z gone, the circuit is just X in series with Y, so the total resistance changes from R + R/2 = 1.5R to R + R = 2R. The total current therefore FALLS, from V/1.5R = 0.67V/R to V/2R = 0.5V/R.\nBut Y no longer shares that current with anyone — it now carries all of it. Before: Y carried half of 0.67V/R = 0.33V/R. After: Y carries all of 0.5V/R = 0.5V/R.\nY's current rises from 0.33V/R to 0.5V/R, so Y gets BRIGHTER (while X, carrying less total current, gets dimmer).\n\n90-SECOND SOLUTION\nSame R for all, so brightness tracks current. X carries the full current; Y and Z split it, so X is brightest and Y = Z. Remove Z and Y stops sharing: even though total current drops somewhat, Y's own share goes up, so Y brightens.\n\nWHAT TO MEMORIZE\nFor identical resistors, brightness ranks by current, and P = I²R makes a series element carrying the full current the brightest. The genuinely useful habit is the two-part reasoning when a branch is removed: total resistance goes UP (so total current goes DOWN), but the surviving parallel branch stops sharing (so its own current goes UP) — these compete, and here the sharing effect wins. Always compare the specific element's current before and after rather than reasoning only from the total."
+      },
+
+      {
+        "question": "A real battery is measured under two different loads. When it delivers 1.0 A, its terminal voltage is 11.5 V; when it delivers 4.0 A, its terminal voltage is 10.0 V. What are the battery's emf and internal resistance?",
+        "choices": [
+          "emf = 11.5 V, r = 0.25 Ω",
+          "emf = 12.0 V, r = 0.25 Ω",
+          "emf = 11.5 V, r = 0.50 Ω",
+          "emf = 12.0 V, r = 0.50 Ω",
+          "emf = 12.5 V, r = 1.0 Ω"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA real battery obeys V_terminal = ε − Ir: the terminal voltage falls below the emf by the drop across the internal resistance.\nWrite the equation at each measurement:\n11.5 = ε − (1.0)r\n10.0 = ε − (4.0)r\nSubtract the second from the first to eliminate ε:\n11.5 − 10.0 = (4.0 − 1.0)r → 1.5 = 3.0r → r = 0.50 Ω.\nSubstitute back: ε = 11.5 + (1.0)(0.50) = 12.0 V.\n\nNUMERICS WITHOUT A CALCULATOR\nThe subtraction trick makes this pure mental arithmetic: the terminal voltage dropped 1.5 V when the current rose by 3.0 A, and internal resistance is exactly that slope, r = ΔV/ΔI = 1.5/3.0 = 0.50 Ω. Then extrapolate back to zero current to get the emf: at 1.0 A you are already 0.5 V below the emf, so ε = 11.5 + 0.5 = 12.0 V. No simultaneous-equation machinery needed.\n\n90-SECOND SOLUTION\nr = ΔV/ΔI = 1.5/3.0 = 0.50 Ω. Extrapolate to I = 0: ε = 11.5 + (1.0)(0.5) = 12.0 V.\n\nWHAT TO MEMORIZE\nV_terminal = ε − Ir, which plotted against current is a straight line whose intercept is the emf and whose SLOPE MAGNITUDE is the internal resistance. Reading r off as ΔV/ΔI is faster and less error-prone than solving simultaneous equations, and it generalizes to any two-point data set of this kind. Remember that the emf is the open-circuit (zero-current) terminal voltage — answering 11.5 V is the trap of quoting a loaded measurement as though it were the emf."
+      },
+
+      {
+        "question": "A plane electromagnetic wave travels through vacuum. At a particular instant and location, the wave's electric field energy density is u_E and its magnetic field energy density is u_B. Which of the following is true?",
+        "choices": [
+          "u_B = u_E/c², so the magnetic contribution is negligible",
+          "u_B = c²u_E, so the electric contribution is negligible",
+          "u_E = 2u_B at every point",
+          "u_B = 2u_E at every point",
+          "u_E = u_B at every point and every instant"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe two energy densities are\nu_E = ½ε₀E² and u_B = B²/2μ₀.\nIn a plane wave in vacuum the field magnitudes are locked together by B = E/c. Substitute:\nu_B = (E/c)²/(2μ₀) = E²/(2μ₀c²).\nNow use c² = 1/(ε₀μ₀), so 1/(μ₀c²) = ε₀:\nu_B = ε₀E²/2 = u_E.\nThe two are exactly equal — not approximately, and not only on average. Because E and B oscillate in phase in a vacuum plane wave, they peak together and vanish together, so the equality holds at every instant and every point.\n\n90-SECOND SOLUTION\nB = E/c and c² = 1/ε₀μ₀ together force B²/2μ₀ = ε₀E²/2. The electric and magnetic energy densities are equal everywhere, always.\n\nWHAT TO MEMORIZE\nIn a vacuum plane wave: B = E/c, the fields are in phase and mutually perpendicular, and the energy is split exactly evenly between the electric and magnetic parts. The even split means the total energy density is u = ε₀E² (not ½ε₀E²), and the intensity follows as I = c⟨u⟩ = ½cε₀E₀². The reason the magnetic energy is NOT negligible despite B being numerically tiny (B = E/c makes B smaller by a factor of 3 × 10⁸) is that u_B divides by μ₀, which is correspondingly tiny — the two smallnesses cancel exactly. Judging importance from the raw size of B is the conceptual trap in choices (A) and (B)."
+      },
+
+      {
+        "question": "Given ε₀ = 8.85 × 10⁻¹² F/m and μ₀ = 4π × 10⁻⁷ T·m/A, the quantity 1/√(ε₀μ₀) is most nearly",
+        "choices": [
+          "1.0 × 10⁸ m/s",
+          "2.0 × 10⁸ m/s",
+          "3.0 × 10⁸ m/s",
+          "9.0 × 10⁸ m/s",
+          "3.0 × 10⁹ m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nMaxwell's equations in vacuum give a wave equation whose speed is 1/√(ε₀μ₀), and evaluating it was the historical evidence that light IS an electromagnetic wave.\nε₀μ₀ = (8.85 × 10⁻¹²)(4π × 10⁻⁷).\nTake 4π ≈ 12.57, so ε₀μ₀ ≈ 8.85 × 12.57 × 10⁻¹⁹ ≈ 111 × 10⁻¹⁹ = 1.11 × 10⁻¹⁷.\n√(1.11 × 10⁻¹⁷) = √(11.1 × 10⁻¹⁸) = √11.1 × 10⁻⁹ ≈ 3.33 × 10⁻⁹.\n1/(3.33 × 10⁻⁹) ≈ 3.0 × 10⁸ m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo tricks make this tractable. First, 8.85 × 12.57 ≈ 111 is easy if you round to 9 × 12.5 = 112.5 — close enough, since the choices differ by factors of 3 or more. Second, before taking a square root, rewrite the power of ten as an EVEN exponent: 1.11 × 10⁻¹⁷ = 11.1 × 10⁻¹⁸, so the root is √11.1 × 10⁻⁹ ≈ 3.33 × 10⁻⁹. (√11.1 ≈ 3.33 because 3.3² = 10.89.) Finally, 1/3.33 ≈ 0.30, giving 0.30 × 10⁹ = 3.0 × 10⁸ m/s. Rounding this aggressively is safe here precisely because the answer choices are widely spaced.\n\n90-SECOND SOLUTION\nThis is just c. ε₀μ₀ ≈ 1.1 × 10⁻¹⁷, its square root is ≈ 3.3 × 10⁻⁹, and the reciprocal is ≈ 3.0 × 10⁸ m/s.\n\nWHAT TO MEMORIZE\nc = 1/√(ε₀μ₀) — the relation that ties the electrostatic and magnetostatic constants to the speed of light and identifies light as an electromagnetic wave. Beyond the formula itself, the transferable skill is the square-root technique: always shift the power of ten to an even exponent before taking the root, so the root of the exponent is exact and only the mantissa needs estimating. Recognizing at a glance that this expression must come out to 3 × 10⁸ m/s also lets you use it as a units-and-algebra check in other problems."
+      },
+
+      {
+        "question": "Which of Maxwell's equations, taken together, guarantee that electric charge is conserved — that is, that ∇·J + ∂ρ/∂t = 0?",
+        "choices": [
+          "Gauss's law for electricity together with the Ampère–Maxwell law",
+          "Gauss's law for electricity together with Gauss's law for magnetism",
+          "Faraday's law together with Gauss's law for magnetism",
+          "Faraday's law together with the Ampère–Maxwell law",
+          "Charge conservation is an independent postulate, not implied by Maxwell's equations"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nStart from the Ampère–Maxwell law:\n∇ × B = μ₀J + μ₀ε₀ ∂E/∂t.\nTake the divergence of both sides. The divergence of any curl is identically zero, so the left side vanishes:\n0 = μ₀(∇·J) + μ₀ε₀ ∂(∇·E)/∂t.\nNow bring in Gauss's law, ∇·E = ρ/ε₀:\n0 = μ₀(∇·J) + μ₀ε₀ ∂(ρ/ε₀)/∂t = μ₀(∇·J) + μ₀ ∂ρ/∂t.\nDividing by μ₀:\n∇·J + ∂ρ/∂t = 0,\nwhich is exactly the continuity equation — charge conservation. Only Gauss's law for electricity and the Ampère–Maxwell law were used.\n\nHistorically this is precisely why Maxwell had to ADD the displacement current term. Without ∂E/∂t, taking the divergence of ∇ × B = μ₀J would force ∇·J = 0, which is false whenever charge accumulates anywhere (as it does on a charging capacitor plate).\n\n90-SECOND SOLUTION\nTake the divergence of the Ampère–Maxwell law; the curl term dies, and substituting Gauss's law converts the remaining piece into ∂ρ/∂t. That yields the continuity equation, so it is those two equations that do the work.\n\nWHAT TO MEMORIZE\nCharge conservation is not an extra assumption — it is a consequence of Maxwell's equations, obtained by taking the divergence of the Ampère–Maxwell law and substituting Gauss's law. The identity ∇·(∇ × anything) = 0 is the engine of the derivation and is worth having automatic, along with its partner ∇ × (∇ of anything) = 0. The deeper takeaway is the motivation for the displacement current: the original Ampère law was mathematically inconsistent with accumulating charge, and the ∂E/∂t term is exactly what repairs it."
+      },
+
+      {
+        "question": "A nonrelativistic point charge moves in a circle of fixed radius r and radiates electromagnetic energy. If its speed is doubled while the radius is held fixed, by what factor does its radiated power change?",
+        "choices": [
+          "2",
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe Larmor result is that radiated power depends on the square of the acceleration:\nP ∝ a².\nFor circular motion the acceleration is centripetal:\na = v²/r.\nWith r held fixed, doubling v multiplies the acceleration by 2² = 4.\nThen the power, going as a², changes by 4² = 16.\n\nChaining the dependence directly: P ∝ a² ∝ (v²/r)² = v⁴/r², so at fixed radius P ∝ v⁴, and doubling v gives 2⁴ = 16.\n\nNUMERICS WITHOUT A CALCULATOR\nThis is pure exponent bookkeeping — no constants are needed because the question asks for a ratio. Track the chain of powers: v enters the acceleration squared, and the acceleration enters the power squared, so v appears to the fourth power overall. Doubling then gives 2⁴ = 16. Whenever a question asks \"by what factor,\" resist plugging in numbers and just compose the scaling exponents.\n\n90-SECOND SOLUTION\nP ∝ a² and a = v²/r, so at fixed r, P ∝ v⁴. Doubling v gives a factor of 2⁴ = 16.\n\nWHAT TO MEMORIZE\nAn accelerating charge radiates with power proportional to the square of its acceleration (the Larmor law, P = q²a²/6πε₀c³). What is worth carrying is the proportionality P ∝ q²a², not the collection of constants — nearly every exam question on radiation asks for a ratio or a scaling, where the constants cancel. Also worth noting: a charge in uniform circular motion is accelerating even though its speed is constant, so it radiates continuously. That fact is exactly why the classical planetary atom is unstable, and why synchrotrons lose energy so rapidly."
+      }
+
+    ]
+  },
+
 
   {
     "name": "Classical Mechanics - Composite Systems & Pulleys",
