@@ -20,6 +20,11 @@ const STORAGE_KEY = "flashcards-progress";
 // them. Renaming an exam orphans its saved color, which is an accepted
 // trade-off here.
 const COLOR_KEY = "flashcards-colors";
+// Same trade-off as COLOR_KEY: keyed by exam name, lives only in this
+// browser, and a rename orphans past attempts. Capped per exam so it can't
+// grow without bound.
+const HISTORY_KEY = "flashcards-history";
+const HISTORY_LIMIT_PER_EXAM = 20;
 const PALETTE = ["red", "orange", "amber", "green", "teal", "blue", "purple", "pink"];
 const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
 const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
@@ -239,6 +244,8 @@ function save() {
         missedIndexes: state.missedIndexes ? [...state.missedIndexes] : null,
         mode: state.mode ?? null,
         timedSeconds: state.timedSeconds ?? null,
+        reportRecorded: !!state.reportRecorded,
+        historyIndex: state.historyIndex ?? null,
         // Bank the running total so a closed tab does not accrue time.
         timer: state.timer
           ? { banked: elapsedMs(), running: state.timer.running, limit: state.timer.limit }
@@ -289,6 +296,8 @@ function restore() {
     missedIndexes: saved.missedIndexes ? new Set(saved.missedIndexes) : null,
     mode: saved.mode ?? null,
     timedSeconds: saved.timedSeconds ?? null,
+    reportRecorded: !!saved.reportRecorded,
+    historyIndex: saved.historyIndex ?? null,
     // A restored question gets its full budget back rather than resuming
     // mid-countdown, so a refresh can never skip a question instantly.
     qSince: Date.now(),
@@ -364,6 +373,36 @@ function openColorPopover(anchorBtn, exam) {
   }, 0);
 }
 
+// ---------- attempt history ----------
+
+function loadHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY) || "{}");
+  } catch (e) {
+    return {};
+  }
+}
+
+// Most recent last, so callers reverse for a newest-first list.
+function examHistory(examName) {
+  return loadHistory()[examName] || [];
+}
+
+// `wrong` is a list of 1-based question numbers, and `total` is the card
+// count at the time of the attempt — both frozen so an attempt still reads
+// correctly even if the exam is edited later.
+function recordHistory(examName, correct, total, wrong) {
+  const all = loadHistory();
+  const list = all[examName] || [];
+  list.push({ date: new Date().toISOString(), correct, total, wrong });
+  all[examName] = list.slice(-HISTORY_LIMIT_PER_EXAM);
+  try {
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(all));
+  } catch (e) {
+    /* private mode or full quota — this attempt just won't be remembered */
+  }
+}
+
 // ---------- top-level navigation ----------
 
 function showLogin() {
@@ -378,6 +417,11 @@ function showMenu() {
 
 function showIntro(exam) {
   state = { phase: "intro", greeted: true, exam };
+  render();
+}
+
+function showHistory(exam) {
+  state = { phase: "history", greeted: true, exam, historyIndex: null };
   render();
 }
 
@@ -433,6 +477,7 @@ function render() {
   else if (state.phase === "results") renderResults();
   else if (state.phase === "review") renderReview();
   else if (state.phase === "report") renderReportCard();
+  else if (state.phase === "history") renderHistory();
 
   paintTimer();
   syncTicking();
@@ -581,6 +626,16 @@ function renderIntro() {
   );
   box.appendChild(actions);
 
+  const pastCount = examHistory(exam.name).length;
+  if (pastCount > 0) {
+    const histWrap = document.createElement("div");
+    histWrap.className = "intro-history-link";
+    histWrap.appendChild(
+      button(`View past attempts (${pastCount})`, "btn link", () => showHistory(exam))
+    );
+    box.appendChild(histWrap);
+  }
+
   appEl.appendChild(box);
 }
 
@@ -594,6 +649,17 @@ function formatAdded(iso) {
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
   if (!m) return iso;
   return `${MONTH_NAMES[Number(m[2]) - 1]} ${Number(m[3])}, ${m[1]}`;
+}
+
+// A history entry's date is a full timestamp (same day re-attempts are
+// common), so this formats in the viewer's local time rather than parsing
+// by hand like formatAdded does for the date-only "added" field.
+function formatHistoryDate(iso) {
+  const d = new Date(iso);
+  const hour12 = d.getHours() % 12 || 12;
+  const minutes = String(d.getMinutes()).padStart(2, "0");
+  const ampm = d.getHours() < 12 ? "AM" : "PM";
+  return `${MONTH_NAMES[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()} · ${hour12}:${minutes} ${ampm}`;
 }
 
 function renderMenu() {
@@ -984,6 +1050,20 @@ function renderReview() {
   const next =
     state.page === total - 1
       ? button("View report card", "btn primary", () => {
+          // Guarded so paging Back to review and forward again doesn't log
+          // the same attempt twice — the flag is saved, so it survives a
+          // refresh too.
+          if (!state.reportRecorded) {
+            const wrong = finalMissedIndexes();
+            const exam = state.exam;
+            recordHistory(
+              exam.name,
+              exam.cards.length - wrong.size,
+              exam.cards.length,
+              [...wrong].map((i) => i + 1).sort((a, b) => a - b)
+            );
+            state.reportRecorded = true;
+          }
           state.phase = "report";
           render();
         })
@@ -1000,12 +1080,36 @@ function renderReview() {
 //
 // A compact right/wrong grid meant to be screenshotted, not read on screen —
 // so it shows the FINAL result per question (after any retry), one glance,
-// no scrolling to page through review cards again.
+// no scrolling to page through review cards again. Also used, unchanged, to
+// redraw a past attempt from history.
+
+// `wrongZeroBased` is a Set of zero-based question indexes.
+function buildReportGrid(cardCount, wrongZeroBased) {
+  const grid = document.createElement("div");
+  grid.className = "report-grid";
+  for (let i = 0; i < cardCount; i++) {
+    const isWrong = wrongZeroBased.has(i);
+    const cell = document.createElement("div");
+    cell.className = "report-cell" + (isWrong ? " wrong" : " right");
+    const num = document.createElement("span");
+    num.className = "report-num";
+    num.textContent = i + 1;
+    const mark = document.createElement("span");
+    mark.className = "report-mark";
+    mark.textContent = isWrong ? "✗" : "✓";
+    cell.append(num, mark);
+    grid.appendChild(cell);
+  }
+  return grid;
+}
 
 function renderReportCard() {
   const exam = state.exam;
   const wrong = finalMissedIndexes();
   const correctCount = exam.cards.length - wrong.size;
+  // The current attempt was just recorded, so >1 means there's a prior one
+  // worth comparing against.
+  const pastCount = examHistory(exam.name).length;
 
   titleEl.textContent = exam.name;
   phaseEl.textContent = "Report card";
@@ -1025,21 +1129,7 @@ function renderReportCard() {
   score.textContent = `${correctCount} / ${exam.cards.length} correct`;
   header.append(title, score);
 
-  const grid = document.createElement("div");
-  grid.className = "report-grid";
-  exam.cards.forEach((_, i) => {
-    const isWrong = wrong.has(i);
-    const cell = document.createElement("div");
-    cell.className = "report-cell" + (isWrong ? " wrong" : " right");
-    const num = document.createElement("span");
-    num.className = "report-num";
-    num.textContent = i + 1;
-    const mark = document.createElement("span");
-    mark.className = "report-mark";
-    mark.textContent = isWrong ? "✗" : "✓";
-    cell.append(num, mark);
-    grid.appendChild(cell);
-  });
+  const grid = buildReportGrid(exam.cards.length, wrong);
 
   const actions = document.createElement("div");
   actions.className = "results-actions";
@@ -1051,8 +1141,90 @@ function renderReportCard() {
       render();
     })
   );
+  if (pastCount > 1) {
+    actions.appendChild(
+      button(`View past attempts (${pastCount})`, "btn link", () => showHistory(exam))
+    );
+  }
 
   box.append(header, grid, actions);
+  appEl.appendChild(box);
+}
+
+// ---------- history ----------
+
+function renderHistory() {
+  const exam = state.exam;
+  const entries = examHistory(exam.name).slice().reverse(); // newest first
+
+  titleEl.textContent = exam.name;
+  phaseEl.textContent = state.historyIndex == null ? "Past attempts" : "Past attempt";
+  setProgress(1);
+  appEl.innerHTML = "";
+
+  const box = document.createElement("div");
+  box.className = "report-card";
+
+  const header = document.createElement("div");
+  header.className = "report-header";
+  const title = document.createElement("p");
+  title.className = "report-title";
+  title.textContent = exam.name;
+  header.appendChild(title);
+
+  if (state.historyIndex == null) {
+    const sub = document.createElement("p");
+    sub.className = "report-score";
+    sub.textContent =
+      entries.length === 1 ? "1 past attempt" : `${entries.length} past attempts`;
+    header.appendChild(sub);
+
+    const list = document.createElement("div");
+    list.className = "history-list";
+    entries.forEach((entry, i) => {
+      const row = document.createElement("button");
+      row.type = "button";
+      row.className = "history-row";
+      const date = document.createElement("span");
+      date.className = "history-date";
+      date.textContent = formatHistoryDate(entry.date);
+      const score = document.createElement("span");
+      score.className = "history-score";
+      score.textContent = `${entry.correct} / ${entry.total}`;
+      row.append(date, score);
+      row.addEventListener("click", () => {
+        state.historyIndex = i;
+        render();
+      });
+      list.appendChild(row);
+    });
+
+    const actions = document.createElement("div");
+    actions.className = "results-actions";
+    actions.appendChild(button("Back", "btn primary", () => showIntro(exam)));
+
+    box.append(header, list, actions);
+  } else {
+    const entry = entries[state.historyIndex];
+    const sub = document.createElement("p");
+    sub.className = "report-score";
+    sub.textContent = `${formatHistoryDate(entry.date)} · ${entry.correct} / ${entry.total} correct`;
+    header.appendChild(sub);
+
+    const grid = buildReportGrid(entry.total, new Set(entry.wrong.map((n) => n - 1)));
+
+    const actions = document.createElement("div");
+    actions.className = "results-actions";
+    actions.appendChild(
+      button("Back to list", "btn primary", () => {
+        state.historyIndex = null;
+        render();
+      })
+    );
+
+    box.append(header, grid, actions);
+  }
+
   appEl.appendChild(box);
 }
 
