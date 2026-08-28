@@ -445,6 +445,73 @@ button.btn:disabled { opacity: 0.35; cursor: not-allowed; }
   margin-top: 1.5rem;
 }
 
+/* ---------- report card ---------- */
+/* Meant to be screenshotted, so it stays compact and self-contained rather
+   than paginated like review — every question fits in one grid, one glance. */
+
+.report-card {
+  max-width: 620px;
+  margin: 2rem auto;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.report-header { margin-bottom: 1.5rem; }
+
+.report-title {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.report-score {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+  gap: 0.5rem;
+}
+
+.report-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.5rem 0.25rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.report-cell.right {
+  background: var(--correct-soft);
+  border-color: var(--correct);
+  color: var(--correct);
+}
+
+.report-cell.wrong {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.report-num {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+.report-mark { font-size: 1.15rem; font-weight: 700; line-height: 1; }
+
 /* ---------- review ---------- */
 
 .review-card { cursor: pointer; }
@@ -655,6 +722,44 @@ button.btn:disabled { opacity: 0.35; cursor: not-allowed; }
 }
 
 .mode ul { margin: 0; padding-left: 1rem; font-size: 0.86rem; }
+
+.timed-picker {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--rule-soft);
+}
+
+.timed-picker-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.timed-picker-options { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+.timed-picker-btn {
+  padding: 0.3rem 0.6rem;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timed-picker-btn:hover { border-color: var(--ink-faint); }
+
+.timed-picker-btn.selected {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
 
 .intro-foot {
   margin: 0 0 1.5rem;

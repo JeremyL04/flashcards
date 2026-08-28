@@ -2914,6 +2914,544 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Electromagnetism Test 3",
+    "added": "2026-08-27",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A small charged oil droplet of mass 3.2 × 10⁻¹⁵ kg hangs motionless between two horizontal plates that produce a uniform vertical electric field of 2.0 × 10⁴ N/C. Taking g = 10 m/s², what is the magnitude of the droplet's charge?",
+        "choices": [
+          "1.6 × 10⁻¹⁹ C",
+          "1.6 × 10⁻¹⁸ C",
+          "3.2 × 10⁻¹⁸ C",
+          "6.4 × 10⁻¹⁸ C",
+          "1.6 × 10⁻¹⁷ C"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\n\"Hangs motionless\" means the net force is zero, so the upward electric force exactly balances the downward weight:\nqE = mg\nq = mg/E = (3.2 × 10⁻¹⁵)(10)/(2.0 × 10⁴).\nNumerator: 3.2 × 10⁻¹⁵ × 10 = 3.2 × 10⁻¹⁴ N.\nq = (3.2 × 10⁻¹⁴)/(2.0 × 10⁴) = 1.6 × 10⁻¹⁸ C.\n\nNUMERICS WITHOUT A CALCULATOR\nHandle mantissa and exponent separately: 3.2/2.0 = 1.6, and 10⁻¹⁴/10⁴ = 10⁻¹⁸. So q = 1.6 × 10⁻¹⁸ C in one step.\nWorth noticing as a check: dividing by the elementary charge, 1.6 × 10⁻¹⁸/1.6 × 10⁻¹⁹ = 10, so the droplet carries exactly 10 elementary charges. Any correct answer to a Millikan-style problem must come out as a whole-number multiple of e, and confirming that is a strong signal you have not slipped a power of ten. The trap 1.6 × 10⁻¹⁹ C is a single elementary charge — the right mantissa but one decade too small.\n\n90-SECOND SOLUTION\nBalance forces: q = mg/E = (3.2×10⁻¹⁵)(10)/(2×10⁴) = 1.6 × 10⁻¹⁸ C.\n\nWHAT TO MEMORIZE\nNothing new — this is just qE = mg, the electric analogue of any static-equilibrium problem. The transferable habit is recognizing that \"suspended,\" \"motionless,\" or \"moves at constant velocity\" all mean net force zero, which converts an electromagnetism problem into a one-line force balance. The historical significance is worth carrying too: because the answer always comes out as an integer multiple of e, this experiment is what established that charge is quantized."
+      },
+
+      {
+        "question": "A parallel-plate capacitor in vacuum has capacitance 12 pF. A slab of METAL (a conductor) of thickness equal to one-third of the plate separation is inserted midway between the plates, parallel to them, without touching either plate. What is the new capacitance?",
+        "choices": [
+          "12 pF",
+          "18 pF",
+          "24 pF",
+          "36 pF",
+          "48 pF"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nInside a conductor in electrostatic equilibrium the field is zero, so the metal slab contributes NO potential difference. Effectively the slab's thickness is removed from the gap: the capacitor behaves as one with the same plate area but a reduced separation.\nOriginal: C₀ = ε₀A/d = 12 pF.\nWith a slab of thickness t = d/3, the field-filled gap becomes d − t = d − d/3 = 2d/3.\nC_new = ε₀A/(2d/3) = (3/2) × ε₀A/d = 1.5 C₀ = 1.5 × 12 = 18 pF.\n\nNUMERICS WITHOUT A CALCULATOR\nThe whole problem reduces to one fraction: removing a third of the gap leaves two-thirds, and capacitance goes as 1/(gap), so C scales by 3/2. Then 12 × 3/2 = 18 pF. Note the answer does NOT depend on where the slab sits between the plates — only on its thickness — which is a useful check that you have set it up correctly.\n\n90-SECOND SOLUTION\nA conductor kills the field over its thickness, so the effective gap is d − d/3 = 2d/3, and C = C₀ × 3/2 = 18 pF.\n\nWHAT TO MEMORIZE\nA conducting slab of thickness t in a capacitor gap gives C = ε₀A/(d − t) — the slab simply subtracts from the separation, because E = 0 inside a conductor means it contributes zero voltage drop. Keep this distinct from a DIELECTRIC slab, which does not remove the gap but reduces the field there by a factor of κ. Two limiting checks: as t → 0 the capacitance returns to ε₀A/d, and as t → d the slab bridges the plates and the capacitance diverges (a short circuit)."
+      },
+
+      {
+        "question": "Two small charged spheres separated by a distance r exert an electrostatic force of magnitude F on each other. The charge on one sphere is then TRIPLED, and the separation between them is DOUBLED. What is the new magnitude of the force?",
+        "choices": [
+          "F/4",
+          "F/2",
+          "3F/4",
+          "3F/2",
+          "3F"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCoulomb's law is\nF = kq₁q₂/r²,\nso the force is directly proportional to each charge and inversely proportional to the SQUARE of the separation. Handle the two changes independently and multiply the factors.\nTripling one charge multiplies the force by 3.\nDoubling the separation multiplies the force by 1/2² = 1/4.\nNet factor = 3 × (1/4) = 3/4, so the new force is 3F/4.\n\nNUMERICS WITHOUT A CALCULATOR\nNo constants are needed because the question asks for a ratio — k, the actual charges, and the actual distance all cancel. Just read the exponent of each variable off the formula and apply the changes as independent multiplicative factors: charge enters to the first power (×3), distance enters to the power −2 (×2⁻² = ¼). Composing scaling factors this way is far faster and safer than inventing numbers and recomputing.\nThe trap 3F/2 comes from treating the distance dependence as 1/r instead of 1/r², and 3F ignores the distance change entirely.\n\n90-SECOND SOLUTION\nF ∝ q/r². Charge ×3 and distance ×2 give 3 × (1/4) = 3/4, so the force is 3F/4.\n\nWHAT TO MEMORIZE\nCoulomb's law F = kq₁q₂/r² with k = 9 × 10⁹ N·m²/C². For any \"by what factor\" question, the reliable method is to read the power of each variable directly from the formula and multiply the resulting factors — never plug in numbers. This same technique handles the gravitational inverse-square law, field strengths, and potentials, and it is the single most time-efficient skill for scaling questions on this exam. Note that the force on EACH sphere changes by the same factor, since Coulomb forces obey Newton's third law regardless of which charge was altered."
+      },
+
+      {
+        "question": "The electric field in the gap of a parallel-plate capacitor in vacuum has magnitude 2.0 × 10⁵ V/m. Taking ε₀ = 8.85 × 10⁻¹² F/m, what is the energy stored per unit volume in the gap?",
+        "choices": [
+          "0.18 J/m³",
+          "0.35 J/m³",
+          "0.89 J/m³",
+          "1.8 J/m³",
+          "3.5 J/m³"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe energy density of an electric field is\nu = ½ε₀E².\nE² = (2.0 × 10⁵)² = 4.0 × 10¹⁰ V²/m².\nu = ½ × (8.85 × 10⁻¹²) × (4.0 × 10¹⁰).\n\nNUMERICS WITHOUT A CALCULATOR\nCombine the powers of ten first: 10⁻¹² × 10¹⁰ = 10⁻². Then the mantissas: 8.85 × 4.0 = 35.4. So ε₀E² = 35.4 × 10⁻² = 0.354, and halving gives u ≈ 0.177 ≈ 0.18 J/m³.\nSquaring 2.0 × 10⁵ correctly is the step to watch — the exponent doubles to 10¹⁰, not 10⁷ or 10²⁵. The trap 0.35 J/m³ is exactly ε₀E² without the factor of ½.\n\n90-SECOND SOLUTION\nu = ½ε₀E² = ½(8.85×10⁻¹²)(4.0×10¹⁰) = ½(0.354) ≈ 0.18 J/m³.\n\nWHAT TO MEMORIZE\nThe electric energy density is u_E = ½ε₀E², and its magnetic partner is u_B = B²/2μ₀ — both carry a factor of ½, and dropping it is the most common error. These are the local, per-volume versions of the total-energy expressions (½CV² for a capacitor, ½LI² for an inductor), and integrating the density over the field region reproduces them. In an electromagnetic wave the two densities are equal at every instant, so the total is simply ε₀E²."
+      },
+
+      {
+        "question": "A charge of +2q sits at the origin and a charge of −q sits at x = 3a on the x-axis. At what point BETWEEN the two charges is the electric potential zero? (Take V = 0 infinitely far away.)",
+        "choices": [
+          "x = 0.5a",
+          "x = a",
+          "x = 1.5a",
+          "x = 2a",
+          "x = 6a"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nPotential is a scalar sum, so set the two contributions to cancel. At a point a distance r₁ from the +2q charge and r₂ from the −q charge:\nk(2q)/r₁ + k(−q)/r₂ = 0  →  2/r₁ = 1/r₂  →  r₁ = 2r₂.\nBetween the charges, r₁ + r₂ = 3a. Substituting:\n2r₂ + r₂ = 3a → r₂ = a, so r₁ = 2a.\nThe point is at x = 2a.\n\nNUMERICS WITHOUT A CALCULATOR\nThe condition r₁ = 2r₂ says the point must be twice as far from the larger charge as from the smaller one, so it divides the 3a gap in the ratio 2:1 — giving 2a and a directly, with no equation to solve. Splitting a segment in the ratio of the charge magnitudes is the fast route for every V = 0 problem.\nThe trap x = 6a is the OTHER point where V = 0: outside the pair, beyond the −q charge, where r₁ − r₂ = 3a gives r₂ = 3a and r₁ = 6a. It is a genuine solution, just not the one between the charges.\n\n90-SECOND SOLUTION\nV = 0 needs 2/r₁ = 1/r₂, so r₁ = 2r₂. Between the charges those must sum to 3a, giving r₂ = a and x = 2a.\n\nWHAT TO MEMORIZE\nZero potential and zero field are different conditions with different locations, and problems exploit the confusion. V = 0 requires the scalar sum Σkqᵢ/rᵢ to vanish, which is possible only between or near UNLIKE charges, and there are generally TWO such points on the line. E = 0 requires the vector sum to vanish, which for unlike charges happens OUTSIDE the pair, beyond the smaller charge — never between them. Deciding which quantity the question asks about, and therefore which region to search, is most of the work."
+      },
+
+      {
+        "question": "An isolated parallel-plate capacitor is charged and then DISCONNECTED from the battery, storing 20 μJ of energy. The plates are then slowly pulled apart until their separation is doubled. How much energy is stored now?",
+        "choices": [
+          "10 μJ",
+          "20 μJ",
+          "40 μJ",
+          "80 μJ",
+          "160 μJ"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBecause the capacitor is disconnected, the CHARGE Q is fixed — this is the key to choosing the right energy formula. Use the form that holds Q constant:\nU = Q²/(2C).\nDoubling the separation halves the capacitance (C = ε₀A/d, so d → 2d gives C → C/2). With Q fixed and C halved:\nU_new = Q²/(2 × C/2) = 2 × Q²/(2C) = 2U₀ = 2 × 20 = 40 μJ.\nThe extra 20 μJ is exactly the mechanical work you did pulling the plates apart against their mutual attraction — energy conservation confirms the increase.\n\nNUMERICS WITHOUT A CALCULATOR\nOnce you know U ∝ 1/C at fixed Q, and that C ∝ 1/d, it follows that U ∝ d. Doubling the separation therefore doubles the energy: 20 → 40 μJ, no arithmetic beyond a factor of 2.\nThe trap 10 μJ comes from using U = ½CV² with V held fixed — but V is NOT fixed here, since the battery has been removed. That formula would apply if the battery stayed connected, in which case the energy would indeed halve.\n\n90-SECOND SOLUTION\nDisconnected means Q fixed, so use U = Q²/2C. Doubling d halves C, which doubles U: 40 μJ.\n\nWHAT TO MEMORIZE\nU = ½QV = ½CV² = Q²/2C are three forms of the same quantity, and choosing the right one is the entire skill: with the battery CONNECTED hold V fixed and use ½CV²; with the battery DISCONNECTED hold Q fixed and use Q²/2C. The two give opposite answers to \"what happens to the stored energy,\" so identifying which quantity is clamped must come before any calculation. Note also that with Q fixed the field E = σ/ε₀ between the plates is unchanged as they separate — it is the voltage V = Ed that grows, which is what raises the energy."
+      },
+
+      {
+        "question": "Two parallel plates are separated by 2.0 mm and held at a potential difference of 200 V. Taking the elementary charge to be 1.6 × 10⁻¹⁹ C, what is the magnitude of the electric force on a single electron placed between the plates?",
+        "choices": [
+          "1.6 × 10⁻¹⁷ N",
+          "1.6 × 10⁻¹⁶ N",
+          "3.2 × 10⁻¹⁵ N",
+          "1.6 × 10⁻¹⁴ N",
+          "3.2 × 10⁻¹⁴ N"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe field between closely spaced parallel plates is uniform:\nE = V/d = 200/(2.0 × 10⁻³) = 1.0 × 10⁵ V/m.\nThe force on a charge in that field is\nF = qE = (1.6 × 10⁻¹⁹)(1.0 × 10⁵) = 1.6 × 10⁻¹⁴ N.\n\nNUMERICS WITHOUT A CALCULATOR\nConvert the separation to meters before dividing: 2.0 mm = 2.0 × 10⁻³ m. Then 200/(2 × 10⁻³) = 100/10⁻³ = 10⁵ V/m, which is cleaner if you cancel the 2's first. For the force, multiply mantissas (1.6 × 1.0 = 1.6) and add exponents (10⁻¹⁹ × 10⁵ = 10⁻¹⁴), giving 1.6 × 10⁻¹⁴ N. Every step is one operation.\nNote the force does not depend on WHERE between the plates the electron sits, because the field is uniform — a useful check that the geometry has been handled correctly.\n\n90-SECOND SOLUTION\nE = V/d = 200/0.002 = 10⁵ V/m. F = qE = 1.6×10⁻¹⁹ × 10⁵ = 1.6 × 10⁻¹⁴ N.\n\nWHAT TO MEMORIZE\nFor parallel plates, E = V/d — the relation that converts an easily measured voltage into a field, and the reason \"volts per meter\" is a unit of electric field at all. More generally E = −dV/dx, of which V/d is the uniform-field special case. Combined with F = qE, this two-step chain (voltage → field → force) handles a large fraction of introductory electrostatics problems, and the intermediate field value is almost always worth writing down explicitly rather than combining into one formula."
+      },
+
+      {
+        "question": "A straight wire of finite length carries a current of 10 A. A point P lies on the perpendicular bisector of the wire, 0.10 m away, and the wire extends 0.10 m on either side of the foot of that perpendicular. Taking μ₀/4π = 1.0 × 10⁻⁷ T·m/A, what is the magnitude of the magnetic field at P?",
+        "choices": [
+          "7.1 × 10⁻⁶ T",
+          "1.0 × 10⁻⁵ T",
+          "1.2 × 10⁻⁵ T",
+          "1.4 × 10⁻⁵ T",
+          "2.0 × 10⁻⁵ T"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a finite straight segment, the Biot–Savart law gives\nB = (μ₀I/4πa)(sin θ₂ − sin θ₁),\nwhere a is the perpendicular distance and the angles are measured from the perpendicular to the two ends. For a symmetric segment of half-length L, this becomes\nB = (μ₀I/2πa) × L/√(L² + a²),\nwhich is the infinite-wire result multiplied by a factor less than 1.\nFirst the infinite-wire value: μ₀I/2πa = (2 × 10⁻⁷)(10)/(0.10) = 2.0 × 10⁻⁵ T.\nNow the geometric factor with L = a = 0.10 m:\nL/√(L² + a²) = a/(a√2) = 1/√2 ≈ 0.707.\nB = (2.0 × 10⁻⁵)(0.707) ≈ 1.4 × 10⁻⁵ T.\n\nNUMERICS WITHOUT A CALCULATOR\nCompute the infinite-wire field first using μ₀/2π = 2 × 10⁻⁷: (2 × 10⁻⁷)(10)/(0.1) = 2 × 10⁻⁵ T, all exponent arithmetic. Then, because the half-length equals the perpendicular distance, the geometry is a 45° right triangle and the factor is exactly 1/√2 ≈ 0.71. Finally 2.0 × 0.71 ≈ 1.4. Recognizing L = a as a 45° case avoids evaluating any square roots beyond √2.\nThe trap 2.0 × 10⁻⁵ T is the infinite-wire answer — what you get by forgetting that a finite wire produces LESS field.\n\n90-SECOND SOLUTION\nInfinite-wire value is μ₀I/2πa = 2×10⁻⁵ T. Finite segment with L = a gives a factor 1/√2, so B ≈ 1.4 × 10⁻⁵ T.\n\nWHAT TO MEMORIZE\nMemorize the infinite-wire result B = μ₀I/2πa and the fact that a finite segment is that value times L/√(L² + a²) (for a symmetric segment) — the general angular form B = (μ₀I/4πa)(sin θ₂ − sin θ₁) is worth being able to reconstruct from Biot–Savart rather than recalling verbatim. This \"generator, not leaf\" approach matters because the same integral produces the field of a square loop, a partial arc, and any polygon of straight segments; memorizing each special case separately is wasted effort when one formula with the right angles covers all of them. Keep μ₀/4π = 10⁻⁷ and μ₀/2π = 2 × 10⁻⁷ on instant recall."
+      },
+
+      {
+        "question": "In a mass spectrometer, singly charged ions are accelerated from rest through the same potential difference and then enter a uniform magnetic field perpendicular to their velocity, where they follow circular arcs. What is the ratio of the orbit radius of an ion of mass 80 u to that of an ion of mass 20 u?",
+        "choices": [
+          "2",
+          "4",
+          "8",
+          "16",
+          "20"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTwo steps combine. First, acceleration through potential difference V gives each ion the same kinetic energy:\nqV = ½mv², so v = √(2qV/m) — heavier ions move SLOWER.\nSecond, in the magnetic field the radius is r = mv/(qB). Substituting:\nr = (m/qB)√(2qV/m) = √(2mV/q)/B.\nSo with q, V, and B all the same, r ∝ √m.\nr₈₀/r₂₀ = √(80/20) = √4 = 2.\n\nNUMERICS WITHOUT A CALCULATOR\nThe mass ratio is 80/20 = 4, and because the radius goes as the SQUARE ROOT of mass, the radius ratio is √4 = 2. The entire problem is one square root of a small integer.\nThe trap 4 is the raw mass ratio — the answer you get by assuming r ∝ m, which would be true only if the ions entered with the same SPEED rather than the same energy. Noticing which quantity is held fixed (energy here, because they share an accelerating voltage) is the crux of the problem.\n\n90-SECOND SOLUTION\nSame accelerating voltage means same KE, so v ∝ 1/√m and r = mv/qB ∝ √m. Ratio = √(80/20) = 2.\n\nWHAT TO MEMORIZE\nThe cyclotron radius is r = mv/(qB) = p/(qB) — it depends on MOMENTUM, not mass or speed alone. That single fact resolves most spectrometer questions once you determine what the ions share: equal speeds give r ∝ m, equal kinetic energies (equal accelerating voltage) give r ∝ √m, and equal momenta give equal radii. Also worth carrying: the cyclotron FREQUENCY qB/2πm is independent of speed and radius entirely, which is what makes cyclotron accelerators work."
+      },
+
+      {
+        "question": "A straight wire of length 2.0 m carries a current of 4.0 A. It is placed in a uniform magnetic field of 0.50 T, with the wire oriented at 30° to the field direction. What is the magnitude of the magnetic force on the wire?",
+        "choices": [
+          "1.0 N",
+          "2.0 N",
+          "3.5 N",
+          "4.0 N",
+          "8.0 N"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe force on a straight current-carrying wire in a uniform field is\nF = BIL sin θ,\nwhere θ is the angle between the wire (the current direction) and the field.\nF = (0.50)(4.0)(2.0) sin 30° = (0.50)(4.0)(2.0)(0.50) = 2.0 N.\n\nNUMERICS WITHOUT A CALCULATOR\nGroup the easy factors: (4.0)(2.0) = 8, and the two halves (0.50 from B and 0.50 from sin 30°) multiply to 0.25. Then 8 × 0.25 = 2.0 N. Recognizing sin 30° = ½ exactly keeps this in whole numbers.\nThe trap 4.0 N drops the sin θ factor entirely (treating the wire as perpendicular to the field), and 3.5 N comes from using cos 30° ≈ 0.87 instead of sin 30°.\n\n90-SECOND SOLUTION\nF = BIL sin θ = (0.5)(4)(2)(0.5) = 2.0 N.\n\nWHAT TO MEMORIZE\nF = BIL sin θ, with θ measured between the CURRENT and the FIELD — the force is maximum when they are perpendicular and exactly zero when the wire lies along the field. This is the macroscopic version of F = qv × B, obtained by summing over all the moving charges in the wire. Getting the angle convention right is the usual stumbling block: it is sin of the angle between the wire and B, so a wire parallel to the field feels no force at all, which is a quick sanity check on any answer."
+      },
+
+      {
+        "question": "A flat coil of 50 turns, each of area 0.020 m², is placed in a uniform magnetic field of 0.40 T. The normal to the coil's plane makes an angle of 60° with the field direction. What is the total magnetic flux linkage through the coil?",
+        "choices": [
+          "0.10 Wb",
+          "0.17 Wb",
+          "0.20 Wb",
+          "0.35 Wb",
+          "0.40 Wb"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFlux through a single turn is Φ = BA cos θ, with θ the angle between the field and the coil's NORMAL. For N turns the total flux linkage is N times that:\nΦ_total = NBA cos θ = (50)(0.40)(0.020) cos 60°.\ncos 60° = 0.50.\n= (50)(0.40)(0.020)(0.50) = 0.20 Wb.\n\nNUMERICS WITHOUT A CALCULATOR\nWork left to right in easy pairs: (50)(0.40) = 20, then (20)(0.020) = 0.40, then halve for cos 60°: 0.20 Wb. Each step is a single multiplication with round numbers.\nThe trap 0.40 Wb omits the cos 60° factor, and 0.35 Wb uses sin 60° ≈ 0.87 instead of cos 60° — the classic angle-convention error.\n\n90-SECOND SOLUTION\nΦ = NBA cos θ = (50)(0.4)(0.02)(0.5) = 0.20 Wb.\n\nWHAT TO MEMORIZE\nMagnetic flux is Φ = BA cos θ with θ measured from the NORMAL to the surface, not from the surface itself — so a coil facing the field head-on (θ = 0) has maximum flux, and a coil edge-on to the field (θ = 90°) has zero. This is the opposite convention from the force law F = BIL sin θ, and keeping the two straight is worth deliberate attention: flux uses cosine from the normal, force uses sine between the wire and the field. For N turns, multiply by N to get the flux linkage that appears in Faraday's law."
+      },
+
+      {
+        "question": "A charged particle enters a region of uniform magnetic field with its velocity perpendicular to the field, and no other forces act. Which of the following correctly describes what happens to the particle's speed and kinetic energy?",
+        "choices": [
+          "Speed decreases; kinetic energy decreases",
+          "Speed increases; kinetic energy increases",
+          "Speed is unchanged; kinetic energy decreases",
+          "Speed decreases; kinetic energy is unchanged",
+          "Speed is unchanged; kinetic energy is unchanged"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe magnetic force is F = qv × B, which is always PERPENDICULAR to the velocity by the nature of the cross product. The rate at which a force does work is P = F · v, and since F ⊥ v, that dot product is zero:\nP = F · v = 0.\nA magnetic force therefore does no work on a charged particle, ever. With no work done and no other forces acting, the kinetic energy cannot change, and since KE = ½mv² with m constant, the SPEED cannot change either.\nWhat does change is the DIRECTION of the velocity — the force continuously turns the particle, producing circular motion at constant speed.\n\n90-SECOND SOLUTION\nF = qv × B is always perpendicular to v, so it does zero work. Speed and kinetic energy are both unchanged; only the direction changes.\n\nWHAT TO MEMORIZE\nA magnetic field can change a charged particle's direction but never its speed or energy — the force is always perpendicular to the motion, so it does no work. This is why a magnetic field alone cannot accelerate a particle to higher energy, and why every real accelerator uses ELECTRIC fields to add energy while using magnetic fields only for steering and focusing. (In a cyclotron, for instance, the magnet bends the path but the oscillating electric field across the gap is what actually speeds the particle up.) Whenever a problem asks about energy or speed changes in a purely magnetic field, the answer is \"unchanged\" before any calculation."
+      },
+
+      {
+        "question": "A single circular loop of area 0.010 m² lies perpendicular to a magnetic field that decays exponentially as B(t) = B₀e^(−t/τ), with B₀ = 2.0 T and τ = 0.50 s. What is the magnitude of the induced emf at t = 0?",
+        "choices": [
+          "10 mV",
+          "15 mV",
+          "20 mV",
+          "40 mV",
+          "80 mV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe flux is Φ(t) = A B(t) = A B₀ e^(−t/τ), since the area and orientation are fixed.\nFaraday's law:\nemf = −dΦ/dt = −A B₀ × d/dt[e^(−t/τ)] = (A B₀/τ) e^(−t/τ).\nAt t = 0 the exponential equals 1, so\n|emf| = A B₀/τ = (0.010)(2.0)/(0.50) = 0.020/0.50 = 0.040 V = 40 mV.\n\nNUMERICS WITHOUT A CALCULATOR\nThe derivative of e^(−t/τ) brings down a factor of 1/τ, which is the only calculus needed. Then (0.010)(2.0) = 0.020, and dividing by 0.50 is the same as multiplying by 2: 0.040 V = 40 mV.\nNote the emf decays with the SAME time constant as the field itself, so at t = τ it has fallen to 40/e ≈ 15 mV — that value appears among the choices as a trap for anyone who evaluates at the wrong time.\n\n90-SECOND SOLUTION\n|emf| = AB₀/τ at t = 0 = (0.01)(2.0)/(0.5) = 0.040 V = 40 mV.\n\nWHAT TO MEMORIZE\nFaraday's law is emf = −dΦ/dt, so when the field has a specified time dependence the problem is simply a derivative. For an exponential B₀e^(−t/τ), differentiating returns the same exponential multiplied by 1/τ — so the emf has the same shape and decays at the same rate as the field, starting at AB₀/τ. Recognizing that \"the derivative of an exponential is proportional to itself\" saves the entire calculation; the only real work is evaluating at the requested time and getting the powers of ten right."
+      },
+
+      {
+        "question": "A coil of 100 turns, each of area 5.0 × 10⁻³ m², sits in a uniform 0.20 T magnetic field with its plane perpendicular to the field. The coil is flipped over (rotated by 180°) in 0.10 s. What is the average induced emf during the flip?",
+        "choices": [
+          "0.50 V",
+          "0.80 V",
+          "1.0 V",
+          "1.6 V",
+          "2.0 V"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe crucial point is that flipping by 180° REVERSES the sign of the flux rather than merely reducing it to zero. Per turn:\nΦ_initial = +BA, Φ_final = −BA, so |ΔΦ| = 2BA.\nPer turn: 2BA = 2(0.20)(5.0 × 10⁻³) = 2.0 × 10⁻³ Wb.\nFor 100 turns the total flux linkage change is:\n|ΔΦ_total| = N × 2BA = 100 × 2.0 × 10⁻³ = 0.20 Wb.\nAverage emf = |ΔΦ_total|/Δt = 0.20/0.10 = 2.0 V.\n\nNUMERICS WITHOUT A CALCULATOR\nBuild it in stages with round numbers: BA = (0.20)(5 × 10⁻³) = 10⁻³ Wb. Double it for the flip: 2 × 10⁻³. Multiply by 100 turns: 0.20 Wb. Divide by 0.10 s (multiply by 10): 2.0 V.\nThe trap 1.0 V comes from using ΔΦ = BA instead of 2BA — treating the flip as if the flux merely dropped to zero rather than reversing. That factor of 2 is the entire point of the question.\n\n90-SECOND SOLUTION\nFlipping reverses the flux, so |ΔΦ| per turn = 2BA = 2×10⁻³ Wb. Times 100 turns = 0.20 Wb, divided by 0.10 s = 2.0 V.\n\nWHAT TO MEMORIZE\nAverage emf is N|ΔΦ|/Δt, and the factor to watch is whether the flux merely vanishes or actually REVERSES. Removing a coil from a field gives |ΔΦ| = BA; flipping it through 180° gives |ΔΦ| = 2BA, twice as large. Always compute the initial and final flux with their SIGNS and subtract, rather than reasoning about magnitudes — that habit makes the factor of 2 appear automatically instead of being something you must remember to insert."
+      },
+
+      {
+        "question": "The current through a 0.25 H inductor is reduced steadily from 4.0 A to zero over a time of 0.020 s. What is the magnitude of the induced (back) emf across the inductor during this time?",
+        "choices": [
+          "50 V",
+          "100 V",
+          "200 V",
+          "400 V",
+          "800 V"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe self-induced emf across an inductor is\n|emf| = L |dI/dt|.\nThe current changes steadily, so the rate is just the total change over the total time:\n|dI/dt| = 4.0/0.020 = 200 A/s.\n|emf| = (0.25)(200) = 50 V.\n\nNUMERICS WITHOUT A CALCULATOR\nDo the rate first: 4.0/0.020 = 4.0/(2 × 10⁻²) = 2 × 10² = 200 A/s. Then multiply by L = 0.25, which is the same as dividing by 4: 200/4 = 50 V. Both steps avoid decimals entirely if you convert 0.020 to 2 × 10⁻² and treat 0.25 as ¼.\nNote how large the result is — 50 V from a 4 A current in a modest inductor. Rapidly interrupting an inductive current produces voltages far above the supply voltage, which is the physics behind ignition coils and behind the sparking you see when a switch opens an inductive circuit.\n\n90-SECOND SOLUTION\ndI/dt = 4.0/0.020 = 200 A/s. |emf| = L dI/dt = 0.25 × 200 = 50 V.\n\nWHAT TO MEMORIZE\nThe defining relation for an inductor is emf = −L dI/dt: the induced voltage responds to the RATE of current change, not to the current itself. A steady current through an ideal inductor produces zero voltage across it (it behaves as a plain wire), while a rapidly changing current can produce an arbitrarily large voltage. The minus sign is Lenz's law — the induced emf always opposes the change, so a decreasing current drives the inductor to act as a source trying to maintain it."
+      },
+
+      {
+        "question": "A battery of emf 24 V and internal resistance 4.0 Ω is connected to an external load resistor of 20 Ω. What fraction of the total power delivered by the battery's emf is dissipated in the EXTERNAL load?",
+        "choices": [
+          "17%",
+          "20%",
+          "50%",
+          "67%",
+          "83%"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe current is set by the total resistance:\nI = ε/(R + r) = 24/(20 + 4.0) = 1.0 A.\nPower dissipated in the external load: P_load = I²R = (1.0)²(20) = 20 W.\nTotal power delivered by the emf: P_total = εI = (24)(1.0) = 24 W.\nFraction = 20/24 = 5/6 ≈ 83%.\n\nNUMERICS WITHOUT A CALCULATOR\nThere is a shortcut that skips the current entirely. Since the same current flows through both resistances, the powers divide in proportion to the resistances:\nfraction = R/(R + r) = 20/24 = 5/6 ≈ 83%.\nThat is one division of small integers. The efficiency of a source is simply the fraction of the total resistance that sits in the load.\nThe trap 17% is r/(R + r) = 4/24 = 1/6, the fraction wasted internally, and 50% is the efficiency at MAXIMUM POWER TRANSFER (R = r) — a different condition that this problem does not describe.\n\n90-SECOND SOLUTION\nEfficiency = R/(R + r) = 20/24 = 5/6 ≈ 83%.\n\nWHAT TO MEMORIZE\nFor a real source, efficiency = R/(R + r), because series elements carrying the same current divide power in proportion to their resistances. Keep this distinct from MAXIMUM POWER TRANSFER, which occurs at R = r and delivers the largest absolute power to the load — but at only 50% efficiency, since equal resistances waste equal power. High efficiency and maximum power are competing goals: power companies deliberately operate far from the maximum-power condition (R ≫ r) precisely to keep efficiency high."
+      },
+
+      {
+        "question": "The impedance of free space is defined as Z₀ = √(μ₀/ε₀). Taking μ₀ = 4π × 10⁻⁷ T·m/A and c = 3.0 × 10⁸ m/s, its value is most nearly",
+        "choices": [
+          "377 Ω",
+          "1200 Ω",
+          "3800 Ω",
+          "1.4 × 10⁵ Ω",
+          "3.0 × 10⁸ Ω"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe fastest route avoids ε₀ entirely. Since c = 1/√(ε₀μ₀), we can write\nZ₀ = √(μ₀/ε₀) = √(μ₀ × μ₀c²) = μ₀c.\n(Using 1/ε₀ = μ₀c², which follows directly from c² = 1/ε₀μ₀.)\nZ₀ = (4π × 10⁻⁷)(3.0 × 10⁸) = 4π × 3.0 × 10 = 120π ≈ 377 Ω.\n\nNUMERICS WITHOUT A CALCULATOR\nWriting Z₀ = μ₀c turns a square root of a ratio into a single multiplication. The exponents give 10⁻⁷ × 10⁸ = 10¹, and the mantissas give 4π × 3 = 12π, so Z₀ = 120π. With π ≈ 3.14, 120π ≈ 377 Ω.\nDoing it the direct way as a check: μ₀/ε₀ = (1.26 × 10⁻⁶)/(8.85 × 10⁻¹²) ≈ 1.42 × 10⁵, and √(1.42 × 10⁵) = √14.2 × 10² ≈ 3.77 × 10² = 377 Ω — the same answer, but with a square root to estimate. The trap 1.4 × 10⁵ Ω is that ratio left un-rooted.\n\n90-SECOND SOLUTION\nZ₀ = μ₀c = (4π×10⁻⁷)(3×10⁸) = 120π ≈ 377 Ω.\n\nWHAT TO MEMORIZE\nZ₀ = √(μ₀/ε₀) = μ₀c ≈ 377 Ω ≈ 120π Ω — a constant worth recognizing on sight, since it sets the ratio E/H in any electromagnetic wave in vacuum and appears throughout antenna and transmission-line problems. The broader lesson is the substitution trick: whenever ε₀ and μ₀ appear together, look for a chance to replace the awkward pair using c² = 1/ε₀μ₀. That single identity converts most ε₀–μ₀ expressions into something involving c, which is far easier to evaluate by hand."
+      },
+
+      {
+        "question": "A photon has energy 2.0 eV. Taking 1 eV = 1.6 × 10⁻¹⁹ J and c = 3.0 × 10⁸ m/s, what is the magnitude of its momentum?",
+        "choices": [
+          "3.6 × 10⁻³⁶ kg·m/s",
+          "1.1 × 10⁻³⁰ kg·m/s",
+          "1.1 × 10⁻²⁸ kg·m/s",
+          "3.2 × 10⁻²⁸ kg·m/s",
+          "1.1 × 10⁻²⁷ kg·m/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA photon is massless, so the relativistic relation E² = (pc)² + (mc²)² reduces to E = pc, giving\np = E/c.\nConvert the energy to joules first:\nE = 2.0 eV × 1.6 × 10⁻¹⁹ J/eV = 3.2 × 10⁻¹⁹ J.\np = (3.2 × 10⁻¹⁹)/(3.0 × 10⁸) ≈ 1.07 × 10⁻²⁷ ≈ 1.1 × 10⁻²⁷ kg·m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo clean steps. Energy: 2.0 × 1.6 = 3.2, so E = 3.2 × 10⁻¹⁹ J. Momentum: mantissas 3.2/3.0 ≈ 1.07, exponents 10⁻¹⁹/10⁸ = 10⁻²⁷. Result 1.1 × 10⁻²⁷ kg·m/s.\nThe trap 3.6 × 10⁻³⁶ comes from dividing by c² instead of c — a natural slip if you are thinking of E = mc². Watch that photon momentum uses ONE factor of c, not two.\n\n90-SECOND SOLUTION\np = E/c = (2.0 × 1.6×10⁻¹⁹)/(3×10⁸) = 3.2×10⁻¹⁹/3×10⁸ ≈ 1.1 × 10⁻²⁷ kg·m/s.\n\nWHAT TO MEMORIZE\nFor any massless particle, E = pc exactly, so p = E/c. This is why light carries momentum despite having no mass, and it underlies radiation pressure: a perfectly absorbing surface receiving power P feels a force P/c, and a perfectly reflecting one feels 2P/c because the photon momentum reverses. In practical work it is often easier to keep photon momentum in the units \"eV/c\" (here simply 2.0 eV/c) and convert to SI only at the end, which avoids carrying awkward powers of ten through intermediate steps."
+      },
+
+      {
+        "question": "A nonconducting medium has relative permittivity ε_r = 2.0 and relative permeability μ_r = 2.0. Taking c = 3.0 × 10⁸ m/s, what is the speed of an electromagnetic wave in this medium?",
+        "choices": [
+          "1.0 × 10⁸ m/s",
+          "1.5 × 10⁸ m/s",
+          "2.1 × 10⁸ m/s",
+          "2.5 × 10⁸ m/s",
+          "3.0 × 10⁸ m/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe wave speed in a medium is v = 1/√(εμ), where ε = ε_rε₀ and μ = μ_rμ₀. Factoring out the vacuum values:\nv = 1/√(ε_rε₀ μ_rμ₀) = (1/√(ε₀μ₀)) × 1/√(ε_rμ_r) = c/√(ε_rμ_r).\nSo the index of refraction is n = √(ε_rμ_r) — it depends on BOTH constants, not on ε_r alone.\nn = √(2.0 × 2.0) = √4.0 = 2.0.\nv = c/n = (3.0 × 10⁸)/2.0 = 1.5 × 10⁸ m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nMultiply the two relative constants BEFORE taking the square root: 2.0 × 2.0 = 4.0, and √4 = 2 exactly. Then 3.0 × 10⁸ divided by 2 is 1.5 × 10⁸ m/s. Combining under one radical first is what keeps this in whole numbers.\nThe trap 2.1 × 10⁸ m/s is c/√2 — using only ε_r and ignoring the permeability, which is a safe shortcut for ordinary optical materials (where μ_r ≈ 1) but wrong here, since this medium is magnetic.\n\n90-SECOND SOLUTION\nn = √(ε_rμ_r) = √4 = 2, so v = c/2 = 1.5 × 10⁸ m/s.\n\nWHAT TO MEMORIZE\nThe index of refraction is n = √(ε_rμ_r), and v = c/n. For nearly all optical materials μ_r ≈ 1, which is why the familiar shortcut n ≈ √ε_r works and why optics courses rarely mention permeability — but a problem that explicitly gives you a μ_r different from 1 is signaling that the full formula is required. The underlying relation is the same one that gives c = 1/√(ε₀μ₀) in vacuum; a medium simply scales both constants."
+      },
+
+      {
+        "question": "An oscillating electric dipole radiates with intensity proportional to sin²θ, where θ is measured from the dipole's oscillation axis. What is the ratio of the radiated intensity at θ = 30° to that at θ = 90°?",
+        "choices": [
+          "1/8",
+          "1/6",
+          "1/4",
+          "1/2",
+          "3/4"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe intensity depends on angle only through sin²θ, so the ratio is\nI(30°)/I(90°) = sin²(30°)/sin²(90°).\nsin 30° = 1/2, so sin²30° = 1/4.\nsin 90° = 1, so sin²90° = 1.\nRatio = (1/4)/1 = 1/4.\n\nNUMERICS WITHOUT A CALCULATOR\nEverything else in the Larmor expression — the charge, the acceleration amplitude, the distance, all the constants — cancels in a ratio at fixed radius, leaving only the angular factor. Then sin 30° = ½ is a standard value, and squaring gives ¼ directly. The most common slip is forgetting to SQUARE, which would give ½ (offered as a distractor).\n\n90-SECOND SOLUTION\nRatio = sin²30°/sin²90° = (1/2)²/1 = 1/4.\n\nWHAT TO MEMORIZE\nDipole radiation goes as sin²θ measured from the OSCILLATION AXIS: the intensity is maximum in the plane perpendicular to the dipole (θ = 90°) and exactly ZERO along the axis itself (θ = 0). That null along the axis is the physically important feature — an accelerating charge does not radiate in the direction of its own acceleration — and it explains why a vertical broadcast antenna sends no signal straight up. Combined with the total power's dependence P ∝ q²a², the sin²θ pattern answers nearly every dipole-radiation question on this exam, and because such questions almost always ask for a ratio, the constants can be dropped from the outset."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Special Relativity Test",
+    "added": "2026-08-27",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "An unstable particle has a proper lifetime of 2.0 μs. It travels through the laboratory at a speed of (12/13)c. Taking c = 3.0 × 10⁸ m/s, how far does it travel in the lab before decaying (on average)?",
+        "choices": [
+          "550 m",
+          "600 m",
+          "1440 m",
+          "1560 m",
+          "3000 m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe lab-frame decay distance is d = v × t_lab, where t_lab is the DILATED lifetime:\nt_lab = γτ, so d = γ β c τ.\nFirst find γ from β = 12/13. Recognize the 5-12-13 Pythagorean triple:\n1 − β² = 1 − 144/169 = 25/169, so √(1 − β²) = 5/13 and γ = 13/5 = 2.6.\nNow the key simplification — compute the PRODUCT γβ before touching any decimals:\nγβ = (13/5)(12/13) = 12/5 = 2.4 exactly (the 13's cancel).\nd = 2.4 × (3.0 × 10⁸) × (2.0 × 10⁻⁶) = 2.4 × 600 = 1440 m.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo habits make this fast. First, memorize the Pythagorean γ triples so that β = 12/13 instantly gives γ = 13/5 with no square roots evaluated — the 5-12-13 triangle has the \"5\" in the √(1−β²) slot. Second, always combine γβ into a single fraction BEFORE multiplying by anything: (13/5)(12/13) = 12/5, and the 13's cancel cleanly. Then cτ = (3 × 10⁸)(2 × 10⁻⁶) = 600 m is a one-step exponent addition, and 2.4 × 600 = 1440 is a single multiplication.\n\n90-SECOND SOLUTION\nβ = 12/13 → γ = 13/5 (5-12-13 triple). γβ = 12/5 = 2.4. cτ = 600 m. d = 2.4 × 600 = 1440 m.\n\nWHAT TO MEMORIZE\nThe Pythagorean γ triples are the single highest-value arithmetic shortcut in special relativity, because ETS builds problems around them so the numbers come out exact:\n  β = 3/5 = 0.6 → γ = 5/4 = 1.25\n  β = 4/5 = 0.8 → γ = 5/3 ≈ 1.67\n  β = 5/13 → γ = 13/12;  β = 12/13 → γ = 13/5 = 2.6\n  β = 24/25 = 0.96 → γ = 25/7 ≈ 3.57;  β = 7/25 = 0.28 → γ = 25/24\nWhenever a problem hands you a β that looks like a ratio of small integers, expect one of these. Also note that lab decay distance is γβcτ, NOT βcτ (that omits dilation, giving 554 m) and NOT γcτ (that forgets the particle moves slower than light, giving 1560 m) — both traps appear among the choices."
+      },
+
+      {
+        "question": "A particle moves at β = v/c = 0.99. Its Lorentz factor γ is most nearly",
+        "choices": [
+          "1.4",
+          "2.0",
+          "5.0",
+          "7.1",
+          "10"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nγ = 1/√(1 − β²), and the fast way to evaluate 1 − β² is the difference of squares:\n1 − β² = (1 − β)(1 + β) = (1 − 0.99)(1 + 0.99) = (0.01)(1.99) ≈ 0.0199.\n√0.0199 ≈ 0.141.\nγ = 1/0.141 ≈ 7.1.\n\nNUMERICS WITHOUT A CALCULATOR\nNever square 0.99 directly — factor instead. (1 − β)(1 + β) turns a delicate subtraction of two nearly-equal numbers into a clean product: the small factor (0.01) carries the precision and the large factor (1.99 ≈ 2) is easy. So 1 − β² ≈ 0.01 × 2 = 0.02, and γ ≈ 1/√0.02 = 1/0.141 ≈ 7.1.\nTo take √0.02 by hand: write it as √(2 × 10⁻²) = √2 × 10⁻¹ ≈ 1.41 × 0.1 = 0.141. Then 1/0.141 ≈ 7.1 (since 1/0.14 ≈ 7.14).\nThe trap answer 10 comes from dropping the (1 + β) factor entirely — using 1 − β = 0.01 alone gives γ = 1/√0.01 = 10, which overestimates γ by a factor of √2.\n\n90-SECOND SOLUTION\n1 − β² = (0.01)(1.99) ≈ 0.02. γ = 1/√0.02 = 1/0.141 ≈ 7.1.\n\nWHAT TO MEMORIZE\nFor β close to 1, always factor 1 − β² = (1 − β)(1 + β) with (1 + β) ≈ 2, giving the working shortcut γ ≈ 1/√(2(1 − β)). Useful anchors to carry: β = 0.9 → γ ≈ 2.3, β = 0.99 → γ ≈ 7.1, β = 0.999 → γ ≈ 22. Each extra 9 multiplies γ by about √10 ≈ 3.2. Going the other direction, for large γ the speed satisfies β ≈ 1 − 1/(2γ²), which is the version you want when a problem gives you the energy and asks how close to c the particle is."
+      },
+
+      {
+        "question": "A spacecraft has a proper length of 100 m. It flies past an observer at 0.96c. What length does that observer measure?",
+        "choices": [
+          "4.0 m",
+          "28 m",
+          "96 m",
+          "100 m",
+          "357 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nLength contraction: the observer measures L = L₀/γ, where L₀ = 100 m is the proper (rest-frame) length.\nFor β = 0.96 = 24/25, recognize the 7-24-25 triple:\n1 − β² = 1 − 576/625 = 49/625, so √(1 − β²) = 7/25 and γ = 25/7.\nL = L₀/γ = 100 × (7/25) = 28 m.\n\nNUMERICS WITHOUT A CALCULATOR\nDividing by γ = 25/7 is the same as multiplying by 7/25, which avoids the decimal 3.571 entirely: 100 × 7/25 = 700/25 = 28. Since 25 goes into 700 exactly 28 times, there is no long division. This is the general pattern — write γ as a FRACTION from the Pythagorean triple and multiply by its reciprocal rather than converting to a decimal first.\nThe trap 96 m comes from multiplying by β instead of by 1/γ; those coincide only in the sense that both shrink the length, but they are numerically very different (0.96 vs 0.28).\n\n90-SECOND SOLUTION\nβ = 24/25 → γ = 25/7 (7-24-25 triple). L = 100 × 7/25 = 28 m.\n\nWHAT TO MEMORIZE\nLength contraction is L = L₀/γ, and it applies ONLY along the direction of motion — transverse dimensions are unchanged. The proper length L₀ is always the one measured in the frame where the object is at rest, and it is always the LARGEST measured length, so any answer exceeding L₀ (357 m here) is immediately wrong. Contracting by 1/γ and multiplying by β are different operations; at β = 0.96 the contraction factor is 0.28, not 0.96, and confusing them is the most common error on this question type."
+      },
+
+      {
+        "question": "A rod of proper length 10 m moves lengthwise past a stationary observer at 0.80c. Taking c = 3.0 × 10⁸ m/s, how long does it take the entire rod to pass a fixed point in the observer's frame?",
+        "choices": [
+          "15 ns",
+          "20 ns",
+          "25 ns",
+          "42 ns",
+          "69 ns"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe observer sees a CONTRACTED rod, so first find its length in the lab frame. For β = 0.8, γ = 5/3 (the 3-4-5 triple), so:\nL = L₀/γ = 10 × (3/5) = 6.0 m.\nThe time for the whole rod to sweep past a fixed point is the contracted length divided by the rod's speed:\nt = L/(βc) = 6.0/(0.80 × 3.0 × 10⁸) = 6.0/(2.4 × 10⁸) = 2.5 × 10⁻⁸ s = 25 ns.\n\nNUMERICS WITHOUT A CALCULATOR\nBoth steps are designed to stay in whole numbers. Contraction: 10 × 3/5 = 6 exactly. Speed: 0.8 × 3 × 10⁸ = 2.4 × 10⁸ m/s. Division: 6/2.4 = 2.5, and the exponent bookkeeping 10⁰/10⁸ = 10⁻⁸ gives 2.5 × 10⁻⁸ s. Converting to nanoseconds just shifts by 10⁻⁹: 2.5 × 10⁻⁸ s = 25 ns.\nThe trap 42 ns comes from using the uncontracted 10 m (10/2.4 × 10⁸ ≈ 42 ns) — forgetting that the observer measures the SHORTER rod.\n\n90-SECOND SOLUTION\nγ = 5/3, so the lab-frame rod is 10 × 3/5 = 6 m. t = 6/(0.8 × 3×10⁸) = 6/2.4×10⁸ = 25 ns.\n\nWHAT TO MEMORIZE\nWhen something moves past a fixed point, the relevant length is always the one measured IN THE FRAME DOING THE TIMING — here the lab, so use the contracted length, not the proper length. The clean chain is: contract first, then divide by speed. Keep β = 0.8 → γ = 5/3 and β = 0.6 → γ = 5/4 on instant recall; these two show up more than any other pair on the exam because the 3-4-5 triangle makes every downstream number exact."
+      },
+
+      {
+        "question": "An astronaut travels away from Earth and back at a constant speed of 0.60c (ignoring the brief turnaround). The round trip takes 10 years as measured on Earth. How much YOUNGER is the astronaut than her Earth-bound twin when she returns?",
+        "choices": [
+          "2.0 years",
+          "2.5 years",
+          "4.0 years",
+          "6.0 years",
+          "8.0 years"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Earth twin measures 10 years of coordinate time. The astronaut travels with the moving clock, so she experiences the PROPER time of the journey, which is shorter by a factor of γ:\nFor β = 0.6, γ = 5/4 = 1.25 (the 3-4-5 triple).\nτ_astronaut = 10/γ = 10 × (4/5) = 8.0 years.\nThe age difference is 10 − 8 = 2.0 years — the astronaut returns 2.0 years younger.\n\nNUMERICS WITHOUT A CALCULATOR\nDividing by 1.25 is the same as multiplying by 4/5, which is much cleaner than decimal division: 10 × 4/5 = 8. Then subtract. Recognizing \"divide by 1.25 = multiply by 0.8\" is worth internalizing, since γ = 1.25 (β = 0.6) is the most frequently used value in the whole subject.\nThe trap 2.5 years comes from computing 10 × 1.25 = 12.5 and subtracting — that multiplies when you should divide, treating the Earth time as if it were the proper time.\n\n90-SECOND SOLUTION\nγ = 1.25 at β = 0.6. Astronaut ages 10/1.25 = 8 years. Difference = 10 − 8 = 2.0 years.\n\nWHAT TO MEMORIZE\nThe traveling twin ages LESS, and the rule for which clock to divide is: the PROPER time (the time read by a single clock present at both events, here the astronaut's own clock) is always the SMALLEST. So proper time = coordinate time / γ. The reason the situation is not symmetric — despite each twin seeing the other's clock run slow during the outbound leg — is that the astronaut changes frames at turnaround and therefore is not in a single inertial frame for the whole trip, while the Earth twin is. Only the astronaut's path has a \"kink\" in spacetime, and that asymmetry is what makes the answer unambiguous."
+      },
+
+      {
+        "question": "A particle has total energy 13 GeV and momentum 12 GeV/c. What is its rest mass?",
+        "choices": [
+          "1.0 GeV/c²",
+          "5.0 GeV/c²",
+          "12.5 GeV/c²",
+          "17.7 GeV/c²",
+          "25 GeV/c²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe energy-momentum invariant is\nE² = (pc)² + (mc²)²,  so  (mc²)² = E² − (pc)².\n(mc²)² = 13² − 12² = 169 − 144 = 25, so mc² = 5.0 GeV and m = 5.0 GeV/c².\n\nNUMERICS WITHOUT A CALCULATOR\nThe numbers 13 and 12 are chosen so that the third side of the 5-12-13 right triangle is an integer — recognize the triple and you can write down 5 without computing any squares at all. If you do compute, use the difference of squares: 13² − 12² = (13 − 12)(13 + 12) = (1)(25) = 25. That factoring trick turns a subtraction of large squares into a trivial product and is the single most useful arithmetic move in relativistic energy problems.\nThe trap 1.0 GeV/c² comes from computing 13 − 12 = 1 directly, forgetting that the relation involves SQUARES; the trap 17.7 comes from adding instead of subtracting (√(169 + 144) = √313 ≈ 17.7).\n\n90-SECOND SOLUTION\n(mc²)² = 13² − 12² = (13−12)(13+12) = 25, so mc² = 5.0 GeV.\n\nWHAT TO MEMORIZE\nE² = (pc)² + (mc²)² is the master relation — treat (E, pc, mc²) as the hypotenuse and two legs of a right triangle, with E always the hypotenuse (the largest). ETS builds these from Pythagorean triples so the answer is exact; the ones to recognize on sight are (3,4,5), (5,12,13), (7,24,25), (8,15,17), and their multiples like (6,8,10). Always evaluate E² − (pc)² by the difference of squares (E − pc)(E + pc) rather than squaring each term separately — it is faster and far less error-prone."
+      },
+
+      {
+        "question": "A particle of rest mass m has total energy E = 5mc². Its momentum is most nearly",
+        "choices": [
+          "2.0 mc",
+          "3.0 mc",
+          "4.0 mc",
+          "4.5 mc",
+          "4.9 mc"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFrom E² = (pc)² + (mc²)² with E = 5mc²:\n(pc)² = E² − (mc²)² = 25(mc²)² − 1(mc²)² = 24(mc²)².\npc = √24 mc² ≈ 4.90 mc², so p ≈ 4.9 mc.\n\nNUMERICS WITHOUT A CALCULATOR\n√24 sits between √16 = 4 and √25 = 5, and very close to the top: since 4.9² = 24.01, √24 ≈ 4.9 immediately. Knowing that 4.9² ≈ 24 and 4.9 ≈ √24 is worth carrying, as is the general habit of bracketing a square root between neighboring perfect squares before refining.\nSanity check by a second route: E = γmc² gives γ = 5, so β = √(1 − 1/25) = √(24/25) = √24/5 ≈ 0.98, and p = γβmc = 5 × 0.98 × mc ≈ 4.9 mc. The two routes agree.\n\n90-SECOND SOLUTION\n(pc)² = (25 − 1)(mc²)² = 24(mc²)², so pc = √24 mc² ≈ 4.9 mc².\n\nWHAT TO MEMORIZE\nWhen total energy is given as a multiple of rest energy, E = γmc² means the multiplier IS γ. Then pc = √(γ² − 1) mc², and equivalently p = γβmc. For large γ the momentum approaches E/c, because the rest mass term becomes negligible — here γ = 5 already gives pc = 4.9mc², within 2% of E/c = 5mc². That ultrarelativistic limit p ≈ E/c is worth recognizing, since it lets you estimate the answer before doing any arithmetic and confirms that the correct choice must be just under 5."
+      },
+
+      {
+        "question": "A particle has total energy 10 MeV and rest energy 8.0 MeV. Its speed is",
+        "choices": [
+          "0.36c",
+          "0.50c",
+          "0.60c",
+          "0.75c",
+          "0.80c"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFirst get the momentum from the invariant, using the difference of squares:\n(pc)² = E² − (mc²)² = 10² − 8² = (10 − 8)(10 + 8) = (2)(18) = 36, so pc = 6.0 MeV.\nThen use the compact speed relation:\nβ = pc/E = 6/10 = 0.60.\nSo v = 0.60c.\n\nNUMERICS WITHOUT A CALCULATOR\nThe 6-8-10 triangle (a scaled 3-4-5) makes pc = 6 immediate once you spot it. Then β = pc/E is a single division of small integers. Doing it the long way — γ = E/mc² = 10/8 = 1.25, then β = √(1 − 1/1.25²) = √(1 − 0.64) = √0.36 = 0.6 — gives the same answer and is a good cross-check, but β = pc/E is one step instead of three.\nThe trap 0.80c is mc²/E = 8/10, the reciprocal-looking ratio; note that β must equal pc/E, not mc²/E. (Conveniently, mc²/E = 1/γ, so 0.8 is the time-dilation factor here, not the speed.)\n\n90-SECOND SOLUTION\npc = √(10² − 8²) = 6. β = pc/E = 6/10 = 0.60c.\n\nWHAT TO MEMORIZE\nThree one-line relations tie the energy-momentum triangle to kinematics, and all three are worth instant recall:\n  β = pc/E,   γ = E/mc²,   γβ = pc/mc².\nEach is just a ratio of two sides of the (E, pc, mc²) right triangle, which is why recognizing the triangle immediately gives you the speed with no square roots. Note β = pc/E automatically respects β < 1, since pc is always a leg and E the hypotenuse."
+      },
+
+      {
+        "question": "How much work must be done to accelerate a proton from rest to 0.80c? (Take the proton rest energy to be 938 MeV.)",
+        "choices": [
+          "188 MeV",
+          "300 MeV",
+          "469 MeV",
+          "625 MeV",
+          "938 MeV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe work done equals the gain in kinetic energy, and relativistic kinetic energy is\nK = (γ − 1)mc².\nFor β = 0.8, γ = 5/3 (the 3-4-5 triple), so γ − 1 = 2/3.\nK = (2/3)(938) ≈ 625 MeV.\n\nNUMERICS WITHOUT A CALCULATOR\n(2/3) × 938: take a third of 938 first (≈ 312.7), then double it (≈ 625). Alternatively 938 × 2 = 1876, divided by 3 ≈ 625. Either way it is one small division and one doubling.\nThe trap 300 MeV is the CLASSICAL answer ½mv² = ½(938)(0.8)² = 300 MeV, which underestimates the true work by more than a factor of two at this speed — a good illustration of why the classical formula fails badly above roughly 0.3c. The trap 938 MeV is the rest energy itself, and 1563 MeV (not offered) would be the total energy γmc².\n\n90-SECOND SOLUTION\nγ = 5/3 at β = 0.8, so K = (γ − 1)mc² = (2/3)(938) ≈ 625 MeV.\n\nWHAT TO MEMORIZE\nRelativistic kinetic energy is K = (γ − 1)mc², NOT γmc² (that is the total energy) and not ½mv². The subtraction of the rest energy is the whole content of the formula. Two anchors worth carrying: at β = 0.6 (γ = 1.25) the kinetic energy is 0.25mc², and at β = 0.8 (γ = 5/3) it is 0.67mc². Useful rest energies to have memorized are electron 0.511 MeV, proton 938 MeV, and neutron 940 MeV, since problems quote them constantly."
+      },
+
+      {
+        "question": "An electron is accelerated until its total energy is 1.0 GeV. Taking the electron rest energy to be 0.511 MeV, its Lorentz factor γ is most nearly",
+        "choices": [
+          "2",
+          "20",
+          "200",
+          "2000",
+          "20,000"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nγ is simply the ratio of total energy to rest energy:\nγ = E/(mc²) = 1.0 GeV / 0.511 MeV = 1000 MeV / 0.511 MeV ≈ 1960 ≈ 2 × 10³.\n\nNUMERICS WITHOUT A CALCULATOR\nPut both energies in the same unit first — this is where errors happen. 1.0 GeV = 1000 MeV. Then 1000/0.511: since 0.511 ≈ 0.5, the ratio is approximately 1000/0.5 = 2000. The choices are spaced by factors of 10, so the crude estimate 1000/0.5 = 2000 identifies the answer with no refinement needed. (The exact value is 1957, confirming the estimate.)\nThis \"round the awkward constant to the nearest easy fraction, then check the spacing of the choices\" move is the core estimation skill the exam rewards — the answer options are deliberately far apart when the intended method is approximate.\n\n90-SECOND SOLUTION\nγ = E/mc² = 1000 MeV/0.511 MeV ≈ 1000/0.5 = 2000.\n\nWHAT TO MEMORIZE\nγ = E/mc² is the definition of the Lorentz factor in energy terms, and it is usually the fastest route to γ when energies are given. Keep 1/0.511 ≈ 2 in mind, so an electron's γ is roughly twice its energy in MeV — a 1 MeV electron has γ ≈ 2, a 1 GeV electron has γ ≈ 2000. At such a large γ the electron's speed is β ≈ 1 − 1/(2γ²) ≈ 1 − 1.3 × 10⁻⁷, indistinguishable from c for most purposes, which is why high-energy electron beams are always treated as ultrarelativistic with E ≈ pc."
+      },
+
+      {
+        "question": "An electron has kinetic energy 1.0 MeV. Taking its rest energy to be 0.511 MeV, its momentum is most nearly",
+        "choices": [
+          "0.87 MeV/c",
+          "1.01 MeV/c",
+          "1.42 MeV/c",
+          "1.51 MeV/c",
+          "2.02 MeV/c"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTotal energy is kinetic plus rest energy:\nE = K + mc² = 1.0 + 0.511 = 1.511 MeV.\nThen use the invariant with the difference of squares:\n(pc)² = E² − (mc²)² = (E − mc²)(E + mc²) = (1.511 − 0.511)(1.511 + 0.511) = (1.000)(2.022) = 2.022.\npc = √2.022 ≈ 1.42 MeV, so p ≈ 1.42 MeV/c.\n\nNUMERICS WITHOUT A CALCULATOR\nThe factoring is what makes this trivial: (E − mc²) is just the kinetic energy K = 1.000 exactly, and (E + mc²) = K + 2mc² = 1.0 + 1.022 = 2.022. So (pc)² = K(K + 2mc²) = 1 × 2.022 ≈ 2.02, and √2.02 ≈ 1.42 (since √2 ≈ 1.414). No squaring of 1.511 is ever needed.\nThe trap 1.01 MeV/c is the CLASSICAL momentum √(2mK) = √(2 × 0.511 × 1.0) = √1.022 ≈ 1.01 — noticeably too small, since at K ≈ 2mc² the electron is firmly relativistic.\n\n90-SECOND SOLUTION\n(pc)² = K(K + 2mc²) = (1.0)(1.0 + 1.022) = 2.022, so pc = √2.02 ≈ 1.42 MeV.\n\nWHAT TO MEMORIZE\nThe identity (pc)² = K(K + 2mc²) follows directly from E = K + mc² and the invariant, and it is the cleanest way to get momentum from kinetic energy — no total energy needs to be squared. It also displays both limits at a glance: when K ≪ mc² it reduces to (pc)² ≈ 2mc²K, i.e. the classical p = √(2mK); when K ≫ mc² it reduces to pc ≈ K, the ultrarelativistic limit. Recognizing which regime you are in tells you immediately whether the classical formula is safe."
+      },
+
+      {
+        "question": "Light from a receding galaxy is observed at exactly twice its rest wavelength. Attributing the shift entirely to the relativistic Doppler effect, the galaxy's recession speed is",
+        "choices": [
+          "0.50c",
+          "0.60c",
+          "0.75c",
+          "0.80c",
+          "0.90c"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a source receding at speed βc, the relativistic Doppler shift of wavelength is\nλ_obs/λ_rest = √((1 + β)/(1 − β)).\nSetting this ratio equal to 2 and squaring both sides:\n(1 + β)/(1 − β) = 4\n1 + β = 4(1 − β) = 4 − 4β\n5β = 3, so β = 3/5 = 0.60.\n\nNUMERICS WITHOUT A CALCULATOR\nSquare first to clear the radical, then cross-multiply — the algebra stays in whole numbers throughout. From (1 + β)/(1 − β) = k² with k = 2, the general solution is β = (k² − 1)/(k² + 1) = (4 − 1)/(4 + 1) = 3/5. That formula is worth deriving once and remembering, because it converts any Doppler ratio into a speed in a single step.\nNote the naive non-relativistic guess would be β = Δλ/λ = 1, i.e. the speed of light — clearly impossible, which signals that the relativistic formula is required.\n\n90-SECOND SOLUTION\nk = 2, so β = (k² − 1)/(k² + 1) = 3/5 = 0.60c.\n\nWHAT TO MEMORIZE\nThe Doppler \"k-factor\" k = λ_obs/λ_rest = √((1+β)/(1−β)) for recession, with the inverse relation β = (k² − 1)/(k² + 1). The clean pairs ETS uses repeatedly are:\n  k = 2 ↔ β = 3/5;  k = 3 ↔ β = 4/5;  k = 5 ↔ β = 12/13\nFor an APPROACHING source, use 1/k (the same formula with β → −β), so an approaching source with β = 3/5 halves the wavelength. Because k involves a square root, always square the given ratio before solving — that single step is what keeps the arithmetic in integers."
+      },
+
+      {
+        "question": "A source approaches Earth at (12/13)c while emitting light of rest wavelength 500 nm. The wavelength observed on Earth is most nearly",
+        "choices": [
+          "100 nm",
+          "250 nm",
+          "400 nm",
+          "500 nm",
+          "2500 nm"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor an APPROACHING source the observed wavelength is shortened (blueshifted):\nλ_obs/λ_rest = √((1 − β)/(1 + β)).\nWith β = 12/13:\n1 − β = 1/13 and 1 + β = 25/13.\nThe ratio (1/13)/(25/13) = 1/25, and its square root is 1/5.\nλ_obs = 500 × (1/5) = 100 nm.\n\nNUMERICS WITHOUT A CALCULATOR\nWriting β as the fraction 12/13 makes the 13's cancel immediately: (1 − 12/13)/(1 + 12/13) = (1/13)/(25/13) = 1/25, a perfect square whose root is exactly 1/5. This is why the problem chose 12/13 — the k-factor comes out to a clean integer 5 (or 1/5 for approach). Then 500/5 = 100 nm, a one-step division.\nThe trap 2500 nm applies the redshift formula instead — that is what you get for a RECEDING source at the same speed, since the two cases are exact reciprocals.\n\n90-SECOND SOLUTION\nβ = 12/13 gives k = 5, and approaching means divide: λ_obs = 500/5 = 100 nm.\n\nWHAT TO MEMORIZE\nApproach and recession are exact reciprocals: if receding multiplies the wavelength by k, approaching divides by the same k. Before computing anything, decide the DIRECTION of the shift physically — approaching always shortens the wavelength (blueshift), receding always lengthens it (redshift) — and use that to eliminate half the choices immediately. Here every option except 100 nm and 250 nm is at or above the rest wavelength and can be ruled out on sight, since an approaching source must give λ_obs < 500 nm."
+      },
+
+      {
+        "question": "In the laboratory frame, a rocket moves in the +x direction at 0.80c. The rocket launches a probe forward at 0.80c relative to the rocket. What is the probe's speed in the laboratory frame?",
+        "choices": [
+          "0.80c",
+          "0.89c",
+          "0.94c",
+          "0.976c",
+          "1.60c"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nRelativistic velocity addition:\nu = (u' + v)/(1 + u'v/c²)\nwith u' = 0.80c (probe relative to rocket) and v = 0.80c (rocket relative to lab):\nu = (0.80 + 0.80)/(1 + 0.64) = 1.60/1.64 = 40/41 ≈ 0.976c.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in fractions: with both speeds equal to 4/5, the numerator is 8/5 and the denominator is 1 + 16/25 = 41/25. Dividing: (8/5) × (25/41) = 40/41. Recognizing 40/41 as \"just under 1\" is enough to pick the answer — you can see it is about 1 − 1/41 ≈ 0.976 without dividing.\nThe trap 1.60c is the Galilean sum 0.8 + 0.8, which exceeds c and is therefore impossible; spotting that immediately is the point of the question.\n\n90-SECOND SOLUTION\nu = (0.8 + 0.8)/(1 + 0.64) = 1.6/1.64 = 40/41 ≈ 0.976c.\n\nWHAT TO MEMORIZE\nRelativistic velocity addition u = (u' + v)/(1 + u'v/c²) can never produce a result at or above c when both inputs are below c — the denominator grows exactly fast enough to prevent it. Two limiting behaviors are worth knowing: if either input equals c the result is exactly c (light travels at c in every frame), and when both speeds are small compared to c the denominator approaches 1 and the formula reduces to the familiar Galilean sum. Any answer at or above c signals that the denominator was dropped."
+      },
+
+      {
+        "question": "In frame S, two events are separated by 13 light-years in space and 5.0 years in time. There exists a frame in which the two events occur simultaneously. In that frame, how far apart are they?",
+        "choices": [
+          "3.0 light-years",
+          "5.0 light-years",
+          "8.0 light-years",
+          "10 light-years",
+          "12 light-years"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe spacetime interval is the same in every inertial frame. Using s² = (cΔt)² − (Δx)²:\ns² = (5.0)² − (13)² = 25 − 169 = −144 (in units of light-years squared).\nA negative s² means the separation is SPACELIKE, so a frame exists where the events are simultaneous — consistent with the problem statement.\nIn that frame Δt' = 0, so the interval reduces to s² = −(Δx')², giving\n(Δx')² = 144 and Δx' = 12 light-years.\n\nNUMERICS WITHOUT A CALCULATOR\nRecognize the 5-12-13 triple: 13² − 5² = 169 − 25 = 144 = 12², so the answer is 12 with no square root to evaluate. Using the difference of squares, (13 − 5)(13 + 5) = (8)(18) = 144, gives the same result and avoids squaring 13 at all.\nNote the trap 8.0 light-years, which is simply 13 − 5 — subtracting the quantities rather than their squares.\n\n90-SECOND SOLUTION\nSpacelike interval: (Δx')² = (Δx)² − (cΔt)² = 169 − 25 = 144, so Δx' = 12 light-years.\n\nWHAT TO MEMORIZE\nThe invariant interval s² = (cΔt)² − (Δx)² has the same value in all inertial frames, and its SIGN classifies the separation: timelike (s² > 0) means a frame exists where the events happen at the same place and the ordering is absolute; spacelike (s² < 0) means a frame exists where they are simultaneous and the ordering is frame-dependent; lightlike (s² = 0) means only a light signal connects them. The relative speed of any other frame is a red herring in interval problems — invariance means you never need it."
+      },
+
+      {
+        "question": "A particle of rest mass m and Lorentz factor γ = 5 strikes an identical stationary particle of rest mass m. The two stick together. What is the rest mass of the composite object?",
+        "choices": [
+          "1.4m",
+          "2.0m",
+          "2.4m",
+          "3.0m",
+          "3.5m"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nRest mass is not conserved in an inelastic collision, but total energy and total momentum are. Work with the invariant applied to the SYSTEM.\nBefore the collision:\n  E_total = γmc² + mc² = 5mc² + mc² = 6mc².\n  (pc)_total = √(E₁² − (mc²)²) = √(25 − 1) mc² = √24 mc² (only the moving particle carries momentum).\nThe composite's rest mass follows from the same invariant:\n  (Mc²)² = E_total² − (p_total c)² = 36(mc²)² − 24(mc²)² = 12(mc²)².\n  M = √12 m = 2√3 m ≈ 3.46m ≈ 3.5m.\n\nNUMERICS WITHOUT A CALCULATOR\nThe squares are chosen to subtract cleanly: 36 − 24 = 12, and √12 = 2√3 ≈ 2 × 1.73 = 3.46. There is a useful shortcut formula for this exact configuration (one particle at rest, both of mass m):\n  M² = 2m²(1 + γ) = 2m²(6) = 12m²,\nwhich reproduces the answer in one line. Note M ≈ 3.5m is greater than 2m — the excess comes from kinetic energy converted into rest mass.\n\n90-SECOND SOLUTION\nE = 6mc², pc = √24 mc². M² = (36 − 24)m² = 12m², so M = √12 m ≈ 3.5m.\n\nWHAT TO MEMORIZE\nIn relativistic collisions, energy and momentum are conserved but REST MASS IS NOT — the composite is always heavier than the sum of the parts in an inelastic collision, because kinetic energy converts to rest energy. The reliable method is always: total E and total p before, then M²c⁴ = E² − (pc)². For the common case of a projectile of mass m with Lorentz factor γ hitting an identical target at rest, M² = 2m²(1 + γ) is worth carrying; it also shows that the available energy grows only as √γ, which is precisely why particle physicists build colliding-beam machines rather than fixed-target ones."
+      },
+
+      {
+        "question": "A stationary pion of rest energy 140 MeV decays into a muon of rest energy 106 MeV and a massless neutrino. What is the momentum of the neutrino?",
+        "choices": [
+          "30 MeV/c",
+          "34 MeV/c",
+          "53 MeV/c",
+          "106 MeV/c",
+          "140 MeV/c"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe pion is at rest, so total momentum is zero: the muon and neutrino fly apart with equal and opposite momenta of magnitude p. For the massless neutrino, E_ν = pc; for the muon, E_μ = √((pc)² + (m_μc²)²). Conserving energy:\nM_π c² = pc + √((pc)² + (m_μ c²)²).\nIsolating and squaring gives the standard two-body decay result:\npc = (M² − m²)c⁴/(2Mc²) = (140² − 106²)/(2 × 140) MeV.\n\nNUMERICS WITHOUT A CALCULATOR\nUse the difference of squares rather than computing both squares:\n140² − 106² = (140 − 106)(140 + 106) = (34)(246) = 8364.\nThen divide by 2M = 280: 8364/280 ≈ 29.9 ≈ 30 MeV/c.\nTo do 8364/280 mentally, note 280 × 30 = 8400, just above 8364, so the answer is a shade under 30. The choices are far apart, so \"just under 30\" settles it immediately.\nThe trap 34 MeV/c is the raw mass difference M − m, which would be the answer only if the decay released its energy with no momentum recoil.\n\n90-SECOND SOLUTION\npc = (M² − m²)/(2M) = (140−106)(140+106)/280 = 8364/280 ≈ 30 MeV/c.\n\nWHAT TO MEMORIZE\nFor a two-body decay of a particle at rest into one massive and one massless product, pc = (M² − m²)c⁴/(2Mc²). Rather than memorizing the formula alone, remember the derivation pattern — zero total momentum means equal and opposite momenta, then write each particle's energy in terms of that shared p and conserve energy. The key numerical habit is factoring M² − m² = (M − m)(M + m), which appears in essentially every decay and threshold calculation."
+      },
+
+      {
+        "question": "Two events occur simultaneously in frame S, separated by 6.0 light-microseconds along the x-axis. In a frame S′ moving along x at 0.60c relative to S, what is the time interval between the two events?",
+        "choices": [
+          "3.6 μs",
+          "4.5 μs",
+          "6.0 μs",
+          "7.5 μs",
+          "10 μs"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe Lorentz transformation for time is\nΔt′ = γ(Δt − vΔx/c²).\nThe events are simultaneous in S, so Δt = 0 and the first term vanishes:\n|Δt′| = γ v Δx/c² = γβ (Δx/c).\nFor β = 0.6, γ = 1.25, so γβ = 1.25 × 0.6 = 0.75.\nWith Δx/c = 6.0 μs:\n|Δt′| = 0.75 × 6.0 = 4.5 μs.\n\nNUMERICS WITHOUT A CALCULATOR\nCompute the product γβ first — it is 0.75 exactly, a clean fraction (3/4) — and note that Δx = 6.0 light-microseconds means Δx/c = 6.0 μs with no unit conversion required. Then 0.75 × 6 = 4.5 in one step. Choosing light-microseconds as the distance unit is the problem's way of making c cancel; whenever distances are quoted in light-years, light-seconds, or light-microseconds, expect the factors of c to disappear.\nThe trap 3.6 μs comes from using β alone (0.6 × 6) and forgetting the γ factor.\n\n90-SECOND SOLUTION\nΔt = 0, so |Δt′| = γβΔx/c = (1.25)(0.6)(6.0 μs) = 4.5 μs.\n\nWHAT TO MEMORIZE\nEvents simultaneous in one frame are generally NOT simultaneous in another — this is the relativity of simultaneity, and the quantitative statement is Δt′ = −γvΔx/c² for events with Δt = 0. The size of the effect grows with their SPATIAL separation, which is why it is negligible in everyday life and dramatic across astronomical distances. The combination γβ appears constantly in these transformations; at β = 0.6 it equals 0.75 and at β = 0.8 it equals 4/3, both worth recognizing on sight."
+      },
+
+      {
+        "question": "How much kinetic energy must be given to an electron for its Lorentz factor to reach γ = 4? (Take the electron rest energy to be 0.511 MeV.)",
+        "choices": [
+          "0.51 MeV",
+          "0.77 MeV",
+          "1.02 MeV",
+          "1.28 MeV",
+          "1.53 MeV"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nKinetic energy is the total energy minus the rest energy:\nK = (γ − 1)mc² = (4 − 1)(0.511) = 3 × 0.511 = 1.533 MeV ≈ 1.53 MeV.\n\nNUMERICS WITHOUT A CALCULATOR\n3 × 0.511 = 1.533 is a single multiplication. A quick way to check the size: since 0.511 ≈ 0.5, the answer should be near 3 × 0.5 = 1.5, which immediately identifies 1.53 MeV among choices that are otherwise well separated.\nThe trap 2.04 MeV (not offered) would be the TOTAL energy γmc² = 4 × 0.511, and the trap 1.02 MeV is (γ − 2)mc² or equivalently 2mc², the pair-production threshold value — a number that appears often enough in electron problems to be tempting.\n\n90-SECOND SOLUTION\nK = (γ − 1)mc² = 3 × 0.511 ≈ 1.53 MeV.\n\nWHAT TO MEMORIZE\nK = (γ − 1)mc² — the \"−1\" removes the rest energy, and forgetting it is the most common error in relativistic energy problems. It is worth having a feel for the correspondence between γ and kinetic energy in units of rest energy: γ = 2 means K = mc², γ = 3 means K = 2mc², γ = 4 means K = 3mc². In other words, K/mc² = γ − 1 exactly, so a particle whose kinetic energy equals its rest energy has γ = 2 and therefore β = √3/2 ≈ 0.87."
+      },
+
+      {
+        "question": "The Sun radiates energy at a rate of about 4 × 10²⁶ W. Taking c = 3 × 10⁸ m/s, at what rate is it losing rest mass?",
+        "choices": [
+          "4 × 10⁹ kg/s",
+          "1.3 × 10¹⁰ kg/s",
+          "4 × 10¹⁷ kg/s",
+          "1.3 × 10¹⁸ kg/s",
+          "4 × 10²⁶ kg/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nMass-energy equivalence gives E = mc², so a power output P corresponds to a mass-loss rate\ndm/dt = P/c².\nc² = (3 × 10⁸)² = 9 × 10¹⁶ m²/s².\ndm/dt = (4 × 10²⁶)/(9 × 10¹⁶) ≈ 0.44 × 10¹⁰ ≈ 4.4 × 10⁹ kg/s.\n\nNUMERICS WITHOUT A CALCULATOR\nHandle mantissa and exponent separately. Exponents: 10²⁶/10¹⁶ = 10¹⁰. Mantissas: 4/9 ≈ 0.44. Combine: 0.44 × 10¹⁰ = 4.4 × 10⁹ kg/s. The only real arithmetic is 4/9, and even rounding it to 0.5 gives 5 × 10⁹, which still points unambiguously at the 4 × 10⁹ choice.\nRemember c² = 9 × 10¹⁶ as a single stored quantity — squaring 3 × 10⁸ mid-problem is a frequent source of exponent errors (10⁸ squared is 10¹⁶, not 10¹⁴ or 10⁶⁴). The trap 1.3 × 10¹⁸ comes from dividing by c instead of c².\n\n90-SECOND SOLUTION\ndm/dt = P/c² = 4×10²⁶/9×10¹⁶ ≈ 4.4 × 10⁹ kg/s.\n\nWHAT TO MEMORIZE\nE = mc² with c² = 9 × 10¹⁶ J/kg is the workhorse conversion; keeping c² as a single number rather than re-squaring c each time prevents most exponent slips. Two useful anchors: 1 kg of rest mass corresponds to 9 × 10¹⁶ J, and 1 atomic mass unit corresponds to 931.5 MeV. For order-of-magnitude sanity, the Sun's mass is about 2 × 10³⁰ kg, so losing 4 × 10⁹ kg/s costs it roughly 10⁻¹³ of its mass over the age of the solar system — reassuringly negligible, which is a good check that the exponent arithmetic came out right."
+      }
+
+    ]
+  },
+
 
 
   {

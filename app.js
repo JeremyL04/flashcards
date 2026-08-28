@@ -24,13 +24,14 @@ const PALETTE = ["red", "orange", "amber", "green", "teal", "blue", "purple", "p
 const SECONDS_PER_QUESTION = 90; // sets the recommended time for a set
 const WARN_AT = 0.75; // amber once this fraction of the recommendation is used
 
-// One-at-a-time mode: every question gets its own budget, then moves on.
-const TIMED_QUESTION_SECONDS = 120;
-const TIMED_WARN_SECONDS = 90;
+// One-at-a-time mode: every question gets its own budget, chosen on the
+// intro screen, then moves on once time is up.
+const TIMED_SECONDS_PRESETS = [60, 90, 120, 150, 180];
+const TIMED_SECONDS_DEFAULT = 120;
 
 // Not real security: this file is public, so anyone who views the page
 // source can read it. It only keeps casual visitors out.
-const PASSWORD = "paulaissooobeautiful";
+const PASSWORD = "paulatakesmybreathaway";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 const answerIndex = (card) => LETTERS.indexOf(card.answer);
@@ -45,6 +46,9 @@ const timerEl = document.getElementById("timer");
 
 let state;
 let tickHandle = null;
+// Sticky for the session (not saved) so picking 90s once keeps it selected
+// for the next exam too, without carrying it across a reload.
+let selectedTimedSeconds = TIMED_SECONDS_DEFAULT;
 
 // ---------- timer ----------
 //
@@ -87,18 +91,17 @@ function paintTimer() {
   if (!show) return;
 
   // In one-at-a-time mode the clock on screen is the current question's
-  // budget; the whole-set total still accrues and appears with the score.
+  // budget (whatever was chosen on the intro screen); the whole-set total
+  // still accrues and appears with the score.
   const perQuestion = state.mode === "timed" && state.phase === "quiz";
   const used = perQuestion ? Date.now() - state.qSince : elapsedMs();
-  const limit = perQuestion ? TIMED_QUESTION_SECONDS * 1000 : t.limit;
+  const limit = perQuestion ? state.timedSeconds * 1000 : t.limit;
 
   timerEl.innerHTML = `<span></span><span class="timer-limit"></span>`;
   timerEl.firstElementChild.textContent = formatClock(used);
   timerEl.lastElementChild.textContent = ` / ${formatClock(limit)}`;
 
-  const warn = perQuestion
-    ? used >= TIMED_WARN_SECONDS * 1000
-    : limit > 0 && used / limit >= WARN_AT;
+  const warn = limit > 0 && used / limit >= WARN_AT;
   timerEl.classList.toggle("warn", warn && used < limit);
   timerEl.classList.toggle("over", limit > 0 && used >= limit);
 }
@@ -128,7 +131,7 @@ function syncTicking() {
 // selected at that moment stands.
 function advanceIfQuestionExpired() {
   if (!state || state.mode !== "timed" || state.phase !== "quiz") return false;
-  if (Date.now() - state.qSince < TIMED_QUESTION_SECONDS * 1000) return false;
+  if (Date.now() - state.qSince < state.timedSeconds * 1000) return false;
   goToPage(state.page + 1);
   return true;
 }
@@ -226,9 +229,16 @@ function save() {
               missed: state.first.missed.map(packItem),
             }
           : null,
-        second: state.second ?? null,
+        second: state.second
+          ? {
+              correct: state.second.correct,
+              total: state.second.total,
+              missed: state.second.missed.map(packItem),
+            }
+          : null,
         missedIndexes: state.missedIndexes ? [...state.missedIndexes] : null,
         mode: state.mode ?? null,
+        timedSeconds: state.timedSeconds ?? null,
         // Bank the running total so a closed tab does not accrue time.
         timer: state.timer
           ? { banked: elapsedMs(), running: state.timer.running, limit: state.timer.limit }
@@ -268,9 +278,17 @@ function restore() {
           missed: saved.first.missed.map((p) => unpackItem(exam, p)),
         }
       : null,
-    second: saved.second,
+    second: saved.second
+      ? {
+          correct: saved.second.correct,
+          total: saved.second.total,
+          // Older saved progress may predate this field.
+          missed: (saved.second.missed || []).map((p) => unpackItem(exam, p)),
+        }
+      : null,
     missedIndexes: saved.missedIndexes ? new Set(saved.missedIndexes) : null,
     mode: saved.mode ?? null,
+    timedSeconds: saved.timedSeconds ?? null,
     // A restored question gets its full budget back rather than resuming
     // mid-countdown, so a refresh can never skip a question instantly.
     qSince: Date.now(),
@@ -363,12 +381,13 @@ function showIntro(exam) {
   render();
 }
 
-function startExam(exam, mode) {
+function startExam(exam, mode, timedSeconds) {
   state = {
     phase: "quiz",
     greeted: true,
     exam,
     mode,
+    timedSeconds: mode === "timed" ? timedSeconds : null,
     pass: 1,
     first: null,
     second: null,
@@ -413,6 +432,7 @@ function render() {
   else if (state.phase === "quiz") renderQuiz();
   else if (state.phase === "results") renderResults();
   else if (state.phase === "review") renderReview();
+  else if (state.phase === "report") renderReportCard();
 
   paintTimer();
   syncTicking();
@@ -517,12 +537,18 @@ function renderIntro() {
       <div class="mode">
         <h3>One at a time</h3>
         <ul>
-          <li>A single question on screen with its own two-minute budget.</li>
-          <li>The clock turns <span class="swatch warn"></span> amber at 1:30,
-              and at 2:00 the question moves on by itself.</li>
+          <li>A single question on screen with its own budget — pick how
+              long below.</li>
+          <li>The clock turns <span class="swatch warn"></span> amber at
+              three quarters of that time, and then the question moves on
+              by itself.</li>
           <li>Whatever is selected when it moves on is your answer, and you
               cannot go back to it.</li>
         </ul>
+        <div class="timed-picker">
+          <span class="timed-picker-label">Seconds per question</span>
+          <div class="timed-picker-options"></div>
+        </div>
       </div>
     </div>
     <p class="intro-foot">Either way, the second pass works the same as the
@@ -534,11 +560,24 @@ function renderIntro() {
   box.querySelector(".intro-clock-time").textContent = formatClock(recommendedMs(exam));
   box.querySelector(".intro-clock-note").textContent = "recommended for the full set";
 
+  const pickerOptions = box.querySelector(".timed-picker-options");
+  TIMED_SECONDS_PRESETS.forEach((secs) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "timed-picker-btn" + (secs === selectedTimedSeconds ? " selected" : "");
+    b.textContent = `${secs}s`;
+    b.addEventListener("click", () => {
+      selectedTimedSeconds = secs;
+      [...pickerOptions.children].forEach((el) => el.classList.toggle("selected", el === b));
+    });
+    pickerOptions.appendChild(b);
+  });
+
   const actions = document.createElement("div");
   actions.className = "intro-actions";
   actions.append(
     button("Start regular", "btn primary", () => startExam(exam, "regular")),
-    button("Start one at a time", "btn", () => startExam(exam, "timed"))
+    button("Start one at a time", "btn", () => startExam(exam, "timed", selectedTimedSeconds))
   );
   box.appendChild(actions);
 
@@ -836,11 +875,19 @@ function submitPass() {
   if (state.pass === 1) {
     state.first = { correct, total: state.items.length, missed };
   } else {
-    state.second = { correct, total: state.items.length };
+    state.second = { correct, total: state.items.length, missed };
   }
 
   state.phase = "results";
   render();
+}
+
+// A question retried on the second pass is judged by that retry, not the
+// first attempt — a correction on the retry counts as mastered.
+function finalMissedIndexes() {
+  if (!state.first) return new Set();
+  const missed = state.second ? state.second.missed : state.first.missed;
+  return new Set(missed.map((it) => it.deckIndex));
 }
 
 // ---------- results ----------
@@ -936,7 +983,10 @@ function renderReview() {
 
   const next =
     state.page === total - 1
-      ? button("Back to menu", "btn primary", showMenu)
+      ? button("View report card", "btn primary", () => {
+          state.phase = "report";
+          render();
+        })
       : button("Next", "btn primary", () => {
           state.page++;
           render();
@@ -944,6 +994,66 @@ function renderReview() {
 
   nav.append(back, info, next);
   appEl.appendChild(nav);
+}
+
+// ---------- report card ----------
+//
+// A compact right/wrong grid meant to be screenshotted, not read on screen —
+// so it shows the FINAL result per question (after any retry), one glance,
+// no scrolling to page through review cards again.
+
+function renderReportCard() {
+  const exam = state.exam;
+  const wrong = finalMissedIndexes();
+  const correctCount = exam.cards.length - wrong.size;
+
+  titleEl.textContent = exam.name;
+  phaseEl.textContent = "Report card";
+  setProgress(1);
+  appEl.innerHTML = "";
+
+  const box = document.createElement("div");
+  box.className = "report-card";
+
+  const header = document.createElement("div");
+  header.className = "report-header";
+  const title = document.createElement("p");
+  title.className = "report-title";
+  title.textContent = exam.name;
+  const score = document.createElement("p");
+  score.className = "report-score";
+  score.textContent = `${correctCount} / ${exam.cards.length} correct`;
+  header.append(title, score);
+
+  const grid = document.createElement("div");
+  grid.className = "report-grid";
+  exam.cards.forEach((_, i) => {
+    const isWrong = wrong.has(i);
+    const cell = document.createElement("div");
+    cell.className = "report-cell" + (isWrong ? " wrong" : " right");
+    const num = document.createElement("span");
+    num.className = "report-num";
+    num.textContent = i + 1;
+    const mark = document.createElement("span");
+    mark.className = "report-mark";
+    mark.textContent = isWrong ? "✗" : "✓";
+    cell.append(num, mark);
+    grid.appendChild(cell);
+  });
+
+  const actions = document.createElement("div");
+  actions.className = "results-actions";
+  actions.append(
+    button("Back to menu", "btn primary", showMenu),
+    button("Back to review", "btn link", () => {
+      state.phase = "review";
+      state.page = 0;
+      render();
+    })
+  );
+
+  box.append(header, grid, actions);
+  appEl.appendChild(box);
 }
 
 function reviewCard(card, deckIndex) {
