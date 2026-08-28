@@ -827,6 +827,275 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Optics & Waves Test 2 (Hard)",
+    "added": "2026-08-28",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "In a double-slit experiment the slit separation is d = 0.30 mm and each slit has width w = 0.075 mm. Which interference order is the FIRST one missing from the observed pattern?",
+        "choices": [
+          "m = 1",
+          "m = 2",
+          "m = 3",
+          "m = 4",
+          "No orders are missing"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe observed pattern is the two-slit interference fringes modulated by the single-slit diffraction envelope. An interference maximum DISAPPEARS when it happens to fall exactly on a zero of that envelope.\nInterference maxima: d sin θ = mλ.\nDiffraction minima: w sin θ = nλ.\nBoth conditions hold at the same angle when their ratio matches:\nm/n = d/w = 0.30/0.075 = 4.\nSo m = 4n: orders 4, 8, 12, ... are missing, and the FIRST missing order is m = 4.\n\n90-SECOND SOLUTION\nMissing orders occur at m = (d/w)n. Here d/w = 4, so the first missing order is m = 4.\n\nWHAT TO MEMORIZE\nTwo-slit maxima at d sin θ = mλ, single-slit minima at w sin θ = nλ — note the reversed roles of \"maxima\" and \"minima\" in the two formulas. Missing orders occur at m = (d/w)n, independent of wavelength. A useful companion fact: the number of interference maxima contained within the central diffraction peak is 2(d/w) − 1, which here gives 7."
+      },
+
+      {
+        "question": "A transparent coating of index 1.7 is deposited on glass of index 1.5. For light of wavelength 600 nm in air at normal incidence, what is the minimum nonzero coating thickness that MINIMIZES the reflected intensity?",
+        "choices": [
+          "88 nm",
+          "176 nm",
+          "200 nm",
+          "353 nm",
+          "400 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nCount the π phase shifts, since they decide which condition applies.\nTop surface (air n = 1.0 → coating n = 1.7): index INCREASES, so this reflection gets a π shift.\nBottom surface (coating n = 1.7 → glass n = 1.5): index DECREASES, so this reflection gets NO shift.\nExactly ONE shift means the two reflected beams already start half a wavelength out of step. To make them cancel (minimum reflection), the extra path 2t inside the coating must be a WHOLE number of wavelengths in the coating:\n2nt = mλ → t = mλ/(2n).\nMinimum nonzero (m = 1):\nt = 600/(2 × 1.7) = 600/3.4 ≈ 176 nm.\n\n90-SECOND SOLUTION\nn_coat > n_glass means only the top interface shifts. One shift flips the usual condition, so minimum reflection needs 2nt = mλ, giving t = λ/2n ≈ 176 nm.\n\nWHAT TO MEMORIZE\nAlways count phase shifts before writing a thin-film condition: a π shift occurs on reflection ONLY when going from lower to higher index. If both interfaces shift (or neither does), the shifts cancel and 2nt = mλ gives destructive reflection. If exactly one shifts, every condition reverses. This single check determines the answer to essentially every thin-film question, and it is where most errors occur — not in the arithmetic."
+      },
+
+      {
+        "question": "A plano-convex lens of radius of curvature 2.0 m rests on a flat glass plate, illuminated from above at normal incidence with light of wavelength 500 nm. What is the radius of the 4th dark ring in the reflected pattern?",
+        "choices": [
+          "0.50 mm",
+          "1.0 mm",
+          "2.0 mm",
+          "2.8 mm",
+          "4.0 mm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe air gap between the curved surface and the flat plate has thickness t at radius r, related by the sagitta geometry t ≈ r²/(2R).\nPhase counting: the top reflection (glass → air) has NO shift; the bottom reflection (air → glass) DOES shift. One net shift, so DARK rings occur where the extra path is a whole number of wavelengths:\n2t = mλ.\nSubstituting t = r²/2R:\nr²/R = mλ → r = √(mλR).\nFor m = 4:\nr = √(4 × 500 × 10⁻⁹ × 2.0) = √(4.0 × 10⁻⁶) = 2.0 × 10⁻³ m = 2.0 mm.\n\nNUMERICS WITHOUT A CALCULATOR\nInside the root: 4 × 5 × 10⁻⁷ × 2 = 40 × 10⁻⁷ = 4.0 × 10⁻⁶. The square root of 4 × 10⁻⁶ is 2 × 10⁻³ — clean because the exponent is even. Shifting to an even power of ten before taking a root is the habit that keeps this mental.\n\n90-SECOND SOLUTION\nOne net phase shift makes DARK rings at 2t = mλ, and t = r²/2R, so r = √(mλR) = √(4 × 500nm × 2.0m) = 2.0 mm.\n\nWHAT TO MEMORIZE\nNewton's rings: dark rings at r = √(mλR), with the center DARK because t → 0 there and the single π shift alone produces cancellation. That dark center is the observable signature of exactly one phase shift, and it is the same reason a very thin soap film looks black just before it bursts. The relation t ≈ r²/2R for a shallow spherical cap is worth knowing on its own."
+      },
+
+      {
+        "question": "Two flat glass plates touch along one edge and are separated at the far edge by a thin spacer, forming a wedge of air. Viewed in reflection with light of wavelength 500 nm at normal incidence, how many dark fringes appear between the contact line and the spacer, if the spacer thickness is 10 μm?",
+        "choices": [
+          "10",
+          "20",
+          "25",
+          "40",
+          "80"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAs with Newton's rings, the two reflections bounding the air gap produce exactly ONE π shift (no shift at glass→air on top, a shift at air→glass below). Dark fringes therefore occur wherever\n2t = mλ,\nso consecutive dark fringes are separated by a thickness change of λ/2.\nOver the full wedge the thickness runs from 0 to t_max = 10 μm, so the number of dark fringes is\nN = 2t_max/λ = 2(10 × 10⁻⁶)/(500 × 10⁻⁹) = (2.0 × 10⁻⁵)/(5.0 × 10⁻⁷) = 40.\n\nNUMERICS WITHOUT A CALCULATOR\nWrite both in the same form: 2 × 10⁻⁵ divided by 5 × 10⁻⁷. Mantissas 2/5 = 0.4, exponents 10⁻⁵/10⁻⁷ = 10², giving 0.4 × 100 = 40.\nThe trap 20 forgets the factor of 2 from the light traversing the gap twice.\n\n90-SECOND SOLUTION\nOne net shift means adjacent dark fringes differ by λ/2 in gap thickness, so N = 2t/λ = 2(10 μm)/(500 nm) = 40.\n\nWHAT TO MEMORIZE\nFor an air wedge or any thin film viewed in reflection, adjacent fringes correspond to a thickness change of λ/2, so the total fringe count over a maximum thickness t is 2t/λ. The contact line is DARK (one net phase shift, zero path difference), which is a quick way to confirm your phase bookkeeping against the observed pattern."
+      },
+
+      {
+        "question": "Light of frequency f is directed at a mirror that is approaching the source at speed v ≪ c, and the reflected light is detected back at the source. To first order in v/c, what is the fractional frequency shift Δf/f of the detected light?",
+        "choices": [
+          "2v/c",
+          "v/c",
+          "v/2c",
+          "v²/c²",
+          "zero, since the mirror only reverses the direction"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe shift happens TWICE, and this is the whole point.\nFirst, the mirror is a moving OBSERVER approaching the source, so the light it receives is blueshifted by a factor of about (1 + v/c).\nSecond, the mirror re-radiates that light while itself moving TOWARD the detector, so it acts as a moving SOURCE, applying another factor of about (1 + v/c).\nCombining and keeping first order:\nf_detected ≈ f(1 + v/c)² ≈ f(1 + 2v/c),\nso Δf/f = 2v/c.\n\n90-SECOND SOLUTION\nThe mirror receives a blueshift and then re-emits with another, so the factors multiply: Δf/f = 2v/c.\n\nWHAT TO MEMORIZE\nA reflection off a moving surface applies the Doppler shift TWICE, giving 2v/c rather than v/c. Watch for any situation with two sequential shifts — mirror reflections, echoes off a moving wall, or measurements across opposite edges of a rotating body — since the factor of 2 is the most commonly dropped piece. For sound, the exact treatment uses the moving-observer formula followed by the moving-source formula, which is where the doubling comes from."
+      },
+
+      {
+        "question": "A plane wave travelling along z has E_x = E₁cos(kz − ωt) and E_y = E₂cos(kz − ωt + π/2), with E₁ ≠ E₂ and both nonzero. Viewed looking back along the z-axis, the tip of the electric field vector traces out",
+        "choices": [
+          "an ellipse with axes along x and y",
+          "a straight line at angle arctan(E₂/E₁) to the x-axis",
+          "a straight line at 45° to the x-axis",
+          "a circle",
+          "an ellipse with axes rotated 45° from x and y"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe relative phase determines the shape, and the amplitudes determine its proportions.\nA phase difference of π/2 (a quarter cycle) means the two components reach their maxima at different times: when E_x is maximal, E_y is zero, and a quarter period later the reverse holds. Eliminating time from\nE_x = E₁cos(φ), E_y = −E₂sin(φ)\ngives\n(E_x/E₁)² + (E_y/E₂)² = 1,\nwhich is the equation of an ELLIPSE with its principal axes along x and y. Because E₁ ≠ E₂ the ellipse is not a circle, and because the phase is exactly π/2 the axes are not rotated.\n\n90-SECOND SOLUTION\nPhase π/2 rules out linear; unequal amplitudes rule out circular. What remains is an ellipse with axes along x and y.\n\nWHAT TO MEMORIZE\nRelative phase sets the polarization type: 0 or π gives linear, ±π/2 gives circular or elliptical depending on whether the amplitudes match, and any other phase gives an ellipse with rotated axes. Check the phase FIRST, then the amplitudes. Circular polarization is the special case requiring both conditions simultaneously — equal amplitudes AND a quarter-cycle phase difference."
+      },
+
+      {
+        "question": "Light that is already linearly polarized passes through a stack of N ideal polarizers, each rotated by 90°/N relative to the previous one, so that the final polarizer is at 90° to the original polarization. As N becomes very large, the fraction of the incident intensity transmitted approaches",
+        "choices": [
+          "0",
+          "1/4",
+          "1/2",
+          "1/√2",
+          "1"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEach stage applies Malus's law with the small angle θ = 90°/N, so the total transmission is\nT(N) = [cos²(90°/N)]^N = cos^(2N)(90°/N).\nCheck small cases: N = 1 gives cos²90° = 0 (crossed polarizers, total extinction). N = 2 gives cos⁴45° = 1/4. N = 3 gives (cos²30°)³ = (3/4)³ ≈ 0.42. N = 6 gives ≈ 0.66. N = 45 gives ≈ 0.95.\nAs N grows the individual angle shrinks, and since cos²θ ≈ 1 − θ² for small θ, the loss per stage falls off as 1/N² while the number of stages grows only as N. The total loss therefore scales as N × (1/N²) = 1/N, which vanishes:\nT → 1 as N → ∞.\nWith enough polarizers, essentially ALL the light gets through — and its polarization has been rotated by a full 90°.\n\n90-SECOND SOLUTION\nT = cos^(2N)(90°/N). The loss per stage falls as 1/N² while the number of stages grows only as N, so the total loss ~1/N → 0 and T → 1.\n\nWHAT TO MEMORIZE\nMalus's law I = I₀cos²θ, applied stage by stage using the angle from the PREVIOUS polarizer's axis. Because cos²θ ≈ 1 − θ² for small θ, many small rotations cost far less than one large rotation — a chain of small steps beats a single big step. This is the optical analogue of the quantum Zeno effect, and it explains why a polarization state can be rotated with almost no loss by using a gradual sequence."
+      },
+
+      {
+        "question": "Unpolarized light passes through two ideal linear polarizers. The intensity emerging from the pair is measured to be one-eighth of the ORIGINAL unpolarized intensity. What is the angle between the two polarizers' transmission axes?",
+        "choices": [
+          "0°",
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWork through the two stages in order.\nThe FIRST polarizer always transmits exactly half of unpolarized light, whatever its orientation:\nI₁ = I₀/2.\nThe SECOND obeys Malus's law with the angle θ between the axes:\nI₂ = I₁cos²θ = (I₀/2)cos²θ.\nSet this equal to the measured I₀/8:\n(1/2)cos²θ = 1/8 → cos²θ = 1/4 → cos θ = 1/2 → θ = 60°.\n\n90-SECOND SOLUTION\nHalf is lost at the first polarizer, so cos²θ = (1/8)/(1/2) = 1/4, giving cos θ = ½ and θ = 60°.\n\nWHAT TO MEMORIZE\nUnpolarized light loses exactly half at the FIRST ideal polarizer regardless of angle; every polarizer after that follows I = I₀cos²θ using the angle from the previous transmission axis. When solving for an unknown ANGLE rather than an intensity, strip out the ½ first, then take the inverse cosine of the square root. Handy reference values: cos²30° = 3/4, cos²45° = 1/2, cos²60° = 1/4."
+      },
+
+      {
+        "question": "A diffraction grating is to resolve the sodium doublet at 589.0 nm and 589.6 nm in FIRST order. What is the minimum number of grating lines that must be illuminated?",
+        "choices": [
+          "100",
+          "590",
+          "1000",
+          "1200",
+          "5900"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe chromatic resolving power of a grating is\nR = λ/Δλ = mN,\nwhere m is the order and N is the number of illuminated lines.\nRequired resolving power:\nR = 589.0/0.6 ≈ 982.\nIn first order (m = 1):\nN = R/m ≈ 982 ≈ 1000 lines.\n\nNUMERICS WITHOUT A CALCULATOR\n589/0.6 is close to 590/0.6 = 5900/6 ≈ 983, so about 10³. The choices are spaced by factors of several, so rounding 589 to 600 and computing 600/0.6 = 1000 identifies the answer immediately.\n\n90-SECOND SOLUTION\nR = λ/Δλ = 589/0.6 ≈ 982, and R = mN with m = 1, so N ≈ 1000 lines.\n\nWHAT TO MEMORIZE\nGrating resolving power R = λ/Δλ = mN. Two consequences worth carrying: widening the illuminated beam improves resolution (more lines), and working in a higher order improves it proportionally. The sodium doublet at 589.0/589.6 nm is the standard benchmark, requiring R ≈ 1000. Compare with the Rayleigh criterion for apertures, which limits ANGULAR resolution — a different quantity entirely, though both trace back to diffraction."
+      },
+
+      {
+        "question": "Light containing two wavelengths λ₁ and λ₂ falls on a diffraction grating. It is observed that the SECOND-order maximum of λ₁ appears at exactly the same angle as the THIRD-order maximum of λ₂. What is the ratio λ₂/λ₁?",
+        "choices": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "2/3",
+          "3/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe grating condition is d sin θ = mλ. Two maxima appear at the SAME angle when the products mλ are equal, since d is common to both:\nm₁λ₁ = m₂λ₂\n2λ₁ = 3λ₂\nλ₂/λ₁ = 2/3.\nThe grating spacing d cancels entirely and never needs to be known.\n\n90-SECOND SOLUTION\nSame angle means equal mλ: 2λ₁ = 3λ₂, so λ₂/λ₁ = 2/3.\n\nWHAT TO MEMORIZE\nOverlapping orders occur whenever m₁λ₁ = m₂λ₂, and this is a genuine practical nuisance in spectroscopy: a second-order red line can land on top of a third-order blue one, which is why spectrometers use order-sorting filters. Since the product mλ is what fixes the diffraction angle, a longer wavelength always reaches a given angle in a lower order."
+      },
+
+      {
+        "question": "A grating with spacing 2.0 μm is used in first order near normal incidence. Two spectral lines differ in wavelength by 1.0 nm. Approximately what angular separation do they have?",
+        "choices": [
+          "5 × 10⁻⁵ rad",
+          "5 × 10⁻⁴ rad",
+          "5 × 10⁻³ rad",
+          "2 × 10⁻³ rad",
+          "2 × 10⁻² rad"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nDifferentiate the grating equation d sin θ = mλ with respect to wavelength, holding the order fixed:\nd cos θ (dθ/dλ) = m, so the angular dispersion is\ndθ/dλ = m/(d cos θ).\nNear normal incidence cos θ ≈ 1, so\ndθ/dλ ≈ m/d = 1/(2.0 × 10⁻⁶) = 5.0 × 10⁵ rad/m.\nFor Δλ = 1.0 nm = 1.0 × 10⁻⁹ m:\nΔθ ≈ (5.0 × 10⁵)(1.0 × 10⁻⁹) = 5.0 × 10⁻⁴ rad.\n\nNUMERICS WITHOUT A CALCULATOR\n1/(2 × 10⁻⁶) = 0.5 × 10⁶ = 5 × 10⁵. Multiplying by 10⁻⁹ subtracts nine from the exponent: 5 × 10⁻⁴ rad. Pure exponent arithmetic once the reciprocal is taken.\n\n90-SECOND SOLUTION\ndθ/dλ ≈ m/d = 1/(2×10⁻⁶) = 5×10⁵ rad/m, so Δθ = (5×10⁵)(10⁻⁹) = 5 × 10⁻⁴ rad.\n\nWHAT TO MEMORIZE\nAngular dispersion of a grating: dθ/dλ = m/(d cos θ), increasing with order and with finer line spacing. More generally, whenever a question asks how a small change in one variable propagates to another, differentiate the governing relation rather than computing two separate cases and subtracting — it is faster and avoids cancellation error. Keep angular DISPERSION (how far apart two wavelengths land) distinct from RESOLVING POWER (whether they can be told apart), since a spectrometer needs both."
+      },
+
+      {
+        "question": "An optical fiber has a core of index 1.50 and a cladding of index 1.20. Light enters the flat end face from air. What is the numerical aperture, NA = sin θ_max, where θ_max is the largest angle from the fiber axis at which entering light is still guided by total internal reflection?",
+        "choices": [
+          "0.30",
+          "0.45",
+          "0.60",
+          "0.75",
+          "0.90"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTwo conditions chain together. Inside the core, a ray is guided only if it strikes the core-cladding wall beyond the critical angle:\nsin θ_c = n_clad/n_core.\nA ray entering the end face at angle θ from the axis refracts to an internal angle, and the geometry (the angle at the wall is the complement of the internal angle) leads to the standard result\nNA = sin θ_max = √(n_core² − n_clad²).\nSubstituting:\nNA = √(1.50² − 1.20²) = √(2.25 − 1.44) = √0.81 = 0.90.\n\nNUMERICS WITHOUT A CALCULATOR\nUse the difference of squares: 1.5² − 1.2² = (1.5 − 1.2)(1.5 + 1.2) = (0.3)(2.7) = 0.81, and √0.81 = 0.9 exactly. Factoring avoids squaring either number.\n\n90-SECOND SOLUTION\nNA = √(n₁² − n₂²) = √((1.5−1.2)(1.5+1.2)) = √0.81 = 0.90.\n\nWHAT TO MEMORIZE\nNumerical aperture NA = √(n_core² − n_clad²), with the acceptance half-angle given by sin θ_max = NA. A larger index contrast accepts light over a wider cone but causes more modal dispersion, which is the fundamental trade-off in fiber design. The underlying condition is always just total internal reflection, sin θ_c = n₂/n₁, applied at the core-cladding boundary."
+      },
+
+      {
+        "question": "A collimated laser beam of diameter 2.0 mm is to be expanded to a collimated beam of diameter 20 mm using two converging lenses in a telescopic arrangement. The first lens has focal length 2.0 cm. What must the second lens's focal length and the lens separation be?",
+        "choices": [
+          "f₂ = 10 cm, separation 12 cm",
+          "f₂ = 20 cm, separation 18 cm",
+          "f₂ = 20 cm, separation 22 cm",
+          "f₂ = 40 cm, separation 42 cm",
+          "f₂ = 20 cm, separation 20 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor the output beam to be collimated, the two lenses must share a common focal point — the first lens brings the beam to a focus, and the second recollimates it. This is the Keplerian telescope arrangement.\nThe expansion factor equals the ratio of focal lengths:\nM = f₂/f₁ = 20 mm/2.0 mm = 10, so f₂ = 10 × 2.0 cm = 20 cm.\nSharing a focus means the lenses are separated by the sum of their focal lengths:\nseparation = f₁ + f₂ = 2.0 + 20 = 22 cm.\n\n90-SECOND SOLUTION\nExpansion 10× means f₂ = 10f₁ = 20 cm; collimated in and out means the lenses share a focus, so separation = f₁ + f₂ = 22 cm.\n\nWHAT TO MEMORIZE\nA two-lens telescope (or beam expander) has angular magnification f_objective/f_eyepiece and a tube length equal to the SUM of the focal lengths when both beams are collimated. The same geometry serves as a refracting telescope, a beam expander, and a laser spatial filter. If the second lens is diverging (a Galilean arrangement) the separation becomes f₁ + f₂ with f₂ negative, giving a shorter and more compact instrument."
+      },
+
+      {
+        "question": "In a Michelson interferometer illuminated at 500 nm, a transparent slab of thickness 10 μm and index 1.5 is slowly inserted into one arm. How many fringes shift past a fixed point during the insertion?",
+        "choices": [
+          "5",
+          "10",
+          "15",
+          "18",
+          "20"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nInserting the slab replaces a thickness t of air (index ≈ 1) with material of index n, changing the optical path in that arm by (n − 1)t. Because the light traverses the arm TWICE (out and back), the total optical path change is\nΔ = 2(n − 1)t.\nEach fringe corresponds to one wavelength of path change, so\nN = 2(n − 1)t/λ = 2(1.5 − 1)(10 × 10⁻⁶)/(500 × 10⁻⁹)\n  = 2(0.5)(1.0 × 10⁻⁵)/(5.0 × 10⁻⁷)\n  = (1.0 × 10⁻⁵)/(5.0 × 10⁻⁷) = 20.\n\nNUMERICS WITHOUT A CALCULATOR\nThe 2 and the (n − 1) = 0.5 cancel each other exactly, leaving simply t/λ = 10⁻⁵/(5 × 10⁻⁷) = 20. Spotting that cancellation removes almost all the arithmetic.\nThe trap 10 comes from forgetting the round trip; 30 comes from using n rather than (n − 1).\n\n90-SECOND SOLUTION\nThe optical path changes by 2(n−1)t; the 2 and (n−1) = 0.5 cancel, leaving t/λ = 10⁻⁵/(5×10⁻⁷) = 20 fringes.\n\nWHAT TO MEMORIZE\nMichelson fringe counting: moving a mirror by distance d shifts 2d/λ fringes, and inserting a slab of thickness t and index n shifts 2(n − 1)t/λ fringes — the factor of 2 for the round trip appears in both. Optical path length is n × geometric length, and interference always responds to differences in OPTICAL path, which is what makes the (n − 1) rather than n the relevant quantity."
+      },
+
+      {
+        "question": "A 45°-45°-90° prism of index 1.5 is used to turn a beam through 90°: light enters perpendicular to one leg and strikes the hypotenuse at 45°. The prism, still surrounded by air, works as intended. It is then fully immersed in water (index 1.33). What happens at the hypotenuse?",
+        "choices": [
+          "Total internal reflection still occurs, and the prism works as before",
+          "Total internal reflection fails, and most of the light passes out through the hypotenuse",
+          "Total internal reflection still occurs, but the beam is turned through a different angle",
+          "The light is totally reflected at the entrance face instead",
+          "The behaviour is unchanged, since total internal reflection does not depend on the surroundings"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTotal internal reflection requires the internal angle of incidence to exceed the critical angle, and the critical angle depends on BOTH media:\nsin θ_c = n_outside/n_prism.\nIN AIR: sin θ_c = 1.0/1.5 = 0.667, so θ_c ≈ 41.8°. The beam strikes at 45°, which exceeds 41.8°, so it is totally reflected — the prism works.\nIN WATER: sin θ_c = 1.33/1.5 = 0.887, so θ_c ≈ 62.5°. Now the beam's 45° is LESS than the critical angle, so the condition fails and most of the light refracts out through the hypotenuse instead of being reflected.\n\nNUMERICS WITHOUT A CALCULATOR\nYou do not need precise arcsines — only a comparison. In water sin θ_c = 1.33/1.5 ≈ 0.89, and since sin 45° ≈ 0.71 < 0.89, the incidence angle is below critical. That single inequality settles the answer.\n\n90-SECOND SOLUTION\nIn water sin θ_c = 1.33/1.5 ≈ 0.89, while sin 45° ≈ 0.71. Since 45° is now BELOW the critical angle, the light escapes.\n\nWHAT TO MEMORIZE\nsin θ_c = n₂/n₁ requires n₁ > n₂, and the critical angle rises as the two indices approach each other — vanishing as a usable effect when n₂ → n₁. Whenever a problem changes the surrounding medium, recompute the critical angle rather than assuming the reflection survives. The same principle governs fiber optics, where the cladding index is deliberately kept just below the core's."
+      },
+
+      {
+        "question": "A pipe closed at one end and open at the other has two ADJACENT resonant frequencies at 350 Hz and 450 Hz. What is its fundamental frequency?",
+        "choices": [
+          "50 Hz",
+          "100 Hz",
+          "116 Hz",
+          "175 Hz",
+          "350 Hz"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA closed-open pipe supports only ODD harmonics: f₁, 3f₁, 5f₁, 7f₁, ....\nConsecutive allowed frequencies therefore differ by 2f₁, not by f₁ as they would for a string or an open-open pipe.\nSpacing: 450 − 350 = 100 Hz = 2f₁, so\nf₁ = 50 Hz.\nCheck that both given frequencies are genuinely odd multiples: 350/50 = 7 and 450/50 = 9 — both odd, and consecutive odd integers, confirming they are adjacent resonances. ✓\n\n90-SECOND SOLUTION\nClosed pipe → odd harmonics only → adjacent resonances differ by 2f₁. So f₁ = 100/2 = 50 Hz, with 350 = 7f₁ and 450 = 9f₁.\n\nWHAT TO MEMORIZE\nClosed-open pipe: λ_n = 4L/n with n ODD only, so f_n = nv/4L and adjacent resonances are spaced by 2f₁. Open-open pipe and a string fixed at both ends: all integer harmonics present, spaced by f₁. Given two adjacent resonances, the spacing immediately identifies which system you have — equal to f₁ means all harmonics, twice f₁ means odd only."
+      },
+
+      {
+        "question": "A source emitting sound at 900 Hz moves toward a listener at one-tenth the speed of sound, while the listener simultaneously moves toward the source, also at one-tenth the speed of sound. What frequency does the listener hear?",
+        "choices": [
+          "818 Hz",
+          "900 Hz",
+          "990 Hz",
+          "1000 Hz",
+          "1100 Hz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWhen both source and observer move, BOTH adjustments appear in the same formula — one in the numerator, one in the denominator:\nf_obs = f (v + v_observer)/(v − v_source),\nwith the signs chosen so that mutual approach raises the frequency.\nWith v_observer = v_source = v/10:\nf_obs = 900 × (v + v/10)/(v − v/10) = 900 × (1.1v)/(0.9v) = 900 × 11/9 = 1100 Hz.\nThe speed of sound cancels completely — only the ratios matter.\n\n90-SECOND SOLUTION\nBoth effects raise the pitch: f_obs = 900 × (1 + 1/10)/(1 − 1/10) = 900 × 11/9 = 1100 Hz.\n\nNUMERICS WITHOUT A CALCULATOR\nWrite the fractions over a common denominator: (11/10)/(9/10) = 11/9. Then 900 × 11/9 = 100 × 11 = 1100 Hz, since 900/9 = 100 exactly.\n\nWHAT TO MEMORIZE\nThe combined Doppler formula f_obs = f(v ± v_o)/(v ∓ v_s), with signs fixed by physical reasoning rather than memorized convention — approach always raises the frequency, recession always lowers it. Observer motion belongs in the numerator, source motion in the denominator, and that asymmetry is real: a source moving toward you at speed u does NOT produce the same shift as you moving toward it at u, which is precisely what a released exam question tests."
+      },
+
+      {
+        "question": "In Lloyd's mirror, light from a narrow source reaches a screen by two routes: directly, and by reflecting at near-grazing incidence off a flat mirror. At the point on the screen where the two path lengths are EQUAL, what is observed?",
+        "choices": [
+          "A bright fringe, since the path difference is zero",
+          "A bright fringe, but only half as intense as the others",
+          "A dark fringe, because the reflection introduces a half-wavelength shift",
+          "Uniform illumination, since the two beams are incoherent",
+          "A dark fringe, because the reflected beam is completely absorbed"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe two routes have zero PATH difference at that point, so a naive analysis predicts constructive interference and a bright fringe. But reflection off the mirror occurs at an interface going from lower to higher index (air to glass), which imposes an extra π phase shift — equivalent to half a wavelength of path.\nTotal phase difference = 0 (from path) + π (from reflection) = π.\nThe two beams therefore arrive exactly out of step and cancel, producing a DARK fringe where the naive prediction says bright. The entire fringe pattern is shifted by half a fringe relative to an ordinary double slit.\n\n90-SECOND SOLUTION\nThe path difference is zero, but the reflection adds π. Total phase π means destructive interference — a DARK fringe.\n\nWHAT TO MEMORIZE\nTotal phase difference = (2π/λ)(path difference) + (any reflection shifts). A π shift occurs on reflection from a higher-index medium, and it must be added alongside geometric path differences. Lloyd's mirror is the standard demonstration: the fringe at zero path difference is dark, which is direct experimental evidence that reflection off a denser medium inverts the wave. The same effect makes the contact point in Newton's rings dark and the thinnest part of a soap film black."
+      },
+
+      {
+        "question": "In a double-slit experiment with two identical narrow slits, the intensity at the center of the pattern is I. One slit is then covered completely. What is the intensity at that same central point now?",
+        "choices": [
+          "I/2",
+          "I/4",
+          "I",
+          "2I",
+          "It cannot be determined without the slit separation"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nInterference combines AMPLITUDES, not intensities. At the center both slits contribute in phase, so if each slit alone produces amplitude A, the total amplitude is\nA_total = A + A = 2A.\nSince intensity goes as the square of amplitude:\nI_center = (2A)² = 4A² = 4I₁,\nwhere I₁ is the intensity one slit alone would produce. The problem calls this central intensity I, so I₁ = I/4.\nCovering one slit removes the interference and leaves just one slit's contribution:\nI_new = I₁ = I/4.\n\n90-SECOND SOLUTION\nAmplitudes add coherently: 2 slits give amplitude 2A and intensity 4I₁. So one slit alone gives a quarter: I/4.\n\nWHAT TO MEMORIZE\nFor coherent sources, add amplitudes then square; for incoherent sources, add intensities directly. Two coherent equal sources give 4× one source's intensity at a maximum and zero at a minimum, averaging to 2× — which is what energy conservation requires. This amplitude-versus-intensity distinction underlies why N coherent slits give N² times the intensity at the principal maxima, the reason diffraction gratings produce such sharp bright lines."
+      },
+
+      {
+        "question": "An object is placed 20 cm in front of a converging lens of focal length 10 cm. A second converging lens, also of focal length 10 cm, is placed 15 cm beyond the first. Where is the final image, measured from the second lens?",
+        "choices": [
+          "3.3 cm beyond the second lens",
+          "5.0 cm beyond the second lens",
+          "10 cm beyond the second lens",
+          "20 cm beyond the second lens",
+          "5.0 cm in front of the second lens"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nLENS 1: 1/d_i = 1/f − 1/d_o = 1/10 − 1/20 = 1/20, so d_i = 20 cm past lens 1.\nBut lens 2 sits only 15 cm past lens 1 — the light is intercepted BEFORE that image can form. The would-be image lies 20 − 15 = 5 cm BEYOND lens 2, which makes it a VIRTUAL OBJECT for the second lens, entered with a NEGATIVE object distance:\nd_o2 = −5 cm.\nLENS 2: 1/d_i = 1/f − 1/d_o = 1/10 − 1/(−5) = 1/10 + 1/5 = 1/10 + 2/10 = 3/10.\nd_i2 = 10/3 ≈ 3.3 cm beyond the second lens.\n\n90-SECOND SOLUTION\nLens 1 alone would image at 20 cm, but lens 2 is at 15 cm, so d_o2 = 15 − 20 = −5 cm (virtual object). Then 1/d_i = 1/10 + 1/5 = 3/10, giving 3.3 cm.\n\nWHAT TO MEMORIZE\nIn multi-lens systems, always compute the next object distance as (separation − previous image distance). A NEGATIVE result means a virtual object — the previous lens was converging the light toward a point past the current lens — and the thin-lens equation handles it correctly with no modification, provided the sign is carried through. Converging light arriving at a lens always produces a virtual object, and the resulting image forms closer than the focal length, which is the signature of this configuration."
+      }
+
+    ]
+  },
+
 
 
 // ============================================================
@@ -3182,6 +3451,544 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Electromagnetism Test 4 (Hard)",
+    "added": "2026-08-28",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A solid nonconducting sphere carries a uniform volume charge density ρ. A spherical cavity is then hollowed out of it; the cavity's center is displaced by a vector d from the sphere's center, and the cavity lies entirely within the sphere. What is the electric field inside the cavity?",
+        "choices": [
+          "Zero everywhere in the cavity",
+          "Radial, of magnitude ρr/3ε₀ measured from the cavity's center",
+          "Radial, of magnitude ρd/3ε₀ directed away from the sphere's center",
+          "Uniform, of magnitude ρd/3ε₀, directed along d",
+          "Uniform, of magnitude ρd/ε₀, directed along d"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe trick is SUPERPOSITION: a sphere-with-a-cavity is exactly the same charge distribution as a complete sphere of density +ρ plus a smaller sphere of density −ρ filling the cavity region. Inside a uniformly charged sphere, Gauss's law gives a field that grows linearly from the center:\nE = ρr/(3ε₀), directed radially outward from that sphere's own center.\nAt a point whose position is r from the big sphere's center and r − d from the cavity's center:\nE_total = ρr/(3ε₀) + (−ρ)(r − d)/(3ε₀) = ρ[r − (r − d)]/(3ε₀) = ρd/(3ε₀).\nThe position r cancels completely. The field inside the cavity is therefore UNIFORM — same magnitude and direction everywhere — pointing along d.\n\n90-SECOND SOLUTION\nSuperpose +ρ full sphere and −ρ cavity sphere. Each gives ρ(displacement)/3ε₀, and the difference of the two position vectors is the constant d. So E = ρd/3ε₀, uniform, along d.\n\nWHAT TO MEMORIZE\nTwo things. First, inside a uniformly charged sphere E = ρr/3ε₀ (equivalently kQr/R³) — linear in r, not inverse-square. Second, the superposition technique for holes, offsets, and overlapping bodies: replace the missing material with a negative copy. The identical trick handles the magnetic version (a cylindrical hole drilled off-axis in a current-carrying wire also gives a uniform field inside), which has appeared on a released exam, so learning the method once covers both."
+      },
+
+      {
+        "question": "A point charge q is placed at one CORNER of a cube. What is the electric flux through one of the three cube faces that do NOT touch that corner?",
+        "choices": [
+          "q/24ε₀",
+          "q/8ε₀",
+          "q/6ε₀",
+          "q/4ε₀",
+          "q/3ε₀"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nGauss's law gives the flux through a CLOSED surface enclosing the charge, but a charge sitting at a corner is not enclosed by this cube. Build the enclosure by symmetry: eight identical cubes stacked around that corner completely surround the charge. The total flux q/ε₀ divides equally among them, so\nΦ_cube = q/(8ε₀).\nNow distribute that among the cube's six faces — but NOT equally. The three faces that TOUCH the corner contain the charge in their own planes, so the field is parallel to them and they carry ZERO flux. All of the cube's flux therefore passes through the other three faces, which are equivalent by symmetry:\nΦ_face = (q/8ε₀)/3 = q/(24ε₀).\n\n90-SECOND SOLUTION\nEight cubes surround the corner, so this cube gets q/8ε₀. The three faces touching the corner carry zero flux (field lies in their planes), so the remaining three share it: q/24ε₀.\n\nWHAT TO MEMORIZE\nGauss's law plus symmetry handles any charge at a corner, edge, or face-center of a box: figure out what fraction of the full solid angle the object subtends, then check which faces the field runs parallel to. Charge at a face center gives q/2ε₀ through the cube; at a corner, q/8ε₀; at the center, q/ε₀. The habit worth building is asking \"how many identical copies would completely surround the charge?\" before doing anything else."
+      },
+
+      {
+        "question": "A solid nonconducting sphere of radius R carries a charge density that increases linearly with distance from the center, ρ(r) = ρ₀r/R. What is the magnitude of the electric field at the surface of the sphere?",
+        "choices": [
+          "ρ₀R/(6ε₀)",
+          "ρ₀R/(5ε₀)",
+          "ρ₀R/(4ε₀)",
+          "ρ₀R/(3ε₀)",
+          "ρ₀R/(2ε₀)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBecause ρ varies with r, the enclosed charge must be integrated rather than read off as ρ × volume. Using shells of thickness dr:\nQ_enc(r) = ∫₀^r ρ₀(r′/R)(4πr′²)dr′ = (4πρ₀/R)∫₀^r r′³dr′ = (4πρ₀/R)(r⁴/4) = πρ₀r⁴/R.\nAt the surface (r = R): Q_total = πρ₀R³.\nGauss's law on a sphere of radius R:\nE(4πR²) = Q_total/ε₀ → E = πρ₀R³/(4πε₀R²) = ρ₀R/(4ε₀).\n\n90-SECOND SOLUTION\nQ_enc = ∫ρ₀(r/R)4πr²dr = πρ₀R³ at the surface. Then E = Q/(4πε₀R²) = ρ₀R/(4ε₀).\n\nWHAT TO MEMORIZE\nFor any spherically symmetric distribution, E(r) = Q_enc(r)/(4πε₀r²) — Gauss's law reduces every such problem to computing Q_enc, and only the charge INSIDE radius r matters. The volume element for spherical shells is 4πr²dr; forgetting the r² is the single most common integration error here. Useful reference points: uniform density gives E ∝ r inside, while ρ ∝ r gives E ∝ r², and each extra power of r in the density adds one power to the interior field."
+      },
+
+      {
+        "question": "An infinite line carrying uniform linear charge density +λ runs along the axis of a NEUTRAL cylindrical conducting shell of inner radius a and outer radius b. In electrostatic equilibrium, what is the surface charge density on the shell's OUTER surface, and what is the field outside the shell?",
+        "choices": [
+          "−λ/2πb ; field outside is zero",
+          "+λ/2πb ; field outside is λ/2πε₀r",
+          "+λ/2πa ; field outside is λ/2πε₀r",
+          "zero ; field outside is λ/2πε₀r",
+          "+λ/2πb ; field outside is zero"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nInside the conducting material the field must vanish. Apply Gauss's law to a cylinder of radius r with a < r < b (entirely inside the metal): since E = 0 there, the enclosed charge must be zero. The line contributes +λ per unit length, so the inner surface must carry −λ per unit length.\nThe shell as a whole is NEUTRAL, so whatever appears on the inner surface must be balanced on the outer surface: the outer surface carries +λ per unit length. Spreading that over the outer circumference 2πb gives a surface density\nσ_outer = λ/(2πb).\nOutside the shell (r > b), a Gaussian cylinder encloses the line (+λ), the inner surface (−λ), and the outer surface (+λ) — a net +λ per unit length. So\nE = λ/(2πε₀r),\nexactly as if the shell were not there at all.\n\n90-SECOND SOLUTION\nE = 0 in the metal forces −λ on the inner surface; neutrality forces +λ on the outer surface, so σ_outer = λ/2πb. Outside, the net enclosed charge is +λ, giving E = λ/2πε₀r.\n\nWHAT TO MEMORIZE\nFor a neutral conductor surrounding a charge: the inner surface takes the negative of the enclosed charge, and the outer surface takes an equal positive amount, so the field OUTSIDE is exactly what the enclosed charge alone would produce. The outer-surface distribution depends only on the conductor's outer shape, not on where the charge sits inside — which is why an off-center charge still gives a symmetric external field."
+      },
+
+      {
+        "question": "A long hollow cylindrical conductor has inner radius 1.0 cm and outer radius 3.0 cm and carries a total current of 40 A distributed uniformly over its cross-section. Taking μ₀/2π = 2.0 × 10⁻⁷ T·m/A, what is the magnitude of the magnetic field at a radius of 2.0 cm from the axis?",
+        "choices": [
+          "3.0 × 10⁻⁵ T",
+          "6.7 × 10⁻⁵ T",
+          "1.0 × 10⁻⁴ T",
+          "1.5 × 10⁻⁴ T",
+          "4.0 × 10⁻⁴ T"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe point r = 2.0 cm lies INSIDE the conducting material, so only part of the current is enclosed. The current is spread uniformly over the annular cross-section, so the enclosed fraction is the ratio of areas:\nI_enc = I × (r² − a²)/(b² − a²) = 40 × (2² − 1²)/(3² − 1²) = 40 × (4 − 1)/(9 − 1) = 40 × 3/8 = 15 A.\nAmpère's law on a circle of radius r:\nB = μ₀I_enc/(2πr) = (2.0 × 10⁻⁷)(15)/(0.020) = 3.0 × 10⁻⁶/0.020 = 1.5 × 10⁻⁴ T.\n\nNUMERICS WITHOUT A CALCULATOR\nBecause the areas share the factor π, work with the radii in centimeters and let the units cancel in the ratio: (4 − 1)/(9 − 1) = 3/8, so I_enc = 40 × 3/8 = 15 A exactly. Then (2 × 10⁻⁷)(15) = 3 × 10⁻⁶, and dividing by 0.020 multiplies by 50: 1.5 × 10⁻⁴ T.\nThe trap 4.0 × 10⁻⁴ T uses the FULL 40 A, ignoring that the point is inside the conductor.\n\n90-SECOND SOLUTION\nOnly part of the current is enclosed: I_enc = 40 × (4−1)/(9−1) = 15 A. Then B = (2×10⁻⁷)(15)/0.020 = 1.5 × 10⁻⁴ T.\n\nWHAT TO MEMORIZE\nAmpère's law counts only the current threading your loop. For a uniformly filled annulus, the enclosed fraction is (r² − a²)/(b² − a²); for a solid wire it reduces to r²/R². The resulting field rises from zero at r = a, peaks at the outer surface, and falls as 1/r beyond it. Carrying μ₀/2π = 2 × 10⁻⁷ T·m/A removes π from every straight-wire and cylinder calculation."
+      },
+
+      {
+        "question": "Two large parallel sheets carry uniform surface current densities of equal magnitude K = 50 A/m but in OPPOSITE directions. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what is the magnetic field magnitude in the region between the sheets, and outside them?",
+        "choices": [
+          "3.1 × 10⁻⁵ T between; 3.1 × 10⁻⁵ T outside",
+          "3.1 × 10⁻⁵ T between; zero outside",
+          "zero between; 6.3 × 10⁻⁵ T outside",
+          "6.3 × 10⁻⁵ T between; 6.3 × 10⁻⁵ T outside",
+          "6.3 × 10⁻⁵ T between; zero outside"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA single infinite current sheet produces a UNIFORM field of magnitude μ₀K/2 on each side, pointing in opposite directions across the sheet. Superpose the two sheets.\nBETWEEN the sheets: because the currents are antiparallel, each sheet's contribution points the same way in this region, so they ADD:\nB = μ₀K/2 + μ₀K/2 = μ₀K = (4π × 10⁻⁷)(50) = 6.3 × 10⁻⁵ T.\nOUTSIDE (beyond either sheet): the two contributions now point in opposite directions and have equal magnitude, so they CANCEL exactly:\nB = 0.\n\nNUMERICS WITHOUT A CALCULATOR\nμ₀K = 4π × 10⁻⁷ × 50 = 200π × 10⁻⁷ = 2π × 10⁻⁵ ≈ 6.3 × 10⁻⁵ T. Only 2 × 3.14 is needed.\n\n90-SECOND SOLUTION\nOne sheet gives μ₀K/2. Antiparallel currents make the contributions ADD between the sheets (μ₀K ≈ 6.3 × 10⁻⁵ T) and CANCEL outside (zero).\n\nWHAT TO MEMORIZE\nOne infinite current sheet gives B = μ₀K/2 on each side, uniform and independent of distance — the magnetic twin of the charged sheet's E = σ/2ε₀. For two sheets: antiparallel currents give μ₀K between and zero outside; parallel currents give the opposite (zero between, μ₀K outside). Deciding whether the contributions add or cancel in each region, rather than memorizing the results, is what makes this transferable to solenoids and cables."
+      },
+
+      {
+        "question": "Two long coaxial solenoids share the same axis. The inner one has 1000 turns per meter carrying 3.0 A; the outer one has 500 turns per meter carrying 4.0 A in the OPPOSITE sense. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what is the magnitude of the magnetic field on the common axis?",
+        "choices": [
+          "zero",
+          "2.5 × 10⁻⁴ T",
+          "6.3 × 10⁻⁴ T",
+          "1.0 × 10⁻³ T",
+          "1.3 × 10⁻³ T"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAn ideal long solenoid produces a uniform field μ₀nI inside it and essentially zero outside. A point on the axis lies inside BOTH solenoids, so both contribute — with opposite signs, since the currents circulate oppositely.\nNet \"ampere-turns per meter\": n₁I₁ − n₂I₂ = (1000)(3.0) − (500)(4.0) = 3000 − 2000 = 1000 A/m.\nB = μ₀(1000) = (4π × 10⁻⁷)(1000) = 4π × 10⁻⁴ ≈ 1.3 × 10⁻³ T.\n\nNUMERICS WITHOUT A CALCULATOR\nSubtract the products FIRST — 3000 − 2000 = 1000 — then multiply once: 4π × 10⁻⁷ × 10³ = 4π × 10⁻⁴ ≈ 12.6 × 10⁻⁴ ≈ 1.3 × 10⁻³ T. Combining before multiplying keeps this to a single use of π.\n\n90-SECOND SOLUTION\nA point on the axis is inside both, so subtract: n₁I₁ − n₂I₂ = 3000 − 2000 = 1000 A/m. B = μ₀(1000) ≈ 1.3 × 10⁻³ T.\n\nWHAT TO MEMORIZE\nB = μ₀nI inside a long solenoid, zero outside, and superposition applies with signs when solenoids are nested. The controlling quantity is the ampere-turns per unit length nI, which is why a many-turn coil at modest current can beat a few-turn coil at high current. Always identify which solenoids a given point is inside before adding contributions."
+      },
+
+      {
+        "question": "A long solid cylindrical wire of radius R carries a current whose density increases with distance from the axis as J(r) = J₀r/R. What is the ratio of the magnetic field at r = R/2 to the field at the surface r = R?",
+        "choices": [
+          "1/8",
+          "1/4",
+          "1/2",
+          "1",
+          "2"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nIntegrate to find the enclosed current, using rings of area 2πr dr:\nI_enc(r) = ∫₀^r J₀(r′/R)(2πr′)dr′ = (2πJ₀/R)(r³/3) = 2πJ₀r³/(3R).\nAmpère's law then gives\nB(r) = μ₀I_enc/(2πr) ∝ r³/r = r².\nSo inside this wire B grows as r², and the ratio at half the radius is\nB(R/2)/B(R) = (1/2)² = 1/4.\n\n90-SECOND SOLUTION\nJ ∝ r makes I_enc ∝ r³, so B = μ₀I_enc/2πr ∝ r². At r = R/2 the ratio is (1/2)² = 1/4.\n\nWHAT TO MEMORIZE\nAmpère's law with a nonuniform current density is just I_enc = ∫J·dA with dA = 2πr dr for a cylinder — the 2πr is the piece most often dropped. Keep the two standard results distinct: uniform J gives B ∝ r inside, while J ∝ r gives B ∝ r². Outside the wire, every case reverts to B = μ₀I_total/2πr regardless of how the current is distributed, since Ampère's law only sees the total."
+      },
+
+      {
+        "question": "A plane electromagnetic wave of wavelength λ in vacuum strikes a perfectly conducting plane at normal incidence and reflects, forming a standing wave. Measuring outward from the conductor's surface, at what distance is the MAGNETIC field always zero (a node of B)?",
+        "choices": [
+          "0 (at the surface)",
+          "λ/8",
+          "λ/4",
+          "λ/2",
+          "The magnetic field is never zero"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe boundary condition at a perfect conductor is that the tangential ELECTRIC field must vanish at the surface. So the incident and reflected electric fields cancel there: the surface is a NODE of E.\nThe magnetic field behaves oppositely. The reflected wave's B does not flip sign the way E does (the propagation direction reverses, so the reversal is absorbed in the direction of travel rather than in B), and the incident and reflected magnetic fields ADD at the surface. The surface is therefore an ANTINODE of B — the magnetic field is maximal there, not zero.\nIn any standing wave, nodes and antinodes of the same quantity alternate every quarter wavelength. Since B has an antinode at the surface, its first NODE lies a quarter wavelength away:\ndistance = λ/4.\n\n90-SECOND SOLUTION\nE has a node at a perfect conductor; B has an antinode there. Nodes and antinodes alternate every λ/4, so the first B node is at λ/4.\n\nWHAT TO MEMORIZE\nAt a perfect conductor: E_tangential = 0 (node of E, so the reflected E is inverted) while B is doubled (antinode of B, reflected B not inverted). In the resulting standing wave, E and B nodes are separated by λ/4 and the two fields are 90° out of phase in both space and time — which is why the time-averaged Poynting vector is zero, exactly as it must be when no energy is absorbed. This same node/antinode offset appears in a shorted transmission line."
+      },
+
+      {
+        "question": "A parallel-plate capacitor with circular plates is being charged by a steady current. Consider the cylindrical surface that forms the rim of the gap between the plates. Which statement correctly describes the electromagnetic energy flow?",
+        "choices": [
+          "Energy flows radially INWARD through the rim, at a rate equal to the rate the field energy in the gap increases",
+          "Energy flows radially OUTWARD through the rim, carrying away the work done by the source",
+          "Energy flows along the axis from one plate to the other",
+          "No energy flows through the rim; the energy is delivered through the wires directly onto the plates",
+          "Energy flows inward only while the current is changing, and is zero for a steady charging current"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBetween the plates there are two fields: the electric field E, growing as the plates charge, and a magnetic field B circling the axis, produced by the displacement current. The Poynting vector S = (E × B)/μ₀ gives the direction of energy flow. With E along the axis and B azimuthal, the cross product points radially INWARD, through the curved rim of the gap.\nThe magnitude works out so that the total inflow through that rim exactly equals d/dt of the stored field energy ½ε₀E² × (volume). Energy does not travel down the wires and squirt out of the plate faces; it flows in through the SIDES of the gap, delivered by the fields in the surrounding space.\n\n90-SECOND SOLUTION\nE is axial and B is azimuthal in the gap, so S = (E × B)/μ₀ points radially INWARD — energy enters through the rim at exactly the rate the stored field energy grows.\n\nWHAT TO MEMORIZE\nS = (E × B)/μ₀ gives both the direction and rate of electromagnetic energy flow per unit area. Two standard consequences are worth knowing: energy flows radially INWARD into a charging capacitor's gap, and it also flows radially INWARD into a current-carrying resistor (where it is dissipated), in both cases entering through the side surface rather than along the conductor. Checking the direction of E × B is a quick way to reason about where energy is going in any electromagnetic system."
+      },
+
+      {
+        "question": "A long solenoid of radius 5.0 cm has its interior magnetic field increasing at a steady 0.40 T/s. A circular loop of radius 10 cm is placed coaxially around the solenoid, so that the loop lies entirely in the field-free region OUTSIDE the windings. How much work does the induced electric field do in carrying a unit positive charge once around this loop?",
+        "choices": [
+          "zero, since B = 0 everywhere on the loop",
+          "3.1 mV",
+          "6.3 mV",
+          "13 mV",
+          "zero, since the electric field is conservative"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFaraday's law in its integral form states\n∮E·dl = −dΦ/dt,\nand the left side is precisely the work per unit charge carried once around the loop. What matters is the flux THREADING the loop, which comes entirely from the solenoid's interior (area πa² with a = 5.0 cm), because B = 0 outside the windings:\n|∮E·dl| = πa²(dB/dt) = π(0.050)²(0.40) = π(2.5 × 10⁻³)(0.40) = π(1.0 × 10⁻³) ≈ 3.1 × 10⁻³ V.\nSo the work per unit charge is 3.1 mV.\n\nNUMERICS WITHOUT A CALCULATOR\n(0.050)² = 2.5 × 10⁻³, times 0.40 gives 1.0 × 10⁻³, so the answer is simply π × 10⁻³ ≈ 3.1 mV. Note the loop's own 10 cm radius never enters — only the area actually containing flux does.\n\n90-SECOND SOLUTION\n∮E·dl = −dΦ/dt, and only the solenoid's cross-section carries flux: π(0.050)²(0.40) = π × 10⁻³ ≈ 3.1 mV.\n\nWHAT TO MEMORIZE\n∮E·dl = −dΦ/dt. Because the right side can be nonzero, induced electric fields are non-conservative and no potential function exists for them — the \"voltage\" between two points becomes path-dependent. Only the flux enclosed by the loop matters, so a loop can experience an emf while sitting entirely in a region where B = 0."
+      },
+
+      {
+        "question": "A point charge is at rest in the laboratory, producing a purely electric field E at some location and no magnetic field. An observer moves past the charge with a small constant speed v (v ≪ c). To a good approximation, what magnetic field magnitude does the moving observer measure at that location?",
+        "choices": [
+          "zero, because a static charge never produces a magnetic field",
+          "vE",
+          "E/v",
+          "cE",
+          "vE/c²"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nElectric and magnetic fields are not separate entities but components of a single electromagnetic field tensor, so a change of reference frame mixes them. For speeds well below c, the transformation of the fields reduces to\nB′ ≈ −(v × E)/c²,\nso the magnitude is vE/c² (when v and E are perpendicular).\nPhysically this is unsurprising: in the moving observer's frame the charge is in motion, and a moving charge constitutes a current, which produces a magnetic field. The factor 1/c² is what makes the effect so small at everyday speeds.\n\nA units check confirms the form: E has units of V/m and B of tesla, and since E/B = c for a wave, B must carry an extra 1/c relative to E; the additional 1/c comes from the velocity ratio v/c. Only vE/c² is dimensionally consistent among the choices.\n\n90-SECOND SOLUTION\nIn the observer's frame the charge is moving, so it constitutes a current and produces a field: B ≈ vE/c² — also the only dimensionally consistent choice offered.\n\nWHAT TO MEMORIZE\nFields transform between frames: a pure E field in one frame generally has both E and B components in another, with B′ ≈ −(v × E)/c² at low speed. The invariant combinations E·B and E² − c²B² are the same for all observers, which is often the fastest way to answer \"could this field configuration look purely electric to someone?\" The 1/c² suppression explains why magnetic forces between everyday currents are so weak despite the enormous charges involved."
+      },
+
+      {
+        "question": "A nonrelativistic charged particle moves in a circular orbit of radius r at constant SPEED v, radiating electromagnetic energy. If the orbit radius is doubled while the speed is held fixed, by what factor does the energy radiated PER REVOLUTION change?",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTwo competing effects must be combined.\nRADIATED POWER: by the Larmor result, P ∝ a², and for circular motion a = v²/r. At fixed v, a ∝ 1/r, so\nP ∝ 1/r².\nTIME PER REVOLUTION: T = 2πr/v ∝ r at fixed v.\nEnergy radiated per revolution is the power times the duration:\nE_rev = P × T ∝ (1/r²)(r) = 1/r.\nDoubling r therefore HALVES the energy radiated per revolution.\n\n90-SECOND SOLUTION\nP ∝ a² ∝ 1/r², and T ∝ r, so E_rev = PT ∝ 1/r. Doubling r gives a factor of 1/2.\n\nWHAT TO MEMORIZE\nThe Larmor law P ∝ q²a² is the only radiation formula needed for nearly every exam question, and the constants almost always cancel because these questions ask for ratios. The transferable skill is composing scalings: express each quantity as a power of the variable being changed, then add exponents. Note also that a charge in uniform circular motion radiates continuously even though its speed is constant, since it is always accelerating — the fact underlying both synchrotron radiation and the classical instability of planetary atoms."
+      },
+
+      {
+        "question": "A 2.0 μF capacitor charged to 60 V and a 4.0 μF capacitor charged to 15 V are removed from their sources. They are then connected in parallel, but with the POSITIVE plate of one joined to the NEGATIVE plate of the other. What is the final magnitude of the voltage across the combination?",
+        "choices": [
+          "10 V",
+          "25 V",
+          "30 V",
+          "40 V",
+          "45 V"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nCompute the stored charges first:\nQ₁ = C₁V₁ = (2.0)(60) = 120 μC.\nQ₂ = C₂V₂ = (4.0)(15) = 60 μC.\nBecause the capacitors are joined with OPPOSITE polarity, the charges partially cancel rather than add. The net charge available to redistribute is\nQ_net = 120 − 60 = 60 μC.\nOnce connected in parallel the two share a common voltage, and the capacitances add:\nC_total = 2.0 + 4.0 = 6.0 μF.\nV = Q_net/C_total = 60/6.0 = 10 V.\n\nNUMERICS WITHOUT A CALCULATOR\nEvery step is a one-digit operation: 2 × 60 = 120, 4 × 15 = 60, subtract to get 60, add capacitances to get 6, divide to get 10 V.\nThe trap 30 V comes from ADDING the charges (120 + 60 = 180, over 6 μF), which is the correct procedure only when like plates are joined.\n\n90-SECOND SOLUTION\nOpposite plates joined means the charges subtract: Q_net = 120 − 60 = 60 μC on C_total = 6.0 μF, giving V = 10 V.\n\nWHAT TO MEMORIZE\nWhen capacitors are reconnected, conserve CHARGE (never energy), then impose the common voltage of a parallel connection: V = Q_net/ΣC. Whether Q_net is a sum or a difference depends entirely on which plates are joined, so sketch the polarities before computing. If the two stored charges happened to be equal and were joined oppositely, the final voltage would be exactly zero."
+      },
+
+      {
+        "question": "In a region of space containing no charges and no currents, which of the following could represent a valid STATIC magnetic field? (B₀ is a positive constant.)",
+        "choices": [
+          "B = B₀x x̂",
+          "B = B₀y x̂",
+          "B = B₀(x x̂ + y ŷ)",
+          "B = B₀(y x̂ + x ŷ)",
+          "B = B₀z ẑ"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nTwo of Maxwell's equations constrain a static field in a source-free region, and BOTH must hold.\n(i) ∇·B = 0 — always true, everywhere, with no exceptions (no magnetic monopoles).\n(ii) ∇×B = μ₀J = 0 — true here because the region carries no current, and the field is static so there is no displacement-current term either.\nTest each candidate:\nB₀x x̂: ∇·B = ∂(B₀x)/∂x = B₀ ≠ 0. FAILS the monopole condition.\nB₀y x̂: ∇·B = 0 ✓, but ∇×B = −B₀ẑ ≠ 0, so it would require a current. FAILS in a current-free region.\nB₀(x x̂ + y ŷ): ∇·B = B₀ + B₀ = 2B₀ ≠ 0. FAILS.\nB₀(y x̂ + x ŷ): ∇·B = ∂(B₀y)/∂x + ∂(B₀x)/∂y = 0 + 0 = 0 ✓, and ∇×B has z-component ∂(B₀x)/∂x − ∂(B₀y)/∂y = B₀ − B₀ = 0 ✓. VALID.\nB₀z ẑ: ∇·B = B₀ ≠ 0. FAILS.\nOnly the fourth candidate satisfies both.\n\n90-SECOND SOLUTION\nCompute ∇·B first and discard anything nonzero; among the survivors, compute ∇×B and keep only the one that also vanishes. Only B₀(y x̂ + x ŷ) passes both.\n\nWHAT TO MEMORIZE\n∇·B = 0 holds universally, so any candidate magnetic field with nonzero divergence is immediately impossible. In a region free of currents (and with no changing E field), ∇×B = 0 as well, giving a second independent test. The analogous pair for electric fields is ∇·E = ρ/ε₀ and ∇×E = −∂B/∂t, so a static E field in a charge-free region must likewise be both divergence-free and curl-free. Screening candidate fields by computing divergence and curl is a standard exam device."
+      },
+
+      {
+        "question": "A charged particle travelling horizontally enters a region of uniform magnetic field 0.50 T directed into the page. The field region is a slab of width 0.10 m, and the particle emerges deflected by 30° from its original direction. Taking the charge to be 1.6 × 10⁻¹⁹ C, what is the particle's momentum?",
+        "choices": [
+          "8.0 × 10⁻²¹ kg·m/s",
+          "1.4 × 10⁻²⁰ kg·m/s",
+          "1.6 × 10⁻²⁰ kg·m/s",
+          "3.2 × 10⁻²⁰ kg·m/s",
+          "6.4 × 10⁻²⁰ kg·m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nInside the field the path is a circular arc of radius r = p/(qB). The geometry relates the deflection angle to the slab width: the particle enters along the horizontal, and after traversing a horizontal distance w its velocity has turned through θ, where\nsin θ = w/r.\nSolving for the radius:\nr = w/sin θ = 0.10/sin 30° = 0.10/0.50 = 0.20 m.\nThen from the magnetic rigidity relation:\np = qBr = (1.6 × 10⁻¹⁹)(0.50)(0.20) = 1.6 × 10⁻²⁰ kg·m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nsin 30° = ½ exactly, so dividing by it just doubles: r = 0.20 m. Then (1.6 × 10⁻¹⁹)(0.5)(0.2) = 1.6 × 10⁻¹⁹ × 0.1 = 1.6 × 10⁻²⁰ kg·m/s — the 0.5 and 0.2 multiply to a clean 0.1.\n\n90-SECOND SOLUTION\nsin θ = w/r gives r = 0.10/sin 30° = 0.20 m, then p = qBr = (1.6×10⁻¹⁹)(0.50)(0.20) = 1.6 × 10⁻²⁰ kg·m/s.\n\nWHAT TO MEMORIZE\nMagnetic rigidity p = qBr — the radius measures MOMENTUM, independent of mass or charge separately. For a particle crossing a field slab of width w, sin θ = w/r gives the deflection. A closely related geometric relation appears when a track is measured by its sagitta s over a chord of half-length l: there r = l²/(2s), which has been asked directly on a released exam. Both come from elementary circle geometry, not from any special formula."
+      },
+
+      {
+        "question": "A 2.0 μF capacitor and a 4.0 μF capacitor are connected in SERIES across a 12 V battery. What is the voltage across the 2.0 μF capacitor?",
+        "choices": [
+          "2.0 V",
+          "4.0 V",
+          "6.0 V",
+          "8.0 V",
+          "12 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nCapacitors in series all carry the SAME charge, equal to the charge on their series combination:\n1/C_eq = 1/2.0 + 1/4.0 = 3/4, so C_eq = 4/3 μF.\nQ = C_eq V = (4/3)(12) = 16 μC.\nThat same 16 μC sits on each capacitor, so\nV₁ = Q/C₁ = 16/2.0 = 8.0 V,\nV₂ = Q/C₂ = 16/4.0 = 4.0 V.\n(Check: 8 + 4 = 12 V ✓.)\nThe 2.0 μF capacitor carries 8.0 V.\n\nNUMERICS WITHOUT A CALCULATOR\nFaster route: series capacitors share charge, so V = Q/C means the voltages divide in INVERSE proportion to the capacitances. With capacitances in the ratio 2:4 = 1:2, the voltages are in the ratio 2:1, so the 12 V splits as 8 V and 4 V. No need to compute C_eq or Q at all.\n\n90-SECOND SOLUTION\nSeries capacitors share charge, so the voltages divide INVERSELY as the capacitances: ratio 2:1, and 12 V splits as 8 V and 4 V.\n\nWHAT TO MEMORIZE\nSeries capacitors: charge is common, voltages divide inversely as the capacitances, and 1/C_eq = Σ1/Cᵢ (so C_eq is smaller than the smallest member). Parallel capacitors: voltage is common, charges divide in direct proportion, and capacitances simply add. Because a capacitor's \"resistance\" to charging goes as 1/C, small capacitors behave like large resistors in this respect — which is exactly why the smallest capacitor in a series string sees the highest voltage and fails first."
+      },
+
+      {
+        "question": "A long straight wire carries a current of 10 A. A square loop of side a lies in the same plane as the wire, with its near side parallel to the wire at distance a from it, and carries a current of 5.0 A circulating so that its near side's current is PARALLEL to the wire's. Taking μ₀/2π = 2.0 × 10⁻⁷ T·m/A, what is the magnitude of the net force on the loop?",
+        "choices": [
+          "zero",
+          "1.0 × 10⁻⁶ N",
+          "2.0 × 10⁻⁶ N",
+          "3.3 × 10⁻⁶ N",
+          "5.0 × 10⁻⁶ N"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe two sides PERPENDICULAR to the wire carry equal currents in opposite directions through mirror-image field distributions, so their forces cancel exactly. Only the near and far sides contribute.\nThe wire's field falls as 1/r, so the near side (at distance a) sits in a stronger field than the far side (at distance 2a). Force per unit length between parallel currents is μ₀I₁I₂/2πr, so over the side length a:\nF_net = (μ₀I₁I₂a/2π)[1/a − 1/(2a)] = (μ₀I₁I₂/2π)(1/2).\nThe side length a cancels completely.\nF_net = (2.0 × 10⁻⁷)(10)(5.0)(0.5) = (2.0 × 10⁻⁷)(25) = 5.0 × 10⁻⁶ N.\nThe near side's current is parallel to the wire's, so it is attracted, and since that side experiences the stronger field, the loop is pulled TOWARD the wire.\n\nNUMERICS WITHOUT A CALCULATOR\nThe bracket [1/a − 1/2a] = 1/2a, and multiplying by the side length a leaves a clean ½ with no geometry left. Then 2 × 10⁻⁷ × 10 × 5 × 0.5 = 2 × 10⁻⁷ × 25 = 5 × 10⁻⁶ N.\n\n90-SECOND SOLUTION\nThe perpendicular sides cancel. Near and far sides give (μ₀I₁I₂/2π)(1/a − 1/2a)(a) = (2×10⁻⁷)(50)(½) = 5.0 × 10⁻⁶ N.\n\nWHAT TO MEMORIZE\nForce per unit length between parallel currents is μ₀I₁I₂/2πd, attractive for parallel currents and repulsive for antiparallel. A closed loop in a UNIFORM field feels zero net force but generally a nonzero torque; a net force requires a field GRADIENT. That distinction — uniform field means torque only, gradient means net force — governs everything from current loops near wires to magnetic dipoles being pulled into solenoids."
+      },
+
+      {
+        "question": "In a series RL circuit driven by a sinusoidal source, the rms voltage measured across the inductor is found to equal the rms voltage across the resistor. By what angle does the current lag the source voltage?",
+        "choices": [
+          "0°",
+          "30°",
+          "45°",
+          "60°",
+          "90°"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIn a series circuit the same current flows through both elements, so the measured voltages are V_R = IR and V_L = IX_L. Setting them equal:\nIR = IX_L → X_L = R.\nThe phase angle by which the current lags the applied voltage in an RL circuit satisfies\ntan φ = X_L/R = 1,\nso φ = 45°.\nNote also that the source voltage is NOT the arithmetic sum of the two measured voltages — they are 90° out of phase, so V_source = √(V_R² + V_L²) = √2 V_R, which is why voltmeter readings around an AC circuit famously fail to add up.\n\n90-SECOND SOLUTION\nV_L = V_R with the same current means X_L = R, so tan φ = 1 and φ = 45°.\n\nWHAT TO MEMORIZE\nFor a series RL circuit tan φ = X_L/R (and for RLC, tan φ = (X_L − X_C)/R), with the current LAGGING in an inductive circuit and LEADING in a capacitive one — the standard mnemonic being ELI the ICE man. Because the element voltages are 90° apart in phase, they combine as a Pythagorean sum, never by simple addition. The 45° case corresponds exactly to X = R, which is also where the power factor equals 1/√2."
+      },
+
+      {
+        "question": "A closed surface is drawn so that it encloses only the NORTH pole end of a bar magnet, with the rest of the magnet passing through the surface. What is the net magnetic flux through this closed surface?",
+        "choices": [
+          "Exactly zero",
+          "Positive, and proportional to the pole strength",
+          "Positive, and equal to μ₀ times the pole strength",
+          "Negative, since field lines return through the surface",
+          "It depends on the shape of the chosen surface"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nGauss's law for magnetism, ∇·B = 0, states in integral form that\n∮B·dA = 0\nthrough ANY closed surface, with no exceptions and no source term. The reason is that magnetic field lines never begin or end: they always form closed loops. Inside the magnet the lines run from the south pole to the north pole, and outside they run from north back around to south.\nSo every line that emerges from the enclosed north-pole region must also re-enter the surface somewhere — passing back in through the part of the surface the magnet's body penetrates. Outflow and inflow cancel exactly, giving zero net flux.\n\n90-SECOND SOLUTION\nMagnetic field lines always close on themselves, so every line leaving the surface must re-enter it. The net flux is exactly zero.\n\nWHAT TO MEMORIZE\n∇·B = 0 is the statement that magnetic monopoles do not exist, and it implies that the net magnetic flux through every closed surface is exactly zero — independent of the surface's shape, size, or what it encloses. Contrast this directly with ∇·E = ρ/ε₀, where enclosed charge does produce net flux. If magnetic monopoles were ever discovered, this is the one Maxwell equation that would have to be rewritten, gaining a magnetic-charge source term."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Electromagnetism Test 5",
+    "added": "2026-08-28",
+    "category": "topic",
+    "cards": [
+
+      {
+        "question": "A closed surface encloses a charge of +3q and a charge of −q. A third charge of +5q sits OUTSIDE the surface, nearby. What is the net electric flux through the closed surface?",
+        "choices": [
+          "zero",
+          "2q/ε₀",
+          "4q/ε₀",
+          "7q/ε₀",
+          "9q/ε₀"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nGauss's law states Φ = Q_enclosed/ε₀, where Q_enclosed counts ONLY the charge inside the surface.\nQ_enclosed = +3q + (−q) = +2q.\nΦ = 2q/ε₀.\nThe +5q outside contributes nothing to the NET flux: its field lines enter the surface on one side and leave on the other, so its inward and outward contributions cancel exactly.\n\n90-SECOND SOLUTION\nOnly enclosed charge counts: 3q − q = 2q, so Φ = 2q/ε₀. The external charge cancels itself out.\n\nWHAT TO MEMORIZE\nGauss's law Φ = Q_enc/ε₀ depends on the enclosed charge ALONE — not on charges outside, not on where the enclosed charges sit inside, and not on the shape of the surface. External charges still affect the FIELD at every point on the surface; they just contribute zero to the net flux. Keeping \"the field at a point\" and \"the net flux through a surface\" separate is the main conceptual hurdle with Gauss's law."
+      },
+
+      {
+        "question": "The surface of a charged conductor carries a local surface charge density of 8.85 × 10⁻⁹ C/m². Taking ε₀ = 8.85 × 10⁻¹² F/m, what is the magnitude of the electric field just outside the conductor's surface?",
+        "choices": [
+          "250 N/C",
+          "500 N/C",
+          "1000 N/C",
+          "2000 N/C",
+          "4000 N/C"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nApply Gauss's law to a small \"pillbox\" straddling the conductor's surface. The field is zero inside the conductor, so all the flux exits through the outer face:\nE·A = σA/ε₀ → E = σ/ε₀.\nE = (8.85 × 10⁻⁹)/(8.85 × 10⁻¹²) = 1.0 × 10³ = 1000 N/C.\n\nNUMERICS WITHOUT A CALCULATOR\nThe 8.85's cancel by design, leaving 10⁻⁹/10⁻¹² = 10³ = 1000 N/C. No real arithmetic.\nThe trap 500 N/C is σ/2ε₀ — correct for an isolated charged SHEET, but not for a conductor.\n\n90-SECOND SOLUTION\nJust outside a conductor E = σ/ε₀ = 8.85×10⁻⁹/8.85×10⁻¹² = 1000 N/C.\n\nWHAT TO MEMORIZE\nTwo results that differ by exactly a factor of two, and are constantly confused:\n  isolated charged sheet: E = σ/2ε₀ on each side\n  just outside a conductor: E = σ/ε₀\nThe conductor gets the full σ/ε₀ because the field is zero on the inside, so all the flux goes out one way instead of splitting both ways. The field just outside any conductor is also perpendicular to the surface — any tangential component would drive charge along the surface until it vanished."
+      },
+
+      {
+        "question": "An infinite line of charge is surrounded by a coaxial cylindrical Gaussian surface of radius r and fixed length. If the radius of that Gaussian cylinder is DOUBLED (the line charge unchanged), which of the following is true?",
+        "choices": [
+          "The flux is unchanged and the field at the surface is unchanged",
+          "The flux is halved and the field at the surface is halved",
+          "The flux is doubled and the field at the surface is halved",
+          "The flux is halved and the field at the surface is unchanged",
+          "The flux is unchanged and the field at the surface is halved"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nHandle the two quantities separately — they behave differently.\nFLUX: Gauss's law gives Φ = Q_enc/ε₀. Enlarging the cylinder's radius does not enclose any additional line charge (the same length of line is inside), so Q_enc is unchanged and the FLUX IS UNCHANGED.\nFIELD: for an infinite line, E = λ/(2πε₀r), so the field falls off as 1/r. Doubling r HALVES the field.\nThese are consistent: the field halves while the curved area doubles (area = 2πrL), so their product — the flux — stays the same.\n\n90-SECOND SOLUTION\nSame enclosed charge means the same flux. But E ∝ 1/r for a line, so the field halves. The doubled area exactly compensates the halved field.\n\nWHAT TO MEMORIZE\nFlux depends only on enclosed charge; the FIELD depends on distance. For the three standard symmetries the field falls off differently — point charge 1/r², line charge 1/r, plane of charge constant — yet in each case the flux through the corresponding Gaussian surface is fixed by the enclosed charge alone. Recognizing that the area growth exactly cancels the field's falloff is a good way to remember which power of r goes with which symmetry."
+      },
+
+      {
+        "question": "A solid nonconducting sphere of radius R carries charge Q distributed uniformly through its volume. What is the ratio of the field magnitude at r = R/2 to that at r = 2R?",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe two points are in different regions, so different expressions apply.\nINSIDE (r < R): only the enclosed fraction of charge counts, Q_enc = Q(r/R)³, giving\nE = kQr/R³. At r = R/2: E = kQ(R/2)/R³ = kQ/(2R²).\nOUTSIDE (r > R): the sphere acts like a point charge, E = kQ/r². At r = 2R: E = kQ/(4R²).\nRatio = [kQ/(2R²)]/[kQ/(4R²)] = 4/2 = 2.\n\nNUMERICS WITHOUT A CALCULATOR\nEverything cancels except the numerical factors: 1/2 divided by 1/4 equals 2.\n\n90-SECOND SOLUTION\nInside, E ∝ r → E(R/2) = kQ/2R². Outside, E ∝ 1/r² → E(2R) = kQ/4R². Ratio = 2.\n\nWHAT TO MEMORIZE\nFor a uniformly charged solid sphere the field rises LINEARLY inside (E = kQr/R³) and falls as 1/r² outside, peaking at the surface where the two expressions agree at kQ/R². The interior behavior comes from the enclosed charge growing as r³ while the Gaussian area grows as r², leaving one net power of r. Always check which region a point is in before choosing the expression — that is the entire difficulty in most Gauss's-law problems."
+      },
+
+      {
+        "question": "A point charge q is placed at the center of one FACE of a cube. What is the total electric flux through the cube?",
+        "choices": [
+          "q/8ε₀",
+          "q/6ε₀",
+          "q/4ε₀",
+          "q/2ε₀",
+          "q/ε₀"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe charge sits ON the cube's surface, so it is not fully enclosed — Gauss's law cannot be applied to this cube directly. Use symmetry instead.\nImagine a second identical cube placed against that face, so the charge is now at the center of the resulting 1×1×2 box. By symmetry the flux divides equally between the two cubes. Better still, place the charge at the center of a larger cube built from the original and its mirror image: the charge is fully enclosed, total flux q/ε₀, and exactly HALF of the field lines head into the original cube.\nΦ = q/(2ε₀).\n\n90-SECOND SOLUTION\nOnly half the field lines enter the cube, since the charge sits on its boundary face. Φ = q/2ε₀.\n\nWHAT TO MEMORIZE\nWhen a charge sits on the boundary of a volume, ask what fraction of the full solid angle that volume subtends. Charge at the CENTER of a cube gives q/ε₀; at the center of a FACE, half the lines enter, giving q/2ε₀; at a CORNER, one octant, giving q/8ε₀. The mirror trick — completing the geometry until the charge is fully enclosed — turns each of these into a simple fraction of q/ε₀."
+      },
+
+      {
+        "question": "A thin spherical shell of radius R carries a uniformly distributed charge Q. Which statement correctly describes the electric field E and the electric potential V as one crosses the shell's surface from just inside to just outside?",
+        "choices": [
+          "Both E and V are continuous",
+          "Both E and V are discontinuous",
+          "E is continuous; V jumps",
+          "E is zero everywhere; V jumps",
+          "E jumps; V is continuous"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFIELD: Gauss's law gives E = 0 everywhere inside the shell (no enclosed charge), while just outside E = kQ/R². The field therefore JUMPS discontinuously from 0 to kQ/R² as you cross the surface — the jump equals σ/ε₀, as expected at any surface charge.\nPOTENTIAL: V is continuous. Inside, V is constant at kQ/R; outside, V = kQ/r, which also equals kQ/R at r = R. The two expressions match at the surface, so V passes through smoothly.\nThe potential is continuous because V is obtained by integrating E over distance, and integrating a finite jump across an infinitesimally thin layer contributes nothing.\n\n90-SECOND SOLUTION\nE goes 0 → kQ/R² (a jump), while V is kQ/R on both sides (continuous). So E jumps, V does not.\n\nWHAT TO MEMORIZE\nAcross any surface charge layer, the normal component of E jumps by σ/ε₀ while V stays continuous. Inside a uniformly charged shell the field is exactly zero but the potential is NOT zero — it is constant at kQ/R, the same value as at the surface. \"Zero field\" and \"zero potential\" are independent statements, and this shell is the cleanest example of the difference."
+      },
+
+      {
+        "question": "At a distance of 0.30 m from a small charged object, the electric field magnitude is measured to be 500 N/C, directed radially outward. Taking 1/(4πε₀) = 9.0 × 10⁹ N·m²/C², what is the charge on the object?",
+        "choices": [
+          "1.7 nC",
+          "5.0 nC",
+          "15 nC",
+          "50 nC",
+          "150 nC"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nRun Gauss's law (or Coulomb's law) backward. For a spherically symmetric object,\nE = kQ/r² → Q = Er²/k.\nQ = (500)(0.30)²/(9.0 × 10⁹) = (500)(0.090)/(9.0 × 10⁹) = 45/(9.0 × 10⁹) = 5.0 × 10⁻⁹ C = 5.0 nC.\n\nNUMERICS WITHOUT A CALCULATOR\n(0.30)² = 0.090 exactly. Then 500 × 0.09 = 45, and 45/9 = 5, so the answer is 5 × 10⁻⁹ C. Every step is a single-digit operation because the 9's cancel.\n\n90-SECOND SOLUTION\nQ = Er²/k = (500)(0.09)/(9×10⁹) = 5.0 × 10⁻⁹ C = 5.0 nC.\n\nWHAT TO MEMORIZE\nE = kQ/r² inverts directly to Q = Er²/k, and the same idea generalizes: any measurement of the field at a known distance determines the enclosed charge through Gauss's law. Keeping k = 9 × 10⁹ (rather than ε₀) makes these one-line calculations, since the 9's usually cancel against the squared distances the exam chooses."
+      },
+
+      {
+        "question": "A flat coil of 200 turns, each of area 0.010 m², rotates at a constant angular speed of 100 rad/s about an axis perpendicular to a uniform 0.50 T magnetic field. What is the PEAK emf generated?",
+        "choices": [
+          "10 V",
+          "50 V",
+          "100 V",
+          "200 V",
+          "400 V"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAs the coil rotates, the flux varies as Φ = NBA cos(ωt). Faraday's law gives\nemf = −dΦ/dt = NBAω sin(ωt),\nso the amplitude (peak value) is\nemf_peak = NBAω = (200)(0.50)(0.010)(100).\n\nNUMERICS WITHOUT A CALCULATOR\nGroup the easy pairs: (200)(0.50) = 100, and (0.010)(100) = 1.0. Multiply: 100 × 1.0 = 100 V.\n\n90-SECOND SOLUTION\nemf_peak = NBAω = (200)(0.5)(0.01)(100) = 100 V.\n\nWHAT TO MEMORIZE\nA coil rotating at constant ω in a uniform field produces a sinusoidal emf of amplitude NBAω — this is the basic AC generator, and the four factors multiply directly. Note the emf grows with rotation SPEED, which is why generators must spin at a regulated rate to hold the output voltage steady. The rms value is the peak divided by √2, which is what a voltmeter would read."
+      },
+
+      {
+        "question": "A single circular loop of area 0.020 m² and resistance 2.0 Ω lies perpendicular to a magnetic field that is increasing uniformly at 0.50 T/s. What is the induced current in the loop?",
+        "choices": [
+          "2.5 mA",
+          "5.0 mA",
+          "10 mA",
+          "20 mA",
+          "40 mA"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe area and orientation are fixed, so only B changes:\nemf = |dΦ/dt| = A(dB/dt) = (0.020)(0.50) = 0.010 V.\nOhm's law gives the current:\nI = emf/R = 0.010/2.0 = 5.0 × 10⁻³ A = 5.0 mA.\nBy Lenz's law the induced current flows so as to oppose the INCREASE in flux, meaning it circulates to produce a field opposing the applied one inside the loop.\n\nNUMERICS WITHOUT A CALCULATOR\n(0.020)(0.50) = 0.010, then dividing by 2 gives 0.005 A = 5.0 mA. Two one-step operations.\n\n90-SECOND SOLUTION\nemf = A dB/dt = 0.010 V, so I = 0.010/2.0 = 5.0 mA.\n\nWHAT TO MEMORIZE\nFaraday's law emf = −dΦ/dt with Φ = BA cos θ, followed by I = emf/R. Flux can change through B, through A, or through orientation, and identifying WHICH is varying is the first step in every induction problem. Lenz's law (the minus sign) fixes the direction: the induced current always opposes the change that produced it — increasing flux drives a current that fights the increase."
+      },
+
+      {
+        "question": "A flat coil rotates at constant angular speed in a uniform magnetic field. At which orientation is the magnitude of the induced emf the LARGEST?",
+        "choices": [
+          "When the coil's plane is perpendicular to the field, where the flux is maximum",
+          "When the coil's plane is at 45° to the field",
+          "The emf has the same magnitude at every orientation",
+          "The emf is largest at the instant the coil starts from rest",
+          "When the coil's plane is parallel to the field, where the flux is zero"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe emf depends on the RATE OF CHANGE of flux, not on the flux itself.\nWith Φ = NBA cos(ωt), the emf is −dΦ/dt = NBAω sin(ωt). These two are 90° out of phase:\n— When the coil's plane is PERPENDICULAR to B, the flux is at its maximum and momentarily stationary, so dΦ/dt = 0 and the emf is ZERO.\n— When the coil's plane is PARALLEL to B, the flux is zero but changing fastest (it is passing through zero on its way from positive to negative), so the emf is MAXIMUM.\nThe largest emf therefore occurs where the flux is zero.\n\n90-SECOND SOLUTION\nemf ∝ dΦ/dt, and a cosine changes fastest where it crosses zero. Maximum emf occurs when the flux is zero — coil plane parallel to B.\n\nWHAT TO MEMORIZE\nMaximum flux and maximum emf never coincide; they are a quarter cycle apart, because the emf tracks the SLOPE of the flux curve rather than its height. This is the single most common misconception in induction. The same reasoning explains why a loop sitting in a strong but STEADY field has no emf at all — a large flux produces nothing unless it is changing."
+      },
+
+      {
+        "question": "The north pole of a bar magnet is moved toward a stationary conducting ring, along the ring's axis. Viewed from the side of the approaching magnet, the induced current in the ring and the force between the magnet and ring are",
+        "choices": [
+          "clockwise, and the force is attractive",
+          "clockwise, and the force is repulsive",
+          "counterclockwise, and the force is attractive",
+          "zero, because the magnet is not in contact with the ring",
+          "counterclockwise, and the force is repulsive"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nApply Lenz's law in two steps.\nFLUX: as the north pole approaches, the flux through the ring (pointing away from the magnet, toward the ring) INCREASES.\nOPPOSITION: the induced current must oppose that increase, so it creates a magnetic field inside the ring pointing BACK toward the magnet. By the right-hand rule, viewed from the magnet's side, that requires a COUNTERCLOCKWISE current.\nFORCE: the ring's induced field presents a north pole facing the magnet's approaching north pole, so the two REPEL. Equivalently, Lenz's law guarantees the force opposes the motion — the ring pushes back against being approached.\n\n90-SECOND SOLUTION\nIncreasing flux is opposed, so the ring's field points back at the magnet: counterclockwise as seen from the magnet, and the poles repel.\n\nWHAT TO MEMORIZE\nLenz's law can always be reduced to one statement: the induced effect OPPOSES the change causing it. A magnet approaching is repelled; a magnet receding is attracted — regardless of which pole is used. That energy-based shortcut (\"the ring resists whatever you are doing\") settles the force direction instantly, and you only need the right-hand rule afterward if the question asks for the current's sense."
+      },
+
+      {
+        "question": "An airplane with a wingspan of 30 m flies horizontally at 200 m/s through a region where the vertical component of Earth's magnetic field is 5.0 × 10⁻⁵ T. What is the magnitude of the emf induced between its wingtips?",
+        "choices": [
+          "0.30 V",
+          "0.60 V",
+          "1.5 V",
+          "3.0 V",
+          "6.0 V"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe wing is a conductor moving through a magnetic field, so free charges in it feel a magnetic force qv × B directed along the wingspan. Charge separates until the resulting electric field balances that force, leaving a motional emf\nemf = BLv,\nwhere B is the component PERPENDICULAR to both the velocity and the wing — here the vertical component.\nemf = (5.0 × 10⁻⁵)(30)(200) = (5.0 × 10⁻⁵)(6000) = 0.30 V.\n\nNUMERICS WITHOUT A CALCULATOR\nMultiply the two clean factors first: 30 × 200 = 6000. Then 5 × 10⁻⁵ × 6 × 10³ = 30 × 10⁻² = 0.30 V.\n\n90-SECOND SOLUTION\nemf = BLv = (5×10⁻⁵)(30)(200) = 0.30 V.\n\nWHAT TO MEMORIZE\nMotional emf is BLv when the conductor, its velocity, and the field are mutually perpendicular — and only the perpendicular COMPONENT of B contributes, which is why the problem specifies the vertical component. No current flows here because there is no closed circuit; the wingtips simply sit at different potentials. The result is a useful order-of-magnitude anchor: Earth's field produces only a fraction of a volt even across an airliner at cruising speed."
+      },
+
+      {
+        "question": "A charge of +3.0 μC sits at the origin and a charge of −2.0 μC sits at x = 1.0 m. Taking 1/(4πε₀) = 9.0 × 10⁹ N·m²/C² and V = 0 at infinity, what is the electric potential at the point x = 2.0 m?",
+        "choices": [
+          "−4,500 V",
+          "−1,500 V",
+          "+1,500 V",
+          "+4,500 V",
+          "+9,000 V"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nPotential is a SCALAR, so simply add the contributions with their signs — no vector components needed.\nDistance from +3.0 μC to the field point: 2.0 m.\nDistance from −2.0 μC to the field point: 1.0 m.\nV = k(3.0 × 10⁻⁶)/2.0 + k(−2.0 × 10⁻⁶)/1.0\n  = (9.0 × 10⁹)(1.5 × 10⁻⁶ − 2.0 × 10⁻⁶)\n  = (9.0 × 10⁹)(−0.5 × 10⁻⁶) = −4500 V.\n\nNUMERICS WITHOUT A CALCULATOR\nReduce each term to charge-over-distance first: 3/2 = 1.5 and 2/1 = 2.0, in μC/m. The difference is −0.5 × 10⁻⁶, and multiplying by 9 × 10⁹ gives −4.5 × 10³ V. Factoring out k until the end keeps this to one multiplication.\n\n90-SECOND SOLUTION\nV = 9×10⁹[(3μC)/2 − (2μC)/1] = 9×10⁹(−0.5×10⁻⁶) = −4500 V.\n\nWHAT TO MEMORIZE\nPotential from several point charges is the algebraic sum Σkqᵢ/rᵢ — scalars with signs, never components. This is far easier than summing fields, which is why finding V first and then obtaining E from the gradient is often the fastest route in complicated geometries. Note the potential here is negative even though the larger charge is positive, because the negative charge is closer."
+      },
+
+      {
+        "question": "A charge of +2.0 μC is moved from a point where the potential is +100 V to a point where the potential is −50 V. How much work is done BY AN EXTERNAL AGENT moving it slowly (no change in kinetic energy)?",
+        "choices": [
+          "−3.0 × 10⁻⁴ J",
+          "−1.0 × 10⁻⁴ J",
+          "+1.0 × 10⁻⁴ J",
+          "+3.0 × 10⁻⁴ J",
+          "+3.0 × 10⁻¹ J"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor slow transport with no kinetic-energy change, the external agent's work equals the change in potential energy:\nW_ext = ΔU = q(V_final − V_initial)\n= (2.0 × 10⁻⁶)(−50 − 100)\n= (2.0 × 10⁻⁶)(−150) = −3.0 × 10⁻⁴ J.\nThe negative sign means the FIELD does positive work: a positive charge moves spontaneously from high potential to low potential, so the external agent must hold it back rather than push.\n\nNUMERICS WITHOUT A CALCULATOR\nThe voltage difference is −150 V, and 2 × 150 = 300, so the magnitude is 300 × 10⁻⁶ = 3.0 × 10⁻⁴ J, negative.\n\n90-SECOND SOLUTION\nW_ext = qΔV = (2.0 μC)(−150 V) = −3.0 × 10⁻⁴ J.\n\nWHAT TO MEMORIZE\nW_ext = qΔV = q(V_f − V_i), and the SIGN carries the physics: negative external work means the field pushed the charge along and the agent had to resist. Positive charges fall toward low potential; negative charges toward high potential. Because the electrostatic force is conservative, this work depends only on the endpoints, never on the path taken."
+      },
+
+      {
+        "question": "A thin spherical shell of radius 0.20 m carries a uniformly distributed charge of 4.0 μC. Taking 1/(4πε₀) = 9.0 × 10⁹ N·m²/C², what is the electric potential at a point 0.10 m from the center (i.e. inside the shell)?",
+        "choices": [
+          "zero",
+          "4.5 × 10⁴ V",
+          "9.0 × 10⁴ V",
+          "1.8 × 10⁵ V",
+          "3.6 × 10⁵ V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe field inside a uniformly charged shell is zero everywhere, so no work is required to move a charge around inside — the potential is CONSTANT throughout the interior. Its value equals the potential at the surface:\nV_inside = kQ/R = (9.0 × 10⁹)(4.0 × 10⁻⁶)/(0.20).\nNumerator: (9.0 × 10⁹)(4.0 × 10⁻⁶) = 3.6 × 10⁴.\nV = 3.6 × 10⁴/0.20 = 1.8 × 10⁵ V.\nThe distance 0.10 m is deliberately irrelevant — every interior point has the same potential.\n\nNUMERICS WITHOUT A CALCULATOR\n9 × 4 = 36 and 10⁹ × 10⁻⁶ = 10³, giving 3.6 × 10⁴. Dividing by 0.20 is multiplying by 5: 1.8 × 10⁵ V.\n\n90-SECOND SOLUTION\nInside a shell E = 0, so V is constant at its surface value kQ/R = 1.8 × 10⁵ V, independent of position.\n\nWHAT TO MEMORIZE\nInside a uniformly charged shell (or any conductor in equilibrium): E = 0 but V = kQ/R, constant and NOT zero. Zero field means the potential does not CHANGE, not that it vanishes. Outside, the shell behaves exactly like a point charge, V = kQ/r. Answering \"zero\" here is the single most common error, and it comes from conflating a vanishing field with a vanishing potential."
+      },
+
+      {
+        "question": "In a certain region the electric potential varies as V(x) = 3x² volts, with x in meters. What is the x-component of the electric field at x = 2.0 m?",
+        "choices": [
+          "−24 V/m",
+          "−12 V/m",
+          "−6.0 V/m",
+          "+12 V/m",
+          "+24 V/m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe field is the negative gradient of the potential:\nE_x = −dV/dx.\nDifferentiate: d(3x²)/dx = 6x, so E_x = −6x.\nAt x = 2.0 m: E_x = −6(2.0) = −12 V/m.\nThe negative sign means the field points in the −x direction here, which makes sense: the potential increases with x, and the field always points from high potential toward low potential — that is, \"downhill\" on the potential curve.\n\n90-SECOND SOLUTION\nE_x = −dV/dx = −6x, so at x = 2.0 m, E_x = −12 V/m.\n\nWHAT TO MEMORIZE\nE = −dV/dx in one dimension (E = −∇V generally): the field points DOWNHILL on the potential, and its magnitude is the steepness of the slope. The minus sign is the whole content of the relation, and dropping it flips the direction. Two useful consequences: where the potential is flat, the field is zero; and where V has a maximum or minimum, E vanishes — which is why field-free regions correspond to constant potential."
+      },
+
+      {
+        "question": "A positive charge is released from rest in a region containing only a static electric field. Which of the following describes its subsequent motion?",
+        "choices": [
+          "It moves toward lower electric potential, gaining kinetic energy",
+          "It moves toward higher electric potential, gaining kinetic energy",
+          "It moves toward lower electric potential, losing kinetic energy",
+          "It remains at rest, since it was released from rest",
+          "It moves along a line of constant potential"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe force on a positive charge is F = qE, directed along the field. Since the field points from high potential toward low potential, a positive charge accelerates toward LOWER potential.\nEnergy accounting confirms it: the potential energy is U = qV, so with q positive, moving toward lower V decreases U. Total energy is conserved in a static field, so the lost potential energy becomes kinetic energy — the charge speeds up.\n(A negative charge does the opposite: it accelerates toward HIGHER potential, because with q negative, U = qV decreases as V increases.)\n\n90-SECOND SOLUTION\nPositive charges accelerate along E, which points toward lower V. U = qV falls, so kinetic energy rises.\n\nWHAT TO MEMORIZE\nCharges always accelerate toward lower POTENTIAL ENERGY, never simply toward lower potential — the distinction matters because U = qV flips sign for negative charges. So positive charges fall toward low V, negative charges toward high V, and both gain kinetic energy in the process. This is the electrostatic analogue of a mass falling downhill, with potential playing the role of height and charge the role of mass — except that charge can be negative."
+      },
+
+      {
+        "question": "A point charge +q is held at a distance d above a large grounded conducting plane. What is the magnitude of the force on the charge?",
+        "choices": [
+          "kq²/d²",
+          "kq²/(2d²)",
+          "kq²/(4d²)",
+          "kq²/(8d²)",
+          "zero, because the plane is grounded"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe grounded plane can be replaced by an \"image\" charge −q located a distance d on the FAR side of the plane — this reproduces the correct boundary condition (V = 0 on the plane) in the region above it.\nThe real charge and its image are separated by 2d, so\nF = k q(q)/(2d)² = kq²/(4d²),\ndirected toward the plane (attractive, since the image charge is negative).\n\n90-SECOND SOLUTION\nReplace the plane with an image charge −q at distance d below it. Separation is 2d, so F = kq²/(2d)² = kq²/4d².\n\nWHAT TO MEMORIZE\nThe method of images replaces a grounded conducting plane with a mirror-image charge of OPPOSITE sign, at an equal distance on the other side — valid only in the region where the real charge lives. The separation is 2d, not d, so the force carries a 1/4: this factor is the most common slip. The force is always attractive, which is why charges are drawn toward grounded conductors, and it is the reason \"zero because grounded\" is wrong — grounding fixes the potential, it does not eliminate the interaction."
+      },
+
+      {
+        "question": "A point charge +q is held above a large grounded conducting plane. What is the TOTAL induced charge that appears on the plane's surface?",
+        "choices": [
+          "zero",
+          "−q/4",
+          "−q/2",
+          "−q",
+          "−2q"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBecause the plane is grounded, it can draw whatever charge it needs from the earth. The charge it draws is exactly the amount required to terminate all the field lines leaving +q.\nThe image-charge picture makes this immediate: in the region above the plane, the field is identical to that of the real +q together with an image −q. Since the induced surface charge must produce exactly that image field, the total induced charge equals the image charge:\nQ_induced = −q.\nEvery field line leaving the positive charge ends on the plane, so the induced charge accounts for all of the flux — nothing escapes to infinity.\n\n90-SECOND SOLUTION\nThe induced surface charge reproduces the image charge's field, so its total is exactly −q.\n\nWHAT TO MEMORIZE\nA grounded conducting plane accumulates a total induced charge equal to the negative of the nearby charge, −q, distributed non-uniformly (densest directly beneath the charge and thinning with distance). The distribution is complicated, but the TOTAL follows immediately from the image construction, and from the fact that all field lines from the charge terminate on the plane. If the conductor were isolated and neutral instead of grounded, the total induced charge would be zero, with equal and opposite amounts separating on its two surfaces."
+      },
+
+      {
+        "question": "A proton, starting from rest, is accelerated through a potential difference of 1000 V. Taking the proton mass to be 1.67 × 10⁻²⁷ kg and its charge to be 1.6 × 10⁻¹⁹ C, its final speed is most nearly",
+        "choices": [
+          "4.4 × 10⁴ m/s",
+          "1.4 × 10⁵ m/s",
+          "4.4 × 10⁵ m/s",
+          "1.4 × 10⁶ m/s",
+          "4.4 × 10⁶ m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAll the electrical potential energy converts to kinetic energy:\nqV = ½mv² → v = √(2qV/m).\nNumerator: 2qV = 2(1.6 × 10⁻¹⁹)(1000) = 3.2 × 10⁻¹⁶ J.\nDivide by the mass: (3.2 × 10⁻¹⁶)/(1.67 × 10⁻²⁷) ≈ 1.9 × 10¹¹.\nTake the square root: v ≈ √(1.9 × 10¹¹) ≈ 4.4 × 10⁵ m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nBefore taking the root, shift to an EVEN power of ten: 1.9 × 10¹¹ = 19 × 10¹⁰, so the root is √19 × 10⁵ ≈ 4.4 × 10⁵ m/s (since 4.4² ≈ 19). Making the exponent even is what keeps the square root exact and the estimate quick.\nA useful check: 1000 eV is far below the proton's 938 MeV rest energy, so the proton is thoroughly non-relativistic and the classical formula is safe.\n\n90-SECOND SOLUTION\nv = √(2qV/m) = √(3.2×10⁻¹⁶/1.67×10⁻²⁷) ≈ √(19 × 10¹⁰) ≈ 4.4 × 10⁵ m/s.\n\nWHAT TO MEMORIZE\nqV = ½mv² gives v = √(2qV/m) — the workhorse for any particle accelerated through a known voltage. Check whether the energy gained is small compared with mc² before trusting it: 1 keV against a proton's 938 MeV is utterly safe, whereas the same 1 keV given to an electron (rest energy 511 keV) already needs a relativistic check. Shifting to an even power of ten before taking a square root is the general habit that makes these tractable by hand."
+      }
+
+    ]
+  },
+
 
   {
     "name": "Special Relativity Test",
