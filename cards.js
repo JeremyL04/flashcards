@@ -4,9 +4,14 @@
 //  Each exam:
 //    name  : shown on the menu tile
 //    added    : ISO date the set went on the site, shown on its tile.
-//    category : which section of the home page the exam appears under —
-//               "practice" for the mixed practice tests, "topic" for the
-//               subject-specific sets.
+//    category : which section of the home page the exam appears under.
+//               "practice" for the mixed practice tests; one topic slug per
+//               subject otherwise — "cm", "em", "circuits", "optics", "sr",
+//               "statmech", "condensed", "lab" — each its own shelf. The
+//               exact set of slugs and their shelf labels/order live in
+//               CATEGORIES near the top of app.js; add a slug there before
+//               using it here, or the exam falls into a catch-all "Other"
+//               shelf instead.
 //    cards : the questions (the tile counts them for you)
 //
 //  Each card:
@@ -48,7 +53,7 @@ const EXAMS = [
   {
     "name": "Classical Mechanics - Medium / Hard",
     "added": "2026-08-09",
-    "category": "topic",
+    "category": "cm",
     "cards": [
 
       // VARIES: GR9277 Q66 winds a hanging chain UP onto an axle (work via
@@ -398,7 +403,7 @@ const EXAMS = [
   {
     "name": "Geometric Optics & Quantum Stat. Mech.",
     "added": "2026-08-10",
-    "category": "topic",
+    "category": "optics",
     "cards": [
 
       {
@@ -562,7 +567,7 @@ const EXAMS = [
   {
     "name": "Optics & Waves Test",
     "added": "2026-08-27",
-    "category": "topic",
+    "category": "optics",
     "cards": [
 
       {
@@ -830,7 +835,7 @@ const EXAMS = [
   {
     "name": "Optics & Waves Test 2 (Hard)",
     "added": "2026-08-28",
-    "category": "topic",
+    "category": "optics",
     "cards": [
 
       {
@@ -1119,7 +1124,7 @@ const EXAMS = [
   {
     "name": "Classical Mechanics II",
     "added": "2026-08-11",
-    "category": "topic",
+    "category": "cm",
     "cards": [
 
       {
@@ -1502,7 +1507,7 @@ const EXAMS = [
   {
     "name": "Electromagnetism I",
     "added": "2026-08-12",
-    "category": "topic",
+    "category": "em",
     "cards": [
 
       // [1] Electrostatics
@@ -1861,7 +1866,7 @@ const EXAMS = [
   {
     "name": "Classical Mechanics Test",
     "added": "2026-08-22",
-    "category": "topic",
+    "category": "cm",
     "cards": [
 
       {
@@ -2390,7 +2395,7 @@ const EXAMS = [
   {
     "name": "Electromagnetism Test",
     "added": "2026-08-22",
-    "category": "topic",
+    "category": "em",
     "cards": [
 
       {
@@ -2918,7 +2923,7 @@ const EXAMS = [
   {
     "name": "Electromagnetism Test 2",
     "added": "2026-08-27",
-    "category": "topic",
+    "category": "em",
     "cards": [
 
       {
@@ -3186,7 +3191,7 @@ const EXAMS = [
   {
     "name": "Electromagnetism Test 3",
     "added": "2026-08-27",
-    "category": "topic",
+    "category": "em",
     "cards": [
 
       {
@@ -3454,7 +3459,7 @@ const EXAMS = [
   {
     "name": "Electromagnetism Test 4 (Hard)",
     "added": "2026-08-28",
-    "category": "topic",
+    "category": "em",
     "cards": [
 
       {
@@ -3723,7 +3728,7 @@ const EXAMS = [
   {
     "name": "Electromagnetism Test 5",
     "added": "2026-08-28",
-    "category": "topic",
+    "category": "em",
     "cards": [
 
       {
@@ -3993,7 +3998,7 @@ const EXAMS = [
   {
     "name": "Special Relativity Test",
     "added": "2026-08-27",
-    "category": "topic",
+    "category": "sr",
     "cards": [
 
       {
@@ -4264,7 +4269,7 @@ const EXAMS = [
   {
     "name": "Classical Mechanics - Composite Systems & Pulleys",
     "added": "2026-08-24",
-    "category": "topic",
+    "category": "cm",
     "cards": [
 
       {
@@ -4468,7 +4473,7 @@ const EXAMS = [
   {
     "name": "Classical Mechanics - Torque & Rotation",
     "added": "2026-08-25",
-    "category": "topic",
+    "category": "cm",
     "cards": [
 
       {
@@ -4668,11 +4673,280 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Classical Mechanics Test (Hard)",
+    "added": "2026-08-29",
+    "category": "cm",
+    "cards": [
+
+      {
+        "question": "A 10 g bullet is fired horizontally into a 1.99 kg wooden block hanging at rest from long strings. The bullet embeds itself in the block, and the block subsequently swings upward through a vertical height of 0.20 m. Taking g = 10 m/s², what was the speed of the bullet?",
+        "choices": [
+          "2.0 m/s",
+          "4.0 m/s",
+          "100 m/s",
+          "200 m/s",
+          "400 m/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThis problem has two stages, and the crucial point is that a DIFFERENT conservation law applies to each.\nStage 1 — the embedding. This is perfectly inelastic, so kinetic energy is NOT conserved (most of it goes into deforming the wood). Momentum IS conserved:\nmv = (m + M)V → V = v·m/(m + M).\nStage 2 — the swing. Once the bullet is at rest inside the block, no more energy is lost, so mechanical energy IS conserved:\n½(m + M)V² = (m + M)gh → V = √(2gh).\nNow work backward. The swing gives\nV = √(2 × 10 × 0.20) = √4.0 = 2.0 m/s.\nAnd the collision gives\nv = V(m + M)/m = 2.0 × (2.00 kg)/(0.010 kg) = 2.0 × 200 = 400 m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nThe numbers are chosen so that both steps are exact. First, 2gh = 2(10)(0.20) = 4, whose root is 2 — no decimals.\nSecond, the mass ratio: m + M = 0.010 + 1.99 = 2.00 kg exactly, so (m+M)/m = 2.00/0.010 = 200. Then v = 2 × 200 = 400 m/s.\nThe distractor 200 m/s is what you get by using M alone instead of m + M in the ratio — a small error here, since M ≈ m + M, but a real one. The distractor 2.0 m/s is the BLOCK's speed V, i.e. stopping after stage 2 and forgetting stage 1 entirely; that is the single most common failure. And 800 m/s comes from applying energy conservation through the collision as well, which double-counts.\n\n90-SECOND SOLUTION\nSwing: V = √(2gh) = 2.0 m/s. Collision: v = V(m+M)/m = 2.0 × 200 = 400 m/s.\n\nWHAT TO MEMORIZE\nThe ballistic pendulum is the standard two-stage problem, and the rule is fixed: momentum through the collision, energy through the swing. Never energy through the collision — a perfectly inelastic collision retains only the fraction m/(m+M) of the original kinetic energy, here about 0.5%, with the rest lost to deformation and heat. The general result is v = √(2gh)·(m+M)/m. The same \"which law applies to which stage\" discipline governs every collision-then-motion problem: whenever objects stick together, deform, or explode, momentum survives and energy does not."
+      },
+
+      {
+        "question": "A block of mass m and a block of mass 2m are connected by a spring of force constant k and placed on a frictionless horizontal surface, free to oscillate along the line joining them. What is the angular frequency of the oscillation?",
+        "choices": [
+          "√(k/3m)",
+          "√(k/2m)",
+          "√(k/m)",
+          "√(5k/4m)",
+          "√(3k/2m)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWhen two free masses are joined by a spring, the system reduces to a single effective mass oscillating on the same spring. That effective mass is the REDUCED mass:\nμ = m₁m₂/(m₁ + m₂) = (m)(2m)/(3m) = 2m/3.\nThe oscillation frequency is then the ordinary spring result with μ in place of m:\nω = √(k/μ) = √(k/(2m/3)) = √(3k/2m).\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic, but two structural checks pin the answer without recalling the reduced-mass formula at all.\nFirst, μ is always SMALLER than either mass — here 2m/3 < m — because both ends of the spring are free to move, so the spring compresses faster than if one end were bolted down. A smaller effective mass means a HIGHER frequency than √(k/m). That immediately eliminates √(k/3m), √(k/2m), and √(k/m), all of which are at or below the fixed-wall value, leaving only two candidates.\nSecond, the limiting case decides between them: if the second mass became infinite, the system should reduce to mass m on a wall-mounted spring, ω = √(k/m). Setting m₂ → ∞ in μ = m₁m₂/(m₁+m₂) gives μ → m₁ ✓ — confirming the formula's form, and 3k/2m = 1.5 k/m sits sensibly just above k/m for a finite partner mass.\n\n90-SECOND SOLUTION\nμ = (m)(2m)/(3m) = 2m/3, so ω = √(k/μ) = √(3k/2m) — necessarily above √(k/m) since both masses move.\n\nWHAT TO MEMORIZE\nTwo masses interacting only with each other reduce to one particle of mass μ = m₁m₂/(m₁+m₂) moving in the relative coordinate, plus a center of mass that drifts at constant velocity. Always μ < min(m₁, m₂), and μ → m₁ when m₂ ≫ m₁ (the heavy partner acts as a fixed wall), while μ = m/2 for two equal masses. The same reduction underlies the hydrogen atom's reduced-mass correction and the two-body gravitational problem. In this oscillation, the center of mass stays put and the two blocks move oppositely with amplitudes inversely proportional to their masses."
+      },
+
+      {
+        "question": "A small ball on the end of a string of length 1.0 m is swung in a horizontal circle as a conical pendulum, with the string making an angle of 60° with the vertical. Taking g = 10 m/s², what is the angular speed of the ball about the vertical axis?",
+        "choices": [
+          "3.2 rad/s",
+          "4.5 rad/s",
+          "6.3 rad/s",
+          "8.0 rad/s",
+          "14 rad/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nResolve the string tension T into components. The ball has no vertical acceleration, so the vertical component balances gravity:\nT cos θ = mg.\nThe horizontal component supplies the centripetal force for a circle of radius r = L sin θ:\nT sin θ = mω²r = mω²L sin θ.\nThe sin θ cancels from the second equation outright, giving T = mω²L. Dividing that by the first equation:\nmω²L/(mg) = 1/cos θ → ω² = g/(L cos θ).\nWith θ = 60°, cos 60° = ½:\nω² = 10/((1.0)(0.5)) = 20 → ω = √20 ≈ 4.47 ≈ 4.5 rad/s.\n\nNUMERICS WITHOUT A CALCULATOR\nThe cancellation of sin θ is what makes this tractable: the radius appears on both sides of the horizontal equation and drops out, leaving the elegant ω² = g/(L cos θ).\nThen cos 60° = ½ doubles g, so ω = √20. Bracket it: 4² = 16 and 4.5² = 20.25, so √20 is just under 4.5 — the answer.\nThe distractor 3.2 rad/s is √10, which is ω = √(g/L), the answer if you forget the cos θ entirely (equivalently, the small-angle simple pendulum). That is the most common error. The distractor 6.3 is √40, from using sin 60° or inverting the cosine factor.\nUseful check: as θ → 90° (the string approaching horizontal), cos θ → 0 and ω → ∞, which is right — spinning a string perfectly horizontal would require infinite speed, since nothing would then support the weight.\n\n90-SECOND SOLUTION\nω = √(g/(L cos θ)) = √(10/0.5) = √20 ≈ 4.5 rad/s.\n\nWHAT TO MEMORIZE\nFor a conical pendulum, ω² = g/(L cos θ), and equivalently the period T = 2π√(L cos θ/g) depends on the VERTICAL height L cos θ of the pivot above the circle, not on the string length itself. Note that as θ → 0 this recovers the simple pendulum ω = √(g/L), and that the tension is T = mg/cos θ, which here equals 2mg — a useful reminder that supporting a mass at an angle always requires more tension than the weight. The general technique is the one to keep: for uniform circular motion in a vertical plane of forces, write the vertical balance and the horizontal centripetal equation separately, then divide them to eliminate the unknown force."
+      },
+
+      {
+        "question": "A particle moves along the x-axis under a force F(x) = −Kx³, where K = 8.0 N/m³. The particle starts at rest at x = 2.0 m. What is its kinetic energy when it passes through the origin?",
+        "choices": [
+          "8.0 J",
+          "16 J",
+          "32 J",
+          "64 J",
+          "128 J"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe force is not constant, so the work must be integrated:\nW = ∫F dx = ∫₂⁰(−Kx³)dx = −K[x⁴/4]₂⁰ = −K(0 − 16/4) = +4K.\nWith K = 8.0:\nW = 4(8.0) = 32 J.\nBy the work-energy theorem, and since the particle starts at rest, the kinetic energy at the origin equals this work:\nKE = 32 J.\nEquivalently, the potential energy is U(x) = Kx⁴/4, so U(2.0) = 8.0(16)/4 = 32 J, all of which converts to kinetic energy at the origin where U = 0.\n\nNUMERICS WITHOUT A CALCULATOR\nThe integral of x³ is x⁴/4, so the whole calculation is 2⁴ = 16, divided by 4 gives 4, times K = 8 gives 32.\nThe distractors track specific slips. 64 J is Kx⁴/2, using the ½ that belongs to a QUADRATIC potential — the reflex of writing ½kx² carried over to the wrong power. 128 J is Kx⁴ with no division at all. 16 J is Kx³/4 (wrong power in the integral), and 8.0 J is just K.\nThe sanity check: the potential U = Kx⁴/4 rises far more steeply than a spring's, so a quartic force stores considerably more energy over the same displacement than the ½kx² intuition suggests — expect a larger number, not a smaller one.\n\n90-SECOND SOLUTION\nU(x) = Kx⁴/4, so KE = U(2.0) = 8.0(2.0)⁴/4 = 8.0(16)/4 = 32 J.\n\nWHAT TO MEMORIZE\nFor a one-dimensional conservative force, U(x) = −∫F dx, so F = −Kxⁿ gives U = Kx^(n+1)/(n+1). The familiar ½kx² is just the n = 1 case; do not import its factor of ½ into other powers. The work-energy theorem W_net = ΔKE holds for any force, constant or not — integrating is the only extra step. Note also that a quartic potential gives oscillations that are NOT simple harmonic: the period depends on amplitude, decreasing as the amplitude grows, because the restoring force stiffens faster than linearly."
+      },
+
+      {
+        "question": "A satellite in a circular orbit of radius r about a planet is given a sudden forward boost that increases its speed to 1.2 times the circular orbital speed, with the direction unchanged. The subsequent orbit is",
+        "choices": [
+          "an ellipse with the boost point at perigee",
+          "a circle of larger radius",
+          "an ellipse with the boost point at apogee",
+          "a parabola, so the satellite just barely escapes",
+          "a hyperbola, so the satellite escapes with speed to spare"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTwo questions must be answered: is the orbit bound, and where in the new orbit does the boost point lie?\nBound or not. Escape requires v_esc = √2 v_circ ≈ 1.414 v_circ. Since 1.2 < 1.414, the satellite remains BOUND. Explicitly, the total energy after the boost is\nE = ½v² − GM/r = ½(1.44)(GM/r) − GM/r = (0.72 − 1)GM/r = −0.28 GM/r < 0,\nconfirming a bound orbit — which for an inverse-square force means an ellipse. That eliminates the parabola and hyperbola.\nWhich end of the ellipse. At the boost point the satellite is moving faster than circular speed, and speed is greatest at the point of CLOSEST approach. So the boost point is the perigee, and the satellite swings outward to a more distant apogee on the far side.\n\nNUMERICS WITHOUT A CALCULATOR\nOnly one number matters: √2 ≈ 1.41, the ratio of escape speed to circular speed at the same radius. Since 1.2 falls short of it, the orbit stays bound — that single comparison eliminates two of the five choices instantly and is worth having memorized outright.\nThe choice \"a circle of larger radius\" is the most seductive wrong answer, because it matches the loose intuition that \"more speed means a higher orbit.\" But a circular orbit requires the speed at every point to be exactly the circular value for that radius, and an instantaneous boost changes the speed without changing the position — so the orbit cannot remain circular. Reaching a larger CIRCULAR orbit takes two burns (the Hohmann transfer): one to raise the apogee, and a second at apogee to circularize.\nBetween perigee and apogee, note that the boosted satellite is moving faster than circular speed, and the fastest point of any ellipse is the nearest one.\n\n90-SECOND SOLUTION\n1.2 < √2, so still bound → ellipse. Speed above circular means the satellite is at its fastest point, which is perigee.\n\nWHAT TO MEMORIZE\nAt radius r, v_circ = √(GM/r) and v_esc = √(2GM/r) = √2 v_circ; the orbit is an ellipse for v below escape, a parabola exactly at escape, and a hyperbola above. Total energy E = −GM m/2a for an ellipse of semi-major axis a, so raising the energy raises a. A prograde burn raises the opposite side of the orbit and makes the burn point the perigee; a retrograde burn does the reverse, making the burn point the apogee. This is also why speeding up in orbit paradoxically leaves you in a SLOWER orbit on average — the larger orbit has a longer period, by Kepler's third law."
+      },
+
+      {
+        "question": "A uniform rod of length L is pivoted about a horizontal axis perpendicular to the rod at a point L/4 from its center, and swings with small amplitude. Taking g = 10 m/s² and L = 1.0 m, what is the angular frequency of the oscillation?",
+        "choices": [
+          "4.1 rad/s",
+          "4.5 rad/s",
+          "5.5 rad/s",
+          "6.3 rad/s",
+          "8.0 rad/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a physical pendulum, ω = √(Mgd/I), where d is the distance from the pivot to the center of mass and I is the moment of inertia about the PIVOT.\nHere d = L/4. By the parallel-axis theorem,\nI = I_cm + Md² = ML²/12 + M(L/4)² = ML²/12 + ML²/16.\nCommon denominator 48: 4ML²/48 + 3ML²/48 = 7ML²/48.\nTherefore\nω = √(Mg(L/4)/(7ML²/48)) = √(g(L/4)(48)/(7L²)) = √(12g/(7L)).\nWith g = 10 and L = 1.0:\nω = √(120/7) = √17.1 ≈ 4.14 ≈ 4.1 rad/s.\n\nNUMERICS WITHOUT A CALCULATOR\nThe fraction work is the only difficulty: 1/12 + 1/16 over the denominator 48 gives 4 + 3 = 7 parts, so I = 7ML²/48. Then the M and one L cancel, and 48/4 = 12 leaves ω² = 12g/(7L) = 120/7 ≈ 17.1. Since 4² = 16 and 4.2² ≈ 17.6, the root is just above 4.1.\nThe distractor 4.5 rad/s is √20, which comes from forgetting the parallel-axis term and using I = ML²/12 alone. The distractor 5.5 rad/s treats the rod as a point mass at L/4, giving ω = √(g/d) = √40 ≈ 6.3 — that is the last choice — while 3.5 rad/s comes from pivoting at the END (ω = √(3g/2L) = √15 ≈ 3.9, near enough to tempt).\nStructural check: any physical pendulum swings SLOWER than a point mass at the same distance, because distributing the mass adds rotational inertia without adding torque. So the answer must fall below √(g/d) = 6.3 rad/s.\n\n90-SECOND SOLUTION\nI = ML²/12 + M(L/4)² = 7ML²/48; ω = √(Mg(L/4)/I) = √(12g/7L) = √(120/7) ≈ 4.1 rad/s.\n\nWHAT TO MEMORIZE\nPhysical pendulum: ω = √(Mgd/I_pivot), with I_pivot found from the parallel-axis theorem I = I_cm + Md². The pivot distance d appears in BOTH numerator and denominator, which produces a maximum frequency at some intermediate d rather than at the end — for a uniform rod the fastest swing occurs at d = L/√12 ≈ 0.29L, and the frequency falls to zero at both d = 0 (pivot at the center, no restoring torque at all) and large d. The equivalent simple-pendulum length is L_eq = I/(Md), which for a rod pivoted at its end gives 2L/3, the center of percussion."
+      },
+
+      {
+        "question": "A mass m hangs from two identical springs, each of force constant k, connected end to end in series. The springs are then rearranged so that the same mass hangs from both of them side by side, in parallel. By what factor does the oscillation frequency change?",
+        "choices": [
+          "It decreases by a factor of 2",
+          "It decreases by a factor of √2",
+          "It is unchanged",
+          "It increases by a factor of √2",
+          "It increases by a factor of 2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFind the effective spring constant in each arrangement.\nIn SERIES, the same tension acts through both springs and their extensions add, so the compliances add:\n1/k_series = 1/k + 1/k = 2/k → k_series = k/2.\nIn PARALLEL, both springs stretch by the same amount and their forces add:\nk_parallel = k + k = 2k.\nThe parallel arrangement is therefore FOUR times as stiff as the series arrangement. Since ω = √(k/m),\nω_parallel/ω_series = √(2k/(k/2)) = √4 = 2.\nThe frequency increases by a factor of 2.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only step that needs care is the factor of four in stiffness, which becomes a factor of two in frequency because of the square root. Series halves k, parallel doubles it, so the ratio is 2k ÷ k/2 = 4, and √4 = 2.\nThe distractor \"increases by √2\" is the answer if you compare parallel to a SINGLE spring rather than to the series pair — a natural slip, since 2k versus k gives √2. The distractor \"decreases by 2\" reverses which arrangement is stiffer, the error to guard against by remembering that stacking springs end to end makes a longer, floppier spring, while side by side shares the load and stiffens.\nPhysical check: two springs in series behave like one spring of twice the length, and a longer spring is softer.\n\n90-SECOND SOLUTION\nk_series = k/2, k_parallel = 2k — a factor of 4 in stiffness, hence a factor of √4 = 2 in frequency.\n\nWHAT TO MEMORIZE\nSprings combine oppositely to resistors and like capacitors: in SERIES the reciprocals add (1/k = Σ1/kᵢ, giving a softer result), and in PARALLEL the constants add directly. Because ω = √(k/m), every change in stiffness enters the frequency under a square root — quadrupling k only doubles ω. The same reciprocal-addition rule explains why cutting a spring in half doubles its constant: the full spring is two half-springs in series. Note that k_series is always smaller than the smallest individual constant, while k_parallel is always larger than the largest."
+      },
+
+      {
+        "question": "A sealed tank of water is open to the atmosphere at the top. Taking the density of water to be 1000 kg/m³, g = 10 m/s², and atmospheric pressure to be 1.0 × 10⁵ Pa, what is the ABSOLUTE pressure at a depth of 5.0 m below the surface?",
+        "choices": [
+          "5.0 × 10⁴ Pa",
+          "7.5 × 10⁴ Pa",
+          "1.0 × 10⁵ Pa",
+          "1.5 × 10⁵ Pa",
+          "2.0 × 10⁵ Pa"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nHydrostatic pressure increases linearly with depth:\nP = P₀ + ρgh,\nwhere P₀ is the pressure at the surface — here atmospheric, since the tank is open at the top.\nThe contribution from the water column is\nρgh = (1000)(10)(5.0) = 5.0 × 10⁴ Pa.\nAdding atmospheric pressure gives the ABSOLUTE pressure:\nP = 1.0 × 10⁵ + 5.0 × 10⁴ = 1.5 × 10⁵ Pa.\n\nNUMERICS WITHOUT A CALCULATOR\nThe water column contributes 1000 × 10 × 5 = 50,000 Pa, which is half an atmosphere — a fact worth carrying: roughly every 10 m of water adds one atmosphere, so 5 m adds half of one.\nThe distractor 5.0 × 10⁴ Pa is the GAUGE pressure — the excess over atmospheric — which is what a pressure gauge reads, and is the right answer to a different question. Distinguishing absolute from gauge pressure is exactly what this problem tests, and the wording \"absolute\" is the signal. The distractor 1.0 × 10⁵ Pa forgets the water entirely; 2.0 × 10⁵ Pa double-counts the atmosphere.\nUseful anchor: at 10 m depth the absolute pressure is 2 atm, at 20 m it is 3 atm, and so on — which is why scuba divers must exhale while ascending, since the air in their lungs expands as the pressure falls.\n\n90-SECOND SOLUTION\nρgh = (1000)(10)(5) = 0.5 × 10⁵ Pa; adding 1.0 × 10⁵ Pa of atmosphere gives 1.5 × 10⁵ Pa.\n\nWHAT TO MEMORIZE\nHydrostatic pressure is P = P₀ + ρgh, where h is depth below the free surface — it depends only on depth, never on the shape or total volume of the container (the hydrostatic paradox). Absolute pressure includes atmospheric; gauge pressure is the difference from atmospheric, so P_abs = P_gauge + P_atm. Ten metres of water is very nearly one atmosphere, and one atmosphere is also about 760 mm of mercury, since mercury is 13.6 times denser. Pascal's principle — that pressure applied to an enclosed fluid is transmitted undiminished — follows from the same relation and underlies hydraulic lifts."
+      },
+
+      {
+        "question": "A ball is dropped from rest at a height of 2.0 m onto a hard floor and rebounds to a height of 0.50 m. Assuming the coefficient of restitution is the same at every bounce, to what height does the ball rise after the SECOND bounce?",
+        "choices": [
+          "0.031 m",
+          "0.063 m",
+          "0.125 m",
+          "0.25 m",
+          "0.35 m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe coefficient of restitution e is the ratio of rebound speed to impact speed. Since drop and rise heights go as the square of the speed (h = v²/2g), the height ratio per bounce is e²:\nh₁/h₀ = e² = 0.50/2.0 = 0.25.\nEach bounce multiplies the height by the SAME factor 0.25. So after the second bounce:\nh₂ = h₁ × 0.25 = 0.50 × 0.25 = 0.125 m.\nEquivalently, h_n = h₀e^(2n) = 2.0(0.25)² = 2.0 × 0.0625 = 0.125 m.\n\nNUMERICS WITHOUT A CALCULATOR\nRecognizing that the height ratio is constant does all the work: 2.0 → 0.50 → 0.125, each step dividing by 4. No square roots are needed at all, because the question asks about heights throughout and the height ratio per bounce is simply e² = 1/4.\n(For reference, e itself is √0.25 = 0.50, but computing it is an unnecessary detour here.)\nThe distractor 0.25 m divides by 2 instead of 4 — using e rather than e² as the height ratio, the central error this question probes. The distractor 0.031 m applies a third bounce, and 0.063 m is 2.0 × e⁴ misread as h₀e⁴ with the wrong starting point.\nStructural check: the heights form a geometric sequence, so the ratio between successive heights must be identical: 0.50/2.0 must equal h₂/0.50, which forces h₂ = 0.125 immediately.\n\n90-SECOND SOLUTION\nEach bounce multiplies the height by e² = 0.5/2.0 = 1/4, so h₂ = 0.50/4 = 0.125 m.\n\nWHAT TO MEMORIZE\nThe coefficient of restitution e = (relative separation speed)/(relative approach speed) runs from 1 for a perfectly elastic collision to 0 for a perfectly inelastic one. For a ball bouncing on a fixed floor, speeds scale by e and HEIGHTS by e² each bounce, giving h_n = h₀e^(2n) — a geometric decay. The fraction of kinetic energy retained per bounce is e². Note that the total TIME for infinitely many bounces is finite (the times form a convergent geometric series), which is why a bouncing ball comes to rest in a finite time despite bouncing infinitely often in principle."
+      },
+
+      {
+        "question": "A ball is released from rest at height h above a horizontal floor and bounces elastically off a stationary block of mass 3m resting on a frictionless surface, where m is the ball's mass. To what height does the ball rebound?",
+        "choices": [
+          "h/16",
+          "h/9",
+          "h/8",
+          "h/4",
+          "h/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a one-dimensional elastic collision with a target initially at rest, the incoming object's final velocity is\nv₁' = v(m₁ − m₂)/(m₁ + m₂).\nWith m₁ = m and m₂ = 3m:\nv₁' = v(m − 3m)/(m + 3m) = v(−2m)/(4m) = −v/2.\nThe ball rebounds at HALF its incoming speed (the minus sign meaning reversed direction).\nSince the rebound height goes as the square of the speed (h = v²/2g):\nh'/h = (v'/v)² = (1/2)² = 1/4,\nso the ball rises to h/4.\n\nNUMERICS WITHOUT A CALCULATOR\nThe mass ratio does all the work: (1−3)/(1+3) = −1/2, and squaring gives 1/4. No decimals appear anywhere.\nThe trap is answering h/2 — carrying the speed ratio directly to the height without squaring. That is the most common error on this problem, and it is offered as a choice. The choice h/16 squares twice; h/9 uses the ratio (1−3)/3 or similar; and h means the ball bounced off an immovable wall, which is the m₂ → ∞ limit rather than this one.\nNote the ball reverses direction because the target is HEAVIER. Against a lighter target it would continue forward, and against an equal mass it would stop dead.\n\n90-SECOND SOLUTION\nv' = v(m − 3m)/(4m) = −v/2, and height goes as v², so h' = h/4.\n\nWHAT TO MEMORIZE\nThe elastic 1D collision formulas with a stationary target are worth having cold: v₁' = v(m₁ − m₂)/(m₁ + m₂) and v₂' = 2m₁v/(m₁ + m₂). Three limits check them: equal masses give a complete exchange of velocity (v₁' = 0); a very heavy target gives a perfect bounce-back (v₁' = −v); a very light target leaves the projectile nearly unaffected while the target flies off at 2v. Since height and energy both scale as v², always square the velocity ratio before reading off a height. The same formulas describe neutron moderation, which is why hydrogen — nearly equal in mass to a neutron — is the most effective moderator."
+      },
+
+      {
+        "question": "A star of mass M is in a circular orbit under gravity, and its gravitational potential energy is −100 J relative to infinity. What is its total mechanical energy?",
+        "choices": [
+          "−200 J",
+          "−100 J",
+          "−75 J",
+          "−50 J",
+          "0 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a circular orbit, the gravitational attraction supplies the centripetal force:\nGMm/r² = mv²/r → mv² = GMm/r.\nThe kinetic energy is therefore\nKE = ½mv² = ½(GMm/r) = ½|U|,\nsince U = −GMm/r. Numerically, with U = −100 J, KE = +50 J.\nThe total energy is\nE = KE + U = 50 − 100 = −50 J.\n\nNUMERICS WITHOUT A CALCULATOR\nThe relation E = U/2 = −KE for a circular gravitational orbit turns the whole problem into halving 100.\nThe distractor 0 J confuses this with the ESCAPE condition, where kinetic energy exactly cancels potential energy — a marginally unbound parabolic trajectory, not a circular orbit. The distractor −100 J forgets the kinetic energy entirely. The positive choices are impossible on their face: any bound orbit must have E < 0, since E ≥ 0 means the object can reach infinity.\nThat sign requirement alone eliminates three of five choices before any calculation.\n\n90-SECOND SOLUTION\nCircular orbit: KE = |U|/2 = 50 J, so E = 50 − 100 = −50 J = U/2.\n\nWHAT TO MEMORIZE\nThis is the virial theorem for an inverse-square force: 2⟨KE⟩ = −⟨U⟩, so E = ⟨U⟩/2 = −⟨KE⟩. It holds not only for circular orbits but as a TIME AVERAGE over any bound orbit, and over any gravitationally bound system — which is how astronomers weigh galaxy clusters from the velocity dispersion of their members, the measurement that first revealed dark matter. For a general power-law potential U ∝ rⁿ the theorem reads 2⟨KE⟩ = n⟨U⟩, so a harmonic oscillator (n = 2) has ⟨KE⟩ = ⟨U⟩ = E/2, splitting its energy evenly. A counterintuitive consequence for orbits: removing energy from a satellite makes it speed UP, since a smaller orbit has larger kinetic energy despite lower total energy."
+      },
+
+      {
+        "question": "An object falling through a fluid experiences a drag force proportional to its speed, and reaches a terminal speed of 20 m/s. Taking g = 10 m/s², what is its speed 2.0 seconds after being released from rest?",
+        "choices": [
+          "12.6 m/s",
+          "15.0 m/s",
+          "17.3 m/s",
+          "20.0 m/s",
+          "25.0 m/s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWith linear drag the equation of motion is\nm dv/dt = mg − bv,\nwhose solution starting from rest is\nv(t) = v_t(1 − e^(−t/τ)), with v_t = mg/b and τ = m/b.\nThe time constant is related to the terminal speed by\nτ = m/b = (mg/b)/g = v_t/g = 20/10 = 2.0 s.\nSo at t = 2.0 s we are at exactly one time constant:\nv = 20(1 − e⁻¹) = 20(1 − 0.368) = 20(0.632) = 12.6 m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nThe elegant step is τ = v_t/g, which converts the terminal speed straight into a time constant without ever knowing m or b separately. Here that gives exactly 2.0 s, so the elapsed time is precisely one τ.\nThen the single number needed is 1 − 1/e ≈ 0.632 — worth memorizing, since it is the same 63% that appears in every RC charging curve. 63% of 20 is 12.6.\nThe distractor 20.0 m/s assumes terminal speed has already been reached, which strictly never happens in finite time — the exponential only approaches it. The distractor 17.3 m/s corresponds to about 86% of terminal speed, the value at TWO time constants, from miscounting τ. And 15.0 m/s is roughly what you get by naively averaging the initial and terminal speeds, ignoring the exponential shape of the approach.\n\n90-SECOND SOLUTION\nτ = v_t/g = 2.0 s, so t = 2.0 s is exactly one time constant: v = 20(1 − 1/e) = 0.632 × 20 = 12.6 m/s.\n\nWHAT TO MEMORIZE\nFor linear drag, v(t) = v_t(1 − e^(−t/τ)) with τ = v_t/g, so the object reaches 63% of terminal speed in one time constant, 86% in two, and 95% in three. The relation τ = v_t/g is the shortcut worth carrying — it needs no knowledge of the drag coefficient. For QUADRATIC drag (the high-Reynolds-number case appropriate to a skydiver) the terminal speed is v_t = √(mg/b) instead, and the approach follows a hyperbolic tangent rather than an exponential. In both cases the terminal speed is set by balancing weight against drag, which is why a heavier object of the same shape always falls faster."
+      },
+
+      {
+        "question": "A 2.0 kg mass hangs from a spring and oscillates with period T. The spring is then cut in half, and the same mass is hung from just one of the halves. What is the new period?",
+        "choices": [
+          "T/2",
+          "T/√2",
+          "T",
+          "T√2",
+          "2T"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe key physical fact: cutting a spring in half DOUBLES its force constant. To see why, note that in the full spring each half stretches by the same amount, so a given total extension x corresponds to only x/2 in each half. A half-spring reaching extension x therefore requires the force that the full spring needed at 2x — twice as stiff. Formally, springs in series obey 1/k_total = 1/k₁ + 1/k₂, so two identical halves of constant k' in series give k_full = k'/2, i.e. k' = 2k_full.\nThe period is T = 2π√(m/k), so with k doubled and m unchanged:\nT' = 2π√(m/2k) = T/√2.\n\nNUMERICS WITHOUT A CALCULATOR\nOnly the √2 matters: T' ≈ 0.71T.\nThe distractor T/2 is the answer if you (incorrectly) let the period scale as 1/k rather than 1/√k — forgetting that k sits under a square root. The distractor T√2 gets the stiffness backward, assuming a shorter spring is FLOPPIER, which is the intuition to correct: a short spring is stiffer, not softer, which is why a short length of the same wire is harder to stretch.\nSanity anchor: stiffer means faster, so the period must go DOWN. That eliminates T, T√2, and 2T at once, leaving only how far down.\n\n90-SECOND SOLUTION\nHalf a spring is twice as stiff, and T ∝ 1/√k, so T' = T/√2.\n\nWHAT TO MEMORIZE\nSpring constant scales inversely with length: halving the length doubles k, and cutting into n equal pieces makes each piece nk. Combination rules mirror those for capacitors, not resistors: springs in SERIES add reciprocally (1/k = Σ1/kᵢ, giving a softer combination), while springs in PARALLEL simply add (k = Σkᵢ). Since T = 2π√(m/k), the period responds to the square root of every change: quadrupling the mass doubles the period, and quadrupling the stiffness halves it. Note that the period of a vertical mass-spring system is unaffected by gravity — hanging the mass shifts the equilibrium point but leaves k, and therefore T, unchanged."
+      },
+
+      {
+        "question": "A block slides down a rough incline at constant velocity. The incline makes an angle of 30° with the horizontal. What is the coefficient of kinetic friction between the block and the incline?",
+        "choices": [
+          "0.58",
+          "0.87",
+          "1.0",
+          "1.7",
+          "2.0"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nConstant velocity means zero net force, so the forces along and perpendicular to the incline each balance.\nPerpendicular to the surface: N = mg cos θ.\nAlong the surface, with friction acting up the slope opposing the downhill motion:\nmg sin θ = f = μN = μmg cos θ.\nThe mass and g cancel entirely:\nμ = sin θ/cos θ = tan θ = tan 30° = 1/√3 ≈ 0.577 ≈ 0.58.\n\nNUMERICS WITHOUT A CALCULATOR\ntan 30° = 1/√3 = √3/3 ≈ 1.732/3 ≈ 0.577. Worth memorizing alongside tan 45° = 1 and tan 60° = √3 ≈ 1.73.\nThe distractor 0.87 is cos 30° = √3/2 — what you get by using a single trig function instead of the RATIO of two, and tempting because √3/2 is so familiar from the 30-60-90 triangle that it feels like an answer. The distractor 1.7 is tan 60°, from measuring the incline angle against the wrong reference; note that 30° and 60° give reciprocal tangents, so mixing them up inverts the answer.\nStructural check: μ = tan θ means the block slides at constant speed only on one particular slope. On a gentler incline it would not move at all; on a steeper one it would accelerate. A 30° incline is gentle, so μ should be well below 1 — which by itself eliminates the three largest choices.\n\n90-SECOND SOLUTION\nConstant velocity on an incline gives μ = tan θ = tan 30° ≈ 0.58.\n\nWHAT TO MEMORIZE\nThe angle of repose result: a block on the verge of sliding, or sliding at constant velocity, satisfies μ = tan θ — with μ_s for the verge of motion and μ_k for steady sliding. The mass drops out, so this is the standard way to MEASURE a coefficient of friction: tilt the surface until the block just moves, and read the angle. Both m and g cancel because friction and the driving component of gravity are each proportional to the weight. If instead the block accelerates, the equation becomes a = g(sin θ − μ cos θ), which reduces to the same condition when a = 0."
+      },
+
+      {
+        "question": "A satellite is in a geosynchronous circular orbit, with a period of 24 hours. A second satellite is in a low circular orbit with a period of 90 minutes. What is the ratio of the geosynchronous orbital radius to the low orbital radius?",
+        "choices": [
+          "2.5",
+          "4.0",
+          "6.3",
+          "16",
+          "256"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nKepler's third law for circular orbits about the same central body gives T² ∝ r³, so\nr₂/r₁ = (T₂/T₁)^(2/3).\nThe period ratio is\n24 hours/90 minutes = 1440 min/90 min = 16.\nTherefore\nr_geo/r_low = 16^(2/3).\nSince 16 = 2⁴, this is 2^(8/3) = 2^2 × 2^(2/3) = 4 × 1.587 ≈ 6.35 ≈ 6.3.\n\nNUMERICS WITHOUT A CALCULATOR\nThe period ratio is clean: 1440/90 = 16, since 90 × 16 = 1440.\nFor 16^(2/3), work in powers of 2: 16 = 2⁴, so 16^(2/3) = 2^(8/3). Split off the integer part: 2^(8/3) = 2² · 2^(2/3) = 4 · ∛4. Since ∛4 ≈ 1.59 (because 1.6³ = 4.1), the result is about 4 × 1.59 ≈ 6.3.\nAlternatively bracket it: 6³ = 216 and 6.5³ ≈ 275, while 16² = 256 — so the cube root of 256 sits just above 6.3.\nThe distractor 4.0 is 16^(1/2), using the wrong exponent; 2.5 is 16^(1/3); 256 is 16²; and 16 is the period ratio itself, unconverted.\nSanity check against reality: geosynchronous orbit sits at about 6.6 Earth radii, and low Earth orbit is barely above 1 Earth radius — a ratio near 6, matching.\n\n90-SECOND SOLUTION\nT ratio = 1440/90 = 16, and r ∝ T^(2/3), so the radius ratio is 16^(2/3) = 4∛4 ≈ 6.3.\n\nWHAT TO MEMORIZE\nKepler's third law T² ∝ r³ inverts to r ∝ T^(2/3), and fractional powers are best handled by factoring the base into powers of 2 or 10. Geosynchronous orbit is worth knowing as a fact: radius about 6.6 Earth radii, or roughly 36,000 km altitude, which is where a satellite's 24-hour period matches Earth's rotation so it hovers over one longitude. Low Earth orbit has a period near 90 minutes because it is essentially at the Earth's own radius. The same scaling explains why the outer planets take so much longer to orbit: Neptune, at 30 AU, has a period of 30^(3/2) ≈ 164 years."
+      },
+
+      {
+        "question": "A car traveling at 20 m/s brakes so that its wheels lock and it skids to a stop. The coefficient of kinetic friction between tires and road is 0.50. Taking g = 10 m/s², what is the skidding distance?",
+        "choices": [
+          "20 m",
+          "40 m",
+          "80 m",
+          "200 m",
+          "400 m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe only horizontal force is kinetic friction, so the deceleration is\na = f/m = μmg/m = μg = (0.50)(10) = 5.0 m/s².\nThe mass cancels — a heavy truck and a light car skid the same distance from the same speed.\nUsing v² = v₀² − 2ad with v = 0:\nd = v₀²/(2a) = (20)²/(2 × 5.0) = 400/10 = 40 m.\nEquivalently by energy: the kinetic energy ½mv₀² is dissipated by friction over distance d, so ½mv₀² = μmgd, giving d = v₀²/(2μg).\n\nNUMERICS WITHOUT A CALCULATOR\nTwo easy steps: μg = 5, and 400/10 = 40.\nThe distractor 80 m doubles the answer by omitting the factor of 2 in v² = 2ad — the most common algebraic slip here. The distractor 20 m uses v₀/(2a) or forgets to square the speed; 200 m divides by μg without the 2.\nThe relation worth internalizing is that stopping distance scales as the SQUARE of the speed: doubling the speed quadruples the distance. A car at 40 m/s under identical conditions would need 160 m, not 80 m — which is the single most important practical consequence of this formula, and why highway speed has such an outsized effect on collision risk.\n\n90-SECOND SOLUTION\na = μg = 5.0 m/s², and d = v₀²/2a = 400/10 = 40 m.\n\nWHAT TO MEMORIZE\nSkidding distance is d = v₀²/(2μg) — independent of mass, and quadratic in speed. The mass cancels because both the friction force and the kinetic energy scale with it. Note that this describes LOCKED wheels sliding, governed by μ_k; a car braking at the threshold of slipping uses static friction, which is generally larger, so it stops in a shorter distance — the reason antilock brakes exist. The same v²/(2μg) expression appears whenever friction dissipates kinetic energy over a distance, and its energy derivation (½mv² = μmgd) is usually faster than the kinematics."
+      },
+
+      {
+        "question": "A 2.0 kg object initially at rest on a frictionless surface is struck by a force that rises linearly from zero to 40 N and falls linearly back to zero, over a total time of 0.30 s. What is the object's final speed?",
+        "choices": [
+          "1.5 m/s",
+          "3.0 m/s",
+          "6.0 m/s",
+          "12 m/s",
+          "24 m/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe impulse delivered by a time-varying force is the AREA under the force-versus-time curve:\nJ = ∫F dt.\nThe described force rises linearly to a peak and falls linearly back to zero, so the graph is a triangle of base 0.30 s and height 40 N:\nJ = ½(base)(height) = ½(0.30)(40) = 6.0 N·s.\nBy the impulse-momentum theorem, and since the object starts from rest:\nJ = Δp = mv → v = J/m = 6.0/2.0 = 3.0 m/s.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo easy steps: ½(0.30)(40) = 6, then 6/2 = 3.\nThe distractor 6.0 m/s treats the pulse as RECTANGULAR — using F_peak × Δt = 40 × 0.30 = 12 N·s and dividing by 2 — which is the error of forgetting the ½ for a triangle. That factor of two is the entire point of the question: a triangular pulse of the same peak and duration delivers half the impulse of a rectangular one.\nThe distractor 12 m/s skips the mass division; 1.5 m/s halves twice.\nUseful reframing: the AVERAGE force over the 0.30 s is 20 N (half the peak, for a symmetric triangle), and 20 N for 0.30 s gives 6 N·s directly.\n\n90-SECOND SOLUTION\nTriangular pulse: J = ½(40)(0.30) = 6.0 N·s, so v = J/m = 3.0 m/s.\n\nWHAT TO MEMORIZE\nImpulse J = ∫F dt = Δp is the area under the force-time graph, whatever the shape — so read graphs geometrically rather than looking for a formula: a triangle contributes ½bh, a rectangle bh, a trapezoid the average of the parallel sides times the width. The equivalent statement is that the average force times the duration equals the impulse. This is why airbags and crumple zones work: for a fixed momentum change, stretching the collision time reduces the peak force proportionally. Note that impulse is a VECTOR, so a force that reverses direction contributes negative area."
+      },
+
+      {
+        "question": "A uniform disk of mass 4.0 kg spins freely about a fixed vertical axis through its center with angular speed ω₀. A 1.0 kg lump of putty is dropped gently onto the disk and sticks at the rim. What is the new angular speed?",
+        "choices": [
+          "ω₀/4",
+          "ω₀/3",
+          "ω₀/2",
+          "2ω₀/3",
+          "3ω₀/4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nNo external torque acts about the vertical axis (gravity and the axle exert none), so angular momentum about that axis is conserved. Note that the putty is dropped GENTLY — it arrives with no angular momentum of its own.\nInitial: I₀ω₀ with I₀ = ½MR² = ½(4.0)R² = 2.0R².\nFinal: the putty is a point mass at the rim, contributing mR² = 1.0R², so\nI_f = 2.0R² + 1.0R² = 3.0R².\nConservation gives\n(2.0R²)ω₀ = (3.0R²)ω → ω = (2/3)ω₀.\n\nNUMERICS WITHOUT A CALCULATOR\nThe ratio is all that survives: I₀/I_f = 2/3, since R² cancels everywhere.\nThe step most often mishandled is the factor of ½: a solid disk has I = ½MR², so a 4 kg disk contributes only 2R², whereas the 1 kg putty sits entirely at the rim and contributes a full 1R². Despite being a quarter of the disk's mass, the putty adds half again as much rotational inertia — because rim mass counts far more heavily than distributed mass.\nThe distractor 4/5 comes from omitting the ½ and using I₀ = 4R², giving 4/5. The distractor ω₀/2 halves things by reflex.\nEnergy check: the final kinetic energy is (2/3) of the initial, so a third of the energy was lost to the inelastic sticking — expected, and a good confirmation that this must be treated with angular momentum rather than energy conservation.\n\n90-SECOND SOLUTION\nI₀ = ½(4)R² = 2R²; adding rim putty gives 3R². So ω = (2/3)ω₀.\n\nWHAT TO MEMORIZE\nAngular momentum L = Iω is conserved whenever no external torque acts about the axis, and it is the right tool for any \"something sticks to a rotating body\" problem — kinetic energy is NOT conserved there, since the sticking is inelastic. Keep the standard moments straight: solid disk or cylinder ½MR², hoop or point mass at radius R gives MR², solid sphere (2/5)MR², rod about its center ML²/12 and about its end ML²/3. The factor of ½ for a disk is the most frequently dropped one. This is also the physics of the spinning skater: pulling the arms in reduces I and raises ω, and the skater's muscles do the work that raises the kinetic energy."
+      },
+
+      {
+        "question": "Two identical masses moving with equal and opposite velocities collide head-on and stick together. Which of the following is true immediately after the collision?",
+        "choices": [
+          "The kinetic energy is unchanged, and the momentum is zero",
+          "Both the momentum and the kinetic energy are unchanged",
+          "The momentum is reversed, and half of the kinetic energy remains",
+          "Neither the momentum nor the kinetic energy is conserved, since the collision is inelastic",
+          "The momentum is unchanged, and all of the kinetic energy has been converted to other forms"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTake the masses as m each, with velocities +v and −v.\nMomentum before: mv + m(−v) = 0. Momentum is conserved in every collision, so the momentum after is also 0 — meaning the combined 2m mass is at REST.\nKinetic energy before: ½mv² + ½mv² = mv².\nKinetic energy after: the combined object is stationary, so its kinetic energy is exactly ZERO.\nSo the momentum is unchanged (it was zero and remains zero), while 100% of the kinetic energy has been converted into deformation, heat, and sound.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the reasoning is what is being tested, and the trap is subtle. Choice E is the one most students are drawn to, because \"inelastic\" is so strongly associated with \"energy not conserved\" that momentum gets swept along with it. But momentum is conserved in EVERY collision without external forces, elastic or not; the elastic/inelastic distinction concerns kinetic energy alone.\nThis particular setup is the extreme case: because the total momentum happens to be zero, the final state is forced to be at rest, so the maximum possible fraction of kinetic energy — all of it — is lost. In any other frame the same collision loses less, since the combined mass must keep moving to carry the nonzero momentum.\nChoice A inverts the situation, and choice D imagines a reversal that momentum conservation forbids.\n\n90-SECOND SOLUTION\nTotal momentum is zero before, so it is zero after and the combined mass is at rest — meaning all of the kinetic energy is gone. Momentum conserved, energy not.\n\nWHAT TO MEMORIZE\nMomentum is conserved in every collision with no net external force; kinetic energy is conserved only in ELASTIC collisions. In a perfectly inelastic collision the objects move together afterward, and the energy lost is the maximum consistent with momentum conservation — which becomes 100% precisely when the total momentum is zero, the center-of-mass frame. In general, the fraction of kinetic energy retained in a perfectly inelastic collision with a stationary target is m₁/(m₁+m₂). The center-of-mass frame is the natural place to analyze any collision: in it the total momentum vanishes, and the surviving kinetic energy after a perfectly inelastic collision is always exactly zero."
+      },
+
+      {
+        "question": "A particle moves along a circular track of radius 4.0 m. At a certain instant its speed is 4.0 m/s and its speed is increasing at a rate of 3.0 m/s². What is the magnitude of its total acceleration at that instant?",
+        "choices": [
+          "3.0 m/s²",
+          "4.0 m/s²",
+          "5.0 m/s²",
+          "7.0 m/s²",
+          "12 m/s²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIn non-uniform circular motion the acceleration has two perpendicular components.\nThe CENTRIPETAL component points toward the center and has magnitude\na_c = v²/r = (4.0)²/4.0 = 16/4.0 = 4.0 m/s².\nThe TANGENTIAL component points along the direction of motion and equals the rate of change of speed:\na_t = dv/dt = 3.0 m/s².\nBecause these two are perpendicular, the total magnitude is the Pythagorean sum:\na = √(a_c² + a_t²) = √(4.0² + 3.0²) = √(16 + 9) = √25 = 5.0 m/s².\n\nNUMERICS WITHOUT A CALCULATOR\nThe numbers are chosen so the components form a 3-4-5 right triangle — no square roots to estimate.\nThe distractor 7.0 m/s² adds the components arithmetically (4 + 3), which would only be right if they pointed the same way; they are perpendicular by construction, since one points toward the center and the other along the tangent. The distractor 3.0 m/s² reports only the tangential part, treating \"the rate at which speed increases\" as the whole acceleration — the conceptual error the question targets. The distractor 4.0 m/s² reports only the centripetal part.\nThe essential point: an object can be speeding up AND turning at once, and those are independent contributions to acceleration.\n\n90-SECOND SOLUTION\na_c = v²/r = 4.0 m/s², a_t = 3.0 m/s², perpendicular, so a = √(16+9) = 5.0 m/s².\n\nWHAT TO MEMORIZE\nIn general circular motion, a_c = v²/r = ω²r points toward the center and changes the DIRECTION of the velocity, while a_t = dv/dt = αr points along the motion and changes its MAGNITUDE. They are always perpendicular, so the total is √(a_c² + a_t²). Uniform circular motion is the special case a_t = 0, where the acceleration is purely centripetal despite the constant speed — a standard source of confusion, since \"constant speed\" does not mean \"no acceleration.\" At the top of a vertical loop or the start of a swing, checking which component is present usually settles the problem quickly."
+      }
+
+    ]
+  },
+
 
   {
     "name": "Circuits Test 1",
     "added": "2026-08-25",
-    "category": "topic",
+    "category": "circuits",
     "cards": [
 
       {
@@ -4952,7 +5226,7 @@ const EXAMS = [
   {
     "name": "Circuits Test 2",
     "added": "2026-08-26",
-    "category": "topic",
+    "category": "circuits",
     "cards": [
 
       {
@@ -5228,6 +5502,544 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Lab Methods Test (Hard)",
+    "added": "2026-08-29",
+    "category": "lab",
+    "cards": [
+
+      {
+        "question": "Two independent measurements of the same mass give 24.0 ± 2.0 g and 26.0 ± 4.0 g. What is the uncertainty in the best combined estimate?",
+        "choices": [
+          "1.8 g",
+          "2.0 g",
+          "2.2 g",
+          "3.0 g",
+          "4.5 g"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIndependent measurements are combined by INVERSE-VARIANCE weighting: the more precise measurement counts more heavily. The combined uncertainty satisfies\n1/σ² = 1/σ₁² + 1/σ₂² = 1/4 + 1/16 = 5/16.\nσ = √(16/5) = 4/√5 ≈ 1.79 ≈ 1.8 g.\n\nNUMERICS WITHOUT A CALCULATOR\nWork with the variances (the squares), never the uncertainties directly: 2.0² = 4 and 4.0² = 16. Their reciprocals are 1/4 and 1/16, summing to 5/16, and inverting gives σ² = 16/5 = 3.2, so σ = √3.2 ≈ 1.8.\nThe key structural check: the combined uncertainty must be SMALLER than the better of the two individual ones (1.8 < 2.0). Adding data can never make you less certain, so any answer at or above 2.0 g is wrong on inspection — which eliminates four of the five choices immediately.\n\n90-SECOND SOLUTION\n1/σ² = 1/4 + 1/16 = 5/16, so σ = 4/√5 ≈ 1.8 g — necessarily below the better measurement's 2.0 g.\n\nWHAT TO MEMORIZE\nCombining independent measurements uses inverse-variance weighting: 1/σ² = Σ1/σᵢ², with each value weighted by 1/σᵢ². The result is always more precise than the best single measurement. For N identical measurements this collapses to the familiar σ/√N. Note the central values (24.0 and 26.0) are irrelevant to the UNCERTAINTY — they set the weighted mean, not its spread."
+      },
+
+      {
+        "question": "A long-lived radioactive source produces counts at an average rate of 5.0 per second. For how long must you count in order to determine the rate with a relative (fractional) uncertainty of 2.0%?",
+        "choices": [
+          "20 s",
+          "100 s",
+          "250 s",
+          "500 s",
+          "2500 s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nRadioactive counting obeys Poisson statistics, for which the standard deviation of a total count N is σ = √N. The RELATIVE uncertainty is therefore\nσ/N = √N/N = 1/√N.\nSetting this equal to 0.020:\n1/√N = 0.020 → √N = 50 → N = 2500 counts.\nAt 5.0 counts per second, accumulating 2500 counts takes\nt = 2500/5.0 = 500 s.\n\nNUMERICS WITHOUT A CALCULATOR\nInvert the percentage first: 1/0.02 = 50, and squaring gives N = 2500 counts. Then divide by the rate. Both steps are exact.\nThe trap 2500 s is the required number of COUNTS mistaken for a time — the most common slip, since the two numbers appear in the same calculation.\n\n90-SECOND SOLUTION\nRelative error 1/√N = 0.02 gives N = 2500 counts; at 5/s that is 500 s.\n\nWHAT TO MEMORIZE\nFor Poisson counting, σ = √N and the fractional uncertainty is 1/√N. Because precision improves only as the square root, halving the uncertainty requires FOUR times the counts and four times the counting time — the fundamental economics of every counting experiment. Useful anchors: 1% precision needs 10,000 counts, 2% needs 2,500, 10% needs 100."
+      },
+
+      {
+        "question": "A quantity is computed as R = AB³/C. The measured relative uncertainties are 1.0% in A, 2.0% in B, and 3.0% in C. What is the approximate relative uncertainty in R?",
+        "choices": [
+          "3.7%",
+          "5.2%",
+          "6.8%",
+          "10%",
+          "12%"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a product or quotient of powers, the relative uncertainties add IN QUADRATURE, each weighted by the absolute value of its exponent:\n(σ_R/R)² = (1·σ_A/A)² + (3·σ_B/B)² + (1·σ_C/C)².\nThe exponent 3 on B multiplies its contribution BEFORE squaring:\n= (1.0)² + (3 × 2.0)² + (3.0)² = 1 + 36 + 9 = 46.\nσ_R/R = √46 ≈ 6.8%.\n\nNUMERICS WITHOUT A CALCULATOR\nThe dominant term is the one with the exponent: 3 × 2% = 6%, which squares to 36 and swamps the other two (1 and 9). Since √46 sits between √36 = 6 and √49 = 7, and much nearer 7, the answer is about 6.8%.\nThe trap 12% comes from adding linearly (1 + 6 + 3 + 2 as if in quadrature is ignored); 3.7% comes from forgetting to apply the exponent to B.\n\n90-SECOND SOLUTION\nWeight by exponents, then add in quadrature: √(1² + 6² + 3²) = √46 ≈ 6.8%.\n\nWHAT TO MEMORIZE\nFor R = A^a B^b C^c, the relative uncertainties combine as (σ_R/R)² = Σ(n·σₙ/xₙ)², with each exponent multiplying its term. Powers therefore amplify uncertainty dramatically — a quantity entering cubed contributes nine times as much variance as one entering linearly, which is why the most sensitive measurement in an experiment is usually the one with the highest power. For SUMS and differences, the ABSOLUTE uncertainties add in quadrature instead."
+      },
+
+      {
+        "question": "A 10 cm gas cell is placed in one arm of a Michelson interferometer illuminated at 600 nm. As the cell is slowly evacuated, 60 fringes are counted passing a fixed point. What is the refractive index of the gas?",
+        "choices": [
+          "1.00003",
+          "1.00006",
+          "1.00009",
+          "1.00012",
+          "1.00018"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nLight traverses the cell TWICE (out and back along that arm), so the change in optical path when the gas of index n is replaced by vacuum is\nΔ = 2L(n − 1).\nEach fringe corresponds to one wavelength of path change, so\nNλ = 2L(n − 1) → n − 1 = Nλ/(2L).\nn − 1 = (60)(600 × 10⁻⁹)/(2 × 0.10) = (3.6 × 10⁻⁵)/(0.20) = 1.8 × 10⁻⁴.\nn = 1.00018.\n\nNUMERICS WITHOUT A CALCULATOR\nNumerator: 60 × 6 × 10⁻⁷ = 3.6 × 10⁻⁵. Denominator: 0.20. Dividing multiplies by 5: 1.8 × 10⁻⁴.\nThe trap 1.00036 (double) comes from omitting the factor of 2 for the round trip; 1.00006 comes from using λ/L without it.\n\n90-SECOND SOLUTION\nn − 1 = Nλ/2L = (60)(600 nm)/(0.20 m) = 1.8 × 10⁻⁴, so n = 1.00018.\n\nWHAT TO MEMORIZE\nIn a Michelson interferometer the light double-passes each arm, so moving a mirror by d shifts 2d/λ fringes, and inserting or removing a medium of index n over length L shifts 2L(n − 1)/λ fringes. Only the EXCESS index (n − 1) matters, since the medium displaces vacuum that was already contributing path. This is the standard laboratory method for measuring gas indices, which differ from 1 by only about 10⁻⁴ — far too little to detect by refraction, but hundreds of fringes' worth of interference."
+      },
+
+      {
+        "question": "The gain of an amplifier is plotted against frequency on log-log axes. Above the corner frequency the curve is a straight line that falls by three decades of gain for every one decade of frequency. What is the functional form of the gain in that region?",
+        "choices": [
+          "G ∝ log f",
+          "G ∝ f⁻¹",
+          "G ∝ f⁻²",
+          "G ∝ f⁻³",
+          "G ∝ e^(−f)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nOn log-log axes a power law G = Kf^p appears as a straight line, because taking logarithms gives\nlog G = log K + p log f.\nThe SLOPE of that line is exactly the exponent p. A fall of three decades in G per one decade in f means\nslope = −3/1 = −3, so G ∝ f⁻³.\nAn exponential would NOT be straight on log-log axes — it is straight on semi-log axes instead. A logarithm would not be straight on either.\n\n90-SECOND SOLUTION\nOn log-log axes the slope IS the power. Three decades down per decade across gives slope −3, so G ∝ f⁻³.\n\nWHAT TO MEMORIZE\nReading exponents off log-log plots is a core laboratory skill: a straight line on LOG-LOG axes means a POWER law with the exponent equal to the slope, while a straight line on SEMI-LOG axes means an EXPONENTIAL. This is how experimentalists identify functional relationships from data without fitting. In amplifier work the same slope is quoted in decibels: a factor of 10 in amplitude is 20 dB, so a slope of −3 corresponds to −60 dB per decade."
+      },
+
+      {
+        "question": "A small detector of face area 12 cm² is placed 1.0 m from an isotropic point source of radiation. Ignoring absorption in the air and assuming the detector registers every particle striking its face, what fraction of the emitted particles does it detect?",
+        "choices": [
+          "1.0 × 10⁻⁵",
+          "1.0 × 10⁻⁴",
+          "1.2 × 10⁻³",
+          "1.2 × 10⁻²",
+          "9.5 × 10⁻²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAn isotropic source spreads its output uniformly over a sphere of radius equal to the source-detector distance. The detected fraction is simply the ratio of the detector's face area to that whole sphere's area:\nfraction = A/(4πd²) = (12 × 10⁻⁴ m²)/(4π(1.0)²).\nDenominator: 4π ≈ 12.6.\nfraction = (1.2 × 10⁻³)/(12.6) ≈ 9.5 × 10⁻⁵ ≈ 1.0 × 10⁻⁴.\n\nNUMERICS WITHOUT A CALCULATOR\nConvert the area first: 12 cm² = 12 × 10⁻⁴ m² = 1.2 × 10⁻³ m². Since 4π ≈ 12.6 and the numerator's mantissa is 1.2, the ratio is close to 1.2/12.6 ≈ 0.095, giving ≈ 10⁻⁴.\nThe trap 1.2 × 10⁻³ is the area in square meters — the numerator alone, with the 4πd² denominator forgotten.\n\n90-SECOND SOLUTION\nSolid-angle fraction = A/4πd² = 1.2×10⁻³/12.6 ≈ 1 × 10⁻⁴.\n\nWHAT TO MEMORIZE\nFor an isotropic source, the geometric efficiency is the fraction of the full sphere the detector subtends: A/(4πd²). This falls as 1/d², which is why counting rates collapse so quickly as a source is moved away and why detectors are placed as close as practical. Total efficiency multiplies this geometric factor by the INTRINSIC efficiency (the probability a particle entering the detector is actually registered) — the problem here sets the intrinsic factor to 1 so only geometry matters."
+      },
+
+      {
+        "question": "In a counting experiment, a detector records 400 counts with the source present and 300 counts from background alone, each over the same time interval. What is the net source count and its approximate uncertainty?",
+        "choices": [
+          "100 ± 10",
+          "100 ± 17",
+          "100 ± 20",
+          "100 ± 26",
+          "100 ± 30"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe net count is the straightforward difference:\nN_net = 400 − 300 = 100.\nFor the uncertainty, note that each measurement is an independent Poisson count with σ = √N:\nσ₁ = √400 = 20, σ₂ = √300 ≈ 17.3.\nWhen quantities are SUBTRACTED, their absolute uncertainties still add in QUADRATURE (subtraction does not cancel uncertainty — it compounds it):\nσ_net = √(400 + 300) = √700 ≈ 26.\n\nNUMERICS WITHOUT A CALCULATOR\nThe variances are just the counts themselves for Poisson data, so σ_net = √(N₁ + N₂) = √700. Since 26² = 676 and 27² = 729, the answer is ≈ 26.\nThe trap 100 ± 10 treats the net count as if it were itself Poisson (√100 = 10), which is wrong: the net is a DIFFERENCE of two counts, not a count.\n\n90-SECOND SOLUTION\nNet = 100; σ = √(400 + 300) = √700 ≈ 26.\n\nWHAT TO MEMORIZE\nFor Poisson counts the variance equals the count, so uncertainties combine as σ = √(N₁ + N₂) whether you ADD or SUBTRACT the counts — the variances always add. A weak signal on a large background is therefore statistically punishing: here a net signal of 100 carries an uncertainty of 26, only a 4σ result despite 700 total counts. This is exactly why background suppression matters more than raw counting time in low-rate experiments."
+      },
+
+      {
+        "question": "A signal from a source of negligible output impedance is fed through a 10 kΩ resistor into a 100 pF capacitor to ground, with the output taken across the capacitor. Above roughly what frequency is the signal significantly attenuated?",
+        "choices": [
+          "160 Hz",
+          "1.6 kHz",
+          "16 kHz",
+          "100 kHz",
+          "160 kHz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThis is a single-pole RC low-pass filter. Its corner (−3 dB) frequency is\nf_c = 1/(2πRC).\nFirst the time constant:\nRC = (10 × 10³)(100 × 10⁻¹²) = 1.0 × 10⁻⁶ s = 1.0 μs.\nThen\nf_c = 1/(2π × 10⁻⁶) ≈ 1/(6.28 × 10⁻⁶) ≈ 1.6 × 10⁵ Hz = 160 kHz.\n\nNUMERICS WITHOUT A CALCULATOR\nMultiply the exponents first: 10⁴ × 10⁻¹⁰ = 10⁻⁶, and the mantissas 1 × 1 = 1, so RC = 1 μs exactly. Then 1/(2π μs): since 1/2π ≈ 0.159, the answer is 0.159 × 10⁶ ≈ 160 kHz.\nCarrying 1/2π ≈ 0.16 as a stored number turns every RC corner-frequency problem into one multiplication.\n\n90-SECOND SOLUTION\nRC = (10 kΩ)(100 pF) = 1.0 μs, so f_c = 1/(2πRC) ≈ 0.16/10⁻⁶ = 160 kHz.\n\nWHAT TO MEMORIZE\nA single-pole RC filter has its corner at f_c = 1/(2πRC), where the output has fallen to 1/√2 of the input in amplitude (half the power, hence −3 dB). Above the corner a low-pass rolls off as 1/f, appearing as a slope of −1 on log-log axes. Note the prefix pairing: kΩ × pF = 10³ × 10⁻¹² = 10⁻⁹, so a kΩ–pF product always lands in nanoseconds, and kΩ–nF in microseconds. This RC combination is also exactly the input circuit formed by a cable's capacitance loading a high-impedance source, which is why fast signals require low source impedance."
+      },
+
+      {
+        "question": "A fast pulse travels along a 50 Ω coaxial cable whose far end is left OPEN (unterminated). What is observed at the far end and back at the source?",
+        "choices": [
+          "The pulse is fully absorbed at the open end, and nothing returns",
+          "The pulse reflects inverted, and returns to the source with opposite polarity",
+          "The pulse is transmitted into free space as radiation, and nothing returns",
+          "The pulse reflects only if the cable length exceeds the pulse length",
+          "The pulse reflects without inversion, and returns to the source with the same polarity"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA pulse reflects from any impedance mismatch. The reflection coefficient is\nΓ = (Z_load − Z₀)/(Z_load + Z₀).\nFor an OPEN end, Z_load → ∞, giving Γ = +1: the pulse reflects COMPLETELY and WITHOUT inversion, returning with the same polarity.\nTwo contrasting cases are worth holding alongside it. For a SHORT (Z_load = 0), Γ = −1: full reflection but INVERTED. For a MATCHED load (Z_load = Z₀ = 50 Ω), Γ = 0: no reflection at all, and the pulse is fully absorbed.\nThis is the direct electrical analogue of a wave on a string reflecting from a free end (upright) versus a fixed end (inverted).\n\n90-SECOND SOLUTION\nOpen end means Γ = (∞ − Z₀)/(∞ + Z₀) = +1: total reflection, same polarity.\n\nWHAT TO MEMORIZE\nReflection coefficient Γ = (Z_L − Z₀)/(Z_L + Z₀): open end gives +1 (upright reflection), short gives −1 (inverted), and a matched load gives 0 (no reflection). This is why oscilloscope inputs offer a 50 Ω termination setting, and why fast-pulse work demands matched cables — an unterminated line sends the signal straight back to confuse the measurement. The string analogy (free end upright, fixed end inverted) makes the two signs easy to recall."
+      },
+
+      {
+        "question": "An ideal operational amplifier has its inverting input connected to a signal source through a 10 kΩ resistor and a 0.10 μF capacitor connected from the output back to the inverting input, with the non-inverting input grounded. If a square wave is applied to the input, what is the shape of the output?",
+        "choices": [
+          "A square wave of the same shape but inverted",
+          "A train of sharp spikes at each edge of the square wave",
+          "A sine wave at the same frequency",
+          "A triangle wave",
+          "A square wave with exponentially rounded corners"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIdentify the configuration first: the RESISTOR is at the input and the CAPACITOR is in the feedback path. That is the integrator.\nApply the two ideal rules. The inverting input is a virtual ground, so the input current is fixed by the resistor alone:\nI = V_in/R.\nNo current enters the op-amp, so all of it flows into the capacitor, whose voltage is the integral of the current:\nV_out = −(1/C)∫I dt = −(1/RC)∫V_in dt.\nA square wave is constant at +V for half a period, then constant at −V. Integrating a constant gives a linear ramp, so the output ramps steadily down while the input is high and steadily up while it is low. Alternating ramps of opposite slope form a TRIANGLE wave.\n\nNUMERICS WITHOUT A CALCULATOR\nNo numbers are required, but the time constant sets whether the triangle is clean: RC = (10 × 10³)(0.10 × 10⁻⁶) = 10⁻³ s = 1 ms. For a good triangle the input period should be well below RC, so that the output ramps only a small way before reversing; otherwise the amplifier drifts toward a rail.\nThe decisive move is reading which component sits where. Swapping them — capacitor at the input, resistor in the feedback — gives the DIFFERENTIATOR, whose output is −RC dV_in/dt, and differentiating a square wave produces sharp spikes at the edges. That is the offered choice B, and it is the answer to the swapped circuit, which is why it is the most tempting wrong answer here.\n\n90-SECOND SOLUTION\nResistor in, capacitor in feedback = integrator. The integral of a square wave is a triangle wave.\n\nWHAT TO MEMORIZE\nTwo op-amp circuits are worth recognizing instantly by which component sits where. Integrator: R at the input, C in feedback, V_out = −(1/RC)∫V_in dt — square in gives triangle out, and gain falls with frequency. Differentiator: C at the input, R in feedback, V_out = −RC dV_in/dt — square in gives spikes out, and gain RISES with frequency, which is why differentiators amplify noise and are used far less often in practice. Both follow from the same virtual-ground argument: the input element sets the current, and the feedback element converts that current back to a voltage. Recognizing that a triangle wave is the integral of a square wave, and a square wave the derivative of a triangle, resolves most waveform-shape questions on sight."
+      },
+
+      {
+        "question": "A 12-bit analog-to-digital converter has an input range of 0 to 10.0 V. What is the smallest voltage change it can resolve?",
+        "choices": [
+          "0.24 mV",
+          "1.2 mV",
+          "2.4 mV",
+          "4.9 mV",
+          "24 mV"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAn n-bit converter divides its full input range into 2ⁿ equal steps, so one least-significant bit corresponds to\nΔV = full range/2ⁿ = 10.0 V/2¹² = 10.0 V/4096.\nCarrying that out:\n10.0/4096 = 2.44 × 10⁻³ V = 2.4 mV.\n\nNUMERICS WITHOUT A CALCULATOR\nPowers of two in decimal are worth knowing cold: 2¹⁰ = 1024 ≈ 10³, so 2¹² = 4 × 2¹⁰ ≈ 4 × 10³ = 4000.\nThen 10 V/4000 = 2.5 × 10⁻³ V, which is 2.5 mV — within 3% of the exact 2.44 mV and unambiguously closest to the 2.4 mV choice. The whole calculation is one division by 4000.\nThe trap 4.9 mV comes from using 2¹¹ = 2048 instead of 2¹², a common off-by-one from confusing the number of STEPS (2ⁿ) with the largest COUNT (2ⁿ − 1) or from halving the range. The choice 24 mV drops a factor of ten, and 1.2 mV uses 2¹³.\n\n90-SECOND SOLUTION\n2¹² = 4096 ≈ 4000, so the step is 10 V/4000 ≈ 2.4 mV.\n\nWHAT TO MEMORIZE\nAn n-bit ADC resolves one part in 2ⁿ of its full-scale range, so resolution = FS/2ⁿ. Keep the decimal anchors handy: 2¹⁰ ≈ 10³, 2²⁰ ≈ 10⁶, so 8 bits is about one part in 256 (≈0.4%), 12 bits about one part in 4000 (≈0.02%), and 16 bits about one part in 65,000. Two separate limits then apply to any digitized measurement: this quantization step, which contributes an uncertainty of about one LSB/√12 for a uniformly distributed rounding error, and the sampling rate, which by the Nyquist criterion must exceed twice the highest frequency present or the signal will alias down to a false lower frequency. Adding one bit halves the step; doubling the input range doubles it."
+      },
+
+      {
+        "question": "An experiment yields data that fall on a straight line passing through the points (x, y) = (1.0, 3.0) and (5.0, 11.0). The relationship is believed to be y = mx + b. What are m and b?",
+        "choices": [
+          "m = 2.0, b = 1.0",
+          "m = 0.5, b = 2.5",
+          "m = 2.0, b = 3.0",
+          "m = 2.75, b = 0",
+          "m = 8.0, b = −5.0"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe slope is the ratio of the differences:\nm = (11.0 − 3.0)/(5.0 − 1.0) = 8.0/4.0 = 2.0.\nSubstituting one point back to find the intercept:\n3.0 = (2.0)(1.0) + b → b = 1.0.\nVerify with the other point: (2.0)(5.0) + 1.0 = 11.0 ✓.\n\nNUMERICS WITHOUT A CALCULATOR\nRise over run: 8/4 = 2. Then the intercept follows from y − mx at either point.\nThe trap m = 2.75 comes from computing y/x at the second point (11/4 is not even that, but 11/5 ≈ 2.2) — that is, treating the line as though it passed through the origin. The intercept b = 0 is only valid if the data actually pass through (0,0), which these do not.\n\n90-SECOND SOLUTION\nm = Δy/Δx = 8/4 = 2.0; then b = 3.0 − 2.0(1.0) = 1.0.\n\nWHAT TO MEMORIZE\nSlope is always Δy/Δx between two well-separated points, and the intercept follows by substitution — never read the slope as y/x at a single point unless you know the line passes through the origin. In practice, choose the two points FARTHEST apart to minimize the effect of reading error, since the slope uncertainty scales as 1/Δx. When a physical law predicts a straight line, the usual experimental strategy is to plot the combination of variables that linearizes it, so that the slope and intercept directly yield the physical constants."
+      },
+
+      {
+        "question": "A dual-trace oscilloscope is switched to X-Y mode. A sine wave of frequency 600 Hz drives the horizontal axis, and a second sine wave of unknown frequency drives the vertical axis. The resulting stationary Lissajous figure is tangent to the top edge of the enclosing rectangle at 2 points and tangent to the right edge at 3 points. What is the unknown frequency?",
+        "choices": [
+          "400 Hz",
+          "600 Hz",
+          "900 Hz",
+          "1200 Hz",
+          "1800 Hz"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a stationary Lissajous figure the frequency ratio equals the ratio of tangency counts on the two edges, with the tangencies on the edge PERPENDICULAR to an axis counting that axis's frequency. Precisely:\n(number of tangencies on the top/bottom edge) / (number on the left/right edge) = f_horizontal / f_vertical.\nThe top edge is where the vertical coordinate reaches its extremes, so the trace touches it once per cycle of the vertical signal — but the figure is traced out over the least common period, and the count on the TOP edge is set by how many horizontal cycles occur, not vertical ones.\nThe reliable way to state it: the curve touches the top edge n_top times and the right edge n_right times, and\nf_x / f_y = n_top / n_right... which inverts to f_y/f_x = n_right/n_top.\nHere n_top = 2 and n_right = 3, so\nf_y / f_x = 3/2, giving f_y = (3/2)(600 Hz) = 900 Hz.\n\nNUMERICS WITHOUT A CALCULATOR\nThe whole problem is one ratio: 3/2 of 600 is 900. The only real work is getting the ratio the right way up, and there is a physical check that settles it in seconds. A signal of HIGHER frequency sweeps back and forth more times, so it produces MORE tangencies on the edge it is driving toward. The vertical (unknown) signal drives the trace left–right? No — it drives it up and down, and each up-down excursion carries the trace across to the side edges. Rather than memorizing the rule, note that the larger tangency count (3, on the right edge) belongs to the higher-frequency signal. Three exceeds two, so the unknown must exceed 600 Hz, and 900 Hz is the only choice that is 600 Hz times a simple ratio greater than one and less than two. That reasoning alone eliminates 400 Hz, 600 Hz, 1200 Hz (ratio 2, which would need 2:1 counts), and 1800 Hz (ratio 3, needing 3:1).\n\n90-SECOND SOLUTION\nTangency ratio 3:2 with the larger count on the unknown's side means f_unknown = (3/2)(600) = 900 Hz.\n\nWHAT TO MEMORIZE\nA Lissajous figure is stationary only when the two frequencies are in a ratio of small integers, and that ratio is read directly off the tangency counts on two perpendicular edges of the bounding box — the counts are inversely proportional to the frequencies of the axes they lie on, or equivalently, the higher-frequency signal produces the larger count on the edge perpendicular to it. A slowly rotating or drifting figure means the ratio is close to but not exactly rational, and the drift rate gives the small frequency difference. A 1:1 ratio traces an ellipse whose shape encodes the relative phase — a straight diagonal line for 0° or 180°, and a circle for 90° with equal amplitudes. This was the standard frequency-comparison method before digital counters, and it still appears on the GRE."
+      },
+
+      {
+        "question": "A sinusoidal voltage of amplitude 10 V is applied to an ideal full-wave bridge rectifier feeding a resistive load with no smoothing capacitor. What is the average (DC) voltage across the load?",
+        "choices": [
+          "0 V",
+          "3.2 V",
+          "6.4 V",
+          "7.1 V",
+          "10.0 V"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAn ideal full-wave bridge rectifier flips the negative half-cycles positive, so the load sees |V_p sin θ|. The average of |sin θ| over a full period equals its average over one half-cycle:\n⟨|sin θ|⟩ = (1/π)∫₀^π sin θ dθ = (1/π)[−cos θ]₀^π = (1/π)(2) = 2/π.\nTherefore\nV_avg = (2/π)V_p = (2/π)(10 V) = 20/π ≈ 6.37 ≈ 6.4 V.\n\nNUMERICS WITHOUT A CALCULATOR\nMemorize 2/π ≈ 0.637, so the answer is 6.37 V. If you do not have that number, use π ≈ 3.14 and compute 20/3.14: since 3.14 × 6 = 18.8 and 3.14 × 6.4 = 20.1, the quotient is just under 6.4.\nEvery distractor is a specific error worth recognizing. 3.2 V is 10/π, the answer for a HALF-wave rectifier, where the negative half-cycles are simply blanked to zero and the average is halved. 7.1 V is V_p/√2, the RMS value of the original sine — a different average entirely, and the one a voltmeter set to AC would report. 5.0 V is V_p/2, which is what you get by wrongly assuming the average of a half-sine equals half its peak. 0 V is the average of the unrectified sine.\n\n90-SECOND SOLUTION\nFull-wave average = (2/π)V_p = 0.637 × 10 = 6.4 V. Half-wave would be half that.\n\nWHAT TO MEMORIZE\nThree numbers cover nearly every rectifier question: full-wave average = 2V_p/π ≈ 0.637V_p; half-wave average = V_p/π ≈ 0.318V_p; and RMS of a full sine = V_p/√2 ≈ 0.707V_p. Note that the RMS of a full-wave rectified sine is still V_p/√2, since squaring erases the sign — rectification changes the average but not the RMS. Adding a smoothing capacitor pushes the output toward V_p itself, with ripple that decreases as the RC time constant grows relative to the period; the full-wave ripple frequency is TWICE the line frequency, which is the standard way to tell a full-wave supply from a half-wave one on a scope."
+      },
+
+      {
+        "question": "An ideal operational amplifier is connected as a voltage follower: the output is tied directly to the inverting input, and the signal is applied to the non-inverting input. The signal source has an output impedance of 100 kΩ, and the circuit drives a 1.0 kΩ load. Compared to connecting the source directly to the load, this circuit",
+        "choices": [
+          "delivers essentially the full source voltage to the load, with no voltage gain",
+          "amplifies the signal by a factor of 100 before delivering it",
+          "delivers about 1% of the source voltage to the load, as the divider would",
+          "inverts the signal and delivers it at unity magnitude",
+          "delivers no signal, since a follower has zero gain"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFirst find what happens WITHOUT the op-amp. A 100 kΩ source driving a 1.0 kΩ load forms a voltage divider:\nV_load = V_source × 1.0/(100 + 1.0) ≈ V_source/101 ≈ 0.010 V_source.\nOnly about 1% of the signal survives — the load badly overloads the source.\nNow insert the follower. Its non-inverting input draws essentially no current, so the source sees an enormous input impedance and its 100 kΩ output impedance causes negligible drop. Negative feedback then forces V₋ = V₊, and since the output is tied directly to the inverting input, V_out = V₋ = V₊ = V_in.\nSo the load receives essentially the full source voltage. The gain is exactly 1: no amplification, no inversion.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only arithmetic is the divider 1/(100+1) ≈ 1%, which is the answer to the question the follower is there to PREVENT — and it is offered as choice C precisely for that reason.\nThe conceptual check that settles the rest: a follower's gain is 1 + R_f/R_i with R_f = 0, giving exactly 1. Unity gain is neither zero (choice E confuses \"no amplification\" with \"no output\") nor 100 (choice B imagines the 100 kΩ sets a gain, which it does not — it is a source impedance, not a feedback resistor).\n\n90-SECOND SOLUTION\nThe follower's huge input impedance stops the 100 kΩ source from being loaded, and its unity gain passes the signal through intact — so the load gets the full voltage instead of the 1% a direct connection would deliver.\n\nWHAT TO MEMORIZE\nA voltage follower (unity-gain buffer) has gain exactly +1, near-infinite input impedance, and near-zero output impedance. Its entire purpose is impedance transformation: it lets a weak, high-impedance source drive a heavy, low-impedance load without being loaded down. The general rule it embodies is that maximum VOLTAGE transfer requires the load impedance to be much LARGER than the source impedance — which is the opposite of the impedance-MATCHING condition (Z_load = Z_source) that maximizes POWER transfer. Knowing which of those two conditions a problem is asking about is the usual source of confusion; voltmeters and buffers want the first, antennas and transmission lines the second."
+      },
+
+      {
+        "question": "Two laboratories measure the same physical constant. Lab 1 reports 1.10 ± 0.03 and Lab 2 reports 1.20 ± 0.04, where the quoted uncertainties are independent standard deviations. By how many standard deviations do the two results disagree?",
+        "choices": [
+          "1.4",
+          "2.0",
+          "2.5",
+          "3.3",
+          "5.0"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe discrepancy is the difference in the central values divided by the uncertainty OF THAT DIFFERENCE. For independent measurements the uncertainties add in quadrature:\nσ_diff = √(σ₁² + σ₂²) = √(0.03² + 0.04²) = √(0.0009 + 0.0016) = √0.0025 = 0.05.\nThe difference itself is\n1.20 − 1.10 = 0.10.\nSo the disagreement is\n0.10/0.05 = 2.0 standard deviations.\n\nNUMERICS WITHOUT A CALCULATOR\nThis is the 3-4-5 right triangle in disguise: 3 and 4 in quadrature give 5, so 0.03 and 0.04 give 0.05 with no square roots computed at all. Recognizing 3-4-5, 5-12-13, and 8-15-17 in quadrature sums saves time repeatedly on this exam.\nThen 0.10/0.05 = 2 exactly.\nThe most common error is dividing by only ONE of the uncertainties — 0.10/0.03 ≈ 3.3 or 0.10/0.04 = 2.5, both offered as choices. Comparing two measurements requires the uncertainty on their difference, not on either one alone. The choice 1.4 comes from adding the uncertainties linearly (0.03 + 0.04 = 0.07, and 0.10/0.07 ≈ 1.4), which over-estimates the combined uncertainty and is only correct for fully correlated errors.\n\n90-SECOND SOLUTION\nσ_diff = √(3² + 4²) × 0.01 = 0.05; difference 0.10; ratio = 2.0σ.\n\nWHAT TO MEMORIZE\nTo test whether two measurements agree, compute (x₁ − x₂)/√(σ₁² + σ₂²). Roughly, under 2σ is consistent, 2–3σ is a mild tension, and beyond 3σ demands an explanation — a systematic error in one experiment, or new physics. The essential point is that the relevant uncertainty belongs to the DIFFERENCE, which is always larger than either individual σ. This is exactly the inverse of the combining rule from weighted means: when you AVERAGE independent measurements the uncertainty shrinks, and when you SUBTRACT them it grows, both by adding variances in quadrature."
+      },
+
+      {
+        "question": "A measurement has a random uncertainty of 0.50 units and a systematic uncertainty of 0.20 units. The experimenter repeats the measurement 100 times and averages. What is the total uncertainty in the resulting mean?",
+        "choices": [
+          "0.05",
+          "0.21",
+          "0.25",
+          "0.50",
+          "0.54"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAveraging N independent measurements reduces the RANDOM uncertainty by √N but leaves the SYSTEMATIC uncertainty completely unchanged — a systematic error shifts every measurement the same way, so it survives averaging intact.\nRandom part after averaging:\n0.50/√100 = 0.50/10 = 0.050.\nSystematic part: still 0.20.\nCombining the two independent contributions in quadrature:\nσ_total = √(0.050² + 0.20²) = √(0.0025 + 0.0400) = √0.0425 ≈ 0.206 ≈ 0.21.\n\nNUMERICS WITHOUT A CALCULATOR\nOnce the random part has been beaten down to 0.05, it is one quarter of the systematic 0.20, so in quadrature it contributes (1/4)² = 1/16 of the systematic's variance — about 6% extra in variance, hence about 3% extra in the uncertainty itself. So the answer is 0.20 nudged up by a few percent: 0.206.\nThat estimate — \"the smaller contribution barely matters once it is a factor of 3 or 4 below the larger\" — is worth internalizing. In quadrature sums, the larger term dominates quickly, and this is why experimentalists stop taking data once random error drops safely below systematic: further averaging buys essentially nothing.\nThe distractor 0.05 is the answer if you forget the systematic entirely; 0.005 divides by 100 instead of √100; 0.54 forgets to average at all; and 0.25 adds 0.05 and 0.20 linearly.\n\n90-SECOND SOLUTION\nRandom → 0.50/10 = 0.05; systematic stays 0.20; quadrature gives √(0.0025 + 0.04) ≈ 0.21.\n\nWHAT TO MEMORIZE\nRandom errors fall as 1/√N under repetition; systematic errors do not fall at all. That asymmetry drives experimental strategy: past the point where random error is well below systematic, the only way forward is to find and correct the systematic — recalibrate, change technique, or measure the bias independently. Note also the sharply diminishing return in the √N law itself: cutting random uncertainty by a further factor of 10 requires 100 times more data. On the GRE, a question that reports both kinds of uncertainty and then averages is almost always testing precisely this distinction."
+      },
+
+      {
+        "question": "A ×10 oscilloscope probe is used with a scope whose input impedance is 1.0 MΩ. Compared with connecting the same signal source directly to the scope input with a plain coaxial lead, using the ×10 probe",
+        "choices": [
+          "decreases the signal reaching the scope by a factor of 10 and decreases the loading on the circuit",
+          "increases the amplitude displayed by a factor of 10 and increases the loading on the circuit",
+          "leaves both the displayed amplitude and the circuit loading unchanged",
+          "decreases the signal by a factor of 10 and increases the loading on the circuit",
+          "increases the bandwidth by a factor of 10 with no other effect"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA ×10 probe contains a 9 MΩ resistor in series with the tip. Together with the scope's own 1 MΩ input resistance, this forms a 10:1 voltage divider:\nV_scope = V_signal × 1 MΩ/(9 MΩ + 1 MΩ) = V_signal/10.\nSo the voltage actually delivered to the scope's amplifier is one tenth of the signal. (The scope then rescales its displayed volts-per-division to compensate, which is why the reading is correct — but the signal reaching the input is genuinely attenuated.)\nMeanwhile, the impedance the CIRCUIT UNDER TEST sees looking into the probe is the full 9 MΩ + 1 MΩ = 10 MΩ, ten times the bare scope's 1 MΩ. A higher input impedance draws less current from the circuit, so the probe LOADS the circuit less.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic beyond the divider ratio, but the question hinges on realizing that the same 9 MΩ resistor does two things at once, and they push in opposite directions: it divides the signal DOWN by 10 while multiplying the input impedance UP by 10.\nThat coupling is the entire point. Any choice pairing attenuation with INCREASED loading, or claiming gain of any kind, misses that a passive resistor network cannot amplify. The \"×10\" in the name refers to the attenuation factor, not to gain — a frequent source of confusion, since the scope's readout is scaled to display the true signal amplitude.\n\n90-SECOND SOLUTION\nThe 9 MΩ series resistor makes a 10:1 divider with the scope's 1 MΩ (signal ÷10) and raises the input impedance to 10 MΩ (less loading).\n\nWHAT TO MEMORIZE\nA ×10 probe attenuates the signal tenfold and raises the input impedance tenfold; you accept a smaller signal in exchange for disturbing the circuit less. This matters most on high-impedance nodes, where a bare 1 MΩ scope input can visibly change the circuit it is measuring. Probes also carry a small adjustable capacitor that must be trimmed so that the capacitive divider matches the resistive one — the standard \"probe compensation\" step, checked against the scope's square-wave output: overshoot or rounding on the square wave means the compensation is off and all fast measurements will be distorted. The general principle behind all of it is that a voltmeter should have impedance far ABOVE the circuit it measures, while an ammeter should have impedance far below."
+      },
+
+      {
+        "question": "The number of radioactive nuclei in a sample is measured over time and the data are plotted as ln N versus t. The plot is a straight line, and N falls from 1000 to 125 over an interval of 30 minutes. What is the half-life of the sample?",
+        "choices": [
+          "4.3 min",
+          "10 min",
+          "14 min",
+          "15 min",
+          "30 min"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nRadioactive decay is exponential, N = N₀e^(−λt), which is exactly why ln N versus t is a straight line — the slope is −λ.\nRather than extracting λ, count halvings directly. The ratio is\n1000/125 = 8 = 2³,\nso the sample has passed through exactly 3 half-lives in 30 minutes:\nt₁/₂ = 30/3 = 10 minutes.\n\nNUMERICS WITHOUT A CALCULATOR\nRecognizing 1000/125 = 8 is the whole calculation, and it is worth being fast with the powers of 2 in decimal disguise: 1000 → 500 → 250 → 125 is three halvings, visible by inspection.\nThe distractor 14 min is the MEAN LIFETIME τ = t₁/₂/ln2 = 10/0.693 ≈ 14.4, which is the reciprocal of the decay constant and a genuinely different quantity — always larger than the half-life by the factor 1/ln2 ≈ 1.44. The choice 4.3 min inverts that factor (10 × 0.693 ≈ 6.9, or a related slip). The choice 15 min comes from wrongly counting 2 halvings instead of 3, and 30 min from reading the whole interval as one half-life.\n\n90-SECOND SOLUTION\n1000 → 125 is a factor of 8 = 2³, so 3 half-lives fill 30 min: t₁/₂ = 10 min.\n\nWHAT TO MEMORIZE\nFor any exponential process, count factors of 2 rather than taking logarithms — dropping by 2ⁿ means n half-lives have passed. Keep the two time constants distinct: the half-life t₁/₂ = ln2/λ ≈ 0.693/λ, and the mean lifetime τ = 1/λ, with τ ≈ 1.44 t₁/₂. A semilog plot is the standard diagnostic for exponential behavior, and its slope gives −λ directly; curvature on such a plot signals two decaying species with different lifetimes, or background contamination. The same plotting trick applies to RC discharge, absorption through matter, and any first-order rate process."
+      },
+
+      {
+        "question": "A student fits a two-parameter straight line to 12 data points and obtains a chi-squared value of 40. Which conclusion is best supported?",
+        "choices": [
+          "The fit is excellent, since chi-squared per degree of freedom is well below 1",
+          "The fit is good, since chi-squared per degree of freedom is close to 1",
+          "The number of data points is too small for chi-squared to be meaningful",
+          "The uncertainties have been overestimated, or the data have been smoothed",
+          "The model fits poorly, or the uncertainties have been underestimated"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe number of degrees of freedom is the number of data points minus the number of fitted parameters:\nν = 12 − 2 = 10.\nThe reduced chi-squared is therefore\nχ²/ν = 40/10 = 4.0.\nEach data point contributes about ((y_i − fit)/σ_i)² to χ², so a good fit gives roughly 1 per degree of freedom, i.e. χ²/ν ≈ 1. A value of 4.0 means the points sit typically about √4 = 2 standard deviations from the fitted line — far too scattered for the quoted uncertainties.\nThere are two standard explanations, and the data alone cannot distinguish them: either the straight-line model is wrong, or the uncertainties σ_i were underestimated (making the normalized residuals artificially large).\n\nNUMERICS WITHOUT A CALCULATOR\nOnly 40/10 = 4. The trap is using ν = 12 instead of 10, which gives χ²/ν = 3.3 — still bad, so it happens not to change the conclusion here, but on a problem with χ² near ν it decides the answer.\nThe symmetric case is worth holding alongside this one: χ²/ν well BELOW 1 does not mean a superb fit. It means the residuals are smaller than the quoted uncertainties can explain, which points to OVER-estimated error bars, correlated data, or over-fitting — that is choice D, which is the correct reading of the opposite situation and is offered here to test whether you know which direction is which.\n\n90-SECOND SOLUTION\nν = 12 − 2 = 10, so χ²/ν = 4 — several times too large. The model is wrong or the error bars are too small.\n\nWHAT TO MEMORIZE\nReduced chi-squared is χ²/ν with ν = (data points) − (fitted parameters), and it should come out near 1 for a good fit; its own spread is roughly √(2/ν), so with ten degrees of freedom anything from about 0.6 to 1.4 is unremarkable. Much greater than 1 means a poor model or underestimated uncertainties; much less than 1 means overestimated uncertainties or too many free parameters. Chi-squared never tells you WHICH of the two explanations holds — that requires inspecting the residuals for structure, since a systematically curved residual pattern indicts the model while uniformly scattered but oversized residuals indict the error bars."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Thermodynamics & Statistical Mechanics Test (Hard)",
+    "added": "2026-08-29",
+    "category": "statmech",
+    "cards": [
+
+      {
+        "question": "Two nondegenerate energy levels are separated by 0.10 eV. At a temperature of 300 K, where kT ≈ 0.025 eV, what is the ratio of the population of the upper level to that of the lower level?",
+        "choices": [
+          "e⁻⁰·⁴ ≈ 0.67",
+          "e⁻¹ ≈ 0.37",
+          "e⁻² ≈ 0.14",
+          "e⁻⁴ ≈ 0.018",
+          "e⁻¹⁰ ≈ 4.5 × 10⁻⁵"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIn thermal equilibrium the populations of nondegenerate levels follow the Boltzmann distribution:\nn₂/n₁ = e^(−ΔE/kT).\nThe exponent is a pure ratio of energies:\nΔE/kT = 0.10 eV/0.025 eV = 4.0.\nTherefore\nn₂/n₁ = e⁻⁴ ≈ 0.018.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only computation is the dimensionless ratio 0.10/0.025 = 4, which is why kT is quoted in electron volts — it makes the exponent immediate. Memorize kT ≈ 1/40 eV = 0.025 eV at room temperature; it is one of the most reusable numbers on the exam, appearing in semiconductor, spectroscopy, and statistical-mechanics questions alike.\nTo evaluate e⁻⁴ without a calculator, note e² ≈ 7.4, so e⁴ ≈ 55, and 1/55 ≈ 0.018.\nThe distractor e⁻¹ is the answer when ΔE = kT — a useful benchmark to keep separate. The distractor e⁻⁰·⁴ inverts the ratio (0.025/0.10 = 0.25... rather, it treats kT as the larger energy), and e⁻¹⁰ would correspond to a level spacing of 0.25 eV.\nStructural check: the level spacing is four times kT, so the upper level is strongly suppressed — a fraction of a percent, not a fraction of the whole. Only one choice is that small without being extreme.\n\n90-SECOND SOLUTION\nΔE/kT = 0.10/0.025 = 4, so n₂/n₁ = e⁻⁴ ≈ 0.018.\n\nWHAT TO MEMORIZE\nThe Boltzmann factor e^(−E/kT) governs the relative occupation of states in thermal equilibrium, and for degenerate levels it carries a ratio of degeneracies out front: n₂/n₁ = (g₂/g₁)e^(−ΔE/kT). Room-temperature kT ≈ 0.025 eV = 1/40 eV is the anchor that makes these estimates fast. The physical rule of thumb: states more than a few kT above the ground state are essentially unoccupied, while states within kT are appreciably populated — which is exactly why vibrational modes (spacings of tenths of an eV) are frozen out at room temperature while rotational modes (thousandths of an eV) are fully active."
+      },
+
+      {
+        "question": "A system has just two nondegenerate energy levels, separated by ε. What is the average energy per particle in the limit of very high temperature (kT ≫ ε), measuring energy from the lower level?",
+        "choices": [
+          "0",
+          "ε/2",
+          "ε",
+          "2ε",
+          "kT"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe partition function for a two-level system, with energies 0 and ε, is\nZ = 1 + e^(−ε/kT).\nThe average energy is\n⟨E⟩ = εe^(−ε/kT)/(1 + e^(−ε/kT)) = ε/(e^(ε/kT) + 1).\nIn the high-temperature limit kT ≫ ε, the exponent ε/kT → 0, so e^(ε/kT) → 1 and\n⟨E⟩ → ε/(1 + 1) = ε/2.\nPhysically: at very high temperature the Boltzmann factor approaches 1, so both levels are EQUALLY populated. Half the particles sit at 0 and half at ε, giving an average of ε/2.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the whole question is the limiting behavior, and the equal-population argument gets there in one step without touching the partition function.\nThe critical insight is that ⟨E⟩ SATURATES rather than growing without bound. That is what makes a two-level system unlike an ordinary gas: it has a finite number of states, so there is a ceiling on the energy it can absorb. The distractor kT is the reflex answer imported from equipartition, and it is wrong precisely because a two-level system has no quadratic degree of freedom to hold ½kT — its energy cannot exceed ε no matter how hot it gets.\nThe distractor 0 is the LOW-temperature limit, where everything falls to the ground state, and ε would require the upper level to be more populated than the lower, which the Boltzmann factor never permits at positive temperature.\n\n90-SECOND SOLUTION\nAt kT ≫ ε both levels are equally populated, so ⟨E⟩ = (0 + ε)/2 = ε/2.\n\nWHAT TO MEMORIZE\nFor a two-level system, Z = 1 + e^(−ε/kT) and ⟨E⟩ = ε/(e^(ε/kT) + 1), running from 0 at low temperature to ε/2 at high temperature. The saturation is the key feature and has a direct consequence for the heat capacity: since ⟨E⟩ is flat at both extremes, C = d⟨E⟩/dT vanishes at both limits and peaks in between, at kT ≈ 0.42ε — the Schottky anomaly, the signature of any system with a finite energy ceiling. Note also that populations can never invert (n₂ > n₁) at any positive temperature; an inverted population, as in a laser, formally corresponds to a NEGATIVE temperature."
+      },
+
+      {
+        "question": "A gas of diatomic molecules is at a temperature high enough that translational, rotational, AND vibrational modes are all fully excited, and the molecules behave classically. What is the molar heat capacity at constant volume?",
+        "choices": [
+          "3R/2",
+          "5R/2",
+          "3R",
+          "7R/2",
+          "9R/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe equipartition theorem assigns ½kT per molecule — equivalently ½R per mole — to each QUADRATIC degree of freedom in the energy.\nCount them for a diatomic molecule:\nTranslation: 3 (motion in x, y, z), each contributing ½R.\nRotation: 2 (about the two axes perpendicular to the bond; rotation about the bond axis has negligible moment of inertia), each contributing ½R.\nVibration: 1 vibrational mode, but it contributes TWO quadratic terms — one kinetic (½μv²) and one potential (½kx²) — so it counts as 2.\nTotal: 3 + 2 + 2 = 7 quadratic terms, giving\nC_V = (7/2)R.\n\nNUMERICS WITHOUT A CALCULATOR\nThe count is the whole problem, and the vibrational double-counting is the step that separates this from the familiar 5R/2.\nThe distractor 5R/2 is the answer for a RIGID diatomic (3 translational + 2 rotational), the room-temperature case that most problems use, and it is the answer you get by counting the vibration as only one degree of freedom. The distractor 3R/2 is monatomic; 3R is a rigid nonlinear polyatomic (3 translational + 3 rotational).\nSanity check on the physics: as temperature rises, more modes unfreeze, so C_V can only INCREASE — a diatomic gas moves from 5R/2 at room temperature toward 7R/2 once vibrations activate. The staircase in C_V versus T is the classic experimental evidence for quantized energy levels.\n\n90-SECOND SOLUTION\n3 translational + 2 rotational + 2 vibrational (KE and PE) = 7 half-R's, so C_V = 7R/2.\n\nWHAT TO MEMORIZE\nEquipartition gives ½R per mole for each quadratic term in the energy. The standard cases: monatomic 3R/2, rigid diatomic 5R/2, vibrating diatomic 7R/2, rigid nonlinear polyatomic 3R, and a classical solid 3R (three translational plus three potential terms — the Dulong-Petit law). Vibrations always count DOUBLE because both kinetic and potential energy are quadratic. For an ideal gas C_P = C_V + R always, so γ = C_P/C_V runs 5/3, 7/5, and 9/7 through the diatomic sequence. Modes freeze out when kT drops below their level spacing, in the order vibrational, then rotational, then translational — which is why real gases show C_V rising in steps rather than staying constant."
+      },
+
+      {
+        "question": "One mole of a monatomic ideal gas is heated at constant PRESSURE, raising its temperature by 100 K. Taking R = 8.31 J/(mol·K), how much work does the gas do on its surroundings?",
+        "choices": [
+          "0 J",
+          "831 J",
+          "1250 J",
+          "2080 J",
+          "2910 J"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAt constant pressure, the work done by the gas as it expands is\nW = PΔV.\nUsing the ideal gas law PV = nRT at constant P, we have PΔV = nRΔT, so\nW = nRΔT = (1 mol)(8.31)(100 K) = 831 J.\nNote this depends only on n, R, and ΔT — the monatomic detail does not enter the WORK at all. It would matter for the heat added or the internal energy change, but not here.\n\nNUMERICS WITHOUT A CALCULATOR\nOne multiplication: 8.31 × 100 = 831.\nThe distractors are the other quantities in the same process, each computed correctly but answering a different question. The internal energy change is ΔU = nC_VΔT = (3/2)(8.31)(100) = 1247 ≈ 1250 J. The heat added is Q = nC_PΔT = (5/2)(8.31)(100) = 2078 ≈ 2080 J. And 2910 J is (7/2)RΔT, the diatomic-with-vibration value.\nThis spread is the point of the question: at constant pressure, Q, ΔU, and W are three different numbers related by the first law, Q = ΔU + W. Check: 2078 = 1247 + 831 ✓. Reading which one is being asked for is half the work.\nThe distractor 0 J is the answer for a constant-VOLUME process, where no expansion occurs.\n\n90-SECOND SOLUTION\nAt constant P, W = PΔV = nRΔT = (1)(8.31)(100) = 831 J.\n\nWHAT TO MEMORIZE\nThe first law ΔU = Q − W (with W the work done BY the gas) organizes every process, and each type of process kills one term: isochoric gives W = 0 so Q = ΔU; adiabatic gives Q = 0 so ΔU = −W; isothermal for an ideal gas gives ΔU = 0 so Q = W. At constant pressure W = nRΔT, which is exactly why C_P − C_V = R — the extra heat at constant pressure goes entirely into expansion work. For an ideal gas ΔU = nC_VΔT ALWAYS, whatever the process, because the internal energy depends only on temperature."
+      },
+
+      {
+        "question": "An aluminum rod is 1.0 m long at 20 °C and has a linear expansion coefficient of 1.2 × 10⁻⁵ K⁻¹. By how much does its VOLUME fractionally increase when it is heated to 120 °C?",
+        "choices": [
+          "1.2 × 10⁻⁴",
+          "2.4 × 10⁻⁴",
+          "3.6 × 10⁻⁴",
+          "1.2 × 10⁻³",
+          "3.6 × 10⁻³"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nLinear expansion gives ΔL/L = αΔT. For a solid expanding isotropically, every linear dimension grows by that same fraction, so the volume — a product of three lengths — grows by\nΔV/V = 3αΔT\nto first order, since (1 + αΔT)³ ≈ 1 + 3αΔT for small αΔT.\nWith ΔT = 120 − 20 = 100 K:\nΔV/V = 3(1.2 × 10⁻⁵)(100) = 3.6 × 10⁻³.\n\nNUMERICS WITHOUT A CALCULATOR\nCompute αΔT first: (1.2 × 10⁻⁵)(100) = 1.2 × 10⁻³. Then triple it: 3.6 × 10⁻³.\nThe distractor 1.2 × 10⁻³ is exactly that intermediate value — the LINEAR fractional expansion, correct for the rod's length but not its volume, and the most common error. The distractor 3.6 × 10⁻⁴ is off by a factor of ten from using ΔT = 10; 2.4 × 10⁻⁴ uses the area coefficient 2α with the wrong ΔT.\nThe temperature difference is the same in kelvin as in celsius, so no conversion is needed — a small trap in problems that quote temperatures in °C.\n\n90-SECOND SOLUTION\nΔV/V = 3αΔT = 3(1.2 × 10⁻⁵)(100) = 3.6 × 10⁻³.\n\nWHAT TO MEMORIZE\nFor isotropic solids the expansion coefficients are related by factors of dimension: linear α, area 2α, volume 3α. Everything scales up together, which produces the standard counterintuitive result — a hole in a heated plate gets LARGER, not smaller, because the material expands as though the hole were filled with the same substance. Typical metals have α ≈ 10⁻⁵ K⁻¹, so a 100 K change produces a length change of about 0.1%: small, but enough to require expansion joints in bridges and rails. Water's anomalous contraction on warming between 0 and 4 °C is the notable exception to the general rule that materials expand when heated."
+      },
+
+      {
+        "question": "One mole of an ideal gas is taken around the closed rectangular cycle shown by the following path on a PV diagram: pressure rises from 1.0 × 10⁵ Pa to 3.0 × 10⁵ Pa at constant volume 1.0 × 10⁻³ m³; then the volume expands to 3.0 × 10⁻³ m³ at that constant high pressure; then the pressure drops back at the larger volume; then the gas is compressed back to the start. What is the net work done BY the gas per cycle?",
+        "choices": [
+          "0 J",
+          "200 J",
+          "400 J",
+          "600 J",
+          "800 J"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nOver a complete cycle the gas returns to its initial state, so ΔU = 0 and the first law gives Q_net = W_net. The net work equals the AREA ENCLOSED by the cycle on the PV diagram.\nThe rectangle has\nheight = ΔP = 3.0 × 10⁵ − 1.0 × 10⁵ = 2.0 × 10⁵ Pa,\nwidth = ΔV = 3.0 × 10⁻³ − 1.0 × 10⁻³ = 2.0 × 10⁻³ m³.\nArea = (2.0 × 10⁵)(2.0 × 10⁻³) = 400 J.\nThe cycle proceeds clockwise (pressure rises before the expansion, so the expansion happens at the HIGH pressure and the compression at the low one), so the gas does net positive work: +400 J.\n\nNUMERICS WITHOUT A CALCULATOR\nMultiplying the two differences: 2 × 2 = 4, and 10⁵ × 10⁻³ = 10², giving 400 J. The unit check confirms the physics — pascals times cubic metres are joules.\nThe trap is computing only ONE leg. The expansion at high pressure does (3.0 × 10⁵)(2.0 × 10⁻³) = 600 J of work, which is the distractor 600 J; but the compression at low pressure returns (1.0 × 10⁵)(2.0 × 10⁻³) = 200 J of work to the gas, another distractor. The net is the difference, 600 − 200 = 400 J — precisely the enclosed area. The two constant-volume legs do no work at all.\nDirection matters: a clockwise cycle does net positive work (an engine), while counterclockwise consumes work (a refrigerator).\n\n90-SECOND SOLUTION\nNet work = enclosed area = ΔP × ΔV = (2.0 × 10⁵)(2.0 × 10⁻³) = 400 J, positive because the cycle runs clockwise.\n\nWHAT TO MEMORIZE\nFor any closed cycle, ΔU = 0, so Q_net = W_net, and the net work is the area enclosed on a PV diagram — positive for a clockwise loop (engine), negative for counterclockwise (refrigerator or heat pump). Reading the area geometrically is far faster than integrating leg by leg. Individual legs follow the usual rules: constant volume does no work, constant pressure does PΔV, isothermal does nRT ln(V_f/V_i), and adiabatic does −ΔU = −nC_VΔT. Efficiency is always W_net/Q_in, where Q_in counts only the legs that ABSORB heat, not the net heat."
+      },
+
+      {
+        "question": "A real gas is described by the van der Waals equation (P + a n²/V²)(V − nb) = nRT. The constants a and b account respectively for",
+        "choices": [
+          "the finite volume of the molecules and intermolecular attraction",
+          "intermolecular attraction and the molecular mass",
+          "intermolecular attraction and the finite volume of the molecules",
+          "molecular rotation and molecular vibration",
+          "quantum degeneracy and intermolecular attraction"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCompare each correction with the ideal gas law PV = nRT.\nThe term nb SUBTRACTED from the volume reduces the space available to the molecules. That accounts for the fact that molecules are not points — each occupies a finite volume that the others cannot enter, so b is the excluded volume per mole.\nThe term an²/V² ADDED to the pressure means the measured pressure is LOWER than the ideal value. That is what intermolecular ATTRACTION does: a molecule about to strike the wall is pulled back by its neighbors, so it hits with less force than it otherwise would. The correction scales as n²/V² because it involves pairs of molecules, and the density of pairs goes as the square of the number density.\nSo a is the attraction term and b the finite-volume term.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the discrimination is entirely about which correction sits where, and each can be recovered from its sign and its position rather than memorized.\nThe volume correction must be subtracted, since the available volume shrinks — and it appears in the volume factor, so it is about size. The pressure correction must be added to the measured P to recover the ideal value, since attraction reduces the measured pressure — and it appears in the pressure factor, so it is about forces between molecules.\nChoice B is the same two effects with the labels swapped, which is the only real trap here.\n\n90-SECOND SOLUTION\nb subtracts from the volume (finite molecular size); a adds to the pressure (intermolecular attraction, which reduces the measured pressure).\n\nWHAT TO MEMORIZE\nThe van der Waals equation (P + an²/V²)(V − nb) = nRT is the standard first correction to ideal-gas behavior, with a for attraction and b for molecular volume. Its importance is qualitative rather than numerical: unlike the ideal gas law, it predicts a liquid-vapor phase transition and a critical point, located at T_c = 8a/(27Rb), V_c = 3nb, P_c = a/(27b²). The two corrections dominate in opposite regimes — attraction matters at low temperature (where molecules linger near one another) and finite volume at high density — so a real gas can have a compressibility either above or below the ideal value depending on conditions. Both corrections vanish at low density, recovering the ideal gas law."
+      },
+
+      {
+        "question": "Two slabs of equal cross-sectional area are joined face to face. The first has thickness 0.010 m and thermal conductivity 0.10 W/(m·K); the second has thickness 0.020 m and thermal conductivity 0.040 W/(m·K). Their outer faces are held at temperatures differing by 60 K. In the steady state, what is the temperature difference across the SECOND slab?",
+        "choices": [
+          "10 K",
+          "12 K",
+          "30 K",
+          "48 K",
+          "50 K"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nIn the steady state the same heat current flows through both slabs in series, so the thermal resistances add, exactly like electrical resistors. The thermal resistance of a slab is\nR = L/(kA).\nTaking A = 1 for convenience:\nR₁ = 0.010/0.10 = 0.10.\nR₂ = 0.020/0.040 = 0.50.\nThe total is 0.60, and since the same current passes through both, the temperature drops divide in proportion to the resistances:\nΔT₂ = 60 × R₂/(R₁ + R₂) = 60 × 0.50/0.60 = 50 K.\n\nNUMERICS WITHOUT A CALCULATOR\nThe two resistances come out to 0.1 and 0.5, a ratio of 1:5. So the 60 K splits as 10 K and 50 K — no long division needed once the ratio is in hand.\nThe distractor 10 K is the drop across the FIRST slab, correct but for the wrong slab, and it catches anyone who computes the ratio correctly and then assigns it to the wrong side. The distractor 30 K splits the difference evenly, ignoring the resistances entirely; 48 K comes from using the conductivity ratio without the thicknesses.\nThe physical check that settles it: slab 2 is thicker AND less conductive, so it is by far the better insulator and must carry most of the temperature drop. The answer had to be well above 30 K.\n\n90-SECOND SOLUTION\nR = L/k gives 0.1 and 0.5, a 1:5 split, so slab 2 takes 5/6 of 60 K = 50 K.\n\nWHAT TO MEMORIZE\nSteady-state conduction is exactly analogous to a DC circuit: heat current H = ΔT/R plays the role of current, temperature difference the role of voltage, and thermal resistance R = L/(kA) the role of electrical resistance. Slabs in series add resistances and share the same heat current, so the largest temperature drop falls across the largest resistance; slabs in parallel add conductances and share the same ΔT. The steady-state condition — equal heat current everywhere — is what makes the analogy work, and it is the fact to write down first in any layered-insulation problem. Building insulation is quoted as an \"R-value\" for precisely this reason."
+      },
+
+      {
+        "question": "For an ideal gas, kinetic theory gives the pressure as P = (1/3)nm⟨v²⟩, where n is the number density. Combining this with the ideal gas law, what is the average translational kinetic energy per molecule at temperature T?",
+        "choices": [
+          "kT/2",
+          "kT",
+          "3kT/2",
+          "5kT/2",
+          "3kT"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nStart from the kinetic-theory result and rewrite it in terms of kinetic energy. Since ⟨KE⟩ = ½m⟨v²⟩, we have m⟨v²⟩ = 2⟨KE⟩, so\nP = (1/3)n(2⟨KE⟩) = (2/3)n⟨KE⟩.\nThe ideal gas law in number-density form is P = nkT. Equating:\nnkT = (2/3)n⟨KE⟩\n⟨KE⟩ = (3/2)kT.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo lines of algebra with n cancelling — the only care needed is the factor of 2 from ½m⟨v²⟩.\nThe distractor kT/2 is the contribution of a SINGLE degree of freedom, and 3kT/2 is the sum over all three translational directions, which is what \"translational kinetic energy\" means. Keeping those two straight is the point of the question: equipartition assigns ½kT per quadratic degree of freedom, and translation in three dimensions supplies three of them.\nThe distractor 5kT/2 would include two rotational degrees of freedom as well — correct for the TOTAL energy of a rigid diatomic molecule, but not for its translational part alone. The question's wording (\"translational\") is what selects 3kT/2.\n\n90-SECOND SOLUTION\nP = (2/3)n⟨KE⟩ and P = nkT together give ⟨KE⟩ = (3/2)kT.\n\nWHAT TO MEMORIZE\nThe average translational kinetic energy per molecule is (3/2)kT regardless of the gas — heavy molecules simply move more slowly to compensate, which is why v_rms = √(3kT/m) falls as 1/√m and is the basis of gaseous diffusion separation. This derivation is worth being able to reproduce, since it shows that temperature IS a measure of molecular kinetic energy rather than merely correlating with it. Note that the same (3/2)kT holds for the translational part of ANY gas, monatomic or polyatomic; rotational and vibrational modes add their own ½kT terms on top, which is what distinguishes their heat capacities."
+      },
+
+      {
+        "question": "A blackbody sphere radiates power P. Its radius is then doubled while its absolute temperature is halved. What is its new radiated power?",
+        "choices": [
+          "P/16",
+          "P/4",
+          "P",
+          "4P",
+          "16P"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe Stefan-Boltzmann law gives the radiated power as\nP = σAT⁴,\nwhere A is the surface area.\nDoubling the radius multiplies the area by 4, since A = 4πr² scales as r²:\nA → 4A.\nHalving the temperature multiplies T⁴ by (1/2)⁴ = 1/16:\nT⁴ → T⁴/16.\nCombining:\nP_new = P × 4 × (1/16) = P/4.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo independent scalings multiplied together: 4 × 1/16 = 1/4. The whole difficulty is remembering that the area goes as r² while the power goes as T⁴, so the temperature change dominates.\nThe distractor P/16 applies the temperature factor but forgets the area entirely — the most common omission, since the radius change is easy to overlook once T⁴ has grabbed attention. The distractor 4P uses the area alone.\nThe general lesson is that the fourth power makes temperature by far the more powerful lever: halving T costs a factor of 16, which quadrupling the area cannot come close to recovering. This is why a small, hot object outshines a large, cool one.\n\n90-SECOND SOLUTION\nP ∝ r²T⁴, so (2)²(1/2)⁴ = 4/16 = 1/4, giving P/4.\n\nWHAT TO MEMORIZE\nStefan-Boltzmann: P = σAT⁴ for a blackbody, with emissivity e multiplying it for a gray body; the net power exchanged with surroundings at T₀ is σA(T⁴ − T₀⁴). Pair it with Wien's displacement law, λ_max T ≈ 2.9 × 10⁻³ m·K, which says the peak wavelength scales as 1/T — so a hotter body is both brighter and bluer. Together these two laws handle nearly every blackbody problem: use Stefan for total power, Wien for color. Combining them with a distance-squared falloff gives the equilibrium temperature of a planet, which scales as 1/√d from its star."
+      },
+
+      {
+        "question": "An object at 100 °C cools in a room held at 20 °C, obeying Newton's law of cooling. After 10 minutes its temperature is 60 °C. What is its temperature after a further 10 minutes?",
+        "choices": [
+          "20 °C",
+          "30 °C",
+          "40 °C",
+          "45 °C",
+          "50 °C"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nNewton's law of cooling says the rate of cooling is proportional to the temperature EXCESS over the surroundings, giving exponential decay of that excess:\nT(t) − T_s = (T₀ − T_s)e^(−t/τ).\nWork with the excess above room temperature rather than the temperature itself.\nInitially the excess is 100 − 20 = 80 °C.\nAfter 10 minutes it is 60 − 20 = 40 °C — exactly half.\nSince equal time intervals multiply the excess by the same factor, another 10 minutes halves it again to 20 °C.\nConverting back:\nT = 20 + 20 = 40 °C.\n\nNUMERICS WITHOUT A CALCULATOR\nNo exponentials are needed once the problem is framed in terms of the excess: 80 → 40 → 20, a halving every 10 minutes. The whole calculation is recognizing that the first interval halved the excess.\nThe distractor 30 °C comes from subtracting a constant 20 degrees per interval — treating the cooling as LINEAR, which is the error the question targets. Cooling slows as the object approaches room temperature, so it cannot keep losing 40 degrees every 10 minutes; a linear extrapolation would have it reach room temperature and then keep going.\nThe distractor 20 °C assumes it has fully equilibrated, which exponential decay never achieves in finite time.\n\n90-SECOND SOLUTION\nThe excess over 20 °C halves every 10 min: 80 → 40 → 20, so T = 20 + 20 = 40 °C.\n\nWHAT TO MEMORIZE\nNewton's law of cooling gives exponential decay of the temperature EXCESS: T − T_s = (T₀ − T_s)e^(−t/τ). Always convert to the excess before doing anything else — that turns the problem into the same \"count the halvings\" arithmetic as radioactive decay or RC discharge. The law holds when the temperature difference is small enough that radiation can be linearized; for large differences the T⁴ of Stefan-Boltzmann takes over and cooling is faster than exponential. The time constant τ depends on the object's heat capacity and its surface heat-transfer coefficient, so a well-stirred, high-surface-area object cools faster."
+      },
+
+      {
+        "question": "A Carnot engine operates between reservoirs at 400 K and 300 K. If it absorbs 800 J from the hot reservoir per cycle, how much work does it deliver?",
+        "choices": [
+          "100 J",
+          "200 J",
+          "267 J",
+          "600 J",
+          "800 J"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe Carnot efficiency depends only on the reservoir temperatures:\nη = 1 − T_c/T_h = 1 − 300/400 = 1 − 0.75 = 0.25.\nThe work delivered is that efficiency times the heat absorbed from the hot reservoir:\nW = ηQ_h = (0.25)(800 J) = 200 J.\nThe remaining 600 J is dumped into the cold reservoir.\n\nNUMERICS WITHOUT A CALCULATOR\n300/400 = 3/4, so the efficiency is exactly 1/4, and a quarter of 800 is 200.\nThe distractor 600 J is the heat REJECTED, Q_c = Q_h − W — a correctly computed quantity answering a different question. The distractor 267 J comes from using 1 − T_c/T_h with the temperatures in celsius (27 °C and 127 °C), which is invalid: efficiency formulas require ABSOLUTE temperatures, and mixing scales is the single most common error in Carnot problems.\nThe distractor 100 J halves the efficiency; 800 J would demand 100% efficiency, forbidden by the second law for any engine with T_c > 0.\nStructural check: with only a 100 K gap out of 400 K, the efficiency is modest — a quarter — so the work must be a small fraction of the heat absorbed.\n\n90-SECOND SOLUTION\nη = 1 − 300/400 = 1/4, so W = 800/4 = 200 J.\n\nWHAT TO MEMORIZE\nCarnot efficiency η = 1 − T_c/T_h uses absolute temperatures and sets the ceiling that no engine between the same two reservoirs can exceed. The related coefficients follow the same pattern with different quantities on top: a refrigerator's COP is T_c/(T_h − T_c) and a heat pump's is T_h/(T_h − T_c), both of which can far exceed 1 — a heat pump moving heat across a small gap delivers many joules of heat per joule of work. All three follow from the Carnot cycle's defining property, that Q_h/T_h = Q_c/T_c, which is just the statement that the entropy change over a reversible cycle is zero."
+      },
+
+      {
+        "question": "One mole of helium and one mole of argon, initially in separate containers of equal volume at the same temperature and pressure, are allowed to mix by removing the partition between them. Taking R = 8.31 J/(mol·K), what is the entropy of mixing?",
+        "choices": [
+          "0 J/K",
+          "5.8 J/K",
+          "8.3 J/K",
+          "11.5 J/K",
+          "16.6 J/K"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEach gas expands from its own container into the total volume, which is twice as large. Since the gases are ideal and do not interact, each behaves as though the other were absent, so each undergoes an effective free expansion to double its volume:\nΔS_each = nR ln 2 = (1)(8.31)(0.693) ≈ 5.76 J/K.\nThere are two such gases, so the total is\nΔS = 2nR ln 2 = 2(5.76) ≈ 11.5 J/K.\n\nNUMERICS WITHOUT A CALCULATOR\n8.31 × 0.693 ≈ 5.8, doubled to 11.5. The general formula for equal molar amounts is 2nR ln 2.\nThe distractor 5.8 J/K counts only one gas — the most common omission, since it is easy to compute the expansion once and stop. The distractor 0 J/K is the answer if the two gases were IDENTICAL, and that is the deep point of this problem: mixing two samples of the SAME gas produces no entropy change at all, because the final state is indistinguishable from the initial one. Only distinguishable species generate mixing entropy.\nThat discontinuity — a finite entropy change for any two different gases, however similar, but exactly zero for identical ones — is the Gibbs paradox, and its resolution requires the quantum indistinguishability of identical particles.\n\n90-SECOND SOLUTION\nEach gas doubles its volume: ΔS = 2nR ln2 = 2(8.31)(0.693) ≈ 11.5 J/K.\n\nWHAT TO MEMORIZE\nThe entropy of mixing for ideal gases is ΔS = −nR Σxᵢ ln xᵢ, which for two equal molar amounts reduces to 2nR ln 2. Each species simply expands into the total volume, and the result depends only on the mole fractions — never on which gases they are, provided they are distinguishable. The Gibbs paradox is the essential caveat: identical gases give zero, and the sharp discontinuity between \"nearly identical\" and \"identical\" has no classical explanation. Mixing is spontaneous and irreversible, so unmixing always requires work — which is why gas separation and desalination are energetically expensive."
+      },
+
+      {
+        "question": "Which of the following is the correct expression for the entropy of a system in terms of the number of accessible microstates Ω?",
+        "choices": [
+          "S = kΩ",
+          "S = k/Ω",
+          "S = kΩ ln Ω",
+          "S = k e^Ω",
+          "S = k ln Ω"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBoltzmann's relation is\nS = k ln Ω.\nThe logarithm is not arbitrary — it is forced by the requirement that entropy be EXTENSIVE (additive) while the number of microstates is MULTIPLICATIVE. If two independent systems have Ω₁ and Ω₂ microstates, the combined system has Ω₁Ω₂, since each state of one can pair with each state of the other. For entropies to add,\nS(Ω₁Ω₂) = S(Ω₁) + S(Ω₂),\nand the logarithm is the unique function converting products into sums.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic, but the additivity argument is the reasoning to reproduce: entropy adds, microstates multiply, and only a logarithm bridges the two. That argument alone eliminates every other choice, since none of kΩ, k/Ω, kΩ ln Ω, or ke^Ω turns a product into a sum.\nA second check comes from magnitudes. For a mole of gas, Ω is astronomically large — of order e^(10²³) — so S = kΩ would give an absurd entropy, while S = k ln Ω yields the observed value of order Nk ≈ R per mole. The logarithm is what tames the enormous count into a laboratory-scale number.\n\n90-SECOND SOLUTION\nS = k ln Ω — the logarithm is required because entropy is additive while microstate counts multiply.\n\nWHAT TO MEMORIZE\nBoltzmann's S = k ln Ω connects the microscopic count of accessible states to the macroscopic entropy, and it is the bridge on which all of statistical mechanics rests. Two consequences worth carrying: the second law becomes the statement that systems evolve toward macrostates with overwhelmingly more microstates, and the third law follows because a perfectly ordered ground state has Ω = 1, so S = 0 at absolute zero. The generalization to unequal probabilities is the Gibbs entropy S = −k Σpᵢ ln pᵢ, which reduces to Boltzmann's form when all Ω states are equally likely. Checking the free-expansion result is a good exercise: doubling the volume doubles the positions available to each of N molecules, giving Ω → 2^N and ΔS = Nk ln 2, matching the thermodynamic answer exactly."
+      },
+
+      {
+        "question": "At constant temperature and pressure, a process occurs spontaneously if which quantity decreases?",
+        "choices": [
+          "The internal energy U",
+          "The enthalpy H",
+          "The Helmholtz free energy F = U − TS",
+          "The Gibbs free energy G = H − TS",
+          "The entropy S of the system alone"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe second law requires that the entropy of the UNIVERSE increase — the system plus its surroundings. Converting that into a condition on the system alone depends on which variables are held fixed.\nAt constant temperature and pressure, the heat released to the surroundings is −ΔH, so the surroundings' entropy change is −ΔH/T. The total is\nΔS_universe = ΔS_system − ΔH/T ≥ 0.\nMultiplying by −T (which flips the inequality):\nΔH − TΔS ≤ 0, i.e. ΔG ≤ 0.\nSo a process at constant T and P is spontaneous when the Gibbs free energy decreases.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the discrimination is between the free energies, and the rule is fixed by which variables are held constant.\nThe Helmholtz free energy F = U − TS is the right criterion at constant T and VOLUME, and it is the intended trap here: both F and G are \"free energies\" that decrease spontaneously, but they apply to different constraints. Constant pressure — the ordinary laboratory condition, with a system open to the atmosphere — selects G.\nThe distractor \"entropy of the system alone\" is the deepest confusion: the system's entropy may perfectly well DECREASE, as when water freezes, provided the surroundings gain more. Freezing is spontaneous below 0 °C precisely because the heat released raises the surroundings' entropy by more than the ice loses.\n\n90-SECOND SOLUTION\nConstant T and P selects the Gibbs free energy: spontaneous when ΔG = ΔH − TΔS < 0.\n\nWHAT TO MEMORIZE\nEach set of constraints has its own potential that is minimized at equilibrium: internal energy U at constant S and V, enthalpy H at constant S and P, Helmholtz F = U − TS at constant T and V, and Gibbs G = H − TS at constant T and P. The last is the workhorse for chemistry and phase transitions, since laboratory conditions usually fix T and P. The competition inside ΔG = ΔH − TΔS explains temperature-driven phase changes directly: the enthalpy term favors ordered, low-energy states while the entropy term, weighted by T, favors disorder — so raising T eventually makes the −TΔS term win, and the substance melts or boils. At the transition temperature the two balance exactly and ΔG = 0."
+      },
+
+      {
+        "question": "A liquid and its vapor coexist in equilibrium. According to the Clausius-Clapeyron relation, dP/dT = L/(TΔV), where ΔV is the volume change on going from liquid to vapor. For water, the melting curve (solid-liquid boundary) has a NEGATIVE slope on a P-T diagram. What does this imply?",
+        "choices": [
+          "Ice is less dense than liquid water",
+          "The latent heat of fusion of water is negative",
+          "Water has no triple point",
+          "Ice sublimes rather than melts at all pressures",
+          "The entropy of ice exceeds that of liquid water"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nApply the Clausius-Clapeyron relation to the solid-liquid boundary:\ndP/dT = L_fusion/(TΔV),\nwhere ΔV = V_liquid − V_solid is the volume change on MELTING.\nThe latent heat of fusion is positive (melting always absorbs heat) and T is positive, so the sign of the slope is fixed entirely by the sign of ΔV. A negative slope therefore requires\nΔV < 0, i.e. V_liquid < V_solid.\nLiquid water occupies LESS volume than the same mass of ice, which is to say ice is less dense than liquid water — it floats.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the reasoning is a sign chase through one equation, with L > 0 and T > 0 leaving ΔV as the only quantity free to be negative.\nThe distractor \"latent heat is negative\" would be the alternative way to make the slope negative, but melting absorbs heat by definition — you must add energy to break the crystal, so L_fusion > 0 for every substance. Recognizing that L cannot be negative is what forces the conclusion onto ΔV.\nThe distractor about entropy is similarly ruled out: the liquid is more disordered than the solid, so S_liquid > S_solid always, consistent with L = TΔS > 0.\nWater's anomaly is the physically important part: almost every other substance contracts on freezing and has a positive melting slope. The open hydrogen-bonded structure of ice is what makes water the exception.\n\n90-SECOND SOLUTION\nWith L > 0 and T > 0, a negative dP/dT forces ΔV < 0 on melting — so ice occupies more volume than water, meaning ice is less dense.\n\nWHAT TO MEMORIZE\nThe Clausius-Clapeyron relation dP/dT = L/(TΔV) governs the slope of every coexistence line, with L = TΔS the latent heat. Since L and T are always positive, the slope's sign follows ΔV. Water's negative melting slope makes it nearly unique: ice floats, ice can be melted by applying pressure, and lakes freeze from the top down, which is why aquatic life survives winter. For liquid-vapor boundaries ΔV is large and positive, so the slope is steeply positive, and approximating the vapor as an ideal gas gives the integrated form P ∝ e^(−L/RT). The three coexistence curves meet at the triple point, where all three phases exist together."
+      },
+
+      {
+        "question": "A gas of noninteracting particles is confined in a box. Compared with a classical (Maxwell-Boltzmann) gas at the same temperature and density, the pressure of a gas of identical FERMIONS and the pressure of a gas of identical BOSONS satisfy which relation?",
+        "choices": [
+          "P_Bose < P_classical < P_Fermi",
+          "P_Fermi < P_classical < P_Bose",
+          "P_Fermi = P_Bose < P_classical",
+          "P_Fermi = P_Bose > P_classical",
+          "All three pressures are equal"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe difference comes from quantum statistics, and specifically from how each type of particle occupies states.\nFERMIONS obey the Pauli exclusion principle: no two can share a quantum state. This forces particles into higher-energy states than classical statistics would, raising the energy and therefore the pressure. The effect behaves like an effective REPULSION, though no actual force is involved.\nBOSONS have no such restriction and in fact show enhanced occupation of the same state — an effective ATTRACTION or \"bunching\" — which lowers the energy and the pressure.\nThe classical gas lies between, being the high-temperature limit both approach when occupancy is sparse. Hence\nP_Bose < P_classical < P_Fermi.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the whole question turns on knowing which way each statistic pushes.\nThe mnemonic worth carrying: fermions avoid each other, bosons cluster. Exclusion crowds fermions into higher momentum states, so a Fermi gas exerts pressure even at absolute zero — the degeneracy pressure that supports white dwarf stars and neutron stars against gravitational collapse. Bosons do the opposite, and at low enough temperature they collapse into the ground state entirely, forming a Bose-Einstein condensate whose pressure tends to zero.\nThose two extreme behaviors — a Fermi gas with pressure at T = 0, a Bose gas condensing to nearly none — bracket the classical case and fix the ordering without any formulas.\n\n90-SECOND SOLUTION\nPauli exclusion acts like repulsion (raising P), Bose bunching like attraction (lowering P), so P_Bose < P_classical < P_Fermi.\n\nWHAT TO MEMORIZE\nThe three distributions share one form, ⟨n⟩ = 1/(e^((E−μ)/kT) + a), with a = +1 for Fermi-Dirac, a = −1 for Bose-Einstein, and a = 0 for Maxwell-Boltzmann; the classical case is the common limit when e^((E−μ)/kT) ≫ 1, that is, when occupancy is sparse. Quantum effects matter when the thermal de Broglie wavelength becomes comparable to the interparticle spacing — at low temperature or high density. The consequences run in opposite directions: fermions produce degeneracy pressure that holds up compact stars and sets the Fermi energy of metals, while bosons condense into a single quantum state, giving superfluidity and Bose-Einstein condensates."
+      },
+
+      {
+        "question": "A paramagnetic salt obeys Curie's law, with magnetization proportional to B/T. A sample is magnetized in a field B at temperature T. If the field is doubled and the absolute temperature is simultaneously doubled, the magnetization",
+        "choices": [
+          "is unchanged",
+          "is halved",
+          "is doubled",
+          "is quadrupled",
+          "falls to zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nCurie's law states\nM = CB/T,\nwhere C is the Curie constant. The magnetization depends on the field and temperature only through the RATIO B/T.\nDoubling both leaves that ratio unchanged:\n(2B)/(2T) = B/T,\nso the magnetization is unchanged.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the question tests whether you recognize that B and T enter only as a ratio, so any change preserving that ratio leaves M alone.\nThe underlying physics is a competition, and it is worth being able to state: the magnetic field tries to align the moments, lowering their energy by μB, while thermal agitation of scale kT randomizes them. What matters is the dimensionless ratio μB/kT of these two energies. In the high-temperature regime μB ≪ kT the alignment is slight and M grows linearly in B/T, which is Curie's law; at low temperature or high field the moments saturate and M levels off at its maximum, so Curie's law fails there.\nThe distractor \"doubled\" comes from tracking only the field, and \"halved\" only the temperature — each correct in isolation, but the two effects cancel exactly.\n\n90-SECOND SOLUTION\nCurie's law depends only on B/T, and doubling both leaves that ratio fixed, so M is unchanged.\n\nWHAT TO MEMORIZE\nCurie's law M = CB/T describes a paramagnet in the weak-field, high-temperature regime, and it follows directly from expanding the exact two-level result ⟨μ⟩ = μ tanh(μB/kT) for small argument. The controlling parameter is always the dimensionless energy ratio μB/kT: much less than 1 gives linear Curie behavior, much greater than 1 gives saturation. Ferromagnets follow the modified Curie-Weiss law M ∝ B/(T − T_c), diverging at the Curie temperature where spontaneous magnetization sets in. The strong temperature dependence is exploited in adiabatic demagnetization, a standard technique for cooling below 1 K: magnetize isothermally, then remove the field adiabatically so the spins re-randomize at the expense of the lattice's thermal energy."
+      },
+
+      {
+        "question": "An isothermal atmosphere of molecules of mass m at temperature T has a number density that falls with height h as n(h) = n₀e^(−mgh/kT). At what height is the number density reduced to 1/e of its ground-level value?",
+        "choices": [
+          "kT/(mg)",
+          "mg/(kT)",
+          "kT/(2mg)",
+          "2kT/(mg)",
+          "mgh/(kT)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe density falls to 1/e of its initial value when the exponent equals −1:\nmgh/kT = 1 → h = kT/(mg).\nThis characteristic height is called the SCALE HEIGHT of the atmosphere.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic is required, but a dimensional check confirms the answer instantly and rules out the alternatives. The quantity kT is an energy, and mg is a force, so kT/(mg) has units of energy divided by force — which is length. ✓\nThe distractor mg/(kT) is the reciprocal, with units of inverse length; mgh/(kT) is dimensionless, not a height at all. Checking dimensions eliminates three of the five choices without any physics.\nFor an estimate of the real value: taking air as m ≈ 29 × 1.66 × 10⁻²⁷ kg and T ≈ 250 K, kT/(mg) ≈ 7 km — which is why atmospheric pressure at the top of a 5 km mountain is roughly half its sea-level value, and why commercial aircraft cabins must be pressurized.\nThe physical reading of h = kT/(mg): a molecule can climb until its gravitational potential energy mgh is comparable to its thermal energy kT. Heavier molecules have a smaller scale height and settle lower, which is why the upper atmosphere is enriched in the lightest gases.\n\n90-SECOND SOLUTION\nSet mgh/kT = 1, giving h = kT/(mg) — the scale height, the only choice with dimensions of length.\n\nWHAT TO MEMORIZE\nThe barometric formula n(h) = n₀e^(−mgh/kT) is just the Boltzmann factor e^(−E/kT) applied to gravitational potential energy E = mgh, which is why it has the same exponential form as every other thermal-equilibrium distribution. The scale height kT/(mg) is about 8 km for Earth's atmosphere. Since it depends inversely on molecular mass, different species have different scale heights and the atmosphere separates by weight at high altitude. The same reasoning explains sedimentation equilibrium in a colloidal suspension — Perrin's measurement of exactly this profile gave one of the first determinations of Avogadro's number."
+      },
+
+      {
+        "question": "According to the third law of thermodynamics, what happens to the entropy of a perfect crystalline solid as its temperature approaches absolute zero?",
+        "choices": [
+          "It approaches a universal constant equal to k ln 2",
+          "It approaches a finite value that depends on the substance",
+          "It diverges to negative infinity",
+          "It approaches the value it has at the melting point",
+          "It approaches zero"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBoltzmann's relation gives S = k ln Ω, where Ω is the number of accessible microstates.\nA PERFECT crystal at absolute zero has every atom fixed at its lattice site in the single lowest-energy configuration, so there is exactly one accessible microstate:\nΩ = 1 → S = k ln 1 = 0.\nThis is the third law: the entropy of a perfect crystal approaches zero as T → 0.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only computation is ln 1 = 0, but the reasoning behind it is what matters: zero entropy corresponds to exactly one way of arranging the system, which is precisely what \"perfect crystal at the ground state\" means.\nThe distractor \"a finite value that depends on the substance\" is the correct statement for an IMPERFECT crystal. Real substances can freeze into disordered configurations — carbon monoxide, whose nearly symmetric molecules can point either way in the lattice, retains a residual entropy of about k ln 2 per molecule, and ice has a residual entropy from the placement of its hydrogen bonds. The word \"perfect\" in the question is what selects zero over these residual values, and reading it carefully is the whole task.\nThe distractor k ln 2 is exactly that residual entropy for a two-fold degenerate ground state — a correct number attached to the wrong premise.\n\n90-SECOND SOLUTION\nA perfect crystal at T = 0 has one microstate, so S = k ln 1 = 0.\n\nWHAT TO MEMORIZE\nThe third law states that S → 0 as T → 0 for a perfect crystal, which fixes the absolute zero of entropy and makes entropy — unlike energy — a quantity with a genuine absolute scale rather than only differences. Two consequences follow. Heat capacities must vanish as T → 0, since S = ∫(C/T)dT would otherwise diverge; this is consistent with the observed Debye T³ and electronic T behaviors, and inconsistent with the classical constant 3R, which is one of the failures that demanded quantum mechanics. And absolute zero is unattainable in finitely many steps, because each cycle of any cooling process removes a diminishing amount of entropy as the entropy curves of the two states converge at T = 0."
+      }
+
+    ]
+  },
+
 
   {
     "name": "Practice Test 1",
@@ -8497,7 +9309,7 @@ const EXAMS = [
   {
     "name": "Condensed Matter Physics",
     "added": "2026-08-22",
-    "category": "topic",
+    "category": "condensed",
     "cards": [
 
       {

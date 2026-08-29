@@ -8,11 +8,20 @@
 
 const PER_PAGE = 4;
 const SHUFFLE_CHOICES_ON_RETRY = true;
-// The home page is split into these sections, in this order. An exam's
-// "category" field decides which one it lands in.
+// The home page is split into these sections, in this order — one per
+// subject, so an exam's "category" field decides which shelf it lands in.
+// A slug with no exams simply doesn't render a shelf (see renderMenu), so
+// adding a new subject here ahead of any exam using it is harmless.
 const CATEGORIES = [
   { key: "practice", label: "Practice tests" },
-  { key: "topic", label: "By topic" },
+  { key: "cm", label: "Classical Mechanics" },
+  { key: "em", label: "Electromagnetism" },
+  { key: "circuits", label: "Circuits" },
+  { key: "optics", label: "Optics & Waves" },
+  { key: "sr", label: "Special Relativity" },
+  { key: "statmech", label: "Statistical Mechanics & Thermodynamics" },
+  { key: "condensed", label: "Condensed Matter" },
+  { key: "lab", label: "Lab Methods" },
 ];
 const STORAGE_KEY = "flashcards-progress";
 // Separate from STORAGE_KEY on purpose: colors are keyed by exam name, not
