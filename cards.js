@@ -6,8 +6,11 @@
 //    added    : ISO date the set went on the site, shown on its tile.
 //    category : which section of the home page the exam appears under.
 //               "practice" for the mixed practice tests; one topic slug per
-//               subject otherwise — "cm", "em", "circuits", "optics", "sr",
-//               "statmech", "condensed", "lab" — each its own shelf. The
+//               subject otherwise — "cm", "em", "optics", "statmech", "qm",
+//               "sr", "lab", "specialized" — matching the official GRE
+//               Physics subject breakdown (circuits sits under "em",
+//               atomic physics under "qm", condensed matter under
+//               "specialized" — none of those get their own shelf). The
 //               exact set of slugs and their shelf labels/order live in
 //               CATEGORIES near the top of app.js; add a slug there before
 //               using it here, or the exam falls into a catch-all "Other"
@@ -4946,7 +4949,7 @@ const EXAMS = [
   {
     "name": "Circuits Test 1",
     "added": "2026-08-25",
-    "category": "circuits",
+    "category": "em",
     "cards": [
 
       {
@@ -5226,7 +5229,7 @@ const EXAMS = [
   {
     "name": "Circuits Test 2",
     "added": "2026-08-26",
-    "category": "circuits",
+    "category": "em",
     "cards": [
 
       {
@@ -9309,7 +9312,7 @@ const EXAMS = [
   {
     "name": "Condensed Matter Physics",
     "added": "2026-08-22",
-    "category": "condensed",
+    "category": "specialized",
     "cards": [
 
       {

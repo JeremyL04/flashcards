@@ -11,17 +11,21 @@ const SHUFFLE_CHOICES_ON_RETRY = true;
 // The home page is split into these sections, in this order — one per
 // subject, so an exam's "category" field decides which shelf it lands in.
 // A slug with no exams simply doesn't render a shelf (see renderMenu), so
-// adding a new subject here ahead of any exam using it is harmless.
+// adding a new subject here ahead of any exam using it is harmless — "qm"
+// has none yet, for instance. Matches the official GRE Physics subject
+// breakdown, with circuits folded into Electromagnetism, atomic physics
+// folded into Quantum Mechanics, and condensed matter under Specialized
+// Topics, rather than each getting its own shelf.
 const CATEGORIES = [
   { key: "practice", label: "Practice tests" },
   { key: "cm", label: "Classical Mechanics" },
   { key: "em", label: "Electromagnetism" },
-  { key: "circuits", label: "Circuits" },
-  { key: "optics", label: "Optics & Waves" },
+  { key: "optics", label: "Optics & Wave Phenomena" },
+  { key: "statmech", label: "Thermodynamics & Statistical Mechanics" },
+  { key: "qm", label: "Quantum Mechanics & Atomic Physics" },
   { key: "sr", label: "Special Relativity" },
-  { key: "statmech", label: "Statistical Mechanics & Thermodynamics" },
-  { key: "condensed", label: "Condensed Matter" },
-  { key: "lab", label: "Lab Methods" },
+  { key: "lab", label: "Laboratory Methods" },
+  { key: "specialized", label: "Specialized Topics" },
 ];
 const STORAGE_KEY = "flashcards-progress";
 // Separate from STORAGE_KEY on purpose: colors are keyed by exam name, not
