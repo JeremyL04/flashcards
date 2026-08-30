@@ -9577,6 +9577,275 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Special Topics — Methods",
+    "added": "2026-08-30",
+    "category": "specialized",
+    "cards": [
+
+      {
+        "question": "An alpha particle of kinetic energy 8.0 MeV is fired directly at a copper nucleus (Z = 29) and is scattered straight back through 180°. Taking e²/(4πε₀) = 1.44 MeV·fm, what is the distance of closest approach?",
+        "choices": [
+          "0.65 fm",
+          "1.3 fm",
+          "5.2 fm",
+          "10 fm",
+          "21 fm"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt the turning point the alpha particle is momentarily at rest, so all of its kinetic energy has been converted into Coulomb potential energy:\nK = (1/4πε₀)(z₁z₂e²)/d,\nwith z₁ = 2 for the alpha and z₂ = 29 for copper.\nSolving for d:\nd = z₁z₂[e²/(4πε₀)]/K = (2)(29)(1.44 MeV·fm)/(8.0 MeV).\nThe numerator is 58 × 1.44 = 83.5 MeV·fm, so\nd = 83.5/8.0 ≈ 10.4 ≈ 10 fm.\n\nNUMERICS WITHOUT A CALCULATOR\nThe constant e²/(4πε₀) = 1.44 MeV·fm is the single most useful number in nuclear estimates — it turns every Coulomb-energy problem into arithmetic with MeV and fm and no powers of ten to track. Memorize it.\nHere: 2 × 29 = 58, and 58 × 1.44 ≈ 58 × 1.5 = 87 (slightly high, since 1.44 < 1.5, so call it 83). Dividing by 8 gives about 10.\nThe distractor 5.2 fm forgets the alpha's charge of 2, using z₁ = 1. The distractor 21 fm uses K = 4 MeV or doubles the answer. The distractor 1.3 fm is roughly a nuclear radius and would mean the alpha had actually touched the nucleus.\nStructural check: 10 fm is comfortably larger than the copper nuclear radius R ≈ 1.2A^(1/3) ≈ 1.2(64)^(1/3) ≈ 4.8 fm, so the alpha never reaches the nuclear surface and pure Coulomb scattering is valid — which is exactly the condition the formula assumes.\n\n90-SECOND SOLUTION\nSet K = z₁z₂(1.44 MeV·fm)/d, so d = (2)(29)(1.44)/8.0 ≈ 10 fm.\n\nWHAT TO MEMORIZE\nFor head-on Coulomb scattering, d = z₁z₂e²/(4πε₀K), and the combination e²/(4πε₀) = 1.44 MeV·fm = 1.44 eV·nm makes both nuclear and atomic estimates immediate. The distance of closest approach falls as 1/K, so raising the beam energy probes deeper — and when d becomes comparable to the nuclear radius R ≈ 1.2A^(1/3) fm, the scattering departs from the Rutherford prediction, which is precisely how the size of the nucleus was first measured. Always check afterwards whether d exceeds R; if it does not, the pure-Coulomb assumption has failed."
+      },
+
+      {
+        "question": "A cubic crystal has a conventional cell edge a = 0.60 nm. What is the spacing between adjacent (111) planes?",
+        "choices": [
+          "0.30 nm",
+          "0.35 nm",
+          "0.42 nm",
+          "0.60 nm",
+          "0.85 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a cubic lattice, the spacing of the planes labeled by Miller indices (hkl) is\nd = a/√(h² + k² + l²).\nFor (111):\n√(1 + 1 + 1) = √3 ≈ 1.732,\nso\nd = 0.60/1.732 ≈ 0.346 ≈ 0.35 nm.\n\nNUMERICS WITHOUT A CALCULATOR\nDividing by √3 is the same as multiplying by 0.577, so 0.60 × 0.577 ≈ 0.35. Equivalently, 0.60/1.73: since 1.73 × 0.35 = 0.605, the answer is just under 0.35.\nThe distractor 0.42 nm is a/√2 = 0.424, the spacing of the (110) planes — the right formula applied to the wrong indices, and the most common slip. The distractor 0.30 nm is a/2, the (200) spacing; 0.60 nm is a itself, the (100) spacing.\nThe useful ordering to carry: higher-index planes are more closely spaced, so d(100) > d(110) > d(111) > d(200). Since (111) sits third in that sequence, the answer must fall below both 0.60 and 0.42 — which leaves only two candidates.\n\n90-SECOND SOLUTION\nd = a/√(h²+k²+l²) = 0.60/√3 ≈ 0.35 nm.\n\nWHAT TO MEMORIZE\nFor cubic crystals, d = a/√(h²+k²+l²) — one formula covering every plane family, valid only for cubic systems. The Miller indices are the reciprocals of the axis intercepts, cleared of fractions, so larger indices mean planes that cut the cell more finely and therefore lie closer together. Combining this with Bragg's law 2d sin θ = nλ gives the standard route from a measured diffraction angle to a lattice constant, which is how crystal structures are determined. Note that structure factors can extinguish certain reflections entirely — in a bcc lattice only planes with h+k+l even appear, and in fcc only those with h, k, l all even or all odd."
+      },
+
+      {
+        "question": "What is the approximate Schwarzschild radius of a black hole of ten solar masses? Take one solar mass to be 2.0 × 10³⁰ kg, G = 6.7 × 10⁻¹¹ N·m²/kg², and c = 3.0 × 10⁸ m/s.",
+        "choices": [
+          "3.0 m",
+          "30 m",
+          "300 m",
+          "3.0 km",
+          "30 km"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Schwarzschild radius is\nR_s = 2GM/c².\nWith M = 10 × 2.0 × 10³⁰ = 2.0 × 10³¹ kg:\nnumerator = 2(6.7 × 10⁻¹¹)(2.0 × 10³¹) = 2.68 × 10²¹,\ndenominator = c² = 9.0 × 10¹⁶,\nR_s = 2.68 × 10²¹/9.0 × 10¹⁶ ≈ 3.0 × 10⁴ m = 30 km.\n\nNUMERICS WITHOUT A CALCULATOR\nWork the powers of ten first: 10⁻¹¹ × 10³¹ = 10²⁰, times 2 × 6.7 × 2 ≈ 27, giving 2.7 × 10²¹. Divide by 9 × 10¹⁶: the mantissa 2.7/9 = 0.3 and the exponent 10²¹⁻¹⁶ = 10⁵, so 0.3 × 10⁵ = 3 × 10⁴ m.\nFar faster is to carry the solar value as a fact: R_s for ONE solar mass is about 3 km, and R_s scales linearly with M, so ten solar masses gives 30 km. That single anchor turns every stellar black-hole question into a multiplication.\nThe distractor 3.0 km is the one-solar-mass value, the trap for anyone who recalls the anchor but forgets to scale it.\nA useful second anchor: the Earth's Schwarzschild radius is about 9 mm.\n\n90-SECOND SOLUTION\nR_s = 2GM/c² ≈ 3 km per solar mass, so ten solar masses gives about 30 km.\n\nWHAT TO MEMORIZE\nR_s = 2GM/c², linear in mass, with the anchor of roughly 3 km per solar mass. The same expression falls out of the Newtonian escape-speed condition v_esc = c — a coincidence of factors, since the correct derivation is general-relativistic, but a useful mnemonic. Because R_s ∝ M while a sphere's volume goes as R³, the mean density inside the horizon falls as 1/M²: a stellar black hole is denser than a nucleus, while a supermassive one can be less dense than water. Note that nothing special happens locally at the horizon for an infalling observer; it is a global causal boundary, not a physical surface."
+      },
+
+      {
+        "question": "The cosmic microwave background has a present temperature of about 3 K, and its temperature scales inversely with the cosmic scale factor. At the epoch when the background temperature was 30 K, the typical separation between galaxies was",
+        "choices": [
+          "1/10 of its present value",
+          "1/100 of its present value",
+          "the same as its present value",
+          "10 times its present value",
+          "100 times its present value"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe radiation temperature scales as\nT ∝ 1/a,\nwhere a is the cosmic scale factor, which measures how distances between objects moving with the expansion have grown.\nGoing from T = 3 K today to T = 30 K in the past is a factor of 10 INCREASE in temperature, so the scale factor must have been a factor of 10 SMALLER:\na_then/a_now = T_now/T_then = 3/30 = 1/10.\nSince all cosmological separations scale with a, galaxies were 1/10 as far apart as they are now.\n\nNUMERICS WITHOUT A CALCULATOR\nOne ratio: 3/30 = 1/10. The entire difficulty is the inverse relationship and getting its direction right.\nThe physical reasoning that fixes the direction without any formula: the early universe was hotter and more compressed. A higher temperature therefore means a smaller universe, so the separations must have been smaller — which immediately eliminates both choices greater than 1.\nThe distractor 1/100 comes from squaring the ratio, perhaps by importing the T ∝ 1/a² behavior that would apply to a different scaling. The distractor \"10 times\" gets the physics exactly backward.\nWhy T ∝ 1/a: as space expands, each photon's wavelength stretches in proportion to a, so its energy falls as 1/a, and a blackbody spectrum stays a blackbody spectrum with T ∝ 1/a.\n\n90-SECOND SOLUTION\nT ∝ 1/a, so a tenfold higher temperature means a tenfold smaller scale factor: separations were 1/10 of today's.\n\nWHAT TO MEMORIZE\nIn an expanding universe the scale factor a governs everything: proper distances scale as a, photon wavelengths as a, radiation temperature as 1/a, number densities as 1/a³, and radiation energy density as 1/a⁴ (one factor beyond matter's 1/a³ because each photon also redshifts). Redshift is defined by 1 + z = a_now/a_then = λ_obs/λ_emit, so the T = 30 K epoch corresponds to z = 9. The CMB itself was released at recombination near T ≈ 3000 K, which is z ≈ 1100 — the earliest epoch directly observable in light."
+      },
+
+      {
+        "question": "The intrinsic magnetic moment of a nucleus is of the order of the nuclear magneton, while that of an electron is of the order of the Bohr magneton. What is the approximate order of magnitude of the ratio of a nuclear magnetic moment to an electron magnetic moment?",
+        "choices": [
+          "10⁻⁹",
+          "10⁻⁶",
+          "10⁻³",
+          "1",
+          "10³"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA magnetic moment arising from a charge q of mass m with angular momentum of order ħ has magnitude\nμ ~ qħ/(2m).\nThe charge magnitude is the same for a proton and an electron, so the ratio depends only on the MASSES:\nμ_N/μ_B = m_e/m_p = 1/1836 ≈ 5.4 × 10⁻⁴.\nThat is of order 10⁻³.\n\nNUMERICS WITHOUT A CALCULATOR\nThe whole calculation is 1/1836 ≈ 5 × 10⁻⁴, which rounds to the 10⁻³ order of magnitude rather than 10⁻⁶ — the nearest power of ten to 5.4 × 10⁻⁴ is 10⁻³.\nThe key structural insight is that the moment goes INVERSELY with mass, because the same angular momentum ħ carried by a heavier particle corresponds to a smaller current loop. The proton is about 1836 times heavier than the electron, so its moment is smaller by that factor.\nThe distractor 10⁻⁶ squares the mass ratio; 10³ inverts it, which would make nuclei more magnetic than electrons.\nThe physical consequence worth knowing: because nuclear moments are so small, nuclear magnetic effects require either very strong fields or very sensitive detection — which is why NMR and MRI operate at radio frequencies in tesla-scale fields, while electron spin resonance sits in the microwave range at the same field.\n\n90-SECOND SOLUTION\nμ ∝ 1/m at fixed charge and angular momentum, so the ratio is m_e/m_p ≈ 1/1836 ≈ 10⁻³.\n\nWHAT TO MEMORIZE\nThe Bohr magneton μ_B = eħ/2m_e ≈ 9.3 × 10⁻²⁴ J/T and the nuclear magneton μ_N = eħ/2m_p ≈ 5.1 × 10⁻²⁷ J/T differ by exactly the mass ratio 1836. Real moments carry g-factors of order unity — the electron's g ≈ 2, the proton's g ≈ 5.6 — so the orders of magnitude survive but exact values do not follow from the magnetons alone. The same 1/m dependence explains why the hyperfine splitting of an atomic level is roughly a thousand times smaller than the fine structure, and why nuclear contributions to bulk magnetism are negligible compared with electronic ones."
+      },
+
+      {
+        "question": "In the semi-empirical mass formula, the Coulomb contribution to the nuclear binding energy is proportional to Z²/A^(1/3). Consider two nuclei with the same ratio Z/A, one having twice the mass number of the other. By approximately what factor is the Coulomb term larger for the heavier nucleus?",
+        "choices": [
+          "1.3",
+          "1.6",
+          "2.0",
+          "3.2",
+          "4.0"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWrite the Coulomb term as E_C ∝ Z²/A^(1/3) and track each factor separately.\nBecause Z/A is held fixed, doubling A also doubles Z. So:\nZ² increases by 2² = 4.\nA^(1/3) increases by 2^(1/3) ≈ 1.26, and it sits in the DENOMINATOR, so it reduces the result.\nCombining:\nE_C ratio = 4/2^(1/3) = 4/1.26 ≈ 3.17 ≈ 3.2.\n\nNUMERICS WITHOUT A CALCULATOR\nThe one number needed is 2^(1/3) ≈ 1.26. Then 4/1.26: since 1.26 × 3 = 3.8 and 1.26 × 3.2 = 4.03, the quotient is just under 3.2.\nEquivalently, combine the exponents first: E_C ∝ Z²/A^(1/3) becomes A²/A^(1/3) = A^(5/3) at fixed Z/A, and 2^(5/3) = 2 × 2^(2/3) = 2 × 1.587 ≈ 3.17. That route is cleaner and generalizes to any factor.\nThe distractor 4.0 tracks only the Z² factor, forgetting the A^(1/3) in the denominator — the most common omission, since the numerator change is the conspicuous one. The distractor 2.0 tracks only the doubling of A. The distractor 1.3 is 2^(1/3) alone, and 1.6 is 2^(2/3).\nStructural check: the numerator grows faster than the denominator, so the ratio must exceed 2 but fall short of 4.\n\n90-SECOND SOLUTION\nAt fixed Z/A, E_C ∝ A²/A^(1/3) = A^(5/3), so doubling A gives 2^(5/3) = 2(2^(2/3)) ≈ 3.2.\n\nWHAT TO MEMORIZE\nThe semi-empirical mass formula has five terms with distinct A-dependences: volume (∝A), surface (∝A^(2/3)), Coulomb (∝Z²/A^(1/3)), asymmetry (∝(A−2Z)²/A), and pairing. The competition between them explains the whole shape of nuclear stability. The Coulomb term grows faster than the volume term as nuclei get heavier — a factor A^(5/3) against A along the stability line — which is ultimately why heavy nuclei become unstable to fission and why the binding-energy-per-nucleon curve turns over. The asymmetry term is what pushes the stability line toward N > Z in heavy nuclei, offsetting the Coulomb repulsion of the protons. Handle these fractional powers by combining exponents before evaluating."
+      },
+
+      {
+        "question": "A wooden artifact is found to have a ¹⁴C activity per gram of carbon equal to one eighth that of living wood. Taking the half-life of ¹⁴C to be 5,700 years, what is the approximate age of the artifact?",
+        "choices": [
+          "1,900 years",
+          "2,900 years",
+          "5,700 years",
+          "11,400 years",
+          "17,100 years"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nRadioactive decay reduces the activity by a factor of 2 for each half-life elapsed. An activity ratio of\n1/8 = (1/2)³\nmeans exactly three half-lives have passed:\nt = 3 × 5,700 = 17,100 years.\n\nNUMERICS WITHOUT A CALCULATOR\nCounting halvings is far faster than taking logarithms: 1 → 1/2 → 1/4 → 1/8 is three steps, so multiply the half-life by 3.\nThe distractor 11,400 years counts two half-lives, corresponding to 1/4 rather than 1/8 — an easy off-by-one, and the most common error here. The distractor 5,700 years counts only one. The distractor 1,900 years divides the half-life by 3 instead of multiplying, and 2,900 years halves it.\nStructural check: the sample has clearly decayed substantially but not to a trace, so the age should be a small multiple of the half-life — a few times 5,700, not a fraction of it and not ten times it.\nWhen the ratio is not a clean power of two, use t = t₁/₂ log₂(N₀/N), or equivalently t = τ ln(N₀/N) with τ = t₁/₂/ln2.\n\n90-SECOND SOLUTION\n1/8 = (1/2)³ means three half-lives: t = 3(5,700) = 17,100 years.\n\nWHAT TO MEMORIZE\nFor any exponential decay, count factors of two rather than taking logarithms — a ratio of 2ⁿ means n half-lives. Radiocarbon dating works because cosmic rays maintain a steady ¹⁴C fraction in atmospheric CO₂ that living organisms exchange with the environment; the clock starts at death, when exchange stops. The 5,700-year half-life sets the practical range at roughly 50,000 years, after which too little ¹⁴C remains to measure, and longer timescales require other pairs — potassium-argon at 1.3 billion years for rocks, uranium-lead for the age of the Earth."
+      },
+
+      {
+        "question": "A narrow beam of gamma rays is attenuated exponentially in a shielding material, and the intensity is reduced to half after passing through 3.0 cm. What thickness is required to reduce the intensity to one sixteenth of its incident value?",
+        "choices": [
+          "6.0 cm",
+          "9.0 cm",
+          "12 cm",
+          "24 cm",
+          "48 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nExponential attenuation follows I = I₀e^(−μx), so each additional half-value layer cuts the intensity by another factor of 2. The stated half-value thickness is 3.0 cm.\nA reduction to 1/16 is\n1/16 = (1/2)⁴,\nrequiring four half-value layers:\nx = 4 × 3.0 = 12 cm.\n\nNUMERICS WITHOUT A CALCULATOR\nCount the halvings: 1 → 1/2 → 1/4 → 1/8 → 1/16 is four steps, so multiply 3.0 cm by 4.\nThe distractor 48 cm multiplies by 16, treating the attenuation as if thickness scaled with the intensity ratio rather than with its logarithm — the standard error, and the reason exponential attenuation feels counterintuitive: shielding is far more effective than a linear picture suggests. The distractor 9.0 cm counts three layers, and 6.0 cm two.\nNote that the attenuation coefficient itself follows from μ = ln2/x₁/₂ = 0.693/3.0 ≈ 0.23 cm⁻¹, but computing it is an unnecessary detour when the ratio is a clean power of two.\nStructural check: reaching 1/16 must take more than twice the thickness that reaches 1/2, and 12 cm is exactly four times 3.0 cm.\n\n90-SECOND SOLUTION\n1/16 = (1/2)⁴ means four half-value layers: 4 × 3.0 = 12 cm.\n\nWHAT TO MEMORIZE\nAttenuation of a narrow beam is I = I₀e^(−μx), with the half-value layer x₁/₂ = ln2/μ ≈ 0.693/μ — structurally identical to radioactive decay, with thickness in place of time. Because the reduction is exponential, no thickness gives complete absorption, but each added half-value layer halves what remains, so shielding accumulates rapidly. The related length 1/μ is the mean free path of the photon, the average distance before an interaction, and it exceeds the half-value layer by the factor 1/ln2 ≈ 1.44. For gamma rays μ rises steeply with atomic number, which is why lead is the standard shielding material."
+      },
+
+      {
+        "question": "A radioactive source has an activity of 8.0 × 10¹⁰ Bq and a half-life of 2.0 hours. What is its activity 6.0 hours later?",
+        "choices": [
+          "1.0 × 10¹⁰ Bq",
+          "2.7 × 10¹⁰ Bq",
+          "4.0 × 10¹⁰ Bq",
+          "8.0 × 10¹⁰ Bq",
+          "6.4 × 10¹¹ Bq"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nActivity is proportional to the number of undecayed nuclei, A = λN, and λ is constant — so the ACTIVITY decays with exactly the same half-life as the population.\nIn 6.0 hours the sample passes through\n6.0/2.0 = 3 half-lives,\nso the activity falls by a factor of 2³ = 8:\nA = 8.0 × 10¹⁰/8 = 1.0 × 10¹⁰ Bq.\n\nNUMERICS WITHOUT A CALCULATOR\nThree halvings of 8.0 × 10¹⁰: 8 → 4 → 2 → 1, giving 1.0 × 10¹⁰ Bq. The numbers are chosen so no division is needed beyond halving.\nThe distractor 2.7 × 10¹⁰ Bq is 8.0 × 10¹⁰/e, which is what you get by confusing the half-life with the MEAN LIFETIME τ = t₁/₂/ln2 — a genuinely different time constant, longer than the half-life by the factor 1.44. The distractor 4.0 × 10¹⁰ Bq counts only one half-life.\nThe key conceptual point, and the reason this question is worth doing: activity and population share the same exponential, so a problem quoting activity can be solved by counting halvings directly, with no need to find N or λ at all.\n\n90-SECOND SOLUTION\n6.0 h is 3 half-lives, so the activity drops by 2³ = 8: 8.0 × 10¹⁰/8 = 1.0 × 10¹⁰ Bq.\n\nWHAT TO MEMORIZE\nActivity A = λN decays with the same exponential and the same half-life as the number of nuclei, so counting halvings works on either quantity. Keep the time constants distinct: t₁/₂ = ln2/λ ≈ 0.693/λ, and the mean lifetime τ = 1/λ = t₁/₂/ln2 ≈ 1.44 t₁/₂. Units: 1 becquerel is one decay per second, and the older curie is 3.7 × 10¹⁰ Bq — the activity of about a gram of radium, which is why the source in this problem is roughly a curie. Activity alone does not determine biological hazard, which depends on the decay energy, the radiation type, and whether the source is external or ingested."
+      },
+
+      {
+        "question": "The solar constant — the power per unit area received from the Sun at the Earth's orbit — is about 1,360 W/m². What is the approximate power per unit area received at the orbit of a planet 2.0 astronomical units from the Sun?",
+        "choices": [
+          "170 W/m²",
+          "340 W/m²",
+          "680 W/m²",
+          "1,360 W/m²",
+          "2,720 W/m²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe Sun radiates isotropically, so its total power spreads over a sphere whose area grows as the square of the distance. The intensity therefore obeys an inverse-square law:\nS ∝ 1/d².\nDoubling the distance divides the intensity by 4:\nS = 1,360/4 = 340 W/m².\n\nNUMERICS WITHOUT A CALCULATOR\nOne division: 1,360/4 = 340.\nThe distractor 680 W/m² halves rather than quarters, forgetting to square the distance ratio — the standard error whenever an inverse-square law is applied. The distractor 170 W/m² divides by 8, treating the falloff as 1/d³.\nThe physical picture that prevents the error: the same total power passes through every sphere centered on the Sun, and a sphere of twice the radius has four times the area, so the power per unit area is one quarter.\nThis scaling also fixes planetary temperatures. Since a planet's equilibrium temperature satisfies T⁴ ∝ S ∝ 1/d², we get T ∝ 1/√d — so a planet at 2 AU sits at 1/√2 ≈ 0.71 of Earth's equilibrium temperature, roughly 200 K rather than 280 K.\n\n90-SECOND SOLUTION\nIntensity falls as 1/d², so doubling the distance gives 1,360/4 = 340 W/m².\n\nWHAT TO MEMORIZE\nAny isotropic source obeys S = P/(4πd²), so intensity falls as the inverse square of distance — the same law governing gravity, electrostatics, sound intensity, and apparent brightness. Run backwards, it gives the source's total output: the Sun's luminosity is L = 4π(1.5 × 10¹¹)²(1,360) ≈ 3.8 × 10²⁶ W, worth carrying as an anchor. Combining the inverse-square law with Stefan-Boltzmann gives planetary equilibrium temperature T ∝ 1/√d, which sets the rough scale of the habitable zone. In astronomy the same relation connects apparent and absolute magnitude through the distance modulus."
+      },
+
+      {
+        "question": "A nucleus of mass number 200, initially at rest, emits an alpha particle. The total energy released in the decay is 5.0 MeV. What is the kinetic energy of the alpha particle?",
+        "choices": [
+          "0.10 MeV",
+          "2.5 MeV",
+          "4.9 MeV",
+          "5.0 MeV",
+          "5.1 MeV"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe parent is at rest, so the alpha and the recoiling daughter carry equal and opposite momenta:\np_α = p_D = p.\nEach kinetic energy is K = p²/2m, so with the SAME momentum the energies are inversely proportional to the masses:\nK_α/K_D = m_D/m_α.\nThe daughter has mass number 200 − 4 = 196 and the alpha has 4, so the alpha takes the fraction\nK_α = Q × m_D/(m_D + m_α) = Q × 196/200 = 5.0 × 0.98 = 4.9 MeV.\nThe daughter keeps the remaining 0.1 MeV.\n\nNUMERICS WITHOUT A CALCULATOR\nThe fraction 196/200 = 0.98, so the alpha takes 98% of the released energy: 4.9 MeV.\nThe general rule is worth stating cleanly: in a two-body breakup from rest, the LIGHTER fragment carries almost all the kinetic energy, because equal momenta shared between unequal masses put the energy where the mass is small.\nThe distractor 5.0 MeV ignores the recoil entirely — a good approximation but not the exact answer the question asks for. The distractor 2.5 MeV splits the energy evenly, which would be right only for equal masses. The distractor 0.10 MeV is the DAUGHTER's recoil energy, correctly computed but for the wrong particle. And 5.1 MeV exceeds Q, which energy conservation forbids.\nStructural check: the alpha's energy must be slightly BELOW Q, never above, since the daughter must carry something away.\n\n90-SECOND SOLUTION\nEqual momenta give K ∝ 1/m, so K_α = Q(A−4)/A = 5.0(196/200) = 4.9 MeV.\n\nWHAT TO MEMORIZE\nIn any two-body decay from rest, momentum conservation forces equal and opposite momenta, so the kinetic energies divide inversely with mass: the light fragment takes the fraction m_heavy/(m_total). For alpha decay of a heavy nucleus that fraction is about (A−4)/A ≈ 98%, which is why measured alpha energies are very slightly below the Q value and why alpha spectra are sharp LINES — a two-body decay has a unique energy for each fragment. Beta decay is the instructive contrast: it is a three-body decay including a neutrino, so the electron energy is a continuous spectrum up to an endpoint, and it was precisely that continuum that led Pauli to postulate the neutrino."
+      },
+
+      {
+        "question": "A beam of particles passes through a foil 1.0 cm thick containing 1.0 × 10²² nuclei per cubic centimeter. A fraction 2.0 × 10⁻⁴ of the beam is scattered out. What is the scattering cross section per nucleus?",
+        "choices": [
+          "2.0 × 10⁻²⁶ cm²",
+          "2.0 × 10⁻²⁴ cm²",
+          "2.0 × 10⁻²² cm²",
+          "2.0 × 10⁻¹⁸ cm²",
+          "2.0 × 10⁻¹⁴ cm²"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a thin target, in which the scattered fraction is small and nuclei do not shadow one another, the fraction removed from the beam is\nf = nσt,\nwhere n is the number density of scattering centers, σ the cross section per nucleus, and t the thickness. This is just the statement that σ is the effective blocked area per nucleus, and nt is the number of nuclei per unit area of the foil.\nSolving:\nσ = f/(nt) = (2.0 × 10⁻⁴)/[(1.0 × 10²²)(1.0)] = 2.0 × 10⁻²⁶ cm².\n\nNUMERICS WITHOUT A CALCULATOR\nOnly the exponents need care: 10⁻⁴/10²² = 10⁻²⁶, and the mantissa stays 2.0.\nThe choices differ only in the power of ten, so the entire task is bookkeeping, and the way to keep it straight is to check the units: σ must come out in cm², and f is dimensionless while nt has units of cm⁻³ × cm = cm⁻². Dividing a pure number by cm⁻² gives cm². ✓\nSanity check on the magnitude: a nuclear cross section of geometric size is about π(10⁻¹² cm)² ≈ 3 × 10⁻²⁴ cm², which is 1 barn. The answer here, 2 × 10⁻²⁶ cm² = 0.02 barn, is well below geometric — reasonable for a process that is not a simple hard-sphere collision.\n\n90-SECOND SOLUTION\nf = nσt, so σ = f/(nt) = 2.0 × 10⁻⁴/(10²² × 1.0) = 2.0 × 10⁻²⁶ cm².\n\nWHAT TO MEMORIZE\nThe thin-target relation f = nσt gives the scattered fraction, and it is the basis of every cross-section measurement; the areal density nt (nuclei per cm²) is the quantity that actually matters, so a thin dense foil and a thick thin one behave identically. For a thick target the exponential form I = I₀e^(−nσt) takes over, reducing to f = nσt when nσt ≪ 1. The natural unit is the barn, 10⁻²⁴ cm², chosen to be roughly the geometric area of a heavy nucleus. A differential cross section dσ/dΩ, quoted per steradian, requires dividing further by the detector's solid angle."
+      },
+
+      {
+        "question": "Nuclear radii follow R = r₀A^(1/3) with r₀ ≈ 1.2 fm. What is the approximate radius of a nucleus with mass number 125?",
+        "choices": [
+          "1.2 fm",
+          "6.0 fm",
+          "24 fm",
+          "150 fm",
+          "600 fm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nApply the empirical relation directly:\nR = r₀A^(1/3) = (1.2 fm)(125)^(1/3).\nSince 5³ = 125, the cube root is exactly 5:\nR = (1.2)(5) = 6.0 fm.\n\nNUMERICS WITHOUT A CALCULATOR\nThe mass number was chosen as a perfect cube, so the only step is recognizing 125^(1/3) = 5 and multiplying by 1.2.\nThe distractor 150 fm multiplies by A instead of A^(1/3) — the error the question targets, since forgetting the cube root inflates the answer by more than a factor of 20. The distractor 24 fm uses A^(1/2) roughly, and 1.2 fm ignores the mass number entirely, reporting r₀ itself.\nThe physical anchor: all nuclei have radii of a few femtometres, from about 1.2 fm for a single proton up to about 7.4 fm for uranium. Any answer outside the 1–10 fm range is wrong on inspection, which eliminates the two largest choices immediately.\nThe A^(1/3) dependence has a direct physical meaning worth stating: R³ ∝ A means the VOLUME is proportional to the number of nucleons, so nuclear matter has a constant density regardless of size — nucleons pack like incompressible spheres rather than compressing as more are added.\n\n90-SECOND SOLUTION\nR = 1.2A^(1/3) = 1.2(125)^(1/3) = 1.2 × 5 = 6.0 fm.\n\nWHAT TO MEMORIZE\nNuclear radii obey R = r₀A^(1/3) with r₀ ≈ 1.2 fm, so all nuclei span roughly 1–7.5 fm and nuclear density is essentially constant at about 2.3 × 10¹⁷ kg/m³. The cube-root scaling is the fingerprint of constant density, and it explains why the surface term in the semi-empirical mass formula goes as A^(2/3) (surface area) while the Coulomb term goes as Z²/A^(1/3). Useful cubes to recognize on sight: 27, 64, 125, and 216 give cube roots 3, 4, 5, and 6. Compare with atomic radii of about 10⁵ fm — the nucleus occupies roughly 10⁻¹⁵ of the atom's volume."
+      },
+
+      {
+        "question": "X-rays of wavelength 0.10 nm are used in a Bragg experiment on a crystal with plane spacing 0.28 nm. How many diffraction orders can in principle be observed from this set of planes?",
+        "choices": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe Bragg condition is\nnλ = 2d sin θ.\nSince sin θ can never exceed 1, the constraint on the order n is\nn ≤ 2d/λ = 2(0.28)/0.10 = 5.6.\nBecause n must be a positive integer, the observable orders are n = 1, 2, 3, 4, 5 — five of them. The sixth would require sin θ = 6(0.10)/(2 × 0.28) = 1.07, which is impossible.\n\nNUMERICS WITHOUT A CALCULATOR\nOne division: 0.56/0.10 = 5.6, then take the floor.\nThe important step is recognizing that the physical constraint is sin θ ≤ 1, and that it caps the order rather than the angle. Setting sin θ = 1 corresponds to grazing incidence, the extreme geometry beyond which no reflection exists.\nThe distractor 6 comes from rounding 5.6 up instead of taking the floor — the order must be an integer no greater than 5.6, and 6 exceeds it. The distractor 2 might come from computing d/λ = 2.8 and flooring that, forgetting the factor of 2 in the Bragg condition.\nNote that this counts orders geometrically ALLOWED; in a real crystal, structure factors can extinguish some of them, so the number actually seen may be smaller.\n\n90-SECOND SOLUTION\nn ≤ 2d/λ = 0.56/0.10 = 5.6, so orders n = 1 through 5 are possible: five orders.\n\nWHAT TO MEMORIZE\nBragg's law nλ = 2d sin θ with the constraint sin θ ≤ 1 gives two standard results: the highest observable order is the largest integer n ≤ 2d/λ, and the longest usable wavelength is λ_max = 2d, beyond which no Bragg reflection of any order exists. That second result is why X-rays rather than visible light are needed for crystallography — a 500 nm photon cannot diffract from planes 0.3 nm apart. The angle θ in Bragg's law is measured from the PLANE, not from the normal, which is the opposite of the optics convention and a frequent source of error."
+      },
+
+      {
+        "question": "A nearby star is observed to have an annual parallax of 0.020 arcseconds. What is its distance?",
+        "choices": [
+          "0.020 pc",
+          "2.0 pc",
+          "20 pc",
+          "50 pc",
+          "500 pc"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe parsec is defined precisely so that this conversion is a reciprocal: a star at one parsec has an annual parallax of one arcsecond. In general\nd (in parsecs) = 1/p (in arcseconds).\nWith p = 0.020 arcsec:\nd = 1/0.020 = 50 pc.\n\nNUMERICS WITHOUT A CALCULATOR\nOne reciprocal: 1/0.02 = 50.\nThe distractor 0.020 pc reports the parallax itself rather than its reciprocal, and 20 pc inverts 0.05 instead — both are failures to carry out the single required operation, which is why the question is really a test of whether the definition is known rather than of arithmetic.\nThe definition is worth reconstructing rather than memorizing blindly. Parallax is the angular shift of a nearby star against the distant background as the Earth moves from one side of its orbit to the other; the angle p is measured over a baseline of 1 AU (half the full annual swing). For small angles, p = (1 AU)/d, so a smaller parallax means a more distant star. Setting p = 1 arcsecond defines 1 parsec = 1 AU/(1 arcsec in radians) ≈ 3.09 × 10¹⁶ m ≈ 3.26 light-years.\nNote that parallax angles are tiny: even the nearest star has p well under 1 arcsecond, so every stellar distance in parsecs exceeds 1.\n\n90-SECOND SOLUTION\nd = 1/p with d in parsecs and p in arcseconds: 1/0.020 = 50 pc.\n\nWHAT TO MEMORIZE\nParallax distance is d(pc) = 1/p(arcsec) — the defining relation of the parsec, which equals 3.26 light-years or 3.09 × 10¹⁶ m. Because the method depends on measuring ever-smaller angles, its reach is set by angular precision: ground-based work manages roughly 100 pc, while space astrometry extends it by orders of magnitude. Parallax is the first rung of the cosmic distance ladder, calibrating the standard candles — Cepheid variables and Type Ia supernovae — used at greater distances, so the entire extragalactic distance scale ultimately rests on this simple reciprocal."
+      },
+
+      {
+        "question": "In a certain metal the conduction electrons behave as though they had an effective mass m* = 0.20 m_e. A magnetic field of 0.50 T is applied. Taking e = 1.6 × 10⁻¹⁹ C and m_e = 9.1 × 10⁻³¹ kg, what is the approximate cyclotron angular frequency?",
+        "choices": [
+          "8.8 × 10⁸ rad/s",
+          "8.8 × 10⁹ rad/s",
+          "4.4 × 10¹⁰ rad/s",
+          "8.8 × 10¹⁰ rad/s",
+          "4.4 × 10¹¹ rad/s"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA charge moving in a magnetic field circles at the cyclotron frequency, which for a carrier of effective mass m* is\nω_c = eB/m*.\nWith m* = 0.20 m_e = 0.20 × 9.1 × 10⁻³¹ = 1.82 × 10⁻³¹ kg:\nω_c = (1.6 × 10⁻¹⁹)(0.50)/(1.82 × 10⁻³¹) = (8.0 × 10⁻²⁰)/(1.82 × 10⁻³¹) ≈ 4.4 × 10¹¹ rad/s.\n\nNUMERICS WITHOUT A CALCULATOR\nWork the free-electron value first and then correct. For a bare electron, e/m_e ≈ 1.76 × 10¹¹ C/kg — a constant worth carrying, since it appears throughout electron optics and magnetic resonance. Then\nω_c = (e/m_e)(B)(m_e/m*) = (1.76 × 10¹¹)(0.50)(1/0.20) = (1.76 × 10¹¹)(2.5) ≈ 4.4 × 10¹¹ rad/s.\nThat route replaces the awkward division by two easy multiplications.\nThe distractor 8.8 × 10¹⁰ rad/s is the free-electron result at this field, omitting the effective-mass enhancement — the specific check the question is built around, since a smaller effective mass RAISES the frequency. Every smaller choice corresponds to a heavier carrier, and none of them can be right once you see that m* < m_e must push the frequency UP.\nStructural check: m* < m_e means the carriers respond more readily to the field, so ω_c must exceed the free-electron value.\n\n90-SECOND SOLUTION\nω_c = eB/m* = (e/m_e)B(m_e/m*) = (1.76 × 10¹¹)(0.50)(5) ≈ 4.4 × 10¹¹ rad/s.\n\nWHAT TO MEMORIZE\nThe cyclotron frequency ω_c = qB/m is independent of speed and orbit radius — the property that makes a cyclotron work — and in a solid the band curvature replaces the free mass with the effective mass m*, defined by 1/m* = (1/ħ²)d²E/dk². Measuring ω_c by cyclotron resonance is therefore a direct experimental determination of m*, and it is one of the standard probes of band structure. Carry e/m_e ≈ 1.76 × 10¹¹ C/kg. Note that m* can be much smaller than m_e (raising ω_c), much larger in heavy-fermion materials, and even NEGATIVE near the top of a band — the situation described instead by positively charged holes."
+      },
+
+      {
+        "question": "A distant galaxy is observed with a cosmological redshift of z = 0.070. Taking the Hubble constant to be 70 km/s per megaparsec and c = 3.0 × 10⁵ km/s, what is the approximate distance to the galaxy?",
+        "choices": [
+          "21 Mpc",
+          "43 Mpc",
+          "70 Mpc",
+          "150 Mpc",
+          "300 Mpc"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor small redshifts the recession speed follows from the non-relativistic Doppler relation\nv ≈ zc = (0.070)(3.0 × 10⁵) = 2.1 × 10⁴ km/s.\nHubble's law then gives the distance:\nd = v/H₀ = (2.1 × 10⁴ km/s)/(70 km/s per Mpc) = 300 Mpc.\n\nNUMERICS WITHOUT A CALCULATOR\nBoth steps are clean: 0.07 × 3 × 10⁵ = 2.1 × 10⁴, and 21,000/70 = 300.\nThe distractor 21 Mpc drops a factor of 10³ somewhere in the speed, and 70 Mpc simply reports the numerical value of H₀ as though it were a distance. Because the units mix kilometres, megaparsecs and seconds, careful bookkeeping is the whole task — as it usually is in cosmology problems.\nA shortcut worth carrying: the Hubble distance c/H₀ = 3 × 10⁵/70 ≈ 4,300 Mpc sets the scale of the observable universe. Then d = z × (c/H₀) = 0.070 × 4,300 ≈ 300 Mpc in a single multiplication, which is faster and makes the structure clear — distance is just redshift measured in units of the Hubble distance.\nNote z = 0.070 is small, so the non-relativistic approximation v = zc is fine; at z near 1 the relativistic formula is needed, and beyond that the answer depends on the expansion history.\n\n90-SECOND SOLUTION\nd = z(c/H₀) = 0.070 × (3 × 10⁵/70) = 0.070 × 4,300 ≈ 300 Mpc.\n\nWHAT TO MEMORIZE\nHubble's law v = H₀d with v ≈ zc for small z gives d ≈ z c/H₀, where the Hubble distance c/H₀ ≈ 4,300 Mpc ≈ 14 billion light-years is the useful anchor. The inverse 1/H₀ ≈ 14 billion years is the Hubble time, a rough estimate of the age of the universe. Cosmological redshift is not a Doppler shift through space but a stretching of wavelength by the expansion itself, with 1 + z = a_now/a_then; for small z the two pictures agree numerically, which is why the simple formula works. At large z the relation between redshift and distance depends on the matter and dark-energy content, which is how supernova surveys detected the accelerating expansion."
+      },
+
+      {
+        "question": "A 3 × 3 matrix has trace 6 and determinant 6, and one of its eigenvalues is known to be 1. What are the other two eigenvalues?",
+        "choices": [
+          "1 and 4",
+          "2 and 3",
+          "2 and 4",
+          "3 and 3",
+          "−1 and 6"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTwo invariants connect a matrix to its eigenvalues, whatever its size: the TRACE equals their sum, and the DETERMINANT equals their product.\nLet the unknown eigenvalues be λ₂ and λ₃, with λ₁ = 1 given.\nFrom the trace: 1 + λ₂ + λ₃ = 6 → λ₂ + λ₃ = 5.\nFrom the determinant: (1)(λ₂)(λ₃) = 6 → λ₂λ₃ = 6.\nSo we need two numbers summing to 5 and multiplying to 6 — namely 2 and 3.\n\nNUMERICS WITHOUT A CALCULATOR\nNo determinant expansion is needed at all: the two invariants reduce the problem to a pair of simultaneous conditions that can be checked against the choices directly.\nTest each option against BOTH conditions, since either alone is insufficient. Sum 5: \"1 and 4\" ✓, \"2 and 3\" ✓, \"3 and 3\" gives 6 ✗, \"2 and 4\" gives 6 ✗, \"−1 and 6\" gives 5 ✓. Three survive. Now the product 6: (1)(4) = 4 ✗, (2)(3) = 6 ✓, (−1)(6) = −6 ✗. Only one remains.\nFormally, λ₂ and λ₃ are roots of λ² − 5λ + 6 = 0, which factors as (λ − 2)(λ − 3).\nThe distractors are built so that each satisfies exactly one of the two conditions — which is the point. Checking only the trace, or only the determinant, leaves you with a wrong answer that looks confirmed.\n\n90-SECOND SOLUTION\nTrace gives λ₂ + λ₃ = 5, determinant gives λ₂λ₃ = 6, so they are the roots of λ² − 5λ + 6: namely 2 and 3.\n\nWHAT TO MEMORIZE\nFor any n × n matrix, the trace is the sum of the eigenvalues and the determinant is their product — both invariant under similarity transformations, so they can be read off in any basis. These two facts alone solve most small eigenvalue problems faster than the characteristic polynomial, and they provide an instant check on any eigenvalue calculation. Two consequences worth carrying: a zero determinant means at least one eigenvalue is zero, so the matrix is singular and non-invertible; and for a Hermitian matrix all eigenvalues are real, so a complex result signals an error. The full characteristic polynomial for 3 × 3 is λ³ − (tr)λ² + (sum of principal 2×2 minors)λ − det = 0."
+      },
+
+      {
+        "question": "A periodic function f(t) satisfies f(t + T/2) = −f(t), where T is its period. Which harmonics appear in its Fourier series?",
+        "choices": [
+          "Only the odd harmonics",
+          "Only the fundamental",
+          "Only the even harmonics",
+          "All harmonics, but with only sine terms",
+          "All harmonics equally"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe condition f(t + T/2) = −f(t) is called half-wave antisymmetry: shifting by half a period inverts the function.\nTest a general harmonic cos(nωt) or sin(nωt), where ω = 2π/T. Shifting by T/2 advances the phase of the nth harmonic by\nnω(T/2) = n(2π/T)(T/2) = nπ.\nSo each harmonic is multiplied by cos(nπ) = (−1)ⁿ under the shift.\nFor ODD n this factor is −1, matching the required inversion, so odd harmonics are permitted.\nFor EVEN n it is +1, meaning those harmonics are unchanged by the shift and therefore cannot appear in a function that must invert.\nOnly odd harmonics survive.\n\nNUMERICS WITHOUT A CALCULATOR\nThe single computation is the phase shift nπ, and the entire result follows from the sign of (−1)ⁿ.\nThe physical check is easier still: a square wave and a triangle wave both satisfy this antisymmetry, and both are known to contain only odd harmonics — the square wave's series runs 1, 1/3, 1/5, … and the triangle's 1, 1/9, 1/25, ….\nTwo symmetries are worth keeping distinct, since they constrain different things. EVEN symmetry f(−t) = f(t) kills all sine terms, leaving cosines; ODD symmetry f(−t) = −f(t) kills all cosine terms, leaving sines. Half-wave antisymmetry is independent of both and kills the even HARMONICS regardless of sine or cosine — which is why choice D, describing odd symmetry, is the tempting wrong answer here. The two can hold simultaneously, as they do for the square wave.\n\n90-SECOND SOLUTION\nShifting by T/2 multiplies the nth harmonic by (−1)ⁿ, so only odd n can satisfy f(t + T/2) = −f(t).\n\nWHAT TO MEMORIZE\nThree Fourier symmetries do most of the work on inspection: even f(−t) = f(t) leaves only cosine terms; odd f(−t) = −f(t) leaves only sine terms; and half-wave antisymmetry f(t + T/2) = −f(t) leaves only odd harmonics, including killing the DC term. Recognizing a symmetry before computing eliminates half the integrals. Coefficient magnitudes also follow a rule of thumb: the smoother the waveform, the faster the coefficients decay — a discontinuous square wave falls off as 1/n, a continuous triangle wave with discontinuous slope as 1/n², and each additional degree of smoothness adds a power of n."
+      },
+
+      {
+        "question": "A metal crystallizes in a face-centered cubic structure with conventional cell edge 0.40 nm. Its molar mass is 60 g/mol. Taking Avogadro's number to be 6.0 × 10²³ /mol, what is its density?",
+        "choices": [
+          "1.6 g/cm³",
+          "3.1 g/cm³",
+          "6.2 g/cm³",
+          "12 g/cm³",
+          "25 g/cm³"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFirst count the atoms per conventional cell. An fcc cell has 8 corner atoms each shared among 8 cells, contributing 8 × (1/8) = 1, plus 6 face atoms each shared between 2 cells, contributing 6 × (1/2) = 3. The total is 4 atoms per cell.\nThe mass of the cell is those 4 atoms:\nm = 4M/N_A = 4(60)/(6.0 × 10²³) = 4.0 × 10⁻²² g.\nThe cell volume, with a = 0.40 nm = 4.0 × 10⁻⁸ cm, is\nV = a³ = (4.0 × 10⁻⁸)³ = 6.4 × 10⁻²³ cm³.\nTherefore\nρ = m/V = 4.0 × 10⁻²²/6.4 × 10⁻²³ ≈ 6.2 g/cm³.\n\nNUMERICS WITHOUT A CALCULATOR\nConvert the edge to centimetres first — 0.40 nm = 4.0 × 10⁻⁸ cm — since densities are quoted per cm³ and the unit change is where most errors enter.\nThen 4³ = 64, so V = 64 × 10⁻²⁴ = 6.4 × 10⁻²³ cm³. The mass is 240/6 × 10⁻²³ = 40 × 10⁻²³ = 4.0 × 10⁻²² g. Dividing: 40/6.4 ≈ 6.2.\nThe distractor 1.6 g/cm³ uses 1 atom per cell instead of 4 — treating the conventional cell as if it were primitive, which is the central error the question tests. The distractor 12 g/cm³ uses 8 atoms per cell, double-counting the shared atoms rather than dividing their contributions.\nSanity check: a few g/cm³ is the right neighbourhood for a light metal, so the magnitude is plausible.\n\n90-SECOND SOLUTION\nfcc has 4 atoms per cell: ρ = 4M/(N_A a³) = 4(60)/[(6 × 10²³)(6.4 × 10⁻²³)] ≈ 6.2 g/cm³.\n\nWHAT TO MEMORIZE\nThe atom count per conventional cubic cell — simple cubic 1, bcc 2, fcc 4, diamond 8 — follows from sharing: corner atoms count 1/8, face atoms 1/2, edge atoms 1/4, and interior atoms fully. Then ρ = (atoms per cell)M/(N_A a³) connects a measured density to a lattice constant, and running it backwards from an X-ray diffraction measurement of a is the standard way to confirm a proposed structure. Related quantities follow from the same counting: the packing fractions are 52% for simple cubic, 68% for bcc, and 74% for fcc — the densest possible for identical spheres. Always convert the lattice constant to centimetres before cubing."
+      }
+
+    ]
+  },
+
 
   {
     "name": "General Practice Set 1",
