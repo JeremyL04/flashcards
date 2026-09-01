@@ -11510,5 +11510,545 @@ const EXAMS = [
       }
 
     ]
+  },
+
+
+  {
+    "name": "Focused Test 1",
+    "added": "2026-08-31",
+    "category": "practice",
+    "cards": [
+
+      {
+        "question": "A string of length L is held fixed at x = 0. Its other end at x = L is attached to a massless ring that slides without friction on a vertical rod, so that end is free to move transversely. Consider the following wavelengths: I. 4L    II. 2L    III. 4L/3. Which can be the wavelength of a standing wave on this string?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and III only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe fixed end must be a displacement node. The frictionless massless ring cannot support a transverse force, so the string must meet the rod at right angles: that end is a displacement antinode.\n\nThe shortest distance from a node to an antinode is a quarter wavelength, and successive modes add half wavelengths. So L = λ/4, 3λ/4, 5λ/4, … that is, L = nλ/4 with n odd. Inverting, λ = 4L/n for odd n: 4L, 4L/3, 4L/5, and so on.\n\nStatement I gives λ = 4L, the fundamental (n = 1). Statement III gives 4L/3, the next allowed mode (n = 3). Statement II gives 2L, which would require L = λ/2 — a node at both ends, which this string does not have. So I and III only.\n\n90-SECOND SOLUTION\nCount the boundary conditions before writing any formula. Node-node or antinode-antinode gives L = nλ/2 and the full harmonic series. Node-antinode gives L = nλ/4 with odd n only, so the even harmonics are absent entirely.\n\nStatement II is the trap and it is the fundamental of the *fixed-fixed* string of the same length — the most familiar standing wave there is, which is exactly why it is tempting. Recognizing that this string has one free end is the whole question.\n\nThe same structure governs a pipe closed at one end and open at the other, which likewise sounds only odd harmonics and whose fundamental is an octave below the open pipe of equal length. That missing even-harmonic series is audible as a difference in timbre, not merely a bookkeeping detail.\n\nWHAT TO MEMORIZE\nBoth ends the same (node-node or antinode-antinode): λ = 2L/n, all n. Ends different (node-antinode): λ = 4L/n, odd n only, so the fundamental is 4L and even harmonics are missing. The boundary conditions alone fix which series applies."
+      },
+
+      {
+        "question": "A hydrogen-like ion (a nucleus of charge Ze with a single bound electron) emits a photon of energy 40.8 eV in the transition from n = 2 to n = 1. The value of Z is",
+        "choices": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "6"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a hydrogen-like ion, E_n = −13.6 Z²/n² eV. The 2 → 1 transition releases E = 13.6 Z²(1/1² − 1/2²) = 13.6 Z²(3/4) = 10.2 Z² eV. Setting 10.2 Z² = 40.8 gives Z² = 4, so Z = 2. The ion is singly ionized helium, He⁺.\n\nNUMERICS WITHOUT A CALCULATOR\nThe number to recognize is 10.2 eV — the Lyman-alpha energy of ordinary hydrogen, and one of the handful of atomic energies worth carrying. Then 40.8/10.2 = 4 exactly, and the square root is immediate. If you did not recall 10.2, build it: 13.6 × ¾ = 10.2.\n\n90-SECOND SOLUTION\nEverything in a hydrogen-like ion scales as Z², so the ratio to hydrogen's own 2 → 1 line answers the question directly. 40.8/10.2 = 4 means the energies are four times hydrogen's, and four is Z², not Z.\n\nThat is exactly why 4 sits at D: it is the correct answer to \"by what factor are the energies larger,\" a question one step short of the one asked. Choice A is hydrogen itself, correct if you misread the photon energy as 10.2 eV.\n\nA useful sanity check: He⁺ at 40.8 eV is in the extreme ultraviolet, and its Lyman-alpha line at 30.4 nm is a standard solar spectroscopy line — a real feature, not a contrived number.\n\nWHAT TO MEMORIZE\nE_n = −13.6 Z²/n² eV. Energies scale as Z², radii as 1/Z. Hydrogen anchors worth holding: ionization 13.6 eV, Lyman-alpha 10.2 eV at 122 nm, Balmer-alpha 1.89 eV at 656 nm."
+      },
+
+      {
+        "question": "A satellite is in a circular orbit about the Earth. The engine is fired briefly in the direction of motion, giving the satellite a small increase in speed with no change in direction. Immediately afterward, the satellite's orbit is",
+        "choices": [
+          "an ellipse whose closest approach to the Earth is at the point where the engine was fired",
+          "a circle of larger radius",
+          "an ellipse whose farthest point from the Earth is at the point where the engine was fired",
+          "a circle of the same radius but with a shorter period",
+          "a parabola, so the satellite escapes"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe burn is instantaneous, so the satellite's position is unchanged at that instant; only its speed increases. The orbit must therefore still pass through that point, which rules out any circle of different radius. With more kinetic energy at the same radius, the total energy is less negative, so the semimajor axis grows — but the burn point remains on the orbit. A point that lies on an enlarged ellipse and is closer to the focus than the new semimajor axis must be the perigee. The satellite climbs away from the burn point and returns to it one period later.\n\n90-SECOND SOLUTION\nUse the constraint that the orbit must contain the burn point. That single observation eliminates B and D immediately: the satellite is still exactly where it was, so no orbit that excludes that radius is possible.\n\nThen ask whether the burn point is the near or far end. Speeding up adds energy, so the satellite can only move outward from here — this point is the closest it will get. Choice C is the same reasoning run backward and is the correct answer to a *retrograde* burn, where slowing down makes the current point the farthest.\n\nChoice E requires reaching escape speed, a factor of √2 in speed or a 41% increase, and the problem specifies a small increase.\n\nWHAT TO MEMORIZE\nAn impulsive burn leaves position unchanged, so the burn point stays on the new orbit. Prograde burn → that point becomes perigee and the orbit rises opposite it. Retrograde → it becomes apogee. Escape requires v ≥ √2 v_circ. Raising an orbit takes two burns, which is why transfers are elliptical."
+      },
+
+      {
+        "question": "A parallel-plate capacitor is connected to a battery of fixed voltage and remains connected while a slab of dielectric constant K = 3 is slid in to completely fill the gap. The energy stored in the capacitor",
+        "choices": [
+          "decreases by a factor of 3",
+          "decreases by a factor of 9",
+          "is unchanged",
+          "increases by a factor of 3",
+          "increases by a factor of 9"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe battery stays connected, so V is clamped. The capacitance rises to C′ = KC = 3C. Using the form of the energy that holds V fixed, U = ½CV², the stored energy becomes U′ = ½(3C)V² = 3U. It increases by a factor of 3, and the extra energy is supplied by the battery, which also pushes additional charge Q′ = 3Q onto the plates.\n\n90-SECOND SOLUTION\nIdentify what is clamped before choosing a formula. Both U = ½CV² and U = Q²/2C are correct, but they give opposite-looking answers, and only one has a constant on the right-hand side in this problem.\n\nBattery connected → V fixed → use ½CV² → U rises by K.\nBattery disconnected → Q fixed → use Q²/2C → U falls by K.\n\nChoice A is not a random distractor: it is the exactly correct answer to the disconnected version of this problem, which is the version most often drilled, because there the slab is pulled *in* by the field and the energy drops. Deciding which of the two problems you are reading is the entire question.\n\nThe physical difference is real. With the battery attached, work is done by the battery; the field energy density is unchanged but the volume of polarized material and the charge both grow.\n\nWHAT TO MEMORIZE\nBattery connected: V fixed, C → KC, Q → KQ, U → KU, E unchanged. Battery disconnected: Q fixed, C → KC, V → V/K, U → U/K, E → E/K. Write down which quantity is clamped before writing any formula."
+      },
+
+      {
+        "question": "An intrinsic semiconductor has a band gap of 1.1 eV. Its intrinsic carrier concentration varies as n_i ∝ e^(−E_g/2kT). By approximately what factor does n_i increase when the sample is heated from 300 K to 400 K?",
+        "choices": [
+          "1.3",
+          "2",
+          "14",
+          "50",
+          "200"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe ratio is n_i(400)/n_i(300) = exp[(E_g/2)(1/kT₃₀₀ − 1/kT₄₀₀)]. With kT = 0.0259 eV at 300 K and 0.0345 eV at 400 K, the exponents are E_g/2kT = 1.1/0.0518 = 21.2 and 1.1/0.0690 = 15.9. The difference is 5.3, so the ratio is e^5.3 ≈ 200.\n\nNUMERICS WITHOUT A CALCULATOR\nHold kT = 0.026 eV at 300 K; it scales linearly, so kT = 0.0345 eV at 400 K. The two exponents are then roughly 21 and 16, and only their difference of about 5 matters. Since e^5 = 148 and e^5.3 ≈ 200, the answer is a couple of hundred. Useful anchors: e² ≈ 7.4, e³ ≈ 20, e⁵ ≈ 150.\n\n90-SECOND SOLUTION\nA 33% rise in absolute temperature produces a factor of hundreds because the temperature sits in an exponent with a large coefficient. Recognizing that the answer must be enormous picks the largest choice without evaluating anything.\n\nChoice A, 1.3, is the ratio of the temperatures themselves, the answer if you treat the dependence as linear. Choice C, 14, is what you get by dropping the factor of 2 in the denominator of the exponent — a real and common slip, since the carrier concentration carries E_g/2 while conductivity data are often quoted with an activation energy of E_g/2 already folded in.\n\nThis exponential sensitivity is why semiconductor devices need thermal management and why a diode's leakage current roughly doubles every 10 K.\n\nWHAT TO MEMORIZE\nn_i ∝ T^(3/2) e^(−E_g/2kT), with the exponential dominating completely; the factor of 2 under E_g is not optional. kT = 0.026 eV at 300 K, scaling linearly with T. In a semiconductor the carrier number wins over falling mobility, so σ rises with T; in a metal the carrier number is fixed and σ falls."
+      },
+
+      {
+        "question": "The mean free path of molecules in a sample of gas is 70 nm at 300 K and 1.0 atm. The gas is then brought to 600 K and 3.0 atm. Its mean free path is now most nearly",
+        "choices": [
+          "23 nm",
+          "47 nm",
+          "70 nm",
+          "105 nm",
+          "210 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe mean free path is ℓ = 1/(√2 nσ), so it depends on the gas only through the number density n. From the ideal gas law n = P/kT, giving ℓ ∝ T/P. Doubling T doubles ℓ; tripling P cuts it to a third. The two effects compose to (2)(1/3) = 2/3, so ℓ = 70 × 2/3 ≈ 47 nm.\n\nNUMERICS WITHOUT A CALCULATOR\n70 × 2/3 = 46.7 ≈ 47 nm. The only real work is getting the direction of each dependence right.\n\n90-SECOND SOLUTION\nThe two changes pull in opposite directions, which is the whole design of the question. Heating spreads the molecules out and lengthens the path; compressing packs them in and shortens it. Since the pressure factor (3) beats the temperature factor (2), the net result must be a decrease, but a modest one — so the answer is a little below 70 nm, and 47 nm is the only such choice.\n\nChoice A, 23 nm, is 70/3: the answer if you track the pressure and forget the temperature. Choice E, 210 nm, is 70 × 3, tracking pressure in the wrong direction. Choice D, 105 nm, is 70 × 3/2, which inverts the composition.\n\nNote what does *not* appear: the molecular diameter, the mass of the molecules, and the mean speed all cancel or never enter. The mean free path is a purely geometric quantity — how far before you hit something — while the collision *rate* does depend on speed and therefore on temperature at fixed density.\n\nWHAT TO MEMORIZE\nℓ = 1/(√2 nσ) and n = P/kT, so ℓ ∝ T/P. Mean free path in air at STP is about 70 nm, roughly 200 molecular diameters. Collision frequency = v̄/ℓ, which does bring in temperature through the speed."
+      },
+
+      {
+        "question": "Two flat glass plates are in contact along one edge and separated by a thin spacer at the other, forming a wedge of air between them. Illuminated from above with light of wavelength 600 nm at normal incidence, the plates show 20 dark fringes across a distance of 1.0 cm measured from the contact edge. The wedge angle is most nearly",
+        "choices": [
+          "1.5 × 10⁻⁴ rad",
+          "3.0 × 10⁻⁴ rad",
+          "6.0 × 10⁻⁴ rad",
+          "1.2 × 10⁻³ rad",
+          "2.4 × 10⁻³ rad"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe interfering beams are the reflection from the bottom of the upper plate (glass → air, high to low, no phase flip) and from the top of the lower plate (air → glass, low to high, flips by π). One net flip, so dark fringes occur where the path difference is a whole number of wavelengths: 2t = mλ, with t the local air gap.\n\nAdjacent dark fringes therefore differ in gap thickness by λ/2. For a wedge of small angle θ, the gap at distance x from the contact edge is t = xθ, so the fringe spacing is Δx = λ/(2θ). Here 20 fringes span 1.0 cm, giving Δx = 5.0 × 10⁻⁴ m, and θ = λ/(2Δx) = (600 × 10⁻⁹)/(1.0 × 10⁻³) = 6.0 × 10⁻⁴ rad.\n\nNUMERICS WITHOUT A CALCULATOR\n1.0 cm / 20 = 5 × 10⁻⁴ m. Then 6 × 10⁻⁷ / 10⁻³ = 6 × 10⁻⁴ rad. Group the exponents first and the mantissa arithmetic disappears.\n\n90-SECOND SOLUTION\nThe index of the glass is never given, and it is never needed — the interfering path lies entirely in the air gap, so only n_air = 1 enters. Any answer that required the glass index would be unanswerable, and noticing that is a fast confirmation you have set the problem up correctly. This is a red herring of exactly the kind the released forms use.\n\nThe contact edge itself is dark, which confirms the phase-flip count: at t = 0 the path difference vanishes but the single π flip remains, giving destructive interference. A bright contact edge would mean the flips cancelled and the whole formula inverts.\n\nChoice D, 1.2 × 10⁻³, is λ/Δx — the answer without the factor of 2 for the round trip across the gap.\n\nWHAT TO MEMORIZE\nAir wedge: dark fringes at 2t = mλ, spacing Δx = λ/(2θ), contact edge dark. Each fringe marks a gap change of λ/2, which makes this a standard flatness test to a fraction of a wavelength. The plate material never enters."
+      },
+
+      {
+        "question": "For atomic hydrogen, the ratio of the shortest wavelength in the Lyman series to the shortest wavelength in the Balmer series is",
+        "choices": [
+          "1/4",
+          "4/9",
+          "1",
+          "4",
+          "9"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe shortest wavelength in a series is its limit, the transition from n = ∞ to the series floor n_f. That photon energy is the binding energy of the floor level, E = 13.6/n_f² eV, so the limiting wavelength is λ_limit = hc n_f²/13.6, proportional to n_f².\n\nFor Lyman n_f = 1 and for Balmer n_f = 2, so the ratio is 1²/2² = 1/4. In numbers, 91.2 nm / 364.6 nm = 0.25.\n\n90-SECOND SOLUTION\nOnce you recognize that both wavelengths are series limits, the entire calculation is n_f², because the ∞ end contributes nothing to either. No Rydberg arithmetic is required at all.\n\nThe direction is worth checking physically rather than algebraically: Lyman transitions end on the ground state and are the most energetic in hydrogen, so they must have the *shortest* wavelengths. The ratio is therefore less than 1, which eliminates three of the five choices immediately.\n\nChoice D, 4, is the same ratio inverted — the answer to the Balmer-to-Lyman version. Choice B, 4/9, is the Balmer-to-Paschen limit ratio, correct for a different pair of series. Choice E, 9, comes from using n_f = 3 for Balmer, an off-by-one in the series floor.\n\nBe careful to distinguish this from the *longest* wavelength in each series, which comes from the smallest jump (n_f + 1 → n_f) and gives a much less tidy ratio.\n\nWHAT TO MEMORIZE\nSeries limit wavelength ∝ n_f²: Lyman 91 nm, Balmer 365 nm, Paschen 821 nm. Longest wavelength in a series comes from n_f + 1 → n_f; shortest from ∞ → n_f. Lyman is ultraviolet, Balmer straddles the visible, Paschen is infrared."
+      },
+
+      {
+        "question": "A spacecraft is in a circular orbit around a planet. Its speed is suddenly increased by 20 percent, with no change in direction or position. The spacecraft",
+        "choices": [
+          "escapes the planet on a hyperbolic trajectory",
+          "remains bound, and its new orbit is an ellipse",
+          "escapes the planet on a parabolic trajectory",
+          "remains bound, and its new orbit is a circle",
+          "falls back and strikes the planet"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEscape from a circular orbit requires reaching v_esc = √(2GM/r), while the circular speed is v_circ = √(GM/r). Their ratio is exactly √2 ≈ 1.414, so escape demands a speed increase of about 41 percent. A 20 percent increase falls well short, so the spacecraft remains bound with total energy still negative.\n\nIt cannot remain circular, because a circular orbit at that radius requires exactly v_circ, and the speed is now higher. A bound orbit that is not circular is an ellipse, with the burn point as its perigee.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only number needed is √2 = 1.414, so the escape threshold is a 41.4 percent increase. Compare 20 to 41 and the question is settled.\n\n90-SECOND SOLUTION\nThis is a threshold question, and the whole difficulty is knowing where the threshold sits. Many students carry \"escape speed is √2 times orbital speed\" as a fact but do not convert it into the 41 percent margin, and 20 percent *feels* like a lot.\n\nChoices A and C are what you get by placing the threshold too low; note also that they are mutually exclusive in a way worth reading carefully, since parabolic means exactly at escape speed while hyperbolic means above it. A burn that just reached escape would be parabolic, and anything more would be hyperbolic — no single burn gives \"escape\" ambiguously.\n\nChoice E has the sign of the energy change backward: speeding up raises the orbit, it does not lower it. The spacecraft's new perigee is exactly where it is now, so it cannot come any closer to the planet than it already is.\n\nWHAT TO MEMORIZE\nv_esc = √2 v_circ, so escape needs a 41.4 percent speed increase from a circular orbit. Energy sign determines the conic: E < 0 ellipse, E = 0 parabola, E > 0 hyperbola. A prograde burn makes the current point perigee."
+      },
+
+      {
+        "question": "A parallel-plate capacitor carries free charge of surface density σ_f on its plates and is completely filled with a linear dielectric of dielectric constant K = 5. The magnitude of the bound surface charge density that appears on the dielectric face adjacent to a plate, expressed as a fraction of σ_f, is",
+        "choices": [
+          "0.20",
+          "0.25",
+          "0.50",
+          "0.75",
+          "0.80"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nInside the dielectric, Gauss's law for D gives D = σ_f, so the field is E = σ_f/(Kε₀). The polarization is P = ε₀(K − 1)E = ε₀(K − 1)σ_f/(Kε₀) = σ_f(K − 1)/K. The bound surface charge density equals the normal component of P, so σ_b = σ_f(1 − 1/K) = σ_f(1 − 1/5) = 0.80 σ_f.\n\nIts sign is opposite to the free charge on the adjacent plate, which is what partially screens the field and reduces E by the factor K.\n\nNUMERICS WITHOUT A CALCULATOR\n1 − 1/5 = 4/5 = 0.80. The whole result is one subtraction once you have the form.\n\n90-SECOND SOLUTION\nCheck the two limits before computing. With K = 1 there is no dielectric and σ_b must vanish; as K → ∞ the material becomes a conductor and the screening must become complete, σ_b → σ_f. Only the combination (1 − 1/K) does both, and it immediately tells you the answer must be close to 1 for a fairly large K. That alone selects 0.80.\n\nChoice A, 0.20, is 1/K — the factor by which the *field* is reduced, a genuine quantity in this problem and the answer to \"what fraction of the vacuum field remains.\" Choice C is the K = 2 answer.\n\nThe common failure is writing σ_b = σ_f(K − 1), which is dimensionally fine but gives 4 σ_f: more bound charge than free charge, which would overscreen and reverse the field. Checking that σ_b < σ_f is a free sanity test.\n\nWHAT TO MEMORIZE\nσ_b = σ_f(1 − 1/K), always less than σ_f and always opposite in sign to the nearby free charge. E_inside = E_vacuum/K. D depends only on free charge, which is why starting from D is almost always the fastest route through a dielectric problem."
+      },
+
+      {
+        "question": "The electrical conductivity of a metal can be written σ = ne²τ/m, where n is the conduction electron density and τ is the mean time between electron scattering events. As a metal sample is warmed from 100 K to 300 K, the observed decrease in its conductivity is due principally to",
+        "choices": [
+          "a decrease in τ, because electrons scatter more often from lattice vibrations",
+          "a decrease in n, because electrons recombine with lattice ions",
+          "a decrease in n, because electrons are excited across the band gap",
+          "an increase in the effective mass m with temperature",
+          "an increase in n that is outweighed by a larger increase in m"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn a metal the conduction band is partially filled, so the carrier density n is set by the number of valence electrons per atom and the atomic density. Both are essentially independent of temperature — there is no gap to excite across, and n changes by a negligible fraction over 200 K. The effective mass is a band-structure property and is likewise nearly constant.\n\nThat leaves τ. Raising the temperature increases the amplitude of lattice vibrations, so an electron travels a shorter distance before scattering from a phonon. Above roughly the Debye temperature the phonon population grows linearly with T, giving τ ∝ 1/T and hence ρ ∝ T — the familiar near-linear resistivity of metals near room temperature.\n\n90-SECOND SOLUTION\nThe question is really \"which factor in this formula is the temperature-dependent one,\" and in a metal only τ qualifies. Working out which quantity is free to move is faster than reasoning about the physics of each option.\n\nChoice C is the trap worth naming: it is a correct statement about a *semiconductor*, where thermal excitation across the gap changes n by orders of magnitude — except that there n *increases* and conductivity rises. Importing semiconductor reasoning into a metal, and then getting the sign wrong as well, is precisely the confusion this question isolates. A metal has no gap at the Fermi level, so there is nothing to excite across.\n\nChoice B describes a process that does not occur in a metal at all; conduction electrons are delocalized, not bound to particular ions.\n\nWHAT TO MEMORIZE\nMetal: n fixed, τ falls with T, so σ falls and ρ rises roughly linearly near room temperature. Semiconductor: n rises exponentially as e^(−E_g/2kT), overwhelming the falling mobility, so σ rises. The sign of dσ/dT is the standard experimental discriminator between the two."
+      },
+
+      {
+        "question": "A quantity y is measured as a function of x and plotted on axes where both scales are logarithmic. The data fall on a straight line that passes through the point (x = 1, y = 100) and has a slope of −3/2. Which of the following expresses y as a function of x?",
+        "choices": [
+          "y = 100 − (3/2)x",
+          "y = 100 x^(−3/2)",
+          "y = (100)(−3/2)^x",
+          "y = 100 e^(−3x/2)",
+          "y = −(3/2)log(100x)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOn log-log axes the plotted variables are log y against log x. A straight line means log y = m log x + b, with m the slope and b the intercept. Exponentiating gives y = 10^b x^m — a power law, with the exponent equal to the slope.\n\nHere m = −3/2. The point (1, 100) has log x = 0, so b = log 100 = 2 and 10^b = 100. Therefore y = 100 x^(−3/2).\n\n90-SECOND SOLUTION\nThe single fact to carry is that a straight line on log-log axes is a power law whose exponent is the slope, while a straight line on *semi*-log axes is an exponential. Choice D is exactly the semi-log answer, correct if only the y-axis were logarithmic, and it is the most tempting wrong option because exponential decay is the more familiar functional form.\n\nChoice A treats the axes as linear and reads the line literally. Choices C and E are not straight on log-log axes at all.\n\nA fast check: substitute a second point. At x = 100 the line has fallen 2 decades in x and therefore 3 decades in y, to y = 0.1. Only the power law reproduces that: 100 × 100^(−3/2) = 100/1000 = 0.1. The semi-log form would already have collapsed to an unmeasurably small number by then, which is the quickest way to see that an exponential and a power law are not interchangeable.\n\nWHAT TO MEMORIZE\nLog-log straight line → power law y = Ax^m, exponent = slope. Semi-log straight line → exponential y = Ae^(kx). Reading a slope on log-log paper means counting decades of y per decade of x, not measuring with a ruler."
+      },
+
+      {
+        "question": "In a pinhole camera the sharpest image is obtained by balancing the geometrical blur, which grows with the pinhole diameter d, against the diffraction blur, which grows as λD/d, where D is the distance from pinhole to film. If the camera is rebuilt with D doubled and the same wavelength, the optimum pinhole diameter changes by a factor of",
+        "choices": [
+          "1/2",
+          "1/√2",
+          "1",
+          "√2",
+          "2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe total blur is roughly the sum of the two contributions, b(d) ≈ d + λD/d. One term rises with d and the other falls, so there is a minimum. Setting db/dd = 1 − λD/d² = 0 gives d_opt = √(λD).\n\nSince d_opt ∝ √D, doubling D multiplies the optimum diameter by √2.\n\n90-SECOND SOLUTION\nYou do not need the derivative. When a quantity is the sum of one term proportional to d and another proportional to 1/d, the minimum sits where the two terms are equal — that is a general feature of such sums, and it gives d = λD/d directly, so d² = λD.\n\nOnce you have d_opt ∝ √D the answer is immediate, and the square root is the entire content of the question. Choice E, 2, is what you get by assuming d_opt ∝ D, which is the answer if you track only the diffraction term and forget that the geometrical term is what stops d from growing.\n\nChoice A, 1/2, gets the direction wrong as well: a longer camera needs a *bigger* pinhole, because diffraction has more distance to spread the light and must be suppressed by opening up. That the optimum grows rather than shrinks is worth confirming physically before answering.\n\nWith λ = 550 nm and D = 100 mm this gives d ≈ 0.23 mm, which is the size real pinhole cameras actually use — a good check that the relation is not merely formal.\n\nWHAT TO MEMORIZE\nWhen a quantity has the form ad + b/d, the minimum is where the two terms are equal, giving d = √(b/a). Pinhole optimum: d ≈ √(λD). Any resolution problem trading a geometric effect against a diffraction effect has this structure."
+      },
+
+      {
+        "question": "A particle is in the normalized state ψ = (1/√5)(2Y₂⁰ + Y₂¹), where the Y are spherical harmonics. The expectation value of L_z in this state is",
+        "choices": [
+          "ħ/5",
+          "ħ/2",
+          "ħ",
+          "2ħ",
+          "5ħ"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe state is already expanded in L_z eigenstates. Y₂⁰ has m = 0 and Y₂¹ has m = 1. The probability of each outcome is the squared modulus of its coefficient: |2/√5|² = 4/5 for m = 0, and |1/√5|² = 1/5 for m = 1. These sum to 1, confirming normalization.\n\nThe expectation value is the probability-weighted average of the eigenvalues: ⟨L_z⟩ = (4/5)(0) + (1/5)(ħ) = ħ/5.\n\n90-SECOND SOLUTION\nThe coefficients must be squared, and that is where the question is won or lost. The amplitudes are 2/√5 and 1/√5, in ratio 2:1, but the probabilities are 4/5 and 1/5, in ratio 4:1. Weighting by the amplitudes instead of the probabilities gives (1/3)ħ, and weighting equally gives ħ/2 — which is why ħ/2 sits at B.\n\nNote also that ⟨L_z⟩ = ħ/5 is not a possible *measurement* outcome. Any single measurement returns 0 or ħ, since those are the only eigenvalues present. An expectation value is an average over many measurements and need not be in the spectrum at all, which is a distinction worth holding firmly.\n\nThe l = 2 label is a red herring for this particular question: both terms share l = 2, so ⟨L²⟩ = 6ħ² with certainty, but l plays no role in the L_z average beyond restricting m to the range −2 to 2.\n\nWHAT TO MEMORIZE\nFor ψ = Σc_m Y_l^m, the probability of measuring L_z = mħ is |c_m|², and ⟨L_z⟩ = Σ|c_m|² mħ. Square the coefficients, never average the amplitudes. Expectation values need not be eigenvalues."
+      },
+
+      {
+        "question": "A 1500 kg car traveling at 30 m/s is brought uniformly to rest in a distance of 40 m. The average retarding force on the car is most nearly",
+        "choices": [
+          "10² N",
+          "10³ N",
+          "10⁴ N",
+          "10⁵ N",
+          "10⁶ N"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe work-energy theorem gives Fd = ½mv², so F = mv²/2d = (1500)(30²)/(2 × 40) = (1500)(900)/80 = 1.35 × 10⁶/80 ≈ 1.7 × 10⁴ N. To the nearest decade, 10⁴ N.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in powers of ten from the start. ½mv² = ½(1.5 × 10³)(9 × 10²) = 6.75 × 10⁵ J. Divide by 40 = 4 × 10¹: 6.75/4 ≈ 1.7, and 10⁵/10¹ = 10⁴. So 1.7 × 10⁴ N, which rounds to the 10⁴ decade.\n\nOn a decade ladder you need only the exponent, so you can drop the leading digits entirely: (10³)(10³)/(10²) ≈ 10⁴, using v² ≈ 10³ and 2d ≈ 10². That estimate takes seconds and lands on the right rung.\n\n90-SECOND SOLUTION\nA useful physical anchor: the car's weight is about 1.5 × 10⁴ N, and hard braking on dry pavement produces a deceleration of roughly 1g, so the retarding force should be comparable to the weight. Here a = v²/2d = 900/80 ≈ 11 m/s², slightly above g — consistent with a hard but realistic stop.\n\nThat check also flags the wrong answers as physically absurd: 10² N would not stop a bicycle in 40 m, and 10⁶ N is nearly 70 times the car's weight, a crash rather than a braking event.\n\nDecade ladders reward this kind of reasoning because you never need the leading digit. The traps here are exponent slips — forgetting to square v gives 10³, and forgetting the factor of 2 or the distance shifts by another decade.\n\nWHAT TO MEMORIZE\nWork-energy: Fd = ΔKE, the fastest route whenever a force acts over a stated distance and time is not mentioned. Typical car mass 1.5 × 10³ kg, weight 1.5 × 10⁴ N, hard braking ≈ 1g. On an order-of-magnitude question, track exponents only."
+      },
+
+      {
+        "question": "A sphere of radius R carries a uniform volume charge density ρ. A spherical cavity of radius R/4 is then hollowed out, centered at a point a distance a from the center of the large sphere, with the cavity lying entirely inside. The electric field everywhere within the cavity is",
+        "choices": [
+          "zero",
+          "radial about the cavity's center, growing linearly with distance from it",
+          "uniform, of magnitude ρR/3ε₀, directed from the sphere's center toward the cavity's center",
+          "radial about the sphere's center, of magnitude ρa/3ε₀",
+          "uniform, of magnitude ρa/3ε₀, directed from the sphere's center toward the cavity's center"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA hollowed sphere has no symmetry Gauss's law can exploit directly, so restore it by superposition: the object is a complete sphere of density +ρ plus a small sphere of density −ρ occupying the cavity. Each piece is fully symmetric on its own.\n\nInside a uniformly charged sphere the field is E = ρr/3ε₀, directed radially from that sphere's own center. At a point in the cavity, let r₊ be the vector from the large sphere's center and r₋ the vector from the cavity's center. Superposing gives\n\nE = ρr₊/3ε₀ − ρr₋/3ε₀ = ρ(r₊ − r₋)/3ε₀ = ρa/3ε₀,\n\nwhere a is the fixed vector between the two centers. The position of the field point has cancelled completely: the field is uniform throughout the cavity, pointing along the line from the large sphere's center toward the cavity's center.\n\n90-SECOND SOLUTION\nThe cancellation of r is the entire result, and it is worth recognizing rather than rederiving. The linear-in-r interior field is what makes it work; for any other radial dependence the difference would not be constant.\n\nChoice B is the field of an isolated charged sphere and is what you get by treating the cavity as a source in its own right. Choice C substitutes R for a, using the sphere's radius where the *separation of centers* belongs — note that R/4 and R appear in the problem purely as distractor bait, since neither enters the answer. Choice A is a false analogy with the field inside a hollow *conductor*, which is zero for an entirely different reason.\n\nWHAT TO MEMORIZE\nInside a uniform sphere, E = ρr/3ε₀. A cavity carved from a uniform charge distribution = full distribution + opposite-density filler. The cavity field is uniform, ρa/3ε₀, depending only on the separation of centers — not on the cavity size or the sphere radius. The same superposition handles an off-center cylindrical hole, giving ρa/2ε₀."
+      },
+
+      {
+        "question": "In zero applied magnetic field, a metal is cooled through its superconducting transition temperature. Careful calorimetry shows no latent heat at the transition, but the heat capacity is discontinuous, jumping to a higher value just below T_c before falling away at lower temperatures. These observations indicate that the transition is",
+        "choices": [
+          "first order, with the discontinuity in heat capacity playing the role of the latent heat",
+          "first order, since the heat capacity is discontinuous",
+          "second order, since both the entropy and the heat capacity are continuous",
+          "second order, since the entropy is continuous but its temperature derivative is not",
+          "not a true phase transition, since no latent heat is absorbed"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nClassify by which derivative of the free energy is the first to be discontinuous. Latent heat means a jump in entropy, S = −∂G/∂T, a first derivative — that is a first-order transition. Here there is no latent heat, so S is continuous and the transition is not first order.\n\nThe heat capacity is C = T(∂S/∂T), a second derivative of the free energy. Its discontinuity means the first derivative is continuous while the second is not, which is the definition of a second-order transition. The superconducting transition in zero field is the standard example.\n\n90-SECOND SOLUTION\nRun the two facts as a checklist. No latent heat rules out first order and eliminates A and B. Choice C contradicts the stated observation, since the heat capacity is explicitly discontinuous. Choice E confuses \"no latent heat\" with \"no transition,\" but continuous transitions are perfectly real and include the ferromagnetic Curie point and the lambda transition in helium.\n\nChoice A is the most interesting trap: it accepts the classification and then tries to reinstate the latent heat as though the heat-capacity jump were a disguised version of it. They are not interchangeable — a latent heat is a finite amount of energy absorbed at a single temperature, while a heat-capacity jump changes the *rate* of energy absorption with no energy absorbed at T_c itself.\n\nA useful contrast: applying a magnetic field converts this same transition to first order, with a genuine latent heat, because the superconducting and normal phases can then coexist. The zero-field case is the special one.\n\nWHAT TO MEMORIZE\nFirst order: discontinuity in a first derivative of G, so a jump in S or V, and a latent heat. Second order: first derivatives continuous, second derivatives (C, compressibility, susceptibility) discontinuous or divergent. Zero-field superconducting transition is second order; in a field it becomes first order."
+      },
+
+      {
+        "question": "The number of molecules per cubic centimeter in an ideal gas at standard temperature and pressure is most nearly",
+        "choices": [
+          "2.7 × 10¹⁶",
+          "2.7 × 10¹⁷",
+          "2.7 × 10¹⁸",
+          "2.7 × 10¹⁹",
+          "2.7 × 10²⁰"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nOne mole of an ideal gas at STP occupies 22.4 liters = 2.24 × 10⁴ cm³ and contains 6.02 × 10²³ molecules. The number density is therefore n = 6.02 × 10²³/2.24 × 10⁴ = 2.7 × 10¹⁹ per cm³. This is Loschmidt's number.\n\nNUMERICS WITHOUT A CALCULATOR\n6/2.24 ≈ 2.7, and 10²³/10⁴ = 10¹⁹. The whole calculation is one division of the two constants you already carry — molar volume 22.4 L and Avogadro's number — so no third constant needs memorizing.\n\nIf you prefer SI: n = P/kT = 1.01 × 10⁵/(1.38 × 10⁻²³ × 273) = 2.7 × 10²⁵ per m³, then divide by 10⁶ to convert to cm³. Both routes land in the same place, and knowing that 10⁶ cm³ = 1 m³ is where this conversion most often goes wrong.\n\n90-SECOND SOLUTION\nThis constant appears constantly in estimation problems — mean free path, scattering rates, index of refraction of a gas — so it is worth carrying outright: about 3 × 10¹⁹ per cm³, or 3 × 10²⁵ per m³.\n\nA structural check that costs nothing: liquids and solids have roughly 10²² to 10²³ molecules per cm³, and a gas at atmospheric pressure is about a thousand times less dense than a liquid. That places the answer near 10¹⁹ and rules out every other rung on the ladder.\n\nThe distractors here are pure decade slips, which is what makes the unit conversion the real content of the question.\n\nWHAT TO MEMORIZE\nLoschmidt: 2.7 × 10¹⁹ molecules per cm³ = 2.7 × 10²⁵ per m³ at STP. Molar volume 22.4 L/mol at STP. Avogadro 6.02 × 10²³. Liquid and solid densities are near 10²² to 10²³ per cm³, about 1000× a gas at 1 atm."
+      },
+
+      {
+        "question": "A person's eye has a pupil diameter of 2.0 mm and views light of wavelength 550 nm. Treating the pupil as a circular aperture and ignoring all other imperfections, the greatest distance at which the two headlights of a car, separated by 1.5 m, can just be resolved is most nearly",
+        "choices": [
+          "45 m",
+          "450 m",
+          "900 m",
+          "1.5 km",
+          "4.5 km"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Rayleigh criterion gives the minimum resolvable angular separation θ = 1.22λ/D = 1.22(550 × 10⁻⁹)/(2.0 × 10⁻³) = 3.36 × 10⁻⁴ rad. Two objects separated by s subtend that angle at a distance L = s/θ = 1.5/(3.36 × 10⁻⁴) ≈ 4.5 × 10³ m.\n\nNUMERICS WITHOUT A CALCULATOR\nFirst get θ without the 1.22: (5.5 × 10⁻⁷)/(2 × 10⁻³) = 2.75 × 10⁻⁴ rad. Applying 1.22 gives about 3.4 × 10⁻⁴. Then 1.5/(3.4 × 10⁻⁴): since 3.4 × 4 = 13.6 and 3.4 × 4.4 = 15, the answer is 4.4 × 10³ m.\n\nA faster route to the same place: the eye's angular resolution is about 3 × 10⁻⁴ rad, or roughly 1 arcminute — a number worth carrying, since it is why 20/20 vision is defined the way it is and why printed text becomes unreadable at a few meters.\n\n90-SECOND SOLUTION\nThe relation is being run backward: instead of \"given a distance, what separation,\" it asks \"given a separation, what distance.\" Recognizing that L = s/θ rather than sθ is most of the work, and a dimensional check settles it — dividing a length by a dimensionless angle gives a much larger length, which is what a resolution limit should produce.\n\nChoice B, 450 m, is a decade slip. Choice D, 1.5 km, is s/θ with θ mistakenly taken as 10⁻³ rad.\n\nThe result is physically checkable: oncoming headlights do merge into a single point at a few kilometers, and this diffraction limit is the reason.\n\nWHAT TO MEMORIZE\nθ_min = 1.22λ/D for a circular aperture. Small-angle geometry: s = Lθ, so L = s/θ. Human eye resolution ≈ 3 × 10⁻⁴ rad ≈ 1 arcminute at a 2 mm pupil — a good anchor for any everyday resolution estimate."
+      },
+
+      {
+        "question": "For a one-dimensional harmonic oscillator with energy eigenstates |n⟩, the raising operator satisfies a†|n⟩ = √(n+1)|n+1⟩. The state a†|2⟩, after normalization, has energy",
+        "choices": [
+          "(3/2)ħω",
+          "(5/2)ħω",
+          "(7/2)ħω",
+          "(9/2)ħω",
+          "(11/2)ħω"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nApply the operator: a†|2⟩ = √3|3⟩. Normalizing removes the factor √3 and leaves the state |3⟩, which is an energy eigenstate with n = 3. Its energy is E₃ = (3 + ½)ħω = (7/2)ħω.\n\n90-SECOND SOLUTION\nThe raising operator moves you exactly one rung up the ladder, so the answer is the energy of |3⟩ and nothing more. The normalization factor √3 carries no energy information at all — it is stripped out the moment you normalize, which is the point of stating the operator with its coefficient.\n\nChoice B, (5/2)ħω, is the energy of |2⟩ itself, the answer if you forget that a† acts. Choice D, (9/2)ħω, is the energy of |4⟩, from applying the operator twice or from an off-by-one in the level index.\n\nThe subtler trap is treating the √3 as physically meaningful — for instance by supposing the energy is multiplied or shifted by it. It is not: a†|2⟩ is an unnormalized state, and once normalized it *is* |3⟩, indistinguishable from it in every measurable respect.\n\nIt is worth being fluent with the whole set of relations, since questions in this family are almost always one line of algebra: a|n⟩ = √n |n−1⟩, a†|n⟩ = √(n+1)|n+1⟩, and a†a|n⟩ = n|n⟩, so H = ħω(a†a + ½). Note a|0⟩ = 0, which is what terminates the ladder from below and forces the zero-point energy.\n\nWHAT TO MEMORIZE\nE_n = (n + ½)ħω with n starting at 0. a lowers by one with coefficient √n; a† raises by one with coefficient √(n+1). Neither is Hermitian and neither commutes with H, since both change the energy. The number operator a†a returns n."
+      }
+
+    ]
+  },
+
+  {
+    "name": "Focused Test 2",
+    "added": "2026-08-31",
+    "category": "practice",
+    "cards": [
+
+      {
+        "question": "An optical fiber has a core of index 1.50 surrounded by cladding of index 1.45. Light enters the flat end face of the fiber from air. The largest angle of incidence at the end face for which the light is guided by total internal reflection at the core-cladding boundary is most nearly",
+        "choices": [
+          "2.9°",
+          "11.5°",
+          "14.8°",
+          "22.6°",
+          "75.2°"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nTwo interfaces must be handled in series, and neither alone is sufficient.\n\nFirst, the core-cladding boundary. Total internal reflection needs an angle of at least θ_c, where sin θ_c = n_clad/n_core = 1.45/1.50 = 0.9667, so θ_c = 75.2° measured from the normal to the fiber axis.\n\nSecond, the end face. A ray refracted into the core at angle θ_r from the fiber axis strikes the wall at 90° − θ_r. Requiring 90° − θ_r ≥ 75.2° gives θ_r ≤ 14.8°. Snell's law at the end face then gives sin θ_max = n_core sin(14.8°) = 1.50 × 0.2556 = 0.384, so θ_max = 22.6°.\n\nThe combination collapses to the numerical aperture, NA = √(n_core² − n_clad²) = √(2.25 − 2.1025) = 0.384, giving the same result in one step.\n\nNUMERICS WITHOUT A CALCULATOR\nThe NA form is much faster: 1.50² − 1.45² factors as (1.50 + 1.45)(1.50 − 1.45) = 2.95 × 0.05 = 0.1475, and √0.1475 ≈ 0.384. Using the difference of squares avoids squaring either number. Then arcsin(0.384) is just above arcsin(0.383) = 22.5°.\n\n90-SECOND SOLUTION\nThe geometry trap is the complementary angle. The critical angle is measured from the normal to the *wall*, while the ray's angle inside the fiber is naturally measured from the *axis*, and those differ by 90°. Choice E, 75.2°, is the critical angle itself — a real and correctly computed quantity in this problem, just measured against the wrong reference and at the wrong interface.\n\nChoice C, 14.8°, is the ray's angle from the fiber axis inside the core — a genuine intermediate result, and the value you get by stopping before the final refraction at the end face. Choice B, 11.5°, is arcsin(0.2) from using (n_core − n_clad) instead of the difference of squares.\n\nWHAT TO MEMORIZE\nNA = √(n₁² − n₂²) = sin θ_max for a fiber in air. Critical angle sin θ_c = n₂/n₁, measured from the normal. When a problem chains two interfaces, draw the angle from the axis and from the normal separately — that complementary step is where these problems are lost. A small index difference gives a small acceptance cone, which is why single-mode fibers need careful alignment."
+      },
+
+      {
+        "question": "A spectral line is observed from atoms placed in a uniform magnetic field of 2.0 T. Taking the Bohr magneton to be 5.8 × 10⁻⁵ eV/T, the energy separation between adjacent components of the normal Zeeman pattern is most nearly",
+        "choices": [
+          "1.2 × 10⁻⁸ eV",
+          "1.2 × 10⁻⁷ eV",
+          "1.2 × 10⁻⁶ eV",
+          "1.2 × 10⁻⁵ eV",
+          "1.2 × 10⁻⁴ eV"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEach magnetic sublevel is shifted by ΔE = m μ_B B, so adjacent components of the normal Zeeman triplet, differing by Δm = 1, are separated by μ_B B = (5.8 × 10⁻⁵)(2.0) = 1.16 × 10⁻⁴ eV.\n\nNUMERICS WITHOUT A CALCULATOR\nA single multiplication: 5.8 × 2 = 11.6, so 1.16 × 10⁻⁴ eV. The whole difficulty is holding μ_B ≈ 5.8 × 10⁻⁵ eV/T, which is worth memorizing in these units precisely because it makes Zeeman estimates a one-line calculation.\n\n90-SECOND SOLUTION\nThe scale is the useful thing to carry. A magnetic field of order 1 T shifts atomic levels by around 10⁻⁴ eV, which is roughly a part in 10⁵ of a visible photon's 2-3 eV. That ratio is why Zeeman splitting requires a good spectrometer to resolve and why it does not visibly change the color of anything.\n\nIt also sets the comparison with thermal energy: at room temperature kT = 0.026 eV, more than two hundred times larger than this splitting. That is why magnetic sublevels are essentially equally populated at ordinary temperatures, and why reaching millikelvin temperatures or teslas of field is needed to polarize a spin system appreciably.\n\nAll four distractors are decade slips, so the question is purely about carrying the constant and its exponent correctly.\n\nWHAT TO MEMORIZE\nμ_B = 5.8 × 10⁻⁵ eV/T = 9.27 × 10⁻²⁴ J/T. Normal Zeeman: three components separated by μ_B B, since the selection rule Δm = 0, ±1 caps the pattern at three lines regardless of how many sublevels exist. Compare against kT = 0.026 eV at 300 K to judge whether a field can polarize a system."
+      },
+
+      {
+        "question": "A small block is released from rest on a frictionless track at height h above the bottom, slides down, and then travels around the inside of a vertical circular loop of radius R. The minimum value of h for which the block maintains contact with the track all the way around is",
+        "choices": [
+          "0.5R",
+          "R",
+          "2R",
+          "2.5R",
+          "5R"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe binding condition is at the top of the loop, where gravity and the normal force both point downward and together supply the centripetal force: N + mg = mv_top²/R. The block barely maintains contact when N = 0, which gives v_top² = gR. This is the clamped condition, and everything else follows from it.\n\nEnergy conservation from the release point to the top of the loop, a height 2R above the bottom: mgh = mg(2R) + ½mv_top² = 2mgR + ½m(gR) = 2.5mgR. So h = 2.5R.\n\n90-SECOND SOLUTION\nTwo steps, and the first is the one people skip. The temptation is to require only that the block reach the top with v ≥ 0, giving h = 2R — which is choice C, and is the correct answer to a *different* problem: a bead threaded on a wire, or a block on the inside of a tube, where the track can pull inward as well as push. On the inside of an open loop the track can only push, so arriving with zero speed means falling off long before the top.\n\nThe extra ½R is exactly the kinetic energy needed to keep the block pressed against the track at the summit. Recognizing which constraint the geometry imposes — push-only versus push-or-pull — is the entire content of the question, and it is mechanism 4 in a mechanical setting.\n\nChoice E, 5R, comes from equating mgh to mv² without the factor of ½, or from doubling the loop diameter.\n\nWHAT TO MEMORIZE\nMinimum condition at the top of an open loop: N = 0, so v_top² = gR, giving h = 2.5R from rest on a frictionless track. For a bead on a wire or a ball in a tube, the constraint is only v ≥ 0 and h = 2R. Always ask whether the constraint force can act in both directions."
+      },
+
+      {
+        "question": "A point charge +q is placed inside a hollow, uncharged, spherical conducting shell, but not at the center. Which of the following is true of the electric field at a point outside the shell?",
+        "choices": [
+          "It is the same as if the shell were absent",
+          "It is radial about the center of the shell, with magnitude q/4πε₀r², independent of where inside the charge sits",
+          "It is zero, since the shell is uncharged",
+          "It is radial about the position of the point charge, with magnitude q/4πε₀r²",
+          "It depends on the position of the charge inside, becoming asymmetric as the charge approaches the inner wall"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe field inside the conducting material must vanish in electrostatic equilibrium. Applying Gauss's law to a surface drawn within the conductor, the enclosed charge must be zero, so a total charge −q is induced on the inner wall. That induced charge is distributed non-uniformly, piling up nearest the point charge, exactly cancelling its field within the metal.\n\nSince the shell is neutral overall, a compensating +q appears on the outer surface. The conductor screens the interior completely, so the outer surface has no information about where the charge sits inside; the only distribution consistent with the outer surface being an equipotential of a sphere is a uniform one. The external field is therefore exactly that of a centered point charge q: radial, of magnitude q/4πε₀r², regardless of the internal position.\n\n90-SECOND SOLUTION\nThe screening is the whole point. The inner surface absorbs all the asymmetry, and the outer surface knows only the total enclosed charge. Choice E is the intuitive answer and is wrong for precisely that reason — it assumes the asymmetry propagates outward, when the conductor exists to prevent that.\n\nChoice A is true only in the sense that the magnitude matches; it is wrong because without the shell the field would be centered on the charge's actual position and would be asymmetric about the shell's center. Choice D makes that error explicitly. Choice C confuses a neutral shell with no external field, but neutrality refers to the shell's own charge, and the enclosed +q is still enclosed.\n\nThis is the null-experiment logic behind the classic tests of Coulomb's law: the field inside a charged shell vanishes exactly only if the exponent is exactly 2, which is why measuring zero there is a far more sensitive test than measuring a force directly.\n\nWHAT TO MEMORIZE\nA conducting shell screens the interior: inner surface takes −q_enclosed with whatever distribution is needed, outer surface takes q_enclosed + q_shell distributed uniformly (for a sphere). External fields depend only on total enclosed charge, never on its arrangement inside."
+      },
+
+      {
+        "question": "The decay μ⁻ → e⁻ + γ has never been observed, despite extensive searches. It is forbidden by conservation of",
+        "choices": [
+          "lepton family number",
+          "electric charge",
+          "energy and momentum",
+          "baryon number",
+          "angular momentum"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nRun the conserved quantities in order. Charge: −1 on the left, −1 + 0 on the right, conserved. Baryon number: zero on both sides, since none of these are baryons. Angular momentum: a spin-½ muon decaying to a spin-½ electron and a spin-1 photon can be arranged to conserve total angular momentum. Energy and momentum: the muon at 106 MeV is far heavier than the electron at 0.511 MeV, and a two-body decay into an electron and a photon conserves both perfectly with a well-defined 53 MeV for each.\n\nWhat fails is lepton family number. The muon carries muon number L_μ = +1 and electron number L_e = 0; the products carry L_μ = 0 and L_e = +1. Each family number changes by one unit, so the decay is forbidden.\n\n90-SECOND SOLUTION\nThe distinguishing feature is that the *total* lepton number is conserved — one lepton in, one lepton out — while the family assignment is not. That is why this decay is a sensitive probe: it is blocked only by the finer bookkeeping.\n\nChoice C is the trap worth naming, because it is the correct answer to the superficially similar γ → e⁺e⁻ in free space, where a massless photon cannot produce a pair of nonzero invariant mass. Here the kinematics are perfectly comfortable, so importing that reasoning fails. The ordinary muon decay μ⁻ → e⁻ + ν̄_e + ν_μ *is* observed, and comparing the two shows exactly what the extra neutrinos are for: they restore both family numbers.\n\nWHAT TO MEMORIZE\nConserve charge, baryon number, and each lepton family number (L_e, L_μ, L_τ) separately. Then check that the parent rest mass exceeds the total product rest mass. A decay blocked only by family number, not by kinematics, is a prime target for rare-decay searches — observing one would be evidence for physics beyond the Standard Model."
+      },
+
+      {
+        "question": "A sample of an ideal diatomic gas, with rotational but no vibrational degrees of freedom excited, is heated at constant pressure. The fraction of the added heat that leaves the gas as work done on the surroundings is",
+        "choices": [
+          "2/7",
+          "1/2",
+          "5/7",
+          "1",
+          "7/5"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a rigid diatomic gas, equipartition gives three translational and two rotational degrees of freedom, so C_V = (5/2)R and C_P = C_V + R = (7/2)R.\n\nAt constant pressure the heat added per mole per kelvin is C_P. The work done is W = PΔV = RΔT per mole, so the fraction leaving as work is W/Q = R/C_P = R/((7/2)R) = 2/7 ≈ 0.29. The remaining 5/7 stays in the gas as internal energy, since ΔU = C_VΔT.\n\n90-SECOND SOLUTION\nThe fraction is 1 − 1/γ, and for a rigid diatomic gas γ = 7/5, giving 1 − 5/7 = 2/7 with no separate calculation. Note that the number of moles and the temperature change both cancel — the problem supplies neither, which is the signal that the answer must be a pure ratio.\n\nChoice C, 5/7, is the complementary fraction: the share that becomes internal energy, and the correct answer to the question asked the other way round. Since more of the added heat goes into internal energy than into work for any ideal gas, the work fraction must be the smaller of the two, which separates them without computing either.\n\nChoice E, 7/5, is γ itself, which cannot be right because a fraction of the added heat must be less than one — a check that eliminates it instantly. Choice D, 1, would require all the heat to become work, impossible here since the temperature is rising and the internal energy with it.\n\nThe key conceptual point is that C_V governs ΔU even in a constant-pressure process. C_V is not \"the heat capacity you use at constant volume\" so much as the coefficient relating ΔU to ΔT for an ideal gas, always.\n\nWHAT TO MEMORIZE\nMonatomic: C_V = (3/2)R, γ = 5/3. Rigid diatomic: C_V = (5/2)R, γ = 7/5. C_P = C_V + R for any ideal gas. ΔU = nC_VΔT in every process. At constant P the heat splits as ΔU/Q = 1/γ and W/Q = 1 − 1/γ."
+      },
+
+      {
+        "question": "A 45°-45°-90° prism of index 1.50 is used as a mirror: light enters normally through one leg, strikes the hypotenuse at 45°, and is reflected. The prism is then submerged in water of index 1.33. Which of the following describes what happens at the hypotenuse?",
+        "choices": [
+          "Total internal reflection occurs both in air and in water",
+          "Total internal reflection occurs in water but not in air",
+          "Total internal reflection occurs in neither case",
+          "Total internal reflection occurs in both cases, but the reflected intensity is lower in water",
+          "Total internal reflection occurs in air but not in water"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nCompare the fixed 45° angle of incidence at the hypotenuse against the critical angle in each surrounding medium.\n\nIn air: sin θ_c = 1.00/1.50 = 0.667, so θ_c = 41.8°. Since 45° > 41.8°, the light is totally internally reflected — this is why glass prisms make excellent mirrors with no coating.\n\nIn water: sin θ_c = 1.33/1.50 = 0.887, so θ_c = 62.5°. Now 45° < 62.5°, the condition fails, and the light refracts out through the hypotenuse instead of reflecting. The prism stops working as a mirror.\n\nNUMERICS WITHOUT A CALCULATOR\nCompare sines rather than angles. sin 45° = 0.707. In air the critical sine is 0.667, which is smaller, so the incidence exceeds critical and TIR occurs. In water the critical sine is 0.887, which is larger, so it does not. Comparing 0.707 against each ratio avoids taking any inverse sine.\n\n90-SECOND SOLUTION\nRaising the index of the surrounding medium raises the critical angle, and a fixed 45° geometry that comfortably cleared the bar in air can fail once the bar rises. The whole question is whether 45° sits above or below θ_c in each case, and the answer flips between them.\n\nChoice A is what you get by treating TIR as a property of the glass alone rather than of the interface. Choice D concedes a change but describes a gradual weakening; TIR is not gradual — below the critical angle it simply stops, and most of the light is transmitted.\n\nWHAT TO MEMORIZE\nsin θ_c = n₂/n₁; TIR requires the incidence to exceed θ_c and requires n₁ > n₂. Glass-air θ_c ≈ 42°, glass-water ≈ 62°. A 45° prism mirror works in air and fails in water. Reducing the index contrast always raises θ_c and narrows the range of angles that are trapped."
+      },
+
+      {
+        "question": "A four-level laser is generally much easier to bring to threshold than a three-level laser using the same pump power. The principal reason is that in the four-level scheme",
+        "choices": [
+          "the pump photons have lower energy, so less power is wasted as heat",
+          "the lower laser level lies well above the ground state and is therefore nearly empty in equilibrium, so only a small population is needed to achieve inversion",
+          "the upper laser level has a shorter lifetime, allowing faster cycling",
+          "spontaneous emission is forbidden between the two laser levels",
+          "the gain medium can be pumped electrically rather than optically"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nPopulation inversion requires the upper laser level to hold more atoms than the lower one. What differs between the two schemes is where the lower laser level sits.\n\nIn a three-level laser the lower laser level *is* the ground state, which holds essentially the entire population. Inversion therefore requires pumping more than half of all the atoms out of the ground state — an enormous demand, which is why the first ruby lasers needed intense flash pumping and ran only in pulses.\n\nIn a four-level laser the lower laser level lies above the ground state by an energy large compared with kT. Its thermal population is suppressed by the Boltzmann factor e^(−ΔE/kT) and is essentially zero. Inversion is then achieved by lifting only a tiny fraction of the atoms into the upper level, and continuous operation at modest pump power becomes possible.\n\n90-SECOND SOLUTION\nThe question is which population is clamped by thermal equilibrium. In the three-level scheme the lower level is pinned at nearly 100 percent occupancy and must be actively emptied; in the four-level scheme it is pinned at nearly zero and needs no emptying at all. That reframing answers it directly.\n\nChoice C inverts a real requirement: the upper laser level must be *long*-lived, that is metastable, so that atoms accumulate there rather than decaying before they can be stimulated. A short upper-level lifetime would make lasing harder, not easier.\n\nChoice D would prevent lasing entirely, since stimulated emission and spontaneous emission are governed by the same Einstein coefficient — a transition with no spontaneous emission has no stimulated emission either.\n\nWHAT TO MEMORIZE\nInversion is impossible in thermal equilibrium at any positive temperature, since the Boltzmann factor is always below 1. Three-level: lower laser level is the ground state, so more than half the population must be pumped out. Four-level: lower level is thermally empty, so threshold is far lower. The upper laser level must be metastable in both."
+      },
+
+      {
+        "question": "A curve of radius 200 m on a highway is banked at an angle of 15° so that a vehicle traveling at the design speed requires no friction to round it. Taking g = 9.8 m/s² and tan 15° = 0.27, the design speed is most nearly",
+        "choices": [
+          "7 m/s",
+          "16 m/s",
+          "23 m/s",
+          "36 m/s",
+          "52 m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWith no friction, the only forces are gravity and the normal force perpendicular to the road surface. Resolving the normal force N into components: vertically N cos θ = mg, and horizontally the inward component N sin θ supplies the centripetal force, N sin θ = mv²/r.\n\nDividing the second equation by the first eliminates both N and m: tan θ = v²/rg. Solving, v = √(rg tan θ) = √(200 × 9.8 × 0.27) = √529 ≈ 23 m/s.\n\nNUMERICS WITHOUT A CALCULATOR\n200 × 9.8 ≈ 1960, and 1960 × 0.27 ≈ 529. Since 23² = 529 exactly, the answer is 23 m/s — about 83 km/h, a plausible highway design speed, which is a useful confirmation that no factor has been dropped.\n\n90-SECOND SOLUTION\nBoth the mass and the normal force cancel in the ratio, so no information about the vehicle is needed — and none is given. Noticing that the problem supplies no mass is a signal that the answer must come from a ratio of the two force equations.\n\nChoice E, 52 m/s, is √(rg/tan θ), the relation inverted. That inversion is easy to make and hard to catch algebraically, but it fails a physical check: a *more* steeply banked curve should support a *higher* speed, so v must increase with tan θ, not decrease.\n\nChoice B, 16 m/s, is √(rg sin θ), from resolving the forces along the incline rather than into horizontal and vertical components. That is the natural instinct from block-on-a-ramp problems, but here the acceleration is horizontal, not along the surface, so the axes must be chosen horizontally and vertically.\n\nWHAT TO MEMORIZE\nFrictionless banked curve: tan θ = v²/rg. Choose axes along the acceleration, which for circular motion is horizontal — not along the incline. Mass always cancels. Above the design speed the car needs inward friction; below it, outward."
+      },
+
+      {
+        "question": "A sphere of radius R carries a volume charge density that varies with distance from the center as ρ(r) = A/r for r < R, where A is a positive constant. The magnitude of the electric field at a radius r inside the sphere is",
+        "choices": [
+          "A/2ε₀, independent of r",
+          "Ar/3ε₀",
+          "AR/2ε₀r",
+          "Ar²/4ε₀R",
+          "A/4πε₀r²"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nEnclosed charge first. Integrating the density over a sphere of radius r:\n\nQ(r) = ∫₀ʳ (A/r′)(4πr′²)dr′ = 4πA∫₀ʳ r′dr′ = 2πAr².\n\nThe 1/r in the density cancels one power of r² from the volume element, leaving a linear integrand. Now apply Gauss's law to a spherical surface of radius r:\n\nE(4πr²) = Q(r)/ε₀ = 2πAr²/ε₀,\n\nso E = A/2ε₀. The r² from the enclosed charge and the r² from the Gaussian surface area cancel exactly, and the field is uniform in magnitude throughout the interior.\n\n90-SECOND SOLUTION\nThe cancellation is the point, and it can be seen by scaling alone. If ρ ∝ r^n then Q ∝ r^(n+3) and E ∝ r^(n+1). Setting n = −1 gives E ∝ r⁰, a constant. That one-line argument answers the question without evaluating a single integral, and it also generates the whole family: uniform density (n = 0) gives E ∝ r, and n = −2 gives E ∝ 1/r.\n\nChoice B is exactly the uniform-density result, E = ρr/3ε₀, and is the answer you get by treating ρ as constant — the most common error, and the reason a non-uniform density is worth reading carefully.\n\nChoice E is the point-charge field, correct only outside the distribution. Note that ρ diverges at the origin, but the enclosed charge still vanishes as r² there, so the field remains perfectly finite — an integrable singularity, not a physical problem.\n\nWHAT TO MEMORIZE\nGauss's law needs the enclosed charge, which for a non-uniform density requires an integral with the 4πr²dr volume element. For ρ ∝ r^n inside a sphere, E ∝ r^(n+1). Uniform sphere: E = ρr/3ε₀ inside, Q/4πε₀r² outside."
+      },
+
+      {
+        "question": "A photon passing near a heavy nucleus can convert into an electron-positron pair. The minimum photon energy for which this process is possible is most nearly",
+        "choices": [
+          "0.26 MeV",
+          "0.51 MeV",
+          "1.02 MeV",
+          "1.44 MeV",
+          "2.04 MeV"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe pair must be created with at least its total rest energy, 2m_ec² = 2(0.511) = 1.022 MeV. The nucleus is present to absorb recoil momentum, and because it is heavy it can do so while taking essentially no energy, so the threshold is set entirely by the rest masses.\n\nNUMERICS WITHOUT A CALCULATOR\nThe electron rest energy 0.511 MeV is one of the handful of constants worth carrying exactly. Doubling it gives 1.022 MeV.\n\n90-SECOND SOLUTION\nThe entire question is whether to double, and choice B exists to catch the failure to. A pair means two particles, and both must be paid for.\n\nThe deeper point is why the nucleus is mentioned at all. In free space this process is strictly forbidden: work in the frame where the pair's total momentum is zero, and the pair still has energy of at least 2m_ec², so it has nonzero invariant mass. A photon has zero invariant mass in every frame, so no photon can equal it. Energy and momentum cannot both be conserved. The heavy nucleus resolves this by taking up the excess momentum, which is why pair production always occurs in matter and its cross section rises sharply with atomic number.\n\nChoice E, 2.04 MeV, is twice the correct threshold, from doubling the pair energy a second time. Choice D is the correct value multiplied by 1/ln2, a number that has no role here.\n\nWHAT TO MEMORIZE\nm_ec² = 0.511 MeV, so pair-production threshold = 1.022 MeV in the field of a heavy nucleus. Invariant mass is frame-independent and is zero for a single photon — that is the argument forbidding γ → e⁺e⁻ in free space. Pair production dominates photon attenuation in matter above a few MeV."
+      },
+
+      {
+        "question": "The acceleration due to gravity is determined from a simple pendulum using g = 4π²L/T². If the length L is measured to a precision of 2 percent and the period T to a precision of 1 percent, the resulting fractional uncertainty in g is most nearly",
+        "choices": [
+          "1 percent",
+          "2 percent",
+          "3 percent",
+          "4 percent",
+          "6 percent"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a product of powers, fractional uncertainties add with weights equal to the absolute values of the exponents. Since g = 4π²L¹T⁻², the exponents are 1 for L and −2 for T:\n\nδg/g = |1|(δL/L) + |−2|(δT/T) = 2% + 2(1%) = 4%.\n\nNUMERICS WITHOUT A CALCULATOR\n2 + 2 = 4 percent. The only real step is remembering that the exponent 2 on T doubles its contribution.\n\n90-SECOND SOLUTION\nThe period enters squared, so its 1 percent uncertainty counts twice and ends up contributing exactly as much as the length's 2 percent. That equality is the design of the question: the more precisely measured quantity is not the less important one, because the exponent outweighs the precision.\n\nChoice C, 3 percent, is 2% + 1%, the answer from adding the fractional uncertainties without weighting by the exponents — the single most common error in propagation problems. Choice E, 6 percent, applies the factor of 2 to the wrong variable.\n\nThis linear addition is the conservative worst-case bound and is what these questions normally expect. If the errors are independent and random, they add in quadrature instead: √(2² + 2²) = 2.8 percent. Both conventions appear, but the linear sum is the standard on this exam unless independence is stated explicitly.\n\nThe practical lesson is real: to improve a pendulum measurement of g, timing many oscillations to reduce δT/T pays back twice as fast as improving the length measurement.\n\nWHAT TO MEMORIZE\nFor Q = A^a B^b, δQ/Q = |a|δA/A + |b|δB/B, or in quadrature if the errors are independent. Sums and differences add *absolute* uncertainties; products and powers add *fractional* ones. A squared quantity contributes double its own precision."
+      },
+
+      {
+        "question": "A quarter-wave layer of magnesium fluoride (n = 1.38) is deposited on two different substrates: substrate P has index 1.52 and substrate Q has index 1.30. Both are illuminated from air at normal incidence at the design wavelength. Which of the following is true of the reflected intensity?",
+        "choices": [
+          "It is minimized on both P and Q",
+          "It is minimized on P and maximized on Q",
+          "It is maximized on both P and Q",
+          "It is maximized on P and minimized on Q",
+          "It is minimized on P and unchanged on Q"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nCount phase flips separately for each substrate, because that is the only thing that differs.\n\nOn substrate P: air (1.00) → film (1.38) is low-to-high, so that reflection flips by π. Film (1.38) → substrate (1.52) is also low-to-high, so it flips too. Two flips cancel, leaving only the path difference. A quarter-wave layer gives 2nt = λ/2, a half-wave of path, which is destructive. Reflection is minimized — the ordinary antireflection coating.\n\nOn substrate Q: air (1.00) → film (1.38) flips. But film (1.38) → substrate (1.30) is now high-to-low, so it does not. One net flip adds π to the half-wave of path, giving a full 2π. The two reflections now arrive in phase and reinforce. The identical layer maximizes reflection.\n\n90-SECOND SOLUTION\nThe rule is that a coating antireflects only when its index sits between the two media it separates. On P the chain 1.00 < 1.38 < 1.52 holds. On Q it breaks, because 1.38 > 1.30, and the moment it breaks the condition inverts.\n\nSo the answer is the option where the same film does opposite things, and the only remaining question is which way round. Since P is the textbook case, P is the minimum.\n\nChoice A is the trap, and it is the answer you get by treating \"quarter-wave layer\" as a formula that always antireflects. Choice D has the right structure and the substrates swapped, which is what you get if you check the ordering but reverse which chain is intact.\n\nWHAT TO MEMORIZE\nA reflection flips by π only when going from lower to higher index. Count the flips before choosing between 2nt = mλ and 2nt = (m + ½)λ. Quarter-wave antireflection requires n_air < n_film < n_substrate; outside that ordering the same layer becomes a reflection enhancer, which is how high-reflectance stacks are built."
+      },
+
+      {
+        "question": "Using the uncertainty principle, estimate the minimum kinetic energy of a nucleon confined to a nucleus of radius 5 fm. Take ħc = 197 MeV·fm and the nucleon rest energy as 940 MeV. The result is of the order of",
+        "choices": [
+          "1 keV",
+          "10 keV",
+          "100 keV",
+          "1 MeV",
+          "100 MeV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nTake Δx ≈ 5 fm and Δp ≈ ħ/Δx. The kinetic energy is then\n\nK ≈ (Δp)²/2m = (ħc)²/(2mc²(Δx)²) = 197²/(2 × 940 × 25) MeV = 38800/47000 ≈ 0.83 MeV.\n\nSo the answer is of order 1 MeV.\n\nNUMERICS WITHOUT A CALCULATOR\nWriting the estimate as (ħc)²/(2mc²(Δx)²) keeps everything in MeV and fm, so no powers of ten survive to be mishandled — this is why ħc = 197 MeV·fm is the single most useful constant in nuclear estimates. Then 197² ≈ 3.9 × 10⁴ and 2 × 940 × 25 ≈ 4.7 × 10⁴, a ratio just under 1.\n\n90-SECOND SOLUTION\nYou can shortcut this with a scaling argument from the atomic case. Confining an electron to 0.1 nm costs a few eV. Nuclear confinement shrinks the length by about 10⁵, and K ∝ 1/mL², so the energy rises by 10¹⁰ and falls by the mass ratio of about 2000 — a net factor near 5 × 10⁶, taking a few eV to a few MeV.\n\nThe result is the important part: nuclear binding energies are a few MeV per nucleon, exactly the scale this estimate produces. That agreement is not a coincidence but a consistency check on the whole picture — it tells you the nuclear potential well must be tens of MeV deep to bind nucleons with this much zero-point motion.\n\nThe keV distractors correspond to atomic inner-shell energies, and 100 MeV would put the nucleon well into the relativistic regime where p²/2m no longer applies.\n\nWHAT TO MEMORIZE\nK ≈ ħ²/(2mL²) for confinement to size L. Constants in convenient units: ħc = 197 MeV·fm = 197 eV·nm, m_ec² = 0.511 MeV, m_Nc² = 940 MeV. Atomic confinement costs eV; nuclear confinement costs MeV — a factor of 10⁶ that explains why nuclear reactions release a million times more energy per event than chemical ones."
+      },
+
+      {
+        "question": "A car travels at constant speed over the top of a hill whose surface near the summit is approximately a circular arc of radius R in a vertical plane. The greatest speed at which the car can pass over the summit without losing contact with the road is",
+        "choices": [
+          "√(gR/2)",
+          "√(2gR)",
+          "√(gR/π)",
+          "2√(gR)",
+          "√(gR)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAt the summit the car moves on a circular arc, so its acceleration is centripetal — directed downward, toward the center of the arc below. The forces are gravity mg downward and the normal force N upward, giving\n\nmg − N = mv²/R.\n\nThe car maintains contact as long as N ≥ 0. Setting N = 0 for the limiting case gives mg = mv²/R, so v = √(gR).\n\n90-SECOND SOLUTION\nThe clamped condition is N → 0, and once you write Newton's second law along the vertical with the acceleration pointing *downward*, the answer follows in one line. The most common error is placing the acceleration upward out of habit from loop problems, where the center is above the object; over a hill the center of curvature is below.\n\nAt exactly v = √(gR) the car is in free fall for an instant — gravity alone supplies precisely the acceleration needed to follow the arc, and the road neither pushes nor is pushed. Above that speed the required centripetal acceleration exceeds g, gravity cannot supply it, and the car leaves the surface. This is the same condition as the minimum speed at the top of a vertical loop, arrived at from the opposite direction: there N = 0 sets a *lower* bound on speed because gravity points toward the center, while here it sets an *upper* bound because gravity points away from the car's side of the track.\n\nChoice B, √(2gR), is the speed acquired by falling a height R, which is a real quantity in hill problems but not this condition.\n\nWHAT TO MEMORIZE\nContact is lost when the normal force reaches zero. Center of curvature below (crest of a hill): mg − N = mv²/R, giving a maximum speed √(gR). Center above (bottom of a dip, or top of a loop): N + mg or N − mg as appropriate. Always locate the center of curvature before assigning signs."
+      },
+
+      {
+        "question": "A black hole is observed to have a Schwarzschild radius of 30 km. Given that the Schwarzschild radius is R = 2GM/c², its mass is most nearly",
+        "choices": [
+          "10 solar masses",
+          "100 solar masses",
+          "10³ solar masses",
+          "10⁵ solar masses",
+          "10⁶ solar masses"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Schwarzschild radius is linear in mass, so the fastest route is to scale from a known case. For one solar mass, R = 2GM/c² = 2(6.7 × 10⁻¹¹)(2.0 × 10³⁰)/(9 × 10¹⁶) ≈ 3.0 × 10³ m = 3 km. Since R ∝ M, a 30 km radius corresponds to 30/3 = 10 solar masses.\n\nNUMERICS WITHOUT A CALCULATOR\nThe constant worth carrying is 3 km per solar mass. Then the entire problem is one division, with no powers of ten to track.\n\nIf you need to rebuild it: numerator 2 × 6.7 × 2 = 27 with exponents −11 + 30 = 19, giving 2.7 × 10²⁰; denominator 9 × 10¹⁶; ratio 0.3 × 10⁴ = 3 × 10³ m.\n\n90-SECOND SOLUTION\nLinearity is the whole structure. Because R ∝ M rather than M^(1/3) as for an ordinary star, black hole sizes scale directly with mass — a fact with real consequences, since it means the average density inside the horizon *falls* as M², and a supermassive black hole has a mean density below that of water.\n\nThe 10-solar-mass answer is also the physically expected one: stellar-mass black holes formed from massive star collapse cluster in the range of roughly 5 to 30 solar masses, which is exactly the population LIGO detects merging. A 30 km horizon is a textbook stellar-mass black hole.\n\nThe distractors climb toward the supermassive range; the black hole at the center of our galaxy is about 4 × 10⁶ solar masses, with a horizon near 10⁷ km.\n\nWHAT TO MEMORIZE\nR_s = 2GM/c², linear in M, about 3 km per solar mass. Constants: G = 6.7 × 10⁻¹¹ SI, M_sun = 2 × 10³⁰ kg, c² = 9 × 10¹⁶. Stellar-mass black holes are tens of kilometers across; supermassive ones are millions of solar masses."
+      },
+
+      {
+        "question": "A monatomic ideal gas is compressed adiabatically and reversibly to half its original volume. Its absolute temperature increases by a factor of most nearly",
+        "choices": [
+          "1.26",
+          "1.41",
+          "1.59",
+          "2.00",
+          "3.17"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a reversible adiabatic process, TV^(γ−1) is constant. A monatomic ideal gas has γ = 5/3, so γ − 1 = 2/3. Then\n\nT₂/T₁ = (V₁/V₂)^(γ−1) = 2^(2/3) ≈ 1.59.\n\nNUMERICS WITHOUT A CALCULATOR\n2^(2/3) = (2²)^(1/3) = 4^(1/3). Since 1.5³ = 3.375 and 1.6³ = 4.096, the cube root of 4 is just under 1.6. Two anchors worth carrying: 2^(1/3) ≈ 1.26 and 2^(2/3) ≈ 1.59.\n\n90-SECOND SOLUTION\nThe exponent is γ − 1, not γ, and that is the whole question. Choice A, 1.26, is 2^(1/3), which comes from using γ − 1 = 1/3 — the diatomic value, correct for a different gas. Choice E, 3.17, is 2^(5/3), from using γ itself as the exponent, which is the *pressure* relation P ∝ V^(−γ) misapplied to temperature.\n\nChoice D, 2.00, would be the answer if temperature scaled inversely with volume, which is the isothermal-looking instinct and is dimensionally impossible for an adiabat.\n\nA quick physical check: compression does work on the gas with no heat escaping, so the temperature must rise, and it must rise less steeply than the pressure does. Since the pressure rises by 2^(5/3) ≈ 3.2, a temperature factor of 1.6 sits sensibly below it. Indeed PV = nRT is satisfied: pressure up 3.17, volume down 2, temperature up 1.59.\n\nWHAT TO MEMORIZE\nAdiabatic reversible: PV^γ = const, TV^(γ−1) = const, TP^((1−γ)/γ) = const. Monatomic γ = 5/3, rigid diatomic γ = 7/5. Temperature carries the exponent γ − 1 against volume, pressure carries γ. Useful values: 2^(2/3) ≈ 1.59, 2^(5/3) ≈ 3.17."
+      },
+
+      {
+        "question": "Two wires are made of the same material and are stretched to the same tension between supports the same distance apart. The second wire has twice the radius of the first. The ratio of the fundamental frequency of the second wire to that of the first is",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTwo scalings must be composed. The linear mass density is μ = ρ(πr²), so doubling the radius quadruples μ. The wave speed is v = √(T/μ), and with T fixed, quadrupling μ halves v. The fundamental is f₁ = v/2L with L unchanged, so f₁ halves.\n\nCombining: f ∝ 1/√μ ∝ 1/r, so doubling the radius halves the frequency. The ratio is 1/2.\n\n90-SECOND SOLUTION\nThe two steps pull in the same direction but with different strengths, and the square root is what converts a factor of 4 in mass density into a factor of 2 in frequency. Tracking only the area gives choice A, 1/4 — the correct answer to \"what happens to the wave speed if μ quadruples without the square root,\" and the natural result of stopping one step early.\n\nThe material's density ρ never needs a value, since it is the same for both wires and cancels in the ratio. Neither does the tension or the length. Noticing that no numbers are supplied confirms the answer must be a pure ratio built from the radius alone.\n\nThis is the physics behind the construction of any stringed instrument: the low strings are thicker rather than merely slacker, because f ∝ 1/r lets a wide range of pitches share nearly the same tension and length. Tuning by tension alone would require a factor of 4 in tension per octave, since f ∝ √T.\n\nWHAT TO MEMORIZE\nv = √(T/μ), μ = ρπr² for a cylindrical wire, f₁ = v/2L. Composing: f ∝ √T, f ∝ 1/r, f ∝ 1/√ρ, f ∝ 1/L. A factor of 4 in μ is a factor of 2 in f — the square root is where these problems are usually lost."
+      },
+
+      {
+        "question": "Light of wavelength 400 nm strikes a metal surface, and the emitted photoelectrons are just stopped by a retarding potential of 0.60 V. The longest wavelength of light that will eject photoelectrons from this metal is most nearly",
+        "choices": [
+          "248 nm",
+          "400 nm",
+          "496 nm",
+          "620 nm",
+          "827 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe stopping potential gives the maximum kinetic energy directly: K_max = eV_s = 0.60 eV. The incident photon energy is E = 1240/400 = 3.10 eV. From K_max = E − φ, the work function is φ = 3.10 − 0.60 = 2.50 eV.\n\nThe threshold (longest) wavelength is the one whose photons carry exactly φ, with no energy left over: λ_max = 1240/φ = 1240/2.50 = 496 nm.\n\nNUMERICS WITHOUT A CALCULATOR\nhc = 1240 eV·nm does both conversions. 1240/400 = 3.10, and 1240/2.5 = 496. The second is easiest as 1240 × 0.4 = 496.\n\n90-SECOND SOLUTION\nThe problem runs the photoelectric relation backward: the measurement gives K_max, and the work function must be extracted before the threshold can be found. Two steps, and the intermediate quantity φ is never asked for directly.\n\nA fast structural check: the threshold wavelength must be *longer* than 400 nm, since the incident light produced electrons with energy to spare. That single observation eliminates 248 nm and 400 nm without any arithmetic, and it eliminates them in the right way — 248 nm is 1240/5, from adding the 0.60 eV instead of subtracting it, and 400 nm is the trivial answer of assuming the incident light is already at threshold.\n\nChoice D, 620 nm, corresponds to φ = 2.0 eV, the work function you get by subtracting 0.60 from 2.6 or by other slips in the first step.\n\nWHAT TO MEMORIZE\nK_max = hc/λ − φ, with eV_s = K_max, so the stopping potential in volts equals K_max in eV. Threshold λ_max = hc/φ = 1240/φ. hc = 1240 eV·nm. Increasing intensity raises the number of photoelectrons but never their maximum energy."
+      },
+
+      {
+        "question": "A neutron star has a mass of 1.4 solar masses (about 2.8 × 10³⁰ kg) and a radius of 10 km. Its mean density is most nearly",
+        "choices": [
+          "10⁹ kg/m³",
+          "10¹¹ kg/m³",
+          "10¹³ kg/m³",
+          "10¹⁵ kg/m³",
+          "10¹⁷ kg/m³"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe volume is V = (4/3)πR³ = (4/3)π(10⁴ m)³ = 4.19 × 10¹² m³. The mean density is then ρ = M/V = 2.8 × 10³⁰/4.19 × 10¹² = 6.7 × 10¹⁷ kg/m³, so of order 10¹⁷ to 10¹⁸.\n\nNUMERICS WITHOUT A CALCULATOR\nOn a decade ladder only the exponents matter. R³ = (10⁴)³ = 10¹², and the factor 4π/3 ≈ 4 raises it to about 4 × 10¹². Then 10³⁰/10¹² = 10¹⁸, and the leading digits 2.8/4.19 ≈ 0.7 pull it to 7 × 10¹⁷. Nearest rung: 10¹⁷.\n\n90-SECOND SOLUTION\nThe answer is one you can supply from memory: a neutron star has roughly nuclear density, since it is essentially one enormous nucleus held together by gravity rather than the strong force. Nuclear matter has ρ ≈ 2.3 × 10¹⁷ kg/m³, which lands directly on choice C.\n\nThat check is worth more than the arithmetic, because it confirms the physical picture rather than just the exponent. You can also build nuclear density from scratch: a nucleon of mass 1.7 × 10⁻²⁷ kg in a sphere of radius about 1.2 fm gives 1.7 × 10⁻²⁷/(7 × 10⁻⁴⁵) ≈ 2 × 10¹⁷ kg/m³ — and because nuclear radii scale as A^(1/3), that density is the same for every nucleus.\n\nChoice A, 10⁹, is white dwarf density — matter held up by electron degeneracy rather than packed to nuclear contact, and eight decades short. For scale, water is 10³ and the densest ordinary solids are near 2 × 10⁴ kg/m³, so this is roughly 10¹³ times denser than anything terrestrial. A teaspoon would weigh about a billion tonnes.\n\nWHAT TO MEMORIZE\nNuclear density ≈ 2 × 10¹⁷ kg/m³, essentially independent of nucleus, and a neutron star matches it. Nuclear radius R ≈ 1.2 A^(1/3) fm. Water 10³ kg/m³; white dwarf about 10⁹; neutron star 10¹⁷."
+      }
+
+    ]
   }
+
 ];
