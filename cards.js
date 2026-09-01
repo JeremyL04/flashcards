@@ -12049,6 +12049,277 @@ const EXAMS = [
       }
 
     ]
+  },
+
+
+
+  {
+    "name": "Conceptual Drill — Targeted (Hard)",
+    "added": "2026-08-31",
+    "category": "practice",
+    "cards": [
+
+      {
+        "question": "A soap film held vertically in a wire loop drains until the region near the top is very much thinner than the wavelength of the light illuminating it. That region appears black in reflected light. The best explanation is that",
+        "choices": [
+          "the two reflected waves have almost no path difference, but one of them was inverted on reflection, so they cancel",
+          "the film is too thin to reflect any light at all",
+          "the light is entirely transmitted because the film has no optical thickness",
+          "the two reflected waves have a path difference of half a wavelength",
+          "the soap absorbs strongly at all visible wavelengths once the film is thin"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nTwo waves reflect: one from the air-film surface and one from the film-air surface. As the thickness goes to zero the geometrical path difference between them vanishes, so on path alone they would arrive in phase and reflect brightly. But the front reflection goes from lower index to higher and flips by π, while the back reflection goes from higher to lower and does not. That single uncancelled π leaves them exactly out of phase, and the reflection goes dark.\n\n90-SECOND SOLUTION\nThe black band is direct experimental evidence for the phase flip — it is why the flip is worth trusting rather than memorizing. Any account that does not invoke it fails to explain why a nearly nonexistent film reflects less than a thicker one.\n\nChoice D gets the outcome right for the wrong reason: it attributes the cancellation to path difference, which is precisely what has gone to zero. Choices B and C confuse a vanishing path difference with a vanishing reflection coefficient; each surface still reflects about 4% of the light, and the darkness comes from those reflections destroying each other, not from their absence. Choice E is contradicted by the film being transparent and colored elsewhere.\n\nWHAT TO MEMORIZE\nReflection off a higher-index medium flips by π; off a lower-index medium it does not. Count flips before choosing between 2nt = mλ and 2nt = (m + ½)λ. A film thin compared with λ is dark in reflection when the media on both sides are alike, and bright when the film index lies between them."
+      },
+
+      {
+        "question": "A single narrow slit is illuminated by monochromatic light and the diffraction pattern is observed on a distant screen. Which of the following is true?",
+        "choices": [
+          "The central bright band has the same width as each of the side bands",
+          "Narrowing the slit widens the central bright band",
+          "Narrowing the slit narrows the central bright band",
+          "The angular positions of the minima are independent of wavelength",
+          "Increasing the wavelength moves the minima toward the center of the pattern"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe minima satisfy a sin θ = mλ, so sin θ = mλ/a. The slit width sits in the denominator: making a smaller pushes every minimum to a larger angle, and the pattern spreads. The central band, which runs between the m = ±1 minima, therefore widens as the slit narrows.\n\n90-SECOND SOLUTION\nThe inverse relationship is the counterintuitive part and the reason the question exists. A smaller aperture produces a larger pattern. It follows from the uncertainty principle in optical dress: confining the light more tightly in position spreads it more widely in transverse momentum, hence in angle.\n\nChoice C states the intuitive but wrong direction. Choice A is false because the central band spans two orders (m = −1 to +1) while every side band spans one, making it twice as wide. Choices D and E both mishandle λ, which appears in the numerator, so longer wavelengths spread the pattern outward rather than inward — the reason red light diffracts more than blue through the same slit.\n\nWHAT TO MEMORIZE\nSingle slit: minima at a sin θ = mλ, m = 1, 2, 3…; the central maximum is twice as wide as the others. Pattern width scales as λ/a, so it grows with wavelength and shrinks with aperture. The same λ/D scaling governs the resolution of every optical instrument."
+      },
+
+      {
+        "question": "Light traveling in medium 1 strikes a plane boundary with medium 2. Consider the following conditions: I. The index of medium 1 exceeds that of medium 2.    II. The angle of incidence exceeds the critical angle.    III. Medium 2 is a vacuum. Which conditions are necessary for total internal reflection to occur?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe critical angle is defined by sin θ_c = n₂/n₁. For that to have a solution at all, the ratio must be less than 1, which requires n₁ > n₂ — condition I. Given that, total internal reflection occurs only for incidence beyond θ_c, since below it a refracted ray still emerges — condition II. Both are needed, and together they suffice.\n\nCondition III is not required. Any lower-index medium will serve: glass to water, water to air, and core to cladding in an optical fiber all support total internal reflection with no vacuum anywhere.\n\n90-SECOND SOLUTION\nCheck each condition for necessity and sufficiency separately. I alone is not enough, since a shallow-enough incidence still transmits — which rules out choice A. II alone is not meaningful, because with n₁ < n₂ no critical angle exists to exceed, so choice B fails as well.\n\nChoice D is the most instructive trap: it drops the index-ordering requirement, which is the condition students most often assume is automatic. Light going from air into glass is never totally internally reflected at any angle, however steep.\n\nWHAT TO MEMORIZE\nsin θ_c = n₂/n₁, requiring n₁ > n₂. Both the ordering and the angle are necessary. Raising n₂ toward n₁ raises θ_c and narrows the trapped cone; when the indices match, θ_c reaches 90° and total internal reflection disappears entirely."
+      },
+
+      {
+        "question": "A transverse standing wave is established on a stretched string fixed at both ends. Which of the following is true?",
+        "choices": [
+          "Every point on the string oscillates with the same amplitude",
+          "Points in adjacent segments oscillate in phase with one another",
+          "Energy is transported steadily from one end of the string to the other",
+          "All points of the string reach their maximum displacement at the same instant",
+          "The wave carries energy in one direction at half the rate of a traveling wave of the same amplitude"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA standing wave has the form y(x,t) = A sin(kx) cos(ωt). Position and time separate completely: the spatial factor sin(kx) fixes each point's amplitude, and the single shared temporal factor cos(ωt) means every point passes through zero together and reaches its extreme together. So all points reach maximum displacement at the same instant.\n\n90-SECOND SOLUTION\nRead the separated form and each option follows. Choice A fails because the amplitude A sin(kx) varies with position — that is what makes nodes and antinodes. Choice B fails because sin(kx) reverses sign across a node, so adjacent segments are exactly out of phase; when one is up, its neighbor is down.\n\nChoices C and E both assume net energy transport. A standing wave is the superposition of two equal traveling waves moving in opposite directions, and their energy flows cancel, so the time-averaged net transport is zero. Energy sloshes between kinetic and potential within each segment and never crosses a node — which is exactly why a node stays motionless indefinitely.\n\nWHAT TO MEMORIZE\nStanding wave: y = A sin(kx)cos(ωt), so all points share one time dependence and are in phase within a segment, antiphase across a node. Amplitude varies with position; net energy transport is zero. Nodes are spaced λ/2 apart, with an antinode midway between."
+      },
+
+      {
+        "question": "A gas of atoms emits a single sharp spectral line. A uniform magnetic field is then applied. Which of the following best describes the effect on the emission spectrum?",
+        "choices": [
+          "The line shifts to a higher frequency but does not split",
+          "The line broadens continuously because the atoms have random orientations",
+          "The line splits into exactly two components for any atom",
+          "The line is unaffected, since the photon is uncharged",
+          "The line splits into several components, and the number observed is never fewer than in the field-free case"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA magnetic field lifts the degeneracy of the m sublevels, shifting each by ΔE = m μ_B B (times a g-factor when spin contributes). Levels that previously coincided now sit at distinct energies, so transitions that previously produced a single frequency now produce several. Removing a degeneracy can only add distinct energies or leave the count unchanged; it can never merge lines. So the number of components is always at least the field-free count.\n\n90-SECOND SOLUTION\nThe robust statement is the one that survives every case. The normal Zeeman effect gives three components; the anomalous effect, where spin makes the g-factors differ between levels, gives more. Rather than deciding which applies, note that lifting a degeneracy can only increase the line count — that reasoning covers both.\n\nChoice C is the Stern-Gerlach answer, which counts *spin* states of a beam rather than spectral components. Choice A misses that different m values shift by different amounts, including m = 0 which does not shift at all. Choice D confuses the photon's neutrality with the atom's: the field acts on the atomic magnetic moment, not on the emitted light.\n\nWHAT TO MEMORIZE\nZeeman: field splits m sublevels by μ_B B, with μ_B = 5.8 × 10⁻⁵ eV/T. Normal effect gives three lines (Δm = 0, ±1); anomalous gives more. An applied field never reduces the number of lines. Stark is the analogous splitting in an electric field."
+      },
+
+      {
+        "question": "In stimulated emission, an excited atom is induced by an incident photon to emit a second photon. Compared with the incident photon, the emitted photon has",
+        "choices": [
+          "the same frequency, direction, phase, and polarization",
+          "the same frequency but a random direction and phase",
+          "twice the frequency and the same direction",
+          "the same frequency and direction but the opposite phase",
+          "a frequency determined by the atom alone, unrelated to the incident photon"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nStimulated emission produces a photon identical to the one that triggered it in every respect: frequency, direction of propagation, phase, and polarization. The emitted photon joins the same mode of the radiation field as the incident one.\n\n90-SECOND SOLUTION\nThis single fact is the whole reason lasers work. Amplification that preserved frequency but randomized direction and phase would produce a brighter lamp, not a laser. Because each stimulated photon copies the mode exactly, a beam passing through an inverted medium grows while staying collimated and coherent — which is what makes laser light directional, monochromatic, and able to interfere with itself over long path differences.\n\nChoice B describes *spontaneous* emission, which is a genuine competing process in the same medium and is exactly what a laser design tries to suppress relative to stimulated emission. That contrast is the point of the question. Choice D would make the medium absorb rather than amplify, since antiphase addition cancels.\n\nWHAT TO MEMORIZE\nStimulated emission clones the photon into the same mode: same frequency, direction, phase, polarization. Spontaneous emission is random in direction and phase. Amplification requires population inversion, which is impossible in thermal equilibrium and therefore requires pumping plus a metastable upper level."
+      },
+
+      {
+        "question": "For the one-dimensional harmonic oscillator, let a be the lowering operator and a† the raising operator. Consider: I. a    II. a†    III. a†a. Which of these operators are Hermitian?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAn operator is Hermitian when it equals its own adjoint. By construction a† is the adjoint of a, and the two are different operators — one lowers the energy, the other raises it — so neither is Hermitian. For the product, (a†a)† = a†(a†)† = a†a, so a†a is self-adjoint and therefore Hermitian.\n\nThat is consistent with what a†a means physically: it is the number operator, with a†a|n⟩ = n|n⟩, and its eigenvalues n are the real, observable level indices. The Hamiltonian H = ħω(a†a + ½) inherits the same property.\n\n90-SECOND SOLUTION\nUse the physical test rather than the algebra. A Hermitian operator has real eigenvalues and corresponds to an observable. Neither a nor a† has eigenvalues in any useful sense — they map an energy eigenstate to a *different* one, so they do not even preserve the state's identity, let alone represent a measurable quantity. The number operator does, and n is what you measure.\n\nA related fact worth carrying: since a and a† change the energy, neither commutes with H. That is a separate question from Hermiticity, and confusing the two is the usual error in this family.\n\nWHAT TO MEMORIZE\na|n⟩ = √n|n−1⟩, a†|n⟩ = √(n+1)|n+1⟩, a†a|n⟩ = n|n⟩, H = ħω(a†a + ½). Neither ladder operator is Hermitian and neither commutes with H; the number operator is Hermitian and does. Observables are Hermitian and have real eigenvalues."
+      },
+
+      {
+        "question": "For a particle with orbital angular momentum, which of the following pairs of quantities can in principle be known simultaneously with arbitrary precision?",
+        "choices": [
+          "L_x and L_y",
+          "L_x and L_z",
+          "L² and L_z",
+          "L_y and L_z",
+          "L_x, L_y, and L_z together"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nTwo observables can be known together exactly when their operators commute. The components of angular momentum do not commute with each other: [L_x, L_y] = iħL_z and its cyclic partners. So no two distinct components can be sharp simultaneously, which eliminates every option pairing two components.\n\nBut L² commutes with each individual component, [L², L_z] = 0. So the magnitude and one chosen component form a compatible pair, and the standard basis is labeled by exactly those two numbers: l and m.\n\n90-SECOND SOLUTION\nThe structure to remember is that you may know the length of the angular momentum vector and one of its projections, but never two projections. That is why states are labeled |l, m⟩ and not by all three components.\n\nThe geometric consequence is worth holding: since |L| = √(l(l+1))ħ strictly exceeds the largest possible L_z = lħ, the vector can never lie fully along z. Some component always remains in the xy-plane with its direction undetermined — the classical picture of a definite angular momentum vector simply fails.\n\nChoice E is the classical expectation and is the sharpest wrong answer for that reason. Choosing z is a convention, not a physical fact; any single axis would do equally well.\n\nWHAT TO MEMORIZE\n[L_x, L_y] = iħL_z (cyclic); [L², L_i] = 0 for every component. States are labeled |l, m⟩ with L² = l(l+1)ħ² and L_z = mħ, −l ≤ m ≤ l. Commuting operators share eigenstates and are simultaneously measurable."
+      },
+
+      {
+        "question": "Which of the following best distinguishes a semiconductor from an insulator at room temperature?",
+        "choices": [
+          "The semiconductor has a partially filled conduction band at absolute zero, whereas the insulator does not",
+          "The semiconductor has no band gap, whereas the insulator has a large one",
+          "The insulator has no free electrons of any kind, whereas the semiconductor has many",
+          "The semiconductor's band gap is small enough that thermal energy excites an appreciable number of carriers across it",
+          "The insulator conducts by ions rather than by electrons"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBoth materials have a filled valence band separated from an empty conduction band by a gap, and at absolute zero both are perfect insulators. The distinction is quantitative, not qualitative: it is the size of the gap relative to kT.\n\nSilicon's gap of about 1.1 eV against kT = 0.026 eV gives a Boltzmann factor that, while tiny, leaves enough carriers to conduct measurably. A gap of 5 eV or more suppresses that population by a further twenty-odd orders of magnitude, and nothing conducts.\n\n90-SECOND SOLUTION\nThe key recognition is that there is no sharp dividing line — the distinction is one of degree, and the boundary is set by comparison with thermal energy. Choice B asserts a qualitative difference that does not exist, since a semiconductor certainly has a gap. Choice A describes a *metal*, which has a partially filled band at absolute zero and conducts at any temperature; that is the genuinely qualitative distinction in this subject, and it is not the one asked about.\n\nChoice C overstates the case: an insulator has vanishingly few thermal carriers, not none. The exponential dependence n ∝ e^(−E_g/2kT) is what turns a factor of five in gap energy into twenty decades in conductivity.\n\nWHAT TO MEMORIZE\nMetal: partially filled band, conducts at all T, σ falls as T rises. Semiconductor: gap of order 1 eV, σ rises steeply with T. Insulator: gap of several eV, same physics but negligible carriers. kT = 0.026 eV at 300 K is the yardstick every gap is measured against."
+      },
+
+      {
+        "question": "Which of the following distinguishes a superconductor from a hypothetical material that merely had zero electrical resistance?",
+        "choices": [
+          "A superconductor carries current with no dissipation, whereas a perfect conductor does not",
+          "A superconductor has zero resistance only below a critical temperature",
+          "A superconductor has infinite thermal conductivity",
+          "A superconductor excludes magnetic flux from its interior only if the field is applied after cooling",
+          "A superconductor expels magnetic flux from its interior regardless of whether the field was applied before or after cooling"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nZero resistance alone implies only that magnetic flux inside cannot *change*, since any change would induce currents opposing it. A material cooled in a field would therefore trap the flux it already had, and its final state would depend on the order in which cooling and field application happened.\n\nA real superconductor does more: it actively expels flux on cooling, reaching B = 0 inside by either route. This is the Meissner effect, and it establishes superconductivity as a distinct thermodynamic phase with B = 0 as an equilibrium property rather than a consequence of history.\n\n90-SECOND SOLUTION\nThe discriminating word is \"regardless.\" Choice D describes exactly what a perfect conductor would do — the history-dependent case — which is why it sits next to the correct answer. Distinguishing the two is the entire question.\n\nChoice A is false: a perfect conductor would also carry current without dissipation, so that property cannot separate them. Choice B is true of superconductors but says nothing a perfect conductor with a transition temperature would not also satisfy.\n\nA superconductor is therefore best described as a perfect diamagnet, χ = −1, and not merely as a perfect conductor.\n\nWHAT TO MEMORIZE\nSuperconductivity = zero resistance AND flux expulsion (Meissner). The second does not follow from the first. Screening currents flow within the penetration depth of the surface. Type-II materials admit quantized flux vortices over an intermediate field range."
+      },
+
+      {
+        "question": "The decay Λ⁰ → p + π⁻ proceeds only through the weak interaction, with a lifetime of about 10⁻¹⁰ s rather than the 10⁻²³ s typical of strong decays. The quantity whose non-conservation forces this decay to be weak is",
+        "choices": [
+          "strangeness",
+          "electric charge",
+          "baryon number",
+          "total lepton number",
+          "angular momentum"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nCheck what balances. Charge: 0 → +1 − 1 = 0, conserved. Baryon number: the Λ⁰ and the proton are both baryons and the pion is not, so 1 → 1, conserved. Lepton number: zero throughout, since no leptons appear. Angular momentum can be arranged consistently.\n\nStrangeness is the odd one out. The Λ⁰ has S = −1 while the proton and pion both have S = 0, so strangeness changes by one unit. The strong and electromagnetic interactions conserve strangeness exactly; only the weak interaction violates it. A decay requiring ΔS ≠ 0 is therefore locked out of the strong channel and must proceed weakly — which is why the lifetime is thirteen orders of magnitude longer than a strong decay.\n\n90-SECOND SOLUTION\nA long lifetime is itself the diagnostic. Strong decays run at about 10⁻²³ s, electromagnetic near 10⁻¹⁶ s, and weak from 10⁻¹⁰ s upward. Reading 10⁻¹⁰ s tells you the decay is weak before any bookkeeping, and the question is then simply which conservation law the weak interaction is uniquely permitted to break.\n\nThe other four options are conserved by *every* interaction, so none of them could selectively forbid the strong channel while allowing the weak one — a structural argument that eliminates them together.\n\nWHAT TO MEMORIZE\nCharge, baryon number, and each lepton family number are conserved in all interactions. Strangeness is conserved by strong and electromagnetic but violated by the weak interaction, with |ΔS| = 1. Lifetimes: strong ~10⁻²³ s, electromagnetic ~10⁻¹⁶ s, weak ≥ 10⁻¹⁰ s."
+      },
+
+      {
+        "question": "The binding energy per nucleon, plotted against mass number, rises steeply for light nuclei, reaches a maximum near mass number 56, and declines slowly thereafter. It follows that",
+        "choices": [
+          "only fusion can release energy, since binding energy always increases with mass number",
+          "fusion of light nuclei and fission of heavy nuclei both release energy",
+          "only fission can release energy, since heavy nuclei are the least stable",
+          "energy is released whenever the number of nucleons changes, in either direction",
+          "nuclei near mass number 56 are the most readily split"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEnergy is released whenever a reaction moves nucleons to a state of *higher* binding energy per nucleon, since the products are then more tightly bound and the mass deficit appears as energy.\n\nFor light nuclei, combining them climbs the rising part of the curve toward the peak, so fusion releases energy. For heavy nuclei, splitting them moves the fragments back toward the peak from the declining side, so fission releases energy. Both processes run downhill in energy by moving toward mass number 56.\n\n90-SECOND SOLUTION\nThe peak is the organizing fact, and both halves of the answer follow from it at once. Choices A and C each capture one half and deny the other; they are correct about their own regime and wrong about the peak's existence.\n\nChoice E inverts the conclusion: nuclei near the peak are the *most* tightly bound and hardest to break apart, which is why iron and nickel are the endpoints of stellar nucleosynthesis. A star fusing its way up the curve stops there, because fusing beyond iron costs energy rather than releasing it — the reason massive stars collapse once they build an iron core.\n\nChoice D ignores direction entirely, but fusing two heavy nuclei or splitting a light one both *absorb* energy.\n\nWHAT TO MEMORIZE\nBinding energy per nucleon peaks near A = 56 at about 8.8 MeV, sits near 8 MeV across most of the chart, and falls to about 7.6 MeV at uranium. Energy is released by moving toward the peak from either side. E_B = Δmc², with 1 u = 931 MeV."
+      },
+
+      {
+        "question": "A particle moves under the influence of a central force directed toward a fixed point. Which of the following is necessarily true, regardless of how the force depends on distance?",
+        "choices": [
+          "The particle's speed is constant",
+          "The orbit is closed",
+          "The line from the center to the particle sweeps out equal areas in equal times",
+          "The particle's kinetic energy is constant",
+          "The orbit lies on a conic section"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA central force produces no torque about the center, since the force and the position vector are antiparallel and their cross product vanishes. Angular momentum about that point is therefore conserved.\n\nThe areal velocity of the radius vector is dA/dt = L/2m, so constant L means constant areal velocity — equal areas in equal times. This is Kepler's second law, and it depends on nothing but the centrality of the force. It holds for an inverse-square force, a linear spring force, and any other radial dependence whatever.\n\n90-SECOND SOLUTION\nSeparate what centrality alone gives from what the specific force law gives. Centrality gives conservation of angular momentum, hence the equal-areas law and a planar orbit. The 1/r² form is an additional and much stronger assumption, and it is what yields conic sections (choice E) and closed orbits (choice B). Bertrand's theorem says only the inverse-square and linear forces close at all, so choice B fails for almost every central force.\n\nChoices A and D fail because the particle speeds up as it approaches the center and slows as it recedes — that variation is exactly what the equal-areas law describes. Only the *total* energy is conserved, not the kinetic part alone.\n\nWHAT TO MEMORIZE\nCentral force → no torque → L conserved → planar orbit and equal areas in equal times, for any radial dependence. Inverse-square specifically → conic sections and Kepler's first and third laws. Distinguish which results need which assumption."
+      },
+
+      {
+        "question": "Consider the following: I. The normal force on a block sliding down a fixed inclined plane.    II. The magnetic force on a charged particle moving in a uniform magnetic field.    III. The tension in the string of a conical pendulum swinging in a horizontal circle at constant speed. On which of these does the agent do zero work?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "I, II, and III",
+          "II and III only"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWork is the integral of F·dr, so any force that remains perpendicular to the displacement does no work.\n\nI: the normal force is perpendicular to the incline surface, and the block's displacement is along it. Zero work.\nII: the magnetic force qv × B is perpendicular to v by construction, so it can change direction but never speed. Zero work — which is why a magnetic field alone cannot change a particle's kinetic energy.\nIII: the bob moves in a horizontal circle at constant speed; the tension points along the string toward the fixed support, which has a component along neither the instantaneous velocity nor any net displacement over a cycle. The speed is constant, so the kinetic energy never changes and the net work is zero.\n\nAll three, so choice D.\n\n90-SECOND SOLUTION\nCheck each force against the velocity rather than computing anything. A force perpendicular to v at every instant does no work at any instant. All three qualify, and the shortcut is noticing that in each case the speed is constant or unaffected by that particular force.\n\nThe useful generalization is that constraint forces — normal forces, ideal string tensions, frictionless track reactions — typically do no work, which is what makes energy methods so effective in mechanics: the unknown constraint forces drop out of the equation entirely.\n\nWHAT TO MEMORIZE\nW = ∫F·dr; a force perpendicular to the displacement does no work. Magnetic forces never do work on a point charge. Ideal constraint forces do no work, which is why energy conservation lets you avoid solving for them."
+      },
+
+      {
+        "question": "An object moves in a circle at constant speed. Which of the following statements is NOT true?",
+        "choices": [
+          "Its acceleration is directed toward the center of the circle",
+          "The net force on it is directed toward the center of the circle",
+          "Its kinetic energy is constant",
+          "The net work done on it over one complete revolution is zero",
+          "Its acceleration is constant"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAcceleration is a vector. In uniform circular motion its magnitude v²/r is constant, but its direction continuously rotates so as to always point at the center. A vector whose direction changes is not constant, so the statement in choice E is false and is therefore the answer to this NOT-format question.\n\nThe rest are true. The acceleration and hence the net force point centripetally; the speed and therefore the kinetic energy are constant; and since the kinetic energy is unchanged after a revolution, the net work is zero.\n\n90-SECOND SOLUTION\nOn a NOT question, the fastest route is to look for the one statement making a claim of a different *kind* from the others. Four of these describe direction or scalar constancy correctly; only E asserts that a rotating vector is constant.\n\nThe distinction between constant magnitude and constant vector is the entire content, and it is the same trap in different dress as \"constant speed\" versus \"constant velocity\" — the velocity is not constant here either, for exactly the same reason.\n\nNote that a genuinely constant acceleration would produce parabolic motion, as in projectile flight, not circular motion. Circular motion requires the acceleration vector to turn at the same rate as the object.\n\nWHAT TO MEMORIZE\nUniform circular motion: |a| = v²/r constant in magnitude, always directed inward, never constant as a vector. Speed and kinetic energy are constant; velocity and acceleration are not. Net work per revolution is zero. On NOT questions, verify all five statements rather than stopping at the first that looks right."
+      },
+
+      {
+        "question": "A parallel-plate capacitor is charged and then disconnected from the battery. A slab of dielectric constant K is subsequently inserted, completely filling the gap. Which of the following decreases?",
+        "choices": [
+          "The potential difference between the plates",
+          "The charge on the plates",
+          "The capacitance",
+          "The free surface charge density on the plates",
+          "The permittivity of the material between the plates"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nDisconnecting the battery clamps the charge: with nowhere for it to flow, Q is fixed, and so is the free surface charge density. Inserting the dielectric raises the capacitance to KC. From V = Q/C with Q fixed and C increased, the potential difference falls by the factor K. The permittivity of the filling material rises by definition of K.\n\nSo the only quantity that decreases is the potential difference.\n\n90-SECOND SOLUTION\nIdentify what is clamped before evaluating anything. Battery disconnected means Q is held; battery connected would mean V is held, and then the charge would rise instead while V stayed put. Every downstream answer flips between those two cases, so reading which one the problem describes is the whole task.\n\nThe physical mechanism is worth carrying: the dielectric polarizes, bound charge appears on its faces opposite the nearby free charge on each plate, and that bound charge partially cancels the field. E drops by K, and since V = Ed with d unchanged, V drops by K as well. The stored energy U = Q²/2C also falls — which is why an uncharged slab is pulled *into* a disconnected capacitor.\n\nWHAT TO MEMORIZE\nDisconnected: Q fixed, C → KC, V → V/K, E → E/K, U → U/K. Connected: V fixed, C → KC, Q → KQ, E unchanged, U → KU. Free charge is unchanged by the dielectric; bound charge σ_b = σ_f(1 − 1/K) is what screens the field."
+      },
+
+      {
+        "question": "A closed surface encloses a point charge +q. A second point charge +Q is then brought to a position outside the surface. Which of the following changes as a result?",
+        "choices": [
+          "The total electric flux through the surface",
+          "The electric field at points on the surface",
+          "Neither the flux nor the field",
+          "The charge enclosed by the surface",
+          "Both the flux and the charge enclosed"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nGauss's law states that the total flux through a closed surface equals the enclosed charge divided by ε₀. The external charge +Q contributes zero *net* flux, because every field line it sends into the surface must come back out again. So the flux is unchanged, and the enclosed charge is obviously unchanged too.\n\nThe field at any individual point on the surface is a different matter. Electric fields superpose, so the field at each point is now the sum of the contributions from q and Q, and it is genuinely altered everywhere on the surface.\n\n90-SECOND SOLUTION\nThe distinction between flux and field is the entire question. Flux is an integral over the whole surface and cares only about enclosed charge; the field is a local quantity and responds to every charge in the universe. External charges redistribute the field over the surface while leaving its integral untouched.\n\nThat is precisely why Gauss's law is useful for computing fields only in symmetric situations. Symmetry lets you argue that E is constant over the surface and pull it outside the integral; without symmetry, the law is still exactly true but tells you nothing about E at any particular point.\n\nChoice C is the natural over-application of \"external charges don't matter,\" which is true of the flux only.\n\nWHAT TO MEMORIZE\n∮E·dA = Q_enclosed/ε₀. Flux depends only on enclosed charge; the field at each point depends on all charges. Gauss's law yields the field only when symmetry makes E uniform over the chosen surface."
+      },
+
+      {
+        "question": "A slab of dielectric is uniformly polarized, with the polarization vector P constant throughout its volume and directed perpendicular to its large flat faces. The bound charge in the slab consists of",
+        "choices": [
+          "a uniform volume charge density throughout the slab, and no surface charge",
+          "surface charge on the two flat faces, and a nonzero volume charge density as well",
+          "surface charge on the two flat faces, and no volume charge",
+          "no bound charge anywhere, since the slab is electrically neutral",
+          "surface charge on the edges only, with the flat faces uncharged"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe bound charge densities are ρ_b = −∇·P in the volume and σ_b = P·n̂ on the surface. Since P is uniform, its divergence vanishes identically and there is no bound volume charge anywhere inside.\n\nOn the surfaces, P·n̂ is nonzero only where the outward normal has a component along P — that is, on the two flat faces. One face carries +P and the opposite face −P. On the edges, the normal is perpendicular to P and the dot product vanishes.\n\n90-SECOND SOLUTION\nUniform polarization means the head of each molecular dipole sits on the tail of the next, so the charges cancel everywhere in the interior. Only at the two ends of the chain is there anything left over. That physical picture gives the answer with no vector calculus and also explains why the leftover charge appears exactly on the faces perpendicular to P.\n\nChoice A inverts the result, and choice B adds a volume term that only appears when P is non-uniform. Choice D confuses overall neutrality with the absence of charge separation — the slab is indeed neutral, since the two face charges are equal and opposite, but the separated charge is real and produces a field.\n\nWHAT TO MEMORIZE\nρ_b = −∇·P, σ_b = P·n̂. Uniform polarization gives surface charge only. For a linear dielectric with free charge nearby, σ_b = σ_f(1 − 1/K). D depends only on free charge, which usually makes it the right place to start."
+      },
+
+      {
+        "question": "A fixed quantity of an ideal gas is held in a rigid sealed container and then heated. Which of the following increases?",
+        "choices": [
+          "The mean free path of the molecules",
+          "The number density of the molecules",
+          "The mean time between collisions for a given molecule",
+          "The frequency with which a given molecule collides with others",
+          "The mean distance between neighboring molecules"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe container is rigid and sealed, so both the volume and the number of molecules are fixed. The number density n is therefore constant, and so is the mean spacing between molecules.\n\nThe mean free path ℓ = 1/(√2 nσ) depends only on n and the collision cross section, so it too is unchanged by heating at constant volume. What does change is the molecular speed, which rises as √T. The collision frequency is v̄/ℓ, so with ℓ fixed and v̄ increasing, molecules collide more often. The mean time between collisions correspondingly decreases.\n\n90-SECOND SOLUTION\nSeparate the geometric quantities from the kinetic ones. How far a molecule travels before hitting something is pure geometry — it depends on how crowded the container is, not on how fast anything moves. How often it hits something depends on both the crowding and the speed.\n\nAt constant volume the geometry is frozen, so ℓ and the spacing cannot change, which eliminates A, B and E in one stroke. Only the rate-type quantities respond, and heating makes collisions more frequent, not less.\n\nHad the gas instead been heated at constant *pressure*, it would expand, n would fall, and the mean free path would grow as T/P.\n\nWHAT TO MEMORIZE\nℓ = 1/(√2 nσ) with n = P/kT, so ℓ ∝ T/P and is independent of molecular mass and speed. Collision frequency = v̄/ℓ, with v̄ ∝ √(T/m). At constant volume, heating changes rates but not distances. Mean free path in air at STP is about 70 nm."
+      },
+
+      {
+        "question": "A quantity y is believed to decay exponentially with x, as y = A e^(−kx). The most direct graphical test of this hypothesis, and the one that allows k to be read from the slope, is a plot of",
+        "choices": [
+          "y against x on linear axes",
+          "y against x with both axes logarithmic",
+          "log y against log x",
+          "1/y against x on linear axes",
+          "log y against x, with only the vertical axis logarithmic"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTake logarithms of the hypothesis: ln y = ln A − kx. This is linear in x, with intercept ln A and slope −k. So plotting the logarithm of y against x on a linear horizontal axis — a semi-log plot — gives a straight line whose slope yields the decay constant directly.\n\n90-SECOND SOLUTION\nMatch the axes to the functional form. An exponential is linear when only the *dependent* variable is logged; a power law y = Ax^m is linear when *both* are logged, and its slope gives the exponent m. Those two cases are the whole of this topic and they are the ones worth being fluent in.\n\nChoices B and C are the same log-log plot described twice, and both are the power-law test — the correct choice for a different hypothesis, which is what makes them tempting. An exponential plotted on log-log axes curves rather than straightening, so the test would simply fail to give a line.\n\nChoice D linearizes y = A/(1 + kx) and similar reciprocal relations, not an exponential. Choice A shows the decay but gives no straight line and no easy way to extract k.\n\nWHAT TO MEMORIZE\nSemi-log straight line → exponential, slope = −k (or −k/2.303 with base-ten logs). Log-log straight line → power law, slope = the exponent. Reading which axis is logged is the first thing to check on any plotted data question."
+      }
+
+    ]
   }
 
 ];
