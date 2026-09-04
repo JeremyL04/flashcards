@@ -4264,6 +4264,405 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Electromagnetism Test 7 (Hard)",
+    "added": "2026-09-04",
+    "category": "em",
+    "cards": [
+
+      {
+        "question": "A solid insulating sphere of radius R carries a charge Q distributed uniformly throughout its volume. The ratio of the electric potential at the center of the sphere to the potential at its surface is",
+        "choices": [
+          "1",
+          "3/2",
+          "2",
+          "5/2",
+          "3"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOutside the sphere the potential is that of a point charge, so at the surface V(R) = Q/(4πε₀R). Inside, the field is E = Qr/(4πε₀R³), and integrating it inward from the surface to the center adds Q/(8πε₀R). The center therefore sits at V(0) = Q/(4πε₀R) + Q/(8πε₀R) = (3/2)Q/(4πε₀R), giving a ratio of 3/2.\n\nThe distractor 1 is the correct answer for a conducting sphere, where all the charge resides on the surface, the interior field is zero, and the whole body is an equipotential. That is the reflex this question is testing: 'potential is constant inside' is a statement about conductors, not about uniformly charged insulators. Here charge is spread through the volume, the interior field is nonzero everywhere except at the exact center, and the potential genuinely rises as you move inward.\n\nNotice also that the field, not the potential, is what vanishes at the center — the potential is maximal there. Confusing which quantity peaks and which vanishes is the second common error.\n\n90-SECOND SOLUTION\nYou only need to know the standard result V(0) = 3Q/(8πε₀R) and V(R) = Q/(4πε₀R); their ratio is 3/2. If you cannot recall it, note that the answer must exceed 1 — moving inward from the surface against an outward-pointing field always raises the potential — which eliminates the conductor answer immediately and makes 3/2 the only modest candidate.\n\nWHAT TO MEMORIZE\nUniformly charged insulating sphere: E = Qr/(4πε₀R³) inside and Q/(4πε₀r²) outside; V = Q(3R² − r²)/(8πε₀R³) inside, so V(center) = (3/2)V(surface). For a conductor the interior field is zero and the interior potential equals the surface value."
+      },
+
+      {
+        "question": "A point charge q is located at the midpoint of one edge of a cube. The total electric flux through the surface of that cube is",
+        "choices": [
+          "q/(24ε₀)",
+          "q/(8ε₀)",
+          "q/(6ε₀)",
+          "q/(4ε₀)",
+          "q/(2ε₀)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe charge lies on the cube's boundary, so it is not enclosed and Gauss's law cannot be applied to this cube alone. Restore the symmetry by stacking identical cubes around the edge on which the charge sits. An edge is shared by exactly four cubes, so four of them tile the space completely around that line and the charge ends up at the center of the assembly. The total flux q/ε₀ divides equally among four equivalent cubes, giving q/(4ε₀) through each.\n\nThe count of cubes is the entire question, and every distractor corresponds to a different position on the cube. A charge at a corner is shared by eight cubes and gives q/(8ε₀); a charge at the center of a face is shared by two and gives q/(2ε₀); a charge at the cube's own center gives the full q/ε₀, of which one face receives q/(6ε₀). The choice q/(24ε₀) is the flux through a single non-adjacent face for the corner configuration — a correct answer to a genuinely different question about a corner charge.\n\n90-SECOND SOLUTION\nAsk one question: how many identical cubes must meet at this location to surround the charge completely? Corner eight, edge four, face two, interior one. Then divide q/ε₀ by that number. No integration and no per-face reasoning is needed here, because the stem asks for the flux through the whole cube rather than through one face.\n\nWHAT TO MEMORIZE\nA charge on a boundary is handled by replicating the volume until the charge sits at a center of symmetry, then dividing the total flux by the number of replicas. The four cases worth having ready are corner (1/8), edge (1/4), face (1/2) and interior (1)."
+      },
+
+      {
+        "question": "A point charge +q is held at rest somewhere inside the cavity of an uncharged, isolated spherical conducting shell of inner radius a and outer radius b, at a position other than the center. At an external point a distance r > b from the shell's center, the magnitude of the electric field is",
+        "choices": [
+          "zero",
+          "q/(4πε₀r²), but only if the charge happens to be at the center of the cavity",
+          "q/(4πε₀(r−d)²), where d is the charge's displacement from the center",
+          "dependent on the direction to the field point as well as on r",
+          "q/(4πε₀r²), regardless of where inside the cavity the charge sits"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe charge induces −q on the inner surface of the shell, distributed non-uniformly so as to terminate every field line from the off-center charge and keep the conductor's interior field zero. Because the shell is neutral overall, +q must appear on the outer surface. The key step is that the conductor screens all information about the interior arrangement: the field inside the metal is zero, so the outer surface cannot 'see' where the charge sits, and the +q on the outer surface distributes itself uniformly, as it would on any isolated conducting sphere. Outside the shell the field is therefore exactly that of a point charge q at the shell's center — spherically symmetric, q/(4πε₀r²), with no dependence on the interior offset.\n\nThe distractor giving q/(4πε₀(r−d)²) is the correct answer if the shell were removed entirely and only the bare point charge remained; it treats the shell as though it were not there. The 'depends on direction' choice is the correct description of the field in the cavity, and of the induced charge density on the inner surface — both of which genuinely are asymmetric. Only the exterior is symmetric.\n\n90-SECOND SOLUTION\nApply Gauss's law to a spherical surface of radius r > b: it encloses +q (the charge) − q (inner surface) + q (outer surface) = +q, so the total flux is fixed at q/ε₀ no matter where the charge sits. Then note that a conductor's outer surface charge is uniform when the conductor is isolated, which upgrades 'fixed total flux' into 'spherically symmetric field'. That combination gives the answer without any calculation.\n\nWHAT TO MEMORIZE\nA closed conducting shell screens the exterior from the interior geometry. The exterior field depends only on the total enclosed charge and on the shell's own shape — never on how the interior charge is arranged. The interior field and the inner-surface charge density, by contrast, do depend on that arrangement."
+      },
+
+      {
+        "question": "A 12 V battery, a 4.0 Ω resistor, and an inductor are connected in series through a switch. Immediately after the switch is closed, and again a long time later, the current in the circuit is respectively",
+        "choices": [
+          "3.0 A and zero",
+          "zero and zero",
+          "3.0 A and 3.0 A",
+          "zero and 3.0 A",
+          "3.0 A and 12 A"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe quantity an inductor clamps is its own current. Because the induced emf is L(dI/dt), any attempt to change the current instantaneously would demand an infinite voltage, so the current through an inductor is continuous. It was zero before the switch closed, so it is still zero immediately after; the inductor initially behaves as an open circuit and the full 12 V appears across it.\n\nA long time later the current has stopped changing, dI/dt is zero, and the inductor's emf vanishes. It then behaves as a plain wire, and the resistor alone sets the current: I = V/R = 12/4.0 = 3.0 A.\n\nThe distractor '3.0 A and zero' is exactly this answer reversed, and is the correct description of a CAPACITOR in the same circuit — an uncharged capacitor initially acts as a short and carries V/R, then blocks all steady current once charged. That inversion is the whole point of the question: capacitors clamp voltage and start as shorts, inductors clamp current and start as opens.\n\nNUMERICS WITHOUT A CALCULATOR\nOnly the final value needs arithmetic, and the inductance is never used because it affects only how fast the current approaches its limit, not the limit itself: 12/4.0 = 3.0 A. The absence of a numerical inductance in the stem is a hint that no time constant is being asked for.\n\n90-SECOND SOLUTION\nAsk which element is present and what it does at the two extremes. Inductor: open at t = 0, wire at t = ∞. Capacitor: wire at t = 0, open at t = ∞. Read the pair straight off without writing a differential equation.\n\nWHAT TO MEMORIZE\nInductor current and capacitor voltage are both continuous — they cannot jump. At t = 0 an inductor is an open circuit and an uncharged capacitor is a short; at t = ∞ an inductor is a short and a capacitor is an open circuit. These four facts resolve most transient questions without solving anything."
+      },
+
+      {
+        "question": "An infinitely long straight line carries a uniform positive linear charge density λ. The potential at a point a perpendicular distance r₁ from the line, minus the potential at a point a distance r₂ from it, is",
+        "choices": [
+          "(λ/2πε₀) ln(r₂/r₁)",
+          "(λ/2πε₀) ln(r₁/r₂)",
+          "(λ/4πε₀)(1/r₁ − 1/r₂)",
+          "(λ/2πε₀)(1/r₁ − 1/r₂)",
+          "zero, since the line is infinite"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBy Gauss's law with a coaxial cylinder, the field of an infinite line is E = λ/(2πε₀r), pointing radially outward for positive λ. The potential difference is the negative line integral of E from r₁ to r₂, which for a 1/r field produces a logarithm rather than a 1/r term: V(r₁) − V(r₂) = (λ/2πε₀)ln(r₂/r₁).\n\nCheck the sign physically rather than trusting the algebra. For positive λ the field points outward, so potential falls as you move away from the line; the nearer point r₁ must therefore be at higher potential. With r₂ > r₁ the ratio r₂/r₁ exceeds 1 and its logarithm is positive, which is correct. The distractor with the ratio inverted is the same expression with the sign reversed, and is the answer to the question asked in the opposite order.\n\nThe distractor (λ/4πε₀)(1/r₁ − 1/r₂) is the correct form for a point charge, whose field goes as 1/r² and whose potential therefore goes as 1/r. Importing that form here is the most common structural error. Note also that the potential of an infinite line cannot be set to zero at infinity — the logarithm diverges — which is why only potential differences are meaningful and why the last choice is wrong for a subtler reason than it appears.\n\n90-SECOND SOLUTION\nMatch the field's power of r to the potential's form: a 1/r² field integrates to a 1/r potential, and a 1/r field integrates to a logarithm. Seeing 1/r in the field is enough to select the logarithmic choices, and the sign is then fixed by asking which point is nearer the positive charge.\n\nWHAT TO MEMORIZE\nInfinite line: E = λ/(2πε₀r), ΔV = (λ/2πε₀)ln(r₂/r₁) with the potential higher nearer a positive line. Infinite sheet: E = σ/(2ε₀), V linear in distance. Point charge: E ∝ 1/r², V ∝ 1/r. Each geometry's potential form follows from integrating its own field, and mixing them is the standard trap."
+      },
+
+      {
+        "question": "Charges +q and −q are fixed at (−a, 0, 0) and (+a, 0, 0) respectively. Consider the following statements about the origin. I. The electric potential there is zero. II. The electric field there is zero. III. The work required to bring a third charge from infinity to the origin is zero. Which are true?",
+        "choices": [
+          "I only",
+          "II only",
+          "II and III only",
+          "I and III only",
+          "I, II, and III"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nPotential is a scalar, so the two contributions at the origin are +q/(4πε₀a) and −q/(4πε₀a), which cancel exactly: statement I is true. The field is a vector, and here the cancellation fails in an instructive way. The field from +q at the origin points in the +x direction, away from the positive charge; the field from −q at the origin also points in the +x direction, toward the negative charge. The two contributions add rather than cancel, giving E = 2q/(4πε₀a²) in the +x direction, so statement II is false. Statement III follows directly from I, since the work to bring a charge Q from infinity is W = QV and V is zero.\n\nThe distractor 'II and III only' is the answer for a student who has the vector and scalar cases exactly backwards — a very common inversion, because the geometric picture of two arrows 'pointing opposite ways' is misleading here. For two equal positive charges the situation reverses: the field would cancel at the midpoint while the potential would not.\n\n90-SECOND SOLUTION\nDo not compute anything. Ask only whether each quantity is a scalar or a vector, then sketch the two field arrows at the origin and notice they point the same way. Statement III is not independent of I — recognizing that W = QV ties them together means you only have two decisions to make, not three.\n\nWHAT TO MEMORIZE\nAt the midpoint of a +q/−q pair the potential vanishes and the field does not; at the midpoint of a +q/+q pair the field vanishes and the potential does not. Zero field and zero potential are independent conditions, and neither implies the other."
+      },
+
+      {
+        "question": "An infinite plane sheet carries a uniform surface charge density σ everywhere except for a circular hole of radius R cut out of it. At a point on the axis of the hole, a distance z from the plane, the magnitude of the electric field is",
+        "choices": [
+          "σz/(2ε₀√(z²+R²))",
+          "σ/(2ε₀)",
+          "(σ/2ε₀)(1 − z/√(z²+R²))",
+          "σR/(2ε₀√(z²+R²))",
+          "zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBuild the punctured sheet by superposition: a complete infinite sheet of density σ, plus a disk of radius R carrying density −σ placed in the hole. The complete sheet gives the familiar uniform σ/(2ε₀). The axial field of a disk of density −σ is −(σ/2ε₀)[1 − z/√(z²+R²)]. Adding them, the leading σ/(2ε₀) terms cancel and what survives is σz/(2ε₀√(z²+R²)).\n\nTwo limits confirm it. As z → 0 the field goes to zero, which is right: at the center of the hole the remaining charge is arranged symmetrically all around and its contributions cancel. As z → ∞ the expression approaches σ/(2ε₀), also right: from very far away the hole is negligible and the sheet looks complete.\n\nThe distractor (σ/2ε₀)(1 − z/√(z²+R²)) is the correct answer to a different question — it is the field of the disk alone, i.e. of the piece that was removed rather than of what remains. The constant σ/(2ε₀) is the answer for a sheet with no hole at all.\n\n90-SECOND SOLUTION\nWrite 'sheet minus disk' and look only at the limiting behavior rather than assembling the algebra. The field must vanish on the plane at the center of the hole by symmetry, and must tend to σ/(2ε₀) far away. Exactly one choice does both, and the check takes ten seconds.\n\nWHAT TO MEMORIZE\nInfinite sheet: σ/(2ε₀), independent of distance. Disk on axis: (σ/2ε₀)[1 − z/√(z²+R²)]. Any 'object with a hole' problem is the whole object plus the negative of the missing piece, and the limits of the result are almost always faster than the algebra."
+      },
+
+      {
+        "question": "Four point charges are fixed at the corners of a square of side s: charges +q at two diagonally opposite corners, and charges −q at the other two. At a distance r ≫ s from the center of the square, the electric potential falls off as",
+        "choices": [
+          "a nonzero constant",
+          "1/r",
+          "1/r²",
+          "1/r³",
+          "1/r⁴"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nExpand the potential in multipoles and ask which is the first term that survives. The monopole term is proportional to the total charge, which is +q + q − q − q = 0, so it vanishes and the 1/r behavior is gone. The dipole term is proportional to the net dipole moment Σqᵢrᵢ; because the two positive charges sit at opposite ends of one diagonal and the two negatives at opposite ends of the other, every contribution is cancelled by its diagonal partner, so the dipole moment vanishes too and the 1/r² behavior is gone. The first non-vanishing term is the quadrupole, which falls as 1/r³.\n\nThe distractor 1/r² is the correct answer for an arrangement with zero net charge but a surviving dipole moment — for instance the same square with both positive charges on one edge and both negatives on the opposite edge. That configuration looks superficially similar and is the one this question is testing you to distinguish. The choice 1/r is the answer for any arrangement with net charge.\n\n90-SECOND SOLUTION\nDo not expand anything. Check the monopole (add the charges: zero), then check the dipole (does each charge have a partner of opposite sign directly opposite the center? here yes, so zero). Each vanishing moment costs one power of r, and you stop at the first survivor. Two cancellations from 1/r gives 1/r³.\n\nWHAT TO MEMORIZE\nThe multipole hierarchy: monopole 1/r, dipole 1/r², quadrupole 1/r³. The leading large-distance behavior is set by the first moment that does not vanish, so the whole problem reduces to testing moments in order until one survives."
+      },
+
+      {
+        "question": "A 12 V battery of negligible internal resistance is connected in series with a 2.0 Ω resistor and a 4.0 Ω resistor. A 5.0 μF capacitor is connected directly across the 4.0 Ω resistor. In the steady state, the charge on the capacitor is",
+        "choices": [
+          "zero",
+          "20 μC",
+          "40 μC",
+          "60 μC",
+          "100 μC"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIn the steady state nothing is changing, so no current flows into or out of the capacitor. The capacitor branch is therefore irrelevant to the current distribution, and the two resistors simply act as a series pair: I = 12/(2.0 + 4.0) = 2.0 A. The capacitor sits across the 4.0 Ω resistor, so it holds that resistor's potential difference, V = IR = (2.0)(4.0) = 8.0 V. Its charge is Q = CV = (5.0 × 10⁻⁶)(8.0) = 40 μC.\n\nThe two things most often confused are both present among the distractors. The choice 60 μC uses the full 12 V of the battery, which would be correct only if the capacitor were connected across the battery terminals rather than across one resistor. The choice 20 μC uses 4.0 V, the drop across the 2.0 Ω resistor, i.e. the other resistor's share. The choice 'zero' comes from the correct observation that no current flows through the capacitor combined with the incorrect inference that it therefore holds no charge — no current does not mean no voltage.\n\nNUMERICS WITHOUT A CALCULATOR\nThe chain is three short steps with no awkward numbers: 12/6 = 2 A, 2 × 4 = 8 V, 5 × 8 = 40 μC. Keeping the capacitance in microfarads throughout gives the answer directly in microcoulombs, so no powers of ten need tracking at all.\n\n90-SECOND SOLUTION\nDelete the capacitor from the diagram, solve the resistive circuit, then read off the voltage across whatever the capacitor was connected to and multiply by C. In any DC steady state a capacitor branch carries no current and can be removed for the purpose of finding currents.\n\nWHAT TO MEMORIZE\nIn DC steady state a capacitor carries no current and holds the voltage across whatever it is connected in parallel with; an inductor carries current and drops no voltage. Removing capacitors and shorting inductors turns a steady-state problem into a pure resistor problem."
+      },
+
+      {
+        "question": "A battery of emf ε and internal resistance r delivers exactly the same power to an external 2.0 Ω resistor as it does to an external 8.0 Ω resistor. The internal resistance r is",
+        "choices": [
+          "4.0 Ω",
+          "5.0 Ω",
+          "6.0 Ω",
+          "8.0 Ω",
+          "10.0 Ω"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe power delivered to an external resistance R is P = ε²R/(R + r)². Setting the two powers equal gives R₁/(R₁+r)² = R₂/(R₂+r)². Cross-multiplying and expanding, the cross terms 2R₁R₂r appear on both sides and cancel, leaving R₁R₂² + R₁r² = R₂R₁² + R₂r², i.e. R₁R₂(R₂ − R₁) = r²(R₂ − R₁). Since R₁ ≠ R₂ we may divide, giving r² = R₁R₂ and r = √(R₁R₂) = √16 = 4.0 Ω.\n\nThe distractor 5.0 Ω is the arithmetic mean of 2 and 8, which is the answer to 'what value lies halfway between the two resistances' — a natural but wrong guess, since the condition produces the geometric mean. The distractor 10.0 Ω is their sum.\n\nThe result also has a clean physical reading: maximum power transfer occurs at R = r, and the power-versus-R curve is symmetric about that maximum on a logarithmic axis. Two resistances give equal power precisely when they are placed symmetrically about r in the geometric sense, i.e. when r is their geometric mean.\n\nNUMERICS WITHOUT A CALCULATOR\nOnce the algebra collapses to r = √(R₁R₂), the arithmetic is √(2 × 8) = √16 = 4. The numbers were chosen so the product is a perfect square; if a problem of this type does not give a perfect square, you have almost certainly mis-set the condition.\n\n90-SECOND SOLUTION\nRecall that the P(R) curve peaks at R = r and is symmetric in log R about that peak. Two equal-power points therefore straddle r geometrically, so r = √(R₁R₂) can be written down immediately. This is the 'run the familiar relation backward' move: the standard question gives you r and asks for maximum power, and this one gives two operating points and asks for r.\n\nWHAT TO MEMORIZE\nP = ε²R/(R+r)², maximized at R = r with P_max = ε²/(4r). Equal power at two different external resistances means r is their geometric mean, r = √(R₁R₂)."
+      },
+
+      {
+        "question": "A capacitor of capacitance C is charged to a potential difference V₀ and then connected, through a resistor of resistance R, across a second identical capacitor that is initially uncharged. After a long time, the fraction of the original stored energy that has been dissipated in the resistor is",
+        "choices": [
+          "zero",
+          "1/4",
+          "1/2",
+          "3/4",
+          "It cannot be determined without knowing R"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCharge is conserved and, at the end, both capacitors share the same potential difference. The total charge CV₀ spreads over total capacitance 2C, so the final common voltage is V₀/2. The initial energy is ½CV₀². The final energy is the sum over two capacitors each holding V₀/2: 2 × ½C(V₀/2)² = CV₀²/4, which is exactly half the initial energy. The missing half has gone into the resistor.\n\nThe striking feature is that R does not appear. A larger R makes the transfer slower and the current smaller, but the total energy dissipated, ∫I²R dt, is fixed by the endpoints alone. That is what makes the last choice a genuine trap rather than filler: R is supplied precisely so that you can notice it cancels. The result even survives R → 0, where the loss is carried off by radiation and by the unavoidable stray inductance instead of by the resistor.\n\nThe distractor 'zero' is the answer that charge conservation alone suggests if you forget that energy is quadratic in charge while charge is linear. The distractor 1/4 is the final energy expressed as a fraction of the initial, mistaken for the loss.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in units of CV₀². Initial: 1/2. Final: two capacitors at half the voltage, so each holds ½C(V₀/2)² = CV₀²/8, total 1/4. Loss is 1/2 − 1/4 = 1/4 of CV₀², which is 1/2 of the initial 1/2. The one place to be careful is that the answer is a fraction of the initial energy, not an absolute energy.\n\n90-SECOND SOLUTION\nNote that voltage halves, so the energy per capacitor falls by four while the number of capacitors only doubles — net factor 1/2. The dissipated fraction is therefore 1/2 without computing anything in joules. Seeing that R is irrelevant is the intended insight, so treat its appearance in the stem as a hint rather than as data.\n\nWHAT TO MEMORIZE\nTwo-capacitor charge sharing always loses exactly half the initial energy when the second capacitor is equal and initially uncharged, independent of the resistance in the path. More generally, energy lost depends only on the initial and final states, never on the details of the dissipative path."
+      },
+
+      {
+        "question": "A long straight cylindrical conductor of radius R carries a current of uniform current density J parallel to its axis. A cylindrical hole of radius R/2 is then bored parallel to the axis, with the hole's axis a distance R/2 from the conductor's axis. Within the hole, the magnetic field is",
+        "choices": [
+          "circular about the hole's own axis, of magnitude μ₀Jr/2 at distance r from that axis",
+          "uniform, of magnitude μ₀JR/4",
+          "uniform, of magnitude μ₀JR",
+          "zero",
+          "uniform, of magnitude μ₀JR/2"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSuperpose two complete cylinders: a full cylinder of current density +J on the original axis, and a smaller cylinder of density −J on the hole's axis. Inside a uniform current-carrying cylinder Ampère's law gives B = μ₀Jr/2, circulating about that cylinder's own axis, where r is measured from it. Writing both contributions as vectors and adding, the field point's position cancels exactly as it does in the electrostatic cavity problem, and only the offset between the two axes survives: B = μ₀Ja/2, where a is the separation of the axes. With a = R/2 the magnitude is μ₀JR/4, and the field is uniform throughout the hole, directed perpendicular to the line joining the two axes.\n\nThe distractor describing a circular field of magnitude μ₀Jr/2 is the correct answer for a point inside a solid cylinder with no hole — it is the ingredient of the superposition mistaken for the result. The magnitude μ₀JR/2 is what you get by substituting the conductor's radius for the axis offset.\n\n90-SECOND SOLUTION\nRecognize this as the magnetic twin of the charged-sphere-with-a-cavity problem; the algebra is identical with ρ/(3ε₀) replaced by μ₀J/2. Once you know that the answer is uniform and proportional to the offset, only one choice has both features with the offset R/2 in it.\n\nWHAT TO MEMORIZE\nInside a uniform current density, B = μ₀Jr/2 about the axis. A cylindrical hole bored in a uniform current distribution contains a perfectly uniform magnetic field of magnitude μ₀Ja/2, where a is the offset of the hole's axis. Both cavity results — electric and magnetic — come from the same superposition trick and are worth learning as a pair."
+      },
+
+      {
+        "question": "A wire carries a steady current I in along the x-axis from x = −∞, is bent into a semicircle of radius a in the xy-plane that passes over to the other side, and then continues out along the x-axis to x = +∞. The magnitude of the magnetic field at the center of the semicircle is",
+        "choices": [
+          "μ₀I/(4πa)",
+          "μ₀I/(4a)",
+          "μ₀I/(4a) + μ₀I/(2πa)",
+          "μ₀I/(2a)",
+          "μ₀I/(2a) + μ₀I/(2πa)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTreat the wire in two pieces. The two straight segments lie along the x-axis, and the field point — the center of the semicircle — also lies on the x-axis. For every element of those straight segments, dl is along x̂ and the vector to the field point is also along x̂, so dl × r̂ = 0 and the contribution is identically zero. The straight leads, despite being infinitely long, contribute nothing.\n\nThe semicircle is at constant distance a from the center with dl always perpendicular to r̂, so it contributes half of what a full loop would: a full loop gives μ₀I/(2a), so a semicircle gives μ₀I/(4a). That is the whole field.\n\nThe distractor μ₀I/(4a) + μ₀I/(2πa) is the correct answer to a genuinely different configuration — one in which the straight leads are offset from the center rather than collinear with it, so that each semi-infinite wire contributes μ₀I/(4πa) at perpendicular distance a. The distractor μ₀I/(2a) is the full-loop result, correct if the wire closed on itself instead of running off to infinity.\n\n90-SECOND SOLUTION\nCheck the geometry of the straight parts before computing anything: if the field point lies on the line containing a straight segment, that segment contributes zero and can be ignored entirely. What remains is a fraction-of-a-loop calculation, and a semicircle is simply half of μ₀I/(2a).\n\nWHAT TO MEMORIZE\nFull circular loop at its center: μ₀I/(2a); an arc subtending angle θ gives the fraction θ/2π of that. A straight segment contributes nothing at any point lying on its own line. Infinite straight wire at perpendicular distance a: μ₀I/(2πa), and a semi-infinite one ending at the foot of the perpendicular gives half that."
+      },
+
+      {
+        "question": "A toroid of 1000 turns carries a steady current of 2.0 A. Taking μ₀/2π = 2 × 10⁻⁷ T·m/A, the magnitude of the magnetic field inside the toroid at a point 0.20 m from the center of the ring is",
+        "choices": [
+          "2.0 × 10⁻⁴ T",
+          "1.0 × 10⁻³ T",
+          "2.0 × 10⁻³ T",
+          "4.0 × 10⁻³ T",
+          "2.0 × 10⁻² T"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nApply Ampère's law to a circular loop of radius r concentric with the toroid and lying inside the windings. By symmetry B is constant in magnitude and tangential along that loop, so ∮B·dl = B(2πr). The loop encloses all N turns, each carrying I, so the enclosed current is NI. Hence B = μ₀NI/(2πr) = (2 × 10⁻⁷)(1000)(2.0)/(0.20) = 2.0 × 10⁻³ T.\n\nThe key structural point, and the reason a toroid is not a solenoid, is that B falls off as 1/r across the bore rather than being uniform: the inner edge of the winding sits in a stronger field than the outer edge. The same Ampèrian argument applied to a loop outside the toroid, or inside its inner radius, encloses zero net current and gives B = 0 — the toroid confines its field almost entirely to the interior of the windings, which is precisely why it is used where stray fields must be avoided.\n\nThe distractor 4.0 × 10⁻³ T is what you get by omitting the factor of 2π, i.e. by using μ₀NI/r; the distractor 2.0 × 10⁻⁴ T comes from a single decade slip in the radius.\n\nNUMERICS WITHOUT A CALCULATOR\nCarrying μ₀/2π = 2 × 10⁻⁷ as one constant removes the 4π entirely. Then the arithmetic is 2 × 10⁻⁷ × 1000 × 2 / 0.2 = 4 × 10⁻⁴/0.2 = 2 × 10⁻³. Group the numerator first and divide once at the end.\n\n90-SECOND SOLUTION\nRecognize the device before reaching for a formula: a toroid encloses all N turns on any interior Ampèrian loop, so B = μ₀NI/(2πr) with the TOTAL turn count, while a solenoid uses turns per unit length. Then one grouped multiplication finishes it. If an answer choice equals the field of a straight wire carrying NI, that is the version without the toroid's geometry.\n\nWHAT TO MEMORIZE\nToroid: B = μ₀NI/(2πr) inside the windings and zero everywhere outside, with N the total number of turns. Solenoid: B = μ₀nI with n the turns per unit length, uniform across the bore. The two formulas look similar and are distinguished by whether the turn count is total or per unit length."
+      },
+
+      {
+        "question": "A thin ring of mass M and radius a carries a total charge Q distributed uniformly around it, and spins about its own axis with angular speed ω. The ratio of the magnitude of its magnetic dipole moment to the magnitude of its angular momentum is",
+        "choices": [
+          "Q/(2M)",
+          "Q/M",
+          "Qa²/(2M)",
+          "Qω/(2M)",
+          "Qωa²/(2M)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe spinning ring constitutes a current equal to the charge passing a point per revolution: I = Q/T = Qω/(2π). Its magnetic moment is that current times the enclosed area, m = IA = [Qω/(2π)](πa²) = Qωa²/2. The angular momentum of a ring about its own axis is L = Iω_inertia = (Ma²)ω = Mωa².\n\nTaking the ratio, both a² and ω cancel completely: m/L = (Qωa²/2)/(Mωa²) = Q/(2M). Neither the radius nor the spin rate appears in the answer, even though both were supplied in the stem — they are there to be cancelled, which is the point of the question.\n\nThe distractors are precisely the intermediate results you stop at if you cancel only one of the two: Qa²/(2M) if you cancel ω but not a², Qω/(2M) if you cancel a² but not ω, and Qωa²/(2M) if you report the magnetic moment itself and forget to divide. Q/M is the result of dropping the factor of 2 from the current, which is the one genuinely physical slip in the group.\n\n90-SECOND SOLUTION\nDo not compute either quantity in full. Note that both m and L are proportional to ω and to a², so the ratio can depend only on Q and M. Dimensionally the ratio must be charge over mass, which leaves only Q/(2M) and Q/M, and the factor of 2 is the classical gyromagnetic result.\n\nWHAT TO MEMORIZE\nFor any rigid body whose charge and mass are distributed identically, m/L = Q/(2M) — the classical gyromagnetic ratio, independent of shape, size and spin rate. It is worth knowing because the electron's spin g-factor of approximately 2 is defined as the departure from exactly this classical value."
+      },
+
+      {
+        "question": "A charged particle moves in a circular path in a uniform magnetic field. If the particle's speed is doubled while the magnetic field is held fixed, then",
+        "choices": [
+          "the period and the radius are both unchanged",
+          "the period doubles and the radius is unchanged",
+          "the period and the radius both double",
+          "the period halves and the radius doubles",
+          "the period is unchanged and the radius doubles"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nSetting the magnetic force equal to the centripetal force, qvB = mv²/r, gives r = mv/(qB): the radius is directly proportional to speed, so doubling v doubles r. The period is T = 2πr/v = 2πm/(qB), in which v has cancelled entirely — the period is independent of both the speed and the radius, depending only on the charge-to-mass ratio and the field.\n\nThe cancellation is the physical content of the question. A faster particle travels a proportionally larger circle, and the two effects compensate exactly, so it completes each orbit in the same time. This is precisely why the cyclotron works: the accelerating voltage can be reversed at a fixed frequency even though the particles spiral outward as they gain energy.\n\nThe distractor 'both double' is the intuitive answer if you assume the period must grow with the circumference while forgetting that the speed grew too. The distractor 'period halves and radius doubles' comes from applying T = 2πr/v with the radius updated but the speed not.\n\n90-SECOND SOLUTION\nWrite T = 2πm/(qB) from memory and observe that v does not appear; that single fact decides three of the five choices. Then r = mv/(qB) settles the rest. Neither step requires the algebra to be redone.\n\nWHAT TO MEMORIZE\nCyclotron frequency ω = qB/m and period T = 2πm/(qB), both independent of speed and radius. Radius r = mv/(qB), proportional to momentum. This independence breaks down only at relativistic speeds, where m must be replaced by γm and the period does grow with energy."
+      },
+
+      {
+        "question": "Two singly ionized atoms, of mass m and 4m, start from rest and are accelerated through the same potential difference, then enter the same uniform magnetic field perpendicular to their velocities. The ratio of the radius of the heavier ion's circular path to that of the lighter ion's is",
+        "choices": [
+          "1:4",
+          "1:2",
+          "1:1",
+          "2:1",
+          "4:1"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nTwo scalings compete here and both must be tracked. Acceleration through potential V gives qV = ½mv², so v = √(2qV/m) and the heavier ion moves more slowly, as 1/√m. The radius in the field is r = mv/(qB), which by itself grows with m. Combining, r = m√(2qV/m)/(qB) = √(2mV/q)/B, so r ∝ √m.\n\nThe two effects therefore partially cancel: mass enters the radius linearly but enters the speed as an inverse square root, and the net dependence is a square root rather than a first power. With masses in the ratio 1:4 the radii are in the ratio 1:2, so the heavier ion's radius is twice the lighter one's, giving 2:1.\n\nThe distractor 4:1 is the correct answer if the two ions entered the field with the same speed rather than having been accelerated through the same potential — then r ∝ m directly. That is a different and equally common experimental arrangement, which is what makes it the natural trap. The distractor 1:2 is the same answer with the ratio taken in the order the stem does not ask for, so read which ion is in the numerator.\n\nNUMERICS WITHOUT A CALCULATOR\nOnce r ∝ √m is established, the arithmetic is √4 = 2. The entire difficulty is in deciding the exponent of m, not in evaluating it, so spend the time on the derivation and none on the number.\n\n90-SECOND SOLUTION\nWrite r = √(2mV/q)/B — the form with V rather than v in it — and read the exponent straight off. If you cannot recall that form, derive it by composing the two scalings rather than by chasing symbols: r ∝ mv and v ∝ m^(−1/2), so r ∝ m^(1/2).\n\nWHAT TO MEMORIZE\nFor ions accelerated from rest through the same potential and bent by the same field, r ∝ √(m/q). This is the working relation of the mass spectrometer. Contrast it with r = mv/(qB) at fixed speed, where r ∝ m — knowing which of the two applies depends entirely on what is held constant upstream."
+      },
+
+      {
+        "question": "A flat metal strip lying in the xy-plane carries a conventional current in the +x direction, and a uniform magnetic field points in the +z direction. If the charge carriers in the metal are electrons, the edge of the strip that becomes negatively charged is",
+        "choices": [
+          "the +y edge",
+          "the +z edge",
+          "the −z edge",
+          "neither edge; no transverse potential difference develops",
+          "the −y edge"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nConventional current in +x means the electrons, being negative, drift in the −x direction. The magnetic force on a carrier is F = qv × B. With v = −v x̂ and B = B ẑ, the cross product v × B = (−v x̂) × (B ẑ) = −vB(x̂ × ẑ) = −vB(−ŷ) = +vB ŷ. Multiplying by the carrier's negative charge q = −e flips this, giving F = −evB ŷ, i.e. a force in the −y direction. Electrons therefore pile up on the −y edge, which becomes negatively charged, leaving the +y edge positive.\n\nThe essential check is that this is the step where the sign of the carrier actually matters. If the carriers were positive, they would drift in +x, and v × B = (v x̂) × (B ẑ) = −vB ŷ, so positive carriers would also be pushed toward −y — making the −y edge positive instead. The deflection direction is the same but the resulting polarity is opposite, which is exactly how the Hall effect determines the sign of the charge carriers experimentally, and why the answer cannot be obtained without committing to a carrier sign.\n\nThe distractors along ±z are excluded because the force is perpendicular to both v and B, and both of those already involve x and z; the transverse direction available is y.\n\n90-SECOND SOLUTION\nEvaluate the cross product once for the drift velocity as it actually is — for electrons that means the −x direction — and then apply the negative charge. Reversing both the velocity direction and the charge sign returns the same force, so the shortcut is: positive and negative carriers deflect to the same side, and therefore give opposite Hall polarities.\n\nWHAT TO MEMORIZE\nCarriers of either sign are deflected toward the same edge, so the sign of the Hall voltage reveals the sign of the charge carriers. That is the effect's whole experimental value — it is how p-type semiconductors were shown to conduct by positive holes."
+      },
+
+      {
+        "question": "A square loop of side 0.20 m and total resistance 0.10 Ω is pulled at a constant speed of 2.0 m/s out of a region of uniform 0.50 T magnetic field directed perpendicular to the plane of the loop. While one side of the loop is still within the field region, the mechanical power that must be supplied by the agent pulling the loop is",
+        "choices": [
+          "0.040 W",
+          "0.20 W",
+          "0.40 W",
+          "0.80 W",
+          "4.0 W"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nOnly the side still inside the field sweeps flux, so the motional emf is ε = BLv = (0.50)(0.20)(2.0) = 0.20 V. The induced current is I = ε/R = 0.20/0.10 = 2.0 A. The magnetic force on that current-carrying side is F = BIL = (0.50)(2.0)(0.20) = 0.20 N, directed so as to oppose the motion. The agent must supply exactly this force at constant speed, so P = Fv = (0.20)(2.0) = 0.40 W.\n\nThe answer can be confirmed by a completely independent route: at constant speed no kinetic energy accumulates, so all the mechanical work goes into resistive heating, P = ε²/R = (0.20)²/0.10 = 0.40 W. The agreement of the two routes is the check worth doing, because it verifies both the emf and the force.\n\nThe distractor 0.20 W is the numerical value of the force in newtons and of the emf in volts, both 0.20, which is what appears if a step is dropped and units are not watched. The distractor 0.040 W is ε² without dividing by R.\n\nNUMERICS WITHOUT A CALCULATOR\nBuild the chain in order and keep each intermediate as a clean number: 0.5 × 0.2 × 2 = 0.2 V; divide by 0.1 to get 2 A; then P = εI = 0.2 × 2 = 0.4 W. Using P = εI rather than Fv skips the force entirely and halves the number of steps.\n\n90-SECOND SOLUTION\nGo straight to P = ε²/R with ε = BLv. Since the loop moves at constant speed, mechanical power in must equal electrical power dissipated, so there is no need to compute the force at all. The force route exists mainly as a cross-check.\n\nWHAT TO MEMORIZE\nMotional emf ε = BLv for a rod of length L. For a loop leaving a field at constant speed, P = B²L²v²/R, dissipated entirely as heat. Note the quadratic dependence on both B and v — doubling the speed quadruples the power, not doubles it."
+      },
+
+      {
+        "question": "A metal disc of radius 0.10 m rotates at a constant angular speed of 100 rad/s about its own axis, in a uniform magnetic field of 0.20 T directed parallel to the axis of rotation. The emf induced between the center of the disc and a point on its rim is",
+        "choices": [
+          "0.010 V",
+          "0.10 V",
+          "0.20 V",
+          "0.50 V",
+          "1.0 V"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThis is a homopolar generator, and it cannot be attacked by tracking a changing flux, because the flux through any fixed circuit is not changing at all. Work instead with the motional force per unit charge, v × B. A point of the disc at radius r moves with speed v = ωr, so the outward force per unit charge is vB = ωrB. Integrating from the axis to the rim gives ε = ∫₀ᴿ ωBr dr = ½ωBR².\n\nSubstituting, ε = ½(100)(0.20)(0.10)² = ½(100)(0.20)(0.010) = 0.10 V.\n\nThe distractor 0.20 V is exactly twice the answer and is what you obtain by writing ε = ωBR², that is by using the rim speed for the whole disc rather than integrating over a velocity that grows linearly from zero at the axis. The factor of ½ is the entire physical content of the integration and is the value most often dropped.\n\nNUMERICS WITHOUT A CALCULATOR\nEvaluate R² first, since squaring a small number is where decades go missing: (0.10)² = 0.010. Then ½ × 100 × 0.20 × 0.010 = ½ × 0.20 = 0.10 V. Grouping 100 × 0.010 = 1 before multiplying by 0.20 is even faster.\n\n90-SECOND SOLUTION\nRecognize that the disc's speed varies linearly with radius, so the answer is the rim value ωBR² times the average factor ½. Write ½ωBR² directly. The presence of both 0.10 and 0.20 among the choices signals that the factor of ½ is the discriminator.\n\nWHAT TO MEMORIZE\nFaraday disc: ε = ½ωBR². It is the standard example of an emf that is real but not associated with any changing flux through a fixed loop, so it must be handled with the v × B force law rather than with dΦ/dt."
+      },
+
+      {
+        "question": "A long solenoid of cross-sectional area 4.0 cm² is encircled by a single circular loop of wire of radius 20 cm and total resistance 0.50 Ω, the loop and solenoid sharing a common axis. The magnetic field inside the solenoid increases at a steady 500 T/s, and the field outside the solenoid is negligible. The induced current in the loop is",
+        "choices": [
+          "0.40 A",
+          "2.0 A",
+          "13 A",
+          "130 A",
+          "250 A"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFaraday's law requires the flux through the loop, and flux is the integral of B over the area — but B is essentially zero everywhere outside the solenoid. The only region contributing is the solenoid's own cross-section, so Φ = B × A_solenoid and dΦ/dt = A_solenoid × dB/dt = (4.0 × 10⁻⁴ m²)(500 T/s) = 0.20 V. The induced current is then I = ε/R = 0.20/0.50 = 0.40 A.\n\nThe loop's radius of 20 cm is a red herring, deliberately large and deliberately quoted. Using the loop's own area of π(0.20)² = 0.126 m² instead gives an emf of 63 V and a current of about 130 A, which is why that value appears among the choices — it is the correct answer to the question 'what if the field filled the whole loop', a different problem.\n\nThe geometry also illustrates a genuinely non-intuitive feature of induction: the loop sits entirely in a region where B is zero, yet a current flows in it. The loop responds to the enclosed flux, not to the local field, which is the physical content of Faraday's law in integral form.\n\nNUMERICS WITHOUT A CALCULATOR\nConvert the area once and carefully: 4.0 cm² = 4.0 × 10⁻⁴ m², since 1 cm² = 10⁻⁴ m². Then 4 × 10⁻⁴ × 500 = 4 × 5 × 10⁻² = 0.2 V, and dividing by 0.5 doubles it to 0.4 A. The area conversion is the only place an error of two decades can enter.\n\n90-SECOND SOLUTION\nAsk 'over what area is B actually nonzero' before writing anything down. Once you see that the loop's radius never enters, the arithmetic is a single multiplication and a single division. The presence of an unnecessary geometric quantity in an induction stem is usually a signal that this is the intended trap.\n\nWHAT TO MEMORIZE\nFaraday's law uses the flux enclosed by the circuit, so only the area where B is nonzero contributes. A circuit can carry an induced current while sitting entirely in field-free space — the same fact that makes the Aharonov–Bohm geometry possible."
+      },
+
+      {
+        "question": "A rigid circular loop of wire lies in the plane of the page in a uniform magnetic field directed out of the page, whose magnitude is increasing at a constant rate. Consider the following. I. The induced current in the loop flows clockwise as seen on the page. II. The magnetic forces exerted on the loop by its own induced current tend to compress it. III. There is a nonzero net magnetic force on the loop. Which are true?",
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "II and III only",
+          "I and II only"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe outward flux is increasing, so by Lenz's law the induced current opposes the increase by producing flux into the page inside the loop. By the right-hand rule that requires a clockwise current as seen on the page, so statement I is true.\n\nFor statement II, take a segment at the top of the loop where the clockwise current flows in the +x direction, with B = B ẑ out of the page. The force per unit length is I dl × B ∝ (x̂) × (ẑ) = −ŷ, pointing downward, that is, toward the center. The same construction at every point on the loop gives an inward force, so the loop is compressed. Statement II is true. This is Lenz's law expressing itself mechanically: the loop tries to reduce its own enclosed area to fight the growing flux.\n\nStatement III is false. The field is uniform, and the net force on any closed current loop in a uniform field is zero — the inward forces are radially symmetric and cancel in pairs. A net force requires a field gradient. The forces are real and would burst or crush a real loop, but they produce stress, not translation.\n\n90-SECOND SOLUTION\nSettle I with Lenz's law alone. Then handle II and III together by recalling that a closed loop in a uniform field experiences zero net force and zero net torque only if its moment is aligned — but it can still experience internal stress. Since II is about internal squeezing and III about net translation, they are not linked, and the uniformity of the field kills III immediately.\n\nWHAT TO MEMORIZE\nA current loop in a uniform field feels no net force; net force requires a non-uniform field. Lenz's law predicts not just the current direction but the mechanical response: a loop in a growing field is squeezed inward, and one in a decaying field is stretched outward."
+      },
+
+      {
+        "question": "An audio amplifier with an output impedance of 5000 Ω is to deliver maximum power to a loudspeaker of resistance 8.0 Ω through an ideal transformer. The required ratio of primary turns to secondary turns is",
+        "choices": [
+          "1:25",
+          "1:5",
+          "5:1",
+          "25:1",
+          "625:1"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAn ideal transformer transforms impedance by the square of the turns ratio. A resistance R connected across the secondary appears at the primary as R(N₁/N₂)². Maximum power transfer requires that this reflected impedance equal the source's own output impedance, so 5000 = 8.0(N₁/N₂)², giving (N₁/N₂)² = 625 and N₁/N₂ = 25.\n\nThe square is where the difficulty lives. The distractor 625:1 is the impedance ratio itself, which is the correct answer to 'by what factor must the impedance be transformed' rather than to the question about turns. Because voltage scales as N₁/N₂ and current scales inversely, the impedance V/I scales as the square — so the turns ratio is always the square root of the impedance ratio.\n\nThe distractor 1:25 is the same magnitude inverted, and corresponds to stepping the wrong way: matching a low-impedance source to a high-impedance load. A quick orientation check settles it — the amplifier is the high-impedance side, so the primary must carry more turns than the secondary, making the ratio greater than one.\n\nNUMERICS WITHOUT A CALCULATOR\nThe numbers were chosen so the impedance ratio is a perfect square: 5000/8 = 625, and √625 = 25. Do the division before the square root, and check that the result is a clean integer — if it is not, you have probably squared instead of rooted.\n\n90-SECOND SOLUTION\nWrite Z_primary = Z_secondary(N₁/N₂)², then take the square root of 5000/8. The orientation check (high impedance on the many-turns side) eliminates both inverted choices before any arithmetic.\n\nWHAT TO MEMORIZE\nIdeal transformer: V ∝ N, I ∝ 1/N, and Z ∝ N². Impedance matching for maximum power transfer requires the reflected load to equal the source impedance, so N₁/N₂ = √(Z₁/Z₂). This is the standard purpose of an audio output transformer."
+      },
+
+      {
+        "question": "Inside a long solenoid the magnetic field is spatially uniform and is increasing at a steady rate of 100 T/s. At a point 2.0 cm from the solenoid's axis and well inside the windings, the magnitude of the induced electric field is",
+        "choices": [
+          "0.25 V/m",
+          "0.50 V/m",
+          "1.0 V/m",
+          "2.0 V/m",
+          "4.0 V/m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nApply Faraday's law in integral form to a circular path of radius r centered on the axis and lying inside the windings. By symmetry the induced electric field is tangential and constant in magnitude on that path, so ∮E·dl = E(2πr). The flux enclosed is B(πr²) and the field is uniform inside, so dΦ/dt = πr²(dB/dt). Equating magnitudes, E(2πr) = πr²(dB/dt), which gives E = (r/2)(dB/dt) = (0.020/2)(100) = 1.0 V/m.\n\nThe distractor 2.0 V/m is exactly twice the answer and comes from writing E = r(dB/dt), i.e. from cancelling the 2π against the π and losing the factor of ½. That factor traces directly to the ratio of the enclosed area πr² to the path length 2πr, and is the single most commonly dropped piece.\n\nIt is worth noting where this expression stops applying. Inside the windings the enclosed flux grows as r², so E grows linearly with r. Outside the windings the enclosed flux stops growing — it is fixed at B times the solenoid's cross-section — so E falls off as 1/r instead. The same setup takes a different formula on either side of the winding radius, and the stem's phrase 'well inside the windings' is what selects the linear branch.\n\nNUMERICS WITHOUT A CALCULATOR\nConvert to metres before halving: 2.0 cm = 0.020 m, so r/2 = 0.010. Then 0.010 × 100 = 1.0 V/m. The only decade risk is the centimetre conversion, so do it first and in writing.\n\n90-SECOND SOLUTION\nWrite E = (r/2)(dB/dt) for a point inside the field region and evaluate directly. The presence of both 1.0 and 2.0 among the choices tells you the factor of ½ is being tested, so confirm it is present before selecting.\n\nWHAT TO MEMORIZE\nFor an axially symmetric region of changing uniform field: E = (r/2)(dB/dt) inside the region, and E = (R²/2r)(dB/dt) outside it, matching at r = R. The induced field is real and drives currents even though no charges create it, and it exists outside the solenoid where B itself is zero."
+      },
+
+      {
+        "question": "A beam of light of intensity 1.0 × 10³ W/m² is directed at normal incidence onto a perfectly reflecting surface. Taking c = 3.0 × 10⁸ m/s, the radiation pressure on the surface is most nearly",
+        "choices": [
+          "1.7 × 10⁻⁶ Pa",
+          "3.3 × 10⁻⁶ Pa",
+          "6.7 × 10⁻⁶ Pa",
+          "1.3 × 10⁻⁵ Pa",
+          "3.3 × 10³ Pa"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRadiation carries momentum flux equal to its energy flux divided by c. For a perfectly absorbing surface all the incident momentum is delivered and the pressure is P = I/c. For a perfectly reflecting surface the light leaves with its momentum reversed, so the momentum change per photon is doubled and the pressure is P = 2I/c.\n\nHere the surface is a perfect reflector, so P = 2(1.0 × 10³)/(3.0 × 10⁸) = 6.7 × 10⁻⁶ Pa.\n\nThe distractor 3.3 × 10⁻⁶ Pa is exactly the absorber answer, I/c, and it is the intended trap: the same setup takes a different formula depending on a single word in the stem. This pairing — absorber versus reflector — is one of the most reliably tested checks in radiation problems, and the two values always sit adjacent among the choices. The distractor 3.3 × 10³ Pa comes from multiplying by c rather than dividing.\n\nNUMERICS WITHOUT A CALCULATOR\nDivide first, then double: 10³/(3 × 10⁸) = 0.333 × 10⁻⁵ = 3.3 × 10⁻⁶, and doubling gives 6.7 × 10⁻⁶. Keeping 1/3 = 0.33 as a memorized decimal makes this a mental operation. Sanity-check the magnitude: radiation pressure from ordinary light sources is microscopic, of order micropascals, so any answer near a kilopascal is wrong by inspection.\n\n90-SECOND SOLUTION\nIdentify absorber or reflector before touching the numbers, since that decision is the entire question. Compute I/c and then double it if reflecting. The exponent check alone eliminates the 10³ choice.\n\nWHAT TO MEMORIZE\nRadiation pressure P = I/c for a perfect absorber and 2I/c for a perfect reflector; a real surface of reflectivity R gives (1+R)I/c. Momentum density in an electromagnetic wave is u/c, where u is the energy density."
+      },
+
+      {
+        "question": "A small source radiates electromagnetic waves isotropically into empty space. At large distances from the source, the amplitude of the electric field of the wave falls off as",
+        "choices": [
+          "1/√r",
+          "1/r",
+          "1/r²",
+          "1/r³",
+          "1/r⁴"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTwo scalings must be composed. Energy conservation fixes the intensity: the source's power spreads over a sphere of area 4πr², so I = P/(4πr²) and the intensity falls as 1/r². Separately, the intensity of an electromagnetic wave is quadratic in the field amplitude, I = ½ε₀cE₀². Combining them, E₀² ∝ 1/r², so E₀ ∝ 1/r.\n\nThe distractor 1/r² is the intensity's dependence reported as though it were the field's — the single most common error, and the reason the question is worth asking. The distractor 1/r³ belongs to the near field of a static dipole, a different regime entirely: static multipole fields fall off much faster than radiation fields, which is precisely why radiation dominates at large distances however weak it is close in.\n\nThe result also explains why the inverse-square law appears in photometry but not in field amplitudes, and why receiving antennas are characterized by field strength in volts per metre falling as 1/r while received power falls as 1/r².\n\n90-SECOND SOLUTION\nStart from 'power is conserved, area grows as r²', so intensity goes as 1/r². Then halve the exponent because intensity is proportional to the square of the field. Two steps, no algebra. If you find yourself with an even power for the field, you have almost certainly reported the intensity instead.\n\nWHAT TO MEMORIZE\nFor isotropic radiation, I ∝ 1/r² and E₀ ∝ 1/r, since I ∝ E₀². Radiation fields fall as 1/r; static dipole fields fall as 1/r³. That difference is what makes radiation, not the static field, the far-field survivor."
+      },
+
+      {
+        "question": "In a plane electromagnetic wave travelling in vacuum, which of the following is true at every point and at every instant?",
+        "choices": [
+          "The energy density in the electric field is c times that in the magnetic field",
+          "The energy density in the magnetic field is c times that in the electric field",
+          "The energy density in the electric field is c² times that in the magnetic field",
+          "The electric and magnetic fields are 90° out of phase with each other",
+          "The energy density in the electric field equals the energy density in the magnetic field"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe two energy densities are u_E = ½ε₀E² and u_B = B²/(2μ₀). In a vacuum plane wave the fields are related at every instant by B = E/c. Substituting, u_B = E²/(2μ₀c²), and since c² = 1/(μ₀ε₀) this becomes u_B = ε₀E²/2 = u_E. The two are exactly equal, everywhere and always, and the total energy density is simply twice either one.\n\nThe distractors invoking factors of c or c² arise from comparing the field magnitudes rather than the energy densities. It is true that E is c times B numerically in SI units, but energy density is quadratic in the fields and carries the compensating constants ε₀ and 1/μ₀, which restore exact equality. Noticing that the constants must conspire in this way is the point of the question.\n\nThe out-of-phase distractor is a persistent misconception imported from LC circuits, where the electric and magnetic energies do oscillate 90° apart. In a freely propagating wave E and B are exactly in phase — both peak together and both vanish together — which is precisely why the Poynting flux EB/μ₀ never reverses sign and the wave carries steady energy in one direction.\n\n90-SECOND SOLUTION\nDo not compare E with B; compare ½ε₀E² with B²/2μ₀, and use c² = 1/(μ₀ε₀) to see the constants cancel. Alternatively, recall the standing fact that the energy of a light wave is shared equally between its electric and magnetic parts, and that E and B are in phase, which disposes of every distractor at once.\n\nWHAT TO MEMORIZE\nIn a vacuum plane wave: B = E/c, the fields are in phase and mutually perpendicular, and u_E = u_B with total u = ε₀E². The 90° phase relationship belongs to LC oscillators and standing waves, not to travelling waves."
+      },
+
+      {
+        "question": "A series RLC circuit is driven at a frequency far above its resonant frequency. The current in the circuit",
+        "choices": [
+          "leads the source voltage by exactly 45°",
+          "is independent of the driving frequency",
+          "leads the source voltage by nearly 90°",
+          "is in phase with the source voltage",
+          "lags the source voltage by nearly 90°"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe reactances scale oppositely with frequency: X_L = ωL grows without bound while X_C = 1/(ωC) tends to zero. Far above resonance the inductive term therefore dominates completely and the circuit behaves as an inductor in series with the resistance. In an inductor the current lags the voltage by 90°, and since the resistance becomes negligible compared with the large X_L, the phase angle φ = arctan[(X_L − X_C)/R] approaches +90°. The current lags the source voltage by nearly 90°.\n\nThe distractor 'leads by nearly 90°' is the correct answer for the opposite limit, far below resonance, where the capacitor dominates and the circuit is capacitive. Those two limits bracket the behavior and are what the question is really testing. 'In phase' is correct exactly at resonance, where X_L and X_C cancel and the circuit is purely resistive.\n\nThe last choice is wrong for an independent reason: as ω increases the impedance Z = √(R² + X_L²) grows without limit, so the current amplitude falls toward zero. A series RLC circuit blocks high frequencies and low frequencies alike, passing current most freely at resonance.\n\n90-SECOND SOLUTION\nAsk which single element dominates in the stated limit — high frequency means the inductor — and then recall the phase behavior of that one element. The mnemonic ELI the ICE man encodes it: in an inductor (L), voltage E leads current I; in a capacitor (C), current I leads voltage E.\n\nWHAT TO MEMORIZE\nSeries RLC: below resonance the circuit is capacitive and current leads; at resonance it is resistive and current is in phase; above resonance it is inductive and current lags. Phase angle φ = arctan[(X_L − X_C)/R], with the current lagging when φ is positive."
+      },
+
+      {
+        "question": "A series RLC circuit is driven at a frequency at which its resistance is 30 Ω and its net reactance X_L − X_C is 40 Ω. The rms voltage of the source is 120 V. The average power delivered by the source is most nearly",
+        "choices": [
+          "58 W",
+          "170 W",
+          "290 W",
+          "480 W",
+          "600 W"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe impedance magnitude is Z = √(R² + X²) = √(30² + 40²) = √(900 + 1600) = √2500 = 50 Ω. The rms current is I = V/Z = 120/50 = 2.4 A. Average power is dissipated only in the resistance, so P = I²R = (2.4)²(30) = 5.76 × 30 ≈ 173 W, most nearly 170 W.\n\nEquivalently P = VI cos φ with power factor cos φ = R/Z = 30/50 = 0.6, giving P = 120 × 2.4 × 0.6 ≈ 173 W.\n\nBoth distractors above the answer are specific, nameable errors. The value 290 W is VI = 120 × 2.4, the apparent power in volt-amperes, correct only if the power factor were unity — that is, at resonance. The value 480 W is V²/R = 120²/30, which is the correct answer if the reactance were absent altogether and the source saw only the resistor. Reactive elements store and return energy without dissipating it, so both overestimates come from forgetting that the current and voltage are not in phase.\n\nNUMERICS WITHOUT A CALCULATOR\nRecognize 30-40-50 as a Pythagorean triple and the impedance costs nothing. Then 120/50 = 2.4, and 2.4² = 5.76 ≈ 5.8, so P ≈ 5.8 × 30 = 174. Alternatively use P = V²R/Z² = 14400 × 30/2500 = 172.8, which avoids squaring a decimal.\n\n90-SECOND SOLUTION\nCompute the power factor R/Z = 0.6 first, then P = V²/Z × cos φ, or simply note that the answer must be less than V²/R = 480 W by the factor cos²φ = 0.36. That single observation, 480 × 0.36 ≈ 173, gets there in one line and simultaneously explains why 480 is present as a distractor.\n\nWHAT TO MEMORIZE\nZ = √(R² + X²); average power P = I_rms²R = V_rms I_rms cos φ with cos φ = R/Z. Only resistance dissipates power; inductors and capacitors exchange energy with the source over each cycle but consume none on average."
+      },
+
+      {
+        "question": "A parallel-plate capacitor has plate separation d. A slab of dielectric constant κ = 2 and thickness d/2 is inserted so that it lies flat against one plate, filling half the gap and leaving vacuum in the other half. The capacitance is now larger than its original value by a factor of",
+        "choices": [
+          "4/3",
+          "3/2",
+          "5/3",
+          "2",
+          "3"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe partially filled gap behaves as two capacitors in series, since the same charge appears on the interface between the regions and the potential differences add. The dielectric-filled half has C₁ = κε₀A/(d/2) = 4ε₀A/d, and the vacuum half has C₂ = ε₀A/(d/2) = 2ε₀A/d.\n\nCombining in series, 1/C = 1/C₁ + 1/C₂ = d/(4ε₀A) + d/(2ε₀A) = 3d/(4ε₀A), so C = 4ε₀A/(3d). The original capacitance was C₀ = ε₀A/d, so the ratio is 4/3.\n\nThe distractor 2 is the correct answer to the same question with the slab filling the entire gap, where C simply becomes κC₀ — the answer you get by applying the dielectric constant without accounting for the slab's partial thickness. The distractor 3/2 is what results from combining the two halves in parallel instead of series, which would be the correct treatment for a slab that filled the full separation but only half the plate area. Distinguishing the two geometries — half the gap versus half the area — is the substance of this question.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in units of ε₀A/d throughout, so C₁ = 4 and C₂ = 2. Series combination gives 1/C = 1/4 + 1/2 = 3/4, hence C = 4/3 in the same units, which is directly the ratio to C₀ = 1. Choosing units that make C₀ = 1 removes every symbol from the arithmetic.\n\n90-SECOND SOLUTION\nCheck the bound first: the answer must lie between 1 (no dielectric) and κ = 2 (gap completely filled), which eliminates the choices of 2 and 3 immediately. Then decide series versus parallel from the geometry — stacked along the field direction means series — and the series result of two unequal capacitors is always smaller than either, pulling the answer toward the lower end of the remaining range.\n\nWHAT TO MEMORIZE\nA dielectric layered across the gap gives capacitors in series; a dielectric covering part of the plate area gives capacitors in parallel. For a slab of constant κ occupying a fraction f of the separation, C/C₀ = κ/(κ − f(κ−1)), which reduces to 4/3 for κ = 2 and f = 1/2."
+      }
+
+    ]
+  },
+
 
 
 
@@ -12586,6 +12985,238 @@ const EXAMS = [
         ],
         "answer": "E",
         "explanation": "WORKED SOLUTION\nTake logarithms of the hypothesis: ln y = ln A − kx. This is linear in x, with intercept ln A and slope −k. So plotting the logarithm of y against x on a linear horizontal axis — a semi-log plot — gives a straight line whose slope yields the decay constant directly.\n\n90-SECOND SOLUTION\nMatch the axes to the functional form. An exponential is linear when only the *dependent* variable is logged; a power law y = Ax^m is linear when *both* are logged, and its slope gives the exponent m. Those two cases are the whole of this topic and they are the ones worth being fluent in.\n\nChoices B and C are the same log-log plot described twice, and both are the power-law test — the correct choice for a different hypothesis, which is what makes them tempting. An exponential plotted on log-log axes curves rather than straightening, so the test would simply fail to give a line.\n\nChoice D linearizes y = A/(1 + kx) and similar reciprocal relations, not an exponential. Choice A shows the decay but gives no straight line and no easy way to extract k.\n\nWHAT TO MEMORIZE\nSemi-log straight line → exponential, slope = −k (or −k/2.303 with base-ten logs). Log-log straight line → power law, slope = the exponent. Reading which axis is logged is the first thing to check on any plotted data question."
+      }
+
+    ]
+  },
+
+
+
+  {
+    "name": "Targeted Set: GR9277 Miss List (Hard)",
+    "added": "2026-09-04",
+    "category": "practice",
+    "cards": [
+
+      {
+        "question": "A wheel of radius R rolls without slipping on a horizontal floor, its center moving at constant speed v. What is the speed of the point on the wheel that is instantaneously at the top, farthest from the floor?",
+        "choices": [
+          "0",
+          "v/2",
+          "v",
+          "3v/2",
+          "2v"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe top point's velocity is the vector sum of the center's translational velocity v and the point's velocity relative to the center, ωR, both pointing the same direction at the top. Since v = ωR for rolling without slipping, the top point's speed is v + ωR = 2v. The distractor v is the trap: that is the center's speed, not the top point's, and 0 is the contact point's speed, not the top's.\n\n90-SECOND SOLUTION\nTreat the contact point as the instantaneous axis of rotation. The top point is a distance 2R from that axis, twice as far as the center (distance R), so it moves twice as fast: 2v.\n\nWHAT TO MEMORIZE\nFor rolling without slipping, velocity is proportional to distance from the contact point (the instantaneous axis): the contact point has speed 0, the center has speed v, the top point has speed 2v."
+      },
+
+      {
+        "question": "A wheel of radius R rolls without slipping on a horizontal floor at constant center speed v. A bead is fixed to a spoke at radius R/2 from the axle. What is the magnitude of the bead's acceleration?",
+        "choices": [
+          "v²/(4R)",
+          "v²/(2R)",
+          "v²/R",
+          "2v²/R",
+          "It depends on the bead's position on the wheel"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBecause the center moves at constant speed, the wheel's angular velocity ω = v/R is also constant, so there is no tangential (angular) acceleration anywhere on the wheel — every point undergoes uniform circular motion about the axle in the center's reference frame. A point at radius r from the axle therefore has purely centripetal acceleration ω²r, always directed toward the axle. With r = R/2, this is (v/R)²(R/2) = v²/(2R), independent of where the bead currently sits on its circle. The distractor v²/R is the result for r = R (i.e., a point on the rim), not r = R/2.\n\n90-SECOND SOLUTION\nSince the center's speed is constant, only centripetal acceleration exists anywhere on the wheel: a = ω²r = (v/R)²r. Plug in r = R/2 directly.\n\nWHAT TO MEMORIZE\nFor rolling at constant speed, every point on the wheel has acceleration ω²r toward the axle, with no tangential component — this includes the seemingly special contact point, whose acceleration is ω²R (nonzero!) despite having zero velocity."
+      },
+
+      {
+        "question": "A uniform rod of mass M and length L slides on frictionless ice at speed v₀, translating (without rotating) in a direction perpendicular to its own length. A stationary point mass m = M/2 lies directly in the path of one end of the rod. The end of the rod strikes and sticks to the mass. What is the angular speed of the rod+mass system immediately afterward?",
+        "choices": [
+          "v₀/(3L)",
+          "v₀/(2L)",
+          "v₀/L",
+          "3v₀/(2L)",
+          "2v₀/L"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBefore the collision, the rod (translating, not rotating) has zero angular momentum about its own center — and since the point mass sits exactly at that center's location along the line of motion, the whole system also has zero angular momentum about the rod's original center. This must be conserved through the collision. The new center of mass sits a distance L/6 from the rod's original center (toward the struck end, since m = M/2). Working out the moment of inertia about this new CM (rod's ML²/12 shifted by the parallel-axis theorem, plus the point mass's contribution) gives ML²/6. Since angular momentum about any fixed point must still be zero afterward, and the new CM is itself translating, balancing the orbital angular momentum of the moving CM against the spin angular momentum about that CM yields ω = v₀/L. The distractor 2v₀/L comes from forgetting to include the point mass's contribution to the moment of inertia.\n\n90-SECOND SOLUTION\nThe cleanest route is angular momentum about the ROD'S ORIGINAL CENTER (a fixed lab point): it's zero before (nothing has any angular momentum about that specific point) and must stay zero after, which lets you skip finding the new CM's motion in a separate step and solve directly for ω.\n\nWHAT TO MEMORIZE\nAngular momentum about ANY fixed point in an inertial frame is conserved when there's no external torque about that point — choosing a fixed point where the angular momentum is obviously zero beforehand (here, a point every velocity vector passes through or is irrelevant to) is often faster than always defaulting to the center of mass."
+      },
+
+      {
+        "question": "Two carts of mass 3.0 kg and 6.0 kg sit at rest on a frictionless track, connected by a spring of constant k = 8.0 N/m at its natural length. The 3.0 kg cart is given an initial velocity of 2.0 m/s directly toward the 6.0 kg cart. What is the maximum compression of the spring?",
+        "choices": [
+          "0.50 m",
+          "0.71 m",
+          "0.87 m",
+          "1.0 m",
+          "1.2 m"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nMaximum compression occurs when both carts move at the same velocity (the CM velocity), so all kinetic energy in the center-of-mass frame has converted to spring potential energy. The reduced mass is μ = (3.0)(6.0)/(3.0+6.0) = 2.0 kg, and the relative speed is the full 2.0 m/s (the other cart starts at rest). Energy conservation in the CM frame gives ½μv₀² = ½kx²ₘₐₓ, so xₘₐₓ = v₀√(μ/k) = 2.0√(2.0/8.0) = 2.0(0.5) = 1.0 m. The distractor 0.71 m comes from mistakenly using the total mass instead of the reduced mass.\n\n90-SECOND SOLUTION\nRecognize this as a two-body oscillator: replace the pair with a single effective mass μ = m₁m₂/(m₁+m₂) moving at the relative speed, and apply simple energy conservation with the spring.\n\nWHAT TO MEMORIZE\nFor two masses connected by a spring, the relevant mass for the relative motion is the reduced mass μ = m₁m₂/(m₁+m₂), not the total mass and not either mass alone."
+      },
+
+      {
+        "question": "A uniform chain of mass m and length L lies in a pile on the floor, directly beneath a small frictionless peg fixed at height L/2. The chain is slowly pulled up and over the peg until it hangs symmetrically, with L/2 of chain on each side and both lower ends just touching the floor. How much work is done?",
+        "choices": [
+          "mgL/2",
+          "3mgL/8",
+          "mgL",
+          "mgL/8",
+          "mgL/4"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe final configuration is two vertical strands, each of length L/2 and mass m/2, hanging from the peg at height L/2 down to the floor. Each strand's own center of mass sits at half its length, i.e., at height L/4, and both strands have the same CM height, so the overall CM of the hanging chain is at L/4. The pile's CM starts at essentially floor level (height 0). The work done equals the change in gravitational potential energy of the CM: W = mg(L/4 − 0) = mgL/4. The distractor mgL/2 is what you'd get by (incorrectly) treating the chain as a single strand of length L hanging from height L, rather than two shorter strands from height L/2.\n\n90-SECOND SOLUTION\nDon't track individual links — just find where the chain's center of mass ends up (L/4 above the floor) and multiply by mg. \n\nWHAT TO MEMORIZE\nWork against gravity for a distributed mass always equals mg times the RISE OF THE CENTER OF MASS, regardless of the final shape — but you must find that CM height correctly for the specific final geometry, not just assume the most common textbook shape."
+      },
+
+      {
+        "question": "A 12 V ideal battery is connected in series with a 1.0 Ω resistor R₁. This combination feeds two parallel branches: branch A is a single 4.0 Ω resistor R₂; branch B is a 1.0 Ω resistor R₃ in series with the parallel combination of two 6.0 Ω resistors R₄ and R₅. What is the current through R₄?",
+        "choices": [
+          "0.33 A",
+          "0.50 A",
+          "0.67 A",
+          "1.0 A",
+          "2.0 A"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nR₄ ∥ R₅ = 3.0 Ω, so branch B totals R₃ + 3.0 = 4.0 Ω. This is in parallel with branch A's 4.0 Ω, giving 2.0 Ω, and adding R₁ gives a total circuit resistance of 3.0 Ω. Total current from the battery is 12/3.0 = 4.0 A, and the voltage across the parallel section is 4.0 × 2.0 = 8.0 V. Branch B then carries 8.0/4.0 = 2.0 A, which splits evenly between the equal resistors R₄ and R₅ (each 6.0 Ω), giving 1.0 A through each. The distractor 2.0 A is the current through all of branch B before the final split is applied.\n\n90-SECOND SOLUTION\nReduce from the far end inward: combine R₄∥R₅ first, then add R₃, then combine with R₂, then add R₁. Work back out for individual branch currents.\n\nWHAT TO MEMORIZE\nNo formula to memorize — just the discipline of reducing a network stage by stage from the far end, then working back out to find current in a specific interior branch."
+      },
+
+      {
+        "question": "Two batteries, 5.0 V and 2.0 V, each with their own series resistor (1.0 Ω and 1.0 Ω respectively), are connected so that both branches meet at a node and return through a shared 3.0 Ω resistor to complete both loops. What is the current through the 1.0 Ω resistor in the 2.0 V branch, and in which direction does it flow relative to that battery's own polarity?",
+        "choices": [
+          "1.0 A, driven backward against its own battery",
+          "2.0 A, driven by its own battery",
+          "0.5 A, driven backward against its own battery",
+          "0 A",
+          "1.0 A, driven by its own battery"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWriting Kirchhoff's voltage law for each loop with mesh currents i₁ (5.0 V loop) and i₂ (2.0 V loop) sharing the 3.0 Ω resistor: 5.0 = i₁(1.0) + (i₁+i₂)(3.0) and 2.0 = i₂(1.0) + (i₁+i₂)(3.0). Solving simultaneously gives i₁ = 2.0 A and i₂ = −1.0 A. The negative sign means current in the 2.0 V branch actually flows opposite to what that battery alone would drive — the stronger 5.0 V battery is pushing current backward through the weaker one, charging it. The distractor \"1.0 A, driven by its own battery\" ignores this sign and direction entirely.\n\n90-SECOND SOLUTION\nNotice the 5.0 V battery is much stronger than the 2.0 V one sharing the same node; expect the stronger source to dominate and possibly reverse current in the weaker branch — then solve the linear system to confirm the sign.\n\nWHAT TO MEMORIZE\nIn a multi-source network, a branch's current direction is not guaranteed by its own battery's polarity — solve the full system (Kirchhoff's laws) and read the sign of the result; a negative mesh current means reversed flow."
+      },
+
+      {
+        "question": "Two concentric conducting spherical shells, inner radius a and outer radius b, are held at potentials V₀ and 0 respectively, with vacuum between them. What is the potential at the midpoint radius r = (a+b)/2, in terms of V₀, when a = 1.0 cm and b = 3.0 cm?",
+        "choices": [
+          "V₀/8",
+          "V₀/4",
+          "V₀/3",
+          "V₀/2",
+          "3V₀/4"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith no charge in the gap, Laplace's equation in spherical coordinates with only radial dependence reduces to d/dr(r² dV/dr) = 0, whose general solution is V(r) = A + B/r — not linear in r. Applying V(a) = V₀ and V(b) = 0 fixes A and B, giving V(r) = V₀·a(r−b)/[r(a−b)]. At r = 2.0 cm (the midpoint of a=1, b=3), this evaluates to V₀/4. The distractor V₀/2 is the answer you'd get by wrongly assuming V varies linearly in r, which is only correct for planar geometry, not spherical.\n\n90-SECOND SOLUTION\nRecall that concentric-sphere potentials go like 1/r, not linearly — check the answer against the limit r → a (should give V₀) and r → b (should give 0) to catch an algebra slip.\n\nWHAT TO MEMORIZE\nSolving Laplace's equation reduces to a 1D ODE once you exploit the symmetry, but the FORM of the general solution depends on geometry: linear in the coordinate for planar/wedge problems, logarithmic in ρ for coaxial cylinders, and 1/r for concentric spheres."
+      },
+
+      {
+        "question": "In a double-slit pattern with center-to-center slit separation d and individual slit width w, it is known that d/w = 5/2, so that the m = 5 interference maximum is missing. Not counting the central maximum, how many bright fringes appear on one side of the pattern before that missing order is reached?",
+        "choices": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "9"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA maximum is missing whenever d/w = m/n in lowest terms, at orders m, 2m, 3m, ...; here d/w = 5/2, so orders m = 5, 10, 15, ... are absent. Counting outward from the central maximum on one side, orders m = 1, 2, 3, 4 are all present and visible, and then m = 5 is skipped. So exactly 4 bright fringes appear before the gap. The distractor 5 comes from counting the missing order itself as though it were visible.\n\n90-SECOND SOLUTION\nOnce you know the first missing order is m = 5, the fringes before it are simply m = 1 through 4 — one less than the missing order number.\n\nWHAT TO MEMORIZE\nA missing order at m = k means orders 1 through k − 1 are all visible on that side; this is a simple counting step once the missing-order condition (d/w = m/n in lowest terms) is known, but it's easy to miscount by one."
+      },
+
+      {
+        "question": "An oscilloscope in XY mode displays a Lissajous figure from two sine-wave oscillators: one at exactly 1000 Hz on the horizontal (X) plates, and one of unknown, nearly equal frequency on the vertical (Y) plates. The displayed pattern is observed to slowly evolve through its full range of shapes (circle, ellipse, line, and back) and repeats itself every 0.50 s. Which of the following could be the unknown frequency?",
+        "choices": [
+          "998 Hz",
+          "999.5 Hz",
+          "1000.5 Hz",
+          "1004 Hz",
+          "996 Hz"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWhen the two driving frequencies are nearly but not exactly equal, the relative phase between them drifts continuously, causing the Lissajous pattern to slowly cycle through its full sequence of shapes. The pattern returns to its original shape once the accumulated phase difference reaches a full cycle, which happens at the beat frequency |f_Y − f_X|. A repeat period of 0.50 s corresponds to a frequency difference of 1/0.50 = 2.0 Hz, so f_Y is either 1000 + 2.0 = 1002 Hz or 1000 − 2.0 = 998 Hz. Among the choices, only 998 Hz matches. The distractor 999.5 Hz corresponds to a difference of only 0.5 Hz, which would give a much longer repeat period of 2.0 s, not 0.50 s.\n\n90-SECOND SOLUTION\nDon't think about the ratio of the two frequencies at all — think about their DIFFERENCE. The pattern's cycling rate is exactly the beat frequency, so period = 1/|f_Y − f_X|.\n\nWHAT TO MEMORIZE\nA static, closed Lissajous pattern requires an exact integer frequency ratio; a slowly EVOLVING pattern instead reveals a small frequency DIFFERENCE via its cycling rate, 1/|Δf| — a distinct piece of Lissajous-figure reasoning from reading off a fixed ratio."
+      },
+
+      {
+        "question": "A telescope objective of diameter 122 mm observes two point sources of light 20 km away, using light of wavelength 500 nm. Taking the Rayleigh criterion θ_min = 1.22λ/D, what is the smallest separation between the two sources that the telescope can just resolve?",
+        "choices": [
+          "0.010 m",
+          "0.020 m",
+          "0.050 m",
+          "0.10 m",
+          "0.20 m"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe minimum resolvable angle is θ_min = 1.22λ/D = 1.22(500×10⁻⁹)/(0.122) = 5.0×10⁻⁶ rad. For small angles, the corresponding linear separation at distance L is simply s = θ_min·L = (5.0×10⁻⁶)(20,000) = 0.10 m. The distractor 0.050 m comes from forgetting the factor of 1.22 in the Rayleigh criterion and using θ_min = λ/D instead.\n\n90-SECOND SOLUTION\nCompute the angular resolution first as a clean number (here, exactly 5×10⁻⁶ rad — chosen so 1.22λ/D collapses nicely), then just multiply by the distance to convert to a linear separation; no need to re-derive anything else.\n\nWHAT TO MEMORIZE\nThe Rayleigh criterion θ_min = 1.22λ/D gives an ANGULAR resolution; converting to a linear separation at some distance L is a simple small-angle multiplication, s ≈ θ_min·L, that's easy to skip under time pressure."
+      },
+
+      {
+        "question": "A full-wave-rectified sine wave, |sin(ωt)|, is expanded in a Fourier series. Which of the following correctly describes that series?",
+        "choices": [
+          "Sine terms only, with only odd harmonics of ω present",
+          "Cosine terms only, with only odd harmonics of ω present, and zero average value",
+          "Cosine terms only, including a nonzero constant (DC) term, with harmonics at even multiples of ω",
+          "Both sine and cosine terms at all harmonics of ω",
+          "A single term at frequency 2ω, with no DC component"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\n|sin(ωt)| is an even function of t (symmetric about t = 0), so its Fourier series contains cosine terms only — no sine terms. It is periodic with period π/ω rather than 2π/ω, so its fundamental angular frequency is 2ω, and all harmonics appear at even multiples of the original ω. Because the function is always non-negative, its time average is manifestly nonzero, so there must be a nonzero constant (DC) term. The distractor with sine terms and odd harmonics describes the ORIGINAL square-wave-type case, not this rectified, even function.\n\n90-SECOND SOLUTION\nCheck parity first (even → cosines only) and check the sign of the function (always positive → nonzero average, ruling out any \"zero average\" choice) before doing any actual integration.\n\nWHAT TO MEMORIZE\nParity alone fixes sine vs. cosine content; the function's average value alone fixes whether a DC term is present — both can often be read off without computing a single Fourier coefficient."
+      },
+
+      {
+        "question": "A physicist proposes that a free proton might decay via p → π⁺ + π⁰. Electric charge is conserved in this process (+1 → +1 + 0). Why is this decay nonetheless forbidden?",
+        "choices": [
+          "It violates conservation of energy",
+          "It violates conservation of angular momentum",
+          "It violates conservation of baryon number",
+          "It violates conservation of lepton number",
+          "It is not actually forbidden"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe proton has baryon number +1, while both pions are mesons with baryon number 0, so the final state has total baryon number 0. This mismatch (1 → 0) violates conservation of baryon number, which (to the precision of collider experiments) is exactly conserved, even though charge, and in principle energy, are not obstacles here. The distractor \"lepton number\" is a trap: no leptons appear anywhere in this reaction, so lepton number conservation is trivially satisfied and irrelevant.\n\n90-SECOND SOLUTION\nWhenever a proposed decay's final state contains no leptons but the baryon count changes, suspect baryon-number violation first — it's the most commonly tested \"invisible\" conservation law in exactly this kind of question.\n\nWHAT TO MEMORIZE\nBaryon number is conserved in all observed processes; it is what keeps the proton (the lightest baryon) stable, and any proposed decay of a proton into only mesons and/or leptons is forbidden by it, regardless of whether charge and energy would allow it."
+      },
+
+      {
+        "question": "A muon-type neutrino ν_μ strikes a neutron: ν_μ + n → p + e⁻. Which conservation law forbids this process?",
+        "choices": [
+          "Conservation of electric charge",
+          "Conservation of baryon number",
+          "Conservation of muon-type lepton number",
+          "Conservation of energy",
+          "It is not forbidden — this is the standard mechanism of neutron beta decay"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe incoming ν_μ carries muon-type lepton number +1 and no electron-type lepton number. The outgoing e⁻ carries electron-type lepton number +1 and no muon-type lepton number. Separately tracking each lepton flavor, muon-type lepton number goes from +1 (in the ν_μ) to 0 (nothing muon-flavored in the final state), which is forbidden. Charge is actually fine here (0 → +1 −1 = 0), so that distractor is a trap. The correct process would instead produce a muon, ν_μ + n → p + μ⁻, which conserves both lepton flavors separately.\n\n90-SECOND SOLUTION\nMatch lepton FLAVORS on each side, not just the total lepton count: a muon-neutrino interaction must produce a muon (or its neutrino), never a bare electron, or muon-type lepton number is violated even though total lepton number and charge look fine.\n\nWHAT TO MEMORIZE\nLepton number is conserved separately for each flavor (electron-type, muon-type, tau-type) in the Standard Model — a neutrino of one flavor interacting via the weak force must produce the charged lepton of that SAME flavor."
+      },
+
+      {
+        "question": "A student measures the wavelength of light using a diffraction grating of known groove spacing d. Light passes through the grating and forms a first-order bright spot on a flat screen a distance L away, displaced a distance x from the central maximum. To determine the wavelength, which of the following does the student need to know or measure?",
+        "choices": [
+          "The absolute values of both x and L, measured independently and precisely",
+          "Only the ratio x/L (equivalently, the diffraction angle), not the individual values of x and L",
+          "Only x, since L cancels out of the final formula entirely",
+          "The intensity of the bright spot, in addition to x and L",
+          "The distance from the light source to the grating, in addition to x and L"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe grating equation is d sinθ = mλ, where θ is the diffraction angle. On a flat screen, tanθ = x/L (exactly, or sinθ ≈ x/L for small angles), so only the ratio x/L — equivalently the angle itself — enters the formula for λ. Scaling both x and L up by the same factor (e.g., by moving the screen farther away and remeasuring) leaves the wavelength calculation unchanged, so their individual absolute values carry no extra information beyond that ratio. The distractor requiring both values \"independently and precisely\" overstates what's actually needed.\n\n90-SECOND SOLUTION\nAsk what physical quantity the formula actually depends on: it's an angle. Any measurement scheme that yields the correct angle — regardless of the specific x and L used to get there — determines the wavelength equally well.\n\nWHAT TO MEMORIZE\nWhen a measurement is used only to extract an angle (via tanθ = x/L or similar), only that ratio matters — a common GRE Lab Methods trap is offering \"more precise\" individual measurements as a needed ingredient when only their ratio is physically relevant."
+      },
+
+      {
+        "question": "A diffraction grating ruled with 500 lines/mm is illuminated over a width of 1.0 cm and used in second order. A physicist wants to resolve two spectral lines near 500 nm separated by 0.010 nm, but this grating alone cannot quite do it. By what factor would the illuminated width need to increase to just resolve the two lines?",
+        "choices": [
+          "10",
+          "20",
+          "50",
+          "2",
+          "5"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe number of illuminated lines is N = (500 lines/mm)(10 mm) = 5,000, and in second order the resolving power actually available is R = mN = 2(5,000) = 10,000. The resolving power needed is λ/Δλ = 500/0.010 = 50,000. Since N enters R linearly, the illuminated width must increase by the same factor as R: 50,000/10,000 = 5. The distractor 10 comes from forgetting to include the order m = 2 already present in the original setup, effectively double-penalizing the shortfall.\n\n90-SECOND SOLUTION\nFind the resolving power you have (mN) and the resolving power you need (λ/Δλ); their ratio is directly the factor by which N — and therefore the width, since line density is fixed — must scale.\n\nWHAT TO MEMORIZE\nGrating resolving power R = mN = λ/Δλ. When a grating falls short, the shortfall factor R_needed/R_have tells you exactly how much to scale the illuminated width (at fixed line density) or the order, since both enter R linearly."
+      },
+
+      {
+        "question": "An ideal gas undergoes a free expansion (irreversible, into a vacuum, no heat or work exchanged) from volume V to 2V at fixed temperature T. A separate identical sample of the same gas instead undergoes a slow, reversible isothermal expansion from V to 2V at the same temperature T, in contact with a large reservoir. Which of the following is true?",
+        "choices": [
+          "The entropy change of the gas is the same in both cases, but the entropy change of the universe is zero only for the reversible process",
+          "The entropy change of the gas is zero in the free expansion but positive in the reversible process",
+          "The entropy change of the universe is positive in both cases, by the same amount",
+          "The entropy change of the gas is positive in the free expansion but zero in the reversible process",
+          "Neither process changes the entropy of the gas, since T is held fixed"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nEntropy is a state function, so the gas's entropy change depends only on its initial and final states (V, T) and (2V, T), not on the path — it is identical in both processes, ΔS_gas = nR ln 2 in both cases. What differs is the entropy of the universe (gas plus surroundings): in the reversible isothermal process, the heat absorbed by the gas exactly equals the heat given up by the reservoir at the same temperature, so ΔS_universe = 0. In the free expansion, no heat is exchanged with any reservoir at all, so the gas's entropy increases while the surroundings' entropy doesn't decrease to compensate, giving ΔS_universe > 0. The distractor claiming ΔS_gas differs between the two processes ignores that entropy is a state function.\n\n90-SECOND SOLUTION\nSame start and end state for the gas ⇒ same ΔS_gas, full stop, regardless of path. Then separately ask whether the path was reversible to determine ΔS_universe.\n\nWHAT TO MEMORIZE\nEntropy is a state function: ΔS of a system depends only on its endpoints, never on whether the path taken was reversible or irreversible. Only ΔS_universe (or ΔS_surroundings) distinguishes a reversible process (=0) from an irreversible one (>0) between the same two states."
       }
 
     ]
