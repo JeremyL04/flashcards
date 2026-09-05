@@ -1103,6 +1103,275 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Michelson & Interferometry (Hard)",
+    "added": "2026-09-05",
+    "category": "optics",
+    "cards": [
+
+      {
+        "question": "In a Michelson interferometer illuminated by a HeNe laser (λ = 632.8 nm), one mirror is mounted on a motor and translated at a constant speed of 2.0 μm/s along the beam direction. At what rate do bright fringes pass a fixed point in the field?",
+        "choices": [
+          "6.32 Hz",
+          "9.48 Hz",
+          "12.6 Hz",
+          "18.9 Hz",
+          "25.3 Hz"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA fringe passes each time the optical path difference changes by one wavelength. Because the mirror motion is double-passed, the path difference changes at rate 2v, where v is the mirror speed. The fringe rate is therefore f = 2v/λ = 2 × (2.0×10⁻⁶ m/s)/(632.8×10⁻⁹ m) = 4.0×10⁻⁶/6.328×10⁻⁷ ≈ 6.32 Hz. The distractors are multiples of the true rate; a common slip is to use v/λ (forgetting the double pass), which HALVES the true value — note that error gives 3.16 Hz, which is not offered, so recompute rather than pattern-match. Same double-pass logic as counting fringes for a displacement, expressed as a rate.\n\nNUMERICS WITHOUT A CALCULATOR\nf = 2v/λ. 2v = 4.0×10⁻⁶ m/s. Divide by λ ≈ 6.33×10⁻⁷ m: 4.0/0.633 ≈ 6.3 per second. The factor of 2 is the whole content, again.\n\n90-SECOND SOLUTION\nFringe rate = mirror speed in half-wavelengths per second = 2v/λ. The mirror covers 2 μm/s = about 6.3 half-wavelengths of 316 nm each per second → ~6.3 Hz. Dropping the double pass would give half this (3.16 Hz); the offered choices are all multiples, so the double pass must be included to land on 6.32 Hz.\n\nWHAT TO MEMORIZE\nA mirror moving at speed v produces fringes at rate f = 2v/λ — the same 2d/λ relation, differentiated in time."
+      },
+
+      {
+        "question": "In a Michelson interferometer the two arms are initially equal and the central field is bright. A thin transparent film of index 1.40 is then inserted flat into one arm, perpendicular to the beam. As it is inserted, 22 bright fringes sweep past the center. If the illumination is the green mercury line (λ = 546 nm), what is the thickness of the film?",
+        "choices": [
+          "3.8 μm",
+          "6.0 μm",
+          "7.5 μm",
+          "15 μm",
+          "30 μm"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nPlacing a film of index n and thickness t in one arm replaces a length t of vacuum (index 1) with the same length of glass. The beam passes through it twice, so the extra optical path introduced is 2(n−1)t. Each fringe corresponds to one wavelength of added path: N = 2(n−1)t/λ. Solving for thickness, t = Nλ / [2(n−1)] = 22 × 546 nm / (2 × 0.40) = 12012 nm / 0.80 = 15.0 μm. The 6.0 μm distractor uses 2nt instead of 2(n−1)t — forgetting that the film displaces vacuum, not empty space. The 7.5 μm distractor uses a single pass, N = (n−1)t/λ.\n\nNUMERICS WITHOUT A CALCULATOR\nt = Nλ/[2(n−1)]. Here 2(n−1) = 0.80. Numerator Nλ = 22 × 546 nm ≈ 22 × 550 = 12100 nm. Divide by 0.8: 12100/0.8 ≈ 15100 nm ≈ 15 μm. The (n−1), not n, is the whole point.\n\n90-SECOND SOLUTION\nThe extra path a slab adds in one arm is 2(n−1)t. Any answer built from 2nt (giving ~6 μm) is the trap that ignores the vacuum being displaced. With 2(n−1) = 0.8 and Nλ ≈ 12 μm-equivalents, t ≈ 15 μm falls out.\n\nWHAT TO MEMORIZE\nA slab (index n, thickness t) in one arm of a Michelson adds optical path 2(n−1)t, giving N = 2(n−1)t/λ. The (n−1) is because the slab replaces an equal length of vacuum."
+      },
+
+      {
+        "question": "A transparent gas fills a cell of length L in one arm of a Michelson interferometer; the gas is slowly pumped out while fringes are counted. The counted number of fringes N is directly proportional to which single quantity?",
+        "choices": [
+          "(n − 1)L, where n is the gas index",
+          "n L",
+          "n²L",
+          "L alone, independent of the gas",
+          "(n − 1), independent of the cell length"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nEvacuating the cell removes the gas, changing the index over the length L from n to 1. The change in one-way optical path is (n − 1)L, and because the light double-passes the arm the total path change is 2(n − 1)L, giving N = 2(n − 1)L/λ. So N is proportional to the product (n − 1)L — not to n itself, and not to L alone. This is exactly why the technique measures the small quantity (n − 1): the '1' (the vacuum path that would exist anyway) cancels out. Choice B (nL) is the classic error of forgetting that the vacuum is being displaced. Choice E forgets that a longer cell gives proportionally more fringes.\n\n90-SECOND SOLUTION\nThe interferometer responds to the CHANGE in optical path, which is 2(n−1)L. Strip the constants: N ∝ (n−1)L. Any answer with a bare n, or missing the L, misreads what changed.\n\nWHAT TO MEMORIZE\nA gas cell of length L in a Michelson gives N = 2(n−1)L/λ, so the fringe count measures the product (n − 1)L. The method is sensitive to (n − 1) because the vacuum reference path cancels."
+      },
+
+      {
+        "question": "An unknown monochromatic laser illuminates a Michelson interferometer. When one mirror is translated smoothly through exactly 0.50 mm, 1600 fringes are counted. What is the wavelength of the laser?",
+        "choices": [
+          "312 nm",
+          "500 nm",
+          "625 nm",
+          "800 nm",
+          "1250 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThis is the interferometer used as a wavemeter. With N = 2d/λ, the wavelength is λ = 2d/N = 2 × 0.50 mm / 1600 = 1.0 mm / 1600 = 6.25×10⁻⁴ mm = 625 nm. The 312 nm distractor drops the factor of 2 (λ = d/N); it is UV, whereas the correct 625 nm is visible — a magnitude sanity check. The factor of 2 from the double pass is again the whole question.\n\nNUMERICS WITHOUT A CALCULATOR\nλ = 2d/N. 2d = 1.0 mm = 10⁶ nm. Divide by 1600: 10⁶/1600 = 625 nm. (1600 × 625 = 10⁶ is the clean check.)\n\n90-SECOND SOLUTION\nWavelength = twice the mirror travel divided by fringe count. 2 × 0.5 mm = 1 mm spread over 1600 fringes → 625 nm per fringe of path, which lands squarely in the visible. The distractor 312 nm is UV and comes from forgetting the double pass.\n\nWHAT TO MEMORIZE\nAs a wavemeter, the Michelson gives λ = 2d/N: two times the mirror displacement, divided by the number of fringes counted."
+      },
+
+      {
+        "question": "A Michelson interferometer with equal arms is aligned for a bright central spot using coherent light. The beam splitter, both mirrors, and the source stay fixed, but one of the two mirrors is very slightly TILTED about a vertical axis. What is the immediate visual effect on the field of view?",
+        "choices": [
+          "A set of nearly straight, equally spaced fringes appears across the field",
+          "The central spot simply gets dimmer but stays uniform",
+          "Concentric circular fringes contract toward the center",
+          "The field goes completely dark everywhere",
+          "The fringes move but their spacing is unchanged"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWhen the two mirrors are exactly perpendicular (arms aligned), the images of the two mirrors are parallel and the path difference is uniform across the field — you see either uniform brightness or, for slightly unequal arms, circular (equal-inclination) fringes. Tilting one mirror makes the two virtual mirror images form a thin wedge of air. A wedge produces equal-thickness fringes: nearly straight, parallel, equally spaced bands, exactly like a wedge in a thin-film experiment. Choice C describes the circular fringes you get by changing arm LENGTH, not tilt. Choice D would require perfect cancellation everywhere, impossible with a wedge.\n\n90-SECOND SOLUTION\nTilt → wedge → straight equal-thickness fringes. Length change → circular equal-inclination fringes. Matching the geometry to the fringe shape immediately selects A. This \"which fringe pattern\" distinction is a classic conceptual GRE move.\n\nWHAT TO MEMORIZE\nMichelson fringe shapes: tilting a mirror gives straight (equal-thickness, wedge) fringes; changing an arm length gives circular (equal-inclination) fringes."
+      },
+
+      {
+        "question": "A student builds a Michelson interferometer and finds crisp fringes with a helium–neon laser, but sees essentially no fringes when the laser is replaced by an ordinary incandescent lamp with a broad spectrum, even after careful alignment. The best single explanation is that the lamp light has:",
+        "choices": [
+          "too low an intensity",
+          "a very short coherence length",
+          "the wrong polarization for the beam splitter",
+          "a wavelength too long to interfere",
+          "too high a frequency for the mirrors to reflect"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nInterference fringes require the two recombined beams to maintain a fixed phase relationship. A source with a broad spectral width Δλ has a coherence length L_c ≈ λ²/Δλ — the maximum path difference over which interference survives. A laser has an extremely narrow Δλ, so L_c is centimeters or more and fringes are easy. A white lamp has Δλ of hundreds of nanometers, giving L_c of only a wavelength or two; unless the arms are matched to within about a micron, the fringes wash out. The intensity choice is wrong: intensity affects brightness, not fringe existence. The polarization choice is wrong for an ordinary (non-polarizing) beam splitter.\n\n90-SECOND SOLUTION\nFringe visibility is a coherence question, not an intensity or polarization one. Broad spectrum → short coherence length → fringes only near zero path difference → none seen with unmatched arms. That points straight to A.\n\nWHAT TO MEMORIZE\nCoherence length L_c ≈ λ²/Δλ sets the maximum path difference for visible fringes. Broadband (white) sources have L_c of only a few wavelengths; lasers have very long L_c."
+      },
+
+      {
+        "question": "Light from a laser of wavelength 633 nm has a spectral width (linewidth) of about 2.0 pm (2.0×10⁻¹² m). Approximately what is the coherence length of this light — the largest path difference in a Michelson interferometer over which fringes remain visible?",
+        "choices": [
+          "2.0 mm",
+          "2.0 cm",
+          "20 cm",
+          "2.0 m",
+          "20 m"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe coherence length is L_c ≈ λ²/Δλ. Here L_c = (633×10⁻⁹ m)² / (2.0×10⁻¹² m) = (4.01×10⁻¹³ m²)/(2.0×10⁻¹² m) = 0.20 m = 20 cm. Beyond this arm mismatch the two beams lose their phase relationship and fringes fade. The millimeter- and meter-scale distractors come from arithmetic slips in the powers of ten; the formula itself is the content.\n\nNUMERICS WITHOUT A CALCULATOR\nλ² = (633 nm)² ≈ (6.3×10⁻⁷)² = 4.0×10⁻¹³ m². Divide by Δλ = 2×10⁻¹²: (4.0×10⁻¹³)/(2×10⁻¹²) = 2.0×10⁻¹ m = 0.20 m. Just track exponents: −13 minus −12 gives −1.\n\n90-SECOND SOLUTION\nL_c ≈ λ²/Δλ. The ratio λ/Δλ ≈ 6.3×10⁻⁷/2×10⁻¹² ≈ 3×10⁵ is the number of visible fringes; multiply by λ to get L_c ≈ 3×10⁵ × 633 nm ≈ 0.2 m. Only 20 cm is in that range.\n\nWHAT TO MEMORIZE\nL_c ≈ λ²/Δλ, and equivalently the number of usable fringes is roughly λ/Δλ. This is the same coherence idea whether asked as a length or a fringe count."
+      },
+
+      {
+        "question": "A Michelson interferometer is illuminated with light containing the two sodium D lines, 589.0 nm and 589.6 nm, of equal intensity. As one mirror is moved steadily, the fringe contrast is observed to fade to zero, then return, then fade again, periodically. What is the mirror displacement between two successive positions of zero contrast?",
+        "choices": [
+          "0.15 mm",
+          "0.29 mm",
+          "0.58 mm",
+          "1.2 mm",
+          "2.9 mm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEach wavelength produces its own fringe system; as the mirror moves the two systems drift out of step. Contrast vanishes when the two sets are exactly half a fringe apart. Contrast recurs when the extra path difference 2Δd equals one beat wavelength Λ = λ²/Δλ. The mirror displacement between successive wash-outs is therefore Δd = λ²/(2Δλ) = (589.3 nm)²/(2 × 0.6 nm) ≈ 3.47×10⁵ nm²... /1.2 nm ≈ 0.289 mm. The 0.58 mm distractor forgets the factor of 2 (it uses λ²/Δλ for the mirror move rather than for the path difference, which is 2Δd). This \"sodium doublet in a Michelson\" is a classic real measurement of a small wavelength splitting.\n\nNUMERICS WITHOUT A CALCULATOR\nΔd = λ²/(2Δλ). λ² ≈ (589 nm)² ≈ 3.47×10⁵ nm². Δλ = 0.6 nm, so 2Δλ = 1.2 nm. 3.47×10⁵/1.2 ≈ 2.9×10⁵ nm = 0.29 mm.\n\n90-SECOND SOLUTION\nThe two D-lines beat; contrast recurs each time the path difference (= 2Δd) advances by one line's worth relative to the other, i.e. by Λ = λ²/Δλ. So Δd = λ²/(2Δλ). A splitting of 0.6 nm out of 589 gives ~10⁵ fringes per beat → sub-millimeter mirror moves.\n\nWHAT TO MEMORIZE\nTwo close lines split by Δλ give contrast recurrence every Δd = λ²/(2Δλ) of mirror motion in a Michelson — the classic way to measure a small doublet spacing."
+      },
+
+      {
+        "question": "In a Michelson interferometer with equal arms, one arm's beam path lies along a rigid steel rod of length 0.25 m that is uniformly heated so its temperature rises by 8.0 K. The rod's linear expansion coefficient is 1.0×10⁻⁵ K⁻¹. Using light of wavelength 500 nm, how many fringes shift as the rod expands? (Treat the arm length as changing with the rod.)",
+        "choices": [
+          "20",
+          "40",
+          "80",
+          "160",
+          "400"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThermal expansion lengthens the arm by ΔL = αL ΔT = (1.0×10⁻⁵)(0.25 m)(8.0 K) = 2.0×10⁻⁵ m. As with any arm-length change, the path difference shifts by 2ΔL (double pass), so the fringe count is N = 2ΔL/λ = 2 × 2.0×10⁻⁵ / 500×10⁻⁹ = 4.0×10⁻⁵/5.0×10⁻⁷ = 80. The value 20 drops the factor of 2 and makes a further slip; 40 drops only the factor of 2. The Michelson is sensitive enough that a 20-micron expansion produces 80 countable fringes — this is why it is used as a strain and displacement gauge.\n\nNUMERICS WITHOUT A CALCULATOR\nΔL = αLΔT = 10⁻⁵ × 0.25 × 8 = 2×10⁻⁵ m. N = 2ΔL/λ = 4×10⁻⁵/5×10⁻⁷ = 80. Every step is a one-digit multiply.\n\n90-SECOND SOLUTION\nFringes = 2ΔL/λ with ΔL = αLΔT. ΔL ≈ 20 μm; each fringe is λ/2 = 250 nm of arm change, so 20 μm/250 nm = 80. Dropping the factor of 2 gives the 40 trap.\n\nWHAT TO MEMORIZE\nAny arm-length change ΔL gives N = 2ΔL/λ. Combined with ΔL = αLΔT, the Michelson becomes a thermal-expansion / displacement sensor."
+      },
+
+      {
+        "question": "A Michelson interferometer normally includes a 'compensating plate' — a slab of glass identical to the beam splitter substrate — placed in the arm that does NOT pass through the back of the beam splitter. Its purpose is primarily to:",
+        "choices": [
+          "increase the overall light intensity reaching the detector",
+          "protect the beam splitter from the moving mirror",
+          "polarize the two beams so they can interfere",
+          "make the two beams traverse equal thicknesses of glass, so the path difference is the same for all wavelengths",
+          "double the number of fringes for a given mirror motion"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIn a real Michelson the beam splitter is a glass plate with a partially reflecting coating on one face. The beam reflected toward one mirror passes through the glass three times; the transmitted beam only once, unless a compensator is added. Because glass is dispersive (index depends on wavelength), an uncompensated glass-path difference makes the fringe condition wavelength-dependent, which destroys white-light fringes and shifts monochromatic ones. The compensating plate equalizes the glass thickness in both arms so the two beams are dispersion-matched. The intensity choice is wrong (the plate is passive glass), and the 'doubles the fringes' choice misstates the fringe relation, which is fixed by geometry.\n\n90-SECOND SOLUTION\nThe compensator exists to equalize GLASS path, not air path, so that dispersion cancels and white-light (zero-order) fringes are possible. Any answer about intensity, polarization, or fringe count misses that it is a dispersion-matching element.\n\nWHAT TO MEMORIZE\nThe compensating plate equalizes the amount of dispersive glass in the two arms so the path difference is wavelength-independent — essential for white-light fringes."
+      },
+
+      {
+        "question": "Two coherent beams of equal intensity I₀ are recombined, as at the output of an interferometer. When they are exactly in phase the combined intensity is 4I₀. What is the combined intensity when the two beams differ in phase by 90°?",
+        "choices": [
+          "0",
+          "I₀",
+          "2.83I₀",
+          "2I₀",
+          "4I₀"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor two beams of equal amplitude the combined intensity is I = 2I₀(1 + cos φ), where φ is the phase difference. In phase (φ = 0): I = 2I₀(2) = 4I₀, matching the stem. At φ = 90°, cos φ = 0, so I = 2I₀(1 + 0) = 2I₀. Notice 2I₀ is exactly the incoherent sum — at quadrature the interference term vanishes on average. The 2.83I₀ choice is the trap of adding amplitudes as √2 without squaring correctly; the 0 choice is the φ = 180° (destructive) value.\n\nNUMERICS WITHOUT A CALCULATOR\nI = 2I₀(1 + cos φ). cos 90° = 0 exactly, so I = 2I₀. No real arithmetic — just knowing cos 90° = 0.\n\n90-SECOND SOLUTION\nThe interference term is the cos φ piece. At 90° it's zero, so you're left with the plain sum 2I₀. Endpoints check: φ=0 → 4I₀ (given), φ=180° → 0. Quadrature sits exactly halfway at 2I₀.\n\nWHAT TO MEMORIZE\nTwo equal coherent beams: I = 2I₀(1 + cos φ), ranging from 0 to 4I₀, equal to the incoherent value 2I₀ at φ = 90°."
+      },
+
+      {
+        "question": "Two coherent beams are combined, but one has twice the amplitude of the other (so their intensities are in the ratio 4:1). What is the fringe visibility, V = (I_max − I_min)/(I_max + I_min), of the resulting interference pattern?",
+        "choices": [
+          "0.33",
+          "0.50",
+          "0.60",
+          "0.80",
+          "1.0"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIntensity goes as amplitude squared. With amplitudes a₁ = 2a and a₂ = a, the maximum (in phase) intensity is (a₁+a₂)² = (3a)² = 9a², and the minimum (out of phase) is (a₁−a₂)² = (a)² = a². So V = (9−1)/(9+1) = 8/10 = 0.80. Equal amplitudes would give V = 1 (the trap of ignoring the mismatch). The 0.33 distractor mistakenly uses the intensity ratio directly. Visibility drops from 1 only because the beams cannot fully cancel.\n\nNUMERICS WITHOUT A CALCULATOR\nUse amplitudes, not intensities: max = (2+1)² = 9, min = (2−1)² = 1. V = (9−1)/(9+1) = 0.8. The key is squaring the amplitude SUM and DIFFERENCE, not subtracting intensities.\n\n90-SECOND SOLUTION\nV = 2√(I₁I₂)/(I₁+I₂) = 2√(4·1)/(4+1) = 4/5 = 0.8. Equal beams → V=1; any imbalance lowers it, so the answer must be below 1, killing choice B.\n\nWHAT TO MEMORIZE\nFringe visibility for two beams: V = 2√(I₁I₂)/(I₁+I₂). Equal intensities give V = 1; a 4:1 intensity ratio gives V = 0.8."
+      },
+
+      {
+        "question": "A single-layer coating is deposited on glass of index 1.52 to eliminate reflection of one wavelength at normal incidence. For the two reflected beams to cancel COMPLETELY (not merely have the right phase), what must the coating's refractive index be?",
+        "choices": [
+          "1.00",
+          "1.23",
+          "1.38",
+          "1.52",
+          "1.76"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nQuarter-wave thickness sets the PHASE for cancellation, but complete cancellation also needs the two reflected amplitudes to be EQUAL. The reflection coefficient at each interface is r = (n₂ − n₁)/(n₂ + n₁). Requiring the air→coating and coating→glass reflected amplitudes to be equal gives (n_c − 1)/(n_c + 1) = (n_g − n_c)/(n_g + n_c), which solves to n_c = √n_g = √1.52 ≈ 1.23. The 1.38 distractor (MgF₂) is the real-world compromise coating — it gives good but not perfect cancellation precisely because 1.38 ≠ √1.52 ≈ 1.23. Matching the glass index (1.52) would give zero reflection at the bottom surface but full reflection at the top.\n\nNUMERICS WITHOUT A CALCULATOR\nn_c = √n_g. √1.52 is a bit above √1.44 = 1.2, so ≈ 1.23. No coating material has exactly this index, which is why MgF₂ (1.38) is used as the practical best.\n\n90-SECOND SOLUTION\nPhase (quarter wave) handles WHEN they cancel; amplitude matching handles whether they cancel FULLY, and that needs n_c = √n_glass ≈ 1.23. Recognizing that two conditions are in play — phase and amplitude — is the whole question.\n\nWHAT TO MEMORIZE\nPerfect single-layer AR: quarter-wave thickness (phase) AND index n_coat = √n_substrate (amplitude). Real coatings like MgF₂ satisfy only the phase condition."
+      },
+
+      {
+        "question": "White light is normally incident on a soap film (index 1.33) suspended in air and viewed in reflection. What is the minimum nonzero film thickness at which 600 nm light is MISSING from the reflection (destructive interference)?",
+        "choices": [
+          "113 nm",
+          "150 nm",
+          "226 nm",
+          "300 nm",
+          "451 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a soap film in air, only the front (air→film) reflection undergoes a 180° phase flip; the back (film→air) does not. That single net flip makes DESTRUCTIVE reflection require 2nt = mλ (an integer number of wavelengths, because the half-wave from the phase flip already supplies the cancellation offset). The minimum nonzero thickness is m = 1: t = λ/(2n) = 600 nm/(2 × 1.33) = 225.6 nm ≈ 226 nm. Choice A (113 nm) is the FIRST BRIGHT thickness, λ/4n — the answer to the opposite question, and the designed trap. Counting the single phase flip is what flips bright↔dark relative to naive expectation.\n\nNUMERICS WITHOUT A CALCULATOR\nt = λ/(2n) for first dark (one phase flip). 2n = 2.66; 600/2.66 ≈ 226 nm. The first bright (113 nm) is exactly half of this.\n\n90-SECOND SOLUTION\nOne phase flip → dark when 2nt = mλ → first dark at t = λ/2n ≈ 226 nm. The λ/4n value (113 nm) is the first BRIGHT and is the trap. Phase-flip counting decides which is which.\n\nWHAT TO MEMORIZE\nSoap film in air, reflection, ONE phase flip: DARK when 2nt = mλ (first dark t = λ/2n), BRIGHT when 2nt = (m+½)λ (first bright t = λ/4n)."
+      },
+
+      {
+        "question": "A plano-convex lens of radius of curvature 1.5 m rests on a flat glass plate, forming Newton's rings viewed in reflection. The 10th dark ring (counting the central dark spot as m = 0) is measured to have a radius of 3.0 mm. What is the wavelength of the illuminating light?",
+        "choices": [
+          "500 nm",
+          "600 nm",
+          "750 nm",
+          "900 nm",
+          "1200 nm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nDark rings occur where the air gap satisfies 2t = mλ with t ≈ r²/(2R), giving r² = mλR, so λ = r²/(mR). Plugging in: λ = (3.0×10⁻³ m)²/(10 × 1.5 m) = 9.0×10⁻⁶/15 = 6.0×10⁻⁷ m = 600 nm. The 500 nm distractor comes from dropping a factor or misreading the order m; larger values come from over-counting rings. The single phase flip at the lower (air→glass) surface is what makes the DARK condition 2t = mλ (rather than the bright condition) — that's the physics the arithmetic rests on.\n\nNUMERICS WITHOUT A CALCULATOR\nλ = r²/(mR). r² = (3 mm)² = 9×10⁻⁶ m². Divide by mR = 10 × 1.5 = 15: 9×10⁻⁶/15 = 6×10⁻⁷ m = 600 nm.\n\n90-SECOND SOLUTION\nr² = mλR read backward: λ = r²/(mR). (3 mm)² over 15 gives 6×10⁻⁷ m. The √m ring law run in reverse — knowing r grows as √m is what lets you invert cleanly.\n\nWHAT TO MEMORIZE\nNewton's rings: r² = mλR (dark rings, one phase flip). Solve any of the three ways: for r, for λ = r²/mR, or for R."
+      },
+
+      {
+        "question": "In a Michelson interferometer set for white-light illumination, an observer sees a central white fringe flanked by only a few colored fringes, after which the field appears uniformly white. Which statement best explains why only a few fringes are visible?",
+        "choices": [
+          "The beam splitter absorbs all but a few wavelengths",
+          "White light cannot interfere because it is unpolarized",
+          "The mirrors reflect only a narrow band of the white spectrum",
+          "Each color forms fringes but they all coincide at every path difference",
+          "White light has a very short coherence length, so fringes survive only near zero path difference"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEach wavelength in white light forms its own fringe system, and all systems have a bright fringe at exactly zero path difference (the central white fringe). Move even a couple of wavelengths away and the different colors' fringes fall out of step, so away from zero path difference the colors overlap and average to uniform white. Equivalently, white light's huge Δλ gives a coherence length of only about a wavelength, so fringes exist only within a micron or so of matched arms. Choice B is false (unpolarized light interferes fine). Choice D is exactly backwards — the fringes coincide ONLY at zero path difference.\n\n90-SECOND SOLUTION\nBroad spectrum → coherence length of ~1 wavelength → fringes only within a fringe or two of zero path difference. That short-coherence statement is A. This is also why the white-light central fringe is used to locate zero path difference precisely.\n\nWHAT TO MEMORIZE\nWhite-light fringes appear only very near zero path difference because the broad spectrum gives a coherence length of roughly one wavelength; the central white fringe marks equal arms exactly."
+      },
+
+      {
+        "question": "A thin flake of transparent material (index 1.60, thickness 4.0 μm) is inserted into one arm of a Michelson interferometer illuminated at 480 nm. Compared with inserting the SAME flake into the recombined output beam after the beam splitter (where the light passes through it only once), the number of fringes that shift when it is placed in the arm is:",
+        "choices": [
+          "unrelated to the placement",
+          "the same",
+          "half as many",
+          "four times as many",
+          "twice as many"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe physics is entirely in how many times the light traverses the flake. In one arm, the beam goes to the mirror and back, passing through the flake TWICE, so the added optical path is 2(n−1)t and N_arm = 2(n−1)t/λ. In the single output beam it passes through ONCE, adding (n−1)t, so N_out = (n−1)t/λ. The ratio is exactly 2. (Numerically N_arm = 2 × 0.60 × 4.0 μm/480 nm = 4.8 μm/0.48 μm = 10 fringes, versus 5.) Choice C inverts the ratio; choice D double-counts. The double pass is precisely why a Michelson is twice as sensitive as a single-pass measurement.\n\nNUMERICS WITHOUT A CALCULATOR\nN_arm = 2(n−1)t/λ = 2(0.6)(4 μm)/0.48 μm = 4.8/0.48 = 10; single pass halves it to 5. Ratio 2.\n\n90-SECOND SOLUTION\nArm = double pass, output beam = single pass, so the arm gives exactly twice the shift. This IS the factor of 2 that pervades every Michelson calculation, isolated as a concept.\n\nWHAT TO MEMORIZE\nAn element in an arm is traversed twice (factor 2(n−1)t); the same element in a single output beam only once ((n−1)t). The Michelson's double pass doubles its sensitivity."
+      },
+
+      {
+        "question": "At the output of a Michelson interferometer with a lossless (non-absorbing) beam splitter, two ports exist: one back toward the source and one toward the detector. When the detector port is at a bright maximum (all the light exits toward the detector), how much light exits back toward the source?",
+        "choices": [
+          "It depends on the mirror separation",
+          "Half of the input intensity",
+          "All of the input intensity",
+          "One quarter of the input intensity",
+          "None — by energy conservation it must all go to the detector"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA lossless interferometer conserves energy: whatever does not go to the detector port must go to the other (source) port. The two output ports are always complementary — when one is at a maximum the other is at a minimum. So when the detector sees a full bright fringe, the source-directed port must be completely dark: no light goes back. Choice B (half) describes a single pass through the beam splitter, not the interfered output. This complementarity is a direct statement of energy conservation and is why \"where did the destructively-interfered light go?\" always has the answer \"out the other port.\"\n\n90-SECOND SOLUTION\nTwo output ports, no absorption → they are complementary. Detector bright ⇒ source-port dark. Energy conservation forbids losing the light, so it can only redistribute between the two ports. That's A.\n\nWHAT TO MEMORIZE\nA lossless two-beam interferometer has complementary output ports: constructive at one port means destructive at the other. Energy 'lost' to destructive interference reappears at the complementary port."
+      },
+
+      {
+        "question": "A stabilized laser operating at 474 THz has a linewidth (spectral width in frequency) of 1.0 MHz. Approximately what is the maximum arm-length difference in a Michelson interferometer over which its fringes remain visible (its coherence length)?",
+        "choices": [
+          "48 m",
+          "96 m",
+          "300 m",
+          "480 m",
+          "960 m"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nCoherence length is L_c ≈ c·τ_c, where the coherence time τ_c ≈ 1/Δf is set by the frequency linewidth. So L_c ≈ c/Δf = (3.0×10⁸ m/s)/(1.0×10⁶ Hz) = 3.0×10² m ≈ 300 m — but a more careful estimate uses τ_c = 1/(2πΔf), giving L_c = c/(2πΔf) ≈ 300/6.28 ≈ 48 m. Either way the answer is tens of meters, and 48 m is the calculated value. The 300 m choice is the c/Δf value that drops the 2π factor; the other choices are multiples of the true 48 m. The point is that an extremely narrow frequency linewidth gives an enormous coherence length — why stabilized lasers make long-baseline interferometry (and gravitational-wave detectors) possible.\n\nNUMERICS WITHOUT A CALCULATOR\nL_c ≈ c/(2πΔf). c/Δf = 3×10⁸/10⁶ = 300 m; divide by 2π ≈ 6.3 → ≈ 48 m. Just 300/6.3.\n\n90-SECOND SOLUTION\nNarrow linewidth Δf → long coherence time 1/Δf → long coherence length c/Δf, trimmed by 2π to ~48 m. A megahertz linewidth on a ~500-THz carrier is one part in 10⁸, so coherence lengths of tens of meters are expected.\n\nWHAT TO MEMORIZE\nCoherence length from a frequency linewidth: L_c ≈ c/(2πΔf) (or c/Δf as an order-of-magnitude). Narrow Δf ⇒ very long L_c."
+      },
+
+      {
+        "question": "Which of the following changes to a Michelson interferometer (illuminated by a fixed monochromatic laser, equal arms) will, by itself, cause fringes to move across the field?\n\nI. Translating one mirror along the beam direction\nII. Inserting a thin glass slab into one arm\nIII. Slightly increasing the air pressure (hence index) in one arm only",
+        "choices": [
+          "I and III only",
+          "I only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEvery one of these changes the optical path difference between the arms, which is exactly what moves fringes. I: translating a mirror changes a geometric arm length (ΔOPD = 2Δd). II: a slab adds optical path 2(n−1)t. III: raising the index of the air in one arm over its length L adds 2(Δn)L — the same effect as the gas-cell measurement, just with ambient air. All three shift the fringes, so the answer is I, II, and III. The distractors each try to exclude one genuine mechanism; recognizing that ANY optical-path change in one arm moves fringes is the unifying idea of the whole set.\n\n90-SECOND SOLUTION\nFringes move whenever the path DIFFERENCE changes. Mirror move (geometry), slab (added glass path), pressure change (added index path) all do that. So all three — answer A. If you can state \"fringe shift ⇔ change in optical path difference,\" you don't need to analyze them separately.\n\nWHAT TO MEMORIZE\nFringes shift for ANY change in the optical path difference between the arms — whether from geometry (mirror motion), an inserted medium (slab), or a change in a medium already present (gas pressure/index)."
+      }
+
+    ]
+  },
+
 
 
 
@@ -4662,6 +4931,275 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "EM Radiation & Fields in Motion (Hard)",
+    "added": "2026-09-05",
+    "category": "em",
+    "cards": [
+
+      {
+        "question": "A nonrelativistic point charge radiates according to the Larmor formula. In a second experiment the charge is halved and its acceleration is quadrupled. By what factor does the radiated power change?",
+        "choices": [
+          "1",
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe Larmor power is P = q²a²/(6πε₀c³), so P ∝ q²a². Halving the charge multiplies P by (1/2)² = 1/4; quadrupling the acceleration multiplies it by 4² = 16. The net factor is (1/4)(16) = 4. The two changes push in opposite directions and the acceleration wins because it enters squared just as the charge does, but with the larger factor. The value 16 keeps only the acceleration change; the value 1 wrongly assumes the two effects cancel.\n\nNUMERICS WITHOUT A CALCULATOR\nP ∝ q²a². Factor = (½)² × 4² = ¼ × 16 = 4. Both quantities are squared — track each square separately, then multiply.\n\n90-SECOND SOLUTION\nEverything in Larmor is q²a². Square each change: charge gives ¼, acceleration gives 16, product 4. Composing two competing scalings — one down, one up — is the whole exercise.\n\nWHAT TO MEMORIZE\nLarmor: P ∝ q²a². Under simultaneous changes, square each factor and multiply."
+      },
+
+      {
+        "question": "According to the (nonrelativistic) Larmor formula, the instantaneous power radiated by a point charge depends on which of the following?",
+        "choices": [
+          "Its acceleration",
+          "Its velocity",
+          "Its position",
+          "Its kinetic energy",
+          "Its speed but not its acceleration"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nLarmor's result is P = q²a²/(6πε₀c³): the radiated power depends only on the charge and the magnitude of its acceleration — not on the velocity, position, or kinetic energy. A charge moving at constant velocity (zero acceleration) radiates nothing, no matter how fast it goes; a momentarily-at-rest charge that is accelerating radiates fully. Choices about velocity or kinetic energy are the common misconception that \"fast\" charges radiate; only ACCELERATING charges do.\n\n90-SECOND SOLUTION\nOnly acceleration appears in Larmor. Constant-velocity charge → no radiation; that single fact eliminates every velocity/energy option and points to acceleration.\n\nWHAT TO MEMORIZE\nAn accelerating charge radiates; a charge in uniform motion does not. Larmor power depends on a, not on v."
+      },
+
+      {
+        "question": "Two point charges are each acted on by the SAME external force. Charge B has twice the charge and twice the mass of charge A. Nonrelativistically, what is the ratio of their radiated powers, P_B/P_A?",
+        "choices": [
+          "1/4",
+          "1",
+          "2",
+          "4",
+          "16"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nLarmor gives P ∝ q²a². When the FORCE (not the acceleration) is specified, the acceleration is a = F/m, so P ∝ q²(F/m)² = (qF/m)². For charge A: (q_A F/m_A)². For charge B with q_B = 2q_A and m_B = 2m_A: (2q_A F / 2m_A)² = (q_A F/m_A)² — identical. So P_B/P_A = 1. The doubling of charge and mass cancel exactly because charge appears in the numerator and mass in the denominator, each to the first power inside the square. The value 4 is the trap of using P ∝ q² alone and forgetting that the acceleration also changed.\n\n90-SECOND SOLUTION\nGiven force, a = F/m, so P ∝ (q/m)². Doubling both q and m leaves q/m unchanged → ratio 1. The trick is spotting that \"same force\" makes acceleration depend on mass, so you can't use q² by itself.\n\nWHAT TO MEMORIZE\nLarmor with a specified FORCE: P ∝ (qF/m)². Then mass matters; with a specified acceleration it does not."
+      },
+
+      {
+        "question": "An electron (charge magnitude 1.6×10⁻¹⁹ C) radiates energy at an instantaneous rate of about 5×10⁻⁹ W. Using the Larmor formula P = q²a²/(6πε₀c³), the magnitude of its acceleration is closest to:",
+        "choices": [
+          "3×10¹¹ m/s²",
+          "1×10²² m/s²",
+          "3×10²² m/s²",
+          "9×10²² m/s²",
+          "3×10⁴⁴ m/s²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nSolve Larmor for a: a = √(6πε₀c³P/q²). With P = 5×10⁻⁹ W, q = 1.6×10⁻¹⁹ C, ε₀ = 8.85×10⁻¹² and c = 3×10⁸, the numerator 6πε₀c³P ≈ 6π(8.85×10⁻¹²)(2.7×10²⁵)(5×10⁻⁹) ≈ 2.25×10⁶, divided by q² = 2.56×10⁻³⁸ gives a² ≈ 9×10⁴³, so a ≈ 3×10²² m/s². The value 3×10⁴⁴ forgets the square root; the value 3×10¹¹ is off by eleven orders of magnitude. Running a familiar formula backward is the whole task — the algebra is inverting one equation.\n\nNUMERICS WITHOUT A CALCULATOR\na = √(6πε₀c³P/q²). The combination is dominated by c³ ≈ 2.7×10²⁵ in the numerator and q² ≈ 2.6×10⁻³⁸ in the denominator; that alone is ~10⁶³, times the other factors ~10⁻¹⁹ gives a² ~10⁴⁴, so a ~10²². The huge acceleration is why radiation from single charges is normally tiny — a sanity anchor.\n\n90-SECOND SOLUTION\nInvert Larmor: a ∝ √(P)/q, with the constants boosting the exponent. A radiated power of 10⁻⁹ W needs an acceleration around 10²² m/s² — enormous, which is why isolated radiating charges are rare. The √ kills the 3×10⁴⁴ option immediately.\n\nWHAT TO MEMORIZE\nLarmor inverted: a = √(6πε₀c³P/q²). Single charges need accelerations of order 10²² m/s² to radiate even nanowatts."
+      },
+
+      {
+        "question": "A relativistic electron moves in a circular orbit of fixed radius in a synchrotron. If the electron's Lorentz factor γ is increased by a factor of 10 while the orbit radius is held fixed, the radiated power increases by approximately what factor? (For circular motion the radiated power scales as γ⁴ at fixed radius.)",
+        "choices": [
+          "10⁴",
+          "10",
+          "10²",
+          "10³",
+          "10⁸"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a charge in circular motion at fixed radius, the relativistic generalization of Larmor gives radiated power P ∝ γ⁴ (the acceleration is centripetal and the relativistic factors compound to the fourth power). Increasing γ by 10 therefore multiplies the power by 10⁴. This steep dependence is exactly why synchrotron radiation losses dominate the design of high-energy circular electron machines. The value 10 uses P ∝ γ; the value 10⁸ overcounts to γ⁸.\n\nNUMERICS WITHOUT A CALCULATOR\nP ∝ γ⁴, factor = 10⁴. The only content is knowing the exponent is 4 for the fixed-radius circular case.\n\n90-SECOND SOLUTION\nCircular, fixed radius → P ∝ γ⁴ → factor 10⁴. The reason accelerator physicists fear synchrotron losses: energy up by 10, radiation up by 10,000.\n\nWHAT TO MEMORIZE\nSynchrotron (circular, fixed radius): P ∝ γ⁴. The fourth power is what makes circular electron accelerators radiation-limited."
+      },
+
+      {
+        "question": "A uniformly charged spherical shell of total charge Q pulsates radially, its radius oscillating sinusoidally in time while the charge stays uniformly distributed and spherically symmetric. What is the time-averaged power it radiates?",
+        "choices": [
+          "Zero",
+          "Proportional to Q² and the oscillation frequency squared",
+          "Proportional to Q² and the frequency to the fourth power",
+          "Proportional to Q and the amplitude",
+          "Proportional to the surface area times frequency"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBy Gauss's law, the field outside any spherically symmetric charge distribution is exactly that of a point charge Q at the center — no matter how the radius pulsates. Since the external field never changes in time, there is no radiation at all: the radiated power is zero. Radiation requires a time-varying dipole (or higher multipole) moment, and a breathing sphere has none — its dipole moment stays zero by symmetry. Choices B and C are the traps of assuming any oscillating charged object must radiate; the symmetry forbids it. This is a chained-symmetry argument, a favorite hard-GRE mechanism.\n\n90-SECOND SOLUTION\nSpherical symmetry + Gauss's law → the external field is static (point-charge field of Q) → no radiation. The oscillation is invisible outside. Recognizing that a monopole cannot radiate is the entire question.\n\nWHAT TO MEMORIZE\nA spherically symmetric (breathing) charge distribution radiates NOTHING: its external field is the static point-charge field, and it has no time-varying dipole moment."
+      },
+
+      {
+        "question": "A point charge oscillates back and forth along the z-axis, radiating as an oscillating electric dipole. In which direction is the radiated power per unit solid angle GREATEST?",
+        "choices": [
+          "In the plane perpendicular to the z-axis (θ = 90° from the axis)",
+          "Along the +z and −z directions (θ = 0° and 180°)",
+          "At θ = 45° from the axis",
+          "Equally in all directions",
+          "Along the direction of the charge's instantaneous velocity"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe dipole radiation pattern is dP/dΩ ∝ sin²θ, where θ is measured from the oscillation (z) axis. This is maximum at θ = 90° (the equatorial plane, perpendicular to the motion) and exactly zero along the axis (θ = 0°, 180°). Physically, a charge accelerating along z radiates nothing straight along z and most strongly to the side. The \"along the ±z axis\" option is the common wrong instinct that radiation goes in the direction of motion — it is exactly backwards, since there is a null along the axis. This axial null is why a vertical antenna radiates toward the horizon, not the sky.\n\n90-SECOND SOLUTION\ndP/dΩ ∝ sin²θ from the axis: max at 90° (sideways), zero along the axis. The null along the direction of acceleration is the memorable feature and kills the \"along the axis\" choice.\n\nWHAT TO MEMORIZE\nDipole radiation: dP/dΩ ∝ sin²θ (θ from the oscillation axis). Maximum perpendicular to the motion, ZERO along the axis."
+      },
+
+      {
+        "question": "An oscillating electric dipole has a fixed dipole-moment amplitude. If its oscillation frequency is doubled, by what factor does its time-averaged radiated power change? (The dipole radiated power scales as the fourth power of the frequency.)",
+        "choices": [
+          "2",
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor an oscillating dipole of fixed moment amplitude, the radiated power scales as P ∝ ω⁴ (equivalently, the acceleration of the charge scales as ω², and Larmor's a² then gives ω⁴). Doubling the frequency multiplies the power by 2⁴ = 16. This steep ω⁴ dependence is exactly why short-wavelength (high-frequency) blue light scatters far more than red from air molecules — the reason the sky is blue. The value 4 uses ω²; the value 8 uses ω³. The fourth-power law is the memorable content.\n\nNUMERICS WITHOUT A CALCULATOR\nP ∝ ω⁴, factor = 2⁴ = 16. Only the exponent 4 matters.\n\n90-SECOND SOLUTION\nDipole power ∝ ω⁴ → doubling ω gives ×16. Same ω⁴ that makes the sky blue (blue scatters ~(ω_blue/ω_red)⁴ more than red).\n\nWHAT TO MEMORIZE\nDipole radiated power ∝ ω⁴ at fixed dipole amplitude. This fourth-power (Rayleigh) law explains why the sky is blue."
+      },
+
+      {
+        "question": "A charge oscillates vertically (along ẑ). Far away, on the horizon (in the xy-plane, θ = 90°), what is the direction of the radiated electric field, and what is the direction of the Poynting vector there?",
+        "choices": [
+          "E is radial (along the line of sight); S is vertical",
+          "E is vertical (along ẑ, transverse to the line of sight); S points radially outward",
+          "Both E and S are vertical",
+          "E is horizontal; S is vertical",
+          "E and S are parallel to each other"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nRadiation fields are transverse: the radiated E lies in the plane containing the acceleration and perpendicular to the line of sight (the propagation direction). For an observer on the horizon looking at a vertically oscillating charge, the radiated E is vertical (parallel to the acceleration, transverse to the line of sight), and the Poynting vector S = E×B/μ₀ points radially outward, away from the charge. The 'E and S parallel' option is impossible: E and S in a radiation field are always perpendicular, never parallel. The polarization of dipole radiation follows the projection of the acceleration transverse to the line of sight.\n\n90-SECOND SOLUTION\nRadiation is transverse and carries energy outward: E ∥ (transverse part of the acceleration), S radially out, E ⊥ S always. On the horizon that makes E vertical and S radial, which is the correct choice. \"E and S parallel\" violates the transverse nature outright.\n\nWHAT TO MEMORIZE\nDipole radiation is polarized along the transverse projection of the acceleration; S points radially outward and is always perpendicular to E."
+      },
+
+      {
+        "question": "For an accelerating point charge, how does the magnitude of the RADIATION (far-field) electric field fall off with distance r from the charge, and how does this compare with the static Coulomb field?",
+        "choices": [
+          "Both ∝ 1/r²",
+          "Radiation field ∝ 1/r, while the Coulomb field ∝ 1/r²",
+          "Radiation field ∝ 1/r², Coulomb field ∝ 1/r",
+          "Both ∝ 1/r",
+          "Radiation field ∝ 1/r³, Coulomb field ∝ 1/r²"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe radiation (acceleration) field of a point charge falls off as 1/r, far more slowly than the static Coulomb field's 1/r². This is precisely why radiation dominates at large distances and why radiated energy escapes to infinity: the Poynting flux goes as E² ∝ 1/r², so the power through a sphere (area ∝ r²) is constant with r. A 1/r² field would carry no net power to infinity. The 'both ∝ 1/r²' option misses that radiation falls more slowly than Coulomb; the '1/r³' option is the static dipole, not radiation.\n\n90-SECOND SOLUTION\nRadiation E ∝ 1/r (Coulomb ∝ 1/r²). The 1/r is forced by energy conservation: intensity ∝ 1/r² times area r² gives constant power to infinity. That reasoning alone fixes the exponent.\n\nWHAT TO MEMORIZE\nRadiation field ∝ 1/r (so intensity ∝ 1/r², power to infinity constant); static Coulomb ∝ 1/r²; static dipole ∝ 1/r³."
+      },
+
+      {
+        "question": "A small antenna radiates as a dipole. A detector at distance r measures a certain radiated intensity (power per unit area). If the detector is moved to distance 3r in the same direction, the measured intensity becomes:",
+        "choices": [
+          "3 times the original",
+          "1/3 of the original",
+          "1/9 of the original",
+          "1/27 of the original",
+          "unchanged"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRadiated intensity is the Poynting flux, which goes as the square of the radiation field: since E_rad ∝ 1/r, the intensity S ∝ E² ∝ 1/r². Tripling the distance therefore reduces the intensity by 1/3² = 1/9. The 1/3 option mistakes the field falloff for the intensity falloff; the 1/27 option uses 1/r³ (the static dipole field, wrong for radiation). The inverse-square law for intensity holds for radiation even though the FIELD falls only as 1/r.\n\nNUMERICS WITHOUT A CALCULATOR\nS ∝ 1/r². Factor = (1/3)² = 1/9. Field ∝ 1/r, intensity ∝ field² ∝ 1/r².\n\n90-SECOND SOLUTION\nIntensity obeys inverse-square: (1/3)² = 1/9. The 1/3 trap comes from confusing the field's 1/r with the intensity's 1/r².\n\nWHAT TO MEMORIZE\nRadiated INTENSITY ∝ 1/r² (inverse square), even though the radiation FIELD ∝ 1/r."
+      },
+
+      {
+        "question": "A beam of light of intensity S is normally incident on a flat surface. Compared with the radiation pressure on a perfectly ABSORBING surface, the radiation pressure on a perfectly REFLECTING surface of the same area is:",
+        "choices": [
+          "four times as large",
+          "the same",
+          "twice as large",
+          "half as large",
+          "zero"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAn absorbing surface takes up the incident momentum flux, giving pressure P_abs = S/c. A reflecting surface reverses the light's momentum, so it receives twice the momentum change: P_refl = 2S/c. The ratio is therefore 2. Physically, reflection is like an elastic bounce (momentum change 2p) versus absorption's inelastic stop (momentum change p). The 'half as large' option inverts the ratio; the 'four times' option double-applies the factor. This \"reflect vs absorb, factor of 2\" is a staple GRE distractor pair.\n\n90-SECOND SOLUTION\nAbsorb: Δp = p → P = S/c. Reflect: Δp = 2p → P = 2S/c. Ratio 2, exactly like an elastic vs inelastic bounce.\n\nWHAT TO MEMORIZE\nRadiation pressure: absorbing surface S/c, reflecting surface 2S/c. Reflection doubles it (momentum reversal)."
+      },
+
+      {
+        "question": "Light at normal incidence on a flat, perfectly absorbing detector of area 2.0 m² exerts a steady force of 6.0×10⁻⁶ N on it. Taking c = 3.0×10⁸ m/s, what is the intensity of the light?",
+        "choices": [
+          "1.8×10⁻³ W/m²",
+          "300 W/m²",
+          "450 W/m²",
+          "900 W/m²",
+          "1800 W/m²"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor an absorber the radiation force is F = SA/c, so the intensity is S = Fc/A = (6.0×10⁻⁶)(3.0×10⁸)/(2.0) = 1800/2.0 = 900 W/m². The 1800 option forgets to divide by the area; the 450 option mistakenly uses the reflecting relation F = 2SA/c (which would apply to a reflector, not an absorber). Recognizing that this surface ABSORBS (so F = SA/c, no factor of 2) is the pivot.\n\nNUMERICS WITHOUT A CALCULATOR\nS = Fc/A. Fc = 6×10⁻⁶ × 3×10⁸ = 1.8×10³ = 1800. Divide by A = 2 → 900 W/m². Using 2SA/c (reflector) would halve it to 450 — the trap.\n\n90-SECOND SOLUTION\nAbsorber: F = SA/c → S = Fc/A = 1800/2 = 900. The factor-of-2 (reflector) trap gives 450; the surface here absorbs, so no factor of 2.\n\nWHAT TO MEMORIZE\nAbsorber: F = SA/c, so S = Fc/A. Only a REFLECTOR carries the factor of 2 (F = 2SA/c)."
+      },
+
+      {
+        "question": "A pulse of electromagnetic radiation carries total energy U through vacuum. What is the magnitude of the momentum it carries?",
+        "choices": [
+          "U/(2c)",
+          "U/c²",
+          "Uc",
+          "2U/c",
+          "U/c"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor electromagnetic radiation the energy and momentum are related by p = U/c. (This follows from the relativistic energy–momentum relation for a massless field, E = pc, or from integrating the Poynting and momentum densities.) The U/c² option is the trap of importing the massive-particle relation p = mv with U = mc²; that gives U/c² and is wrong for light. The 2U/c option confuses the momentum carried with the momentum TRANSFERRED to a reflector.\n\n90-SECOND SOLUTION\nLight: E = pc, so p = U/c. The U/c² trap comes from misusing E = mc²; for radiation the right relation is E = pc.\n\nWHAT TO MEMORIZE\nEM radiation carries momentum p = U/c (from E = pc). A reflector receives 2U/c; an absorber U/c."
+      },
+
+      {
+        "question": "A plane electromagnetic wave in vacuum has electric-field amplitude E₀ = 600 V/m. Taking c = 3.0×10⁸ m/s, the amplitude of its magnetic field is:",
+        "choices": [
+          "1.0×10⁻⁶ T",
+          "2.0×10⁻⁶ T",
+          "6.0×10⁻⁶ T",
+          "2.0×10⁻⁴ T",
+          "1.8×10¹¹ T"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nIn a vacuum plane wave the field amplitudes are related by E₀ = cB₀, so B₀ = E₀/c = 600/(3.0×10⁸) = 2.0×10⁻⁶ T. The 1.8×10¹¹ T option multiplies by c instead of dividing — and gives an absurdly huge field, a quick sanity flag. The magnetic field of a light wave is always numerically tiny in SI units precisely because of the division by the large c.\n\nNUMERICS WITHOUT A CALCULATOR\nB₀ = E₀/c = 600/(3×10⁸) = 2×10⁻⁶ T. Divide by c, not multiply; the answer must be tiny.\n\n90-SECOND SOLUTION\nE₀ = cB₀ → B₀ = E₀/c ≈ 2 μT. Any answer larger than E₀ (like 10¹¹ T) is physically impossible for light — multiply-vs-divide sanity check.\n\nWHAT TO MEMORIZE\nPlane wave in vacuum: E₀ = cB₀, so B₀ = E₀/c. The magnetic amplitude is smaller than the electric by the factor c."
+      },
+
+      {
+        "question": "The electric-field amplitude of a plane electromagnetic wave is tripled (frequency unchanged). By what factor does the wave's intensity (time-averaged power per unit area) change?",
+        "choices": [
+          "√3",
+          "3",
+          "6",
+          "9",
+          "27"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nIntensity is the time-averaged Poynting flux, ⟨S⟩ = ½ε₀cE₀² ∝ E₀². Tripling the amplitude multiplies the intensity by 3² = 9. The value 3 is the trap of assuming intensity scales linearly with the field; it scales with the field SQUARED. The value 27 over-powers to E₀³. This E²-dependence is universal for wave intensity (sound, light, water waves alike).\n\nNUMERICS WITHOUT A CALCULATOR\nI ∝ E₀², factor = 3² = 9. Field squared, always.\n\n90-SECOND SOLUTION\nIntensity ∝ amplitude². Triple the amplitude → ×9. Linear (×3) is the trap; energy goes as the square of the field.\n\nWHAT TO MEMORIZE\nWave intensity ∝ (field amplitude)². Tripling the amplitude gives nine times the intensity."
+      },
+
+      {
+        "question": "At a point in a plane electromagnetic wave in vacuum, the instantaneous electric field magnitude is E and the magnetic field magnitude is B. What is the value of the ratio E/B?",
+        "choices": [
+          "μ₀ε₀",
+          "1/c",
+          "c²",
+          "1 (they are equal in SI units)",
+          "c (≈ 3×10⁸ m/s)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a plane wave in vacuum the fields are locked in phase with E = cB at every instant, so E/B = c ≈ 3×10⁸ m/s (in SI units, where E is in V/m and B in tesla). The 'they are equal' option is the trap of thinking E and B are equal — they are equal in ENERGY density, but not in numerical magnitude; E is larger than B by the factor c. The 1/c option inverts the relation. The ratio E/B = c is a fixed property of vacuum, independent of the wave's amplitude or frequency.\n\nNUMERICS WITHOUT A CALCULATOR\nE = cB → E/B = c ≈ 3×10⁸ (SI). No computation — just the vacuum field relation.\n\n90-SECOND SOLUTION\nE = cB, so E/B = c. The \"they're equal\" trap confuses equal energy density with equal magnitude; numerically E ≫ B by a factor c.\n\nWHAT TO MEMORIZE\nVacuum plane wave: E/B = c in SI units. E and B carry equal ENERGY but are not numerically equal."
+      },
+
+      {
+        "question": "A resistive wire carries a steady current of 2.0 A and has 5.0 Ω of resistance along the segment considered. Computing the inward Poynting flux through the segment's cylindrical surface, one finds the total electromagnetic power flowing INTO the wire equals:",
+        "choices": [
+          "0 W",
+          "2.5 W",
+          "10 W",
+          "20 W",
+          "40 W"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe inward Poynting flux integrated over the wire's surface must equal the power dissipated inside, P = I²R = (2.0)²(5.0) = 20 W. This is the content of the Poynting picture: the energy that heats the wire flows IN radially from the surrounding fields (E along the wire, B around it, S = E×B/μ₀ pointing inward), and the surface integral of that flux comes out to exactly I²R. The 10 W option uses a wrong factor; the 0 W option is the misconception that a steady current has no energy flow. The elegant result is that field energy, not the current itself, delivers the dissipated power.\n\nNUMERICS WITHOUT A CALCULATOR\nP = I²R = 4 × 5 = 20 W. The Poynting surface integral is just a route to the familiar I²R.\n\n90-SECOND SOLUTION\nInward Poynting flux = I²R = 20 W. Energy conservation forces the field energy entering the sides to equal the heat produced. Any answer that isn't I²R misreads the balance.\n\nWHAT TO MEMORIZE\nThe surface integral of the (inward) Poynting vector over a resistive wire equals I²R — field energy flows in radially to supply the dissipation."
+      },
+
+      {
+        "question": "A charged particle moves through a transparent medium of refractive index n = 1.5. Cherenkov radiation is emitted only if the particle's speed exceeds which value?",
+        "choices": [
+          "c/n²",
+          "(3/2)c",
+          "c",
+          "(1/2)c",
+          "(2/3)c"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nCherenkov radiation occurs when a charged particle moves faster than the phase speed of light in the medium, which is c/n. The threshold speed is therefore v_min = c/n = c/1.5 = (2/3)c ≈ 0.67c. This is subluminal (less than c), so it is physically allowed. The (3/2)c option is the trap of multiplying by n instead of dividing — and it exceeds c, which should immediately flag it as impossible for a massive particle. The particle outrunning the medium's light speed is what creates the optical \"shock wave.\"\n\nNUMERICS WITHOUT A CALCULATOR\nv_min = c/n = c/1.5 = (2/3)c. Dividing by n (not multiplying) is the point; the answer must be below c, ruling out (3/2)c.\n\n90-SECOND SOLUTION\nThreshold: particle beats the medium's light speed c/n. c/1.5 = 0.67c. Any answer above c is physically impossible — a fast sanity check that kills (3/2)c.\n\nWHAT TO MEMORIZE\nCherenkov threshold: v > c/n (the phase speed of light in the medium). The threshold speed is always sub-c."
+      },
+
+      {
+        "question": "In the laboratory frame, a long straight wire carries a steady current and is electrically neutral (equal densities of positive ions and conduction electrons). In a reference frame moving parallel to the wire at constant velocity, the wire generally appears to have:",
+        "choices": [
+          "a net charge that is independent of the current direction",
+          "the same zero net charge, always",
+          "a net charge only if the frame moves faster than the drift speed",
+          "no magnetic field at all",
+          "a nonzero net charge per unit length"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThis is the relativistic origin of magnetism. In the lab the wire is neutral, but the positive and negative charge carriers have different velocities (the ions at rest, the electrons drifting). Boosting to a moving frame length-contracts the two charge distributions by DIFFERENT Lorentz factors, so their linear charge densities no longer cancel — the wire acquires a net charge per unit length. That net charge is exactly what a comoving observer interprets as the electric force corresponding to the lab-frame magnetic force. The 'still neutral' option misses that the two carrier populations transform differently; the 'only above drift speed' option invents a spurious threshold; the 'no magnetic field' option is false (fields transform, they do not vanish). This chained relativistic-symmetry argument is why magnetism and electricity are frame-dependent aspects of one field.\n\n90-SECOND SOLUTION\nNeutral-but-current-carrying wire: the + and − carriers move differently, so a boost length-contracts them unequally and the wire looks charged. That frame-dependent charge is magnetism seen as electricity — the answer is a nonzero net charge.\n\nWHAT TO MEMORIZE\nA neutral current-carrying wire appears charged in a moving frame: the two carrier populations Lorentz-contract by different factors. This is the relativistic origin of the magnetic force."
+      }
+
+    ]
+  },
+
 
 
 
