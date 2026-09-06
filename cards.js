@@ -13758,6 +13758,740 @@ const EXAMS = [
       }
 
     ]
+  },
+  {
+    "name": "Geometric Optics & Waves Test (Hard)",
+    "added": "2026-09-05",
+    "category": "optics",
+    "cards": [
+      {
+        "question": "A thin biconvex lens is ground from glass of index 1.5, and both of its spherical surfaces have a radius of curvature of 20 cm. What is its focal length in air?",
+        "choices": [
+          "10 cm",
+          "20 cm",
+          "30 cm",
+          "40 cm",
+          "80 cm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe lensmaker's equation is 1/f = (n − 1)(1/R₁ − 1/R₂). Adopt the sign convention that a surface convex toward the incoming light has positive R. For a symmetric biconvex lens the first surface has R₁ = +20 cm and the second has R₂ = −20 cm, so\n1/f = (1.5 − 1)(1/20 − 1/(−20)) = (0.5)(1/20 + 1/20) = (0.5)(2/20) = 0.5/10 = 1/20 cm⁻¹.\nTherefore f = 20 cm.\n\nNUMERICS WITHOUT A CALCULATOR\nThe two surfaces contribute equally, so 1/R₁ − 1/R₂ = 2/R = 2/20 = 1/10. Multiplying by (n − 1) = 1/2 gives 1/20, so f = 20 cm — no calculator needed once you see the factor of 2 from the two surfaces.\nThe distractor 40 cm is what you get by forgetting the second surface (using 1/R₁ alone, i.e. treating it as a plano-convex lens): (0.5)(1/20) = 1/40. The distractor 10 cm comes from dropping the (n − 1) factor entirely. The distractor 80 cm doubles that mistake, using only one surface AND dropping (n − 1) improperly.\nStructural check: for a symmetric biconvex lens with |R| on both faces, f = R/[2(n − 1)] = R for the special case n = 1.5, because 2(n − 1) = 1. That is worth memorizing: a common n = 1.5 symmetric biconvex lens has a focal length equal to its radius of curvature.\n\n90-SECOND SOLUTION\nFor n = 1.5, 2(n − 1) = 1, so f = R/[2(n − 1)] = R = 20 cm.\n\nWHAT TO MEMORIZE\nThe lensmaker's equation 1/f = (n − 1)(1/R₁ − 1/R₂), with the two-surface sum doubling the effect for a symmetric lens. The clean special case: an n = 1.5 symmetric biconvex lens has f = R. A biconvex lens is converging (f > 0) in air, but the SAME lens has a longer focal length when immersed in a medium of higher index, because it is the index CONTRAST (n_lens/n_medium − 1) that matters, not n_lens alone."
+      },
+      {
+        "question": "A string fixed at both ends is plucked exactly at its midpoint, giving it an initial triangular shape, and then released. Which harmonics are ABSENT from the resulting vibration?",
+        "choices": [
+          "The even harmonics (2nd, 4th, 6th, …)",
+          "The odd harmonics (1st, 3rd, 5th, …)",
+          "All harmonics above the fundamental",
+          "Only the fundamental",
+          "None; all harmonics are present"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAny motion of the string is a sum of its normal modes (a Fourier series). A given mode is excited only to the extent that the initial shape overlaps that mode's spatial profile. The nth mode of a string fixed at both ends is sin(nπx/L), which has n − 1 interior nodes.\nThe midpoint x = L/2 is a NODE for every even harmonic: sin(nπ·(1/2)) = sin(nπ/2) = 0 whenever n is even. A mode that has a node at the midpoint cannot be set into motion by displacing the string precisely at that node — the initial displacement there is where the mode's amplitude is zero. Therefore all even harmonics receive zero amplitude.\nThe odd harmonics have an ANTINODE at the midpoint (maximum displacement), so they are strongly excited. The result is a spectrum of odd harmonics only.\n\n90-SECOND SOLUTION\nExciting a string at a point kills every mode that has a node there. The midpoint is a node of all even harmonics, so the even harmonics vanish; only odd harmonics remain.\n\nWHAT TO MEMORIZE\nHarmonic content is set by WHERE you drive or pluck the string: a mode is suppressed if it has a node at the driving point. Plucking at the midpoint gives odd harmonics only; plucking at L/4 suppresses the 4th, 8th, … harmonics (every mode with a node at L/4). This is why the plucking or bowing position on a real instrument changes the timbre — it reweights the Fourier components. The general rule: to suppress the nth harmonic, drive at a node of that harmonic."
+      },
+      {
+        "question": "An object is placed exactly at the center of curvature of a concave spherical mirror of radius 20 cm. Where is the image, and what is its character?",
+        "choices": [
+          "At the mirror's surface, real and inverted",
+          "10 cm in front of the mirror, real and the same size",
+          "At the focal point, virtual and enlarged",
+          "At the center of curvature, real, inverted, and the same size as the object",
+          "At infinity"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe focal length of a mirror is f = R/2 = 20/2 = 10 cm. The center of curvature is at distance R = 20 cm, so the object distance is s = 20 cm. The mirror equation 1/s + 1/s′ = 1/f gives\n1/s′ = 1/f − 1/s = 1/10 − 1/20 = 2/20 − 1/20 = 1/20,\nso s′ = 20 cm. The image forms at 20 cm in front of the mirror — right back at the center of curvature. The magnification is m = −s′/s = −20/20 = −1, so the image is real, inverted, and exactly the same size as the object.\n\n90-SECOND SOLUTION\nAn object at C images back to C at unit magnification (inverted). This is the one self-conjugate point of a mirror: a ray from C hits the mirror along a radius and reflects straight back on itself.\n\nWHAT TO MEMORIZE\nFor a concave mirror, f = R/2, and the standard object positions: at infinity → image at F; beyond C → image between F and C (reduced, inverted, real); AT C → image at C (same size, inverted, real); between C and F → image beyond C (enlarged, inverted, real); inside F → image virtual, upright, enlarged (the shaving-mirror regime). The object at C giving m = −1 is the mirror analog of the object at 2f for a lens."
+      },
+      {
+        "question": "A nonrelativistic free particle of mass m has the dispersion relation ω(k) = ℏk²/2m for its matter waves. How does the group velocity of a wave packet compare with its phase velocity?",
+        "choices": [
+          "The group velocity is twice the phase velocity",
+          "The group velocity equals the phase velocity",
+          "The group velocity is half the phase velocity",
+          "The group velocity is √2 times the phase velocity",
+          "The group velocity is zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe phase velocity is v_p = ω/k = (ℏk²/2m)/k = ℏk/2m. The group velocity is v_g = dω/dk = d(ℏk²/2m)/dk = ℏk/m. Taking the ratio,\nv_g/v_p = (ℏk/m)/(ℏk/2m) = 2.\nSo the group velocity is exactly twice the phase velocity.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — only that differentiating k² brings down a factor of 2 while dividing by k does not. Whenever ω ∝ kⁿ, v_g/v_p = n, because v_p ∝ kⁿ⁻¹ and v_g = n kⁿ⁻¹ carry the same k-dependence with the derivative supplying the factor n.\nA physical check confirms which velocity is the meaningful one: the group velocity v_g = ℏk/m = p/m is exactly the classical particle velocity, as it must be, since the packet (not a single phase front) is what carries the particle. The phase velocity ℏk/2m = v_g/2 is only half of that and has no direct physical meaning on its own.\nThe distractor ½ inverts the ratio; √2 would arise from a ω ∝ √k relation (deep-water waves), which is a different problem entirely.\n\n90-SECOND SOLUTION\nω ∝ k² ⇒ v_g/v_p = 2. The group velocity ℏk/m = p/m is the classical speed, as it should be.\n\nWHAT TO MEMORIZE\nThe rule for a power-law dispersion ω ∝ kⁿ: v_g = n·v_p. Familiar cases: nondispersive waves (ω = ck, n = 1) have v_g = v_p; free matter waves (ω ∝ k², n = 2) have v_g = 2v_p; deep-water gravity waves (ω ∝ √k, n = ½) have v_g = ½v_p. Group velocity v_g = dω/dk is what carries energy and information; phase velocity v_p = ω/k can even exceed c without violating relativity, because no signal travels at v_p."
+      },
+      {
+        "question": "Light travels inside a transparent medium of index 1.6 and strikes a planar boundary with a second transparent medium of index 1.4. Above what angle of incidence (measured from the normal) is the light totally internally reflected?",
+        "choices": [
+          "About 29°",
+          "About 41°",
+          "About 51°",
+          "About 61°",
+          "Total internal reflection cannot occur here"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nTotal internal reflection occurs when light goes from a higher-index medium to a lower-index one and the angle of incidence exceeds the critical angle θ_c, defined by n₁ sin θ_c = n₂ (with the refracted ray grazing at 90°). Here n₁ = 1.6 and n₂ = 1.4:\nsin θ_c = n₂/n₁ = 1.4/1.6 = 0.875,\nso θ_c = arcsin(0.875) ≈ 61°.\nBecause the light is going from the denser (1.6) to the rarer (1.4) medium, TIR is possible, and it sets in for incidence angles above about 61°.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only computation is 1.4/1.6 = 7/8 = 0.875. You need to recognize that arcsin(0.875) is a large angle — sin 60° = 0.866, so arcsin(0.875) is just above 60°, giving ≈ 61°. That single anchor (sin 60° ≈ 0.87) pins the answer without a calculator.\nThe distractor 41° is arcsin(1/1.5) — the critical angle for a generic glass-to-AIR boundary, the reflex value students memorize; it ignores that the second medium here is not vacuum. The distractor 29° is arcsin(1.4/... ) miscomputed, and 51° is a split-the-difference trap.\nStructural check: the closer the two indices, the closer sin θ_c is to 1, so the LARGER the critical angle. Since 1.4 and 1.6 are close, θ_c must be large (near 90°), which immediately rules out the small-angle choices.\n\n90-SECOND SOLUTION\nsin θ_c = 1.4/1.6 = 0.875; since sin 60° = 0.866, θ_c ≈ 61°.\n\nWHAT TO MEMORIZE\nsin θ_c = n₂/n₁, valid only when n₁ > n₂. The critical angle grows toward 90° as the indices approach each other, and shrinks when the contrast is large (diamond-to-air gives θ_c ≈ 24°). The common glass-to-air value arcsin(1/1.5) ≈ 42° is worth knowing, but do not apply it blindly when the second medium is not vacuum — always use the actual index ratio."
+      },
+      {
+        "question": "A thin prism with a small apex angle of 5° is made of glass whose index is 1.51 for red light and 1.53 for violet light. Through what angle are the red and violet rays separated after passing through the prism at near-normal incidence?",
+        "choices": [
+          "0.05°",
+          "0.10°",
+          "0.20°",
+          "0.50°",
+          "1.0°"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a thin prism at small angles, the deviation of a ray is δ = (n − 1)A, where A is the apex angle. The angular dispersion between two colors is the difference in their deviations:\nΔδ = δ_violet − δ_red = (n_violet − n_red)A = (1.53 − 1.51)(5°) = (0.02)(5°) = 0.10°.\n\nNUMERICS WITHOUT A CALCULATOR\nOne multiplication: 0.02 × 5 = 0.10. The key is that only the DIFFERENCE in indices enters the dispersion, not the indices themselves — the (n − 1) baseline deviation cancels out of the difference.\nThe distractor 0.05° halves the index difference; 0.20° doubles it. The distractor 0.50° comes from using (n − 1) with an average n instead of the index difference, i.e. computing a single deviation rather than the spread between colors.\nStructural check: the total deviation of either ray is about (0.5)(5°) = 2.5°, and the dispersion is a small fraction of that — the colors separate by only a fraction of a degree even though each is bent by a couple of degrees. That the answer is much smaller than the deviation itself is the sanity check.\n\n90-SECOND SOLUTION\nΔδ = (Δn)A = (0.02)(5°) = 0.10°.\n\nWHAT TO MEMORIZE\nThin-prism deviation δ = (n − 1)A. Angular dispersion depends only on the index difference across the spectrum: Δδ = (Δn)A. Because n is larger for shorter wavelengths (normal dispersion), violet is deviated MORE than red — the reverse of the intuition some students carry from rainbows, where the geometry of internal reflection flips the apparent order. The dispersive power of a prism is Δn/(n − 1)."
+      },
+      {
+        "question": "Two loudspeakers emit steady pure tones of 256 Hz and 260 Hz. A listener standing nearby hears the combined sound rise and fall in loudness. How many times per second does the loudness reach a maximum?",
+        "choices": [
+          "2",
+          "4",
+          "8",
+          "258",
+          "516"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWhen two tones of nearby frequencies f₁ and f₂ superpose, the amplitude is modulated at the beat frequency f_beat = |f₁ − f₂|. Each cycle of the beat contains one loudness maximum, so the number of maxima per second equals the beat frequency:\nf_beat = |260 − 256| = 4 Hz.\nThe listener hears 4 loudness maxima per second.\n\nNUMERICS WITHOUT A CALCULATOR\nJust a subtraction: 260 − 256 = 4. The subtlety is which combination to take. The perceived PITCH is the average, (256 + 260)/2 = 258 Hz — that is the distractor 258. The beat (loudness fluctuation) is the DIFFERENCE, 4 Hz. The distractor 516 is the sum f₁ + f₂, and 8 is twice the beat frequency, which would be right only if you (incorrectly) counted both the maxima and the intervening minima as 'beats'.\nStructural check: beats are slow precisely because the two frequencies are close; a 4 Hz fluctuation is something you can hear as distinct throbs, whereas 258 Hz or 516 Hz would be heard as tones, not throbs. The audible-throb rate must be the small number.\n\n90-SECOND SOLUTION\nf_beat = |f₁ − f₂| = 4 Hz, so 4 maxima per second.\n\nWHAT TO MEMORIZE\nBeat frequency is the DIFFERENCE of the two frequencies, |f₁ − f₂|; the perceived tone sits at their AVERAGE, (f₁ + f₂)/2. This is the acoustic face of amplitude modulation: a slowly varying envelope (the beat) riding on a fast carrier (the average tone). Piano tuners use it — zero beats means the two sources are matched. Note there is one loudness maximum per beat period, so 'beats per second' and 'maxima per second' are the same number."
+      },
+      {
+        "question": "A person with a near point of 25 cm uses a thin converging lens of focal length 5.0 cm as a simple magnifier, viewing a small object with the image at infinity (relaxed eye). What is the approximate angular magnification?",
+        "choices": [
+          "0.20",
+          "2.0",
+          "5.0",
+          "6.0",
+          "25"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA simple magnifier used with the image at infinity places the object at the focal point, so it subtends an angle θ ≈ h/f at the eye, where h is the object height. Without the lens, the largest angle the unaided eye can achieve is with the object at the near point: θ₀ ≈ h/D, where D = 25 cm. The angular magnification is\nM = θ/θ₀ = (h/f)/(h/D) = D/f = 25/5.0 = 5.0.\n\nNUMERICS WITHOUT A CALCULATOR\nOne division: 25/5 = 5. The whole result is the ratio of the near point to the focal length.\nThe distractor 6.0 is the alternative convention M = 1 + D/f, which applies when the image is formed at the near point (maximally accommodated eye) rather than at infinity; both formulas appear in textbooks and differ by exactly 1. The distractor 0.20 inverts the ratio (f/D). The distractor 25 uses D alone, forgetting to divide by f.\nStructural check: a shorter focal length gives more magnification (M = D/f grows as f shrinks), which matches intuition — a stronger lens magnifies more.\n\n90-SECOND SOLUTION\nImage at infinity ⇒ M = D/f = 25/5 = 5.\n\nWHAT TO MEMORIZE\nSimple magnifier: M = D/f with the image at infinity (relaxed eye), or M = 1 + D/f with the image at the near point (maximum accommodation), where D = 25 cm is the standard near point. The two conventions differ by 1; read the problem to see which viewing condition is specified. The magnifier is the eyepiece of every compound instrument, where this same D/f factor reappears."
+      },
+      {
+        "question": "An object is placed 10 cm in front of a convex spherical mirror whose radius of curvature has magnitude 30 cm. Where is the image and what is its magnification?",
+        "choices": [
+          "6.0 cm in front of the mirror, magnification −0.60",
+          "6.0 cm behind the mirror, magnification +0.60",
+          "15 cm behind the mirror, magnification +1.5",
+          "30 cm behind the mirror, magnification +3.0",
+          "10 cm behind the mirror, magnification +1.0"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA convex mirror has a negative focal length: f = −R/2 = −30/2 = −15 cm. With object distance s = 10 cm, the mirror equation 1/s + 1/s′ = 1/f gives\n1/s′ = 1/f − 1/s = −1/15 − 1/10 = −2/30 − 3/30 = −5/30 = −1/6,\nso s′ = −6.0 cm. The negative sign means the image is virtual, 6.0 cm BEHIND the mirror. The magnification is m = −s′/s = −(−6)/10 = +0.60, so the image is upright and reduced to 60% of the object's size.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in thirtieths: 1/15 = 2/30 and 1/10 = 3/30, so the sum is 5/30 = 1/6 and s′ = −6 cm. The magnification is 6/10 = 0.6.\nThe distractor 'in front, m = −0.60' keeps the size right but places the image in front (real) — impossible for a convex mirror, which ALWAYS forms a virtual, upright, reduced image of a real object. The distractor +1.5 mishandles the sign of f, and +3.0 or +1.0 come from using the wrong focal length.\nStructural check: a convex mirror can only ever produce a virtual, upright, diminished image, so before computing you already know the image is behind the mirror and m is positive and less than 1. Only one choice satisfies all three.\n\n90-SECOND SOLUTION\nf = −15 cm; 1/s′ = −1/15 − 1/10 = −1/6, so s′ = −6 cm (virtual), m = +0.6. Convex ⇒ virtual, upright, reduced.\n\nWHAT TO MEMORIZE\nConvex mirror: f = −R/2, and for ANY real object the image is virtual, upright, and diminished — this is why convex mirrors give a wide field of view (security and passenger-side mirrors, 'objects are closer than they appear'). The sign conventions: virtual image ⇒ s′ < 0 ⇒ m > 0 (upright). Contrast with a concave mirror, which can do all of these plus real, inverted, magnified images depending on object position."
+      },
+      {
+        "question": "A string fixed at both ends vibrates at a certain fundamental frequency. By what factor must its tension be changed, with length and mass per unit length held fixed, to raise the fundamental frequency by one octave (i.e. to double it)?",
+        "choices": [
+          "Increase by a factor of √2",
+          "Increase by a factor of 2",
+          "Increase by a factor of 4",
+          "Increase by a factor of 8",
+          "Increase by a factor of 16"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe fundamental frequency of a string is f₁ = (1/2L)√(T/μ), so at fixed length and linear density, f ∝ √T. To double the frequency,\nf_new/f_old = √(T_new/T_old) = 2 ⇒ T_new/T_old = 2² = 4.\nThe tension must be quadrupled.\n\nNUMERICS WITHOUT A CALCULATOR\nBecause frequency goes as the square root of tension, a factor of 2 in frequency needs a factor of 2² = 4 in tension. The square-root relationship is the whole problem.\nThe distractor 2 forgets the square root (treating f ∝ T); √2 would double the frequency only if f ∝ T², which is not the case; 8 and 16 over-apply the power.\nStructural check: tension is 'inside a square root,' so it always takes a LARGER factor of tension to produce a given factor of frequency. Doubling pitch is expensive in tension — a factor of 4 — which is why instrument strings of different pitch are more practically made with different thicknesses (μ) and lengths, not tension alone.\n\n90-SECOND SOLUTION\nf ∝ √T, so doubling f needs T × 4.\n\nWHAT TO MEMORIZE\nString fundamental f₁ = (1/2L)√(T/μ): frequency scales as √T, as 1/L, and as 1/√μ. The wave speed on the string is v = √(T/μ). To shift pitch: tension enters as a square root (quadruple T for an octave), length enters linearly (halve L for an octave), and mass density enters as an inverse square root (quarter μ for an octave). Real instruments use all three."
+      },
+      {
+        "question": "A glass prism has an apex angle of 60°, and a ray passing through it symmetrically is measured to have a minimum deviation of 30°. What is the refractive index of the glass?",
+        "choices": [
+          "1.22",
+          "1.33",
+          "1.41",
+          "1.50",
+          "1.73"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAt minimum deviation the ray passes symmetrically through the prism, and the index is given by\nn = sin[(A + δ_min)/2] / sin(A/2),\nwhere A is the apex angle and δ_min the minimum deviation. With A = 60° and δ_min = 30°:\nn = sin[(60° + 30°)/2] / sin(60°/2) = sin 45° / sin 30° = (√2/2)/(1/2) = √2 ≈ 1.41.\n\nNUMERICS WITHOUT A CALCULATOR\nThe two angles are chosen so both sines are standard values: sin 45° = √2/2 ≈ 0.707 and sin 30° = 1/2 = 0.500. Their ratio is √2 ≈ 1.41 — recognizing that (√2/2)/(1/2) = √2 avoids any real arithmetic.\nThe distractor 1.50 is the 'typical glass' reflex answer, thrown in to catch students who guess rather than compute; 1.73 = √3 arises from misreading which angles go where; 1.33 is water's index, another familiar-number trap.\nStructural check: for a 60° prism, minimum deviation equal to half the apex angle (30°) is exactly the condition that makes the internal ray parallel to the base and the entry/exit angles equal to 45°. The clean 45°/30° split is the signal that n = √2.\n\n90-SECOND SOLUTION\nn = sin 45°/sin 30° = (√2/2)/(1/2) = √2 ≈ 1.41.\n\nWHAT TO MEMORIZE\nThe prism minimum-deviation formula n = sin[(A + δ_min)/2]/sin(A/2). At minimum deviation the path is symmetric: the ray inside is perpendicular to the bisector of the apex, and the entry and exit angles are equal. This is the classic laboratory method for measuring a refractive index. The 60°/30° combination giving exactly n = √2 is a common exam setup because both required sines are memorized values."
+      },
+      {
+        "question": "Electromagnetic waves in a certain medium obey the dispersion relation ω² = ω₀² + c²k², where ω₀ is a positive constant and c is the vacuum speed of light. Consider: I. the phase velocity exceeds c; II. the group velocity is less than c; III. the product of the phase and group velocities equals c². Which are true?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFrom ω² = ω₀² + c²k², the phase velocity is\nv_p = ω/k = √(ω₀² + c²k²)/k = c√(1 + ω₀²/c²k²) > c,\nso statement I is true — the phase velocity always exceeds c.\nThe group velocity is v_g = dω/dk. Differentiating ω² = ω₀² + c²k² implicitly: 2ω dω = 2c²k dk, so\nv_g = dω/dk = c²k/ω = c²/v_p.\nSince v_p > c, it follows that v_g = c²/v_p < c, so statement II is true.\nAnd the last expression directly gives v_p·v_g = c², so statement III is true. All three hold.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the content is the implicit derivative. The single relation v_g = c²k/ω = c²/v_p delivers II and III at once, and I follows because the square root of (1 + positive) exceeds 1.\nThe reassurance about relativity: the phase velocity exceeding c is not a violation, because no energy or information rides on a phase front — only the group velocity, which stays below c, carries a signal. This same dispersion relation describes waves in a plasma (with ω₀ = ω_p, the plasma frequency), electromagnetic waves in a waveguide (ω₀ = cut-off frequency), and, with ω₀ = mc²/ℏ, the relativistic quantum wave of a massive particle.\n\n90-SECOND SOLUTION\nv_p = ω/k > c; v_g = c²k/ω = c²/v_p < c; their product is c². All three true.\n\nWHAT TO MEMORIZE\nFor the dispersion ω² = ω₀² + c²k² (plasma, waveguide, or massive relativistic particle), v_p·v_g = c², with v_p > c and v_g < c. Superluminal phase velocity is allowed; superluminal group (signal) velocity is not. The relation v_g = c²/v_p is the fast way to get the group velocity once you have the phase velocity, and vice versa."
+      },
+      {
+        "question": "An object is placed 30 cm in front of a thin diverging lens of focal length 15 cm (magnitude). Describe the image.",
+        "choices": [
+          "Virtual, upright, 10 cm from the lens on the same side as the object, magnification +1/3",
+          "Real, inverted, 10 cm from the lens, magnification −1/3",
+          "Virtual, upright, 30 cm from the lens, magnification +1",
+          "Real, inverted, 30 cm from the lens, magnification −1",
+          "At infinity"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA diverging lens has a negative focal length: f = −15 cm. With object distance s = +30 cm, the thin-lens equation 1/s + 1/s′ = 1/f gives\n1/s′ = 1/f − 1/s = −1/15 − 1/30 = −2/30 − 1/30 = −3/30 = −1/10,\nso s′ = −10 cm. The negative image distance means the image is virtual, on the same side as the object, 10 cm from the lens. The magnification is m = −s′/s = −(−10)/30 = +1/3, so it is upright and one-third the size.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in thirtieths: 1/15 = 2/30, plus 1/30 gives 3/30 = 1/10, so s′ = −10 cm; magnification 10/30 = 1/3.\nThe distractor 'real, inverted, m = −1/3' keeps the size but wrongly makes the image real — a diverging lens NEVER forms a real image of a real object. The 'm = +1' and 'm = −1' distractors ignore the computation.\nStructural check: like a convex mirror, a diverging lens always makes a virtual, upright, reduced image of a real object, positioned between the object and the lens. Knowing this rules out three of the five choices before any calculation.\n\n90-SECOND SOLUTION\nf = −15 cm; 1/s′ = −1/15 − 1/30 = −1/10, so s′ = −10 cm (virtual), m = +1/3. Diverging ⇒ virtual, upright, reduced.\n\nWHAT TO MEMORIZE\nA diverging (negative-f) lens forms a virtual, upright, diminished image of any real object, always located between the object and the lens on the object side. This is the exact optical parallel of the convex mirror. Sign conventions: virtual image ⇒ s′ < 0 ⇒ m > 0 (upright). The image distance magnitude is always less than |f| for a diverging lens."
+      },
+      {
+        "question": "A right-angle glass prism is used as a beam-turning element by letting light strike the long (hypotenuse) face from inside at 45°, so the beam reflects through 90°. What is the minimum index of refraction the glass must have for this reflection to be total (surrounded by air)?",
+        "choices": [
+          "1.15",
+          "1.33",
+          "1.41",
+          "1.50",
+          "2.00"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor total internal reflection at the 45° hypotenuse face, the incidence angle (45°) must be at least the critical angle: 45° ≥ θ_c. The critical angle for a glass-air boundary satisfies sin θ_c = 1/n. The condition 45° ≥ θ_c means sin 45° ≥ sin θ_c = 1/n, so\n1/n ≤ sin 45° = √2/2 ⇒ n ≥ √2 ≈ 1.41.\nThe minimum index is √2 ≈ 1.41.\n\nNUMERICS WITHOUT A CALCULATOR\nSet the critical angle equal to 45°: sin 45° = 1/n, so n = 1/sin 45° = 1/(√2/2) = √2 ≈ 1.41. The single memorized value sin 45° = √2/2 does all the work.\nThe distractor 1.50 is 'typical glass' — and it is a deliberately instructive trap, because ordinary crown glass (n ≈ 1.5 > 1.41) DOES satisfy the condition, which is exactly why 45°-45°-90° prisms in binoculars and periscopes work by total internal reflection with no silvering. But the question asks for the MINIMUM index, which is √2, not the typical one. The distractor 2.00 confuses n with 1/sin²θ_c.\nStructural check: TIR at 45° needs θ_c ≤ 45°, i.e. sin θ_c = 1/n ≤ 0.707, i.e. n ≥ 1.41. Any glass with n above √2 works; the threshold is √2.\n\n90-SECOND SOLUTION\nθ_c ≤ 45° ⇒ 1/n ≤ sin 45° = √2/2 ⇒ n ≥ √2 ≈ 1.41.\n\nWHAT TO MEMORIZE\nThe critical angle for TIR: sin θ_c = 1/n (glass to air). For a 45° right-angle prism, TIR requires n ≥ √2 ≈ 1.41, a threshold nearly all optical glasses clear — which is why such prisms replace mirrors in periscopes, binoculars (Porro prisms), and SLR viewfinders, reflecting with essentially 100% efficiency and no metallic coating to tarnish."
+      },
+      {
+        "question": "A string fixed at both ends has a fundamental frequency of 150 Hz. It is driven so that it vibrates in a standing-wave pattern with exactly three antinodes along its length. What is the frequency of this vibration, and how many nodes lie strictly between the two fixed ends?",
+        "choices": [
+          "300 Hz, with 1 interior node",
+          "450 Hz, with 3 interior nodes",
+          "300 Hz, with 2 interior nodes",
+          "450 Hz, with 2 interior nodes",
+          "600 Hz, with 3 interior nodes"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA pattern with n antinodes on a string fixed at both ends is the nth harmonic. Three antinodes means the third harmonic, with frequency\nf₃ = 3f₁ = 3(150 Hz) = 450 Hz.\nThe nth harmonic has n + 1 nodes total (including the two fixed ends), hence n − 1 = 2 nodes strictly between the ends. So there are 2 interior nodes.\n\nNUMERICS WITHOUT A CALCULATOR\nOne multiplication: 3 × 150 = 450. The counting rule is the other half: for the nth harmonic there are n antinodes and n + 1 total nodes, so n − 1 interior nodes. Three antinodes ⇒ third harmonic ⇒ 2 interior nodes.\nThe distractor '450 Hz, 3 interior nodes' gets the frequency right but miscounts nodes (it counts the endpoints or adds one). The '300 Hz' distractors take three antinodes to mean the second harmonic. The distractor 600 Hz uses the fourth harmonic.\nStructural check: antinodes and interior nodes alternate along the string, and the pattern begins and ends with a node (fixed end). With 3 antinodes the sequence is node–antinode–node–antinode–node–antinode–node, which has 4 nodes total, 2 of them interior.\n\n90-SECOND SOLUTION\n3 antinodes ⇒ 3rd harmonic ⇒ f = 3(150) = 450 Hz, with 3 + 1 = 4 total nodes, i.e. 2 interior.\n\nWHAT TO MEMORIZE\nFor a string fixed at both ends, the nth harmonic has frequency nf₁, contains n antinodes and n + 1 total nodes (n − 1 interior), and the string length holds n half-wavelengths: L = n(λ/2). The number of antinodes directly names the harmonic. All integer multiples of f₁ are present (a complete harmonic series), which is what makes plucked strings sound musically 'full.'"
+      },
+      {
+        "question": "A concave makeup mirror forms an upright image twice as tall as an object placed 5.0 cm in front of it. What is the mirror's focal length?",
+        "choices": [
+          "3.3 cm",
+          "5.0 cm",
+          "7.5 cm",
+          "10 cm",
+          "20 cm"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAn upright, enlarged image from a concave mirror is VIRTUAL, so its magnification is positive: m = +2. Using m = −s′/s = +2 with object distance s = 5.0 cm gives s′ = −2s = −10 cm (virtual, behind the mirror). The mirror equation 1/f = 1/s + 1/s′ then gives\n1/f = 1/5.0 + 1/(−10) = 2/10 − 1/10 = 1/10,\nso f = 10 cm (and R = 2f = 20 cm).\n\nNUMERICS WITHOUT A CALCULATOR\nUpright and magnified means m = +2, so s′ = −2(5) = −10. Then 1/f = 1/5 − 1/10 = 1/10, giving f = 10 cm.\nThe sign of the magnification is the whole game. The distractor 3.3 cm comes from taking the image as REAL (m = −2, s′ = +10), which gives 1/f = 1/5 + 1/10 = 3/10, f = 3.3 cm — but a real image from a single mirror is inverted, contradicting 'upright.' The distractor 5.0 cm is the object distance, and 20 cm is the radius of curvature R (twice the focal length), a classic f-vs-R confusion.\nStructural check: to get an upright, magnified image the object must lie INSIDE the focal length, so f must exceed the object distance of 5 cm — immediately ruling out 3.3 cm and 5.0 cm.\n\n90-SECOND SOLUTION\nUpright, 2× ⇒ m = +2 ⇒ s′ = −10 cm; 1/f = 1/5 − 1/10 = 1/10 ⇒ f = 10 cm.\n\nWHAT TO MEMORIZE\nAn upright, enlarged image from a single mirror or lens is always VIRTUAL (positive magnification), and for a concave mirror it requires the object inside the focal length — the shaving/makeup-mirror regime. Use m = −s′/s to convert a stated magnification into an image distance, watching the sign: upright ⇒ m > 0 ⇒ s′ < 0. Keep f and R = 2f distinct. For a magnified upright image, f > object distance."
+      },
+      {
+        "question": "A point object in air is 30 cm from the vertex of a single convex spherical refracting surface (radius of curvature 10 cm, center of curvature inside the glass) that separates air (n = 1.0) from glass (n = 1.5). Where does the image form?",
+        "choices": [
+          "15 cm inside the glass",
+          "30 cm inside the glass",
+          "45 cm inside the glass",
+          "60 cm inside the glass",
+          "90 cm inside the glass"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor refraction at a single spherical surface, n₁/s + n₂/s′ = (n₂ − n₁)/R. With n₁ = 1.0 (air), n₂ = 1.5 (glass), object distance s = 30 cm, and R = +10 cm (center of curvature on the outgoing/glass side):\n1.0/30 + 1.5/s′ = (1.5 − 1.0)/10 = 0.5/10 = 0.05.\nSo 1.5/s′ = 0.05 − 0.0333 = 0.01667, giving s′ = 1.5/0.01667 = 90 cm. The image forms 90 cm inside the glass, real.\n\nNUMERICS WITHOUT A CALCULATOR\nCompute the right side first: 0.5/10 = 0.05. Then 1/30 ≈ 0.0333, and 0.05 − 0.0333 = 0.01667 = 1/60. So 1.5/s′ = 1/60 gives s′ = 90 cm.\nThe distractors are the results of common slips: 45 cm drops the factor n₂ = 1.5 in the image term (solving 1/s′ = 1/60); 60 cm uses (n₂ − n₁)/R with the surface term but forgets to divide by n₂; 30 cm ignores refraction. Keeping the index factors attached to BOTH the object and image terms is the crux.\nStructural check: because the surface refracts light INTO a denser medium and is convex toward the object, it is a converging surface, forming a real image on the far side — so s′ should be positive and comfortably larger than the object distance, consistent with 90 cm.\n\n90-SECOND SOLUTION\n1/30 + 1.5/s′ = 0.5/10 ⇒ 1.5/s′ = 1/60 ⇒ s′ = 90 cm in the glass.\n\nWHAT TO MEMORIZE\nSingle spherical refracting surface: n₁/s + n₂/s′ = (n₂ − n₁)/R. This is the building block of the lensmaker's equation (a thin lens is two such surfaces back to back). The index factor stays attached to each distance term — that is the difference from the mirror/thin-lens formula. Sign convention: R > 0 when the center of curvature lies on the transmission (outgoing) side."
+      },
+      {
+        "question": "Two pure tones of equal amplitude, at 300 Hz and 306 Hz, are sounded together. Consider: I. the loudness rises and falls 6 times per second; II. the ear perceives a tone at about 303 Hz; III. the phenomenon is a form of amplitude modulation, with a 6 Hz envelope on a 303 Hz carrier. Which statements are correct?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "I and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWriting the sum of two equal-amplitude cosines using the identity cos a + cos b = 2 cos[(a − b)/2] cos[(a + b)/2], the resultant is a fast oscillation at the average frequency (a + b)/2 modulated by a slow envelope at the half-difference frequency (a − b)/2.\nThe average (carrier) frequency is (300 + 306)/2 = 303 Hz — the pitch the ear perceives (statement II true). The envelope oscillates at (306 − 300)/2 = 3 Hz, but the LOUDNESS follows the SQUARE of the envelope, so loudness maxima occur twice per envelope cycle: 2 × 3 = 6 times per second, i.e. the beat frequency equals the full difference, 6 Hz (statement I true). This is precisely amplitude modulation: a 6 Hz loudness envelope riding a 303 Hz carrier (statement III true). All three hold.\n\nNUMERICS WITHOUT A CALCULATOR\nAverage 303 Hz (perceived tone); difference 6 Hz (beat/loudness rate). The one subtlety is that the mathematical envelope oscillates at half the difference (3 Hz), but because loudness ∝ amplitude², each envelope cycle produces two loudness peaks, restoring the familiar f_beat = |f₁ − f₂| = 6 Hz. Getting this factor of 2 right is what separates statement I (true) from the trap of answering '3 times per second.'\nThe superposition of two nearby frequencies is the textbook realization of AM: the trigonometric product form IS a carrier times an envelope.\n\n90-SECOND SOLUTION\nCarrier = average = 303 Hz (perceived pitch); beat = difference = 6 Hz (loudness rate). This is amplitude modulation. All three true.\n\nWHAT TO MEMORIZE\nSuperposing two nearby tones f₁, f₂ gives a carrier at the average (f₁ + f₂)/2 and a loudness modulation at the full difference |f₁ − f₂|. The product-to-sum identity cos a + cos b = 2 cos[(a−b)/2] cos[(a+b)/2] is the mathematical statement of amplitude modulation. Watch the factor of 2: the amplitude envelope runs at half the difference, but audible loudness (∝ amplitude²) beats at the full difference."
+      },
+      {
+        "question": "A compound microscope has an objective of focal length 2.0 cm and an eyepiece of focal length 5.0 cm, with a tube length (image-side spacing between objective focal point and eyepiece focal point) of 18 cm. Taking the near point as 25 cm, what is the approximate magnitude of the total angular magnification?",
+        "choices": [
+          "9",
+          "14",
+          "45",
+          "90",
+          "225"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA compound microscope's total magnification is the product of the objective's linear magnification and the eyepiece's angular magnification:\nM_total = (L/f_o) × (D/f_e),\nwhere L is the tube length, f_o and f_e the objective and eyepiece focal lengths, and D = 25 cm the near point. Substituting,\nM_objective = L/f_o = 18/2.0 = 9,\nM_eyepiece = D/f_e = 25/5.0 = 5,\nM_total = 9 × 5 = 45.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo easy divisions and a product: 18/2 = 9, 25/5 = 5, and 9 × 5 = 45.\nThe distractors isolate the two factors: 9 is the objective alone (forgetting the eyepiece), and the eyepiece factor is 5. The distractor 90 doubles one factor; 225 is a slip (using 45 × 5 or 25 × 9). The correct move is to MULTIPLY the two stage magnifications.\nStructural check: a microscope must magnify far more than either lens alone, so the answer should exceed both 9 and 5 by a lot — the product, not either factor by itself. 45 is the only choice that is a clean product of the two stages.\n\n90-SECOND SOLUTION\nM = (L/f_o)(D/f_e) = (18/2)(25/5) = 9 × 5 = 45.\n\nWHAT TO MEMORIZE\nCompound microscope: M_total = (L/f_o)(25 cm/f_e) — the objective acts as a projector (linear magnification L/f_o) and the eyepiece as a simple magnifier (angular magnification 25/f_e). Contrast with the refracting telescope, whose angular magnification is f_o/f_e (long objective, short eyepiece). For the microscope you want BOTH focal lengths short; for the telescope you want a long objective and short eyepiece."
+      },
+      {
+        "question": "A light ray travels inside a diamond (index 2.42) and strikes an internal diamond-air facet. What is the critical angle for total internal reflection, and why is it relevant to a cut diamond's appearance?",
+        "choices": [
+          "About 15°; nearly all rays escape immediately",
+          "About 24°; most rays strike facets beyond it and are totally reflected, so light bounces internally before exiting",
+          "About 42°; the same as ordinary glass",
+          "About 66°; only steeply incident rays are trapped",
+          "There is no critical angle for diamond"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe critical angle for a diamond-air boundary is given by sin θ_c = 1/n = 1/2.42 = 0.413, so θ_c = arcsin(0.413) ≈ 24°. Because this angle is unusually small, a large fraction of rays inside the stone strike the facets at angles GREATER than 24° and are therefore totally internally reflected rather than transmitted. Light entering the top bounces around inside, being reflected several times, before finally emerging — producing the characteristic brilliance. So the answer is about 24°, and small θ_c is exactly what traps light inside.\n\nNUMERICS WITHOUT A CALCULATOR\nCompute 1/2.42 ≈ 0.41. Since sin 24° ≈ 0.41 (and sin 25° ≈ 0.42), θ_c ≈ 24°. A useful anchor: sin 30° = 0.5, and 0.41 is a bit less, so the angle is a bit under 30°.\nThe distractor 42° is the glass-to-air value arcsin(1/1.5) — the point of the question is that diamond's much higher index gives a much SMALLER critical angle, which is what makes diamond sparkle far more than glass. The distractor 66° inverts the relationship (larger n should give smaller, not larger, θ_c).\nStructural check: higher index ⇒ smaller critical angle ⇒ more rays trapped by TIR. Diamond's exceptional index (2.42) is precisely why its critical angle (24°) is so small and its brilliance so pronounced.\n\n90-SECOND SOLUTION\nsin θ_c = 1/2.42 ≈ 0.41 ⇒ θ_c ≈ 24°. The small critical angle traps light by TIR, giving brilliance.\n\nWHAT TO MEMORIZE\nsin θ_c = 1/n: the higher the index, the smaller the critical angle, and the more readily light is trapped by total internal reflection. Diamond (n = 2.42, θ_c ≈ 24°) traps light far more effectively than glass (n = 1.5, θ_c ≈ 42°), which is the physical basis of a brilliant cut. The cut's facet angles are engineered relative to this critical angle so that light entering the crown is totally reflected off the back facets and returned to the viewer."
+      },
+      {
+        "question": "A pipe closed at one end and open at the other, and a pipe of the SAME length open at both ends, are each sounded at their fundamental frequency. How does the closed pipe's fundamental compare with the open pipe's?",
+        "choices": [
+          "It is half as high",
+          "It is twice as high",
+          "It is the same",
+          "It is one-quarter as high",
+          "It is √2 times as high"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAn open-open pipe of length L has a fundamental with a half-wavelength fitting the pipe: L = λ/2, so λ_open = 2L and f_open = v/2L. A closed-open pipe has a node at the closed end and an antinode at the open end, so its fundamental fits a QUARTER wavelength: L = λ/4, giving λ_closed = 4L and f_closed = v/4L. The ratio is\nf_closed/f_open = (v/4L)/(v/2L) = 1/2.\nThe closed pipe's fundamental is half that of the open pipe of the same length.\n\nNUMERICS WITHOUT A CALCULATOR\nNo real arithmetic: an open pipe fits λ/2 in its length, a closed pipe fits λ/4, so the closed pipe's fundamental wavelength is twice as long and its frequency half as high.\nThe distractor 'twice as high' inverts the relation (a common reflex, since a closed pipe seems 'more constrained'); 'one-quarter' confuses the wavelength ratio (4L vs 2L is a factor of 2 in wavelength, hence 2 in frequency, not 4).\nStructural check: a longer effective wavelength means a lower frequency. The closed pipe accommodates a longer wavelength (4L vs 2L), so it must sound lower — an octave lower, in fact.\n\n90-SECOND SOLUTION\nOpen: L = λ/2 ⇒ f = v/2L. Closed: L = λ/4 ⇒ f = v/4L. Ratio = 1/2, an octave lower.\n\nWHAT TO MEMORIZE\nOpen-open pipe: fundamental v/2L, ALL harmonics present (1f, 2f, 3f, …). Closed-open pipe: fundamental v/4L (an octave lower for the same length), ODD harmonics only (1f, 3f, 5f, …). A closed pipe of a given length sounds an octave below the open pipe of the same length, and it lacks the even harmonics — which is why a stopped organ pipe has a distinctly hollow, clarinet-like timbre. The closed end is always a displacement node; the open end an antinode."
+      },
+      {
+        "question": "In a transparent medium showing normal dispersion (its refractive index increases with frequency across the visible range), how does the group velocity of a light pulse compare with the phase velocity?",
+        "choices": [
+          "The group velocity equals the phase velocity",
+          "The group velocity is less than the phase velocity",
+          "The group velocity is greater than the phase velocity",
+          "The group velocity is exactly twice the phase velocity",
+          "The comparison depends on the pulse amplitude"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe phase velocity is v_p = c/n. The group velocity can be written v_g = c/(n + ω dn/dω) = c/n_g, where n_g = n + ω dn/dω is the group index. In NORMAL dispersion, n increases with frequency, so dn/dω > 0, which makes the group index n_g larger than n. A larger index means a smaller velocity, so\nv_g = c/n_g < c/n = v_p.\nThe group velocity is less than the phase velocity.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation; the sign of dn/dω decides everything. Normal dispersion (dn/dω > 0) adds a positive term to the effective index, pushing the group velocity below the phase velocity.\nThe distractor 'greater' is the case of ANOMALOUS dispersion (dn/dω < 0), which occurs near an absorption band; the distractor 'equal' is a nondispersive medium (dn/dω = 0); 'exactly twice' borrows the ω ∝ k² matter-wave result, which is a different physical situation.\nPhysical picture: because red light travels faster than blue in a normally dispersive glass (n smaller for red), a white pulse spreads as it propagates — the reason optical fibers limit data rates and why prisms disperse. The pulse ENVELOPE lags behind the individual phase fronts, which is the statement v_g < v_p.\n\n90-SECOND SOLUTION\nNormal dispersion: dn/dω > 0 ⇒ group index n + ω dn/dω > n ⇒ v_g < v_p.\n\nWHAT TO MEMORIZE\nGroup index n_g = n + ω dn/dω, with v_g = c/n_g and v_p = c/n. Normal dispersion (n rising with frequency, the usual case away from absorption lines) gives v_g < v_p; anomalous dispersion (near an absorption band) can give v_g > v_p or even negative. Dispersion is why pulses spread in optical fibers and why a prism separates colors — blue is slowed more than red."
+      },
+      {
+        "question": "A concave mirror of focal length 10 cm is to form a real image twice the size of the object on a screen. How far from the mirror should the object be placed?",
+        "choices": [
+          "5 cm",
+          "10 cm",
+          "15 cm",
+          "20 cm",
+          "30 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA real image (from a concave mirror) is inverted, so its magnification is negative: m = −2 for a real image twice the size. Since m = −s′/s = −2, we have s′ = 2s. Substituting into the mirror equation 1/s + 1/s′ = 1/f:\n1/s + 1/(2s) = 1/f ⇒ 3/(2s) = 1/f ⇒ s = 3f/2 = 3(10)/2 = 15 cm.\nThe object should be 15 cm from the mirror (and the image forms at s′ = 30 cm).\n\nNUMERICS WITHOUT A CALCULATOR\nFrom s′ = 2s, the equation becomes 1/s + 1/2s = 3/2s = 1/f, so s = 3f/2 = 1.5 × 10 = 15 cm.\nThe distractor 20 cm corresponds to placing the object at C (which gives m = −1, same size, not twice). The distractor 5 cm would give a VIRTUAL magnified image (object inside F), which cannot be projected on a screen — the phrase 'on a screen' signals a real image, hence m = −2, not +2. The distractor 30 cm is the image distance, not the object distance.\nStructural check: for a real magnified image the object must lie between F (10 cm) and C (20 cm); 15 cm sits squarely in that window, confirming the regime.\n\n90-SECOND SOLUTION\nReal, 2× ⇒ m = −2 ⇒ s′ = 2s. Then 1/s + 1/2s = 1/f gives s = 3f/2 = 15 cm.\n\nWHAT TO MEMORIZE\nFor a real image on a screen, the magnification is NEGATIVE (inverted). Using m = −s′/s to substitute s′ = |m|s into the mirror/lens equation is the standard technique for 'magnification specified' problems. A concave mirror gives a real, enlarged image only for an object between F and C; the object-at-C case (s = 2f) is the unit-magnification boundary. The same algebra with a converging lens gives s = f(1 + 1/|m|)."
+      },
+      {
+        "question": "White light passes through a converging glass lens. Consider: I. violet light is brought to a focus closer to the lens than red light; II. this occurs because the glass index is larger for violet than for red; III. the effect (chromatic aberration) can be reduced by combining a converging and a diverging lens of different glasses. Which statements are correct?",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBy the lensmaker's equation, 1/f = (n − 1)(1/R₁ − 1/R₂), the focal length depends on the index n. For a converging lens, a LARGER n gives a SHORTER focal length. In normal dispersion the index is larger for violet than for red, so violet has the shorter focal length and focuses closer to the lens (statement I true, because of the index difference in statement II — also true). This wavelength-dependent focus is chromatic aberration. It can be largely corrected by cementing together a converging lens of low-dispersion glass (crown) and a diverging lens of high-dispersion glass (flint), whose opposite chromatic errors cancel — an achromatic doublet (statement III true). All three hold.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the logic runs through the lensmaker's equation: f ∝ 1/(n − 1), so higher index (violet) ⇒ shorter f ⇒ closer focus.\nThe distractor that picks only I or only II fails to see they are cause and effect of the same fact. A common wrong intuition is that RED focuses closer (perhaps by analogy with red bending less in a prism), but for a converging lens it is the higher-index violet that is bent more strongly and focuses nearer.\nThe achromatic doublet works because dispersion (Δn across the spectrum) and mean deviation (n − 1) can be balanced independently by choosing two glasses, so the net focal length is made the same for two chosen wavelengths.\n\n90-SECOND SOLUTION\nHigher index for violet ⇒ shorter focal length ⇒ violet focuses closer. A crown/flint doublet cancels it. All three true.\n\nWHAT TO MEMORIZE\nChromatic aberration: because n is larger for shorter wavelengths, a simple converging lens focuses violet closer than red. The fix is an achromatic doublet — a converging crown-glass element plus a diverging flint-glass element — chosen so their dispersions cancel while a net converging power remains. Mirrors, by contrast, have NO chromatic aberration (reflection is wavelength-independent), which is one reason large telescopes use mirrors."
+      },
+      {
+        "question": "An object is placed exactly at the front focal point of a thin converging lens. Where is the image formed?",
+        "choices": [
+          "At the focal point on the other side",
+          "At twice the focal length on the other side",
+          "At the lens itself",
+          "At infinity",
+          "At the same location as the object"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWith the object at the focal point, s = f. The thin-lens equation gives\n1/s′ = 1/f − 1/s = 1/f − 1/f = 0,\nso s′ = ∞. The image is formed at infinity: rays from a point at the focal point emerge from the lens parallel to one another and never reconverge.\n\n90-SECOND SOLUTION\ns = f ⇒ 1/s′ = 1/f − 1/f = 0 ⇒ s′ = ∞. Rays exit collimated.\n\nWHAT TO MEMORIZE\nAn object at the focal point produces an image at infinity — the rays leave collimated (parallel). This is the reciprocal of the defining property of the focal point (parallel rays in converge to the focal point), and it is the operating principle of a collimator and of the objective/collimating stage in spectrometers and searchlights. As the object crosses the focal point from outside to inside, the image jumps from real (far side, s′ > 0) through infinity to virtual (same side, s′ < 0) — the sign change of s′ that separates real from virtual imaging."
+      },
+      {
+        "question": "An organ pipe sounds a certain fundamental frequency when filled with air (speed of sound ≈ 340 m/s). If the same pipe is instead filled with helium, in which sound travels roughly three times faster, how does its fundamental frequency change?",
+        "choices": [
+          "It rises to about three times its air value",
+          "It drops to about one-third",
+          "It is unchanged, since the pipe's length sets the wavelength",
+          "It rises to about √3 times its air value",
+          "It rises to about nine times its air value"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe resonant wavelengths of a pipe are fixed by its GEOMETRY (length and end conditions), not by the gas: the fundamental always fits the same fraction of a wavelength into the pipe, so λ is unchanged. The frequency, however, is f = v/λ, and the speed of sound v depends on the gas. Helium gives v about 3 times the value in air, so with λ fixed,\nf_He/f_air = v_He/v_air ≈ 3.\nThe fundamental rises to about three times its air value.\n\nNUMERICS WITHOUT A CALCULATOR\nSince λ is set by the pipe and unchanged, f scales directly with v: a 3× faster sound speed gives a 3× higher frequency. No calculation beyond that proportionality.\nThe distractor 'unchanged' is the trap of remembering that the pipe fixes the WAVELENGTH and forgetting that frequency = speed/wavelength, so a changed speed changes the frequency. The distractor √3 would apply if the speed itself scaled as √3, but the problem states the speed is ~3× larger. (In detail, v = √(γRT/M); helium's small molar mass, partly offset by its larger γ, makes v about 2.9× that in air.)\nStructural check: this is the 'helium voice' effect — inhaling helium raises the pitch of resonances in the vocal tract because the sound speed, not the cavity size, has changed.\n\n90-SECOND SOLUTION\nλ fixed by pipe; f = v/λ, and v is ~3× larger in helium, so f is ~3× higher.\n\nWHAT TO MEMORIZE\nA pipe's resonant WAVELENGTHS are set by its length and end conditions; the FREQUENCIES then follow from f = v/λ, so they scale with the speed of sound in the filling gas. The speed of sound in an ideal gas is v = √(γRT/M): it rises with temperature and with smaller molar mass. Helium (low M) gives a much higher sound speed than air, raising every resonant frequency — the 'helium voice' effect (which shifts formant frequencies, not the vocal-fold pitch)."
+      },
+      {
+        "question": "For total internal reflection to occur at the boundary between two media, which conditions are necessary? I. The light must travel from the higher-index medium toward the lower-index one. II. The angle of incidence must exceed the critical angle. III. At exactly the critical angle, the refracted ray travels along the boundary (refraction angle 90°).",
+        "choices": [
+          "I only",
+          "II only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTotal internal reflection requires that no refracted ray can satisfy Snell's law, n₁ sin θ₁ = n₂ sin θ₂. Since sin θ₂ ≤ 1, a solution fails only when n₁ sin θ₁ > n₂, which demands n₁ > n₂ — light going from denser to rarer (statement I true). The threshold is the critical angle θ_c where sin θ₂ = 1, i.e. n₁ sin θ_c = n₂, so at exactly θ_c the refracted ray grazes along the surface at 90° (statement III true). For angles ABOVE θ_c, Snell's law has no real solution for θ₂ and all the light is reflected (statement II true). All three conditions are correct.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the reasoning is entirely from Snell's law and the constraint sin θ₂ ≤ 1.\nEach statement pins down one feature: I is the necessary direction (higher to lower index), II is the necessary angular condition (beyond critical), and III describes the boundary case (grazing refraction at exactly θ_c). The common error is to forget I — TIR is impossible going from low to high index, no matter how large the incidence angle, because then n₁ sin θ₁ < n₂ always has a solution.\nStructural check: at θ_c the transmitted ray is at 90° and carries no energy across; just beyond, the wave becomes evanescent, decaying exponentially into the second medium without transporting energy — the field is not literally zero at the boundary, but no power crosses.\n\n90-SECOND SOLUTION\nTIR needs n₁ > n₂ (I) and θ > θ_c (II); at θ_c the refracted ray grazes at 90° (III). All true.\n\nWHAT TO MEMORIZE\nTIR requires BOTH a high-to-low index transition and an incidence angle above θ_c = arcsin(n₂/n₁). At exactly θ_c the refracted ray runs along the interface (90°); beyond it, the transmitted field is evanescent, decaying exponentially with no net energy flow across the boundary. This underlies optical fibers, prisms, and frustrated TIR (where a nearby second surface can 'tunnel' light across the evanescent gap)."
+      },
+      {
+        "question": "Two plane mirrors are set facing each other at an angle of 60°. A small object is placed between them. How many images of the object are formed?",
+        "choices": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "Infinitely many"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor two plane mirrors inclined at angle θ (that evenly divides 360°), the number of images of an object placed between them is\nN = 360°/θ − 1.\nWith θ = 60°: N = 360/60 − 1 = 6 − 1 = 5. Five images are formed.\n\nNUMERICS WITHOUT A CALCULATOR\nOne division and a subtraction: 360/60 = 6, minus 1 gives 5.\nThe distractor 6 forgets to subtract 1 (that 6 counts the object itself plus images, or double-counts the image on the symmetry axis). The distractor 'infinitely many' is what you get when the mirrors are PARALLEL (θ → 0, so 360/θ → ∞) — the barbershop effect — not at 60°. The distractor 2 or 3 would apply to larger angles (120° gives 2 images, 90° gives 3).\nStructural check: as the angle shrinks, the number of images grows (360/θ − 1), reaching infinity for parallel mirrors. 60° is a moderate angle, giving a moderate count of 5.\n\n90-SECOND SOLUTION\nN = 360°/θ − 1 = 360/60 − 1 = 5.\n\nWHAT TO MEMORIZE\nTwo plane mirrors at angle θ form N = 360°/θ − 1 images (when 360/θ is an integer). Special cases: 90° gives 3 images, 60° gives 5, 45° gives 7, and parallel mirrors (θ → 0) give infinitely many — the principle of the kaleidoscope. A single plane mirror gives one image (θ = 180°: 360/180 − 1 = 1). Each image is as far behind its mirror as the object is in front, and successive reflections build the full set."
+      },
+      {
+        "question": "A beam of light passes from air into a block of glass. Which of the following change as the light crosses the boundary? I. its frequency; II. its wavelength; III. its speed.",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWhen light enters a denser medium, its speed drops to v = c/n, so the speed changes (III true). The FREQUENCY is set by the source and is continuous across the boundary — the fields on both sides must oscillate in step, so frequency does NOT change (I false). Since v = fλ and f is fixed while v decreases, the wavelength must shrink: λ_medium = λ_vacuum/n (II true). So statements II and III change, but not I.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the chain of reasoning is v = c/n (speed down), f fixed by the source (unchanged), therefore λ = v/f down by the same factor n.\nThe key trap is frequency: many students assume 'the color changes' or that frequency shifts, but frequency is the one quantity conserved across a boundary — it is tied to the driving oscillation and cannot change discontinuously. The color we perceive is tied to frequency, which is why an object underwater has the same color as in air even though the wavelength there is shorter.\nStructural check: exactly the two quantities linked by v = fλ that can change (v and λ) do change, in the same ratio n, leaving f fixed.\n\n90-SECOND SOLUTION\nf is fixed by the source; v = c/n drops; so λ = v/f drops too. II and III change, not I.\n\nWHAT TO MEMORIZE\nAcross a boundary, FREQUENCY is conserved (continuity of the oscillating fields), while speed and wavelength both drop by the factor n: v = c/n and λ_medium = λ_vacuum/n. Color is set by frequency, so it is unchanged in a new medium. This is the resolution of many 'what changes' questions: whenever a wave enters a new medium, frequency stays, speed and wavelength scale together."
+      },
+      {
+        "question": "A converging lens of focal length 15 cm is used to cast a sharp image of a small object onto a screen. The object and screen are held a fixed distance of 80 cm apart. At what distance(s) from the object can the lens be placed to produce a sharp image?",
+        "choices": [
+          "At 20 cm or 60 cm from the object",
+          "Only at 40 cm (midway)",
+          "At 15 cm or 65 cm from the object",
+          "At 30 cm or 50 cm from the object",
+          "No position gives a sharp image"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nLet the object-to-lens distance be s; then the lens-to-screen distance is s′ = 80 − s (their sum is the fixed separation). The thin-lens equation 1/s + 1/s′ = 1/f becomes\n1/s + 1/(80 − s) = 1/15.\nMultiplying out: 15(80 − s) + 15s = s(80 − s), i.e. 15·80 = 80s − s², so s² − 80s + 1200 = 0. The roots are\ns = [80 ± √(80² − 4·1200)]/2 = [80 ± √(6400 − 4800)]/2 = [80 ± √1600]/2 = [80 ± 40]/2 = 60 or 20 cm.\nThe lens works at 20 cm or 60 cm from the object.\n\nNUMERICS WITHOUT A CALCULATOR\nThe quadratic s² − 80s + 1200 = 0 factors as (s − 20)(s − 60) = 0 — check: 20 + 60 = 80 (the separation) and 20 × 60 = 1200 = f × D = 15 × 80. Recognizing that the two roots multiply to f·D and sum to D lets you factor by inspection, no quadratic formula needed.\nThe distractor 40 cm (midway) is the tempting symmetric guess, but a symmetric placement gives unit magnification only when D = 4f; here D = 80 > 4f = 60, so two DISTINCT positions exist. The two positions are conjugate: at 20 cm the image is magnified, at 60 cm it is reduced, and they are mirror images of each other.\nStructural check: real images with a lens require D ≥ 4f. Here 80 ≥ 60, so solutions exist and are distinct; if D were exactly 4f = 60, the two roots would merge at the midpoint.\n\n90-SECOND SOLUTION\ns² − 80s + 1200 = 0 ⇒ (s − 20)(s − 60) = 0 ⇒ s = 20 or 60 cm (roots sum to 80, multiply to 15·80).\n\nWHAT TO MEMORIZE\nThe displacement (Bessel) method: for a fixed object-screen separation D, a converging lens gives a sharp image at two conjugate positions whenever D > 4f, and these roots sum to D and multiply to fD. The two positions give reciprocal magnifications (m and 1/m). When D = 4f exactly, the two positions coincide at the midpoint (unit magnification); when D < 4f, no real image is possible. This method measures f without knowing object or image distances individually: f = (D² − d²)/(4D), where d is the separation between the two lens positions."
+      }
+    ]
+  },
+  {
+    "name": "Thermodynamics & Statistical Mechanics Test 2 (Hard)",
+    "added": "2026-09-05",
+    "category": "statmech",
+    "cards": [
+      {
+        "question": "An inventor claims to have built a heat engine operating between reservoirs at 500 K and 300 K with a thermal efficiency of 45%. Is this possible?",
+        "choices": [
+          "No, because the Carnot efficiency for these reservoirs is 40%",
+          "Yes, because 45% is below 100%",
+          "Yes, because the efficiency depends on the working substance",
+          "No, because no real engine can exceed 25%",
+          "It cannot be determined without knowing the heat input"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe maximum possible efficiency of any engine operating between two reservoirs is the Carnot efficiency, set only by the reservoir temperatures:\nη_Carnot = 1 − T_cold/T_hot = 1 − 300/500 = 1 − 0.60 = 0.40 = 40%.\nNo engine, real or ideal, can exceed this. A claimed efficiency of 45% > 40% violates the second law of thermodynamics, so the claim is impossible.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only computation is the temperature ratio 300/500 = 3/5 = 0.6, so η_Carnot = 1 − 0.6 = 0.4. Comparing 45% with 40% settles it.\nThe feasibility check is the whole point: efficiency below 100% is necessary but NOT sufficient — the real ceiling is the Carnot value, always well below 100%. The distractor 'depends on working substance' is precisely the misconception the second law rules out: the Carnot limit is universal, independent of the substance. The distractor '25%' is (1 − T_c/T_h) miscomputed as (T_h − T_c)/T_c or similar.\nStructural check: use absolute (Kelvin) temperatures — a frequent error is to use Celsius. Here both are already in kelvin. The ratio T_c/T_h must be taken with Kelvin, or the efficiency comes out nonsensical.\n\n90-SECOND SOLUTION\nη_max = 1 − 300/500 = 40%. Claimed 45% > 40%, so it violates the second law — impossible.\n\nWHAT TO MEMORIZE\nThe Carnot efficiency η = 1 − T_c/T_h (Kelvin) is the absolute ceiling for any engine between two reservoirs, independent of design or working substance. Feasibility questions reduce to: compute the Carnot value and compare. A claim at or below it is allowed (equality only for a reversible engine); above it violates the second law. Always convert to Kelvin first."
+      },
+      {
+        "question": "The ratio of specific heats γ = C_P/C_V for a certain ideal gas is measured to be 1.4. How many active (energetically accessible) degrees of freedom does each molecule have?",
+        "choices": [
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor an ideal gas with f quadratic degrees of freedom per molecule, equipartition gives C_V = (f/2)R and C_P = C_V + R = (f/2 + 1)R. Therefore\nγ = C_P/C_V = (f/2 + 1)/(f/2) = 1 + 2/f.\nSetting γ = 1.4: 2/f = 0.4, so f = 2/0.4 = 5. Each molecule has 5 active degrees of freedom.\n\nNUMERICS WITHOUT A CALCULATOR\nRearrange to f = 2/(γ − 1) = 2/0.4 = 5. The subtraction γ − 1 = 0.4 and the division 2/0.4 = 5 are the whole computation.\nFive degrees of freedom is a diatomic gas at room temperature: 3 translational + 2 rotational, with vibration frozen out. The distractor 3 (γ = 5/3 ≈ 1.67) is monatomic; 6 (γ = 4/3 ≈ 1.33) is a nonlinear polyatomic or a solid; 7 (γ = 9/7 ≈ 1.29) is a diatomic with vibration active.\nStructural check: γ always lies between 1 and 5/3 for ordinary gases, and it DECREASES as more degrees of freedom activate (more ways to store energy internally means a smaller fraction goes to translation/pressure). γ = 1.4 sits between monatomic (1.67) and vibrating diatomic (1.29), pointing to the rigid diatomic value.\n\n90-SECOND SOLUTION\nf = 2/(γ − 1) = 2/0.4 = 5 (rigid diatomic).\n\nWHAT TO MEMORIZE\nγ = 1 + 2/f, so f = 2/(γ − 1). The standard values: monatomic f = 3, γ = 5/3; rigid diatomic f = 5, γ = 7/5 = 1.4; vibrating diatomic f = 7, γ = 9/7; solid f = 6, C_V = 3R (Dulong–Petit). Also C_P − C_V = R for any ideal gas, and C_V = (f/2)R. Recognizing γ = 1.4 as the diatomic value on sight saves time."
+      },
+      {
+        "question": "A system consists of many identical two-level subsystems, each with a ground state and a single excited state a fixed energy ε above it. How does the heat capacity of this system behave as the temperature is varied from near zero to very high?",
+        "choices": [
+          "It increases monotonically with temperature",
+          "It approaches zero at both low and high temperatures, with a peak at an intermediate temperature (kT ~ ε)",
+          "It decreases monotonically with temperature",
+          "It is constant at (1/2)k per subsystem at all temperatures",
+          "It diverges as the temperature approaches zero"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe average energy of one two-level subsystem is ⟨E⟩ = ε/(e^(ε/kT) + 1), and its heat capacity is C = d⟨E⟩/dT. Examine the limits:\nAt LOW temperature (kT ≪ ε), essentially all subsystems sit in the ground state; adding a little heat barely populates the excited state because the Boltzmann factor e^(−ε/kT) is tiny, so C → 0 (exponentially).\nAt HIGH temperature (kT ≫ ε), the two levels are nearly equally populated and ⟨E⟩ saturates at ε/2; further heating cannot raise the energy (there is no higher state), so again C → 0.\nBetween these limits C rises to a maximum near kT ≈ 0.4ε, where heating most effectively shifts population from the ground to the excited state. This peak is the Schottky anomaly.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation — the shape follows from the two limits both giving C → 0, which forces a peak in between. The physical driver is that heat capacity measures how readily the system ABSORBS energy: it cannot absorb much when almost everything is in the ground state (low T) or when the levels are already equally filled and saturated (high T). It absorbs most when kT is comparable to the level spacing.\nThe distractor 'increases monotonically' is the classical-gas intuition (which fails here because a two-level system has a finite energy ceiling); 'constant' misapplies equipartition, which does not hold for a system with discrete, bounded levels.\n\n90-SECOND SOLUTION\nTwo-level system: energy saturates at ε/2, so C → 0 at both T → 0 and T → ∞, with a peak near kT ≈ 0.4ε — the Schottky anomaly.\n\nWHAT TO MEMORIZE\nAny system with a finite energy ceiling (a two-level or few-level system) shows a Schottky anomaly: heat capacity vanishing at both temperature extremes with a bump at kT comparable to the level spacing. This is the signature of a gapped, bounded spectrum, in contrast to the ever-rising or constant heat capacity of systems with unbounded levels (a gas, a harmonic oscillator). The Schottky peak is used experimentally to measure energy-level splittings in paramagnetic salts and defects."
+      },
+      {
+        "question": "For an ideal gas in thermal equilibrium described by the Maxwell–Boltzmann speed distribution, how do the most probable speed v_p, the mean speed v̄, and the root-mean-square speed v_rms compare?",
+        "choices": [
+          "v_p = v̄ = v_rms",
+          "v_rms < v̄ < v_p",
+          "v̄ < v_p < v_rms",
+          "v_p < v̄ < v_rms",
+          "v_p < v_rms < v̄"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe three characteristic speeds of a Maxwell–Boltzmann distribution are\nv_p = √(2kT/m) ≈ 1.41√(kT/m),\nv̄ = √(8kT/πm) ≈ 1.60√(kT/m),\nv_rms = √(3kT/m) ≈ 1.73√(kT/m).\nComparing the numerical coefficients 1.41 < 1.60 < 1.73 gives v_p < v̄ < v_rms.\n\nNUMERICS WITHOUT A CALCULATOR\nCompare the constants under the square roots: 2 < 8/π (≈ 2.55) < 3. Taking square roots preserves the order, so v_p < v̄ < v_rms. No decimals needed — just 2 < 2.55 < 3.\nThe ordering is fixed and worth memorizing outright. The reason v_rms is largest is that squaring the speeds before averaging weights the fast molecules more heavily (the high-speed tail pulls the rms up); the most probable speed (the peak of the distribution) is the smallest of the three because the distribution is skewed toward high speeds.\nThe distractor with all three equal would hold only for a single-speed (delta-function) distribution; the reversed orderings ignore that squaring emphasizes the tail.\n\n90-SECOND SOLUTION\nCoefficients √2 < √(8/π) < √3, so v_p < v̄ < v_rms.\n\nWHAT TO MEMORIZE\nThe three speeds in fixed order: v_p = √(2kT/m) < v̄ = √(8kT/πm) < v_rms = √(3kT/m), with approximate ratios 1.41 : 1.60 : 1.73. The rms speed is largest because the mean of the squares over-weights the fast tail; the most probable (peak) speed is smallest because the distribution is right-skewed. All three scale as √(T/m), so heavier molecules and lower temperatures mean slower speeds."
+      },
+      {
+        "question": "A blackbody radiates a certain total power at absolute temperature T. By what factor must its temperature be raised in order to DOUBLE the total power it radiates (with its area unchanged)?",
+        "choices": [
+          "About 1.19",
+          "About 1.41",
+          "2",
+          "About 2.83",
+          "16"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Stefan–Boltzmann law gives radiated power P ∝ T⁴. To double the power,\nP_new/P_old = (T_new/T_old)⁴ = 2 ⇒ T_new/T_old = 2^(1/4) ≈ 1.19.\nThe temperature need only rise by about 19%.\n\nNUMERICS WITHOUT A CALCULATOR\nRequired factor is the fourth root of 2. Since √2 ≈ 1.41, the fourth root is √1.41 ≈ 1.19 (a 19% increase). Recognizing 2^(1/4) = √√2 gets you there from the single fact √2 ≈ 1.41.\nThe distractor 1.41 is √2 — the factor that would DOUBLE if power went as T² instead of T⁴; the distractor 16 inverts the question (that is the factor by which POWER changes when T doubles); 2 and 2.83 ignore the fourth-power law.\nStructural check: because power depends so steeply on temperature (fourth power), even a large change in power needs only a modest change in temperature. A mere 19% temperature rise doubles the output — which is why hot objects brighten so dramatically with small heating.\n\n90-SECOND SOLUTION\nP ∝ T⁴ ⇒ factor = 2^(1/4) = √√2 ≈ √1.41 ≈ 1.19.\n\nWHAT TO MEMORIZE\nStefan–Boltzmann: total radiated power ∝ T⁴ (absolute temperature). Consequences worth having ready: doubling T multiplies power by 16; a 19% rise (factor 2^(1/4)) doubles it; the emitted power is extraordinarily sensitive to temperature. Paired with Wien's law (λ_peak ∝ 1/T), these two scaling laws answer most blackbody questions without evaluating any constants."
+      },
+      {
+        "question": "An ideal gas doubles its volume in two different ways: (i) by a free expansion into an evacuated chamber inside a rigid insulated container, and (ii) by a slow reversible adiabatic expansion. Compare the final temperatures.",
+        "choices": [
+          "Free expansion leaves T unchanged; reversible adiabatic expansion lowers T",
+          "Both processes leave the temperature unchanged",
+          "Free expansion lowers T; reversible adiabatic expansion leaves T unchanged",
+          "Both processes lower T by the same amount",
+          "Free expansion raises T; reversible adiabatic expansion lowers T"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn a FREE expansion the gas does no work (it pushes against vacuum, so W = 0) and no heat enters (insulated, Q = 0), so by the first law ΔU = Q − W = 0. For an ideal gas U depends only on temperature, so ΔU = 0 means ΔT = 0 — the temperature is UNCHANGED.\nIn a reversible ADIABATIC expansion, Q = 0 but the gas DOES work on its surroundings as it slowly pushes the piston out. That work comes at the expense of internal energy, so ΔU < 0 and the temperature FALLS (following TV^(γ−1) = constant). So free expansion keeps T fixed; reversible adiabatic expansion cools the gas.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the distinction is whether the gas does work. Free expansion: no work, no heat, so no change in internal energy, so (for an ideal gas) no change in temperature. Reversible adiabatic: no heat, but real work done by the gas, so internal energy and temperature drop.\nThe key conceptual trap is assuming any adiabatic (Q = 0) expansion cools the gas. It does only if the gas does work. Free expansion is adiabatic AND does zero work, so it is isothermal for an ideal gas even though no heat flows. (A real gas would cool slightly in free expansion, via the Joule–Thomson effect, because of intermolecular forces — but an ideal gas does not.)\n\n90-SECOND SOLUTION\nFree expansion: W = 0, Q = 0 ⇒ ΔU = 0 ⇒ ΔT = 0. Reversible adiabatic: Q = 0 but W > 0 ⇒ ΔU < 0 ⇒ T falls.\n\nWHAT TO MEMORIZE\nFor an ideal gas, internal energy depends ONLY on temperature. Free expansion (into vacuum, insulated) does no work and transfers no heat, so ΔU = 0 and T is unchanged — even though the entropy increases (it is irreversible). Reversible adiabatic expansion does work at the expense of internal energy, so it cools the gas along TV^(γ−1) = const. Distinguishing 'adiabatic' (Q = 0) from 'does no work' (W = 0) is the crux."
+      },
+      {
+        "question": "A refrigerator maintains its interior at 4 °C (277 K) while the kitchen is at 25 °C (298 K). What is the maximum possible coefficient of performance (COP), defined as heat removed from the interior per unit work input?",
+        "choices": [
+          "About 0.076",
+          "About 14",
+          "About 21",
+          "About 0.93",
+          "About 13"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe maximum COP of a refrigerator is the Carnot value, COP_ref = T_cold/(T_hot − T_cold), using absolute temperatures:\nCOP_ref = 277/(298 − 277) = 277/21 ≈ 13.\nSo at best about 13 joules of heat are removed from the interior for each joule of work supplied.\n\nNUMERICS WITHOUT A CALCULATOR\nThe temperature difference is 298 − 277 = 21 K, and 277/21 ≈ 13 (since 21 × 13 = 273, close to 277). The small temperature difference in the denominator is what makes the COP large.\nThe distractor 14 is the HEAT-PUMP COP for the same reservoirs, COP_hp = T_hot/(T_hot − T_cold) = 298/21 ≈ 14, which exceeds the refrigerator COP by exactly 1. The distractor 0.076 is the reciprocal (work per heat, ≈ 1/13), and 0.93 is T_cold/T_hot (an efficiency-like ratio, the wrong formula).\nStructural check: a refrigerator's COP is typically GREATER than 1 (you move more heat than the work you put in), and it grows without bound as the two temperatures approach each other — because pumping heat across a tiny temperature gap costs almost no work.\n\n90-SECOND SOLUTION\nCOP_ref = T_c/(T_h − T_c) = 277/21 ≈ 13.\n\nWHAT TO MEMORIZE\nCarnot coefficients of performance: refrigerator COP = T_c/(T_h − T_c); heat pump COP = T_h/(T_h − T_c). They differ by exactly 1 (COP_hp = COP_ref + 1) because the heat delivered to the hot side equals the heat removed from the cold side plus the work. Both diverge as T_h → T_c (cheap to pump across a small gap). Always use Kelvin, and note COP is usually greater than 1 — it is not bounded by 100% like an engine's efficiency."
+      },
+      {
+        "question": "At temperatures well above its Debye temperature, a simple monatomic crystalline solid has a molar heat capacity of approximately 3R (the Dulong–Petit value). Why?",
+        "choices": [
+          "Each atom oscillates in 3 dimensions, contributing both kinetic and potential energy — 6 quadratic terms, hence 6 × (1/2)R = 3R",
+          "Each atom has 3 translational degrees of freedom only, giving (3/2)R",
+          "The electrons carry all the heat capacity, giving 3R",
+          "It follows from the ideal gas law applied to the lattice",
+          "Each atom contributes exactly R, and there are 3 atoms per formula unit"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn a solid, each atom is bound near a lattice site and oscillates in three dimensions like a 3-D harmonic oscillator. Equipartition assigns (1/2)k per QUADRATIC term in the energy. Each of the three oscillation directions contributes a kinetic term (½mv²) AND a potential term (½κx²), so there are 3 × 2 = 6 quadratic terms per atom, giving\nU = 6 × (1/2)kT = 3kT per atom, so C = 3k per atom, or 3R per mole.\nThis is the Dulong–Petit law.\n\nNUMERICS WITHOUT A CALCULATOR\nThe count is the whole result: 3 directions × 2 (kinetic + potential) = 6 half-R's = 3R ≈ 25 J/(mol·K).\nThe distractor (3/2)R counts only the kinetic (translational) terms — the error of treating the solid like a monatomic gas and forgetting that a bound oscillator ALSO stores potential energy. The distractor blaming electrons is wrong: the electronic contribution to heat capacity is tiny at ordinary temperatures (linear in T and small). The lattice vibrations, not the electrons or any gas law, give 3R.\nStructural check: the doubling from potential energy is the same effect that makes a vibrating diatomic molecule count its vibrational mode twice (7R/2 rather than 6R/2). Oscillators always store energy in two quadratic forms.\n\n90-SECOND SOLUTION\n3 oscillation directions × (KE + PE) = 6 quadratic terms × (1/2)R = 3R per mole.\n\nWHAT TO MEMORIZE\nDulong–Petit: the high-temperature molar heat capacity of a simple solid is 3R ≈ 25 J/(mol·K), from 6 quadratic terms per atom (3 kinetic + 3 potential of a 3-D oscillator). It fails at low temperature, where quantum freezing of the modes drives C toward zero as T³ (the Debye law) — because kT drops below the phonon energies. The factor-of-2 from potential energy is the same double-counting that gives a vibrating diatomic gas C_V = 7R/2."
+      },
+      {
+        "question": "A particle has three nondegenerate energy levels at 0, ε, and 2ε. In the limit of very high temperature (kT ≫ ε), what is its average energy?",
+        "choices": [
+          "0",
+          "ε/2",
+          "ε",
+          "3ε/2",
+          "2ε"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAt very high temperature (kT ≫ ε) all Boltzmann factors e^(−E/kT) approach 1, so the three levels become EQUALLY probable, each with probability 1/3. The average energy is then just the arithmetic mean of the level energies:\n⟨E⟩ = (0 + ε + 2ε)/3 = 3ε/3 = ε.\n\nNUMERICS WITHOUT A CALCULATOR\nEqual populations at high T mean ⟨E⟩ is the simple average of the levels: (0 + ε + 2ε)/3 = ε. No partition function needed — the high-T limit collapses to counting.\nThe distractor ε/2 is the high-T average for a TWO-level system (0 and ε); the distractor 3ε/2 is the average of ε and 2ε (forgetting the ground state) or the mean of the top two; 2ε is the highest level, the T → ∞ energy only if population inverted (impossible at positive T).\nStructural check: at infinite temperature every accessible state is equally likely, so the average energy is the unweighted mean of the level energies — here the middle value ε, since the levels are symmetric about it.\n\n90-SECOND SOLUTION\nHigh T ⇒ equal populations ⇒ ⟨E⟩ = mean of levels = (0 + ε + 2ε)/3 = ε.\n\nWHAT TO MEMORIZE\nIn the high-temperature limit (kT ≫ all level spacings), every accessible level is equally populated and the average energy becomes the simple arithmetic mean of the level energies. This is the universal T → ∞ behavior of any finite set of levels; it also means the heat capacity → 0 there (energy saturates), the high-T side of the Schottky anomaly. At the opposite extreme, T → 0, the system collapses into the ground state and ⟨E⟩ → the lowest energy."
+      },
+      {
+        "question": "The root-mean-square speed of the molecules in a sample of ideal gas is to be doubled. By what factor must the absolute temperature be increased (at fixed molecular mass)?",
+        "choices": [
+          "√2",
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe rms speed is v_rms = √(3kT/m), so v_rms ∝ √T. To double the rms speed,\nv_new/v_old = √(T_new/T_old) = 2 ⇒ T_new/T_old = 2² = 4.\nThe absolute temperature must be quadrupled.\n\nNUMERICS WITHOUT A CALCULATOR\nSpeed goes as the square root of temperature, so a factor of 2 in speed needs a factor of 2² = 4 in temperature. That is the entire calculation.\nThe distractor 2 forgets the square root (treating v ∝ T); √2 would apply if v ∝ T²; 16 would double the SQUARE of the speed's dependence. The correct move: speed ∝ √T means temperature ∝ speed².\nStructural check: because temperature measures the average KINETIC ENERGY (∝ v²), doubling the speed quadruples the kinetic energy and hence quadruples the temperature. Thinking in terms of energy rather than speed makes the factor of 4 immediate.\n\n90-SECOND SOLUTION\nv_rms ∝ √T, so doubling v needs T × 4 (equivalently, KE ∝ v² quadruples).\n\nWHAT TO MEMORIZE\nv_rms = √(3kT/m) ∝ √(T/m). Temperature is a measure of mean kinetic energy: (1/2)m⟨v²⟩ = (3/2)kT, so ⟨v²⟩ ∝ T. Doubling the speed therefore requires quadrupling T; at fixed T, four times the mass halves the rms speed. Speeds scale as the square root of temperature and inversely as the square root of mass — the same √ structure as string tension and many other equipartition results."
+      },
+      {
+        "question": "The thermal radiation from a certain object peaks at a wavelength of about 10 μm (in the infrared). Taking Wien's displacement constant to be 2.9 × 10⁻³ m·K, what is the object's approximate temperature?",
+        "choices": [
+          "About 3.4 K",
+          "About 29 K",
+          "About 290 K",
+          "About 2,900 K",
+          "About 29,000 K"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWien's displacement law states λ_peak T = b, with b = 2.9 × 10⁻³ m·K. Solving for T:\nT = b/λ_peak = (2.9 × 10⁻³ m·K)/(10 × 10⁻⁶ m) = (2.9 × 10⁻³)/(1.0 × 10⁻⁵) = 290 K.\nThe object is at about 290 K — roughly room temperature, which is why room-temperature objects (including people) glow in the infrared near 10 μm.\n\nNUMERICS WITHOUT A CALCULATOR\nHandle the powers of ten: (2.9 × 10⁻³)/(1.0 × 10⁻⁵) = 2.9 × 10⁻³⁺⁵ = 2.9 × 10² = 290. The mantissa is just 2.9; the exponent arithmetic (−3 − (−5) = +2) is the only real step.\nThe distractors are power-of-ten slips: 29 K and 29,000 K are factors of 10 off from mishandling the exponents; 2,900 K would correspond to a peak near 1 μm (a dim red-hot filament); 3.4 K inverts the ratio (λ/b instead of b/λ).\nStructural check: 10 μm is far-infrared, characteristic of near-room-temperature objects. A temperature of hundreds of kelvin (not thousands, not tens) is the physically sensible answer — hot filaments peak in the near-infrared/visible (~microns to sub-micron), and the cosmic microwave background (2.7 K) peaks at ~1 mm.\n\n90-SECOND SOLUTION\nT = b/λ = 2.9 × 10⁻³/10⁻⁵ = 290 K (room temperature; infrared glow of everyday objects).\n\nWHAT TO MEMORIZE\nWien's law: λ_peak T = 2.9 × 10⁻³ m·K, so hotter bodies peak at shorter wavelengths (λ_peak ∝ 1/T). Anchor points: the Sun (~5800 K) peaks near 500 nm (visible); room-temperature objects (~300 K) peak near 10 μm (infrared); the CMB (2.7 K) peaks near 1 mm (microwave). The exponent bookkeeping (dividing by microns = 10⁻⁶ m) is where most errors occur."
+      },
+      {
+        "question": "An insulated container is divided into two equal halves by a partition. Each half contains one mole of the SAME ideal gas at the same temperature and pressure. The partition is removed. What is the change in entropy of the system?",
+        "choices": [
+          "2R ln 2",
+          "R ln 2",
+          "(1/2)R ln 2",
+          "Zero",
+          "−2R ln 2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWhen the two gases are IDENTICAL at the same temperature and pressure, removing the partition changes nothing observable: the macroscopic state (same T, same P, same density throughout) is indistinguishable before and after. No process has effectively occurred — molecules crossing the former partition are interchangeable with those already there — so the entropy change is ZERO.\nThis is the Gibbs paradox. If the two gases were DIFFERENT (say helium on one side, argon on the other), each would expand into the full volume and the entropy of mixing would be ΔS = 2R ln 2. The distinction is whether the particles are distinguishable.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation — the answer hinges on recognizing that mixing identical gases produces no change of state. The tempting result 2R ln 2 (or R ln 2) comes from blindly applying the entropy-of-mixing formula ΔS = −nR Σ x_i ln x_i as though the gases were different. They are not, so that formula does not apply.\nThe resolution of the paradox is that entropy must be an extensive, well-defined state function: doubling an identical system doubles its entropy, and no entropy is generated by merely erasing an imaginary boundary within a uniform gas. Correct counting requires treating identical particles as indistinguishable (the 1/N! factor in the partition function).\n\n90-SECOND SOLUTION\nIdentical gases, same T and P: removing the partition changes nothing, so ΔS = 0. (Different gases would give 2R ln 2.)\n\nWHAT TO MEMORIZE\nEntropy of mixing applies only to DISTINGUISHABLE (different) gases: mixing equal moles of two different ideal gases across equal volumes gives ΔS = 2R ln 2. Mixing identical gases gives ΔS = 0 — the Gibbs paradox, resolved by treating identical particles as indistinguishable. The test question is always: are the gases on the two sides the same species or different? Same ⇒ zero; different ⇒ each expands and contributes nR ln(V_final/V_initial)."
+      },
+      {
+        "question": "A Carnot engine operating between two reservoirs has a thermal efficiency of 25%. If the same device is run in reverse as a refrigerator between the same two reservoirs, what is its coefficient of performance (heat extracted from the cold reservoir per unit work input)?",
+        "choices": [
+          "0.25",
+          "0.75",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a Carnot cycle, the efficiency and the refrigerator COP are both fixed by the same temperature ratio, so they are linked. With η = (T_h − T_c)/T_h = 0.25 and COP_ref = T_c/(T_h − T_c),\nCOP_ref = T_c/(T_h − T_c) = (1 − η)/η.\nSubstituting η = 0.25: COP_ref = (1 − 0.25)/0.25 = 0.75/0.25 = 3.\n\nNUMERICS WITHOUT A CALCULATOR\nUse COP_ref = (1 − η)/η = 0.75/0.25 = 3. The relation follows because η = (T_h − T_c)/T_h implies T_c/T_h = 1 − η, and dividing T_c by (T_h − T_c) = ηT_h gives (1 − η)/η.\nThe distractor 4 is the HEAT-PUMP COP for the same cycle, COP_hp = 1/η = 1/0.25 = 4 (which exceeds the refrigerator COP by exactly 1). The distractors 0.25 and 0.75 are η and (1 − η) themselves, not the COP.\nStructural check: a low-efficiency engine (small η) corresponds to reservoirs at nearly equal temperatures, and that is precisely when a refrigerator works BEST (large COP) — consistent with COP_ref = (1 − η)/η blowing up as η → 0.\n\n90-SECOND SOLUTION\nCOP_ref = (1 − η)/η = 0.75/0.25 = 3.\n\nWHAT TO MEMORIZE\nFor a reversible (Carnot) device between the same two reservoirs, the engine efficiency and the refrigeration/heat-pump COPs are all determined by the temperature ratio and interconvert: COP_hp = 1/η and COP_ref = (1 − η)/η = COP_hp − 1. Small efficiency (reservoirs close together) means large COP. These conversions let you answer a COP question from an efficiency, or vice versa, without ever computing the temperatures."
+      },
+      {
+        "question": "A gas of point particles is confined to move in a two-dimensional plane (a monolayer on a surface). Treating it as an ideal classical gas of N particles at temperature T, what is its total internal energy?",
+        "choices": [
+          "(1/2)NkT",
+          "NkT",
+          "(3/2)NkT",
+          "2NkT",
+          "3NkT"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA point particle moving in a plane has 2 translational degrees of freedom (motion along x and y), each contributing (1/2)kT by equipartition. So the average energy per particle is 2 × (1/2)kT = kT, and the total internal energy of N particles is\nU = N × kT = NkT.\n\nNUMERICS WITHOUT A CALCULATOR\nCount the degrees of freedom: 2 in a plane, each worth (1/2)kT, giving kT per particle. Multiply by N: U = NkT.\nThe distractor (3/2)NkT is the THREE-dimensional result (3 translational degrees of freedom) — the reflex answer that forgets the motion is restricted to a plane. The distractor (1/2)NkT counts only one degree of freedom; 2NkT double-counts. The dimensionality of the space directly sets the number of translational degrees of freedom.\nStructural check: in d dimensions a free particle has d translational degrees of freedom, so U = (d/2)NkT. For d = 2 this is NkT; for d = 3 it is the familiar (3/2)NkT; for d = 1 it is (1/2)NkT.\n\n90-SECOND SOLUTION\n2 translational DOF in a plane × (1/2)kT = kT per particle, so U = NkT.\n\nWHAT TO MEMORIZE\nEquipartition assigns (1/2)kT per quadratic degree of freedom. A free particle in d dimensions has d translational degrees of freedom, so U = (d/2)NkT: (1/2)NkT in 1-D, NkT in 2-D, (3/2)NkT in 3-D. Always count the degrees of freedom actually available — confinement to a surface or a line removes some. The corresponding heat capacity is C_V = (d/2)Nk."
+      },
+      {
+        "question": "A system has two energy levels: a nondegenerate lower level and an upper level that is threefold degenerate, lying an energy ΔE above it. At a temperature such that kT = ΔE, what is the ratio of the total population of the upper level to that of the lower level?",
+        "choices": [
+          "e⁻¹ ≈ 0.37",
+          "(1/3)e⁻¹ ≈ 0.12",
+          "3e⁻³ ≈ 0.15",
+          "e⁻³ ≈ 0.050",
+          "3e⁻¹ ≈ 1.10"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWith degeneracies, the Boltzmann population ratio carries the ratio of degeneracies out front:\nn_upper/n_lower = (g_upper/g_lower) e^(−ΔE/kT).\nHere g_upper = 3, g_lower = 1, and ΔE/kT = 1 (since kT = ΔE), so\nn_upper/n_lower = 3 e^(−1) = 3 × 0.368 ≈ 1.10.\nNotice the ratio EXCEEDS 1: the upper level holds more particles than the lower, despite being higher in energy, because it has three times as many states to occupy.\n\nNUMERICS WITHOUT A CALCULATOR\nOne Boltzmann factor times the degeneracy: e⁻¹ ≈ 0.37, times 3 gives ≈ 1.1. Memorize e ≈ 2.718, so 1/e ≈ 0.37.\nThe distractor e⁻¹ ≈ 0.37 forgets the degeneracy factor of 3 — the single most important feature of this problem. The distractor (1/3)e⁻¹ uses the degeneracy ratio upside down. The e⁻³ distractors misread kT = ΔE as ΔE/kT = 3.\nStructural check: the degeneracy can overcome the Boltzmann suppression. Here the threefold degeneracy (factor 3) beats the energy penalty (factor e⁻¹ ≈ 0.37), giving a ratio above 1. This is why highly degenerate excited states (e.g. in atoms) can be substantially populated even above the ground state.\n\n90-SECOND SOLUTION\nn_up/n_low = (g_up/g_low)e^(−ΔE/kT) = 3e⁻¹ ≈ 1.1 — the upper level wins because of its degeneracy.\n\nWHAT TO MEMORIZE\nThe Boltzmann ratio with degeneracy: n₂/n₁ = (g₂/g₁)e^(−ΔE/kT). Degeneracy multiplies the population, so a degenerate higher level can be MORE populated than a lower one — the balance is between the degeneracy ratio and the Boltzmann factor. This degeneracy weighting is essential in atomic spectroscopy (the intensity of spectral lines) and in the Saha equation. Never drop the g's when levels are degenerate."
+      },
+      {
+        "question": "For a gas in thermal equilibrium, the fraction of molecules whose kinetic energy exceeds a fixed threshold E₀ (with E₀ ≫ kT) is governed by a Boltzmann factor e^(−E₀/kT). As the temperature is raised, how does this fraction change, and why does it matter for chemical reaction rates?",
+        "choices": [
+          "It decreases; reactions slow with temperature",
+          "It is independent of temperature",
+          "It increases only linearly with temperature",
+          "It increases sharply; more molecules clear the activation barrier, so reaction rates rise steeply with temperature",
+          "It increases, but reaction rates are unaffected by it"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe fraction of molecules with energy above a threshold E₀ scales as e^(−E₀/kT). As T increases, the exponent −E₀/kT becomes less negative (its magnitude shrinks), so the fraction e^(−E₀/kT) INCREASES — and because it is an exponential, it increases sharply. If E₀ is an activation energy for a chemical reaction, then only molecules exceeding E₀ can react, so the reaction rate is proportional to this fraction. Hence reaction rates rise steeply (roughly exponentially) with temperature. This is the Arrhenius law, rate ∝ e^(−E_a/kT).\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; the reasoning is the sign of the exponent. Raising T shrinks E₀/kT, so e^(−E₀/kT) grows — and exponential growth means a modest temperature rise can multiply the reactive fraction severalfold. This is why a 10 °C rise often roughly doubles a reaction rate.\nThe distractor 'decreases' has the sign backwards; 'linearly' misses that the dependence is exponential, not proportional; 'unaffected' ignores that the reactive fraction IS the rate-limiting factor. The high-energy tail of the Maxwell–Boltzmann distribution is thin but grows fast with temperature.\n\n90-SECOND SOLUTION\ne^(−E₀/kT) grows as T rises (exponent less negative), so the above-threshold fraction climbs steeply — the Arrhenius temperature dependence of reaction rates.\n\nWHAT TO MEMORIZE\nThe Boltzmann tail: the fraction of molecules with energy above E₀ ≫ kT goes as e^(−E₀/kT), rising steeply with temperature. Applied to an activation energy E_a, this is the Arrhenius law: rate ∝ e^(−E_a/kT). A small increase in T disproportionately enlarges the reactive high-energy tail, which is why reaction rates (and many thermally activated processes — diffusion, thermionic emission, semiconductor conduction) are so temperature-sensitive."
+      },
+      {
+        "question": "Consider a heated object radiating as a blackbody. I. Its total radiated power per unit area is proportional to T⁴. II. The wavelength of its peak emission is proportional to 1/T. III. As it gets hotter, its peak emission shifts toward shorter wavelengths. Which statements are correct?",
+        "choices": [
+          "I only",
+          "III only",
+          "I and II only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nStatement I is the Stefan–Boltzmann law: the radiated power per unit area (the emissive power) is σT⁴, proportional to the fourth power of absolute temperature — true.\nStatement II is Wien's displacement law: λ_peak = b/T, so the peak wavelength is proportional to 1/T — true.\nStatement III is the direct consequence of II: since λ_peak ∝ 1/T, raising T lowers λ_peak, shifting the peak to shorter wavelengths (a heated poker glowing dull red, then orange, then white as it heats) — true. All three hold.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; these are the two scaling laws of blackbody radiation plus their immediate corollary. Statement III is not independent of II — it is just II read in words — so once you accept II you must accept III, which rules out any choice that includes II but excludes III.\nThe two laws together capture blackbody behavior: total output climbs as T⁴ (I), and the spectrum's peak marches to shorter wavelengths as 1/T (II, III). The visible reddening-to-whitening of hot objects is the everyday signature of both.\n\n90-SECOND SOLUTION\nStefan–Boltzmann (P ∝ T⁴), Wien (λ_peak ∝ 1/T), and its corollary (hotter ⇒ shorter peak). All three true.\n\nWHAT TO MEMORIZE\nThe two blackbody laws: Stefan–Boltzmann, emissive power ∝ T⁴; and Wien, λ_peak ∝ 1/T (with λ_peak T = 2.9 × 10⁻³ m·K). Together they explain why hotter bodies are both far brighter (steeply, as T⁴) and bluer (peak shifting shorter as 1/T). Nearly every blackbody exam question is one of these two scalings or their combination."
+      },
+      {
+        "question": "A gas undergoes a complete thermodynamic cycle, returning to its initial state. Over the cycle it does 200 J of net work on its surroundings. What is the net heat it absorbs during the cycle?",
+        "choices": [
+          "0 J",
+          "100 J",
+          "200 J",
+          "400 J",
+          "It cannot be determined without the cycle's shape"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nInternal energy U is a state function, so over any complete cycle the gas returns to its starting state and ΔU = 0. The first law, ΔU = Q_net − W_net (with W_net the work done BY the gas), then gives\n0 = Q_net − W_net ⇒ Q_net = W_net = 200 J.\nThe net heat absorbed over the cycle equals the net work done, 200 J.\n\nNUMERICS WITHOUT A CALCULATOR\nNo real arithmetic: ΔU = 0 over a cycle forces Q_net = W_net directly, so the net heat equals the net work, 200 J.\nThe distractor '0 J' confuses the internal-energy change (which IS zero over a cycle) with the heat (which is not). The distractor 'cannot be determined' misses that the cyclic condition ΔU = 0 makes the result independent of the cycle's shape — you do not need the P–V path, only that it closes. The equality Q_net = W_net is exactly the operating principle of a heat engine: net heat in becomes net work out.\nStructural check: for the gas to do positive net work over a cycle, it must absorb more heat than it rejects, so Q_net > 0 and equals the work — consistent with 200 J.\n\n90-SECOND SOLUTION\nCycle ⇒ ΔU = 0 ⇒ Q_net = W_net = 200 J.\n\nWHAT TO MEMORIZE\nOver any complete cycle, ΔU = 0 (internal energy is a state function), so the net heat absorbed equals the net work done: Q_net = W_net. This is why a heat engine's net work per cycle equals its net heat input (Q_hot − Q_cold), and why the enclosed area on a P–V diagram equals both. Work and heat individually depend on the path; their difference around a closed loop does not."
+      },
+      {
+        "question": "A Carnot engine operates between a hot reservoir at temperature T_h and a cold reservoir at T_c. To increase its efficiency by adjusting one reservoir temperature by a fixed amount ΔT, which change is more effective?",
+        "choices": [
+          "Lowering T_c by ΔT",
+          "Raising T_h by ΔT",
+          "Both changes give exactly the same efficiency increase",
+          "Neither changes the efficiency",
+          "It depends on the amount of heat absorbed"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe efficiency is η = 1 − T_c/T_h. Consider each change:\nLowering T_c by ΔT increases η by Δη = ΔT/T_h (from the −T_c/T_h term, holding T_h fixed).\nRaising T_h by ΔT increases η by Δη = T_c ΔT/[T_h(T_h + ΔT)] ≈ T_c ΔT/T_h² (from differentiating −T_c/T_h with respect to T_h).\nCompare the two gains: lowering T_c gives ΔT/T_h, raising T_h gives ≈ (T_c/T_h)(ΔT/T_h). Since T_c < T_h, the factor T_c/T_h is less than 1, so raising T_h yields a SMALLER improvement. Lowering the cold reservoir is more effective.\n\nNUMERICS WITHOUT A CALCULATOR\nCompare ΔT/T_h (lower T_c) with (T_c/T_h)(ΔT/T_h) (raise T_h). The second carries an extra factor T_c/T_h < 1, so it is smaller. No numbers needed — just that T_c/T_h is a fraction less than 1.\nThe intuition: efficiency depends on the RATIO T_c/T_h. Lowering the numerator T_c cuts the ratio directly; raising the denominator T_h cuts it only proportionally to how large T_c already is relative to T_h. Since the cold reservoir is the smaller temperature, changing it moves the ratio more per kelvin.\nStructural check: in the ideal limit T_c → 0 the efficiency reaches 100%, which no finite increase in T_h can achieve — underscoring that the cold side is the leverage point.\n\n90-SECOND SOLUTION\nLowering T_c gains ΔT/T_h; raising T_h gains only (T_c/T_h)(ΔT/T_h), smaller by the factor T_c/T_h < 1. Lower T_c wins.\n\nWHAT TO MEMORIZE\nCarnot efficiency η = 1 − T_c/T_h depends on the temperature RATIO. For a fixed temperature change ΔT, lowering the cold reservoir raises efficiency more than raising the hot reservoir, because the gains are ΔT/T_h versus (T_c/T_h)(ΔT/T_h). The theoretical maximum, η → 1, is reached only as T_c → 0 — the cold side sets the ceiling. In practice, though, the cold reservoir is often the fixed environment, so real engines instead push T_h up."
+      },
+      {
+        "question": "The molar heat capacity at constant volume of a monatomic ideal gas is (3/2)R. What is its heat capacity at constant volume PER MOLECULE?",
+        "choices": [
+          "(3/2)R",
+          "(3/2)RT",
+          "(2/3)k",
+          "(3/2)k",
+          "3k"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA mole contains Avogadro's number N_A of molecules, and the gas constant and Boltzmann constant are related by R = N_A k. The molar heat capacity is C_V = (3/2)R per mole, so per molecule it is\nC_V/N_A = (3/2)R/N_A = (3/2)(N_A k)/N_A = (3/2)k.\nEach molecule contributes (3/2)k, one (1/2)k for each of its three translational degrees of freedom.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic beyond recognizing R = N_A k, so 'per mole' with R becomes 'per molecule' with k. Dividing (3/2)R by N_A simply replaces R with k.\nThe distractor (3/2)R is the per-mole value (the trap of not converting); (3/2)RT has the wrong dimensions (energy, not energy per kelvin — that is the internal energy per mole, not a heat capacity); 3k double-counts. The clean statement is that equipartition gives (1/2)k per degree of freedom per molecule, and three translational degrees give (3/2)k.\nStructural check: heat capacity per molecule must be of order k (∼ 10⁻²³ J/K), the natural per-particle unit, whereas per-mole quantities are of order R (∼ 8 J/(mol·K)). The presence of R versus k tells you immediately whether a quantity is per mole or per molecule.\n\n90-SECOND SOLUTION\nR = N_A k, so per molecule C_V = (3/2)R/N_A = (3/2)k.\n\nWHAT TO MEMORIZE\nR = N_A k is the bridge between molar and molecular quantities: replace R with k to go from 'per mole' to 'per molecule.' Equipartition gives (1/2)k per quadratic degree of freedom per molecule (or (1/2)R per mole). A monatomic gas: (3/2)k per molecule, (3/2)R per mole. Watching whether a formula carries R or k is a fast dimensional check on whether it is molar or per-particle."
+      },
+      {
+        "question": "A system consists of many nondegenerate two-level subsystems. At any positive temperature, can the population of the upper level exceed that of the lower level?",
+        "choices": [
+          "Yes, at sufficiently high temperature",
+          "Yes, but only at low temperature",
+          "No; the two populations are always exactly equal",
+          "Yes, whenever kT exceeds the level spacing",
+          "No; the populations become equal only as T → ∞, and the upper never exceeds the lower at positive T"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor nondegenerate levels the Boltzmann ratio is n_upper/n_lower = e^(−ε/kT), with ε > 0. At any positive temperature the exponent is negative, so e^(−ε/kT) < 1, meaning n_upper < n_lower always. As T → ∞ the ratio approaches e⁰ = 1, so the populations become EQUAL only in the infinite-temperature limit, and the upper level never exceeds the lower at any finite positive T. So the answer: no, the upper never exceeds the lower; they merely equalize as T → ∞.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation: e^(−ε/kT) is less than 1 for all finite positive T and rises to 1 only as T → ∞. That single fact settles it.\nThe distractor 'yes at high T' is the common misconception that enough heating inverts the population; it does not — heating only pushes the ratio toward 1 (equal populations) from below. An actual population inversion (n_upper > n_lower), as required for a laser, corresponds formally to a NEGATIVE absolute temperature and cannot be reached by ordinary heating; it must be pumped by a nonequilibrium process.\n(Note: if the upper level were DEGENERATE, the total upper population could exceed the lower even at positive T — but the problem specifies nondegenerate levels.)\n\n90-SECOND SOLUTION\nn_up/n_low = e^(−ε/kT) < 1 for all finite T > 0, → 1 only as T → ∞. No inversion at positive temperature.\n\nWHAT TO MEMORIZE\nFor nondegenerate two-level systems, heating drives the population ratio e^(−ε/kT) up toward 1 (equal populations) but never past it: the upper level cannot out-populate the lower at any positive temperature. Population inversion (the basis of the laser) formally requires negative temperature and must be produced by pumping, not heating. Degeneracy is the loophole — a degenerate upper level can hold more total population via its g₂/g₁ factor."
+      },
+      {
+        "question": "Samples of hydrogen gas (H₂, molar mass 2 g/mol) and oxygen gas (O₂, molar mass 32 g/mol) are held at the SAME temperature. How do their average molecular kinetic energies and their rms speeds compare?",
+        "choices": [
+          "H₂ has both greater average KE and greater speed",
+          "They have equal average KE, and H₂ molecules move 16 times faster",
+          "H₂ has greater average KE, and equal speeds",
+          "They have equal average KE, and H₂ molecules move 4 times faster",
+          "They have equal average KE and equal speeds"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAverage translational kinetic energy depends ONLY on temperature: ⟨KE⟩ = (3/2)kT for any ideal gas. Since both gases are at the same temperature, their average kinetic energies are EQUAL.\nRms speed, however, depends on mass: v_rms = √(3kT/m), so v_rms ∝ 1/√m. The ratio is\nv_rms(H₂)/v_rms(O₂) = √(m_O₂/m_H₂) = √(32/2) = √16 = 4.\nHydrogen molecules move 4 times faster, while carrying the same average kinetic energy.\n\nNUMERICS WITHOUT A CALCULATOR\nThe mass ratio is 32/2 = 16, and its square root is 4. That single square root is the whole computation.\nThe distractor 16 forgets the square root (using the mass ratio directly for the speed ratio); the distractor 'H₂ has greater KE' violates the temperature-only rule for kinetic energy. The two facts to hold apart: KE is set by T alone (equal here), but SPEED depends on mass (lighter is faster).\nStructural check: equal kinetic energy with unequal mass forces unequal speeds — the lighter molecule must move faster to carry the same (1/2)mv². The speed ratio is the square root of the inverse mass ratio.\n\n90-SECOND SOLUTION\nEqual T ⇒ equal ⟨KE⟩. v_rms ∝ 1/√m, so v_rms(H₂)/v_rms(O₂) = √(32/2) = 4.\n\nWHAT TO MEMORIZE\nAt a given temperature, all ideal gases share the same average molecular kinetic energy, (3/2)kT — mass does not enter. Speeds do depend on mass: v_rms = √(3kT/m) ∝ 1/√m, so lighter molecules move faster (v ratio = √(inverse mass ratio)). This is why light gases effuse and diffuse faster (Graham's law, rate ∝ 1/√m) and why Earth retains O₂ and N₂ but loses hydrogen and helium to space."
+      },
+      {
+        "question": "A monatomic ideal gas (γ = 5/3) is compressed quasi-statically and adiabatically until its pressure has risen to 32 times its initial value. By what factor does its absolute temperature increase?",
+        "choices": [
+          "2",
+          "4",
+          "8",
+          "16",
+          "32"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a reversible adiabatic process the temperature and pressure are related by T P^((1−γ)/γ) = constant, i.e. T ∝ P^((γ−1)/γ). For a monatomic gas γ = 5/3, so (γ − 1)/γ = (2/3)/(5/3) = 2/5. With the pressure rising by a factor of 32,\nT_f/T_i = (P_f/P_i)^((γ−1)/γ) = 32^(2/5) = (32^(1/5))² = 2² = 4.\nThe temperature rises by a factor of 4.\n\nNUMERICS WITHOUT A CALCULATOR\nEvaluate 32^(2/5): the fifth root of 32 is 2, squared is 4. Recognizing 32 = 2⁵ makes the fractional exponent trivial: 32^(2/5) = 2^(5·2/5) = 2² = 4.\nThe exponent (γ − 1)/γ = 2/5 is the crux. The distractor 8 uses exponent 3/5 or the wrong γ; 16 squares an error; 2 takes only the fifth root without the power of 2; 32 ignores the adiabatic relation entirely (treating T ∝ P).\nStructural check: adiabatic compression must RAISE the temperature, and the temperature factor should be much gentler than the pressure factor because the exponent 2/5 is well below 1 — a 32-fold pressure jump gives only a 4-fold temperature rise.\n\n90-SECOND SOLUTION\nT ∝ P^((γ−1)/γ) = P^(2/5); 32^(2/5) = (2⁵)^(2/5) = 2² = 4.\n\nWHAT TO MEMORIZE\nThe three reversible-adiabatic relations for an ideal gas: PV^γ = const, TV^(γ−1) = const, and TP^((1−γ)/γ) = const (equivalently T ∝ P^((γ−1)/γ)). Choose whichever pairs the variables you are given. For a monatomic gas the exponents are γ = 5/3, γ − 1 = 2/3, (γ − 1)/γ = 2/5. Writing the compression ratio as a power of 2 (32 = 2⁵) turns fractional exponents into simple integer arithmetic. Adiabatic compression heats a gas; expansion cools it."
+      },
+      {
+        "question": "Two identical blocks, each of heat capacity C, start at temperatures 400 K and 100 K. A reversible heat engine is operated between them (extracting work) until they reach a common final temperature. What is that final temperature?",
+        "choices": [
+          "150 K",
+          "200 K",
+          "250 K",
+          "300 K",
+          "350 K"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA REVERSIBLE engine generates no net entropy, so the total entropy change of the two blocks must be zero. For a block of heat capacity C going from T_i to T_f, ΔS = C ln(T_f/T_i). Setting the sum to zero:\nC ln(T_f/400) + C ln(T_f/100) = 0 ⇒ ln[T_f²/(400 × 100)] = 0 ⇒ T_f² = 400 × 100 ⇒ T_f = √40000 = 200 K.\nThe common final temperature is the GEOMETRIC mean, 200 K.\n\nNUMERICS WITHOUT A CALCULATOR\nT_f = √(T₁T₂) = √(400 × 100) = √40000 = 200 K. The product 400 × 100 = 40000 has an easy square root, 200.\nThe distractor 250 K is the ARITHMETIC mean (400 + 100)/2 — the answer you get by conserving ENERGY (as when the blocks are simply placed in contact with no engine), not entropy. That is the key distinction: with a reversible engine extracting work, entropy is conserved and the result is the geometric mean (200 K), which is LOWER than the arithmetic mean because some internal energy has been converted to useful work.\nStructural check: the geometric mean of two numbers is always less than their arithmetic mean, so T_f = 200 K < 250 K — the difference, C[(400 + 100) − 2(200)] = 100C, is exactly the work extracted.\n\n90-SECOND SOLUTION\nReversible ⇒ ΔS_total = 0 ⇒ T_f = √(T₁T₂) = √(400·100) = 200 K (geometric mean).\n\nWHAT TO MEMORIZE\nTwo bodies brought to a common temperature: simple thermal contact conserves ENERGY, giving the arithmetic mean (T₁ + T₂)/2 (for equal heat capacities); a reversible engine between them conserves ENTROPY, giving the geometric mean √(T₁T₂), which is lower — the shortfall in internal energy becomes extractable work, W = C(T₁ + T₂ − 2√(T₁T₂)). Reversible operation extracts the maximum possible work; any irreversibility raises T_f toward the arithmetic mean and yields less work."
+      },
+      {
+        "question": "At very LOW temperature, where rotational and vibrational modes are frozen out, what is the molar heat capacity at constant volume of a diatomic ideal gas?",
+        "choices": [
+          "(1/2)R",
+          "R",
+          "(3/2)R",
+          "(5/2)R",
+          "(7/2)R"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nHeat capacity comes only from the degrees of freedom that are energetically ACCESSIBLE at the given temperature. At very low temperature, kT is far below the spacing of the rotational (and vibrational) energy levels, so those modes cannot be excited — they are 'frozen out.' Only the three TRANSLATIONAL degrees of freedom remain active, giving\nC_V = (3/2)R,\nthe same as a monatomic gas.\n\nNUMERICS WITHOUT A CALCULATOR\nCount the active degrees of freedom: at low T only 3 translational, so C_V = (3/2)R. No modes beyond translation contribute.\nThe distractor (5/2)R is the ROOM-temperature value (3 translational + 2 rotational, vibration still frozen); (7/2)R is the high-temperature value with vibration also active. The point is that as temperature drops, degrees of freedom successively freeze out in order (vibration first, then rotation), so C_V DECREASES in a staircase from 7R/2 → 5R/2 → 3R/2.\nStructural check: at the lowest temperatures every gas behaves 'monatomic' for heat-capacity purposes, because only translation survives — a diatomic molecule cannot rotate or vibrate if there is not enough thermal energy to reach the first excited rotational/vibrational state.\n\n90-SECOND SOLUTION\nLow T ⇒ only translation active ⇒ C_V = (3/2)R.\n\nWHAT TO MEMORIZE\nThe heat-capacity staircase for a diatomic gas as T rises: C_V = 3R/2 (very low T, translation only) → 5R/2 (room T, + rotation) → 7R/2 (high T, + vibration, counting the vibrational mode twice for KE and PE). Modes freeze out when kT falls below their level spacing, in the order vibration (largest spacing) then rotation. This staircase, observed for H₂, was historic evidence for the quantization of energy levels."
+      },
+      {
+        "question": "An ideal gas is expanded reversibly and ISOTHERMALLY from volume V₁ to volume V₂. Consider: I. the change in internal energy is zero; II. the heat absorbed equals the work done by the gas; III. the entropy of the gas increases by nR ln(V₂/V₁). Which statements are correct?",
+        "choices": [
+          "I only",
+          "I and II only",
+          "I and III only",
+          "II and III only",
+          "I, II, and III"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor an ideal gas, internal energy depends only on temperature. Isothermal means T is constant, so ΔU = 0 (statement I true). The first law ΔU = Q − W then gives Q = W: the heat absorbed exactly equals the work done by the gas (statement II true). The work in a reversible isothermal expansion is W = nRT ln(V₂/V₁), and the entropy change is ΔS = Q/T = nR ln(V₂/V₁) (statement III true). All three hold.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — the three statements are the standard consequences of an isothermal ideal-gas expansion. ΔU = 0 (temperature fixed) is the anchor; it forces Q = W by the first law, and ΔS = Q/T = nR ln(V₂/V₁) follows since T is constant.\nAll the absorbed heat is converted to work here, but this does NOT violate the second law: it is a single expansion, not a cycle, and the gas ends in a different (larger-volume) state. A cyclic engine cannot convert all heat to work; a one-way isothermal step can.\nThe entropy increase nR ln(V₂/V₁) is positive for expansion (V₂ > V₁) and depends only on the volume ratio — the same value would apply to a free expansion between the same two volumes, since entropy is a state function.\n\n90-SECOND SOLUTION\nIsothermal ideal gas: ΔU = 0 (I), so Q = W (II); ΔS = Q/T = nR ln(V₂/V₁) (III). All true.\n\nWHAT TO MEMORIZE\nReversible isothermal expansion of an ideal gas: ΔU = 0, Q = W = nRT ln(V₂/V₁), and ΔS_gas = nR ln(V₂/V₁). Because entropy is a state function, that same ΔS applies to a FREE expansion between the same volumes (though there Q = W = 0 and the surroundings' entropy is unchanged, so the universe's entropy rises). Converting all heat to work is allowed in a single non-cyclic step; the second law only forbids it around a closed cycle."
+      },
+      {
+        "question": "Between the same two reservoirs, a reversible device is operated. Which is larger: its coefficient of performance as a heat pump (heat delivered to the hot side per unit work) or as a refrigerator (heat removed from the cold side per unit work)?",
+        "choices": [
+          "The refrigerator COP is larger, by exactly 1",
+          "The heat-pump COP is larger, by exactly 1",
+          "They are always equal",
+          "The heat-pump COP is larger, by a factor equal to the efficiency",
+          "The refrigerator COP is larger, by a factor of T_h/T_c"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor the same reversible cycle, the heat delivered to the hot reservoir is Q_h and the heat removed from the cold reservoir is Q_c, related by energy conservation Q_h = Q_c + W (the work input adds to what is delivered hot). The two coefficients of performance are\nCOP_hp = Q_h/W and COP_ref = Q_c/W.\nSubtracting: COP_hp − COP_ref = (Q_h − Q_c)/W = W/W = 1.\nSo the heat-pump COP is larger, and by exactly 1.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation beyond Q_h = Q_c + W. Dividing by W gives COP_hp = COP_ref + 1 immediately.\nThe distractor 'equal' misses that the hot side receives the work energy in addition to the pumped heat. The physical reason the heat pump always wins by 1: every joule of work you put in ends up delivered to the hot side ON TOP of the heat pumped from the cold side, so the hot-side delivery exceeds the cold-side extraction by exactly that one joule of work.\nIn Carnot terms this is COP_hp = T_h/(T_h − T_c) and COP_ref = T_c/(T_h − T_c), whose difference is (T_h − T_c)/(T_h − T_c) = 1 — consistent.\n\n90-SECOND SOLUTION\nQ_h = Q_c + W ⇒ COP_hp − COP_ref = W/W = 1. Heat pump larger by 1.\n\nWHAT TO MEMORIZE\nCOP_hp = COP_ref + 1, always, for the same device and reservoirs — because the work input is delivered to the hot side in addition to the heat pumped from the cold side (Q_h = Q_c + W). This is why heating a house with a heat pump beats resistive heating: even a modest COP_ref of, say, 4 gives COP_hp = 5, delivering five joules of heat per joule of electricity. In Carnot form, COP_hp = T_h/(T_h − T_c), COP_ref = T_c/(T_h − T_c)."
+      },
+      {
+        "question": "A heat engine absorbs 1,000 J from a hot reservoir and rejects 600 J to a cold reservoir each cycle. What is its thermal efficiency?",
+        "choices": [
+          "17%",
+          "40%",
+          "60%",
+          "67%",
+          "167%"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe work output per cycle is the difference between heat absorbed and heat rejected: W = Q_h − Q_c = 1000 − 600 = 400 J. Thermal efficiency is the work output divided by the heat INPUT (the heat absorbed from the hot reservoir):\nη = W/Q_h = 400/1000 = 0.40 = 40%.\n\nNUMERICS WITHOUT A CALCULATOR\nW = 1000 − 600 = 400; η = 400/1000 = 0.4. Two subtractions/divisions, both trivial.\nThe distractors probe the definition of efficiency: 67% is W/Q_c = 400/600 (dividing by the wrong heat — the rejected instead of the absorbed); 60% is Q_c/Q_h = 600/1000 (the fraction rejected, which is 1 − η, not η); 167% is Q_h/Q_c. The correct denominator is always the heat INPUT from the hot reservoir, Q_h.\nStructural check: efficiency must be less than 100% (you cannot get more work than heat in), and equal to 1 − Q_c/Q_h = 1 − 0.6 = 0.4 — consistent. Any answer at or above 100% is immediately wrong for an engine.\n\n90-SECOND SOLUTION\nη = W/Q_h = (1000 − 600)/1000 = 40%.\n\nWHAT TO MEMORIZE\nThermal efficiency η = W/Q_h = 1 − Q_c/Q_h: work out over heat IN from the hot reservoir. The denominator is always Q_h, never Q_c — that is the most common trap. This actual efficiency (40% here) is bounded above by the Carnot value 1 − T_c/T_h; if you were also given the reservoir temperatures you could check feasibility. Efficiency for an engine is always below 1; only COPs (refrigerators/heat pumps) exceed 1."
+      },
+      {
+        "question": "For which of the following processes is the change in the entropy of the UNIVERSE (system plus surroundings) equal to zero?",
+        "choices": [
+          "The free expansion of an ideal gas into a vacuum",
+          "Heat flowing from a hot body to a cold body across a finite temperature difference",
+          "The mixing of two different ideal gases",
+          "Any reversible process, such as one complete Carnot cycle",
+          "Any process that returns the system to its initial state"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe second law says the entropy of the universe never decreases: ΔS_univ ≥ 0, with equality if and only if the process is REVERSIBLE. A complete Carnot cycle is reversible, so ΔS_univ = 0 for it (the working substance returns to its start, ΔS_system = 0, and the entropy given to and taken from the reservoirs exactly cancels, Q_h/T_h = Q_c/T_c).\nThe other listed processes are all IRREVERSIBLE and have ΔS_univ > 0: free expansion (gas spreads out, ΔS = nR ln 2 > 0), heat flow across a finite gap (entropy gained by the cold body exceeds that lost by the hot body), and mixing of different gases (positive entropy of mixing). So only the reversible process gives zero.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic; classify each process as reversible or irreversible. Only reversible processes conserve the entropy of the universe.\nThe distractor 'any process returning the system to its initial state' is the subtle trap: the SYSTEM's entropy returns to its initial value (entropy is a state function), but the SURROUNDINGS may have gained entropy if the cycle was irreversible. Only a reversible cycle leaves the universe's entropy unchanged; an irreversible engine cycle still has ΔS_univ > 0 even though ΔS_system = 0.\nFree expansion, finite-ΔT heat flow, and gas mixing are the three canonical irreversible (entropy-generating) processes.\n\n90-SECOND SOLUTION\nΔS_univ = 0 only for reversible processes; the Carnot cycle is reversible. The others are all irreversible (ΔS_univ > 0).\n\nWHAT TO MEMORIZE\nΔS_univ ≥ 0 always (second law), with equality only for reversible processes. A reversible cycle (Carnot) has ΔS_univ = 0; irreversible processes — free expansion, heat flow across a finite gradient, mixing of different gases, friction — all generate entropy (ΔS_univ > 0). Beware the cyclic trap: ΔS_system = 0 for ANY cycle (state function), but ΔS_univ = 0 requires the cycle to be reversible."
+      },
+      {
+        "question": "In thermodynamics, which of the following quantities are state functions (depending only on the current state, not on the path taken)? I. internal energy U; II. heat Q; III. entropy S; IV. work W.",
+        "choices": [
+          "I and III only",
+          "II and IV only",
+          "I, II, and III only",
+          "I only",
+          "I, II, III, and IV"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA state function depends only on the current equilibrium state of the system, not on how it got there. Internal energy U is a state function (I) — it is set by the state variables (e.g. T for an ideal gas). Entropy S is a state function (III) — defined for each equilibrium state. Heat Q (II) and work W (IV) are NOT state functions: they are path-dependent transfers of energy, measuring what happens DURING a process, not properties OF a state. So only I and III are state functions.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation; this is a classification. The organizing idea: U and S are properties a system HAS in a given state; Q and W are energy in transit, describing a PROCESS. You cannot ask 'how much heat does this gas contain' — heat is not stored, it is transferred.\nThe first law ΔU = Q − W makes this vivid: ΔU (a state-function change) is fixed by the endpoints, but it is the DIFFERENCE of two path-dependent quantities Q and W, each of which can be anything depending on the path, as long as their difference matches ΔU. That is exactly why isothermal, adiabatic, and free-expansion paths between the same states give the same ΔU but different Q and W.\n\n90-SECOND SOLUTION\nState functions: U and S (I, III). Heat and work are path-dependent (energy in transit), not state functions.\n\nWHAT TO MEMORIZE\nState functions depend only on the state: internal energy U, entropy S, temperature T, pressure P, volume V, enthalpy H, and the free energies (Gibbs, Helmholtz). Heat Q and work W are NOT state functions — they are path-dependent process quantities (written with inexact differentials đQ, đW). The first law ΔU = Q − W expresses a state-function change as the difference of two path-dependent transfers, which is why ΔU is path-independent while Q and W separately are not."
+      }
+    ]
   }
 
 ];
