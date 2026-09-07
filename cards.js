@@ -14492,6 +14492,279 @@ const EXAMS = [
         "explanation": "WORKED SOLUTION\nA state function depends only on the current equilibrium state of the system, not on how it got there. Internal energy U is a state function (I) — it is set by the state variables (e.g. T for an ideal gas). Entropy S is a state function (III) — defined for each equilibrium state. Heat Q (II) and work W (IV) are NOT state functions: they are path-dependent transfers of energy, measuring what happens DURING a process, not properties OF a state. So only I and III are state functions.\n\nNUMERICS WITHOUT A CALCULATOR\nNo computation; this is a classification. The organizing idea: U and S are properties a system HAS in a given state; Q and W are energy in transit, describing a PROCESS. You cannot ask 'how much heat does this gas contain' — heat is not stored, it is transferred.\nThe first law ΔU = Q − W makes this vivid: ΔU (a state-function change) is fixed by the endpoints, but it is the DIFFERENCE of two path-dependent quantities Q and W, each of which can be anything depending on the path, as long as their difference matches ΔU. That is exactly why isothermal, adiabatic, and free-expansion paths between the same states give the same ΔU but different Q and W.\n\n90-SECOND SOLUTION\nState functions: U and S (I, III). Heat and work are path-dependent (energy in transit), not state functions.\n\nWHAT TO MEMORIZE\nState functions depend only on the state: internal energy U, entropy S, temperature T, pressure P, volume V, enthalpy H, and the free energies (Gibbs, Helmholtz). Heat Q and work W are NOT state functions — they are path-dependent process quantities (written with inexact differentials đQ, đW). The first law ΔU = Q − W expresses a state-function change as the difference of two path-dependent transfers, which is why ΔU is path-independent while Q and W separately are not."
       }
     ]
-  }
+  },
+
+
+
+  {
+    "name": "Thermo & Stat Mech: Cycles, Engines & Diagrams",
+    "added": "2026-09-06",
+    "category": "statmech",
+    "cards": [
+
+      {
+        "question": "One mole of an ideal gas is carried once around the closed cycle a → b → c → a shown in the P–V diagram (axes in units of 10⁻³ m³ and 10⁵ Pa). What is the net work done BY the gas per cycle?",
+        "image": "images/thermo-cycles-1/q1.png",
+        "choices": [
+          "150 J",
+          "300 J",
+          "450 J",
+          "900 J",
+          "1800 J"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe net work done by the gas over a closed cycle equals the area enclosed by the loop on the P–V diagram, positive because the loop is traversed clockwise (a → b → c → a).\nThe loop is a right triangle with legs\n base = ΔV = (4 − 1) × 10⁻³ m³ = 3 × 10⁻³ m³ (the a → b leg),\n height = ΔP = (4 − 1) × 10⁵ Pa = 3 × 10⁵ Pa (the b → c leg).\nArea = ½ × base × height = ½ × (3 × 10⁻³) × (3 × 10⁵) = ½ × 900 = 450 J.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only arithmetic is ½ × 3 × 3 = 4.5 with the powers of ten handled separately: 10⁻³ × 10⁵ = 10², so 4.5 × 10² = 450 J. Do the mantissa and the exponent as two independent steps and the two-order-of-magnitude traps disappear.\n\n90-SECOND SOLUTION\nNet work = enclosed area = ½ × (3×10⁻³ m³) × (3×10⁵ Pa) = 450 J, positive because the cycle is clockwise.\n\nWHAT TO MEMORIZE\nFor any closed cycle, W_net (by the gas) = area enclosed, positive for a clockwise loop on P–V and negative for a counterclockwise one; you never need to sum the legs separately. The unit identity Pa · m³ = J is the whole computation, and the ½ on a triangle is the single most-dropped factor — 900 J, the bounding-rectangle area, is offered precisely to catch that omission. 1800 J is the rectangle area without the ½ AND with a doubled leg, i.e. the answer to a differently-drawn problem."
+      },
+
+      {
+        "question": "The same triangular figure is now traversed in the opposite sense, a → c → b → a, as shown. Over one complete cycle, what is the net heat added to the gas?",
+        "image": "images/thermo-cycles-1/q2.png",
+        "choices": [
+          "−450 J",
+          "−225 J",
+          "0 J",
+          "+225 J",
+          "+450 J"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nOver any complete cycle the gas returns to its starting state, so its internal energy is unchanged: ΔU = 0. The first law ΔU = Q − W then gives Q_net = W_net exactly.\nThe enclosed area is the same triangle as before, ½ × (3 × 10⁻³) × (3 × 10⁵) = 450 J in magnitude. But the loop now runs counterclockwise (a → c → b → a), so the net work done BY the gas is negative: W_net = −450 J.\nTherefore Q_net = W_net = −450 J: the gas rejects 450 J of heat over the cycle.\n\nNUMERICS WITHOUT A CALCULATOR\nSame area as Q1, 450 J; the only new decision is the sign, and it is set entirely by the sense of circulation. Counterclockwise on P–V ⇒ negative. No further arithmetic.\n\n90-SECOND SOLUTION\nΔU = 0 over a cycle ⇒ Q_net = W_net = enclosed area with sign. Counterclockwise ⇒ −450 J.\n\nWHAT TO MEMORIZE\nThe engine identity for a full cycle is Q_net = W_net, because ΔU = 0. The sign is geometric, not something to reason out thermodynamically: clockwise loops do net positive work and absorb net heat (an engine); counterclockwise loops consume net work and reject net heat (a refrigerator/heat pump). The +450 J distractor is the same cycle run the other way — the correct answer to Q1's clockwise version — which is exactly why reversing the arrows is a favorite GRE move. 0 J is the trap for anyone who over-applies \"ΔU = 0\" and forgets that it forces Q = W, not Q = 0."
+      },
+
+      {
+        "question": "An ideal gas is taken clockwise around the four-state cycle A → B → C → D → A shown, where A → B is isobaric, B → C is isochoric, C → D is a straight diagonal, and D → A is isochoric (axes in 10⁻³ m³ and 10⁵ Pa). What is the net work done BY the gas per cycle?",
+        "image": "images/thermo-cycles-1/q3.png",
+        "choices": [
+          "300 J",
+          "400 J",
+          "450 J",
+          "600 J",
+          "800 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nNet work by the gas = area enclosed by the loop (positive, clockwise). The loop is a right trapezoid: its two parallel sides are the vertical segments B → C (at V = 4 × 10⁻³ m³, height ΔP = (4 − 1) × 10⁵ = 3 × 10⁵ Pa) and D → A (at V = 1 × 10⁻³ m³, height ΔP = (2 − 1) × 10⁵ = 1 × 10⁵ Pa), separated by a horizontal width ΔV = (4 − 1) × 10⁻³ = 3 × 10⁻³ m³.\nArea of a trapezoid = ½ (h₁ + h₂) × width = ½ (3 × 10⁵ + 1 × 10⁵) × (3 × 10⁻³) = ½ × (4 × 10⁵) × (3 × 10⁻³) = ½ × 1200 = 600 J.\nEquivalently, decompose into the bottom rectangle (1 × 10⁵ Pa × 3 × 10⁻³ m³ = 300 J) plus the top triangle (½ × 3 × 10⁻³ × 2 × 10⁵ = 300 J): 300 + 300 = 600 J.\n\nNUMERICS WITHOUT A CALCULATOR\nThe trapezoid formula turns this into ½ × 4 × 3 = 6, then × 10² = 600 J. If you prefer, the rectangle-plus-triangle split gives two clean 300 J pieces. Either route is one line of mental math.\n\n90-SECOND SOLUTION\nTrapezoid area = ½(h₁ + h₂)·width = ½(3 + 1)×10⁵ × 3×10⁻³ = 600 J.\n\nWHAT TO MEMORIZE\nWhen a cycle is not a triangle or rectangle, the enclosed area is still the net work — just use the trapezoid rule, or split the region into a rectangle and a triangle and add. The classic error is to compute only one piece: 300 J is exactly the rectangle (or the triangle) alone, offered to catch a half-finished decomposition. 450 J is the area of a triangle using the larger height throughout, i.e. forgetting that the left side is shorter than the right. The habit worth building is to name the two parallel heights explicitly before averaging them."
+      },
+
+      {
+        "question": "A diatomic ideal gas (Cᵥ = 5R/2) is taken along the isobaric expansion 1 → 2 shown at the top of the P–V rectangle, at constant pressure 2 × 10⁵ Pa, from V = 1 × 10⁻³ m³ to V = 3 × 10⁻³ m³. How much heat is added to the gas during THIS leg?",
+        "image": "images/thermo-cycles-1/q4.png",
+        "choices": [
+          "400 J",
+          "600 J",
+          "1000 J",
+          "1200 J",
+          "1400 J"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor an isobaric process the heat added is Q = n Cₚ ΔT. Rather than find n and ΔT separately, use the ideal gas law at constant pressure: P ΔV = n R ΔT, so n ΔT = P ΔV / R. Then\nQ = n Cₚ ΔT = (Cₚ/R) · (P ΔV) = (7/2)(P ΔV),\nsince for a diatomic gas Cₚ = Cᵥ + R = 5R/2 + R = 7R/2.\nP ΔV = (2 × 10⁵)(3 × 10⁻³ − 1 × 10⁻³) = (2 × 10⁵)(2 × 10⁻³) = 400 J.\nQ = (7/2)(400) = 1400 J.\n\nNUMERICS WITHOUT A CALCULATOR\nCompute the work first: P ΔV = 2 × 2 × 10² = 400 J. Then multiply by Cₚ/R = 7/2. 400 × 7/2 = 1400 J. The whole problem collapses to \"work × (7/2)\" once you see that n R ΔT is just P ΔV.\n\n90-SECOND SOLUTION\nQ = n Cₚ ΔT = (Cₚ/R)·PΔV = (7/2)(400 J) = 1400 J.\n\nWHAT TO MEMORIZE\nAt constant pressure the heat splits as Q = ΔU + W = (Cᵥ/R + 1)(PΔV) = (Cₚ/R)(PΔV). For diatomic gas the factors are Cᵥ/R = 5/2 and Cₚ/R = 7/2; for monatomic they are 3/2 and 5/2. The distractors here are each a real quantity in this leg: 400 J is the work PΔV alone; 1000 J is ΔU = (5/2)PΔV (heat minus work); 1200 J uses the monatomic Cₚ/R = 5/2 by mistake. Landing on a number that genuinely appears in the problem is not evidence you answered the question asked — the question asked for Q, which is the largest of them because it must cover both ΔU and the expansion work."
+      },
+
+      {
+        "question": "A Carnot engine rejects 600 J of heat to the cold reservoir per cycle and operates at an efficiency of 25%. How much work does it deliver per cycle?",
+        "choices": [
+          "150 J",
+          "200 J",
+          "450 J",
+          "800 J",
+          "2400 J"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe problem gives the REJECTED heat Q_C, not the absorbed heat, so work backward. Efficiency relates work to the absorbed heat, η = W/Q_H, and the first law over a cycle gives Q_H = W + Q_C. Combine them:\nη = W/(W + Q_C) ⇒ W(1 − η) = η Q_C ⇒ W = η Q_C/(1 − η).\nW = (0.25)(600)/(1 − 0.25) = 150/0.75 = 200 J.\nCheck: Q_H = W + Q_C = 200 + 600 = 800 J, and W/Q_H = 200/800 = 0.25. ✓\n\nNUMERICS WITHOUT A CALCULATOR\nη = 0.25 = 1/4 means the rejected fraction is 1 − η = 3/4 of Q_H, so Q_C = (3/4)Q_H ⇒ Q_H = (4/3)(600) = 800 J. Then W = η Q_H = (1/4)(800) = 200 J. Working in the fractions 1/4 and 3/4 avoids decimals entirely.\n\n90-SECOND SOLUTION\nQ_C is 75% of Q_H, so Q_H = 600/0.75 = 800 J; W = 0.25 × 800 = 200 J.\n\nWHAT TO MEMORIZE\nThe two relations η = W/Q_H and Q_H = W + Q_C solve every basic engine problem; the only subtlety is which heat the problem hands you. When it gives Q_C, you must NOT write W = η Q_C — that is the trap that produces 150 J, because efficiency is referenced to Q_H, never to Q_C. 450 J is (1 − η)Q_C, another misfire on the same confusion; 800 J is Q_H itself, the correct answer to \"how much heat is absorbed.\" Running the relation backward from the rejected heat is exactly the kind of reversal the hardest released items favor."
+      },
+
+      {
+        "question": "The figure shows a reversible cycle on a temperature–entropy (T–S) diagram: two horizontal isotherms and two vertical adiabats forming a rectangle between 500 K and 200 K. What is the efficiency of this cycle?",
+        "image": "images/thermo-cycles-1/q6.png",
+        "choices": [
+          "30%",
+          "40%",
+          "50%",
+          "60%",
+          "150%"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA rectangle on a T–S diagram is a Carnot cycle: the horizontal legs exchange heat isothermally and the vertical legs are adiabatic (constant entropy). Heat is absorbed only along the top isotherm at T_hot = 500 K and rejected only along the bottom at T_cold = 200 K. On a T–S plot the heat is the area under a leg, Q = ∫T dS, so with an entropy width ΔS,\n Q_hot = 500 ΔS, Q_cold = 200 ΔS,\n η = 1 − Q_cold/Q_hot = 1 − (200 ΔS)/(500 ΔS) = 1 − 200/500 = 0.60.\nThe entropy width ΔS cancels, which is why it is never given.\n\nNUMERICS WITHOUT A CALCULATOR\n1 − 200/500 = 1 − 2/5 = 3/5 = 60%. Reduce the temperature ratio to a simple fraction before subtracting and there is nothing to compute.\n\n90-SECOND SOLUTION\nRectangle on T–S ⇒ Carnot; η = 1 − T_c/T_h = 1 − 200/500 = 60%.\n\nWHAT TO MEMORIZE\nOn T–S axes, area under a curve is heat and the enclosed rectangle's area is the net work; a Carnot cycle is always a rectangle here, and its efficiency is 1 − T_c/T_h with temperatures in kelvin. The 40% distractor is the ratio read upside down (1 − T_h-in-the-wrong-place, i.e. 200/500 reported as the efficiency's complement); 50% comes from using a 250 K/500 K pair or averaging; 150% is what you get by writing T_h/T_c − 1, a sign that the ratio was inverted. Whenever a cycle is drawn on T–S rather than P–V, the intended shortcut is to read the two temperatures off the vertical axis and skip work integrals."
+      },
+
+      {
+        "question": "The T–S diagram shows a Carnot cycle run in reverse (counterclockwise) as a refrigerator, a rectangle between an inside temperature of 250 K and an outside temperature of 300 K. What is its coefficient of performance, defined as the heat removed from the cold space per unit of work input?",
+        "image": "images/thermo-cycles-1/q7.png",
+        "choices": [
+          "0.17",
+          "0.20",
+          "1.2",
+          "5",
+          "6"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nOn a T–S diagram the heat exchanged along an isotherm is Q = T ΔS. For the refrigerator, heat is drawn from the cold space along the 250 K isotherm, Q_C = 250 ΔS, and the net work input is the enclosed rectangle's area, W = (T_hot − T_cold) ΔS = (300 − 250) ΔS = 50 ΔS.\nCOP = Q_C/W = (250 ΔS)/(50 ΔS) = 250/50 = 5.\nThe entropy width ΔS cancels.\n\nNUMERICS WITHOUT A CALCULATOR\nCOP_refrigerator = T_c/(T_h − T_c) = 250/50 = 5. The denominator is the small temperature difference, so the COP of a real refrigerator is large — reducing to 250/50 needs no calculator.\n\n90-SECOND SOLUTION\nCOP = Q_C/W = T_c/(T_h − T_c) = 250/(300 − 250) = 5.\n\nWHAT TO MEMORIZE\nFor a reversible refrigerator, COP = T_c/(T_h − T_c); for the same device viewed as a heat pump it is T_h/(T_h − T_c), larger by exactly 1. Both use kelvin and the SMALL denominator T_h − T_c, which is why COPs are typically much greater than 1 — an answer below 1 (0.17 or 0.20 here, which are the efficiency-style ratios T_c/T_h-complement) signals you computed an engine efficiency instead of a COP. 6 is the heat-pump COP T_h/(T_h − T_c) = 300/50, the correct answer to a different question. The cold space sits at 250 K, so the heat removed is referenced to 250 — reading the wrong isotherm is the other easy slip."
+      },
+
+      {
+        "question": "Two reversible Carnot engines are operated in series (\"cascaded\"): the first absorbs heat at 800 K and rejects to an intermediate reservoir at temperature T_m; the second absorbs that rejected heat at T_m and rejects to 200 K. Each engine is reversible. What is the overall efficiency of the combination (total work out ÷ heat absorbed at 800 K)?",
+        "choices": [
+          "It depends on the value of T_m",
+          "60%",
+          "50%",
+          "40%",
+          "75%"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nLet Q_1 be absorbed at T_h = 800 K. The first engine rejects Q_m at T_m; being reversible, Q_m/Q_1 = T_m/T_h, so Q_m = Q_1 (T_m/800). The second engine absorbs exactly that Q_m at T_m and rejects Q_2 at T_c = 200 K; reversibly, Q_2 = Q_m (T_c/T_m) = Q_1 (T_m/800)(200/T_m) = Q_1 (200/800).\nThe T_m cancels. Total work = Q_1 − Q_2 = Q_1(1 − 200/800), so\n η = 1 − 200/800 = 1 − 1/4 = 0.75.\nA reversible cascade between 800 K and 200 K has exactly the efficiency of a single Carnot engine between those extremes.\n\nNUMERICS WITHOUT A CALCULATOR\nOnce you see T_m cancel, it is just 1 − 200/800 = 1 − 1/4 = 3/4 = 75%. No value of T_m enters.\n\n90-SECOND SOLUTION\nReversible engines in series are equivalent to one Carnot engine across the extreme temperatures: η = 1 − T_c/T_h = 1 − 200/800 = 75%.\n\nWHAT TO MEMORIZE\nWhen reversible engines are cascaded, the intermediate temperature drops out entirely and the combination has the Carnot efficiency of the two extreme reservoirs. Recognizing that a supplied quantity cancels — here T_m — is one of the highest-value moves on the exam, because choice A (\"it depends on T_m\") is written specifically for the student who starts grinding through the algebra without spotting the cancellation. This is also why a Carnot engine's efficiency is independent of any staging: you cannot beat 1 − T_c/T_h by inserting intermediate engines, only tie it. 60% would be the efficiency of just the top stage if T_m were 320 K, a reminder that no single stage's efficiency is the answer."
+      },
+
+      {
+        "question": "The P–V diagram shows the idealized Otto cycle (two adiabats joined by two isochores) for an engine using a diatomic ideal gas (γ = 7/5). The gas is compressed from 8V₀ to V₀. What is the theoretical efficiency of this cycle?",
+        "image": "images/thermo-cycles-1/q9.png",
+        "choices": [
+          "43%",
+          "50%",
+          "56%",
+          "64%",
+          "75%"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor the ideal Otto cycle the efficiency depends only on the compression ratio r = V_max/V_min and the adiabatic index γ:\nη = 1 − r^(1−γ) = 1 − 1/r^(γ−1).\nHere r = 8V₀/V₀ = 8 and γ − 1 = 7/5 − 1 = 2/5 = 0.4.\nr^(γ−1) = 8^0.4 = (2³)^0.4 = 2^1.2 ≈ 2.30.\nη = 1 − 1/2.30 = 1 − 0.435 = 0.565 ≈ 56%.\n\nNUMERICS WITHOUT A CALCULATOR\nWrite 8^0.4 = 2^(3×0.4) = 2^1.2. Bound it: 2^1 = 2 and 2^1.5 ≈ 2.83, so 2^1.2 ≈ 2.3, giving η ≈ 1 − 1/2.3 ≈ 0.56. Only one choice is near 56%, so the bound alone decides it.\n\n90-SECOND SOLUTION\nη = 1 − r^(1−γ), r = 8, γ − 1 = 0.4 ⇒ 8^0.4 = 2^1.2 ≈ 2.3 ⇒ η ≈ 0.56.\n\nWHAT TO MEMORIZE\nOtto efficiency is η = 1 − r^(1−γ), fixed entirely by the compression ratio and γ; the pressures and temperatures at the corners never enter. The exponent is negative, (1 − γ) = −(γ − 1), so η rises with r. The intended trap is using γ = 5/3 (monatomic) by reflex, which gives 8^(2/3) = 4 and η = 75% — that is why 75% is a choice. Dropping the sign of the exponent or using γ instead of γ − 1 produces the other near-misses. And note the Otto cycle always falls short of a Carnot engine running between the same temperature extremes."
+      },
+
+      {
+        "question": "The figure shows a Stirling cycle for an ideal gas: two isotherms (a hot one at temperature T_h and a cold one at T_c) connected by two constant-volume (isochoric) processes, traversed 1 → 2 → 3 → 4 → 1. During which parts of the cycle does the gas ABSORB heat?",
+        "image": "images/thermo-cycles-1/q11.png",
+        "choices": [
+          "Only during 1 → 2 (the hot isothermal expansion)",
+          "Only during the two isothermal legs",
+          "During 1 → 2 and during 3 → 4",
+          "During every leg of the cycle",
+          "During 1 → 2 (hot isothermal expansion) and 4 → 1 (isochoric heating)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nGo leg by leg, using ΔU = Q − W and, for an ideal gas, ΔU ∝ ΔT.\n1 → 2, hot isothermal expansion at T_h: ΔU = 0 (constant T) and the gas does positive work, so Q = W > 0 — heat absorbed.\n2 → 3, isochoric at volume V₂: no work (ΔV = 0), and the gas cools from T_h to T_c, so ΔU < 0 and Q = ΔU < 0 — heat rejected.\n3 → 4, cold isothermal compression at T_c: ΔU = 0 and work is done ON the gas, so Q < 0 — heat rejected.\n4 → 1, isochoric at volume V₁: no work, and the gas is heated from T_c back to T_h, so ΔU > 0 and Q > 0 — heat absorbed.\nHeat is absorbed on 1 → 2 and 4 → 1.\n\n90-SECOND SOLUTION\nHeat in requires either positive work at constant T (the hot expansion 1 → 2) or rising temperature at constant V (the isochoric heating 4 → 1). Those are the two legs; the cold compression and the isochoric cooling both reject heat.\n\nWHAT TO MEMORIZE\nOn any cycle, classify each leg by ΔU = Q − W: at constant T the sign of Q follows the sign of the work (expansion absorbs, compression rejects); at constant V there is no work so Q = ΔU and the sign follows the temperature change. The tempting answer is \"only the two isothermal legs,\" because students remember the Stirling engine's isothermal heat exchange but forget that the two isochoric legs are NOT adiabatic — real heat flows during them (in the actual engine, through a regenerator). That is exactly what distinguishes the Stirling cycle from the Otto/Brayton cycles, whose connecting legs are adiabatic. The isochoric heating 4 → 1 genuinely absorbs heat, which is why choice E, not B, is correct."
+      },
+
+      {
+        "question": "Starting from a common initial state, an ideal gas is expanded to the same final volume V_f along three different quasi-static paths labeled 1, 2, and 3 on the P–V diagram. Which curve is isobaric, which is isothermal, and which is adiabatic?",
+        "image": "images/thermo-cycles-1/q13.png",
+        "choices": [
+          "1 adiabatic, 2 isothermal, 3 isobaric",
+          "1 isobaric, 2 adiabatic, 3 isothermal",
+          "1 isothermal, 2 isobaric, 3 adiabatic",
+          "1 isobaric, 2 isothermal, 3 adiabatic",
+          "1 adiabatic, 2 isobaric, 3 isothermal"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nCompare the slopes as the gas expands from the shared starting point.\n• Isobaric: pressure is constant, so the path is horizontal — the flattest of the three. That is curve 1.\n• Isothermal: P ∝ V⁻¹ (PV = const), a hyperbola that falls off as it expands.\n• Adiabatic: P ∝ V⁻ᵞ with γ > 1, so it falls faster than the isotherm from the same starting point — the steepest curve.\nSince the adiabat is steeper than the isotherm, curve 3 (steepest descent) is adiabatic and curve 2 is isothermal. So: 1 isobaric, 2 isothermal, 3 adiabatic.\n\n90-SECOND SOLUTION\nFlattest = isobaric (1); of the two hyperbola-like curves the steeper one is the adiabat because P ∝ V⁻ᵞ falls faster than P ∝ V⁻¹. So 3 adiabatic, 2 isothermal, 1 isobaric.\n\nWHAT TO MEMORIZE\nFrom a common state, ordering by steepness on P–V is isobaric (flat) < isothermal (P ∝ V⁻¹) < adiabatic (P ∝ V⁻ᵞ). The one fact that settles every version of this question is that the adiabat is steeper than the isotherm because γ > 1 — heat leaving no longer props up the pressure, so it drops faster. The distractors simply permute the three labels; the trap worth naming is swapping the isotherm and adiabat (choice A style), which is the mistake of forgetting that the exponent γ makes the adiabat the steep one, not the shallow one."
+      },
+
+      {
+        "question": "Using the same three expansion paths from the common initial state to the same final volume V_f (curve 1 isobaric, curve 2 isothermal, curve 3 adiabatic), along which path does the gas do the MOST work?",
+        "image": "images/thermo-cycles-1/q14.png",
+        "choices": [
+          "The adiabatic path (curve 3)",
+          "The isobaric path (curve 1)",
+          "The isothermal path (curve 2)",
+          "All three do equal work, since ΔV is the same",
+          "The isobaric and isothermal paths do equal work"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWork done by the gas is W = ∫P dV, the area under the path on the P–V diagram between the common start and the shared final volume V_f. All three paths span the same ΔV, so the one that stays at the highest pressure encloses the most area beneath it.\nThe isobaric path (curve 1) holds the pressure fixed at its initial, highest value the whole way, so it lies above the other two everywhere and has the greatest area under it. The isothermal path drops as V⁻¹ and the adiabatic path drops fastest as V⁻ᵞ, so their areas are successively smaller.\nOrdering: W_isobaric > W_isothermal > W_adiabatic. The most work is done along the isobaric path, curve 1.\n\n90-SECOND SOLUTION\nWork = area under the curve. Same ΔV for all three, so highest-lying curve wins. The isobar stays highest ⇒ most work; the adiabat falls fastest ⇒ least.\n\nWHAT TO MEMORIZE\nFor expansions between the same two volumes, more area under the curve means more work, and the curve that stays at higher pressure does more work. The ranking W_isobaric > W_isothermal > W_adiabatic follows directly from the steepness ranking of the previous problem. Choice D (\"equal, since ΔV is the same\") is the classic trap: equal volume change does NOT mean equal work, because work depends on the pressure history, not just the endpoints. This is the same reason work is a path function while ΔU is not."
+      },
+
+      {
+        "question": "A monatomic ideal gas (γ = 5/3) expands quasi-statically and adiabatically until its volume has increased by a factor of 8. By what factor does its pressure change?",
+        "choices": [
+          "it drops to 1/32",
+          "it drops to 1/8",
+          "it drops to 1/4",
+          "it is unchanged",
+          "it rises by a factor of 8"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a quasi-static adiabatic process, PV^γ = const. Therefore\n P₂/P₁ = (V₁/V₂)^γ.\nWith γ = 5/3 and the volume increasing by 8 (so V₁/V₂ = 1/8),\n P₂/P₁ = (1/8)^(5/3) = 8^(−5/3) = (2³)^(−5/3) = 2^(−5) = 1/32.\nThe pressure falls to 1/32 of its initial value.\n\nNUMERICS WITHOUT A CALCULATOR\nWrite 8 = 2³, so 8^(5/3) = 2⁵ = 32, and the pressure drops by that factor: P₂/P₁ = 1/32. The exponent here is γ = 5/3 itself (not γ − 1), because the relation connecting P and V is PV^γ = const.\n\n90-SECOND SOLUTION\nP ∝ V^(−γ) = V^(−5/3); an 8× volume gives 8^(−5/3) = 1/32.\n\nWHAT TO MEMORIZE\nThe adiabatic relations are PV^γ = const, TV^(γ−1) = const, and T P^((1−γ)/γ) = const; pick the one connecting the two variables the problem names. For a P ↔ V problem the exponent is the full γ (5/3 monatomic, 7/5 diatomic); for a T ↔ V problem it is γ − 1. \"Drops to 1/8\" is the isothermal answer P ∝ 1/V, wrong because temperature is not held fixed; \"drops to 1/4\" uses the exponent 2/3 (the T–V exponent) by mistake. Along an adiabat the pressure falls FASTER than along an isotherm (γ > 1), which is exactly why the adiabat is the steeper curve — the same fact tested graphically elsewhere in this set. Any answer where the pressure rises during an expansion is unphysical and can be dropped at sight."
+      },
+
+      {
+        "question": "An ideal monatomic gas expands quasi-statically to twice its initial volume in two separate trials: once isothermally (work W_iso) and once adiabatically (work W_adia), both starting from the same initial state. How do the two amounts of work done by the gas compare?",
+        "choices": [
+          "W_adia > W_iso > 0",
+          "W_iso > W_adia > 0",
+          "W_iso > 0 > W_adia",
+          "W_iso = W_adia > 0",
+          "W_adia > 0 > W_iso"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBoth are expansions to the same final volume, so both do positive work (the gas pushes out, ∫P dV > 0). The question is which does more.\nStarting from the same point, the adiabat falls faster than the isotherm (P ∝ V⁻ᵞ with γ > 1 versus P ∝ V⁻¹), so throughout the expansion the adiabatic curve lies BELOW the isothermal one. Less area under the curve means less work: W_adia < W_iso.\nPhysically, in the adiabatic case no heat flows in, so the work is done at the expense of internal energy and the gas cools, dropping its pressure and its ability to do further work; the isothermal case is fed heat that keeps the pressure up. Hence W_iso > W_adia > 0.\n\n90-SECOND SOLUTION\nSame start, same final volume, both expansions ⇒ both works positive. Adiabat lies below the isotherm (steeper drop), so it does less work: W_iso > W_adia > 0.\n\nWHAT TO MEMORIZE\nFor expansion from a common state to a common volume, the isotherm always outworks the adiabat because heat input keeps its pressure higher; both works are positive. The sign traps (choices with 0 between the two) are for students who confuse \"adiabatic expansion cools the gas\" with \"adiabatic expansion does negative work\" — cooling lowers the work relative to isothermal, but an expansion still does positive work. And W_iso = W_adia is impossible for any nontrivial expansion, since the curves coincide only at the starting point."
+      },
+
+      {
+        "question": "The block diagram represents a heat engine running in steady state at a thermal efficiency of 25%, delivering 900 W of mechanical power. At what rate does it reject heat to the cold reservoir?",
+        "image": "images/thermo-cycles-1/q17.png",
+        "choices": [
+          "225 W",
+          "675 W",
+          "1800 W",
+          "2700 W",
+          "3600 W"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEverything is a rate (power), but the engine relations are identical to their per-cycle forms. Efficiency relates output power to the rate of heat intake: η = P_out/P_in, so\n P_in = P_out/η = 900/0.25 = 3600 W (rate of heat absorbed from the hot reservoir).\nThe first law in rate form is P_in = P_out + P_reject, so\n P_reject = P_in − P_out = 3600 − 900 = 2700 W.\n\nNUMERICS WITHOUT A CALCULATOR\nη = 1/4 means the engine absorbs four times what it outputs: P_in = 4 × 900 = 3600 W. It keeps one quarter (900 W) as work and dumps the other three quarters: P_reject = 3 × 900 = 2700 W. The rejected fraction is (1 − η) = 3/4 of the intake.\n\n90-SECOND SOLUTION\nP_in = 900/0.25 = 3600 W; P_reject = 3600 − 900 = 2700 W.\n\nWHAT TO MEMORIZE\nEnergy-per-cycle and energy-per-second obey the same two relations, η = W/Q_H and Q_H = W + Q_C, so you can work entirely in watts without ever finding the cycle time. The rejected power is always (1 − η)/η times the output power — here (3/4)/(1/4) = 3 times 900 = 2700 W. The distractors are the other quantities in the problem: 3600 W is the intake P_in (the answer to \"how much heat is absorbed\"); 1800 W would be the reject if η were 1/3; 675 W is (1 − η) times the OUTPUT rather than the intake, the classic reference-to-the-wrong-quantity error."
+      },
+
+      {
+        "question": "The block diagram shows the same reversible device run backward as a heat pump that heats a room: it delivers Q_H = 600 J to the room per cycle while consuming W = 150 J of work. What is its coefficient of performance as a heat pump (heat delivered to the room per unit work input)?",
+        "image": "images/thermo-cycles-1/q18.png",
+        "choices": [
+          "0.25",
+          "1",
+          "3",
+          "4",
+          "4.5"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe coefficient of performance of a heat pump is the heat delivered to the hot side per unit of work input:\n COP_hp = Q_H/W = 600/150 = 4.\nAs a consistency check, the heat drawn from the cold outside is Q_C = Q_H − W = 600 − 150 = 450 J, and the refrigerator COP of the same device would be Q_C/W = 450/150 = 3 = COP_hp − 1, as it must be.\n\nNUMERICS WITHOUT A CALCULATOR\nCOP_hp = 600/150 = 4 directly. The refrigerator value 450/150 = 3 differs from it by exactly 1 — a fast internal check that you used the right heat in the numerator.\n\n90-SECOND SOLUTION\nCOP_hp = Q_H/W = 600/150 = 4.\n\nWHAT TO MEMORIZE\nThe defining relations are COP_hp = Q_H/W (heat pump, heat DELIVERED) and COP_ref = Q_C/W (refrigerator, heat REMOVED), and they always differ by exactly 1: COP_hp = COP_ref + 1. The whole trap in these problems is which heat goes in the numerator. Here 3 is the refrigerator COP Q_C/W — the correct answer to a different question, and the intended distractor since the same hardware gives both numbers. 0.25 is W/Q_H, the reciprocal (an \"efficiency\" applied where a COP belongs); a COP is normally greater than 1, so any answer below 1 for a heat pump is a signal you inverted the ratio."
+      },
+
+      {
+        "question": "A fixed quantity of ideal gas is carried around the rectangular cycle 1 → 2 → 3 → 4 → 1 shown, with volumes V₀ and 3V₀ and pressures P₀ and 3P₀. At which labeled state is the gas at its HIGHEST temperature?",
+        "image": "images/thermo-cycles-1/q20.png",
+        "choices": [
+          "State 3",
+          "State 1",
+          "State 2",
+          "State 4",
+          "States 2 and 4 are tied for the highest"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a fixed amount of ideal gas, PV = nRT, so temperature is proportional to the product PV; the highest temperature is at the state with the largest PV.\nRead the four corners off the diagram:\n State 1: (V₀, P₀) → PV = P₀V₀.\n State 2: (V₀, 3P₀) → PV = 3P₀V₀.\n State 3: (3V₀, 3P₀) → PV = 9P₀V₀.\n State 4: (3V₀, P₀) → PV = 3P₀V₀.\nThe largest product is 9P₀V₀ at state 3, so the gas is hottest there.\n\nNUMERICS WITHOUT A CALCULATOR\nJust multiply the coordinates at each corner in units of P₀V₀: 1, 3, 9, 3. The maximum is 9 at state 3. No temperatures or n or R are needed — only the products.\n\n90-SECOND SOLUTION\nT ∝ PV; the corner with the biggest P×V is state 3 (3V₀ × 3P₀ = 9P₀V₀).\n\nWHAT TO MEMORIZE\nOn a P–V diagram for a fixed quantity of gas, isotherms are hyperbolas PV = const, and \"hotter\" simply means \"farther from the origin\" in the sense of a larger PV product — the top-right corner of a rectangle is always the hottest, the bottom-left the coldest. States 2 and 4 tie (choice E) at 3P₀V₀, which is the trap for reading only one coordinate: state 2 has the high pressure and state 4 the high volume, but neither has both. Only state 3 maximizes the product, so it alone is the hottest."
+      },
+
+      {
+        "question": "One mole of an ideal gas is taken clockwise around the cycle A → B → C → A shown, where A → B is an isobaric expansion at 3 × 10⁵ Pa from V = 2 × 10⁻³ m³ to V = 6 × 10⁻³ m³, B → C is an isothermal compression back to V = 2 × 10⁻³ m³, and C → A is isochoric. What is the net work done BY the gas per cycle? (Use ln 3 ≈ 1.10.)",
+        "image": "images/thermo-cycles-1/q10.png",
+        "choices": [
+          "−1980 J",
+          "−1200 J",
+          "−780 J",
+          "−600 J",
+          "+1200 J"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nSum the work over the three legs.\nA → B (isobaric): W = P ΔV = (3 × 10⁵)(6 × 10⁻³ − 2 × 10⁻³) = (3 × 10⁵)(4 × 10⁻³) = +1200 J.\nB → C (isothermal): W = nRT ln(V_C/V_B). At B, nRT = P_B V_B = (3 × 10⁵)(6 × 10⁻³) = 1800 J, and V_C/V_B = (2 × 10⁻³)/(6 × 10⁻³) = 1/3, so W = 1800 · ln(1/3) = −1800 · ln 3 ≈ −1800 × 1.10 = −1980 J.\nC → A (isochoric): ΔV = 0 ⇒ W = 0.\nNet: W = +1200 − 1980 + 0 = −780 J. The loop is counterclockwise in area terms, so the gas does net negative work.\n\nNUMERICS WITHOUT A CALCULATOR\nThe isobaric leg is 3 × 4 × 10² = 1200 J. For the isotherm, nRT = P_B V_B = 1800 J and the log leg is −1800 ln 3 ≈ −1800 × 1.1 = −1980 J. Add: 1200 − 1980 = −780 J. The one value to have ready is ln 3 ≈ 1.10 (and ln 2 ≈ 0.69).\n\n90-SECOND SOLUTION\nW_AB = PΔV = +1200 J; W_BC = P_B V_B · ln(1/3) = 1800 × (−1.10) = −1980 J; W_CA = 0. Net = −780 J.\n\nWHAT TO MEMORIZE\nWhen a cycle contains a curved (isothermal) leg you cannot just read the enclosed area off gridlines — you must integrate that leg as W = nRT ln(V_f/V_i), evaluating nRT at any point ON that isotherm (here the easy point is B, where P and V are both given). The distractors are each a real partial result: +1200 J is the isobaric leg alone; −1980 J is the isothermal leg alone; −1200 J drops the log factor and treats the isotherm like an isobar. This is the released-exam method (GR0177 Q37) — the difficulty is bookkeeping three legs, one of which needs a logarithm, not any exotic physics."
+      },
+
+      {
+        "question": "A Carnot engine currently runs between a hot reservoir at 400 K and a cold reservoir at 300 K. You may shift exactly one reservoir temperature by a fixed amount ΔT = 50 K — either raise the hot side to 450 K or lower the cold side to 250 K (shown as two T–S rectangles). Which change produces the greater efficiency, and why?",
+        "image": "images/thermo-cycles-1/q12.png",
+        "choices": [
+          "Raising the hot reservoir by ΔT",
+          "Lowering the cold reservoir by ΔT",
+          "Both changes give exactly the same efficiency",
+          "Neither changes the efficiency, since ΔT is the same",
+          "Raising the hot reservoir, because efficiency depends only on T_h"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEfficiency is η = 1 − T_c/T_h. Compute both options from the base 400 K / 300 K (base η = 1 − 300/400 = 0.25).\nRaise T_h to 450: η = 1 − 300/450 = 1 − 0.667 = 0.333.\nLower T_c to 250: η = 1 − 250/400 = 1 − 0.625 = 0.375.\nLowering the cold reservoir wins, 37.5% versus 33.3%.\n\nNUMERICS WITHOUT A CALCULATOR\nη = 1 − T_c/T_h. Raising T_h shrinks the ratio's denominator effect: 300/450 = 2/3, so η = 1/3 ≈ 33%. Lowering T_c shrinks the numerator directly: 250/400 = 5/8, so η = 3/8 = 37.5%. Comparing 1/3 and 3/8, the second is larger.\n\n90-SECOND SOLUTION\n1 − 300/450 = 1/3; 1 − 250/400 = 3/8. Since 3/8 > 1/3, lowering T_c helps more.\n\nWHAT TO MEMORIZE\nA fixed ΔT applied to the COLD reservoir raises efficiency more than the same ΔT applied to the hot one. The clean way to see it without numbers: dη = (T_c/T_h²) dT_h for the hot change and dη = −(1/T_h) dT_c for the cold change, and since T_c/T_h² < 1/T_h (because T_c < T_h), lowering T_c always wins. Choice D (\"same ΔT, so no difference\") is the trap for treating η as if it depended on the difference T_h − T_c rather than the ratio T_c/T_h; choice E is the trap for half-remembering the formula as depending on T_h alone. Efficiency is governed by the ratio, and the ratio is more sensitive to its numerator when T_c < T_h."
+      }
+
+    ]
+  },
 
 ];
