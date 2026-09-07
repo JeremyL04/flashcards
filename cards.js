@@ -11051,6 +11051,346 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Fourier Analysis (Hard)",
+    "added": "2026-09-06",
+    "category": "specialized",
+    "cards": [
+
+      {
+        "question": "The figure shows a periodic waveform of period 2π that is an EVEN function of x (symmetric about the vertical axis x = 0). Which statement about its real Fourier series f(x) = a₀ + Σ[aₙ cos(nx) + bₙ sin(nx)] is correct?",
+        "image": "images/fourier/fourier_q1.png",
+        "choices": [
+          "All the cosine coefficients aₙ vanish; only sines remain",
+          "All the sine coefficients bₙ vanish; only a constant and cosines remain",
+          "Both aₙ and bₙ are nonzero in general",
+          "Only the constant term a₀ is nonzero",
+          "Only odd harmonics are present"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSine is an odd function and cosine is even. Projecting an EVEN function onto the odd sines gives zero for every coefficient: bₙ = (1/π)∫f(x)sin(nx)dx is an integral of (even)×(odd) = odd over a symmetric interval, so it vanishes. The even cosines and the constant survive. Hence an even periodic function is built from a₀ and cosines only.\n\n90-SECOND SOLUTION\nEven function ⇒ pair it only with even basis functions. Sines are odd, so every bₙ = 0; cosines (and the DC term) remain. That is choice B by inspection, no integration needed.\n\nWHAT TO MEMORIZE\nParity is the single highest-value Fourier fact on this exam: EVEN functions expand in cosines (all bₙ = 0), ODD functions expand in sines (all aₙ = 0, including a₀). The triangle wave shown is the canonical even example, exactly as the released even-triangle item tests. \"Only odd harmonics\" (choice E) is a different symmetry (half-wave), not parity — do not conflate them. The trap of choosing A is simply swapping which family an even function keeps."
+      },
+
+      {
+        "question": "The figure shows an odd square wave: f(x) = +1 for 0 < x < π and f(x) = −1 for −π < x < 0, repeated with period 2π (antisymmetric about the origin). Which coefficients in its Fourier series are necessarily zero?",
+        "image": "images/fourier/fourier_q2.png",
+        "choices": [
+          "The constant term a₀ and all cosine coefficients aₙ",
+          "All bₙ (the sine coefficients)",
+          "Only the constant term a₀",
+          "All even-harmonic coefficients only",
+          "None; all coefficients are nonzero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe wave is ODD (f(−x) = −f(x)), so it must be built from odd basis functions. Cosine is even, so every aₙ = (1/π)∫f(x)cos(nx)dx integrates (odd)×(even) = odd over a symmetric interval and vanishes; the constant a₀ (the average value) is zero because the wave spends equal time at +1 and −1. Only the sine coefficients bₙ survive. So the necessarily-zero set is a₀ together with all aₙ.\n\n90-SECOND SOLUTION\nOdd function ⇒ sines only. That kills the whole cosine family AND the DC term a₀. The surviving bₙ are what's left, so the zeros are 'a₀ and all aₙ' — choice A.\n\nWHAT TO MEMORIZE\nAn odd function has zero average (a₀ = 0) and zero cosine content. Choice B is the exact opposite error — it deletes the coefficients that actually survive. This odd square wave is the released GR9277 setup, whose sine series moreover contains only odd harmonics with amplitudes ∝ 1/(2n+1); here you only need the parity half of that fact."
+      },
+
+      {
+        "question": "The Fourier series of a certain periodic waveform (shown) is found to contain ONLY odd harmonics — the 2nd, 4th, 6th, … harmonics are all absent. Which structural property must the waveform possess?",
+        "image": "images/fourier/fourier_q3.png",
+        "choices": [
+          "It is an even function of x",
+          "It has half-wave symmetry, f(x + T/2) = −f(x)",
+          "It is an odd function of x",
+          "It has zero average value only",
+          "It is simply periodic, with no further symmetry required"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWork backward from the harmonic content to the symmetry that forces it. The n-th harmonic acquires a factor (−1)ⁿ when its argument is shifted by half a period (x → x + T/2), since cos(n·2π(x+T/2)/T) and sin(…) both pick up cos(nπ) = (−1)ⁿ. A waveform whose series contains only ODD n therefore satisfies f(x + T/2) = −f(x): every present term flips sign under the half-period shift, while even harmonics (which would return +1) are exactly the ones excluded. That flip-under-half-shift property is the definition of half-wave symmetry. Even or odd parity, by contrast, controls sine-vs-cosine content, not which n survive.\n\n90-SECOND SOLUTION\nOnly-odd-harmonics is the fingerprint of half-wave symmetry f(x+T/2) = −f(x). Even/odd parity would instead kill sines or cosines, not even harmonics. Choice B.\n\nWHAT TO MEMORIZE\nThe three symmetry ⇔ series correspondences run both ways: EVEN ⇔ cosines only; ODD ⇔ sines only; HALF-WAVE [f(x+T/2) = −f(x)] ⇔ odd harmonics only. Here you are handed the harmonic content and asked for the symmetry — the converse of the usual direction — but it is the same one-to-one dictionary. The parity distractors (even/odd function) are the trap for reaching for the more familiar rule; parity selects the sine/cosine family, whereas half-wave symmetry selects the odd harmonic numbers. Both the square wave and the triangle wave are half-wave symmetric, which is why each has only odd harmonics."
+      },
+
+      {
+        "question": "A periodic voltage v(t) has a known Fourier series. A constant (DC) offset V₀ is now added, giving v(t) + V₀. Compared with the original series, the new Fourier coefficients are:",
+        "choices": [
+          "Every coefficient is shifted upward by V₀",
+          "Only the constant term a₀ changes (increases by V₀); all aₙ, bₙ for n ≥ 1 are unchanged",
+          "All amplitudes scale by the same factor",
+          "Only the fundamental changes",
+          "The phases of all harmonics shift, but the magnitudes are unchanged"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe Fourier series is linear, and a constant is itself a pure DC term: its only nonzero Fourier coefficient is the average value. Adding V₀ therefore adds V₀ to a₀ (the average) and does nothing to any oscillating coefficient, because ∫V₀cos(nx)dx = ∫V₀sin(nx)dx = 0 for every n ≥ 1. The AC structure of the waveform is untouched.\n\n90-SECOND SOLUTION\nA DC offset is pure a₀. By linearity it lands entirely in the constant term; all harmonics (n ≥ 1) are unaffected. Choice B.\n\nWHAT TO MEMORIZE\nThe constant term a₀ IS the average (DC) value of the signal, and it is completely decoupled from every harmonic. Level-shifting a waveform moves only a₀. Choice A ('every coefficient shifts up') is the trap for forgetting that the harmonic basis functions integrate to zero against a constant. This is exactly why a rectifier's DC output and its ripple harmonics can be discussed independently."
+      },
+
+      {
+        "question": "A waveform f(x) is shifted in space to become f(x − x₀), a rigid translation by x₀. How do the coefficients of its complex Fourier series cₙ change?",
+        "choices": [
+          "The magnitudes scale by e^(−nx₀)",
+          "Both the magnitudes and phases are unchanged",
+          "The magnitudes |cₙ| are unchanged; each cₙ acquires a phase factor e^(−inx₀·(2π/L))",
+          "Only the fundamental acquires a phase shift",
+          "All coefficients become real"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWriting f(x) = Σ cₙ e^(inkx) with k = 2π/L, replacing x by x − x₀ gives Σ cₙ e^(ink(x−x₀)) = Σ [cₙ e^(−inkx₀)] e^(inkx). So each coefficient is multiplied by the unit-magnitude phase factor e^(−inkx₀). Since |e^(−inkx₀)| = 1, the magnitudes |cₙ| are untouched; only the phases advance, linearly in the harmonic number n.\n\n90-SECOND SOLUTION\nA shift multiplies each cₙ by a pure phase e^(−inkx₀) of magnitude 1. Magnitudes fixed, phases rotate. Choice C.\n\nWHAT TO MEMORIZE\nThe shift theorem: translating a signal leaves the power spectrum |cₙ|² invariant and only rotates phases. This is why the diffraction pattern's INTENSITY from a shifted aperture is unchanged (position doesn't move the fringes' spacing, only their phase), and why moving a double slit sideways does not change the fringe pattern's intensity envelope. Choice E ('all real') confuses a shift with the special centering that makes an even function's coefficients real."
+      },
+
+      {
+        "question": "The figure shows a sawtooth wave that is neither an even nor an odd function of x (it has a jump discontinuity each period and no symmetry about x = 0). Which coefficients of its real Fourier series are nonzero in general?",
+        "image": "images/fourier/fourier_q6.png",
+        "choices": [
+          "Only cosine coefficients aₙ",
+          "Only sine coefficients bₙ",
+          "Only the constant term a₀",
+          "No coefficients; the series does not converge",
+          "Both aₙ and bₙ (and possibly a₀)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nParity is what forces a whole family of coefficients to vanish. This waveform has NEITHER even nor odd symmetry about x = 0, so there is no symmetry argument to kill either family: both the cosine coefficients aₙ and the sine coefficients bₙ are generally nonzero, and a nonzero average would give a₀ as well. (Only if you re-centered the sawtooth to make it odd would the cosines drop out — but as drawn it is not odd.)\n\n90-SECOND SOLUTION\nNo parity ⇒ no coefficients are forced to zero ⇒ both aₙ and bₙ appear. Choice E.\n\nWHAT TO MEMORIZE\nThe elimination rules only work when a symmetry is present: even kills sines, odd kills cosines, half-wave kills even harmonics. A function with no symmetry keeps everything. The lesson of this whole cluster is to FIRST classify the symmetry, because that is what does the work — an unclassifiable waveform simply retains both families. Note that where a function sits relative to the origin is a choice; a sawtooth can be made odd by centering, which is why 'only sines' is a tempting but setup-dependent trap."
+      },
+
+      {
+        "question": "An ideal square wave is expanded in a Fourier series. The amplitudes of its harmonics fall off as 1/n (odd n only). What is the ratio of the amplitude of the third harmonic to that of the fundamental?",
+        "choices": [
+          "1/9",
+          "1/3",
+          "1/√3",
+          "1/2",
+          "3"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor an ideal square wave the nonzero harmonics are the odd ones with amplitude proportional to 1/n: bₙ = (4/π)(1/n) for n = 1, 3, 5, …. The fundamental is n = 1 and the third harmonic is n = 3, so their ratio is (1/3)/(1/1) = 1/3.\n\nNUMERICS WITHOUT A CALCULATOR\nAmplitude ∝ 1/n, so the ratio is just n_fundamental/n_third = 1/3. No evaluation of the 4/π prefactor is needed because it cancels in the ratio.\n\n90-SECOND SOLUTION\nSquare-wave amplitudes go as 1/n; third-to-first is 1/3. Choice B.\n\nWHAT TO MEMORIZE\nSquare wave: odd harmonics, amplitude ∝ 1/n. Triangle wave: odd harmonics, amplitude ∝ 1/n². The 1/9 trap is the triangle-wave answer (1/n² gives (1/3)² = 1/9) — a reminder that the fall-off exponent depends on the waveform's smoothness. A sharper waveform (discontinuity) has slower fall-off and therefore richer high harmonics."
+      },
+
+      {
+        "question": "Three periodic waveforms of the same period are compared: (1) a square wave, (2) a triangle wave, and (3) a pure sine wave. Ranked by how slowly their Fourier harmonic amplitudes fall off with harmonic number n (i.e. which has the richest high-frequency content), the correct order from richest to poorest is:",
+        "image": "images/fourier/fourier_q8.png",
+        "choices": [
+          "sine > triangle > square",
+          "triangle > square > sine",
+          "square > triangle > sine",
+          "all three are equally rich",
+          "square > sine > triangle"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nHigh-frequency content is governed by smoothness: the less smooth a waveform, the more slowly its Fourier coefficients decay, and the richer its high harmonics. A square wave has jump DISCONTINUITIES, so its amplitudes fall only as 1/n. A triangle wave is continuous but has sharp corners (a kink in the slope), so its amplitudes fall faster, as 1/n². A pure sine wave is perfectly smooth and is a single harmonic — no high-frequency content at all. Richest to poorest: square > triangle > sine.\n\n90-SECOND SOLUTION\nDiscontinuity (square, 1/n) beats kink (triangle, 1/n²) beats smooth (sine, one term). Choice C.\n\nWHAT TO MEMORIZE\nThe decay rate of Fourier coefficients encodes smoothness: a jump ⇒ 1/n, a slope kink ⇒ 1/n², and each additional continuous derivative adds another power of n in the denominator. This is the general principle behind Gibbs overshoot at discontinuities and behind why sharp features in a signal require many harmonics to reproduce. A single sine is the smoothest possible periodic signal and needs no harmonics beyond itself."
+      },
+
+      {
+        "question": "A string fixed at both ends is set into motion by exciting it at a single point. In terms of the string's normal modes (the harmonic series sin(nπx/L)), a given harmonic n is absent from the motion when the excitation point coincides with a NODE of that harmonic. Which statement is therefore true?",
+        "choices": [
+          "Exciting the string at an antinode of harmonic n suppresses that harmonic",
+          "Exciting the string at a point that is a node of harmonic n suppresses that harmonic",
+          "The excitation point has no effect on which harmonics appear",
+          "Only the fundamental can ever be suppressed",
+          "Plucking always suppresses all even harmonics regardless of location"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEach normal mode has the spatial profile sin(nπx/L). The amount of mode n present in the motion is the projection (overlap) of the initial disturbance onto that profile. If the string is driven or plucked exactly where sin(nπx/L) = 0 — a node of mode n — then that mode has zero displacement there and cannot be excited by a disturbance localized at that point; its amplitude is zero. Exciting at an ANTINODE (where the mode is maximal) couples most strongly to it, the opposite of suppression.\n\n90-SECOND SOLUTION\nA mode is silent when you disturb it at one of its nodes (it has no displacement there to grab). So exciting at a node of harmonic n kills harmonic n. Choice B.\n\nWHAT TO MEMORIZE\nWhich harmonics are present is set by the overlap of the initial shape with each mode sin(nπx/L); a node of mode n at the excitation point means zero overlap and a missing harmonic. This single rule generates all the 'plucked/struck at fraction L/p' results: it is why plucking at the center kills even harmonics and why plucking at L/3 kills every third harmonic. Choice A is the exact inversion (antinode = strongest coupling, not suppression)."
+      },
+
+      {
+        "question": "A string fixed at both ends (length L) is plucked at the point one-third of the way along its length, x = L/3, giving a triangular initial shape, and released. Which harmonics are ABSENT from the resulting vibration?",
+        "choices": [
+          "The even harmonics (2nd, 4th, 6th, …)",
+          "None; all harmonics are present",
+          "The odd harmonics (1st, 3rd, 5th, …)",
+          "Only the fundamental",
+          "Every third harmonic (3rd, 6th, 9th, …)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe amplitude of mode n for a string plucked at x₀ is proportional to sin(nπx₀/L)/n². With x₀ = L/3, the sine factor is sin(nπ/3), which vanishes whenever nπ/3 is a multiple of π, i.e. whenever n is a multiple of 3. So the 3rd, 6th, 9th, … harmonics are absent — the mode has a node exactly at the pluck point x = L/3 and cannot be excited there. All other harmonics survive.\n\nNUMERICS WITHOUT A CALCULATOR\nA pluck at x₀ = L/p kills every harmonic that has a node at L/p, which is every p-th harmonic. Here p = 3, so harmonics 3, 6, 9, … drop out. No coefficient integral is needed — only the node condition sin(nπ/3) = 0.\n\n90-SECOND SOLUTION\nPluck at L/3 ⇒ node of every 3rd harmonic sits there ⇒ harmonics 3, 6, 9, … vanish. Choice E.\n\nWHAT TO MEMORIZE\nPluck at x₀ = L/p and the missing harmonics are the multiples of p (they have a node at L/p). Center pluck (p = 2) removes the even harmonics; L/3 removes every third; and so on. The 'even harmonics' answer (choice A) is the correct answer to the DIFFERENT, more familiar midpoint-pluck question — a classic case of a distractor that solves a neighboring problem. Always match the node condition to the actual pluck fraction stated."
+      },
+
+      {
+        "question": "A discontinuous periodic function (such as a square wave) is approximated by truncating its Fourier series after a finite number of terms. Near each discontinuity the partial sum overshoots the true value. As MORE terms are added, this overshoot:",
+        "choices": [
+          "Grows without bound",
+          "Approaches zero, so the overshoot disappears",
+          "Persists at a fixed height of about 9% of the jump, moving closer to the discontinuity but not shrinking",
+          "Oscillates randomly with no definite limit",
+          "Is exactly zero for any number of terms"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThis is the Gibbs phenomenon. As the number of retained terms N increases, the overshoot near a jump discontinuity does NOT decay toward zero; instead it settles to a fixed height of about 9% of the size of the jump (more precisely ≈ 8.95%). What does happen is that the overshoot's location moves ever closer to the discontinuity and its width shrinks like 1/N — but its height stays ≈ 9%. The series still converges to the function at every point away from the jump, and in the mean-square sense, so this is not a failure of convergence, only of uniform convergence.\n\n90-SECOND SOLUTION\nGibbs: the overshoot at a jump is stuck near 9% no matter how many terms you keep; it just gets narrower and hugs the discontinuity. Choice C.\n\nWHAT TO MEMORIZE\nThe Gibbs overshoot is ≈ 9% of the jump and does not vanish with more terms — it narrows, not shrinks. This is the standard 'gotcha': pointwise convergence away from the jump coexists with a persistent fixed-height overshoot at the jump. Choice B (the intuitive 'it goes away') is the trap. Only functions with no discontinuity avoid Gibbs entirely."
+      },
+
+      {
+        "question": "A pulse of light has a temporal duration of about Δt = 1 nanosecond. Using the time–bandwidth relation Δω·Δt ≳ 1, estimate the minimum spread of angular frequencies (bandwidth) the pulse must contain.",
+        "choices": [
+          "≈ 10³ rad/s",
+          "≈ 10⁶ rad/s",
+          "≈ 10⁹ rad/s",
+          "≈ 10¹² rad/s",
+          "≈ 10¹⁵ rad/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe time–bandwidth relation Δω·Δt ≳ 1 gives Δω ≳ 1/Δt. With Δt = 1 ns = 10⁻⁹ s, Δω ≳ 1/(10⁻⁹ s) = 10⁹ rad/s. A shorter pulse necessarily contains a broader spread of frequencies.\n\nNUMERICS WITHOUT A CALCULATOR\nΔω ≳ 1/Δt is a reciprocal: 1/(10⁻⁹) = 10⁹. The bandwidth in ordinary frequency would be Δf ≈ 1/(2πΔt) ≈ 1.6×10⁸ Hz, but the question asks for angular frequency, which is 10⁹ rad/s.\n\n90-SECOND SOLUTION\nΔω ≳ 1/Δt = 1/10⁻⁹ = 10⁹ rad/s. Choice C.\n\nWHAT TO MEMORIZE\nTime and bandwidth are reciprocal: Δω·Δt ≳ 1 (equivalently Δf·Δt ≳ 1/2π). A short pulse is spectrally broad; a long, nearly monochromatic wave train is spectrally narrow. This is the classical (Fourier) statement that becomes the energy–time uncertainty relation once you multiply by ħ. Watch the factor of 2π: ordinary-frequency bandwidth is ≈ 1.6×10⁸ Hz, angular is 10⁹ rad/s — different by the 2π that separates f from ω."
+      },
+
+      {
+        "question": "A wave packet localized to a spatial extent Δx is built by superposing plane waves e^(ikx) over a spread of wave numbers Δk. Fourier analysis requires Δx·Δk ≳ 1. Using the de Broglie relation p = ħk, this immediately implies:",
+        "choices": [
+          "Δx·Δp ≈ 0 for a well-built packet",
+          "Δx·Δp ≳ 1, independent of ħ",
+          "Δx·Δp ≳ ħ, the Heisenberg position–momentum uncertainty relation",
+          "Δx·Δp ≳ ħ², a stronger bound",
+          "Δp = ħ/Δx exactly, with no inequality"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe relation Δx·Δk ≳ 1 is a pure theorem of Fourier analysis: you cannot make a superposition both spatially narrow and spectrally narrow. Substituting k = p/ħ (so Δk = Δp/ħ) turns it into Δx·(Δp/ħ) ≳ 1, i.e. Δx·Δp ≳ ħ. This is the Heisenberg uncertainty relation, obtained here with no quantum postulate beyond p = ħk — the quantum content is entirely in that single identification.\n\n90-SECOND SOLUTION\nΔx·Δk ≳ 1, put k = p/ħ, and out comes Δx·Δp ≳ ħ. Choice C.\n\nWHAT TO MEMORIZE\nThe uncertainty principle is Fourier reciprocity plus de Broglie. Δx·Δk ≳ 1 holds for ANY wave (sound, light, water); multiplying by ħ via p = ħk makes it quantum. This is why localization always costs momentum spread. The exact-equality trap (choice E) drops the inequality; the true statement is a lower bound, saturated only by Gaussian packets."
+      },
+
+      {
+        "question": "Ripples on the surface of water dominated by surface tension (capillary waves) obey the dispersion relation ω = A k^(3/2), where A is a constant. For a wave packet built from a narrow band of wave numbers around k, how does the group velocity compare with the phase velocity?",
+        "choices": [
+          "v_g = v_p",
+          "v_g = (1/2)v_p",
+          "v_g = 2v_p",
+          "v_g = (3/2)v_p",
+          "v_g = (2/3)v_p"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe phase velocity is v_p = ω/k = A k^(3/2)/k = A k^(1/2). The group velocity is v_g = dω/dk = A·(3/2)k^(1/2). Their ratio is v_g/v_p = (3/2), so v_g = (3/2)v_p: the packet's envelope outruns its individual crests.\n\nNUMERICS WITHOUT A CALCULATOR\nFor any power law ω = A kᵖ, v_p = A k^(p−1) and v_g = pA k^(p−1), so v_g/v_p = p exactly. Here p = 3/2, giving v_g = (3/2)v_p — read straight off the exponent.\n\n90-SECOND SOLUTION\nω ∝ kᵖ ⇒ v_g/v_p = p. Here p = 3/2, so v_g = (3/2)v_p. Choice D.\n\nWHAT TO MEMORIZE\nFor a power-law dispersion ω = A kᵖ, the group-to-phase velocity ratio is exactly the exponent p: non-dispersive p = 1 gives v_g = v_p, deep-water gravity waves (p = 1/2) give v_g = v_p/2, capillary ripples (p = 3/2) give v_g = 3v_p/2, and free matter waves (p = 2) give v_g = 2v_p. Memorize the ratio-equals-exponent shortcut and every such question is one line."
+      },
+
+      {
+        "question": "A perfectly monochromatic (single-frequency) wave and a wave of finite duration are contrasted. Which statement is correct?",
+        "choices": [
+          "Only infinite wave trains have well-defined frequencies, but finite ones have none",
+          "A single-frequency wave can have any finite duration",
+          "A finite wave train is still perfectly monochromatic",
+          "A single-frequency wave must be infinite in extent; any finite wave train necessarily contains a spread of frequencies",
+          "Frequency content is independent of duration"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA single Fourier component e^(iω₀t) has the same amplitude for all time — it is infinite in extent. To confine a wave to a finite duration you must superpose a band of frequencies (multiply by a window, which in Fourier space convolves the single spike into a band of nonzero width Δω ≳ 1/Δt). Therefore a truly monochromatic wave is infinitely long, and any finite pulse must carry a spread of frequencies.\n\n90-SECOND SOLUTION\nInfinite sine = one frequency; cut it to finite length and you must add frequencies (Δω·Δt ≳ 1). Choice D.\n\nWHAT TO MEMORIZE\nMonochromatic ⇔ infinite duration; finite duration ⇔ finite bandwidth. This is the qualitative face of the time–bandwidth relation and the reason real spectral lines have a natural width set by the finite lifetime of the emitting state (Δν ≈ 1/(2πΔt)). It is a statement about Fourier pairs, not about measurement error."
+      },
+
+      {
+        "question": "A string of length L fixed at both ends has normal modes sin(nπx/L), which form the Fourier sine basis on the interval [0, L]. The string is released from an initial shape that is SYMMETRIC about its midpoint x = L/2. Which modes are present in the subsequent motion?",
+        "choices": [
+          "Only the odd-numbered modes (n = 1, 3, 5, …)",
+          "Only the even-numbered modes (n = 2, 4, 6, …)",
+          "All modes equally",
+          "Only the fundamental",
+          "No modes; a symmetric shape cannot be expanded"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe mode sin(nπx/L) is symmetric about the midpoint x = L/2 when n is odd and antisymmetric when n is even (since sin(nπ(L−x)/L) = sin(nπ − nπx/L) = (−1)^(n+1) sin(nπx/L)). An initial shape that is symmetric about the midpoint has zero overlap with every antisymmetric (even-n) mode, so only the odd modes are excited. This is a parity argument, now applied in the normal-mode basis rather than to a full-period Fourier series.\n\n90-SECOND SOLUTION\nOdd modes are symmetric about the center, even modes antisymmetric. A midpoint-symmetric initial shape projects only onto the symmetric (odd) modes. Choice A.\n\nWHAT TO MEMORIZE\nThe fixed-fixed string modes sin(nπx/L) are the Fourier sine basis, and symmetry about the midpoint selects parity in n: symmetric initial shape ⇒ odd modes, antisymmetric ⇒ even modes. This is the same overlap/parity logic as the pluck-point rule, and it is why a centrally-symmetric pluck (like a midpoint triangle) contains only odd harmonics."
+      },
+
+      {
+        "question": "A string fixed at both ends has a fundamental frequency f₁ = 150 Hz. Because the allowed standing waves form a harmonic series, what is the frequency of the fourth mode (the fourth harmonic)?",
+        "choices": [
+          "150 Hz",
+          "300 Hz",
+          "450 Hz",
+          "600 Hz",
+          "750 Hz"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a string fixed at both ends the allowed wavelengths are λₙ = 2L/n, so the frequencies are fₙ = n·(v/2L) = n·f₁ — integer multiples of the fundamental. The fourth harmonic is f₄ = 4·150 Hz = 600 Hz.\n\nNUMERICS WITHOUT A CALCULATOR\nHarmonic series ⇒ fₙ = n f₁. Just multiply: 4 × 150 = 600 Hz.\n\n90-SECOND SOLUTION\nfₙ = n f₁ = 4 × 150 = 600 Hz. Choice D.\n\nWHAT TO MEMORIZE\nA string fixed at both ends (and an open-open pipe) supports the full harmonic series fₙ = n f₁, n = 1, 2, 3, …. These integer-multiple frequencies are exactly why the sin(nπx/L) modes are a Fourier basis — the frequencies are commensurate. Contrast this with a drumhead, whose overtones are not integer multiples and so are not a simple Fourier series."
+      },
+
+      {
+        "question": "A pipe of length L that is closed at one end and open at the other is compared with a string fixed at both ends. Which statement about its standing-wave spectrum is correct?",
+        "choices": [
+          "It supports only the ODD harmonics of its fundamental, f, 3f, 5f, …",
+          "It supports the full harmonic series, f, 2f, 3f, 4f, …",
+          "It supports only the even harmonics, 2f, 4f, 6f, …",
+          "Its overtones are not related to the fundamental by any simple ratio",
+          "It has no discrete standing-wave frequencies"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe boundary conditions differ: the closed end forces a displacement node and the open end an antinode. The shortest standing wave fits a quarter wavelength in the tube (L = λ/4), and the higher modes fit L = 3λ/4, 5λ/4, … — only ODD quarter-wavelengths. The resulting frequencies are f, 3f, 5f, …: only the odd harmonics of the fundamental f = v/4L. A string fixed at both ends, by contrast, has node–node boundary conditions and supports the full harmonic series.\n\n90-SECOND SOLUTION\nClosed–open pipe: node at one end, antinode at the other ⇒ only odd quarter-wavelengths fit ⇒ odd harmonics only, f, 3f, 5f. Choice A.\n\nWHAT TO MEMORIZE\nBoundary conditions set the spectrum. Both-fixed string or both-open pipe: all harmonics (node–node or antinode–antinode, fundamental v/2L). Closed–open pipe: odd harmonics only (node–antinode, fundamental v/4L). This is the acoustic analogue of half-wave symmetry selecting odd terms — the missing even harmonics are why a clarinet (closed–open) sounds different from an open flute."
+      },
+
+      {
+        "question": "In Fraunhofer (far-field) diffraction, the amplitude pattern on the screen is the spatial Fourier transform of the aperture's transmission function. A single slit of width a therefore produces a sinc-shaped amplitude whose central maximum has angular half-width θ ≈ λ/a. If the slit is made NARROWER, the diffraction pattern:",
+        "choices": [
+          "Becomes wider (the central maximum spreads out)",
+          "Becomes narrower (the central maximum contracts)",
+          "Is unchanged in width",
+          "Splits into two separate maxima",
+          "Disappears entirely"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe pattern is the Fourier transform of the aperture, and Fourier transforms are reciprocal: a narrow function in real space transforms to a broad function in the conjugate (angle) space. Quantitatively the central half-width is θ ≈ λ/a, so decreasing the slit width a INCREASES θ — the pattern spreads out. A wide slit gives a tight beam; a narrow slit gives a broad one.\n\n90-SECOND SOLUTION\nAperture and pattern are a Fourier pair, so widths are reciprocal (θ ≈ λ/a). Narrower slit ⇒ wider pattern. Choice A.\n\nWHAT TO MEMORIZE\nFar-field diffraction = spatial Fourier transform of the aperture, and the reciprocity of Fourier pairs makes real-space width and angular width inversely related: θ ≈ λ/a. This is the same reciprocity as Δx·Δk ≳ 1 (here Δx = slit width, Δk ↔ angular spread). It is why small apertures blur images (large diffraction) and large apertures resolve fine detail."
+      },
+
+      {
+        "question": "A diffraction grating is a periodic aperture with slit spacing d. Because it is periodic, its far-field pattern (spatial Fourier transform) consists of sharp maxima rather than a smooth envelope. The principal maxima occur at angles satisfying d sinθ = mλ. If the slit spacing d is DOUBLED, the angular spacing between adjacent diffraction orders:",
+        "choices": [
+          "Doubles",
+          "Increases fourfold",
+          "Is unchanged",
+          "Is halved",
+          "Depends only on the number of slits"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe grating condition d sinθ = mλ gives sinθ_m = mλ/d, so the orders sit at angles set by λ/d. Doubling d halves λ/d, packing the orders closer together — the angular spacing between adjacent maxima is halved. This is Fourier reciprocity for a periodic function: a larger real-space period d gives a smaller spacing in the conjugate (spatial-frequency) domain.\n\nNUMERICS WITHOUT A CALCULATOR\nsinθ_m = mλ/d ∝ 1/d. Double d ⇒ every order's angle scales by 1/2 ⇒ spacing halved. No trig evaluation needed for small angles.\n\n90-SECOND SOLUTION\nOrders sit at sinθ = mλ/d ∝ 1/d. Bigger period ⇒ closer orders. Double d ⇒ half the spacing. Choice D.\n\nWHAT TO MEMORIZE\nA periodic aperture transforms to a set of sharp spikes (the reciprocal comb), with spacing ∝ 1/d: larger real-space period ⇒ finer spacing of orders. This is exactly the real-space ↔ reciprocal-space reciprocity of the crystal lattice, with d ↔ 2π/d. Do not confuse order spacing (set by d) with the sharpness of each order (set by the total number of slits N)."
+      },
+
+      {
+        "question": "A double slit is described as the SUM of two identical single-slit apertures separated by a distance d. By the Fourier shift theorem, the far-field amplitude is the single-slit transform multiplied by a factor coming from the two shifted copies. This predicts that the double-slit intensity is:",
+        "image": "images/fourier/fourier_q21.png",
+        "choices": [
+          "A pattern independent of the slit separation d",
+          "A pure set of equally bright fringes with no envelope",
+          "The single-slit pattern with no interference structure",
+          "Twice the single-slit intensity everywhere, with no fringes",
+          "The single-slit (sinc²) envelope modulated by cos²(πd sinθ/λ) interference fringes"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe aperture is g(x) = s(x + d/2) + s(x − d/2), where s is a single slit. By the shift theorem, each shifted copy contributes the single-slit transform S(k) times a phase e^(±ikd/2), so the total transform is S(k)·[e^(ikd/2) + e^(−ikd/2)] = S(k)·2cos(kd/2). Squaring for intensity gives the single-slit envelope |S|² (the sinc²) multiplied by cos²(kd/2) = cos²(πd sinθ/λ) — the familiar two-slit fringes riding under the single-slit envelope.\n\n90-SECOND SOLUTION\nTwo shifted copies ⇒ shift theorem ⇒ factor 2cos(kd/2). Intensity = sinc² envelope × cos² fringes. Choice E.\n\nWHAT TO MEMORIZE\nAdding shifted copies of an aperture multiplies its transform by a sum of phases — the shift theorem in action. Double slit = single-slit envelope × cosine-squared fringes: the envelope width is set by the slit width a (∝ λ/a) and the fringe spacing by the separation d (∝ λ/d). This cleanly separates the two length scales, and it is why the missing orders occur where a fringe maximum lands on an envelope zero."
+      },
+
+      {
+        "question": "A crystal is periodic in real space with lattice period a. Its Fourier (reciprocal) lattice has a characteristic spacing. How does the reciprocal-lattice spacing depend on the real-space period a?",
+        "choices": [
+          "It is proportional to 2π/a (inversely proportional to a)",
+          "It is proportional to a",
+          "It is proportional to a²",
+          "It is independent of a",
+          "It is proportional to √a"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe reciprocal lattice is the set of Fourier components of the periodic crystal, and Fourier reciprocity makes real-space and reciprocal-space scales inverse. For a one-dimensional lattice of period a, the reciprocal-lattice points are spaced by 2π/a. A larger real-space period gives a MORE closely spaced reciprocal lattice, and vice versa — exactly the reciprocity seen for the diffraction grating (order spacing ∝ 1/d).\n\n90-SECOND SOLUTION\nReciprocal spacing = 2π/a ∝ 1/a. Bigger cell ⇒ finer reciprocal lattice. Choice A.\n\nWHAT TO MEMORIZE\nReal-space period a ↔ reciprocal-space spacing 2π/a: the defining reciprocity of the crystal lattice, the same relation that governs diffraction gratings and Fourier pairs generally. The Bragg condition is just the statement that constructive scattering occurs when the scattering vector equals a reciprocal-lattice vector. Choice B (proportional to a) is the reciprocity read backwards — the single most common error."
+      },
+
+      {
+        "question": "In a diffraction experiment on a crystal, a feature is observed at a SMALL scattering angle, corresponding to a small reciprocal-space distance from the origin. In real space, this feature corresponds to:",
+        "choices": [
+          "A short real-space periodicity (finely spaced planes)",
+          "A random, aperiodic arrangement",
+          "A feature with no real-space counterpart",
+          "The overall size of the crystal only",
+          "A long real-space periodicity (widely spaced planes)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nReciprocal distance scales as 2π/(real-space period), so a SMALL reciprocal-space distance corresponds to a LARGE real-space period. A small scattering angle probes small |G|, hence long real-space periodicities (widely spaced planes). Conversely, features far out in reciprocal space (large angles) encode short real-space distances — fine structure.\n\n90-SECOND SOLUTION\nReciprocal distance ∝ 1/(real period). Small reciprocal distance ⇒ long real-space period. Choice E.\n\nWHAT TO MEMORIZE\nSmall in reciprocal space = large in real space, always, because they are Fourier conjugates (G ∝ 1/a). This is why small-angle scattering probes large structures (polymers, colloids) while wide-angle scattering probes atomic-scale spacings. It is the same inverse relationship as slit-width ↔ diffraction-width and pulse-duration ↔ bandwidth — one principle wearing many hats."
+      },
+
+      {
+        "question": "A square-wave voltage with fundamental frequency f₀ = 1.0 kHz is passed through a simple RC low-pass filter with R = 1.0 kΩ and C = 0.10 μF. Recalling that the square wave contains only odd harmonics at f₀, 3f₀, 5f₀, … and that the filter's −3 dB cutoff is f_c = 1/(2πRC), what does the output most nearly resemble?",
+        "choices": [
+          "A constant (DC) voltage",
+          "An unchanged square wave",
+          "A pure sine wave at the third harmonic 3f₀",
+          "A nearly pure sine wave at the fundamental frequency f₀",
+          "A triangle wave at frequency 2f₀"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe cutoff is f_c = 1/(2πRC) = 1/(2π·10³·10⁻⁷) ≈ 1.6 kHz. This sits ABOVE the fundamental (1.0 kHz) but BELOW the third harmonic (3.0 kHz). A low-pass filter passes frequencies below f_c and attenuates those above, and the attenuation grows with harmonic number (the n-th harmonic is suppressed by ≈ f_c/(nf₀) at high n). So the fundamental passes nearly intact while the 3rd, 5th, … harmonics are progressively cut. Stripped of its higher harmonics, the square wave's output is close to a pure sine at f₀.\n\nNUMERICS WITHOUT A CALCULATOR\nf_c = 1/(2πRC): with RC = 10³·10⁻⁷ = 10⁻⁴ s, f_c = 1/(2π·10⁻⁴) ≈ 1.6 kHz. Compare to the harmonics at 1, 3, 5 kHz: only the 1 kHz fundamental sits below f_c, so it alone survives cleanly.\n\n90-SECOND SOLUTION\nf_c ≈ 1.6 kHz lands between f₀ (1 kHz) and 3f₀ (3 kHz). Low-pass keeps the fundamental, dumps the higher odd harmonics ⇒ nearly a pure sine at f₀. Choice D.\n\nWHAT TO MEMORIZE\nA low-pass filter is a harmonic selector: place f_c between the fundamental and the next harmonic and the output collapses toward a pure sine at f₀. This is the physical meaning of Fourier decomposition of a signal — each harmonic is an independent sinusoid the filter can pass or reject on its own. The DC trap (choice A) would require f_c below f₀, which is not the case here."
+      },
+
+      {
+        "question": "A sinusoidal voltage of peak value V_p is passed through an ideal FULL-WAVE rectifier, producing the waveform |V_p sin(ωt)| with no smoothing. What is the DC (average) value of this rectified output?",
+        "choices": [
+          "V_p",
+          "V_p/2",
+          "V_p/√2",
+          "(1/π)V_p ≈ 0.32 V_p",
+          "(2/π)V_p ≈ 0.64 V_p"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe DC value is the average of |V_p sin(ωt)| over a cycle, which equals its average over a half period (by the rectification). Average of |sinθ| = (1/π)∫₀^π sinθ dθ = (1/π)[−cosθ]₀^π = (1/π)(2) = 2/π. So the DC output is (2/π)V_p ≈ 0.637 V_p. This is the a₀ term of the rectified waveform's Fourier series — its constant component.\n\nNUMERICS WITHOUT A CALCULATOR\n∫₀^π sinθ dθ = 2, divided by the interval π gives 2/π ≈ 0.64. So ⟨|sin|⟩ = 2/π and the DC value is (2/π)V_p. The half-wave rectifier would give half of this, (1/π)V_p ≈ 0.32 V_p.\n\n90-SECOND SOLUTION\n⟨|sin|⟩ = 2/π ≈ 0.64, so DC = (2/π)V_p. Choice E.\n\nWHAT TO MEMORIZE\nFull-wave rectified average = (2/π)V_p ≈ 0.64 V_p; half-wave rectified average = (1/π)V_p ≈ 0.32 V_p (exactly half, since half-wave zeroes every other hump). Do not confuse the DC average (2/π)V_p with the RMS value V_p/√2 ≈ 0.71 V_p — choice C is that trap. The full-wave output's lowest AC ripple harmonic sits at 2ω, not ω, because the rectified wave repeats twice per input cycle."
+      }
+
+    ]
+  },
+
 
 
   {
