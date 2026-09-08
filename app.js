@@ -49,7 +49,7 @@ const TIMED_SECONDS_DEFAULT = 120;
 
 // Not real security: this file is public, so anyone who views the page
 // source can read it. It only keeps casual visitors out.
-const PASSWORD = "paulatakesmybreathaway";
+const PASSWORD = "paulaissoosmartandsoosexy";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 const answerIndex = (card) => LETTERS.indexOf(card.answer);
@@ -531,6 +531,14 @@ function renderLogin() {
   input.className = "login-input";
   input.setAttribute("aria-label", "Password");
   input.autocomplete = "off";
+  // Has to be typed by hand — no pasting a copied password in, and nothing
+  // to copy back out either.
+  const blockClipboard = (e) => e.preventDefault();
+  input.addEventListener("paste", blockClipboard);
+  input.addEventListener("copy", blockClipboard);
+  input.addEventListener("cut", blockClipboard);
+  input.addEventListener("drop", blockClipboard);
+  input.addEventListener("contextmenu", blockClipboard);
 
   const error = document.createElement("p");
   error.className = "login-error";
