@@ -15106,5 +15106,258 @@ const EXAMS = [
 
     ]
   },
-
+  {
+    "name": "Geometric Optics (Hard)",
+    "added": "2026-09-07",
+    "category": "optics",
+    "cards": [
+      {
+        "question": "A thin converging lens forms a sharp real image on a screen. The object sits 24 cm in front of the lens and the screen is 12 cm behind it. What is the focal length of the lens?",
+        "choices": [
+          "6 cm",
+          "8 cm",
+          "12 cm",
+          "18 cm",
+          "36 cm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBoth object and image are real, so s = 24 cm and s' = 12 cm are both positive. Apply 1/f = 1/s + 1/s' = 1/24 + 1/12 = 1/24 + 2/24 = 3/24 = 1/8, so f = 8 cm. A quick check: the image is closer than the object, so it is reduced (|m| = 12/24 = 1/2), which is consistent with the object being beyond 2f = 16 cm.\n\nNUMERICS WITHOUT A CALCULATOR\n1/f = 1/24 + 1/12. Put over 24: 1/24 + 2/24 = 3/24 = 1/8, so f = 8 cm. Just add the two reciprocals.\n\n90-SECOND SOLUTION\n1/f = 1/24 + 1/12 = 3/24 ⇒ f = 8 cm.\n\nWHAT TO MEMORIZE\nWith BOTH distances known and real (object and image both positive), the lens equation gives f directly by adding reciprocals — no magnification step needed. The 6 cm distractor comes from subtracting the reciprocals instead of adding (the mirror-vs-lens or virtual-image sign slip); 12 cm just echoes the image distance. For a real object and a real image on a screen, both terms are positive, so f is always smaller than either distance."
+      },
+      {
+        "question": "A thin plano-convex lens is made of glass of index 1.6. Its flat face has infinite radius of curvature and its convex face has a radius of 24 cm. What is the focal length of the lens in air?",
+        "choices": [
+          "15 cm",
+          "24 cm",
+          "40 cm",
+          "48 cm",
+          "60 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe lensmaker's equation is 1/f = (n − 1)(1/R₁ − 1/R₂). For the plano-convex lens one surface is flat (R = ∞, so 1/R = 0) and the other has R = 24 cm. Taking the curved surface as R₁ = 24 cm and the flat as R₂ = ∞: 1/f = (1.6 − 1)(1/24 − 0) = 0.6/24 = 1/40. So f = 40 cm.\n\nNUMERICS WITHOUT A CALCULATOR\nOne surface flat kills a term, leaving 1/f = (n − 1)/R = 0.6/24. Since 0.6/24 = 6/240 = 1/40, f = 40 cm. The only arithmetic is 0.6/24.\n\n90-SECOND SOLUTION\nFlat side contributes nothing; 1/f = (n − 1)/R = 0.6/24 = 1/40, f = 40 cm.\n\nWHAT TO MEMORIZE\nLensmaker's equation 1/f = (n − 1)(1/R₁ − 1/R₂); a flat surface simply drops out (1/∞ = 0). The 24 cm distractor is the radius itself, offered to anyone who forgets the (n − 1) factor; 48 cm is 2R, the answer if you mistakenly used (n − 1) = 0.5 or double-counted. The sign of each R follows the surface orientation, but for a single-curved-surface lens only the magnitude matters for |f|."
+      },
+      {
+        "question": "A thin converging lens of focal length 18 cm is used to form a real image that is exactly the SAME SIZE as the object. At what distance from the lens must the object be placed?",
+        "choices": [
+          "9 cm",
+          "18 cm",
+          "36 cm",
+          "54 cm",
+          "72 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA real image the same size as the object has magnification m = −1, so s' = s (from m = −s'/s = −1). Substitute into 1/f = 1/s + 1/s' = 2/s, giving s = 2f = 2(18) = 36 cm. This is the special symmetric case: object and image are both at 2f, equidistant on the two sides of the lens.\n\nNUMERICS WITHOUT A CALCULATOR\nSame-size real image ⇒ object at 2f. So s = 2 × 18 = 36 cm. No equation-solving needed once you know the m = −1 case sits at 2f.\n\n90-SECOND SOLUTION\nUnit-magnification real image ⇒ object (and image) at 2f = 36 cm.\n\nWHAT TO MEMORIZE\nThe converging lens produces a same-size (m = −1) real image only when the object is at 2f, with the image also at 2f on the far side — the single object position where object and image distances are equal. This is worth memorizing as the boundary between the reduced-image regime (object beyond 2f) and the magnified-image regime (object between f and 2f). The 18 cm distractor is f itself (which sends the image to infinity, not to a same-size image); 72 cm is 4f."
+      },
+      {
+        "question": "An object is placed 30 cm in front of a thin converging lens L₁ of focal length +10 cm. A thin diverging lens L₂ of focal length −15 cm is placed 20 cm behind L₁ on the same axis (see figure). Where is the final image, relative to L₂?",
+        "choices": [
+          "15 cm behind L₂, real",
+          "7.5 cm behind L₂, real",
+          "at infinity",
+          "3.75 cm behind L₂, real",
+          "3.75 cm in front of L₂, virtual"
+        ],
+        "answer": "E",
+        "image": "images/geo-optics/geo_q4.png",
+        "explanation": "WORKED SOLUTION\nStep 1 (L₁): 1/s₁' = 1/10 − 1/30 = (3 − 1)/30 = 2/30, so s₁' = 15 cm. L₁ alone would form its image 15 cm behind L₁.\nStep 2 (L₂): that image is 15 cm behind L₁, and L₂ sits 20 cm behind L₁, so the image lies 20 − 15 = 5 cm IN FRONT of L₂ — a real object for L₂ at s₂ = +5 cm.\n1/s₂' = 1/(−15) − 1/5 = −1/15 − 3/15 = −4/15, so s₂' = −15/4 = −3.75 cm. The negative sign means the final image is virtual, 3.75 cm in front of L₂.\n\nNUMERICS WITHOUT A CALCULATOR\nEach lens is one subtraction of unit fractions. L₁: 1/10 − 1/30 = 2/30 ⇒ 15 cm. Locate the intermediate image relative to L₂: 20 − 15 = 5 cm in front. L₂: 1/(−15) − 1/5 = −4/15 ⇒ −3.75 cm. Track the sign at each step and the two-lens chain is just the single-lens formula applied twice.\n\n90-SECOND SOLUTION\nL₁ images 15 cm past L₁ = 5 cm before L₂; then 1/s₂' = −1/15 − 1/5 = −4/15 ⇒ −3.75 cm ⇒ virtual, in front of L₂.\n\nWHAT TO MEMORIZE\nMulti-lens systems are solved sequentially: the image from one lens becomes the object for the next, with the object distance measured from the second lens. Here the intermediate image lands in FRONT of L₂ (a real object); had it landed behind, it would be a virtual object with a negative s₂. The 3.75-cm-behind trap flips the final sign; 15 cm behind is L₁'s image alone, ignoring L₂ entirely."
+      },
+      {
+        "question": "A thin converging lens of focal length +16 cm is placed in direct contact with a thin diverging lens of focal length −48 cm. What is the focal length of the combination?",
+        "choices": [
+          "−32 cm",
+          "−24 cm",
+          "+24 cm",
+          "+32 cm",
+          "+64 cm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThin lenses in contact add their powers (P = 1/f): 1/f = 1/f₁ + 1/f₂ = 1/16 + 1/(−48). Common denominator 48: 1/f = 3/48 − 1/48 = 2/48 = 1/24, so f = +24 cm. The positive result means the combination is net converging, because the +16 cm converging lens is stronger (larger power) than the −48 cm diverging lens.\n\nNUMERICS WITHOUT A CALCULATOR\nPowers add: 1/16 − 1/48. Over 48 that is 3/48 − 1/48 = 2/48 = 1/24, so f = +24 cm. Work in reciprocals; never average the focal lengths.\n\n90-SECOND SOLUTION\n1/f = 1/16 − 1/48 = 2/48 = 1/24 ⇒ f = +24 cm, converging.\n\nWHAT TO MEMORIZE\nLenses in contact add powers: 1/f = 1/f₁ + 1/f₂. The sign of the result gives the character — here positive, so converging, because the shorter-focal-length (stronger) lens wins. The +64 and −32 distractors come from adding or subtracting the focal lengths directly, which is exactly wrong: you must combine reciprocals. This is the same rule that makes two identical lenses in contact have half the focal length."
+      },
+      {
+        "question": "A converging lens is used to project a sharp, real, magnified image of a small object onto a screen. Keeping the lens fixed, the object is moved slightly CLOSER to the lens (but still farther away than the focal length). To restore a sharp image, the screen must be moved, and the image size changes. Which happens?",
+        "choices": [
+          "The screen moves farther from the lens and the image gets larger",
+          "The screen stays put and the image is unchanged",
+          "The screen moves closer to the lens and the image gets smaller",
+          "The screen moves farther, but the image gets smaller",
+          "The screen moves closer, but the image gets larger"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFrom 1/f = 1/s + 1/s', decreasing the object distance s (while s > f) increases 1/s, which forces 1/s' to decrease, so s' increases — the image moves FARTHER from the lens, and the screen must follow it outward. The magnification |m| = s'/s then increases because s' grows while s shrinks, so the image gets LARGER. (In the limit s → f from above, s' → ∞ and the image blows up.)\n\n90-SECOND SOLUTION\nMove the object toward f and the real image runs away toward infinity, growing as it goes. Screen moves out, image gets bigger. Choice A.\n\nWHAT TO MEMORIZE\nFor a real image from a converging lens, object and image distances move oppositely (as s decreases toward f, s' increases toward ∞) and the magnification |m| = s'/s always increases as the object approaches the focal point. The intuition 'closer object ⇒ closer image' (the trap) is exactly backwards for real imaging. This is the projector/enlarger principle: to enlarge, move the lens closer to the object and the screen farther away."
+      },
+      {
+        "question": "A concave mirror has a focal length of 15 cm. A small object is placed only 10 cm in front of the mirror (inside the focal length). Describe the resulting image.",
+        "choices": [
+          "Real, inverted, and reduced, 6 cm in front of the mirror",
+          "Real, inverted, and magnified, 30 cm in front of the mirror",
+          "No image forms, because the object is inside the focal length",
+          "Virtual, upright, and reduced, at the mirror surface",
+          "Virtual, upright, and magnified 3×, located 30 cm behind the mirror"
+        ],
+        "answer": "E",
+        "image": null,
+        "explanation": "WORKED SOLUTION\nWith the object (10 cm) inside the focal length (15 cm), a concave mirror behaves like a magnifying glass: the reflected rays diverge and the image is virtual, upright, and magnified, behind the mirror. Apply 1/f = 1/s + 1/s': 1/s' = 1/15 − 1/10 = (2 − 3)/30 = −1/30, so s' = −30 cm (negative ⇒ behind the mirror, virtual). The magnification is m = −s'/s = −(−30)/10 = +3, upright and 3× enlarged.\n\nNUMERICS WITHOUT A CALCULATOR\n1/s' = 1/15 − 1/10 = (2 − 3)/30 = −1/30 ⇒ s' = −30 cm; m = 30/10 = 3. Negative s' ⇒ virtual (behind); the sign is the whole answer.\n\n90-SECOND SOLUTION\nObject inside f of a concave mirror ⇒ virtual, upright, magnified, behind the mirror — the shaving-mirror regime. m = +3, s' = −30 cm.\n\nWHAT TO MEMORIZE\nA concave mirror with the object INSIDE its focal length gives a virtual, upright, magnified image behind the mirror (how a makeup/shaving mirror works up close) — the mirror analogue of the magnifying glass. The real-image traps are the object-outside-f outcomes; the sign test 1/s' = 1/f − 1/s < 0 immediately shows the image is virtual here. For a concave mirror f = +R/2 > 0."
+      },
+      {
+        "question": "A convex spherical mirror has a radius of curvature of magnitude 24 cm (see figure). At what object distance does the mirror form an upright image exactly one-quarter (1/4) the size of the object?",
+        "choices": [
+          "9 cm",
+          "12 cm",
+          "24 cm",
+          "36 cm",
+          "48 cm"
+        ],
+        "answer": "D",
+        "image": "images/geo-optics/geo_q8.png",
+        "explanation": "WORKED SOLUTION\nA convex mirror has f = −R/2 = −12 cm and always gives an upright, reduced virtual image, so m = +1/4 means s' = −s/4 (from m = −s'/s). Substitute into 1/f = 1/s + 1/s': 1/(−12) = 1/s + 1/(−s/4) = 1/s − 4/s = −3/s. Solving, −3/s = −1/12, so s = 36 cm. (Check: s' = −9 cm, m = −(−9)/36 = +0.25. ✓)\n\nNUMERICS WITHOUT A CALCULATOR\nUpright image at 1/4 size ⇒ s' = −s/4. Then 1/s + 1/s' = 1/s − 4/s = −3/s must equal 1/f = −1/12, giving s = 3 × 12 = 36 cm. The reciprocals combine to −3/s, so s = 3|f|.\n\n90-SECOND SOLUTION\nm = +1/4 ⇒ s' = −s/4; 1/s − 4/s = −3/s = −1/12 ⇒ s = 36 cm.\n\nWHAT TO MEMORIZE\nRunning the mirror equation backward from a given magnification: write s' = −m·s (with m carrying its sign), substitute, and solve for s. A convex mirror always gives 0 < m < 1 (upright, reduced), so the magnification directly sets the object distance. The 9 cm distractor is |s'|, the image distance, not the object distance; 12 cm is |f| itself."
+      },
+      {
+        "question": "The figure shows a concave mirror with its focal point F and center of curvature C marked on the axis. A small object O is placed BETWEEN F and the mirror. Among the labeled candidate points I–V (I, II, III lie to the left of the mirror near or beyond C; IV lies between O and the mirror; V lies behind the mirror), where is the image formed?",
+        "choices": [
+          "At point III (between C and F), real and inverted",
+          "At point I (far to the left), real and inverted",
+          "At point IV (between O and the mirror), real",
+          "No image forms",
+          "At point V (behind the mirror), virtual and upright"
+        ],
+        "answer": "E",
+        "image": "images/geo-optics/geo_q9.png",
+        "explanation": "WORKED SOLUTION\nFor a concave mirror, an object placed INSIDE the focal length (between F and the mirror) behaves exactly like an object inside the focal length of a converging lens: the reflected rays diverge and only appear to come from a point behind the mirror. The image is therefore virtual, upright, and magnified, located behind the mirror — point V. Algebraically, with s < f, 1/s' = 1/f − 1/s < 0, so s' < 0 (behind the mirror). This is the magnifying/shaving-mirror regime.\n\n90-SECOND SOLUTION\nObject inside F of a concave mirror ⇒ virtual, upright, magnified image behind the mirror. Only point V is behind the mirror. Choice E.\n\nWHAT TO MEMORIZE\nConcave mirror, object inside F: virtual, upright, magnified, behind the mirror — the same regime as a magnifying glass, and the way a makeup/shaving mirror works up close. Points I–III (real images left of the mirror) are the outcomes for an object OUTSIDE F, offered as traps; a real image is impossible when s < f. The sign test 1/s' = 1/f − 1/s < 0 settles it without ray tracing."
+      },
+      {
+        "question": "A coin lies at the bottom of a container filled with water (index 1.33) to a depth of 12 cm. Viewed from directly above, at what apparent depth below the surface does the coin appear to be?",
+        "choices": [
+          "6.0 cm",
+          "It depends on the viewer's height above the water",
+          "12 cm",
+          "16 cm",
+          "9.0 cm"
+        ],
+        "answer": "E",
+        "image": null,
+        "explanation": "WORKED SOLUTION\nFor near-normal (straight-down) viewing, refraction at the flat water surface makes an object appear at a reduced depth: apparent depth = real depth / n. With real depth 12 cm and n = 1.33: apparent depth = 12/1.33 ≈ 9.0 cm. The coin looks shallower than it is because rays leaving the denser water bend away from the normal as they exit into air.\n\nNUMERICS WITHOUT A CALCULATOR\napparent depth = real depth / n = 12/1.33. Since 1.33 ≈ 4/3, dividing by 4/3 multiplies by 3/4: 12 × 3/4 = 9.0 cm. Remembering n_water ≈ 4/3 turns this into 'take three-quarters.'\n\n90-SECOND SOLUTION\napparent depth = 12 / (4/3) = 9.0 cm.\n\nWHAT TO MEMORIZE\nLooking straight down, apparent depth = real depth / n (the object appears shallower); looking up from underwater, apparent height = real height × n (objects look higher). Using n_water ≈ 4/3 makes the water case 'three-quarters of the true depth.' The 16 cm distractor multiplies by n instead of dividing — the wrong direction. This is a first-order (paraxial) result; large viewing angles add distortion, but the GRE version is the straight-down case."
+      },
+      {
+        "question": "A ray of light in air strikes the top face of a parallel-sided glass slab (index n > 1) at an angle of incidence of 40° from the normal, passes through the slab, and exits from the bottom face (see figure). Which statement correctly describes the emerging ray?",
+        "choices": [
+          "It emerges bent farther from the normal than the incident ray, at more than 40°",
+          "It emerges parallel to the incident ray but laterally displaced sideways",
+          "It emerges antiparallel (reversed) to the incident ray",
+          "It emerges along the same straight line as the incident ray, with no displacement",
+          "It undergoes total internal reflection and does not emerge"
+        ],
+        "answer": "B",
+        "image": "images/geo-optics/geo_q11.png",
+        "explanation": "WORKED SOLUTION\nThe two faces of the slab are parallel, so their normals are parallel. At the top face Snell's law gives sin 40° = n sin θ (the ray bends toward the normal on entering the denser glass). At the bottom face the ray goes from glass back to air, and Snell's law gives n sin θ = sin θ_exit, which forces θ_exit = 40°. The emerging ray is therefore parallel to the incident ray. It is not, however, along the same line: inside the slab the ray traveled at the smaller angle θ, so it exits shifted sideways by a lateral displacement d that grows with the slab thickness and the index.\n\n90-SECOND SOLUTION\nParallel faces ⇒ the entry and exit refractions undo each other's angle, so the exit ray is parallel to the incident ray, just displaced sideways. Choice B.\n\nWHAT TO MEMORIZE\nA parallel-sided slab never changes a ray's DIRECTION — the exit angle equals the entrance angle — it only shifts the ray sideways by a lateral displacement d = t sin(θ₁ − θ₂)/cos θ₂ (with t the thickness). The 'same straight line' trap forgets the displacement; the 'more than 40°' trap forgets that the second refraction reverses the first. This is why looking through a thick window shifts the view slightly but does not tilt it."
+      },
+      {
+        "question": "Light traveling inside glass of index 1.5 reaches a flat boundary with water of index 1.33 at an angle of incidence of 30° from the normal. What is the approximate angle of refraction in the water?",
+        "choices": [
+          "34°",
+          "30°",
+          "26°",
+          "42°",
+          "The ray is totally internally reflected"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nSnell's law: n₁ sin θ₁ = n₂ sin θ₂, so sin θ₂ = (n₁/n₂) sin θ₁ = (1.5/1.33) sin 30° = (1.128)(0.5) = 0.564. Then θ₂ = arcsin(0.564) ≈ 34°. Because the light moves from denser glass to less-dense water, it bends AWAY from the normal, so θ₂ > θ₁ = 30°, consistent with 34°.\n\nNUMERICS WITHOUT A CALCULATOR\nsin θ₂ = (1.5/1.33)(0.5). The ratio 1.5/1.33 ≈ 1.13, so sin θ₂ ≈ 0.56, a bit above sin 30° = 0.5 and below sin 37° ≈ 0.6, landing near 34°. You do not need a precise arcsine — just bracket 0.56 between the standard values.\n\n90-SECOND SOLUTION\nDenser → less dense means bending away from the normal, so θ₂ > 30°; sin θ₂ = (1.5/1.33)(0.5) ≈ 0.56 ⇒ ≈ 34°.\n\nWHAT TO MEMORIZE\nSnell's law n₁ sin θ₁ = n₂ sin θ₂; going from higher to lower index bends the ray AWAY from the normal (θ increases). Check first whether total internal reflection is even possible: here the critical angle is arcsin(1.33/1.5) ≈ 62°, well above 30°, so the ray does refract. The 26° distractor is what you get by inverting the index ratio (bending toward the normal, the wrong direction for glass → water)."
+      },
+      {
+        "question": "A fish rests underwater (index of the water is 1.33) and looks upward. The entire hemisphere of the world above the surface appears compressed into a bright circular cone (\"Snell's window\"). What is the half-angle of that cone, measured from the vertical?",
+        "choices": [
+          "42°",
+          "45°",
+          "49°",
+          "53°",
+          "The whole upper hemisphere fills 90°, with no cone"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRays arriving at the surface from any above-water direction refract into the water, and the most extreme case — light skimming along the surface at 90° incidence — refracts to the critical angle inside the water. So the entire above-water hemisphere maps into a cone whose half-angle equals the critical angle θ_c, given by sin θ_c = 1/n = 1/1.33 ≈ 0.752. Then θ_c = arcsin(0.752) ≈ 49°. Beyond this cone, the fish sees only reflections of the underwater world (total internal reflection).\n\nNUMERICS WITHOUT A CALCULATOR\nsin θ_c = 1/1.33 = 3/4 = 0.75. arcsin(0.75) ≈ 48.6° ≈ 49° (bracket it: sin 45° = 0.71, sin 50° = 0.77). Using n_water ≈ 4/3 makes sin θ_c = 3/4 exactly.\n\n90-SECOND SOLUTION\nSnell's window half-angle = critical angle: sin θ_c = 1/1.33 = 0.75 ⇒ ≈ 49°.\n\nWHAT TO MEMORIZE\nSnell's window: an underwater observer sees the whole sky compressed into a cone of half-angle equal to the critical angle θ_c = arcsin(1/n) ≈ 49° for water — because a grazing (90°) incident ray refracts exactly to θ_c. Outside the cone is total internal reflection. The 90° distractor forgets that refraction squeezes the hemisphere into a cone; the same critical-angle formula sin θ_c = 1/n governs both this and the fiber/prism TIR cases."
+      },
+      {
+        "question": "Inside a step-index optical fiber, the core has index 1.50 and the cladding index 1.48. A ray travels along the core and strikes the core–cladding wall. What is the MINIMUM angle of incidence (measured from the normal to the wall) for which the ray is guided by total internal reflection?",
+        "choices": [
+          "About 9°",
+          "About 45°",
+          "About 66°",
+          "About 81°",
+          "Any angle is guided"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nGuiding along the fiber requires total internal reflection at the core–cladding wall, which happens only for incidence angles at or above the critical angle. At the core–cladding interface, sin θ_c = n_clad/n_core = 1.48/1.50 ≈ 0.987, so θ_c = arcsin(0.987) ≈ 81°. Only rays hitting the wall at 81° or MORE (i.e. nearly grazing, close to parallel to the axis) are guided; steeper rays refract out into the cladding and are lost.\n\nNUMERICS WITHOUT A CALCULATOR\nsin θ_c = 1.48/1.50 = 0.987, very close to 1, so θ_c is very close to 90°: arcsin(0.987) ≈ 81°. Because the two indices are nearly equal, the critical angle is large and the guided rays must be nearly parallel to the fiber axis.\n\n90-SECOND SOLUTION\nsin θ_c = n_clad/n_core = 1.48/1.50 ≈ 0.99 ⇒ θ_c ≈ 81°.\n\nWHAT TO MEMORIZE\nAt the core–cladding wall, the guiding condition is θ ≥ θ_c with sin θ_c = n_clad/n_core. Because a fiber's core and cladding indices are deliberately close, θ_c is large (near 90°), so only rays traveling nearly parallel to the axis are trapped — the physical reason fibers accept only a narrow cone of input. The 9° distractor takes the complement (the angle from the axis rather than from the normal). Do not confuse the internal wall angle with the external acceptance angle; they are complementary."
+      },
+      {
+        "question": "A 45°–45°–90° prism is to be used as a retroreflecting element by letting light strike the long (hypotenuse) face from inside at 45° incidence, relying on total internal reflection there. For a prism whose glass has index n = 1.40, what happens at the hypotenuse?",
+        "choices": [
+          "The light partially refracts out, because 45° is LESS than the critical angle for n = 1.40",
+          "Total internal reflection occurs, since 45° exceeds the critical angle",
+          "The light refracts out entirely, with no reflection",
+          "The light is reflected only if it is polarized",
+          "The behavior cannot be determined without the wavelength"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor total internal reflection at the glass–air hypotenuse, the 45° incidence angle must exceed the critical angle θ_c, where sin θ_c = 1/n. For n = 1.40, sin θ_c = 1/1.40 = 0.714, so θ_c = arcsin(0.714) ≈ 45.6°. Since the incidence angle 45° is just BELOW this critical angle (45° < 45.6°), the condition for TIR is not quite met, and the light partially refracts out of the hypotenuse rather than being fully reflected.\n\nNUMERICS WITHOUT A CALCULATOR\nsin θ_c = 1/n = 1/1.40 ≈ 0.714. Compare to sin 45° = 0.707. Since 0.714 > 0.707, θ_c is slightly larger than 45°, so 45° incidence falls just short of TIR. The whole decision is the comparison 1/n vs sin 45° = 1/√2 ≈ 0.707.\n\n90-SECOND SOLUTION\nTIR needs n > 1/sin 45° = √2 ≈ 1.414. Here n = 1.40 < 1.414, so TIR fails — the light leaks out. Choice A.\n\nWHAT TO MEMORIZE\nA 45° glass prism totally reflects only if n > √2 ≈ 1.414 (so that θ_c < 45°). Ordinary crown glass (n ≈ 1.5) comfortably satisfies this, which is why real corner and roof prisms work — but a low-index glass like n = 1.40 falls just short. The trap answer assumes TIR always happens in a 45° prism; the threshold n = √2 is the fact being tested. The wavelength is irrelevant to leading order here."
+      },
+      {
+        "question": "A glass prism has an apex (refracting) angle of 60° and is made of glass with index 1.50. When a beam passes through it symmetrically (at minimum deviation), through what angle is the beam deviated from its original direction?",
+        "choices": [
+          "30°",
+          "37°",
+          "45°",
+          "49°",
+          "60°"
+        ],
+        "answer": "B",
+        "image": null,
+        "explanation": "WORKED SOLUTION\nAt minimum deviation the ray passes symmetrically, and the prism relation is n = sin[(A + D_min)/2] / sin(A/2), where A is the apex angle and D_min the minimum deviation. Solve for D_min: sin[(A + D_min)/2] = n sin(A/2) = 1.50 sin 30° = 1.50 × 0.5 = 0.75. So (A + D_min)/2 = arcsin(0.75) ≈ 48.6°, giving A + D_min ≈ 97.2°, and D_min ≈ 97.2° − 60° ≈ 37°.\n\nNUMERICS WITHOUT A CALCULATOR\nn sin(A/2) = 1.5 × sin 30° = 0.75. arcsin(0.75) ≈ 48.6° (since sin 48.6° ≈ 0.75). Then D_min = 2(48.6°) − 60° ≈ 37°. The only nonstandard step is arcsin(0.75); bracket it between 45° (0.71) and 50° (0.77).\n\n90-SECOND SOLUTION\nsin[(60 + D)/2] = 1.5 sin 30° = 0.75 ⇒ (60 + D)/2 ≈ 48.6° ⇒ D ≈ 37°.\n\nWHAT TO MEMORIZE\nMinimum-deviation prism formula: n = sin[(A + D_min)/2]/sin(A/2). For a 60° prism this is the standard way to measure a glass index — here run in reverse to get the deviation from a known n. The 30° distractor is the apex-angle-half or the deviation you'd get from a thin-prism approximation D ≈ (n − 1)A = 0.5 × 60 = 30°, which is only valid for SMALL apex angles, not 60°. The thin-prism shortcut is a trap when A is large."
+      },
+      {
+        "question": "White light passes through a prism and is dispersed because the glass index depends slightly on wavelength. For typical glass, which statement about the spread of colors is correct?",
+        "choices": [
+          "Violet light is deviated most, because the index is largest at short wavelengths",
+          "Green light is deviated most, being in the middle of the spectrum",
+          "All colors are deviated equally; the prism only shifts them sideways",
+          "Red light is deviated most, because it has the longest wavelength",
+          "The order of colors depends on the apex angle, not the index"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nDispersion arises because the refractive index of ordinary (normally dispersive) glass is LARGER for shorter wavelengths: n_violet > n_red. Since a larger index produces a larger deviation through the prism, violet light bends the most and red the least. The familiar spectral order emerging from a prism runs from least-deviated red to most-deviated violet.\n\n90-SECOND SOLUTION\nNormal dispersion: n rises toward the blue end, and larger n means larger deviation, so violet bends most. Choice A.\n\nWHAT TO MEMORIZE\nIn normal dispersion, n decreases with wavelength (n_violet > n_red), so violet is deviated most and red least — 'blue bends best.' The deviation increases with n, which is why the short-wavelength end fans out farthest. The red-most-deviated answer inverts this and is the classic trap. The apex angle scales the overall spread but does not change the ORDER of the colors, which is fixed by n(λ)."
+      },
+      {
+        "question": "A simple refracting (Keplerian) astronomical telescope is built from two converging lenses: an objective of focal length 90 cm and an eyepiece of focal length 15 cm, adjusted for viewing with relaxed eye (final image at infinity). What is the angular magnification, and what is the distance between the two lenses?",
+        "choices": [
+          "M = 15, separation 90 cm",
+          "M = 6, separation 75 cm",
+          "M = 1350, separation 105 cm",
+          "M = 6, separation 105 cm",
+          "M = 0.17, separation 105 cm"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a telescope focused for relaxed-eye viewing, the two lenses share a common focal point, so the tube length is the sum of the focal lengths: L = f_objective + f_eyepiece = 90 + 15 = 105 cm. The angular magnification is M = f_objective/f_eyepiece = 90/15 = 6.\n\nNUMERICS WITHOUT A CALCULATOR\nM = f_o/f_e = 90/15 = 6; separation = f_o + f_e = 90 + 15 = 105 cm. Two one-step computations — a ratio and a sum of the same two numbers.\n\n90-SECOND SOLUTION\nM = 90/15 = 6; tube length = 90 + 15 = 105 cm. Choice D.\n\nWHAT TO MEMORIZE\nAfocal telescope: angular magnification M = f_objective/f_eyepiece and lens separation = f_objective + f_eyepiece (the lenses share a focus). High magnification therefore wants a long objective and a short eyepiece. The M = 1350 distractor multiplies the focal lengths (a nonsense operation here); the M = 0.17 trap inverts the ratio. Note the objective focal length appears in BOTH the magnification and the length, so a long tube and high power go together."
+      },
+      {
+        "question": "A person with a near point of 25 cm uses a thin converging lens of focal length 2.5 cm as a simple magnifier, adjusting it so that the virtual image is formed at the near point (25 cm) for maximum magnification. What is the angular magnification?",
+        "choices": [
+          "About 6×",
+          "About 9×",
+          "About 10×",
+          "About 11×",
+          "About 25×"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a simple magnifier with the image placed at the near point (the maximum-magnification setting), the angular magnification is M = 1 + 25/f, where 25 cm is the near-point distance and f is in centimeters. With f = 2.5 cm: M = 1 + 25/2.5 = 1 + 10 = 11, so about 11×.\n\nNUMERICS WITHOUT A CALCULATOR\nM = 1 + 25/f = 1 + 25/2.5 = 1 + 10 = 11. One division and an add of 1.\n\n90-SECOND SOLUTION\nImage at near point: M = 1 + 25/f = 1 + 10 = 11×. Choice D.\n\nWHAT TO MEMORIZE\nSimple magnifier: M = 1 + 25/f for the image at the near point (maximum magnification), and M = 25/f for the image at infinity (relaxed eye), with f in cm. The two differ by exactly 1. The 10× distractor drops the '+1' (it is the relaxed-eye value 25/f); the question specifies the near-point setting, so the +1 belongs. A shorter focal length gives a stronger magnifier."
+      },
+      {
+        "question": "An object is placed at various positions in front of a thin CONVERGING lens. Consider the three statements: I. When the object is beyond twice the focal length (s > 2f), the image is real, inverted, and reduced. II. When the object is exactly at the focal point (s = f), no image forms (the rays emerge parallel). III. When the object is inside the focal length (s < f), the image is virtual, upright, and magnified. Which statements are correct?",
+        "choices": [
+          "I only",
+          "I, II, and III",
+          "I and III only",
+          "III only",
+          "II and III only"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nCheck each regime with 1/f = 1/s + 1/s' and m = −s'/s.\nI. s > 2f: then f < s' < 2f, so s' < s and |m| = s'/s < 1 — real (s' > 0), inverted (m < 0), reduced. TRUE. (This is the camera regime.)\nII. s = f: 1/s' = 1/f − 1/f = 0, so s' = ∞ — the rays leave parallel and form no finite image. TRUE.\nIII. s < f: 1/s' = 1/f − 1/s < 0, so s' < 0 (virtual), and m = −s'/s > 1 — upright and magnified. TRUE. (The magnifying-glass regime.)\nAll three are correct.\n\n90-SECOND SOLUTION\nThe three named regimes (object beyond 2f → reduced real image; object at f → image at infinity; object inside f → magnified virtual image) are the three standard converging-lens cases, all correctly stated. Choice B.\n\nWHAT TO MEMORIZE\nThe converging-lens image map: s > 2f gives a reduced real image (camera); s = 2f gives a same-size real image; f < s < 2f gives a magnified real image (projector); s = f gives rays at infinity (no image); s < f gives a magnified virtual image (magnifier). Knowing this table lets you answer character questions instantly without computing s'. Every statement here is a correct entry, so the answer is 'all,' the option students distrust when a question looks like it must contain a trap."
+      }
+    ]
+  }
 ];
