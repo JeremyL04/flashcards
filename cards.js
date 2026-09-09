@@ -6979,6 +6979,416 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Lab Methods & Circuits Test (Hard)",
+    "added": "2026-09-08",
+    "category": "lab",
+    "cards": [
+
+      {
+        "question": "In the circuit shown, an ideal 12 V battery is in series with a 2 Ω resistor, which then feeds three parallel resistors of 12 Ω, 6 Ω, and 4 Ω. What is the current through the 6 Ω resistor?",
+        "image": "images/lab-circuits-1/circuit_q1.png",
+        "choices": [
+          "0.5 A",
+          "1.0 A",
+          "1.5 A",
+          "2.0 A",
+          "3.0 A"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe three parallel resistors combine as 1/R_p = 1/12 + 1/6 + 1/4 = 1/12 + 2/12 + 3/12 = 6/12, so R_p = 2 Ω. The total circuit resistance is 2 Ω (series) + 2 Ω = 4 Ω, so the battery delivers I = 12/4 = 3.0 A. That 3.0 A drops 3.0 × 2 = 6.0 V across the series resistor, leaving 12 − 6 = 6.0 V across the parallel group. The current through the 6 Ω branch is then 6.0/6 = 1.0 A. (Check: branches carry 6/12 = 0.5, 6/6 = 1.0, 6/4 = 1.5 A, summing to 3.0 A. ✓)\n\nNUMERICS WITHOUT A CALCULATOR\nR_p = 2 Ω; total = 2 + 2 = 4 Ω; I = 12/4 = 3 A; V across the group = 12 − 3·2 = 6 V; branch current = 6/6 = 1.0 A.\n\n90-SECOND SOLUTION\nReduce the parallel trio to 2 Ω, find the 6 V across it, then that voltage over 6 Ω is the branch current.\n\nWHAT TO MEMORIZE\nParallel resistors: reciprocals add. The voltage across the whole parallel group is common to every branch, so once you have that group voltage each branch current is just V/R_branch."
+      },
+
+      {
+        "question": "In the circuit shown, two batteries drive a shared resistor. A 12 V battery in series with 2 Ω forms the left loop, a 6 V battery in series with 2 Ω forms the right loop, and the two loops share a common 4 Ω resistor between their junction and a return node. What is the current through the shared 4 Ω resistor?",
+        "image": "images/lab-circuits-1/circuit_q2.png",
+        "choices": [
+          "0.6 A",
+          "1.2 A",
+          "1.8 A",
+          "2.4 A",
+          "3.0 A"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nLet mesh currents i₁ (left loop) and i₂ (right loop) both flow downward through the shared 4 Ω resistor, which therefore carries i₁ + i₂. Kirchhoff's voltage law for each loop: 12 = 2i₁ + 4(i₁+i₂) and 6 = 2i₂ + 4(i₁+i₂), i.e. 6i₁ + 4i₂ = 12 and 4i₁ + 6i₂ = 6. Solving simultaneously gives i₁ = 2.4 A and i₂ = −0.6 A, so the shared-resistor current is i₁ + i₂ = 1.8 A. (The negative i₂ means the 6 V battery is actually being driven backward by the stronger 12 V source.) The distractor 3.0 A (E) adds the two short-circuit currents (12/2 + 6/2)/... ignoring the shared resistor's loading.\n\n90-SECOND SOLUTION\nWrite one KVL equation per loop with a shared mesh current through the common resistor, and solve the 2×2 system. The shared branch carries the SUM of the mesh currents.\n\nWHAT TO MEMORIZE\nFor a two-source network you must solve the full Kirchhoff system — a branch's current is not set by its own battery alone. A negative mesh current means that branch's current runs opposite to the assumed direction (the weaker source is being charged)."
+      },
+
+      {
+        "question": "In the Wheatstone bridge shown, a galvanometer G bridges the midpoints of two divider arms. The arms are R₁ = 100 Ω and R₂ = 200 Ω on the left, and R₃ = 150 Ω and R_x on the right. For what value of R_x does the galvanometer read exactly zero?",
+        "image": "images/lab-circuits-1/circuit_q3.png",
+        "choices": [
+          "75 Ω",
+          "150 Ω",
+          "225 Ω",
+          "300 Ω",
+          "450 Ω"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe bridge is balanced (zero galvanometer current) when the two dividers produce equal midpoint potentials, i.e. when the ratios match: R₁/R₂ = R₃/R_x. Solving, R_x = R₂R₃/R₁ = (200)(150)/(100) = 300 Ω. At balance no current flows through the galvanometer regardless of its resistance, and the bridge output is independent of the supply voltage. The distractor 225 Ω (C) averages the resistances instead of using the ratio condition.\n\nNUMERICS WITHOUT A CALCULATOR\nBalance means R₁/R₂ = R₃/R_x, so R_x = R₃ · (R₂/R₁) = 150 × 2 = 300 Ω. One ratio, one multiply.\n\n90-SECOND SOLUTION\nBalanced bridge ⇒ cross-ratios equal: R₁ R_x = R₂ R₃. Solve for R_x. No supply voltage or galvanometer resistance needed.\n\nWHAT TO MEMORIZE\nA Wheatstone bridge balances when R₁/R₂ = R₃/R₄ (adjacent arms in proportion). At balance the detector carries no current and the result is independent of both the source voltage and the detector's resistance — that independence is what makes it a precise null method."
+      },
+
+      {
+        "question": "A battery of EMF 12 V has an internal resistance of 1.0 Ω. A variable load resistor R is connected across its terminals. What load resistance draws the MAXIMUM power from the battery, and what is that maximum power?",
+        "choices": [
+          "R = 1.0 Ω, P = 36 W",
+          "R = 0, P = 144 W",
+          "R = 0.5 Ω, P = 48 W",
+          "R = 2.0 Ω, P = 24 W",
+          "R → ∞, P = 0"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe power delivered to the load is P = I²R = [EMF/(R + r)]² R. Maximizing over R (dP/dR = 0) gives the maximum-power-transfer condition R = r, the internal resistance. Here R = 1.0 Ω, and then P = EMF²/(4r) = 144/4 = 36 W. At that point the terminal voltage is exactly half the EMF (6 V) and half the total power is wasted inside the battery, so the efficiency is only 50%. The distractor R = 0 (B) maximizes the CURRENT (short circuit) but delivers zero power to the load, since all power then dissipates internally.\n\nNUMERICS WITHOUT A CALCULATOR\nMax transfer at R = r, and the peak load power is EMF²/(4r) = 144/4 = 36 W. Memorize the /(4r) form.\n\n90-SECOND SOLUTION\nMaximum power transfer ⇒ match the load to the source resistance (R = r). Peak power is EMF²/(4r).\n\nWHAT TO MEMORIZE\nMaximum power is delivered to a load when the load resistance equals the source's internal resistance (R = r); the peak load power is EMF²/(4r), achieved at 50% efficiency (half the power heats the source). Maximum current, by contrast, occurs at short circuit and delivers zero useful power."
+      },
+
+      {
+        "question": "A resistor connected across a battery dissipates 4.0 W. The resistor is then replaced by another of the same material and length but HALF the cross-sectional area, still across the same ideal (fixed-voltage) battery. What power does the new resistor dissipate?",
+        "choices": [
+          "1.0 W",
+          "2.0 W",
+          "4.0 W",
+          "8.0 W",
+          "16 W"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nResistance is R = ρL/A, so halving the cross-sectional area DOUBLES the resistance (2R). At fixed battery voltage, power is P = V²/R, which is inversely proportional to R. Doubling R therefore HALVES the power: from 4.0 W to 2.0 W. The trap is 8.0 W (D), which would apply if power went UP with resistance — true only at fixed current (P = I²R), not fixed voltage.\n\nNUMERICS WITHOUT A CALCULATOR\nHalf the area ⇒ double the resistance. Fixed voltage ⇒ P = V²/R ⇒ power halves: 4.0/2 = 2.0 W.\n\n90-SECOND SOLUTION\nGeometry first: R = ρL/A, so A→A/2 gives R→2R. Then at fixed V, P ∝ 1/R, so power halves.\n\nWHAT TO MEMORIZE\nR = ρL/A: resistance grows with length, falls with area. At fixed VOLTAGE P = V²/R (more resistance → less power); at fixed CURRENT P = I²R (more resistance → more power). Always fix which quantity the source holds constant before scaling the power."
+      },
+
+      {
+        "question": "In the circuit shown, a 12 V ideal battery connects through a 4 Ω resistor to a node, from which an 8 Ω resistor continues to ground; a capacitor C is connected in parallel with the 8 Ω resistor. After the circuit has been connected a long time (steady state), what is the charge on the capacitor?",
+        "image": "images/lab-circuits-1/circuit_q6.png",
+        "choices": [
+          "4C",
+          "6C",
+          "8C",
+          "12C",
+          "0"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIn steady state no current flows into the fully charged capacitor, so the whole steady current flows through the series 4 Ω and 8 Ω resistors: I = 12/(4+8) = 1.0 A. The capacitor sits in parallel with the 8 Ω resistor, so it charges to that resistor's voltage: V_C = I × 8 Ω = 8.0 V. The charge is Q = CV_C = 8C. The trap 12C (D) uses the full battery voltage, ignoring the drop across the 4 Ω series resistor; 0 (E) wrongly assumes the capacitor blocks the DC current from the resistors too (it only blocks its own branch).\n\nNUMERICS WITHOUT A CALCULATOR\nSteady state ⇒ no current in the capacitor branch ⇒ the resistors act as a simple voltage divider. V_C = 12 × 8/(4+8) = 8 V, so Q = 8C.\n\n90-SECOND SOLUTION\nAt steady state the capacitor is an open branch: find the voltage across whatever it parallels using the resistor divider, then Q = CV.\n\nWHAT TO MEMORIZE\nAt DC steady state a capacitor carries no current (open branch) but charges to the voltage across the element it parallels — found from the resistor network as if the capacitor were absent. The series resistor's voltage drop is what makes V_C less than the full EMF."
+      },
+
+      {
+        "question": "A capacitor charged to voltage V₀ is discharged through a resistor R starting at t = 0. In terms of the time constant τ = RC, at what time has the ENERGY stored on the capacitor fallen to 1/e of its initial value?",
+        "choices": [
+          "τ",
+          "τ ln 2",
+          "2τ",
+          "τ/e",
+          "τ/2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nDuring discharge the voltage decays as V(t) = V₀e^{−t/τ}, so the stored energy U = ½CV² decays as U(t) = U₀e^{−2t/τ} — twice as fast an exponent, because energy goes as voltage SQUARED. Setting e^{−2t/τ} = 1/e gives 2t/τ = 1, so t = τ/2. The distractor τ (A) is the time for the VOLTAGE (or charge) to fall to 1/e, not the energy; forgetting the factor of 2 from squaring is the classic trap.\n\nNUMERICS WITHOUT A CALCULATOR\nEnergy ∝ V², so its decay constant is τ/2, not τ. The 1/e point for energy is therefore at t = τ/2.\n\n90-SECOND SOLUTION\nVoltage and charge decay with time constant τ; energy (∝ V²) decays with time constant τ/2. So energy reaches 1/e in half the time voltage does.\n\nWHAT TO MEMORIZE\nIn an RC discharge, charge and voltage fall with time constant τ = RC, but ENERGY (∝ V²) falls with time constant τ/2. Any 'energy' version of an RC timing question carries an extra factor of 2 in the exponent compared with the 'voltage' or 'charge' version."
+      },
+
+      {
+        "question": "In the circuit shown, an AC source drives a series capacitor C = 1.0 μF, with the output taken across a shunt resistor R = 1.0 kΩ to ground. This network passes high frequencies and attenuates low ones. Below roughly what angular frequency is the output significantly attenuated (the corner angular frequency)?",
+        "image": "images/lab-circuits-1/circuit_q8.png",
+        "choices": [
+          "1 × 10² rad/s",
+          "1 × 10³ rad/s",
+          "1 × 10⁶ rad/s",
+          "6 × 10³ rad/s",
+          "1 × 10⁹ rad/s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith the series element a capacitor and the output taken across the shunt resistor, this is a HIGH-pass filter: at high frequency the capacitor's impedance 1/(ωC) is small and the signal passes to the output; at low frequency the capacitor blocks it. The corner is where the two impedances are equal, R = 1/(ωC), giving ω_c = 1/(RC) = 1/[(10³)(10⁻⁶)] = 1/(10⁻³) = 1 × 10³ rad/s. Below this the output falls off. The distractor 6 × 10³ (D) confuses the angular corner ω_c = 1/RC with the ordinary-frequency corner (2π factor).\n\nNUMERICS WITHOUT A CALCULATOR\nω_c = 1/(RC) = 1/(10³ × 10⁻⁶) = 10³ rad/s. Whether it's high- or low-pass doesn't change the corner formula, only which side is attenuated.\n\n90-SECOND SOLUTION\nSeries C, output across R ⇒ high-pass, corner ω = 1/RC. Compute RC and invert.\n\nWHAT TO MEMORIZE\nThe corner of any first-order RC filter is ω_c = 1/(RC); which element is in series (and where the output is tapped) decides high-pass vs low-pass. Series C / shunt R = high-pass; series R / shunt C = low-pass."
+      },
+
+      {
+        "question": "A 2.0 μF capacitor and a 6.0 μF capacitor are connected in SERIES across a 12 V battery. What is the voltage across the 2.0 μF capacitor?",
+        "image": "images/lab-circuits-1/circuit_q9.png",
+        "choices": [
+          "3.0 V",
+          "6.0 V",
+          "8.0 V",
+          "9.0 V",
+          "12 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nSeries capacitors carry the SAME charge Q. The series combination is C_eq = (2·6)/(2+6) = 12/8 = 1.5 μF, so Q = C_eq V = (1.5 μF)(12 V) = 18 μC. The voltage across the 2.0 μF capacitor is then V = Q/C = 18 μC/2.0 μF = 9.0 V (and across the 6.0 μF it is 18/6 = 3.0 V, summing to 12 V ✓). Note the voltage divides INVERSELY with capacitance: the SMALLER capacitor takes the LARGER share of the voltage. The distractor 3.0 V (A) puts the large share on the wrong capacitor (dividing as if larger C gets more voltage).\n\nNUMERICS WITHOUT A CALCULATOR\nSeries caps share charge; voltage splits inversely to C. With a 2:6 = 1:3 capacitance ratio, the voltage ratio is 3:1, so the 2 μF takes 3/4 of 12 V = 9 V.\n\n90-SECOND SOLUTION\nFor series capacitors, V ∝ 1/C. The 2 μF and 6 μF split 12 V in the ratio 3:1, so the smaller one gets 9 V.\n\nWHAT TO MEMORIZE\nSeries capacitors carry equal charge, so voltage divides INVERSELY with capacitance (V_i = Q/C_i): the smallest capacitor sees the largest voltage. This is opposite to series resistors, where the largest resistor sees the largest voltage."
+      },
+
+      {
+        "question": "A 3.0 μF capacitor is charged to 100 V and then disconnected from the battery. It is then connected across an uncharged 6.0 μF capacitor. After the charge redistributes, what fraction of the original stored energy remains in the system?",
+        "choices": [
+          "1/9",
+          "1/2",
+          "2/3",
+          "1/3",
+          "all of it (energy is conserved)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nInitial charge Q₀ = C₁V₀ = (3.0 μF)(100 V) = 300 μC, and initial energy U₀ = ½C₁V₀² = ½(3.0 μF)(100)² = 15 mJ. Charge is conserved and redistributes until both capacitors share a common voltage V_f = Q₀/(C₁+C₂) = 300 μC/9.0 μF = 33.3 V. The final energy is U_f = ½(C₁+C₂)V_f² = ½(9.0 μF)(33.3)² = 5.0 mJ, which is U₀/3. So one-third of the energy remains and two-thirds is 'lost' — dissipated in the connecting wires' resistance (or radiated), no matter how small that resistance is. The distractor 'all of it' (E) is the classic error: charge is conserved, but energy is NOT, because redistribution is irreversible.\n\n90-SECOND SOLUTION\nCommon final voltage V_f = Q₀/(C₁+C₂). Energy retained = U_f/U₀ = (C₁+C₂)V_f²/(C₁V₀²) = C₁/(C₁+C₂) = 3/9 = 1/3.\n\nWHAT TO MEMORIZE\nWhen a charged capacitor shares charge with an uncharged one, charge is conserved but energy is NOT — the fraction retained is C₁/(C₁+C₂), and the rest is lost to resistance/radiation however small. This 'capacitor paradox' is a favorite: never assume energy conservation in a charge-sharing step."
+      },
+
+      {
+        "question": "A parallel-plate capacitor is charged by a battery to voltage V₀, storing energy U₀, and is then DISCONNECTED from the battery (isolating its charge). A dielectric slab of constant κ = 3 is now inserted, completely filling the gap. What happens to the voltage across the plates and to the stored energy?",
+        "choices": [
+          "Voltage → V₀/3; energy → U₀/3",
+          "Voltage unchanged; energy → 3U₀",
+          "Voltage → 3V₀; energy → 3U₀",
+          "Voltage → V₀/3; energy → 3U₀",
+          "Voltage unchanged; energy → U₀/3"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nOnce disconnected, the CHARGE Q₀ is fixed (there is nowhere for it to go). Inserting the slab raises the capacitance to C = κC₀ = 3C₀. With Q fixed, the voltage V = Q₀/C falls to V₀/κ = V₀/3, and the stored energy U = Q₀²/(2C) falls to U₀/κ = U₀/3. The energy DROPS because the dielectric is pulled INTO the gap by the field — the capacitor does work on the slab. The trap 3U₀ (B, C) comes from reasoning as if the voltage were held fixed (battery-connected case); here it is the charge that is clamped.\n\n90-SECOND SOLUTION\nDisconnected ⇒ Q fixed. C → κC, so V = Q/C → V₀/κ and U = Q²/2C → U₀/κ. Both drop by κ.\n\nWHAT TO MEMORIZE\nDielectric inserted with battery DISCONNECTED clamps Q: V→V₀/κ, E→E₀/κ, U→U₀/κ (all fall; the slab is sucked in). With the battery CONNECTED, V is clamped instead: E unchanged, C→κC, Q→κQ, U→κU₀ (energy rises). Identify the clamped quantity first."
+      },
+
+      {
+        "question": "In the circuit shown, a 12 V ideal battery, a 4.0 Ω resistor, and an inductor are in series with a switch that closes at t = 0; the inductor current is zero beforehand. What is the magnitude of the voltage across the INDUCTOR immediately after the switch closes, and a long time later, respectively?",
+        "image": "images/lab-circuits-1/circuit_q12.png",
+        "choices": [
+          "0 V and 12 V",
+          "12 V and 12 V",
+          "3 V and 0 V",
+          "0 V and 0 V",
+          "12 V and 0 V"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAn inductor's CURRENT cannot change instantaneously, so at t = 0⁺ the current is still zero and no voltage is dropped across the resistor — the entire EMF appears across the inductor: 12 V. (The inductor initially behaves like an OPEN circuit, opposing the sudden change.) As the current rises to its steady value I_f = V/R and levels off, dI/dt → 0, so the inductor voltage L(dI/dt) → 0 and the inductor behaves like a plain wire (a short). Thus the inductor voltage goes from 12 V to 0. The distractor 0 V and 12 V (A) reverses the limits — the error of treating the inductor as a short at t = 0.\n\n90-SECOND SOLUTION\nInductor limits: at t = 0 it blocks the current change (acts open, full EMF across it); at t → ∞ it's a wire (0 V). So 12 V → 0 V.\n\nWHAT TO MEMORIZE\nInductor CURRENT cannot jump: at switch-on it acts as an OPEN branch (full source voltage across it, zero current), and at steady state as a SHORT (zero voltage, full current). This is the exact mirror image of a capacitor, whose VOLTAGE cannot jump."
+      },
+
+      {
+        "question": "An LC circuit consists of a 1.0 mH inductor and a 10 μF capacitor. At what angular frequency does it resonate?",
+        "choices": [
+          "1 × 10² rad/s",
+          "1 × 10³ rad/s",
+          "1 × 10⁴ rad/s",
+          "1 × 10⁵ rad/s",
+          "1 × 10⁶ rad/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe resonant angular frequency of an LC circuit is ω₀ = 1/√(LC). Here LC = (1.0×10⁻³)(10×10⁻⁶) = 1.0×10⁻⁸ s², so √(LC) = 1.0×10⁻⁴ s and ω₀ = 1/(1.0×10⁻⁴) = 1.0×10⁴ rad/s. The distractors slip a power of ten in the product LC or take an ordinary frequency f = ω/2π instead of the angular one requested.\n\nNUMERICS WITHOUT A CALCULATOR\nLC = 10⁻³ × 10⁻⁵ = 10⁻⁸; its square root is 10⁻⁴; the reciprocal is 10⁴ rad/s. Track the powers of ten carefully — that's the whole calculation.\n\n90-SECOND SOLUTION\nω₀ = 1/√(LC). Multiply L and C, take the square root, invert.\n\nWHAT TO MEMORIZE\nLC resonance: ω₀ = 1/√(LC) (angular), or f₀ = 1/(2π√(LC)). The dominant error is a factor of 2π (angular vs ordinary frequency) or a slipped power of ten in the LC product."
+      },
+
+      {
+        "question": "An AC generator has internal impedance Z_g = R_g + jX_g (a resistance in series with a reactance). It drives a load impedance Z_L. To deliver the MAXIMUM average power to the load, what should Z_L be?",
+        "choices": [
+          "Z_L = R_g − jX_g (complex conjugate of the source)",
+          "Z_L = R_g + jX_g (identical to the source)",
+          "Z_L = jX_g (purely reactive)",
+          "Z_L = R_g (purely resistive)",
+          "Z_L → ∞ (open circuit)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nMaximum average power transfer to a load fed by a source of internal impedance Z_g requires the load to be the COMPLEX CONJUGATE of the source impedance: Z_L = Z_g* = R_g − jX_g. The conjugate reactance (−X_g) cancels the source's reactance, so the total loop is purely resistive (R_g + R_L = 2R_g), which both maximizes the current for a given resistive dissipation and matches the resistive parts (R_L = R_g) as in the DC case. The distractor Z_L = R_g (D) matches only the resistance and leaves the source reactance uncancelled, delivering less than the maximum; identical impedance (B) doubles the reactance rather than cancelling it.\n\n90-SECOND SOLUTION\nConjugate match: cancel the reactance (X_L = −X_g) and match the resistance (R_L = R_g). Both conditions together define Z_L = Z_g*.\n\nWHAT TO MEMORIZE\nAC maximum-power-transfer theorem: the load should be the complex conjugate of the source impedance, Z_L = Z_g* = R_g − jX_g. This cancels the reactance and matches the resistances — the AC generalization of the DC rule R_L = R_g."
+      },
+
+      {
+        "question": "The equation for charge in an ideal LC circuit, L(d²Q/dt²) + Q/C = 0, is mathematically identical to the equation for a mass on a spring, m(d²x/dt²) + kx = 0. In this analogy, which mechanical quantities correspond to the inductance L and the capacitance C, respectively?",
+        "choices": [
+          "L ↔ spring constant k; C ↔ mass m",
+          "L ↔ 1/m; C ↔ k",
+          "L ↔ mass m; C ↔ spring constant k",
+          "L ↔ mass m; C ↔ 1/k (spring compliance)",
+          "L ↔ damping constant; C ↔ mass m"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nMatch the two equations term by term. L(d²Q/dt²) plays the role of m(d²x/dt²), so L ↔ m (inductance is the electrical inertia, resisting changes in current just as mass resists changes in velocity). The restoring term Q/C plays the role of kx, so 1/C ↔ k, i.e. C ↔ 1/k (capacitance is the electrical compliance, the inverse of stiffness). Charge Q corresponds to displacement x and current dQ/dt to velocity. The distractor swapping L↔k, C↔m (A) reverses the roles: it would make the inductor a restoring element, but the inductor's term is the second-derivative (inertial) one.\n\n90-SECOND SOLUTION\nWhatever multiplies the second derivative is the 'mass'; here that's L, so L ↔ m. Whatever multiplies the coordinate is the 'stiffness'; here that's 1/C, so 1/C ↔ k (C ↔ compliance 1/k).\n\nWHAT TO MEMORIZE\nLC ↔ mass-spring analogy: L ↔ m (inertia), 1/C ↔ k (stiffness), Q ↔ x, I ↔ v. The resonant frequency ω = 1/√(LC) then mirrors ω = √(k/m) exactly. Adding resistance R ↔ a damping coefficient b."
+      },
+
+      {
+        "question": "The Planck time is the unique combination of the gravitational constant G, the reduced Planck constant ħ, and the speed of light c that has dimensions of time. Given [G] = m³ kg⁻¹ s⁻², [ħ] = kg m² s⁻¹, and [c] = m s⁻¹, which combination gives a time?",
+        "choices": [
+          "√(Għ/c³)",
+          "√(ħc/G)",
+          "√(Gc/ħ)",
+          "Għ/c²",
+          "√(Għ/c⁵)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTry √(Għ/c⁵) and check the dimensions. Għ = (m³ kg⁻¹ s⁻²)(kg m² s⁻¹) = m⁵ s⁻³. Dividing by c⁵ = m⁵ s⁻⁵ gives (m⁵ s⁻³)/(m⁵ s⁻⁵) = s². The square root is s — a time. The distractor √(Għ/c³) (A) is the Planck LENGTH (it works out to metres), a classic near-miss differing only by two powers of c.\n\nNUMERICS WITHOUT A CALCULATOR\nGħ has dimensions m⁵ s⁻³ (the kg cancels). To end with s² under the root you must divide out the m⁵ and turn s⁻³ into s², which needs c⁵ (= m⁵ s⁻⁵). So √(Għ/c⁵).\n\n90-SECOND SOLUTION\nThe kg cancels in Għ, leaving m⁵ s⁻³. You need pure time, so kill the m⁵ with c⁵ and check the seconds: √(Għ/c⁵).\n\nWHAT TO MEMORIZE\nPlanck units from G, ħ, c: length √(Għ/c³), time √(Għ/c⁵), mass √(ħc/G). The length and time differ by one factor of c (time = length/c). Dimensional analysis fixes each combination uniquely — carry the units symbolically and solve for the exponents."
+      },
+
+      {
+        "question": "Four students each measure the same fixed length many times; the true value is known. Their results are summarized as: W — mean far from the true value, small spread; X — mean at the true value, large spread; Y — mean at the true value, small spread; Z — mean far from the true value, large spread. Which student's measurements are the most PRECISE but NOT accurate?",
+        "choices": [
+          "W",
+          "X",
+          "Y",
+          "Z",
+          "Precision and accuracy cannot be distinguished from this information"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nPrecision refers to the spread (reproducibility) of the measurements — small spread means high precision. Accuracy refers to how close the mean is to the true value — a mean far from the true value means low accuracy (a systematic error). Student W has a SMALL spread (precise) but a mean FAR from the true value (inaccurate) — precise but not accurate, the definition being asked. Student Y (small spread, correct mean) is both precise AND accurate; X is accurate but imprecise; Z is neither. The classic confusion is treating 'precise' and 'accurate' as synonyms; here they point to different students.\n\n90-SECOND SOLUTION\nPrecise = small spread; accurate = correct mean. 'Precise but not accurate' = tight cluster in the wrong place = W.\n\nWHAT TO MEMORIZE\nPrecision = reproducibility (spread, random error); accuracy = closeness to truth (bias, systematic error). A measurement can be precise but inaccurate (tight cluster, wrong center) — averaging more trials shrinks random error but never removes a systematic offset."
+      },
+
+      {
+        "question": "A weak light source sends photons one at a time toward a detector whose quantum efficiency (probability of registering any given photon) is 0.010. Over a run in which exactly 1000 photons arrive, what is the approximate mean number detected and the standard deviation of that number?",
+        "choices": [
+          "mean 10, standard deviation ≈ 10",
+          "mean 100, standard deviation ≈ 10",
+          "mean 10, standard deviation ≈ 1",
+          "mean 10, standard deviation ≈ 3",
+          "mean 1000, standard deviation ≈ 30"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEach of the 1000 photons is independently detected with probability p = 0.010, so the number detected follows a binomial distribution with mean Np = 1000 × 0.010 = 10. Because p is small and N is large, the distribution is well approximated by a Poisson distribution of mean 10, for which the standard deviation is √(mean) = √10 ≈ 3.2 ≈ 3. The distractor 'mean 10, sd ≈ 10' (A) confuses the standard deviation of the COUNT (√mean) with the mean itself; sd ≈ 1 (C) would require √(mean) to be 1, i.e. mean 1.\n\n90-SECOND SOLUTION\nRare independent events ⇒ Poisson. Mean = Np = 10; standard deviation = √mean = √10 ≈ 3.\n\nWHAT TO MEMORIZE\nA large number of independent trials each with small success probability gives a Poisson distribution with mean μ = Np and standard deviation √μ. The count's spread is the SQUARE ROOT of its mean — not the mean, and not Np(1−p) unless you're keeping the exact binomial."
+      },
+
+      {
+        "question": "A radioactive sample is counted and 2500 counts are recorded. Assuming Poisson statistics and negligible background, what is the approximate fractional (relative) uncertainty in this count?",
+        "choices": [
+          "0.04%",
+          "0.2%",
+          "2%",
+          "4%",
+          "50%"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a Poisson count of N, the standard deviation is √N and the fractional uncertainty is √N/N = 1/√N. Here N = 2500, so σ = √2500 = 50 counts, and the fractional uncertainty is 50/2500 = 0.02 = 2%. Equivalently, 1/√2500 = 1/50 = 2%. The distractor 4% (D) doubles the fractional error (using 2/√N or 2σ), and 0.04% (A) squares in the wrong direction (1/N instead of 1/√N).\n\nNUMERICS WITHOUT A CALCULATOR\n√2500 = 50, so the absolute uncertainty is 50 and the fractional uncertainty is 50/2500 = 1/50 = 2%.\n\n90-SECOND SOLUTION\nFractional uncertainty of a Poisson count is 1/√N. √2500 = 50, so 1/50 = 2%.\n\nWHAT TO MEMORIZE\nA single Poisson count of N has absolute uncertainty √N and fractional uncertainty 1/√N. To halve the fractional error you must quadruple the counts — precision improves only as the square root of the number collected."
+      },
+
+      {
+        "question": "An isotropic point source emits 1.0 × 10⁶ particles per second uniformly in all directions. A detector of face area 4.0 cm² is placed 10 cm from the source and registers every particle that strikes its face. Approximately what count rate does it record?",
+        "choices": [
+          "320 s⁻¹",
+          "3200 s⁻¹",
+          "8000 s⁻¹",
+          "32,000 s⁻¹",
+          "500,000 s⁻¹"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe detector intercepts the fraction of the sphere its face covers: A/(4πr²), with A = 4.0 cm² = 4.0×10⁻⁴ m² and r = 0.10 m. The full-sphere area at 10 cm is 4πr² = 4π(0.010) = 0.126 m². The intercepted fraction is (4.0×10⁻⁴)/0.126 = 3.18×10⁻³. Multiplying by the emission rate: (1.0×10⁶)(3.18×10⁻³) ≈ 3200 s⁻¹. The distractor 32,000 s⁻¹ (D) drops a factor of ten by forgetting to square the 0.10 m distance correctly, and 8000 (C) uses 2π instead of 4π.\n\nNUMERICS WITHOUT A CALCULATOR\nFraction = A/(4πr²) = 4×10⁻⁴/(4π×0.01) ≈ 4×10⁻⁴/0.126 ≈ 3.2×10⁻³. Times 10⁶ ⇒ ≈ 3200 counts/s.\n\n90-SECOND SOLUTION\nCount rate = (emission rate) × (detector area)/(4πr²). Compute the solid-angle fraction, then scale the source rate.\n\nWHAT TO MEMORIZE\nA detector's count rate from an isotropic source is (source rate) × A/(4πr²): the emission rate times the fraction of the full sphere the detector face subtends. The 4πr² (full sphere at that radius) is the denominator to compare the face area against."
+      },
+
+      {
+        "question": "Two sinusoidal signals of the SAME frequency are displayed on a dual-trace oscilloscope. Both have the same amplitude. One full cycle of each occupies 8.0 horizontal divisions, and the second trace's zero-crossing (going positive) is shifted 1.0 division to the right of the first's. What is the phase difference between the two signals?",
+        "image": "images/lab-circuits-1/circuit_q21.png",
+        "choices": [
+          "30°",
+          "45°",
+          "60°",
+          "90°",
+          "180°"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOne full period corresponds to 360° and occupies 8.0 divisions, so each division is 360°/8 = 45°. The traces are offset by 1.0 division, hence by 45° of phase. The horizontal sweep speed and the vertical scale are red herrings — phase is read purely from the FRACTION of a period between corresponding features (here 1.0/8.0 of a cycle). The distractor 90° (D) would be a quarter-period (2 divisions) offset, not 1.\n\nNUMERICS WITHOUT A CALCULATOR\nPhase per division = 360°/(divisions per period) = 360°/8 = 45°. Offset of 1 division ⇒ 45°.\n\n90-SECOND SOLUTION\nPhase difference = (shift in divisions / divisions per full cycle) × 360° = (1/8)(360°) = 45°. Absolute sweep/voltage settings don't matter.\n\nWHAT TO MEMORIZE\nOn a scope, phase difference between two same-frequency traces = (horizontal shift / one full period) × 360°, both measured in the same units (divisions). Only the RATIO matters; the sweep speed and amplitude scaling drop out."
+      },
+
+      {
+        "question": "An oscilloscope displays a waveform that is the SUM of a large, slow oscillation and a small, fast ripple riding on it. The horizontal sweep is set to 2.0 ms per division. The slow oscillation completes one full cycle every 5.0 divisions, and the fast ripple completes one full cycle every 0.50 division. What are the frequencies of the slow and fast components, respectively?",
+        "choices": [
+          "50 Hz and 500 Hz",
+          "100 Hz and 500 Hz",
+          "200 Hz and 2000 Hz",
+          "50 Hz and 1000 Hz",
+          "100 Hz and 1000 Hz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEach division is 2.0 ms. The slow oscillation's period is 5.0 div × 2.0 ms = 10 ms, so its frequency is 1/(10 ms) = 100 Hz. The fast ripple's period is 0.50 div × 2.0 ms = 1.0 ms, so its frequency is 1/(1.0 ms) = 1000 Hz. Reading two superimposed components off one trace just means measuring each one's period separately in divisions and converting with the sweep speed. The distractor 50 Hz / 500 Hz (A) uses 4.0 ms/div or halves each frequency; 200 Hz / 2000 Hz (C) inverts the sweep-speed conversion.\n\nNUMERICS WITHOUT A CALCULATOR\nPeriod = (divisions per cycle) × (ms per division); frequency = 1/period. Slow: 5 × 2 = 10 ms ⇒ 100 Hz. Fast: 0.5 × 2 = 1 ms ⇒ 1000 Hz.\n\n90-SECOND SOLUTION\nConvert each component's period to seconds via the sweep speed, then invert. Measure the slow and fast periods independently on the same trace.\n\nWHAT TO MEMORIZE\nScope frequency = 1/(period), and period = (divisions per cycle) × (time per division). A compound trace is read by measuring each component's own period in divisions; the sweep-speed setting (time/div) is the conversion factor from screen distance to time."
+      },
+
+      {
+        "question": "In a Michelson interferometer, one mirror is translated smoothly by 100 μm along the beam direction while monochromatic light illuminates the instrument. During this motion, 400 bright fringes pass a fixed point in the field of view. What is the wavelength of the light?",
+        "choices": [
+          "250 nm",
+          "400 nm",
+          "500 nm",
+          "633 nm",
+          "800 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nMoving a mirror a distance d changes that arm's round-trip path by 2d, and each wavelength of path change produces one fringe. So 2d = Nλ, giving λ = 2d/N = 2(100×10⁻⁶ m)/400 = (2.0×10⁻⁴)/400 = 5.0×10⁻⁷ m = 500 nm. The factor of 2 (the beam travels to the mirror and back) is essential; dropping it would give 250 nm (A). \n\nNUMERICS WITHOUT A CALCULATOR\nλ = 2d/N = 2 × 100 μm / 400 = 200 μm/400 = 0.5 μm = 500 nm.\n\n90-SECOND SOLUTION\nEach fringe = one wavelength of round-trip path change = 2 × (mirror displacement)/(number of fringes). λ = 2d/N.\n\nWHAT TO MEMORIZE\nMichelson moving-mirror relation: 2d = Nλ (the 2 is the round trip). One fringe per wavelength of optical-path change. This is how a Michelson interferometer serves as a precise wavemeter or a length standard."
+      },
+
+      {
+        "question": "On log-log axes, experimental data for y versus x fall on a straight line. The line rises exactly one decade in y (from 10 to 100) while x advances two decades (from 10 to 1000). Which functional form does this indicate?",
+        "image": "images/lab-circuits-1/circuit_q24.png",
+        "choices": [
+          "y ∝ √x",
+          "y ∝ x²",
+          "y ∝ x",
+          "y ∝ 1/x",
+          "y ∝ log x"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA straight line on log-log axes means a power law y = kxⁿ, and the slope (Δ log y / Δ log x) equals the exponent n. Here Δ log y = log(100/10) = 1 decade and Δ log x = log(1000/10) = 2 decades, so n = 1/2. Thus y ∝ x^{1/2} = √x. The distractor x² (B) inverts the slope (2 decades of y per 1 of x), and 'log x' (E) would not be a straight line on log-log axes at all.\n\nNUMERICS WITHOUT A CALCULATOR\nSlope on log-log = exponent. One decade of rise over two decades of run = slope ½ ⇒ y ∝ x^{1/2}.\n\n90-SECOND SOLUTION\nStraight line on log-log ⇒ power law; read the slope as the exponent. Here 1 decade up per 2 across ⇒ exponent ½ ⇒ √x.\n\nWHAT TO MEMORIZE\nStraight line on LOG-LOG axes ⇒ power law y = kxⁿ, with n = the slope in decades-per-decade. (Straight line on SEMI-LOG axes ⇒ exponential instead.) Read the exponent directly off the rise/run in decades."
+      },
+
+      {
+        "question": "The activity of a radioactive sample is recorded over time and plotted as ln(activity) versus time t (in seconds). The data fall on a straight line with slope −0.050 s⁻¹. What is the mean lifetime τ of this sample?",
+        "choices": [
+          "0.050 s",
+          "0.69 s",
+          "14 s",
+          "20 s",
+          "29 s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nExponential decay gives activity ∝ e^{−λt}, so ln(activity) = const − λt: a straight line whose slope is −λ. Here the slope is −0.050 s⁻¹, so the decay constant is λ = 0.050 s⁻¹. The mean lifetime is τ = 1/λ = 1/0.050 = 20 s. The distractor 14 s (C) is the HALF-LIFE (t½ = ln2/λ = 0.69/0.050 ≈ 14 s), a different quantity; confusing τ with t½ is the classic trap, and they differ by a factor of ln 2.\n\nNUMERICS WITHOUT A CALCULATOR\nSlope magnitude = λ = 0.050 s⁻¹. Mean lifetime τ = 1/λ = 20 s. (Half-life would be 0.69 × 20 ≈ 14 s.)\n\n90-SECOND SOLUTION\nThe slope of ln(activity) vs t is −λ. Mean lifetime is 1/λ = 20 s. Don't hand back the half-life.\n\nWHAT TO MEMORIZE\nOn a semilog decay plot, slope = −λ (the decay constant). The mean lifetime is τ = 1/λ; the half-life is t½ = ln2/λ = 0.693 τ. Three related-but-distinct quantities: keep straight which one is asked."
+      },
+
+      {
+        "question": "A sine wave of peak voltage 10 V passes through an ideal HALF-WAVE rectifier (which passes the positive half-cycles and blocks the negative ones) into a resistive load. What is the RMS value of the voltage across the load?",
+        "choices": [
+          "3.2 V",
+          "5.0 V",
+          "6.4 V",
+          "7.1 V",
+          "10 V"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA half-wave rectifier keeps only the positive half-cycles, zeroing the rest. The mean-square is computed over the WHOLE period: during the positive half the value is V₀²sin², whose average over that half is V₀²/2, but that contributes only for half the period, so ⟨V²⟩ = ½ × (V₀²/2) = V₀²/4. The RMS is therefore √(V₀²/4) = V₀/2 = 10/2 = 5.0 V. (For comparison, a FULL-wave rectifier keeps both halves, giving RMS = V₀/√2 ≈ 7.1 V — the distractor D — the same as the original sine, since squaring erased the sign anyway.) The distractor 6.4 V (C) is the full-wave AVERAGE (2V₀/π), a different quantity again.\n\nNUMERICS WITHOUT A CALCULATOR\nHalf-wave RMS: the sine's mean-square V₀²/2 is present only half the time, so ⟨V²⟩ = V₀²/4 and RMS = V₀/2 = 5 V. Full-wave keeps it all: RMS = V₀/√2.\n\n90-SECOND SOLUTION\nHalf-wave RMS = V₀/2 (the mean-square is halved by the missing half-cycle, then square-rooted). Full-wave RMS = V₀/√2.\n\nWHAT TO MEMORIZE\nRectified-sine values for peak V₀: half-wave RMS = V₀/2, average = V₀/π; full-wave RMS = V₀/√2, average = 2V₀/π. Half-waving halves the mean-square (blank half the time); full-waving leaves the mean-square unchanged (sign doesn't survive squaring)."
+      },
+
+      {
+        "question": "In the circuit shown, two inputs A and B each connect through a diode to a common output node, with the diodes' arrows (anodes) pointing FROM the inputs TOWARD the output node, and a resistor from the output node to ground (0 V). Logic levels are 0 V (logic 0) and +5 V (logic 1); the diodes are ideal. Which logic gate does this implement?",
+        "image": "images/lab-circuits-1/circuit_q27.png",
+        "choices": [
+          "AND",
+          "NAND",
+          "NOR",
+          "XOR",
+          "OR"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWith the diode anodes at the inputs and cathodes at the output node (which is pulled to ground through the resistor), a HIGH input forward-biases its diode and pulls the output up toward +5 V; a LOW input leaves its diode reverse-biased and does nothing. So the output is HIGH if EITHER input is high, and LOW only when BOTH are low — that is the OR function. The distractor AND (A) is the OTHER diode-logic arrangement, with the diodes reversed (cathodes at the inputs) and the resistor pulled UP to +5 V, so the output is dragged low unless every input is high.\n\n90-SECOND SOLUTION\nDiodes pointing input→output with a pull-DOWN resistor: any high input pulls the output high ⇒ OR. (Reverse the diodes and pull UP ⇒ AND.)\n\nWHAT TO MEMORIZE\nDiode logic: anodes at inputs + resistor to ground ⇒ OR (any high wins). Cathodes at inputs + resistor to +V ⇒ AND (any low wins). The diode orientation and the pull resistor's destination together decide which gate you have."
+      },
+
+      {
+        "question": "An ideal operational amplifier is wired as a non-inverting amplifier: the input signal goes to the non-inverting (+) input, a resistor R₁ = 10 kΩ runs from the inverting (−) input to ground, and a feedback resistor R_f = 90 kΩ runs from the output back to the inverting input. What is the voltage gain?",
+        "choices": [
+          "−9",
+          "+9",
+          "+10",
+          "−10",
+          "+100"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor an ideal op-amp with negative feedback, the two inputs sit at the same voltage (virtual short), so the inverting input follows the signal V_in. The resistors R_f and R₁ form a divider from the output to ground, and the divider's tap (the inverting input) equals V_in: V_in = V_out · R₁/(R₁+R_f). Solving, the non-inverting gain is V_out/V_in = 1 + R_f/R₁ = 1 + 90/10 = 10. It is positive (non-inverting). The distractor +9 (B) uses R_f/R₁ = 9 and forgets the '+1'; −9 (A) is the INVERTING-configuration gain (−R_f/R₁), which applies to a different wiring.\n\nNUMERICS WITHOUT A CALCULATOR\nNon-inverting gain = 1 + R_f/R₁ = 1 + 9 = 10.\n\n90-SECOND SOLUTION\nNon-inverting amp ⇒ gain = 1 + R_f/R₁ (always ≥ 1, positive). Inverting amp ⇒ gain = −R_f/R₁. Identify which input the signal enters, then apply the matching formula.\n\nWHAT TO MEMORIZE\nIdeal op-amp closed-loop gains: non-inverting = 1 + R_f/R_in (positive, ≥ 1); inverting = −R_f/R_in (negative). Both rely on the virtual-short rule (V₊ = V₋) and no input current. The '+1' on the non-inverting gain is the most commonly dropped term."
+      },
+
+      {
+        "question": "In the logic circuit shown, inputs A and B feed a NAND gate, and inputs C and D feed a second NAND gate; the two NAND outputs feed a final NAND gate whose output is E. Using · for AND, + for OR, and an overbar for NOT, which Boolean expression gives E?",
+        "image": "images/lab-circuits-1/circuit_q29.png",
+        "choices": [
+          "E = (A·B) + (C·D)",
+          "E = (A·B) · (C·D)",
+          "E = A·B·C·D (four-input AND)",
+          "E = A + B + C + D",
+          "E = (A+B) · (C+D)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe two first-stage NAND gates output not(A·B) and not(C·D). The final NAND gate outputs not[ not(A·B) · not(C·D) ]. By De Morgan's theorem, not(X · Y) = notX + notY, so with X = not(A·B) and Y = not(C·D): E = not(not(A·B)) + not(not(C·D)) = (A·B) + (C·D). So three NAND gates in this arrangement produce an OR-of-ANDs (a sum of products). The distractor (A·B)·(C·D) (B) forgets the final De Morgan step (treating the last NAND as an AND). This 'NAND-only' construction of AND-OR logic is exactly why NAND is called a universal gate.\n\n90-SECOND SOLUTION\nEach input NAND gives not(A·B) and not(C·D); the output NAND of two inverted terms is, by De Morgan, their OR un-inverted: E = A·B + C·D.\n\nWHAT TO MEMORIZE\nNAND is universal. A NAND of two NANDs, not[ not(A·B)·not(C·D) ], simplifies by De Morgan to (A·B)+(C·D) — an AND-OR (sum-of-products) built from three NANDs. Apply De Morgan (bar over a product = sum of the bars) at each gate to read out the algebra."
+      },
+
+      {
+        "question": "An experiment is believed to obey a power law y = kxⁿ, and a student wants to extract the exponent n by fitting a STRAIGHT LINE to the data. On which axes should the data be plotted so that a power law appears as a straight line whose slope is n?",
+        "choices": [
+          "y versus x (linear–linear)",
+          "ln y versus x (semi-log)",
+          "y versus ln x (semi-log)",
+          "y versus 1/x",
+          "ln y versus ln x (log–log)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nTake the logarithm of y = kxⁿ: ln y = ln k + n ln x. This is linear in the variables (ln x, ln y), with slope n and intercept ln k. So plotting ln y versus ln x (log–log axes) turns a power law into a straight line whose slope is exactly the exponent n. The distractor ln y versus x (B) is the right choice for an EXPONENTIAL y = k e^{ax} (semi-log gives a line of slope a), not a power law — confusing which relationship each plot linearizes is the classic error.\n\n90-SECOND SOLUTION\nPower law ⇒ take logs of BOTH variables ⇒ log–log straight line, slope = exponent. (Exponential ⇒ log of y only ⇒ semi-log.)\n\nWHAT TO MEMORIZE\nLog–log axes linearize a POWER law y = kxⁿ (slope = n); semi-log axes (ln y vs x) linearize an EXPONENTIAL y = k e^{ax} (slope = a). Choose the axes by the model: two logs for a power, one log for an exponential."
+      }
+
+    ]
+  },
+
 
   {
     "name": "Thermodynamics & Statistical Mechanics Test (Hard)",
@@ -15359,5 +15769,276 @@ const EXAMS = [
         "explanation": "WORKED SOLUTION\nCheck each regime with 1/f = 1/s + 1/s' and m = −s'/s.\nI. s > 2f: then f < s' < 2f, so s' < s and |m| = s'/s < 1 — real (s' > 0), inverted (m < 0), reduced. TRUE. (This is the camera regime.)\nII. s = f: 1/s' = 1/f − 1/f = 0, so s' = ∞ — the rays leave parallel and form no finite image. TRUE.\nIII. s < f: 1/s' = 1/f − 1/s < 0, so s' < 0 (virtual), and m = −s'/s > 1 — upright and magnified. TRUE. (The magnifying-glass regime.)\nAll three are correct.\n\n90-SECOND SOLUTION\nThe three named regimes (object beyond 2f → reduced real image; object at f → image at infinity; object inside f → magnified virtual image) are the three standard converging-lens cases, all correctly stated. Choice B.\n\nWHAT TO MEMORIZE\nThe converging-lens image map: s > 2f gives a reduced real image (camera); s = 2f gives a same-size real image; f < s < 2f gives a magnified real image (projector); s = f gives rays at infinity (no image); s < f gives a magnified virtual image (magnifier). Knowing this table lets you answer character questions instantly without computing s'. Every statement here is a correct entry, so the answer is 'all,' the option students distrust when a question looks like it must contain a trap."
       }
     ]
+  },
+
+
+  {
+    "name": "Targeted Set: GR0877 Miss List (Hard)",
+    "added": "2026-09-08",
+    "category": "practice",
+    "cards": [
+
+      {
+        "question": "Three thin lenses are ground from the same glass. Lens 1 is symmetric biconvex with both surface radii 10 cm. Lens 2 is plano-convex with its one curved surface also of radius 10 cm. Lens 3 is a convex meniscus whose front surface has radius 10 cm and whose back surface has radius 30 cm, both curving the same way. Which ranking of their focal lengths f₁, f₂, f₃ is correct?",
+        "choices": [
+          "f₁ < f₂ < f₃",
+          "f₃ < f₂ < f₁",
+          "f₁ = f₂ = f₃, since all share the 10 cm radius",
+          "f₂ < f₁ < f₃",
+          "f₃ < f₁ < f₂"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe lensmaker's equation is 1/f = (n−1)(1/R₁ − 1/R₂), with a surface convex toward the incoming light taking R > 0 and one convex away taking R < 0. All three lenses share the same glass, so only the curvature factor (1/R₁ − 1/R₂) matters. Lens 1 (symmetric biconvex): 1/10 − (−1/10) = 0.20 cm⁻¹. Lens 2 (plano-convex): 1/10 − 0 = 0.10 cm⁻¹. Lens 3 (meniscus, both surfaces bulging the same way): 1/10 − 1/30 = 0.067 cm⁻¹. Larger curvature factor means shorter focal length, so f₁ < f₂ < f₃. The trap choice 'all equal' (C) fixates on the shared 10 cm radius and forgets that the SECOND surface also enters the equation.\n\n90-SECOND SOLUTION\nDon't compute any f. Same material means you only rank (1/R₁ − 1/R₂). The two curved surfaces of the biconvex ADD, the plano-convex has only one working surface, and the meniscus has its two surfaces partly CANCEL — so the biconvex bends light hardest (shortest f) and the meniscus least, in that order.\n\nWHAT TO MEMORIZE\nFocal length is set by the NET bending of both surfaces, not any single radius: 1/f = (n−1)(1/R₁ − 1/R₂). For same-material lenses, the fattest, most sharply-curved converging lens has the shortest focal length; a meniscus (both surfaces the same handedness) is weakest because its surfaces partially cancel."
+      },
+
+      {
+        "question": "A thin biconvex lens is made of glass of index 1.5. Its front surface has radius of curvature 10 cm and its back surface has radius of curvature 20 cm (the two surfaces bulge outward in opposite directions). What is the focal length of the lens in air, most nearly?",
+        "choices": [
+          "10 cm",
+          "13 cm",
+          "20 cm",
+          "27 cm",
+          "40 cm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe lensmaker's equation is 1/f = (n−1)(1/R₁ − 1/R₂). For a biconvex lens the first surface is convex toward the light (R₁ = +10 cm) and the second surface is convex away from the light (R₂ = −20 cm). So 1/f = (0.5)(1/10 − 1/(−20)) = (0.5)(1/10 + 1/20) = (0.5)(3/20) = 3/40 cm⁻¹, giving f = 40/3 ≈ 13 cm. The distractor 40 cm (E) is the sign-error result: treating the second radius as +20 (forgetting that a biconvex lens has its two surfaces curving oppositely) gives (0.5)(1/10 − 1/20) = 1/40, i.e. f = 40 cm — a factor of 3 too large.\n\nNUMERICS WITHOUT A CALCULATOR\nWith n = 1.5, (n−1) = ½. The two surface terms ADD for a biconvex lens: 1/10 + 1/20 = 3/20. Half of that is 3/40, so f = 40/3 ≈ 13 cm. The whole calculation is adding two fractions and halving.\n\n90-SECOND SOLUTION\nBoth surfaces of a biconvex lens help converge, so their curvature contributions ADD, not subtract. Add 1/R₁ + 1/R₂ = 1/10 + 1/20, multiply by (n−1) = ½, invert. The trap is subtracting (wrong sign on R₂).\n\nWHAT TO MEMORIZE\n1/f = (n−1)(1/R₁ − 1/R₂), and the sign convention makes a BICONVEX lens's two terms add (R₂ < 0). The single most common slip is mishandling the sign of the second surface — for a symmetric-looking biconvex lens the two radii contribute with the SAME sign to the converging power."
+      },
+
+      {
+        "question": "A loudspeaker emits a pure tone through a narrow rectangular opening 0.20 m wide. The speed of sound is 340 m/s. At what frequency does the first diffraction minimum of the emitted sound appear at 30° from the forward direction?",
+        "choices": [
+          "1.7 kHz",
+          "2.6 kHz",
+          "3.4 kHz",
+          "4.2 kHz",
+          "6.8 kHz"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe first single-slit minimum satisfies a sinθ = λ (NOT the double-slit maximum condition, and not a sinθ = λ/2). So λ = a sinθ = (0.20 m)(sin 30°) = (0.20)(0.5) = 0.10 m. The frequency is then f = v/λ = 340/0.10 = 3400 Hz ≈ 3.4 kHz. The distractor 6.8 kHz (E) comes from using a sinθ = λ/2, which is not the single-slit minimum condition.\n\nNUMERICS WITHOUT A CALCULATOR\nsin 30° = ½ exactly, so λ = 0.20 × ½ = 0.10 m — a clean tenth of a metre. Then f = 340/0.10 = 3400 Hz. No calculator needed once you see sin 30° = ½.\n\n90-SECOND SOLUTION\nGet the wavelength straight from the geometry (λ = a sinθ), then convert to frequency with f = v/λ. Two one-line steps; the only trap is the minimum condition itself.\n\nWHAT TO MEMORIZE\nSingle-slit MINIMA fall at a sinθ = mλ (m = 1, 2, …). This looks identical to the double-slit MAXIMUM condition but describes the opposite feature — a dark fringe, not a bright one. Mixing up which condition gives dark vs. bright is the classic diffraction trap."
+      },
+
+      {
+        "question": "A single slit of width a is illuminated by monochromatic light and produces a central diffraction maximum whose angular full width (between the first minima on either side) is Δθ. The slit is then replaced by one of width a/3, with the same light. What is the new angular full width of the central maximum?",
+        "choices": [
+          "Δθ/9",
+          "Δθ/3",
+          "Δθ",
+          "3Δθ",
+          "9Δθ"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe first minimum of a single slit is at sinθ = λ/a, so for small angles the half-width is θ ≈ λ/a and the full width of the central maximum is Δθ ≈ 2λ/a — inversely proportional to slit width. Narrowing the slit to a/3 multiplies the width by 3, giving 3Δθ. The trap Δθ/3 (B) is the intuitive-but-wrong 'smaller slit, smaller pattern' answer; diffraction does the opposite. Δθ/9 (A) treats the width as going like 1/a², confusing it with an area or intensity scaling.\n\n90-SECOND SOLUTION\nRemember the single-slit trade-off: the narrower the slit, the WIDER the diffraction spread, and the relation is a simple inverse (1/a), not inverse-square. Divide the width by 3 → multiply the spread by 3.\n\nWHAT TO MEMORIZE\nCentral-maximum angular width for a single slit ≈ 2λ/a: inversely proportional to slit width (not its square). Confining the wave more tightly in space spreads it more in angle — the same reciprocal relationship that underlies the uncertainty principle."
+      },
+
+      {
+        "question": "An object is placed a distance equal to the focal length's magnitude in front of a convex mirror of focal length magnitude f (so the object distance is f). Where is the image and what is its character?",
+        "choices": [
+          "At distance f behind the mirror, virtual and upright",
+          "At distance f/2 in front of the mirror, real and inverted",
+          "At infinity",
+          "At distance f in front of the mirror, real and inverted",
+          "At distance f/2 behind the mirror, virtual and upright"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a convex mirror the focal length is negative: use f_mirror = −f. The mirror equation 1/d_o + 1/d_i = 1/f_mirror with d_o = +f gives 1/d_i = −1/f − 1/f = −2/f, so d_i = −f/2. The negative sign means the image is behind the mirror (virtual), at distance f/2. The magnification m = −d_i/d_o = −(−f/2)/f = +1/2 is positive and less than 1, so the image is upright and reduced. Putting the image in FRONT (real, inverted) ignores that a convex mirror can never form a real image of a real object.\n\n90-SECOND SOLUTION\nA convex mirror ALWAYS gives a virtual, upright, diminished image behind the mirror — no computation needed to reject the 'real/inverted/in front' choices. Among the two virtual-upright options, the mirror equation with f_mirror = −f fixes the distance at f/2.\n\nWHAT TO MEMORIZE\nConvex mirror: f < 0, and for ANY real object the image is virtual, upright, reduced, and behind the mirror. The sign convention (convex → negative f) is the entire game; get it right and the character of the image follows without thought."
+      },
+
+      {
+        "question": "A 4.0 kg book rests on top of a 6.0 kg crate. A horizontal force is applied to the CRATE, and the two accelerate together across a frictionless floor at 3.0 m/s². The coefficient of static friction between book and crate is 0.60. What is the magnitude of the friction force acting on the book?",
+        "choices": [
+          "12 N",
+          "18 N",
+          "24 N",
+          "30 N",
+          "59 N"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe only horizontal force acting on the book is the static friction from the crate beneath it — nothing else touches the book horizontally. Newton's second law for the book alone gives f = m_book · a = (4.0 kg)(3.0 m/s²) = 12 N. The coefficient 0.60 sets only the MAXIMUM available friction, μ·m_book·g = (0.60)(4.0)(9.8) ≈ 24 N, which is a distractor (C): since 12 N < 24 N the book does not slip, and the actual friction is whatever the acceleration demands, not the maximum. The 59 N choice (E) is μ times the full stack's weight — doubly wrong.\n\nNUMERICS WITHOUT A CALCULATOR\nf = m_book a is a one-line product: 4 × 3 = 12 N. The only arithmetic needing a calculator (μ m g = 0.6 × 4 × 9.8 ≈ 24) is for a distractor you should recognize and discard, not compute.\n\n90-SECOND SOLUTION\nAsk what force accelerates the book. It's friction, the only horizontal force on it, so f = m_book·a directly. The μ value is bait — it only tells you whether slipping occurs, not the friction value when it doesn't.\n\nWHAT TO MEMORIZE\nStatic friction is a RESPONSE force: it takes whatever value the constraint (moving with the crate) requires, up to a ceiling μ_s N. When a block is carried along by the surface under it, friction is what accelerates it, so f = m·a — and μ only lets you check that this needed value stays below the maximum."
+      },
+
+      {
+        "question": "A crate rides on the flat, horizontal bed of a truck; the only friction on the crate is between it and the bed. The truck, moving at 30 m/s, brakes uniformly to a stop over a distance of 75 m, and the crate must not slide forward on the bed during braking. Taking g = 10 m/s², what is the minimum coefficient of static friction between crate and bed? (The crate's mass is not given.)",
+        "choices": [
+          "0.30",
+          "0.45",
+          "0.60",
+          "0.90",
+          "1.2"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nDuring braking the crate must decelerate with the truck, and the only horizontal force available to decelerate it is static friction from the bed. The required friction is f = m·a, while the most the bed can supply is μ_s m g; the crate stays put provided μ_s m g ≥ m a, i.e. μ_s ≥ a/g — the crate's mass cancels. The deceleration is a = v²/(2D) = (30)²/(2·75) = 900/150 = 6.0 m/s². So μ_s,min = a/g = 6.0/10 = 0.60. The distractor 1.2 (E) drops the factor of 2 in v²/(2D), doubling the deceleration; 0.30 (A) halves it.\n\nNUMERICS WITHOUT A CALCULATOR\na = v²/(2D) = 900/150 = 6 m/s². Then μ_min = a/g = 6/10 = 0.6. The mass never enters — don't wait for it.\n\n90-SECOND SOLUTION\nThe crate stays put as long as the demanded deceleration doesn't exceed what friction can deliver: μ_s g. So μ_s,min = a/g. Compute a from v²/(2D) and divide by g. Mass is a red herring (it cancels).\n\nWHAT TO MEMORIZE\nWhen friction is the ONLY force that must accelerate (or decelerate) a carried object, the no-slip condition is μ_s ≥ a/g, mass-independent. This is the same Q58 mechanism — friction supplies the required force and μ only sets the ceiling — run backward to find the threshold μ."
+      },
+
+      {
+        "question": "A coin rests on a horizontal turntable at radius r and does not slip. The turntable starts from rest and spins up with constant angular acceleration α. At the instant its angular speed is ω, what angle does the static friction force on the coin make with the inward radial direction (pointing toward the axis)?",
+        "choices": [
+          "0",
+          "arctan(ω²/α)",
+          "arctan(αr/ω)",
+          "arctan(α/ω²)",
+          "90°"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor the coin to move with the turntable, static friction must supply its entire acceleration, which has two components: a centripetal part a_c = ω²r pointing inward (toward the axis) and a tangential part a_t = αr along the motion. Friction therefore points along the vector sum of these, and the angle it makes with the inward radial direction is θ = arctan(a_t/a_c) = arctan(αr/ω²r) = arctan(α/ω²). The r cancels. The choice arctan(ω²/α) (B) inverts the ratio; the choice 0 (A) is the constant-ω special case where there's no tangential demand.\n\n90-SECOND SOLUTION\nFriction = mass × (total acceleration). The acceleration has a radial (ω²r) and a tangential (αr) piece; the angle off radial is just the ratio of tangential to radial, and the r cancels immediately: arctan(α/ω²).\n\nWHAT TO MEMORIZE\nOn a spinning-up turntable, static friction is the ONLY horizontal force and must provide the full acceleration — both the centripetal ω²r and the tangential αr. Its direction tilts off the inward radial by arctan(α/ω²); only when α = 0 (constant spin) is friction purely centripetal."
+      },
+
+      {
+        "question": "A small object of mass m sits without slipping at radius r on a turntable that has constant angular acceleration α. At the moment its angular speed is ω, what is the MAGNITUDE of the static friction force on the object?",
+        "choices": [
+          "m ω² r",
+          "m α r",
+          "m r (ω² + α)",
+          "m r √(ω² + α²)",
+          "m r √(ω⁴ + α²)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe object's acceleration has two perpendicular components: centripetal a_c = ω²r (inward) and tangential a_t = αr (along the motion). Being at right angles, their magnitudes add in quadrature: |a| = √(a_c² + a_t²) = √((ω²r)² + (αr)²) = r√(ω⁴ + α²). Static friction alone provides this, so f = m r √(ω⁴ + α²). The distractor m ω²r (A) keeps only the centripetal part (the constant-speed answer); m r(ω²+α) (C) illegally adds terms of different dimensions without squaring.\n\nNUMERICS WITHOUT A CALCULATOR\nNote ω appears to the FOURTH power under the root (centripetal acceleration already carries ω²). Dimensional analysis kills choice D instantly: ω² and α have different units, so ω² + α is nonsense — only √(ω⁴ + α²) is dimensionally consistent.\n\n90-SECOND SOLUTION\nTwo perpendicular acceleration pieces → add in quadrature. Centripetal is ω²r, tangential is αr; the magnitude is r√(ω⁴ + α²). Dimensional analysis alone eliminates every distractor except the answer.\n\nWHAT TO MEMORIZE\nCentripetal and tangential accelerations are perpendicular and add in quadrature: a = √((ω²r)² + (αr)²). The centripetal term carries ω², so the total friction magnitude on a spinning-up turntable goes like √(ω⁴ + α²) — the ω⁴ is the signature that trips people up."
+      },
+
+      {
+        "question": "Two very long straight wires are perpendicular to the page. Wire 1 pierces the page at the origin carrying current I OUT of the page; wire 2 pierces at the point x = d on the x-axis carrying current I INTO the page. What is the magnitude of the net magnetic field at the point x = 2d on the x-axis?",
+        "choices": [
+          "μ₀I/(2πd)",
+          "3μ₀I/(4πd)",
+          "μ₀I/(4πd)",
+          "μ₀I/(πd)",
+          "0"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nEach wire produces a field of magnitude μ₀I/(2π·distance) circling it. At x = 2d, wire 1 is a distance 2d away, wire 2 a distance d away. On the x-axis the field of a wire perpendicular to the page points along y. For wire 1 (current OUT of page) the field at a point on its +x side points in +y: B₁ = μ₀I/(2π·2d) = μ₀I/(4πd), +y. For wire 2 (current INTO page) the field on its +x side points in −y: B₂ = μ₀I/(2π·d) = μ₀I/(2πd), −y. The contributions are OPPOSITE, so B_net = μ₀I/(4πd) − μ₀I/(2πd) in the +y sense, whose magnitude is μ₀I/(4πd) (the nearer wire wins). The distractor 3μ₀I/(4πd) (B) is the SUM you'd get if the two fields pointed the same way — i.e. if both currents ran the same direction. Choice E (zero) forgets the two distances differ.\n\nNUMERICS WITHOUT A CALCULATOR\nWork in units of μ₀I/(2πd): wire 1 contributes ½ (it's twice as far), wire 2 contributes 1, opposite signs → net ½, i.e. μ₀I/(4πd). Halving and subtracting, no calculator.\n\n90-SECOND SOLUTION\nOpposite currents → the two fields subtract at a point off to the side. The nearer wire (distance d) dominates the farther (distance 2d); the difference of μ₀I/(2πd) and μ₀I/(4πd) is μ₀I/(4πd).\n\nWHAT TO MEMORIZE\nSuperpose wire fields as VECTORS, each of magnitude μ₀I/(2π·distance) and each pointing along the local circulation. Whether contributions add or subtract is set by the current directions and which side of each wire the point sits — get the two signs right before combining, or you'll report a sum where the physics gives a difference."
+      },
+
+      {
+        "question": "A long straight wire lies along the z-axis carrying current I in the +z direction. A second identical wire is parallel to it, piercing the xy-plane at x = a, y = 0, also carrying current I in the +z direction. What is the magnitude of the net magnetic field at the midpoint between the two wires, x = a/2 on the x-axis?",
+        "choices": [
+          "μ₀I/(πa)",
+          "2μ₀I/(πa)",
+          "μ₀I/(2πa)",
+          "0",
+          "4μ₀I/(πa)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt the midpoint each wire is a distance a/2 away, so each produces a field of magnitude μ₀I/(2π·a/2) = μ₀I/(πa). Both currents point in +z, whose field circulates counterclockwise viewed from +z. At the midpoint, wire 1 (at x=0) gives a field pointing in +y while wire 2 (at x=a) gives one pointing in −y. Equal magnitude, opposite direction → exact cancellation: B_net = 0. The distractor 2μ₀I/(πa) (B) adds the magnitudes as if the fields were parallel; at the midpoint they are antiparallel.\n\n90-SECOND SOLUTION\nTwo equal parallel currents in the SAME direction: by symmetry the field vanishes exactly halfway between them (the two circulating fields oppose there). No numbers needed — the midpoint of two like, equal, parallel currents is always a field null.\n\nWHAT TO MEMORIZE\nFor two long parallel wires with equal currents in the SAME direction, the field is zero at the midpoint (fields oppose). For OPPOSITE currents, the fields ADD at the midpoint. Reversing one current flips which midpoint statement holds — the mirror image of where the force between the wires changes sign."
+      },
+
+      {
+        "question": "Five identical resistors, each of resistance R, are connected as a Wheatstone bridge: a top node A and a bottom node B are joined by two parallel two-resistor branches (A–C–B and A–D–B, each resistor R), and a fifth resistor R bridges the midpoints C and D. A battery of EMF V is connected across A and B. What current does the battery deliver?",
+        "choices": [
+          "2V/R",
+          "V/(2R)",
+          "3V/(2R)",
+          "5V/(6R)",
+          "V/R"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBecause the branches A–C–B and A–D–B are identical, the midpoints C and D sit at the same potential (each at V/2). With no potential difference across the bridging resistor, it carries zero current and can be removed. What remains is two branches, each of resistance 2R, in parallel: R_eq = (2R)(2R)/(2R+2R) = R. The battery current is I = V/R_eq = V/R. The distractor 5V/(6R) (D) treats the bridge resistor as part of a series-parallel reduction (as in a cube edge), and V/(2R) (B) forgets the two 2R branches combine to R, not 2R.\n\n90-SECOND SOLUTION\nSpot the balanced bridge: identical branches force C and D to equal potential, so the middle resistor is dead — ignore it. Two 2R branches in parallel give R, hence I = V/R.\n\nWHAT TO MEMORIZE\nIn a balanced Wheatstone bridge the bridging element carries no current and can be deleted (or shorted — it doesn't matter). Symmetry-forced equal-potential nodes are the single most powerful shortcut in resistor networks; look for them before any series-parallel algebra."
+      },
+
+      {
+        "question": "An infinite ladder network is built from identical resistors, each of resistance R: at every stage one resistor is in series along the top rail and one resistor shunts down to the bottom rail, repeating forever. A battery of EMF V is connected across the input terminals. What current does the battery deliver? (φ = (1+√5)/2 ≈ 1.618 is the golden ratio.)",
+        "choices": [
+          "2V/R",
+          "2V/[(1 + √5)R]",
+          "V/R",
+          "(1 + √5)V/(2R)",
+          "V/(2R)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nUse self-similarity: because the ladder is infinite, chopping off the first stage leaves an identical infinite ladder of the same input resistance R_in. So R_in equals one series R plus the parallel combination of the shunt R with the rest, which is again R_in: R_in = R + (R·R_in)/(R + R_in). Solving R_in² − R·R_in − R² = 0 gives the positive root R_in = R(1 + √5)/2 = φR ≈ 1.62R. The battery current is I = V/R_in = 2V/[(1 + √5)R] ≈ 0.62 V/R. The distractor (1 + √5)V/(2R) (D) ≈ 1.62 V/R multiplies by φ instead of dividing — it quotes the resistance coefficient as if it were the current. V/R (C) ignores the network beyond the first series resistor.\n\nNUMERICS WITHOUT A CALCULATOR\nR_in = φR ≈ 1.62R, so I ≈ V/(1.62R) ≈ 0.62 V/R. Rationalizing 1/φ = (√5 − 1)/2 ≈ 0.62 confirms it; the answer must be LESS than V/R, which eliminates the choices ≥ V/R immediately.\n\n90-SECOND SOLUTION\nInfinite + self-similar ⇒ set R_in = R + (R ∥ R_in) and solve the resulting quadratic. The input resistance is the golden ratio times R; the current is its reciprocal, so I < V/R.\n\nWHAT TO MEMORIZE\nFor an infinite repeating ladder, exploit self-similarity: the whole network's resistance reappears when you strip one stage, giving a self-consistent equation (here a quadratic whose positive root is φR). This is the symmetry/self-similarity shortcut — the network is solved without touching an interior node."
+      },
+
+      {
+        "question": "An ideal (Carnot) heat pump warms a house to 27 °C by extracting heat from the outside air at −3 °C. To deliver 6000 J of heat into the house, what is the minimum work the pump must consume?",
+        "choices": [
+          "300 J",
+          "600 J",
+          "667 J",
+          "1500 J",
+          "6000 J"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nConvert to kelvin: T_hot = 300 K, T_cold = 270 K. A Carnot heat pump's HEATING coefficient of performance is COP = Q_hot/W = T_hot/(T_hot − T_cold) = 300/(300 − 270) = 300/30 = 10. The minimum work is W = Q_hot/COP = 6000/10 = 600 J. The distractor 667 J (C) comes from using the REFRIGERATOR COP, T_cold/(T_hot − T_cold) = 270/30 = 9, and dividing the delivered heat by it. Using Celsius (27/30) gives nonsense — the other classic error.\n\nNUMERICS WITHOUT A CALCULATOR\nThe temperature difference is only 30 K against a hot reservoir of 300 K, so the heating COP is 300/30 = 10 exactly. Divide 6000 by 10 → 600 J. The whole problem hinges on absolute temperatures and using T_hot (not T_cold) in the numerator.\n\n90-SECOND SOLUTION\nHeat-pump heating COP = T_hot/ΔT in kelvin. Big COP (here 10) means small work: W = Q_hot/10 = 600 J.\n\nWHAT TO MEMORIZE\nCarnot heating COP = T_hot/(T_hot − T_cold); Carnot cooling (refrigerator) COP = T_cold/(T_hot − T_cold). They differ by exactly 1 (COP_heat = COP_cool + 1). Always use KELVIN, and pick the numerator by what the device delivers — hot reservoir for a heat pump, cold reservoir for a refrigerator."
+      },
+
+      {
+        "question": "A Carnot refrigerator removes heat from a cold compartment at 250 K and rejects it to a room at 300 K. How much work must it consume to remove 5000 J of heat from the cold compartment?",
+        "choices": [
+          "833 J",
+          "1000 J",
+          "1200 J",
+          "5000 J",
+          "6000 J"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a refrigerator the relevant coefficient of performance is the COOLING one: COP = Q_cold/W = T_cold/(T_hot − T_cold) = 250/(300 − 250) = 250/50 = 5. The work to remove Q_cold = 5000 J is W = Q_cold/COP = 5000/5 = 1000 J. The distractor 833 J (A) uses the HEATING COP by mistake (T_hot/ΔT = 300/50 = 6), and 1200 J would come from an inverted temperature ratio.\n\nNUMERICS WITHOUT A CALCULATOR\nΔT = 50 K, T_cold = 250 K, so cooling COP = 250/50 = 5. Then W = 5000/5 = 1000 J. Keep straight that a REFRIGERATOR uses T_cold on top.\n\n90-SECOND SOLUTION\nRefrigerator → cooling COP = T_cold/ΔT = 5. Work = heat removed ÷ COP = 1000 J.\n\nWHAT TO MEMORIZE\nSame Carnot temperature pair, two different COPs depending on what you want: cooling (refrigerator) uses T_cold in the numerator, heating (heat pump) uses T_hot. Here the cooling COP is 5 and the heating COP would be 6 — always larger by one — so never grab the wrong one."
+      },
+
+      {
+        "question": "In a working laser, a population inversion (more atoms in an upper state than a lower one) must be maintained. Which of the following is the essential reason a simple two-level atomic system, pumped only by light at the transition frequency, CANNOT sustain a population inversion?",
+        "choices": [
+          "The upper level always decays too fast by spontaneous emission",
+          "Two-level atoms cannot absorb photons at the transition frequency",
+          "Momentum conservation forbids absorption in a two-level atom",
+          "The same light that pumps atoms up also stimulates them down at an equal rate, so the populations can at best equalize",
+          "The Pauli exclusion principle limits each level to one atom"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nStimulated absorption (up) and stimulated emission (down) driven by the pumping light have equal rate coefficients (Einstein's B₁₂ = B₂₁). So light at the transition frequency drives the two populations toward EQUALITY, never toward inversion — at best you reach 50/50 saturation, where absorption and stimulated emission balance and the medium becomes transparent, not amplifying. That's why real lasers use a third (or fourth) level with a METASTABLE upper laser state: atoms are pumped to a short-lived level, decay quickly into the metastable one, and pile up there. The distractor about fast spontaneous decay (A) is backwards — you WANT the upper laser level to be long-lived (metastable).\n\n90-SECOND SOLUTION\nEinstein's relation B₁₂ = B₂₁ means the pump can only equalize a two-level system. Inversion needs an extra level to route atoms into a long-lived (metastable) upper state — the defining feature of a laser medium.\n\nWHAT TO MEMORIZE\nStimulated absorption and stimulated emission have equal coefficients (B₁₂ = B₂₁), so a two-level system saturates at equal populations and cannot invert. Lasers need at least three levels with a metastable upper laser level, where atoms accumulate faster than they decay."
+      },
+
+      {
+        "question": "Laser light differs from the light of an ordinary incandescent bulb chiefly because it is produced by stimulated emission. Which property of the emitted photon in stimulated emission is responsible for a laser beam's coherence and directionality?",
+        "choices": [
+          "The stimulated photon matches the stimulating photon in frequency, phase, direction, and polarization",
+          "The stimulated photon has twice the energy of the stimulating photon",
+          "The stimulated photon is emitted in a random direction but at the same frequency",
+          "The stimulated photon is always emitted perpendicular to the stimulating photon",
+          "Stimulated emission produces photons of continuously variable wavelength"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nIn stimulated emission an incoming photon induces an excited atom to emit a second photon identical to it — same frequency, phase, propagation direction, and polarization. This cloning is exactly why a laser beam is coherent (photons in phase) and highly directional (photons share a direction), unlike the random, incoherent photons of spontaneous emission from a hot filament. The distractor 'random direction, same frequency' (C) actually describes SPONTANEOUS emission, the very contrast being tested.\n\n90-SECOND SOLUTION\nStimulated emission copies the triggering photon in every respect. 'Identical in frequency, phase, direction, polarization' is the definition; every other choice contradicts one of those four.\n\nWHAT TO MEMORIZE\nStimulated emission produces a photon identical to the one that triggered it (frequency, phase, direction, polarization) — the origin of laser coherence and directionality. Spontaneous emission, by contrast, is random in phase and direction, which is why thermal sources are incoherent."
+      },
+
+      {
+        "question": "The negative tau lepton τ⁻ decays. In its decay, which set of final-state particles simultaneously conserves electric charge, total lepton number, AND each separate lepton flavor number?",
+        "choices": [
+          "e⁻ + ν̄_e + ν_τ",
+          "e⁻ + ν_e + ν_τ",
+          "e⁻ + ν̄_e + ν̄_τ",
+          "μ⁻ + ν̄_μ + ν̄_τ",
+          "e⁺ + ν_e + ν_τ"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe τ⁻ carries tau-flavor number L_τ = +1 and charge −1. It decays weakly, and its own tau-flavor must be carried off by a ν_τ (giving L_τ = +1 on the right). The charged lepton produced is an e⁻ (charge −1, electron-flavor L_e = +1), so to keep electron-flavor zero overall it must be paired with an electron ANTINEUTRINO ν̄_e (L_e = −1). The set e⁻ + ν̄_e + ν_τ conserves charge (−1 = −1 + 0 + 0), keeps L_e = 0 (e⁻ and ν̄_e cancel), and keeps L_τ = +1 (the ν_τ). Choice B uses ν_e instead of ν̄_e, making L_e = +2; choice E flips the charge with e⁺.\n\n90-SECOND SOLUTION\nEach flavor is conserved separately. The τ⁻ must yield a ν_τ (its own flavor). The e⁻ it produces must be paired with an anti-electron-neutrino ν̄_e so electron flavor still sums to zero. That fixes the answer without checking every option.\n\nWHAT TO MEMORIZE\nLeptonic weak decays conserve each lepton flavor SEPARATELY. A decaying charged lepton emits a neutrino of ITS OWN flavor, and any other charged lepton produced comes with the ANTINEUTRINO of that lepton's flavor. This is the tau analogue of ordinary muon decay μ⁻ → e⁻ + ν̄_e + ν_μ."
+      },
+
+      {
+        "question": "A student lists four proposed decays, each of which conserves electric charge. Exactly one of them is actually allowed. Which one? (ν denotes neutrinos, ν̄ antineutrinos; subscripts give flavor.)",
+        "choices": [
+          "μ⁻ → e⁻ + γ",
+          "p → n + e⁺ + ν_e (free proton at rest)",
+          "n → p + e⁻ + ν̄_e",
+          "μ⁻ → e⁻ + ν_e + ν̄_μ",
+          "π⁻ → μ⁻ + γ"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nCheck each beyond charge. (A) μ⁻ → e⁻ + γ conserves charge and total lepton number but violates SEPARATE lepton flavor (muon-flavor +1 → 0, electron-flavor 0 → +1) — forbidden, never observed. (B) p → n + e⁺ + ν_e is energetically forbidden for a FREE proton (the neutron is heavier than the proton), though it does occur for protons bound in nuclei. (C) n → p + e⁻ + ν̄_e is ordinary free-neutron beta decay: charge 0 → 0, baryon number 1 → 1, lepton number 0 → (+1 from e⁻) + (−1 from ν̄_e) = 0. Everything balances, so this is the ALLOWED decay — the answer. (D) μ⁻ → e⁻ + ν_e + ν̄_μ has the wrong neutrino flavors: correct muon decay is μ⁻ → e⁻ + ν̄_e + ν_μ, so this version violates both electron- and muon-flavor. (E) π⁻ → μ⁻ + γ creates a lepton where there was none (violates lepton number) and doesn't conserve muon flavor.\n\n90-SECOND SOLUTION\nRun the checklist charge → baryon number → each lepton flavor → energetics. Free-neutron beta decay is the textbook ALLOWED weak decay; the others each fail one specific rule — lepton-flavor for (A) and (D), energy for (B), lepton number for (E).\n\nWHAT TO MEMORIZE\nWith charge already satisfied, the forbidding law is usually (i) separate lepton-flavor conservation, (ii) baryon-number conservation, or (iii) energetics (a free particle cannot decay into heavier products). Free-neutron beta decay n → p + e⁻ + ν̄_e is the canonical ALLOWED weak process; free-proton 'beta-plus' decay is forbidden by energy alone."
+      },
+
+      {
+        "question": "The neutron is a baryon. Consider the hypothetical decay of a free neutron n → e⁻ + e⁺ + ν_e, which conserves electric charge and, being into light particles, is not forbidden by energy. Which conservation law forbids this decay?",
+        "choices": [
+          "Conservation of electric charge",
+          "Conservation of angular momentum only",
+          "Conservation of energy",
+          "It is not forbidden — this is a subdominant neutron decay channel",
+          "Conservation of baryon number"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe neutron has baryon number B = +1, while the proposed products (an electron, a positron, and a neutrino) are all leptons with B = 0. The final state therefore has total baryon number 0, so the process violates baryon-number conservation (1 → 0). Charge is satisfied (0 → −1 + 1 + 0), and the problem statement rules out energy as the obstruction, so the decisive, most fundamental law forbidding a baryon from turning entirely into non-baryons is baryon-number conservation. The distractor 'energy' (C) is explicitly excluded by the setup.\n\n90-SECOND SOLUTION\nA baryon in, no baryon out → baryon-number violation, full stop. Whenever a proton or neutron is proposed to decay into only leptons and/or mesons, baryon number is the law that forbids it.\n\nWHAT TO MEMORIZE\nBaryon number is conserved in all observed processes; it is what makes the proton stable and keeps a proton (a baryon) among a neutron's real decay products (n → p + e⁻ + ν̄_e). Any proposed decay of a nucleon into purely leptonic/mesonic final states is forbidden by baryon-number conservation, regardless of charge or energy."
+      }
+
+    ]
   }
+
 ];
