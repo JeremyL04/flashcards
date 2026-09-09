@@ -15773,7 +15773,7 @@ const EXAMS = [
 
 
   {
-    "name": "Targeted Set: GR0877 Miss List (Hard)",
+    "name": "GRE 2011 Focused Test",
     "added": "2026-09-08",
     "category": "practice",
     "cards": [
