@@ -4932,6 +4932,405 @@ const EXAMS = [
     ]
   },
   {
+    "name": "Electromagnetism Test 8 (Hard)",
+    "added": "2026-09-09",
+    "category": "em",
+    "cards": [
+
+      {
+        "question": "A point charge oscillates sinusoidally along the z-axis, radiating as an ideal electric dipole. Two detectors sit at the same large distance r from the charge: detector 1 on the z-axis (θ = 0°) and detector 2 at θ = 30° from the z-axis. What is the ratio of the time-averaged radiated intensity at detector 2 to that at detector 1?",
+        "choices": [
+          "The ratio is 1/4",
+          "The ratio is 1/2",
+          "The ratio is √3/2",
+          "The ratio is 3/4",
+          "The ratio is infinite (detector 1 receives no radiated power)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nDipole radiation intensity goes as ⟨S⟩ ∝ sin²θ, with θ measured from the oscillation (z) axis. Detector 1 sits on the axis at θ = 0°, where sin²0° = 0: a dipole radiates nothing along its own axis. So the intensity at detector 1 is exactly zero, and the ratio (intensity at 30°)/(intensity on axis) is a finite number divided by zero — it diverges. Answer (E). The distractors come from evaluating sin²(30°) = 1/4 and forgetting the denominator is zero (A), from using sin30° = 1/2 without squaring (B), from sinθ or cosθ confusions (C), or from cos²30° = 3/4, which is the pattern you would get if you mistakenly measured θ from the equatorial plane (D).\n\n90-SECOND SOLUTION\nThe one fact that decides this: a dipole is dark along its axis. Detector 1 is on the axis, so it gets zero. Any nonzero-over-zero ratio is infinite — pick (E) without touching a calculator. If you catch yourself computing 1/4, you have answered \"what fraction of the peak intensity is at 30°,\" which is a different question (and even that peak is at θ = 90°, not on the axis).\n\nWHAT TO MEMORIZE\nElectric-dipole radiation: ⟨S⟩ ∝ sin²θ / r², θ from the oscillation axis. Maximum broadside (θ = 90°), zero along the axis (θ = 0° and 180°). The polar pattern is a torus wrapped around the axis, pinched to nothing at the poles."
+      },
+
+      {
+        "question": "An electrostatic field exists on both sides of a charge-free planar interface between two linear dielectrics. Which combination of quantities is guaranteed to be continuous (equal on both sides) across the interface?",
+        "choices": [
+          "The tangential component of E and the normal component of D",
+          "The normal component of E and the tangential component of D",
+          "Both components of E",
+          "Both components of D",
+          "The tangential component of E and the tangential component of D"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe electrostatic boundary conditions come straight from Maxwell's equations. Because ∇×E = 0, the loop integral of E around a thin rectangle straddling the interface gives continuity of the TANGENTIAL component of E. Because ∇·D = ρ_free and there is no free surface charge here, the pillbox integral of D gives continuity of the NORMAL component of D. So E_∥ and D_⟂ are the continuous pair. Answer (A). The systematic trap (B) swaps the two — a very common memory slip — pairing the wrong component with each field. Choices (C), (D), and (E) each claim both components of one field are continuous, which is false whenever the two media differ: E_⟂ jumps by the permittivity ratio and D_∥ jumps by it inversely.\n\n90-SECOND SOLUTION\nTwo rules, tied to two curl/divergence facts: E has no curl ⇒ its TANGENTIAL part is continuous; D has divergence set only by FREE charge ⇒ with none present its NORMAL part is continuous. That is exactly (A). If you can only remember one, remember \"E tangential is always continuous\" (true even with free charge) — it eliminates (B), (C), (D) immediately.\n\nWHAT TO MEMORIZE\nAt any interface: E_∥ continuous always; D_⟂ jumps by the free surface charge (continuous when none). Equivalently E_⟂ jumps by σ_free/ε₀ and D_∥ can jump when bound currents/charges differ. The mnemonic is tangential E, normal D."
+      },
+
+      {
+        "question": "A point charge +q is held a distance d from the center of a GROUNDED conducting sphere of radius R (with R < d). Using the method of images, what is the value of the single image charge that reproduces the field outside the sphere, and where does it sit?",
+        "choices": [
+          "Image charge q, at the sphere's center",
+          "Image charge qR/d, at distance R²/d from the center",
+          "Image charge −q, at distance d from the center (a mirror charge)",
+          "Image charge −qd/R, at distance R²/d from the center",
+          "Image charge −qR/d, at distance R²/d from the center along the line to +q"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a point charge +q a distance d from the center of a grounded sphere of radius R, the field outside is reproduced by a single image charge q′ = −qR/d placed at distance b = R²/d from the center, on the line joining the center to the real charge. The negative sign makes the sphere's surface an equipotential at V = 0 (grounded), and the magnitude qR/d < q since R < d. Answer (E). The classic traps: (C) is the flat-plane image (−q at the mirror point), correct only in the R → ∞ limit; (B) has the right position and magnitude but the wrong (positive) sign, which would fail to ground the sphere; (D) inverts the ratio to qd/R > q, the wrong scaling; (A) confuses this with the isolated-neutral-sphere case.\n\n90-SECOND SOLUTION\nGrounded sphere ⇒ image is NEGATIVE (it must pull the surface to V = 0). Magnitude and position both carry the ratio R/d: q′ = −qR/d at b = R²/d. Only (E) has the right sign AND both R/d factors. Check the flat-plane limit: as R → d... rather, as R → ∞ with the charge just outside, q′ → −q and b → R²/d ≈ the mirror point — recovering the plane result, confirming (E).\n\nWHAT TO MEMORIZE\nGrounded sphere, charge q at distance d: image q′ = −qR/d at R²/d from center (inside the sphere). Signature features: negative sign (grounded), magnitude < q, and the reciprocal position d·b = R². Flat plane is the R → ∞ special case giving −q at the mirror point."
+      },
+
+      {
+        "question": "Two solid spheres of equal radius R carry uniform volume charge densities +ρ and −ρ. Their centers are offset by a small displacement vector s (with |s| < 2R), so the spheres partially overlap. What is the electric field in the lens-shaped OVERLAP region where both charge distributions are present?",
+        "choices": [
+          "Zero, because +ρ and −ρ cancel there",
+          "Uniform, of magnitude ρs/(3ε₀), directed from the +ρ center toward the −ρ center",
+          "Radial, pointing away from the midpoint",
+          "Nonuniform, growing linearly from the overlap boundary",
+          "Uniform, of magnitude ρs/(3ε₀), directed from the −ρ center toward the +ρ center"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBy superposition the total field anywhere is the sum of the two individual uniform-sphere fields. Inside a uniformly charged sphere, E = ρr/(3ε₀) pointing radially from that sphere's own center (for +ρ). In the overlap region a point lies inside BOTH spheres, so E = (ρ/3ε₀)r₊ + (−ρ/3ε₀)r₋ = (ρ/3ε₀)(r₊ − r₋), where r₊, r₋ are measured from the +ρ and −ρ centers. But r₊ − r₋ is just the constant vector from the +ρ center to the −ρ center, whose magnitude is s. So the overlap field is UNIFORM, ρs/(3ε₀), and it points from the −ρ center toward the +ρ center — that is, r₊ − r₋ points from the negative sphere's center to the positive sphere's center (drawing the vectors carefully). Answer (E). The densities do NOT cancel (A): they are the same sign of charge sampled at different distances from two different centers, and the residual is the uniform offset field. Choice (B) reverses the direction; (C) and (D) miss the cancellation that flattens it to a constant.\n\n90-SECOND SOLUTION\nTwo overlapping spheres = +ρ sphere plus −ρ sphere; each interior field is ∝ its own radial vector, and the sum keeps only the constant center-to-center offset ⇒ UNIFORM field ρs/(3ε₀). This is the same mathematics as the off-center cavity, run with two real spheres. Pick the uniform choice with the correct direction (E); reject \"zero\" (A) — the whole point is that the residual is a nonzero constant field.\n\nWHAT TO MEMORIZE\nTwo overlapping oppositely-charged uniform spheres ⇒ uniform field ρs/(3ε₀) in the overlap, along the center offset. This models a uniformly polarized sphere (the +ρ and −ρ offset by an infinitesimal s represent bound charge), whose interior field is exactly the uniform depolarizing field −P/(3ε₀)."
+      },
+
+      {
+        "question": "An oscillating electric dipole antenna radiates a total time-averaged power P. The frequency of oscillation is now tripled and the amplitude of the dipole moment is simultaneously halved, everything else unchanged. What is the new total radiated power?",
+        "choices": [
+          "9P/4",
+          "81P/16",
+          "243P/16",
+          "81P/4",
+          "9P/16"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor an oscillating dipole the time-averaged radiated power is ⟨P⟩ ∝ p₀²ω⁴, where p₀ is the dipole-moment amplitude and ω the angular frequency. Tripling the frequency multiplies ω⁴ by 3⁴ = 81; halving the amplitude multiplies p₀² by (1/2)² = 1/4. The product is 81 × 1/4 = 81/4. Answer (D). Distractor (B), 81/16, is what you get by wrongly squaring the frequency factor a second time or double-counting the amplitude square; (A) uses ω² instead of ω⁴ (giving 9) with the 1/4 amplitude factor → 9/4; (C) uses 3⁵ = 243 by miscounting the power of ω; (E) uses ω² and mis-squares to 9/16.\n\nNUMERICS WITHOUT A CALCULATOR\nOnly powers of small integers. Frequency enters to the FOURTH power — the single most-tested and most-missed fact about dipole radiation, so write ω⁴ before anything else. 3⁴ = 81, (1/2)² = 1/4, and 81 × 1/4 = 81/4. Two factors, multiply once — resist the urge to square anything a second time.\n\n90-SECOND SOLUTION\nTwo independent multipliers: the ω⁴ law gives ×81; the p₀² dependence gives ×1/4. Multiply: 81/4. The trap answers come from either using ω² (the single-charge intensity instinct) instead of ω⁴, or from over-squaring the amplitude factor into 1/16.\n\nWHAT TO MEMORIZE\nLarmor / dipole radiated power scales as p₀²ω⁴. The fourth power of frequency is why the sky is blue (Rayleigh scattering ∝ ω⁴) and why it is the classic GRE trap — reach for ω⁴, never ω²."
+      },
+
+      {
+        "question": "A uniform electric field E₀ in vacuum is directed perpendicular to the flat face of a large slab of linear dielectric with dielectric constant κ = 4. There is no free charge on the slab's surface. What is the magnitude of the electric field E inside the dielectric?",
+        "choices": [
+          "4E₀",
+          "E₀",
+          "E₀/2",
+          "E₀/4",
+          "2E₀"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe field is perpendicular (normal) to the interface, and there is no free surface charge, so the NORMAL component of D is continuous: D_outside = D_inside. Outside, D = ε₀E₀. Inside, D = ε₀κE. Setting them equal: ε₀E₀ = ε₀κE, so E = E₀/κ = E₀/4. Answer (D). The polarization charge on the slab faces partially cancels the applied field, reducing it by exactly the factor κ. Distractor (A) multiplies instead of divides (treating E as continuous and D as jumping the wrong way); (C) uses κ = 2 or halves for the wrong reason; (E) inverts a factor; (B) forgets the dielectric responds at all.\n\nNUMERICS WITHOUT A CALCULATOR\nJust E₀/κ = E₀/4. The only decision is which way κ goes. Use the continuous quantity: D is continuous here (normal, no free charge), and D = εE, so the field with the LARGER ε is SMALLER. Bigger κ ⇒ smaller E inside ⇒ divide. If you multiplied, you used the wrong boundary condition.\n\n90-SECOND SOLUTION\nField ⟂ to face, no free charge ⇒ D_⟂ continuous ⇒ ε₀E₀ = ε₀κE_in ⇒ E_in = E₀/κ = E₀/4. Sanity check: a dielectric always weakens the field inside it, so the answer must be less than E₀ — that alone eliminates (A), (E), and (B).\n\nWHAT TO MEMORIZE\nFor a field NORMAL to a dielectric surface with no free charge, D is continuous and E_inside = E_outside/κ. (For a field PARALLEL to the surface, E is continuous instead and does not change.) Knowing which geometry gives which is the whole game."
+      },
+
+      {
+        "question": "A point charge +q is held a distance d from the center of a grounded conducting sphere of radius R (R < d). Using the image charge q′ = −qR/d located at distance b = R²/d from the center, what is the magnitude of the force between the real charge and the sphere?",
+        "choices": [
+          "q²/(4πε₀d²), attractive",
+          "qq′/(4πε₀d²) = q²R/(4πε₀d³), attractive",
+          "q²/(4πε₀(d−R)²), repulsive",
+          "q²Rd/[4πε₀(d²−R²)²], attractive",
+          "Zero, because the sphere is grounded and neutral overall"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe force on the real charge equals the Coulomb force between it and its image, separated by the distance d − b = d − R²/d = (d²−R²)/d. With q′ = −qR/d, the force magnitude is |qq′|/[4πε₀(d−b)²] = (q²R/d)/[4πε₀((d²−R²)/d)²] = q²Rd/[4πε₀(d²−R²)²]. It is attractive (opposite-sign image). Answer (D). The classic trap (B) uses the wrong separation — it puts the image at the CENTER (distance d) instead of at b = R²/d, dropping the (d²−R²) structure. Choice (A) forgets the image is smaller than q; (C) uses the surface distance d−R and calls it repulsive (grounded conductors always ATTRACT a nearby charge); (E) confuses \"grounded\" with \"no force.\"\n\nNUMERICS WITHOUT A CALCULATOR\nTwo ingredients: image magnitude q′ = qR/d and separation d − R²/d = (d²−R²)/d. Force = k q·q′/(sep)². Watch the separation — it is NOT d. Check the flat-plane limit: as R → d from below the force blows up (charge nearly touching), and expanding for R ≪ d gives ≈ q²R d/(4πε₀d⁴) = q²R/(4πε₀d³), the leading induced-dipole attraction. That limit check confirms (D) and kills (B), which has no (d²−R²).\n\n90-SECOND SOLUTION\nForce = Coulomb between q and its image at the correct separation (d²−R²)/d. The (d²−R²)² in the denominator is the signature — only (D) has it. Grounded ⇒ attractive, killing the \"repulsive\" (C). \"Grounded ⇒ no force\" (E) is the naive trap: grounding supplies induced charge, which is exactly what creates the attraction.\n\nWHAT TO MEMORIZE\nGrounded-sphere force: F = q²Rd/[4πε₀(d²−R²)²], attractive. It reduces to the induced-dipole ∝ 1/d³ far away and diverges as the charge approaches the surface. Always attractive — a grounded conductor pulls in any nearby charge."
+      },
+
+      {
+        "question": "An infinite straight line carries uniform linear charge density λ everywhere except along a finite segment of length 2b (centered at the origin) which is missing. What is the electric field at the midpoint of the gap (the origin), a point that lies on the line itself?",
+        "choices": [
+          "λ/(2πε₀b), pointing along the line",
+          "λ/(2πε₀b), pointing perpendicular to the line",
+          "Infinite, because the origin is on the line",
+          "λ/(4πε₀b²), pointing along the line",
+          "Zero, by symmetry"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe origin sits at the exact center of the gap. The remaining charge is two semi-infinite lines, one starting at +b and one at −b, each of density λ. This distribution is symmetric under reflection through the origin: every charge element on the right at +x has a mirror element on the left at −x with the same λ, and their axial field contributions at the origin are equal in magnitude but OPPOSITE in direction, so they cancel exactly. (There is no perpendicular component either, since all the charge lies on the axis.) The net field at the midpoint is zero. Answer (E). The trap answers assume the two halves ADD; they oppose. Choice (C) invokes the on-a-line divergence, but the origin sits in the empty GAP where there is no charge, so the field is perfectly finite — and here, by symmetry, zero.\n\n90-SECOND SOLUTION\nReflection symmetry through the gap's midpoint: the left and right semi-infinite lines are mirror images carrying equal charge, so their fields at the center cancel ⇒ 0. Pick (E). The \"on the line ⇒ infinite\" trap (C) fails because the divergence happens only AT charge; the midpoint sits in the empty gap. Superposition by symmetry — no integral needed.\n\nWHAT TO MEMORIZE\nA charge distribution symmetric under reflection through a point produces ZERO field at that point (contributions pair up and cancel). And watch the \"on the line/plane\" trap: the field diverges only where charge actually sits, never in a gap or hole in the distribution."
+      },
+
+      {
+        "question": "Two identical dipole antennas radiate the same total power. Antenna 1 oscillates along the ẑ-axis; antenna 2 oscillates along the x̂-axis. Both sit at the origin. An observer is located on the +ẑ-axis, far away. What does the observer measure?",
+        "choices": [
+          "Zero intensity from antenna 1 and nonzero from antenna 2",
+          "Equal intensity from both antennas",
+          "Nonzero intensity from antenna 1 and zero from antenna 2",
+          "Zero intensity from both",
+          "Twice the intensity from antenna 1 as from antenna 2"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA dipole radiates with intensity ∝ sin²θ, where θ is the angle from ITS OWN oscillation axis, and it is dark along that axis. The observer sits on the +ẑ-axis. For antenna 1 (oscillating along ẑ), the observer is right on the axis: θ₁ = 0°, sin²0° = 0 — zero intensity. For antenna 2 (oscillating along x̂), the +ẑ direction is broadside: θ₂ = 90°, sin²90° = 1 — maximum intensity. So the observer sees nothing from antenna 1 and a strong signal from antenna 2. Answer (A). The trap is to assume \"same power radiated\" means \"same intensity everywhere\" (B) — but the two antennas have different axes, so they beam in different directions. Choice (C) reverses which antenna is dark; (D) and (E) miss that the axis orientation flips which one is nulled.\n\n90-SECOND SOLUTION\nA dipole is dark along its own axis, brightest broadside. The observer is ON antenna 1's axis (dark) and BROADSIDE to antenna 2 (bright). So: nothing from 1, signal from 2 ⇒ (A). \"Same total power\" is the red herring — equal power spread into different directions gives very different intensity at any one point.\n\nWHAT TO MEMORIZE\nDipole pattern ∝ sin²θ from the oscillation axis: null along the axis, peak broadside. Two dipoles with perpendicular axes have their nulls and peaks swapped, so a single observer can see one loud and the other silent even at equal radiated power. This is the basis of polarization-selective antennas."
+      },
+
+      {
+        "question": "A large flat slab of linear dielectric has its faces perpendicular to a uniform applied field. Inside the slab the field is directed normal to the faces. Consider the boundary condition on the electric field's normal component at the vacuum–dielectric interface, where a bound surface charge σ_b resides. Which statement is correct?",
+        "choices": [
+          "E_⟂ is continuous because the bound charge does not affect E",
+          "D_⟂ is discontinuous by σ_b, while E_⟂ is continuous",
+          "Both E_⟂ and D_⟂ jump by σ_b/ε₀",
+          "Neither field has a normal component at the interface",
+          "E_⟂ is discontinuous, jumping by σ_b/ε₀, while D_⟂ is continuous"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nSplit the total surface charge into free and bound parts. Here the only surface charge is BOUND (polarization) charge σ_b; there is no free charge. The boundary conditions are: D_⟂ jumps by the FREE surface charge (zero here, so D_⟂ is continuous), and E_⟂ jumps by the TOTAL surface charge / ε₀ = σ_b/ε₀. So E_⟂ is discontinuous and D_⟂ is continuous — exactly what makes D the convenient field in dielectric problems. Answer (E). Choice (B) has it backwards (D is what's continuous, not E); (A) wrongly claims the bound charge is invisible to E — it is precisely what E responds to; (C) double-counts; (D) is geometrically false.\n\n90-SECOND SOLUTION\nThe point of introducing D is that it \"doesn't see\" bound charge: D_⟂ only jumps for FREE charge, which is absent, so D_⟂ is continuous. E, on the other hand, feels ALL charge, so E_⟂ jumps by σ_b/ε₀. That is (E). Anyone who answers (B) has memorized \"D jumps by σ\" without the crucial word FREE.\n\nWHAT TO MEMORIZE\nE_⟂ jumps by σ_total/ε₀ (all charge, free + bound); D_⟂ jumps by σ_free only. This is exactly why D is worth defining: in a problem with no free surface charge, D_⟂ sails through the interface unchanged while E does not."
+      },
+
+      {
+        "question": "A point charge +q sits in the region between two large grounded conducting planes that meet at right angles (the planes are the x = 0 and y = 0 half-planes). How many image charges are required to satisfy the boundary conditions, and what are their signs?",
+        "choices": [
+          "One image, −q",
+          "Two images, both −q",
+          "Three images, all −q",
+          "Infinitely many images",
+          "Three images: two of −q and one of +q"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a charge in a 90° corner formed by two grounded planes, you need THREE image charges. Reflecting +q across the x = 0 plane gives a −q; reflecting across the y = 0 plane gives another −q; and to make BOTH planes equipotential you must also reflect one of those images across the other plane, producing a +q in the diagonally opposite quadrant. So the set is: two −q images (one behind each plane) and one +q image (diagonal). Answer (E). Choice (A) is the single-plane answer; (B) forgets the diagonal image needed to fix the second plane; (C) gets the count right but the signs wrong (the diagonal must be +q, or the corner point's potential won't vanish); (D) is the result for a wedge angle that does NOT divide 180° evenly — 90° is special because 180°/90° = 2 is an integer, giving finitely many images.\n\n90-SECOND SOLUTION\n90° corner ⇒ three images. Signs by \"reflect and reflect again\": across plane 1 → −q, across plane 2 → −q, across both (the diagonal) → +q (two sign flips). Two negatives and one positive: (E). Rule out (D): infinite images occur only for corner angles that aren't 180°/integer; 90° divides evenly.\n\nWHAT TO MEMORIZE\nA grounded wedge of angle 180°/n needs 2n − 1 image charges (finite only for integer n). For 90° (n = 2): three images, signs −, −, + arranged in the other three quadrants. Each additional reflection flips the sign."
+      },
+
+      {
+        "question": "A thin uniformly charged spherical shell of total charge Q and radius R has a tiny circular hole (area much smaller than the shell) punched in it. What is the electric field magnitude in the hole (i.e., at the location where the missing patch used to be)?",
+        "choices": [
+          "Q/(4πε₀R²)",
+          "zero",
+          "Q/(2πε₀R²)",
+          "Q/(8πε₀R²)",
+          "2Q/(4πε₀R²)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nJust outside a complete shell the field is E_out = σ/ε₀ = Q/(4πε₀R²); just inside it is zero. The field of the FULL shell is the superposition of (i) the little patch and (ii) the rest of the shell. Right at the patch's location the patch contributes σ/(2ε₀) (a local sheet, half on each side) and the rest of the shell contributes the other σ/(2ε₀). Outside, these add to σ/ε₀; inside, they oppose to give 0. Remove the patch and only \"the rest\" remains: E_hole = σ/(2ε₀), exactly the average of the inside (0) and outside (σ/ε₀) fields. In terms of Q: σ = Q/(4πR²), so E_hole = Q/(8πε₀R²). Answer (D). Choice (A) is the full outside field (forgets the patch is gone); (C) doubles it; (B) mistakes the hole for the shell interior; (E) is 2× the outside field.\n\nNUMERICS WITHOUT A CALCULATOR\nNo plugging — it is the average of the two sides: E_hole = (E_inside + E_outside)/2 = (0 + σ/ε₀)/2 = σ/2ε₀. Then σ = Q/(4πR²) gives Q/(8πε₀R²). The factor you must carry is the 1/2, which is exactly the patch's own contribution that you subtracted out.\n\n90-SECOND SOLUTION\nField in the hole = the field with the patch removed = average of the shell's inside (0) and outside (σ/ε₀) fields = σ/2ε₀ = Q/(8πε₀R²). Pick (D). This \"field in the hole is the average\" result is a superposition classic; the trap (A) is the full outside field, which double-counts the missing patch.\n\nWHAT TO MEMORIZE\nThe field in a small hole in any charged conducting/charged surface equals the AVERAGE of the fields on the two sides: E_hole = ½(E_in + E_out). For a shell that is ½(0 + σ/ε₀) = σ/2ε₀. Equivalently, the outward electrostatic pressure on a surface is σ²/2ε₀ = σ·E_hole."
+      },
+
+      {
+        "question": "A pulse of electromagnetic radiation travels through vacuum and is completely absorbed by a black surface, delivering total energy U to it. During the absorption the surface receives momentum of magnitude p from the pulse. If instead an identical pulse (same energy U) is completely reflected straight back by a perfect mirror, what momentum magnitude does the mirror receive?",
+        "choices": [
+          "p/2",
+          "p",
+          "2p",
+          "U/c",
+          "4p"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAn EM pulse carrying energy U carries momentum U/c. When it is absorbed, the surface gains that momentum: p = U/c. When the same pulse is reflected straight back, its own momentum reverses from +U/c to −U/c, a change of 2U/c, and by momentum conservation the mirror gains 2U/c = 2p. Answer (C). Choice (D), U/c, is a real quantity — it is exactly p itself — placed to reward a student who computed the absorbing case and stopped. Choice (B) forgets the factor of 2 from reversal; (A) inverts it; (E) double-counts the reversal.\n\nNUMERICS WITHOUT A CALCULATOR\nNo numbers at all — this is a factor-of-2 conceptual question. The absorbing case gives momentum U/c; reflection doubles it because the light's momentum flips sign (Δp = final − initial = (−U/c) − (+U/c) = −2U/c). Reflection is to absorption as an elastic bounce is to a dead catch: twice the impulse.\n\n90-SECOND SOLUTION\nAbsorb = catch (impulse U/c); reflect = bounce (impulse 2U/c). The reflected pulse gives twice the momentum, so the answer is 2p. The clever distractor U/c is numerically equal to p — it is the absorbing answer wearing a different symbol, there to catch anyone who solved the wrong case.\n\nWHAT TO MEMORIZE\nRadiation pressure: absorbing surface feels U/c (or intensity/c); a perfect reflector feels twice that, 2U/c (or 2×intensity/c), because reflection reverses the photon momentum. Same factor of 2 as the difference between a perfectly inelastic and a perfectly elastic collision."
+      },
+
+      {
+        "question": "Light passes from vacuum into a transparent, non-magnetic, non-conducting medium of refractive index n at normal incidence. Which of the following is/are the same in the medium as in vacuum? I. The frequency of the wave. II. The wavelength of the wave. III. The speed of the wave.",
+        "choices": [
+          "I only",
+          "II only",
+          "III only",
+          "I and III",
+          "II and III"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAt a boundary the fields must oscillate in step on both sides, so the FREQUENCY is fixed by the source and is continuous across any interface — statement I is true. The speed in the medium is v = c/n < c, so statement III is false. Since v = fλ and f is unchanged while v drops by 1/n, the wavelength shrinks: λ_medium = λ_vacuum/n, so statement II is false. Only I is correct. Answer (A). This is a boundary-condition question in disguise: continuity of the tangential fields at the interface forces frequency matching. The tempting wrong answer is any choice that keeps wavelength or speed — students often \"feel\" that the wave is unchanged, but only its frequency survives the crossing.\n\n90-SECOND SOLUTION\nFrequency is set by the source and cannot change at a passive interface — that alone makes I true and forces you to decide about II and III. In a medium, light slows (v = c/n), and with f fixed, λ = v/f must shrink too. So II and III are both false; only I survives ⇒ (A).\n\nWHAT TO MEMORIZE\nCrossing into a medium: frequency stays, speed drops to c/n, wavelength drops to λ/n. The invariant is frequency, because matching the oscillating boundary fields is what continuity demands. \"Color\" (frequency) does not change underwater; the wavelength does."
+      },
+
+      {
+        "question": "A point charge +q is held a distance d from the center of a GROUNDED conducting sphere of radius R (R < d). What is the total charge that flows from ground onto the sphere (i.e., the net induced charge on it)?",
+        "choices": [
+          "+q",
+          "−q",
+          "−qR/d",
+          "−qd/R",
+          "Zero"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a grounded sphere the single image charge that satisfies the boundary condition is q′ = −qR/d, located inside the sphere. By Gauss's law, the total induced charge on the grounded sphere is exactly equal to this image charge: Q_induced = q′ = −qR/d. (Physically, ground supplies just enough charge to hold the sphere at V = 0, and that amount is set by the image.) Answer (C). The trap (B), −q, is the GROUNDED-PLANE result — for a plane the image is −q, but a finite grounded sphere only pulls in the fraction R/d of it because it subtends a limited solid angle. Choice (A) has the wrong sign; (D) inverts the ratio to qd/R (> q, impossible for a grounded sphere); (E) confuses grounded with isolated-neutral.\n\nNUMERICS WITHOUT A CALCULATOR\nThe induced charge on a grounded conductor equals its image charge — here q′ = −qR/d. Two checks: the sign is negative (opposite the +q it screens), and the magnitude is LESS than q because R < d. As R → d... rather, as R → ∞ (or d → R⁺, the near-plane limit) the fraction R/d → 1 and you recover −q, the plane result.\n\n90-SECOND SOLUTION\nGrounded conductor's net induced charge = its image charge = −qR/d ⇒ (C). Don't reflexively answer −q: that is only the infinite-PLANE case. A finite sphere grabs only the fraction R/d, so the magnitude must be below q — eliminating (A), (B), and (D) at once.\n\nWHAT TO MEMORIZE\nGrounded sphere, external charge q at distance d: net induced (and total) charge = −qR/d, the image charge. The plane's −q is the R/d → 1 limit. For an ISOLATED neutral sphere instead, the net stays zero and a second image (+qR/d at the center) restores neutrality."
+      },
+
+      {
+        "question": "A uniformly charged disk of radius R and surface charge density σ has a small concentric disk of radius R/2 removed, leaving an annulus (washer). What is the electric field on the axis at height z above the center, expressed using the on-axis disk field D(a) ≡ (σ/2ε₀)[1 − z/√(z²+a²)] for a disk of radius a?",
+        "choices": [
+          "D(R) + D(R/2)",
+          "D(R) − D(R/2)",
+          "D(R/2) − D(R)",
+          "D(R) · D(R/2)",
+          "D(R − R/2)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAn annulus is a full disk of radius R with a smaller disk of radius R/2 subtracted — both with the SAME charge density σ. By superposition the axial field is the big disk's field minus the small disk's field: D(R) − D(R/2). Answer (B). Both D(R) and D(R/2) point away from the plane (for +σ), and since D(R) > D(R/2) at any given z (a bigger disk gives a bigger axial field), the difference is positive — the annulus field points away from the sheet, as it must. Choice (C) has the sign backwards (would point toward the sheet); (A) adds instead of subtracts (that would be a disk with DOUBLE density in the middle); (D) multiplies fields, which is dimensionally meaningless; (E) applies the formula to a fictitious disk of radius R/2, which is not how superposition works.\n\n90-SECOND SOLUTION\nWasher = big disk − small disk, same σ ⇒ E = D(R) − D(R/2). Sign check: the big disk wins at every z, so the result is positive (outward), confirming (B) over (C). Adding (A) would model extra charge in the hole, the opposite of removing it.\n\nWHAT TO MEMORIZE\nAny \"shape with a piece removed\" is (full shape) − (removed piece) at the SAME density. Axial disk field D(a) = (σ/2ε₀)[1 − z/√(z²+a²)]; an annulus between radii a and b is D(b) − D(a). Superposition never multiplies or invents new radii — it only adds and subtracts whole pieces."
+      },
+
+      {
+        "question": "A charge oscillates back and forth along the vertical (ẑ) axis, radiating as an electric dipole. A distant observer stands in the horizontal plane (θ = 90° from the ẑ axis). Which statement correctly describes the radiated electric field E, magnetic field B, and Poynting vector S at the observer's location?",
+        "choices": [
+          "E points radially (toward the observer), B is vertical, S is horizontal",
+          "E is vertical, B is horizontal and perpendicular to the line of sight, S points radially outward",
+          "E is horizontal, B is vertical, S points back toward the charge",
+          "E and B are both radial, S is vertical",
+          "E is vertical, B is radial, S is horizontal and perpendicular to the line of sight"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nIn the far field of a dipole oscillating along ẑ, the radiated E field is transverse and lies along the θ̂ direction; for an observer in the equatorial plane (θ = 90°) that direction is vertical, parallel to the oscillation axis. B is along φ̂, perpendicular to both E and the line of sight, and here that is horizontal. The Poynting vector S = (1/μ₀) E × B then points along r̂, radially outward — energy always flows away from a radiating source. Only choice (B) has all three right: E vertical, B horizontal ⟂ line of sight, S radial. Every other choice violates transversality (a radial E or B, choice A/D/E) or has energy flowing back toward the source (choice C), which no radiation field does.\n\n90-SECOND SOLUTION\nKill choices by two rules. (1) Radiated E and B are both transverse — perpendicular to the line of sight — so any choice with a radial E or B (A, D, E) is out. (2) S = E×B points AWAY from the source, so \"back toward the charge\" (C) is out. Only (B) survives, and it correctly places E along the (vertical) oscillation-axis projection.\n\nWHAT TO MEMORIZE\nFar-field radiation is a transverse triad: E along θ̂, B along φ̂, S along r̂, forming a right-handed set with S outward. In the equatorial plane the radiated E is parallel to the source's oscillation axis — this is why a vertical broadcast antenna produces vertically polarized ground-level signals."
+      },
+
+      {
+        "question": "A parallel-plate capacitor has its gap half-filled by a dielectric slab of constant κ, arranged so the slab fills the full plate AREA but only the bottom HALF of the gap thickness (the top half is vacuum). The plates carry fixed free charge, giving a uniform free surface charge density σ_f. Comparing the electric field in the vacuum region (E_vac) to the field in the dielectric region (E_diel), which is correct?",
+        "choices": [
+          "E_vac = E_diel",
+          "E_vac = κ E_diel",
+          "E_diel = κ E_vac",
+          "E_vac = E_diel/κ²",
+          "The fields point in opposite directions"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThis is a series arrangement, so the displacement field D is the same in both regions: it is set by the free charge, D = σ_f, and its normal component is continuous across the (charge-free) vacuum–dielectric interface. In vacuum D = ε₀E_vac, so E_vac = σ_f/ε₀. In the dielectric D = ε₀κE_diel, so E_diel = σ_f/(ε₀κ). Therefore E_vac = κ E_diel — the field is smaller inside the dielectric by exactly κ. Answer (B). The systematic trap (C) reverses which region has the larger field; a dielectric always REDUCES E, so E_diel must be the smaller one. Choice (A) forgets the dielectric acts; (D) squares κ erroneously; (E) is false — both fields point from + plate to − plate.\n\nNUMERICS WITHOUT A CALCULATOR\nNo numbers, one relationship: with D continuous, E = D/(ε₀κ_local), so the region with the bigger κ has the smaller E. Vacuum has κ = 1, dielectric has κ > 1 ⇒ E_vac is larger by the factor κ ⇒ E_vac = κ E_diel. If you wrote E_diel = κ E_vac, you put the big field in the wrong place.\n\n90-SECOND SOLUTION\nSeries stack ⇒ D common. E = D/ε in each layer, so the field is largest where ε is smallest — the vacuum. E_vac/E_diel = κ. Pick (B). The mirror-image distractor (C) is there for anyone who remembers \"κ multiplies\" but forgets which field it multiplies.\n\nWHAT TO MEMORIZE\nLayers stacked ALONG the field (series): D is common, E splits inversely with ε — biggest field in the lowest-ε layer. Layers side by side ACROSS the field (parallel): E is common, D splits with ε. Series → common D; parallel → common E."
+      },
+
+      {
+        "question": "A point charge +q is placed at the exact center of an electrically neutral, isolated (not grounded) spherical conducting shell of inner radius a and outer radius b. Which statement correctly describes the charge distribution and the field outside the shell (r > b)?",
+        "choices": [
+          "−q spreads on the inner surface, +q on the outer surface; outside, the field is that of a point charge +q at the center",
+          "+q on the inner surface, −q on the outer; outside, the field is zero",
+          "No induced charge; the field outside is zero because the conductor shields it",
+          "−q on the inner surface, +q on the outer; outside, the field is zero",
+          "−q on the inner surface only; the outer surface stays neutral and the field outside is zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe +q at the center induces −q uniformly on the inner surface (so the field inside the conductor vanishes, by Gauss's law on a surface within the metal). Since the shell is neutral overall, the outer surface must carry +q to balance. Because the center charge is exactly centered and the shell is spherical, the outer +q spreads uniformly, and for r > b the field is that of a point charge +q at the center — the conductor does NOT shield the outside from the enclosed charge. Answer (A). Choice (B) reverses the induced signs; (D) and (E) wrongly claim the outer field is zero — a neutral shell hides the LOCATION of an interior charge but never its total; (C) forgets induction entirely.\n\n90-SECOND SOLUTION\nGauss's law on a sphere of radius r > b encloses the full net charge +q, so the outside field is simply kq/r² — that of a centered point charge. Induced charges: −q inner (to kill the field in the metal), +q outer (neutrality). Only (A) says both \"outside field = point charge q\" and gets the induced signs right. Any \"field outside is zero\" choice violates Gauss's law for the enclosed +q.\n\nWHAT TO MEMORIZE\nCharge q inside a neutral conducting shell: −q on the inner wall, +q on the outer wall; outside, the field is exactly that of q at the center. Grounding the shell removes the outer +q and THEN the outside field vanishes — grounding is what shields the exterior, not the shell by itself."
+      },
+
+      {
+        "question": "A thin ring of radius R carries uniform linear charge density λ, but a small arc subtending angle 90° is missing (uncharged). Using superposition (full ring minus the missing arc), what is the electric field at the center of the ring?",
+        "choices": [
+          "Zero, by symmetry",
+          "√2 λ/(4πε₀R), along the gap's bisector, pointing toward the gap (away from the remaining charge)",
+          "√2 λ/(4πε₀R), along the gap's bisector, pointing away from the gap (toward the remaining charge)",
+          "λ/(4πε₀R), pointing toward the gap",
+          "λ/(4πε₀R²), pointing toward the gap"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nA complete uniformly charged ring produces ZERO field at its center by symmetry. Write the actual object as (full ring) − (the missing 90° arc), both at density +λ. By superposition the field at the center is 0 − E_arc = −E_arc, where E_arc is the field the missing arc WOULD have produced if it were present. A present +λ arc, sitting on the gap side, pushes a test +charge at the center straight away from itself — that is, from the gap side across the center toward the remaining charge. The actual field is the NEGATIVE of that, so it points the opposite way: from the remaining charge back toward the gap. In short, the field points toward the empty gap, along its bisector. Its magnitude equals E_arc, obtained by integrating the bisector component k λ cosθ/R over the 90° arc with θ from −45° to +45°; the integral of cosθ over that range is √2, giving E = √2·λ/(4πε₀R). Answer (B). Choice (C) has the right magnitude but the direction reversed (toward the remaining charge); (A) is the full-ring result and forgets the ring is incomplete; (D) drops the √2 geometric factor; (E) has wrong dimensions (1/R² instead of 1/R for a ring at its own center).\n\n90-SECOND SOLUTION\nFull ring gives 0; the real field is minus the missing arc's contribution, magnitude √2·λ/(4πε₀R) (the ∫cosθ over ±45° gives √2). Direction is the subtle part: since the field equals −E_arc and a +λ arc's field points away from the arc, the actual field points BACK toward the gap. Physically, deleting positive charge from the gap side leaves the center pushed toward that now-empty side. That is (B). The √2 (not 1) discriminates against (D); the direction discriminates against (C).\n\nWHAT TO MEMORIZE\nIncomplete symmetric distribution: field = (complete, symmetric) − (missing piece) = −(missing piece), since the complete one gives zero. For a ring with a 90° arc removed, the center field is √2·λ/(4πε₀R), pointing along the bisector toward the GAP (removing + charge leaves the center pushed toward the hole). The geometric factor is the integral of cosθ over the arc's angular span."
+      },
+
+      {
+        "question": "A long straight wire of resistance per unit length carries a steady current I driven by a battery, so a static electric field exists along the wire's surface and a magnetic field circles it. Consider the Poynting vector S = (1/μ₀) E × B just outside the wire's surface. In which direction does S point, and what does it represent?",
+        "choices": [
+          "Along the wire in the direction of I; it represents the current",
+          "Radially outward from the wire; the wire radiates energy into space",
+          "Radially inward toward the wire's axis; it represents the power delivered to the wire, which appears as I²R heating",
+          "Circulating around the wire; it represents the stored magnetic energy",
+          "Zero, because E and B are perpendicular to each other"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nOutside a resistive current-carrying wire the electric field just at the surface has a component E∥ parallel to the wire (it drives the current: E∥ = ρJ). The magnetic field wraps azimuthally, B = φ̂ μ₀I/2πr. The cross product of an axial E with an azimuthal B points radially INWARD, toward the wire's axis. Integrating this inward S over the wire's surface gives exactly I²R — the electromagnetic energy is flowing from the fields into the wire, where it is dissipated as heat. Answer (C). This is the famous, counterintuitive result: energy does not flow \"down the wire\" with the current (A); the wire is not radiating (B); and although |E×B| is nonzero (so E) is wrong, its direction is the whole point.\n\n90-SECOND SOLUTION\nE along the wire, B around it ⇒ E×B points radially inward. Energy flows INTO the wire from the surrounding fields and is dissipated as I²R. The seductive wrong answer is (A) \"along the wire\" — the current goes along the wire, but the energy comes in from the sides. Rule out (E) immediately: E∥ and B are perpendicular (axial × azimuthal), so their cross product is maximal, not zero.\n\nWHAT TO MEMORIZE\nPoynting's theorem says energy enters a resistor through its sides, not along the wire. ∮S·dA over the surface of a resistive wire equals −I²R (inward flux = power dissipated). The lesson: field energy flows in the space around conductors, and the wire merely guides it."
+      },
+
+      {
+        "question": "At a certain interface between two media, a static magnetic field is present. There are no free surface currents on the interface. Which components of the magnetic fields are continuous across it?",
+        "choices": [
+          "The normal component of B and the tangential component of H",
+          "The tangential component of B and the normal component of H",
+          "Both components of B",
+          "Both components of H",
+          "The normal component of B and the normal component of H"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe magnetostatic boundary conditions mirror the electrostatic ones with the roles of the fields swapped. Because ∇·B = 0 always, the pillbox argument makes the NORMAL component of B continuous. Because ∇×H = J_free and there is no free surface current here, the loop argument makes the TANGENTIAL component of H continuous. So B_⟂ and H_∥ are the continuous pair. Answer (A). Choice (B) swaps them (the common error); (C) and (D) each over-claim continuity of both components of one field, false whenever the permeabilities differ; (E) pairs two normal components, mixing up the divergence and curl arguments.\n\n90-SECOND SOLUTION\nDivergence-free B ⇒ normal B continuous (no magnetic monopoles to make it jump). Curl of H set by free current ⇒ with none present, tangential H continuous. That is (A). The magnetic analog of \"tangential E, normal D\" is \"normal B, tangential H\" — note the fields trade places.\n\nWHAT TO MEMORIZE\nMagnetostatics: B_⟂ continuous always (∇·B = 0); H_∥ jumps by the free surface current (continuous when none). It is the dual of the E/D rules — where E gave tangential and D gave normal, B gives normal and H gives tangential."
+      },
+
+      {
+        "question": "A neutral, isolated conducting sphere is placed in a region of initially uniform external electric field E₀. After equilibrium is reached, consider the field just outside the sphere's surface. At the two poles (the points on the surface facing along ±E₀), the field magnitude is:",
+        "choices": [
+          "Zero",
+          "E₀",
+          "2E₀",
+          "3E₀",
+          "E₀/3"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA conducting sphere in a uniform field acquires an induced dipole; the external solution is the uniform field plus a point-dipole field. The potential outside is V = −E₀r cosθ (1 − R³/r³)... and the resulting surface field is purely radial with magnitude E_surface = 3E₀ cosθ. At the poles (θ = 0, π) cosθ = ±1, so the field magnitude is 3E₀ — the field is enhanced threefold at the poles. Answer (D). At the equator (θ = 90°) the field is zero, which is the source of trap (A) — right answer, wrong location. Choice (C), 2E₀, is the field-enhancement factor for a different geometry (a conducting cylinder gives 2E₀, not 3E₀); (B) forgets the induced dipole enhances the field; (E) inverts the factor.\n\n90-SECOND SOLUTION\nInduced-dipole superposition gives E_surface = 3E₀cosθ. Poles: cosθ = 1 ⇒ 3E₀. Equator: 0. The answer is (D). Two classic traps sit here: (A) is the equatorial value, and (C) = 2E₀ is the CYLINDER enhancement — a sphere gives 3, a cylinder gives 2.\n\nWHAT TO MEMORIZE\nConducting SPHERE in uniform E₀: surface field 3E₀cosθ, maximal 3E₀ at the poles, zero at the equator. Conducting CYLINDER (2D): enhancement factor 2 instead of 3. The pole enhancement is why lightning rods are pointed — high curvature concentrates the field even more."
+      },
+
+      {
+        "question": "A thin ring of radius R lies in the xy-plane centered at the origin. The upper semicircle carries a uniformly distributed charge +Q and the lower semicircle carries a uniformly distributed charge −Q. Consider the center of the ring. Which is correct about the electric potential V and the electric field E there (V = 0 at infinity)?",
+        "choices": [
+          "V = 0 and E = 0",
+          "V = 0 and E ≠ 0",
+          "V ≠ 0 and E = 0",
+          "V = kQ/R and E = 0 (k = 1/4πε₀)",
+          "V ≠ 0 and E ≠ 0, both nonzero"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTreat potential and field separately, because one is a scalar and the other a vector. POTENTIAL: every charge element sits at the same distance R from the center, so V = (1/4πε₀)(Σq_i)/R = (1/4πε₀)(+Q − Q)/R = 0 — the +Q and −Q contributions cancel exactly as signed scalars. FIELD: the field is a vector sum. The +Q upper half pushes a test +charge downward (away from +Q), and the −Q lower half pulls it downward too (toward −Q); both contributions point the SAME way (−y), so they add rather than cancel. The field at the center is therefore nonzero, pointing from the +Q side toward the −Q side. So V = 0 but E ≠ 0. Answer (B). Choice (A) wrongly assumes the potential cancellation implies field cancellation; (C)/(D) claim a nonzero V (they forget the signs cancel) and a zero field (they forget the vectors add); (E) misses the potential cancellation.\n\n90-SECOND SOLUTION\nPotential is a signed scalar: equal +Q and −Q at equal distance ⇒ V = 0. Field is a vector: the +Q half and the −Q half both push toward the −Q side ⇒ they ADD ⇒ E ≠ 0. That combination is (B). This is the field-vs-potential trap: a point can sit at zero potential yet feel a strong field (and vice versa — inside a charged shell E = 0 but V ≠ 0).\n\nWHAT TO MEMORIZE\nV is an algebraic (signed) sum; E is a vector sum. Zero potential does not imply zero field, and zero field does not imply zero potential. Symmetric ± halves at equal distance give V = 0 with E ≠ 0; a uniform shell gives the opposite, E = 0 with V ≠ 0."
+      },
+
+      {
+        "question": "According to the nonrelativistic Larmor formula, the power radiated by a point charge is P = q²a²/(6πε₀c³), where a is the acceleration. Two particles are subjected to the SAME constant external force F. Particle 2 has three times the charge and nine times the mass of particle 1. What is the ratio P₂/P₁ of their radiated powers?",
+        "choices": [
+          "9",
+          "1/9",
+          "1/3",
+          "3",
+          "1"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nLarmor power depends on q²a². The acceleration is a = F/m, and F is the same for both, so a ∝ 1/m. Thus P ∝ q²/m². For particle 2, q → 3q gives q² factor 9, and m → 9m gives 1/m² factor 1/81. The ratio is P₂/P₁ = 9 × (1/81) = 1/9. Answer (B). The trap (A), a factor of 9, is what you get by tracking only the charge and forgetting that the larger mass suppresses the acceleration. Choice (D) uses q/m (linear) instead of q²/m²; (C) inverts a factor; (E) assumes the effects cancel.\n\nNUMERICS WITHOUT A CALCULATOR\nReduce the formula to a scaling before plugging: same F ⇒ a = F/m ⇒ P ∝ q²/m². Now it is just 3²/9² = 9/81 = 1/9. The whole difficulty is remembering that \"same force\" means the acceleration is NOT a free parameter — the heavier particle accelerates less, and that enters squared.\n\n90-SECOND SOLUTION\nSame force, so a ∝ 1/m and P ∝ q²a² ∝ q²/m². Plug the ratios: (3)²/(9)² = 1/9. If you got 9, you forgot the mass fights back through a = F/m — the classic Larmor \"same force, not same acceleration\" trap.\n\nWHAT TO MEMORIZE\nLarmor: P ∝ q²a². Whenever a problem fixes the FORCE rather than the acceleration, substitute a = F/m first, giving P ∝ q²/m². This is why light particles (electrons) radiate far more than heavy ones under the same force."
+      },
+
+      {
+        "question": "A wave on a string of linear mass density μ₁ meets a junction with a heavier string of density μ₂ > μ₁ (both under the same tension). At the junction, which pair of physical quantities must be continuous, and what does their continuity most closely parallel in electromagnetism at a dielectric interface?",
+        "choices": [
+          "The displacement and its slope; parallels continuity of E_∥ and D_⟂",
+          "The displacement and the wave speed; parallels continuity of frequency and wavelength",
+          "The tension and the frequency only; parallels continuity of B alone",
+          "The amplitude and the wavelength; parallels continuity of both E components",
+          "Only the displacement; there is no electromagnetic parallel"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAt the knot two conditions hold: the string cannot break, so the transverse DISPLACEMENT is continuous; and the massless knot cannot support a net transverse force, so the transverse force — which for a string under tension T is T times the SLOPE ∂y/∂x — is continuous, meaning the slope is continuous. These two \"matching conditions\" (the function and its spatial derivative continuous) are structurally identical to the EM interface conditions, where a field component and a derivative-related component (E_∥ and D_⟂, the field and its \"flux\") match across the boundary. Answer (A). The wave equation is the same in both problems, so the boundary matching has the same form; frequency is continuous but wavelength and speed are NOT (they change with μ), which rules out (B) and (D). Tension is continuous but it is given as uniform, not a matching output (C), and there certainly is an EM parallel (E).\n\n90-SECOND SOLUTION\nPhysical reasoning at the knot: string stays connected (displacement continuous) and the knot has no mass to accelerate (transverse force = T·slope continuous). Two conditions, function + derivative — exactly the flavor of EM boundary conditions. That is (A). Reject anything claiming wavelength or speed is continuous: those change because v = √(T/μ) changes with μ.\n\nWHAT TO MEMORIZE\nWave-matching at any interface: the field and its normal-derivative-type partner are the continuous pair — displacement and slope on a string, E_∥ and D_⟂ for light, wavefunction ψ and ψ′ in quantum mechanics. Frequency is always continuous; wavelength and speed adjust to the medium."
+      },
+
+      {
+        "question": "Two large grounded conducting planes are parallel, separated by a distance L. A point charge +q is placed between them, a distance x from the left plane (0 < x < L). Compared with a single grounded plane, the method of images for this two-plane geometry requires:",
+        "choices": [
+          "A single image charge −q",
+          "Exactly two image charges, one behind each plane",
+          "Exactly three image charges",
+          "An infinite series of image charges of alternating sign",
+          "No image charges, since the two planes' effects cancel"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEach grounded plane requires an image of the real charge; but each image, being a charge in the presence of the OTHER plane, requires its own image, and so on without end. The result is an INFINITE set of image charges of alternating sign, located at positions 2nL ± x for all integers n. This is the electrostatic analog of the infinitely many reflections you see between two facing mirrors. Answer (D). Choice (A) is the single-plane case; (B) stops after one reflection each and fails to make either plane a perfect equipotential; (C) is the right-angle-corner count, which is finite only because 90° divides 180° evenly; (E) is simply wrong — the charge is attracted to both planes.\n\n90-SECOND SOLUTION\nTwo parallel mirrors ⇒ infinite reflections. Same for grounded planes: each image needs an image in the far plane, forever, with alternating signs. That is (D). Contrast the 90° CORNER, which terminates after three images because the wedge angle divides 180° — parallel planes are the 0°-wedge limit and never terminate.\n\nWHAT TO MEMORIZE\nGrounded wedge of angle θ: finite images (2·180°/θ − 1) only when 180°/θ is an integer. Parallel planes (θ → 0) give an infinite alternating array at 2nL ± x. Think facing mirrors: parallel = infinite, right-angle corner = a finite number of reflections."
+      },
+
+      {
+        "question": "Two infinite parallel sheets of charge are separated by a small gap. The left sheet carries uniform surface density +σ and the right sheet carries +σ as well (both positive, equal). Using superposition, what is the electric field magnitude in the region BETWEEN the two sheets?",
+        "choices": [
+          "σ/ε₀",
+          "σ/(2ε₀)",
+          "Zero",
+          "2σ/ε₀",
+          "σ/(4ε₀)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nEach infinite sheet produces a uniform field of magnitude σ/2ε₀ pointing AWAY from itself on both sides. In the region between the two sheets, the left sheet's field points right (away from it) and the right sheet's field points left (away from it) — they are equal in magnitude and OPPOSITE in direction, so they cancel. The field between two equal like-charged sheets is zero. Answer (C). Outside the pair the fields add to σ/ε₀. The classic trap is (A), σ/ε₀ — that is the field between two OPPOSITELY charged sheets (a capacitor), where the fields add between and cancel outside. This problem is the mirror image: same-sign sheets cancel between, add outside.\n\n90-SECOND SOLUTION\nTwo same-sign sheets: between them the fields point toward each other's exterior — opposite directions — and cancel ⇒ 0. Pick (C). Flip the intuition you have from a capacitor: opposite charges give σ/ε₀ BETWEEN and 0 outside; SAME charges give 0 between and σ/ε₀ outside.\n\nWHAT TO MEMORIZE\nEach sheet: σ/2ε₀ on each side, pointing away (for +σ). Two sheets, opposite signs (capacitor): fields add between (σ/ε₀), cancel outside. Two sheets, same sign: cancel between (0), add outside (σ/ε₀). Superpose the σ/2ε₀ pieces with their directions and it falls out."
+      },
+
+      {
+        "question": "A particle moving at speed v = 0.9c through a transparent medium emits Cherenkov radiation in a cone whose half-angle (measured from the particle's path) is θ_c, satisfying cosθ_c = 1/(nβ) with β = v/c. If the measured cone half-angle is exactly θ_c = 60°, what is the refractive index n of the medium?",
+        "choices": [
+          "n = 0.9",
+          "n ≈ 1.11",
+          "n ≈ 2.22",
+          "n = 1.5",
+          "n ≈ 1.80"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRun the Cherenkov relation backward: from cosθ_c = 1/(nβ) we get n = 1/(β cosθ_c). Here β = 0.9 and θ_c = 60°, so cos60° = 1/2. Then n = 1/(0.9 × 0.5) = 1/0.45 ≈ 2.22. Answer (C). This is the \"given the outcome, find the input\" structure — you are handed the cone angle and asked for the medium property that produced it. Choice (A) just quotes β; (B) computes 1/(β·something) with cosθ = 0.9-ish or uses θ wrongly; (D) is the standard n = 1.5 anchor placed to catch a guess; (E) drops the cos factor (1/0.9·... ) or uses sinθ.\n\nNUMERICS WITHOUT A CALCULATOR\ncos60° = 1/2 exactly, so n = 1/(0.9 × 0.5) = 1/0.45. Estimate: 1/0.45 is a bit more than 1/0.5 = 2, so n ≈ 2.2. Only choice (C) is near 2.2. No calculator needed once you see cos60° = ½ and that 1/0.45 ≈ 2.22.\n\n90-SECOND SOLUTION\nInvert: n = 1/(β cosθ_c) = 1/(0.9·½) ≈ 2.2 ⇒ (C). Sanity: a wide 60° cone at high β needs a fairly dense medium, so n > 2 is reasonable; n = 0.9 (< 1) is unphysical for a normal transparent medium, eliminating (A) at a glance.\n\nWHAT TO MEMORIZE\nCherenkov cone: cosθ_c = 1/(nβ). Threshold (θ_c → 0) is βn = 1. Solving for n given the measured angle — n = 1/(β cosθ_c) — is exactly how ring-imaging Cherenkov detectors turn a measured cone into a particle identification."
+      },
+
+      {
+        "question": "A hemispherical shell (half of a thin spherical shell of radius R) carries uniform surface charge σ. Using superposition reasoning with a complete sphere, which statement about the electric field at the CENTER of curvature is correct?",
+        "choices": [
+          "It is zero, by the symmetry of the shell",
+          "It is σ/(2ε₀), directed along the symmetry axis away from the hemisphere's opening",
+          "It is σ/(4ε₀), directed along the symmetry axis",
+          "It equals the full-sphere center field, which is zero",
+          "It is σ/ε₀, directed toward the flat opening"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA complete uniformly charged spherical shell produces ZERO field at its center. Think of the full shell as two hemispheres; by symmetry each hemisphere contributes an equal field at the center, both directed along the symmetry axis (each pushing away from itself, i.e. toward the opening of the other). For the two to sum to zero, each hemisphere alone must produce a field E_hemi along the axis, and E_hemi + E_hemi = 0 requires... they point in OPPOSITE axial directions and cancel. To get the magnitude, integrate: a uniformly charged hemispherical shell gives E_center = σ/(4ε₀) along its symmetry axis, directed away from the shell (out through the opening). Answer (C). Choice (A) wrongly applies full-sphere symmetry to a half shell; (B) doubles the result; (D) confuses the hemisphere with the whole sphere; (E) has the wrong magnitude and direction.\n\nNUMERICS WITHOUT A CALCULATOR\nThe integral E = ∫ (σ dA/4πε₀ R²) cosθ over the hemisphere gives σ/(4ε₀); you don't need to redo it if you remember the result, but the structural check is: two of these hemispheres must add (as opposing vectors) to the full sphere's zero, which they do, and each has magnitude σ/4ε₀. Don't fall for σ/2ε₀ (that's a flat sheet, not a hemisphere).\n\n90-SECOND SOLUTION\nFull shell ⇒ 0 at center. One hemisphere is half of that but does NOT give zero — it gives a finite axial field σ/(4ε₀) out through its opening. The symmetry that zeroes the full sphere is exactly what's broken by taking half. Pick (C); reject (A)/(D), which misapply full-sphere symmetry.\n\nWHAT TO MEMORIZE\nUniform hemispherical shell: E at center of curvature = σ/(4ε₀), along the axis toward the opening. Two such hemispheres (opposite openings) superpose to the full shell's zero. Half of a symmetric object does NOT inherit the symmetric object's null result."
+      }
+
+    ]
+  },
+
+  {
     "name": "EM Radiation & Fields in Motion (Hard)",
     "added": "2026-09-05",
     "category": "em",
