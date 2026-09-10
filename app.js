@@ -26,6 +26,7 @@ const CATEGORIES = [
   { key: "sr", label: "Special Relativity" },
   { key: "lab", label: "Laboratory Methods" },
   { key: "specialized", label: "Specialized Topics" },
+  { key: "uncategorized", label: "Uncategorized" },
 ];
 const STORAGE_KEY = "flashcards-progress";
 // Separate from STORAGE_KEY on purpose: colors are keyed by exam name, not

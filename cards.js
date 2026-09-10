@@ -10,11 +10,14 @@
 //               "sr", "lab", "specialized" — matching the official GRE
 //               Physics subject breakdown (circuits sits under "em",
 //               atomic physics under "qm", condensed matter under
-//               "specialized" — none of those get their own shelf). The
-//               exact set of slugs and their shelf labels/order live in
-//               CATEGORIES near the top of app.js; add a slug there before
-//               using it here, or the exam falls into a catch-all "Other"
-//               shelf instead.
+//               "specialized" — none of those get their own shelf).
+//               "uncategorized" is a deliberate holding shelf for a set that
+//               doesn't sit well under any one subject (e.g. one mixing two
+//               subjects roughly evenly) — use it rather than forcing such a
+//               set under either subject. The exact set of slugs and their
+//               shelf labels/order live in CATEGORIES near the top of
+//               app.js; add a slug there before using it here, or the exam
+//               falls into a catch-all "Other" shelf instead.
 //    cards : the questions (the tile counts them for you)
 //
 //  Each card:
@@ -16438,6 +16441,342 @@ const EXAMS = [
       }
 
     ]
-  }
+  },
+
+
+
+  {
+    "name": "Thermo Cycles & Quantum Wavefunctions (Hard)",
+    "added": "2026-09-09",
+    "category": "uncategorized",
+    "cards": [
+
+      {
+        "question": "The figure shows a cycle on a temperature–entropy (T–S) diagram: a rectangle with the working substance absorbing heat at T_h = 500 K while its entropy rises from S = 1.0 to 3.0 J/K, then rejecting heat at T_c = 300 K as entropy returns. What is the net work done per cycle and the thermal efficiency?",
+        "image": "images/thermo-qm-1/tsrect.png",
+        "choices": [
+          "400 J, 40%",
+          "200 J, 40%",
+          "400 J, 60%",
+          "800 J, 40%",
+          "1000 J, 60%"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nOn a T–S diagram heat is the AREA under a process, so Q_in = T_h·ΔS = 500×2.0 = 1000 J (top leg) and Q_out = T_c·ΔS = 300×2.0 = 600 J (bottom leg). Net work = enclosed area = (T_h−T_c)ΔS = 200×2.0 = 400 J. Efficiency η = W/Q_in = 400/1000 = 40% (= 1−T_c/T_h, the Carnot value, since a T–S rectangle IS a Carnot cycle).\n\nNUMERICS WITHOUT A CALCULATOR\nQ_in = T_h ΔS = 1000 J; enclosed area = ΔT·ΔS = 200×2 = 400 J; η = 400/1000 = 0.4.\n\n90-SECOND SOLUTION\nA rectangle on T–S is Carnot: read η = 1−T_c/T_h = 1−300/500 = 40% directly; work = area = ΔT·ΔS.\n\nWHAT TO MEMORIZE\nOn T–S, Q = area under the curve and net work = enclosed area (just as net work = enclosed area on P–V). A T–S rectangle is a Carnot cycle with η = 1−T_c/T_h."
+      },
+
+      {
+        "question": "On a T–S diagram, a reversible process takes a substance along a straight line from (S,T) = (1.0 J/K, 300 K) to (3.0 J/K, 500 K). How much heat is absorbed during this single process?",
+        "image": "images/thermo-qm-1/tstrap.png",
+        "choices": [
+          "400 J",
+          "600 J",
+          "800 J",
+          "1000 J",
+          "1600 J"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nHeat is the area under the process on a T–S diagram: Q = ∫T dS. For a straight line the region is a trapezoid with parallel sides T_i = 300 K and T_f = 500 K and width ΔS = 2.0 J/K: Q = ½(300+500)(2.0) = 800 J. The trap 1000 J uses only the final temperature (a rectangle), ignoring the slope.\n\nNUMERICS WITHOUT A CALCULATOR\nTrapezoid area = ½(T_i+T_f)·ΔS = ½(800)(2) = 800 J.\n\n90-SECOND SOLUTION\nQ = area under the T–S line = average temperature × ΔS = 400 × 2 = 800 J.\n\nWHAT TO MEMORIZE\nQ = ∫T dS = area under the T–S curve. A sloped (linear) leg gives a trapezoid: use the AVERAGE temperature ½(T_i+T_f), not either endpoint alone."
+      },
+
+      {
+        "question": "In the compression stroke of an Otto cycle, a diatomic ideal gas (γ = 1.4) starting at 300 K is compressed adiabatically by a compression ratio r = 10. What is the gas temperature at the end of the compression stroke, most nearly?",
+        "choices": [
+          "750 K",
+          "300 K",
+          "480 K",
+          "600 K",
+          "3000 K"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a quasi-static adiabatic process, TV^(γ−1) = constant, so T₂/T₁ = (V₁/V₂)^(γ−1) = r^(γ−1). With r = 10 and γ = 1.4, r^0.4 = 10^0.4 ≈ 2.51, so T₂ = 300 × 2.51 ≈ 750 K. The trap 3000 K uses the compression ratio r itself (T₂ = T₁·r = 300×10) instead of the correct exponent, T₂ = T₁·r^(γ−1).\n\nNUMERICS WITHOUT A CALCULATOR\n10^0.4 ≈ 2.5, so T₂ ≈ 300 × 2.5 = 750 K.\n\n90-SECOND SOLUTION\nAdiabatic compression: T₂ = T₁ r^(γ−1) = 300 × 10^0.4 ≈ 750 K.\n\nWHAT TO MEMORIZE\nAdiabatic relation TV^(γ−1) = const gives T₂/T₁ = r^(γ−1) for compression ratio r. This temperature rise (not r itself) is what drives Otto/Diesel efficiency; the exponent is γ−1, not γ or 1."
+      },
+
+      {
+        "question": "The P–V diagram shows an air-standard Diesel cycle (γ = 1.4) with compression ratio r = 16 and cutoff ratio r_c = 2.0 (the volume ratio during the constant-pressure heat addition). What is the ideal thermal efficiency, most nearly?",
+        "image": "images/thermo-qm-1/diesel.png",
+        "choices": [
+          "61%",
+          "45%",
+          "52%",
+          "57%",
+          "67%"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Diesel efficiency is η = 1 − (1/r^(γ−1))·[(r_c^γ − 1)/(γ(r_c − 1))]. With r = 16, γ = 1.4: r^(γ−1) = 16^0.4 = 2^1.6 ≈ 3.03. The bracket: r_c^γ = 2^1.4 ≈ 2.64, so (2.64−1)/(1.4×1) = 1.64/1.4 = 1.17. Thus η = 1 − (1/3.03)(1.17) = 1 − 0.386 = 0.614 ≈ 61%. Unlike Otto, the cutoff-ratio bracket (always > 1) makes a Diesel slightly LESS efficient than an Otto engine at the same r.\n\nNUMERICS WITHOUT A CALCULATOR\n16^0.4 = 2^1.6 ≈ 3.0; bracket ≈ (2.64−1)/1.4 ≈ 1.17; η ≈ 1 − 1.17/3.0 ≈ 0.61.\n\n90-SECOND SOLUTION\nDiesel adds heat at constant PRESSURE, so its efficiency carries the extra cutoff-ratio bracket beyond the Otto form: η = 1 − r^(1−γ)·[(r_c^γ−1)/(γ(r_c−1))].\n\nWHAT TO MEMORIZE\nDiesel efficiency = Otto's r^(1−γ) times a cutoff-ratio bracket [(r_c^γ−1)/(γ(r_c−1))] > 1, so at equal compression ratio a Diesel is less efficient than an Otto — but Diesels run at much higher r."
+      },
+
+      {
+        "question": "A gas-turbine (Brayton) cycle consists of two isobars joined by two adiabats, with a pressure ratio r_p = P_high/P_low = 8 across the compressor. The working gas has γ = 1.4. What is the ideal thermal efficiency?",
+        "image": "images/thermo-qm-1/brayton.png",
+        "choices": [
+          "30%",
+          "37%",
+          "45%",
+          "50%",
+          "56%"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBrayton efficiency depends only on the pressure ratio: η = 1 − (1/r_p)^((γ−1)/γ) = 1 − (1/8)^(0.4/1.4) = 1 − 8^(−0.286). Since 8^0.286 = 2^0.857 ≈ 1.81, η = 1 − 1/1.81 = 1 − 0.552 = 0.448 ≈ 45%. Heat is exchanged only along the two isobars.\n\nNUMERICS WITHOUT A CALCULATOR\n8^(2/7) = 2^(6/7) ≈ 1.81, so η ≈ 1 − 1/1.81 ≈ 0.45.\n\n90-SECOND SOLUTION\nBrayton depends on pressure ratio: η = 1 − r_p^(−(γ−1)/γ) ≈ 1 − 8^(−0.29) ≈ 45%.\n\nWHAT TO MEMORIZE\nBrayton (gas turbine) efficiency η = 1 − r_p^(−(γ−1)/γ), set by the compressor pressure ratio. Same structural role as compression ratio in Otto, but with pressure and the exponent (γ−1)/γ."
+      },
+
+      {
+        "question": "The figure shows a Stirling cycle for an ideal gas: two isotherms (hot at T_h = 600 K, cold at T_c = 300 K) joined by two constant-volume legs, with an ideal regenerator that stores the heat released on one isochore and returns it on the other. With ideal regeneration, what is the thermal efficiency?",
+        "image": "images/thermo-qm-1/stirling.png",
+        "choices": [
+          "25%",
+          "33%",
+          "40%",
+          "50%",
+          "It cannot exceed a real engine"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWithout regeneration, the isochoric legs would waste heat and lower efficiency. An IDEAL regenerator recycles all the constant-volume heat internally, so the only external heat exchange is along the two isotherms — exactly like a Carnot cycle. The efficiency therefore reaches the Carnot value η = 1 − T_c/T_h = 1 − 300/600 = 0.50 = 50%. The regenerator is what lets the Stirling cycle match Carnot efficiency.\n\n90-SECOND SOLUTION\nIdeal regeneration makes the isochoric heat internal, leaving only isothermal exchange ⇒ Carnot efficiency 1 − T_c/T_h = 50%.\n\nWHAT TO MEMORIZE\nAn ideal Stirling cycle WITH a regenerator has Carnot efficiency 1 − T_c/T_h, because the regenerator recycles the constant-volume heat so only the isotherms exchange heat with the reservoirs."
+      },
+
+      {
+        "question": "A fixed quantity of ideal gas (n moles) is carried around a cycle drawn on a PRESSURE–TEMPERATURE (P–T) diagram: a horizontal leg 1→2 (constant P) during which the temperature rises by ΔT = 200 K, then legs returning it to the start. During the horizontal (constant-pressure) leg, how much work does the gas do?",
+        "image": "images/thermo-qm-1/ptcycle.png",
+        "choices": [
+          "nR·(200 K)",
+          "0",
+          "nR·(100 K)",
+          "2nR·(200 K)",
+          "nRT·ln 2"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nOn a P–T diagram a horizontal line is a CONSTANT-PRESSURE process (P fixed while T changes). For an ideal gas at constant P, W = PΔV, and since PV = nRT gives PΔV = nRΔT, the work is W = nRΔT = nR(200 K). The key skill is reading the axes: because the diagram is P versus T (not the usual P versus V), you must translate 'horizontal' into 'isobaric' before applying the work formula. The trap 0 would apply to a constant-VOLUME leg — but on a P–T diagram an isochore is a line through the ORIGIN (P ∝ T at fixed V), not a horizontal line.\n\nNUMERICS WITHOUT A CALCULATOR\nIsobaric work: W = PΔV = nRΔT = nR(200 K).\n\n90-SECOND SOLUTION\nHorizontal on P–T ⇒ constant pressure ⇒ W = nRΔT = 200nR.\n\nWHAT TO MEMORIZE\nRead the axes before naming a process. On P–T: horizontal = isobaric (W = nRΔT); a line through the origin = isochoric (W = 0, since P ∝ T at fixed V); a vertical line = constant temperature."
+      },
+
+      {
+        "question": "On an enthalpy–entropy (H–S, or Mollier) diagram, steam expands adiabatically and reversibly through a turbine along a vertical line (constant entropy) from specific enthalpy h_1 = 3400 kJ/kg to h_2 = 2900 kJ/kg. What is the specific work output of the turbine?",
+        "image": "images/thermo-qm-1/hs.png",
+        "choices": [
+          "250 kJ/kg",
+          "500 kJ/kg",
+          "2900 kJ/kg",
+          "3400 kJ/kg",
+          "6300 kJ/kg"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a steady-flow adiabatic turbine, the first law reduces to w = h_1 − h_2 (the work per unit mass equals the drop in enthalpy). Here w = 3400 − 2900 = 500 kJ/kg. A reversible adiabatic process is isentropic, which is why the path is vertical on H–S — the turbine work is read directly as the vertical enthalpy drop.\n\nNUMERICS WITHOUT A CALCULATOR\nw = h_1 − h_2 = 3400 − 2900 = 500 kJ/kg.\n\n90-SECOND SOLUTION\nAdiabatic turbine ⇒ work = enthalpy drop = vertical distance on the H–S diagram = 500 kJ/kg.\n\nWHAT TO MEMORIZE\nFor a steady-flow adiabatic device, w = Δh (enthalpy change), not Δu. On an H–S (Mollier) diagram an ideal turbine is a vertical line and its work is the enthalpy drop read straight off the vertical axis."
+      },
+
+      {
+        "question": "A reversible refrigeration cycle is drawn as a rectangle on a T–S diagram, absorbing heat from a cold space at T_c = 250 K and rejecting it to a room at T_h = 300 K. What are the coefficients of performance for (i) cooling the cold space and (ii) heating the room, respectively?",
+        "image": "images/thermo-qm-1/fridge.png",
+        "choices": [
+          "5 and 6",
+          "5 and 5",
+          "6 and 5",
+          "6 and 6",
+          "1 and 5"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a reversible (Carnot) cycle the cooling COP is COP_cool = T_c/(T_h−T_c) = 250/50 = 5, and the heating COP is COP_heat = T_h/(T_h−T_c) = 300/50 = 6. They differ by exactly 1 (COP_heat = COP_cool + 1), because the heat rejected to the room equals the heat drawn from the cold space plus the work input. The T–S rectangle makes both readable: Q_c = T_c ΔS, Q_h = T_h ΔS, W = (T_h−T_c)ΔS.\n\nNUMERICS WITHOUT A CALCULATOR\nΔT = 50 K. Cooling: 250/50 = 5. Heating: 300/50 = 6.\n\n90-SECOND SOLUTION\nCOP_cool = T_c/ΔT = 5; COP_heat = T_h/ΔT = 6 (always one more).\n\nWHAT TO MEMORIZE\nReversible COPs: cooling = T_c/(T_h−T_c), heating = T_h/(T_h−T_c), differing by exactly 1. On a T–S rectangle Q_c = T_c ΔS, Q_h = T_h ΔS, W = area between."
+      },
+
+      {
+        "question": "A Carnot cycle (two isotherms joined by two adiabats) operates between reservoirs at T_h = 400 K and T_c = 250 K. During the isothermal expansion the gas's entropy increases by ΔS = 3.0 J/K. What is the net work done by the gas per cycle?",
+        "image": "images/thermo-qm-1/carnotgen.png",
+        "choices": [
+          "150 J",
+          "250 J",
+          "450 J",
+          "750 J",
+          "1200 J"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe adiabatic legs exchange no heat and no entropy, so all the entropy change happens on the isotherms: the gas absorbs Q_h = T_h ΔS = 400×3 = 1200 J at the hot isotherm and rejects Q_c = T_c ΔS = 250×3 = 750 J at the cold one (same ΔS). By the first law over a closed cycle ΔU = 0, so net work W = Q_h − Q_c = 1200 − 750 = 450 J = (T_h−T_c)ΔS.\n\nNUMERICS WITHOUT A CALCULATOR\nW = (T_h−T_c)ΔS = 150×3 = 450 J.\n\n90-SECOND SOLUTION\nOnly the isotherms carry heat: W = Q_h − Q_c = (T_h−T_c)ΔS = 450 J.\n\nWHAT TO MEMORIZE\nFor a Carnot cycle the entropy change ΔS is the same on both isotherms (adiabats contribute none), so Q_h = T_h ΔS, Q_c = T_c ΔS, and net work = (T_h−T_c)ΔS."
+      },
+
+      {
+        "question": "An ideal gas is carried around a closed cycle through three states. The cycle encloses a region on the P–V diagram bounded by a pressure range from 1.0×10^5 to 3.0×10^5 Pa and a volume range from 2.0×10^-3 to 6.0×10^-3 m^3, traversed clockwise so the enclosed area is a rectangle. What is the net work done by the gas over one complete cycle?",
+        "image": "images/thermo-qm-1/statetable.png",
+        "choices": [
+          "0",
+          "400 J",
+          "600 J",
+          "800 J",
+          "1600 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nOver any CLOSED cycle the gas returns to its initial state, so ΔU = 0 and the net heat equals the net work, which equals the area ENCLOSED on the P–V diagram. For the rectangle: W_net = ΔP × ΔV = (3.0−1.0)×10^5 × (6.0−2.0)×10^-3 = 2.0×10^5 × 4.0×10^-3 = 800 J. Clockwise traversal makes it positive (work done BY the gas). The trap 0 confuses ΔU = 0 (true) with W = 0 (false — work is not a state function).\n\nNUMERICS WITHOUT A CALCULATOR\nEnclosed area = ΔP·ΔV = 2×10^5 × 4×10^-3 = 800 J.\n\n90-SECOND SOLUTION\nNet work over a cycle = area enclosed on P–V = ΔP·ΔV = 800 J (positive, clockwise).\n\nWHAT TO MEMORIZE\nAround a closed cycle ΔU = 0 (state function) but W = Q_net = enclosed P–V area ≠ 0. Clockwise ⇒ net work done BY the gas; counterclockwise ⇒ work done ON it."
+      },
+
+      {
+        "question": "One mole of an ideal gas undergoes a free expansion (into a vacuum, no heat or work exchanged) that doubles its volume at fixed temperature. Taking R = 8.3 J/(mol·K), what is the entropy change of the UNIVERSE for this step?",
+        "choices": [
+          "0",
+          "5.8 J/K",
+          "−5.8 J/K",
+          "2.9 J/K",
+          "11.5 J/K"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEntropy is a state function, so ΔS_gas depends only on the endpoints (V → 2V at fixed T): ΔS_gas = nR ln(2) = (1)(8.3)(0.693) = 5.8 J/K. In a free expansion no heat flows to the surroundings, so ΔS_surroundings = 0 and ΔS_universe = ΔS_gas = 5.8 J/K > 0 — the signature of an irreversible process. The trap 0 would be correct for a REVERSIBLE isothermal expansion (where the reservoir's entropy drops by the same 5.8 J/K), but not here.\n\nNUMERICS WITHOUT A CALCULATOR\nΔS = nR ln2 = 8.3 × 0.69 ≈ 5.8 J/K; surroundings unchanged, so ΔS_univ = 5.8 J/K.\n\n90-SECOND SOLUTION\nState function ⇒ ΔS_gas = nR ln2 regardless of path; free expansion adds nothing to the surroundings, so ΔS_univ = nR ln2 > 0.\n\nWHAT TO MEMORIZE\nFree expansion: ΔS_gas = nR ln(V_f/V_i) (state function), ΔS_surr = 0, so ΔS_univ > 0 (irreversible). The same endpoints reached reversibly give ΔS_univ = 0."
+      },
+
+      {
+        "question": "A matter wave of energy E > 0 and wave number k is incident from the left (region 1, x<0) on a finite square well of width L and depth V_0 (top of well at 0, bottom at −V_0). Region 2 is inside the well (0<x<L); region 3 is x>L, where the potential is again zero. What is the form of the spatial wave function in region 3?",
+        "image": "images/thermo-qm-1/finwell.png",
+        "choices": [
+          "A e^{−ikx}",
+          "A e^{ikx}",
+          "A sin kx",
+          "A e^{k′x} with k′ < k",
+          "A e^{−κx}, κ real"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nIn region 3 the potential is zero, exactly as in region 1, so the particle again has energy E > 0 above the potential and the SAME wave number k = √(2mE)/ħ. There is no wall to the right of the well, so only a right-moving TRANSMITTED wave exists (no reflected component in region 3): ψ_3 = A e^{ikx}. The distractor A e^{−κx} (E) would describe a classically forbidden region (E < V), which region 3 is not.\n\n90-SECOND SOLUTION\nRegion 3 has V = 0 like region 1 ⇒ same k, and nothing reflects it back ⇒ pure right-moving plane wave A e^{ikx}.\n\nWHAT TO MEMORIZE\nOutside a well/barrier where E > V, the wave is oscillatory (e^{±ikx}); the transmitted region past the obstacle carries only the outgoing wave e^{+ikx} with the same k as the incident region (same V, same E)."
+      },
+
+      {
+        "question": "For the same finite square well (depth V_0, top at 0, bottom at −V_0) with a particle of energy E > 0 incident from the left, what is the form of the wave function INSIDE the well (region 2), and how does its wave number compare with the incident k?",
+        "image": "images/thermo-qm-1/finwell.png",
+        "choices": [
+          "Oscillatory, with wave number k′ < k",
+          "Oscillatory, with wave number k′ > k",
+          "Oscillatory, with wave number k′ = k",
+          "Exponentially decaying, e^{−κx}",
+          "Linear in x"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nInside the well the potential drops to −V_0, so the particle's kinetic energy there is E − (−V_0) = E + V_0, LARGER than outside. The wave number k′ = √(2m(E+V_0))/ħ is therefore greater than k = √(2mE)/ħ, and since E + V_0 > 0 the solution is oscillatory (not decaying). Physically the wavelength SHORTENS where the particle speeds up (in the deeper potential).\n\nNUMERICS WITHOUT A CALCULATOR\nk′/k = √((E+V_0)/E) > 1; e.g. V_0 = 3E gives k′/k = 2.\n\n90-SECOND SOLUTION\nDeeper potential ⇒ more KE ⇒ larger k (shorter wavelength). Still oscillatory since total KE > 0.\n\nWHAT TO MEMORIZE\nWave number tracks local kinetic energy: k(x) = √(2m(E−V(x)))/ħ. Lower V (deeper well) ⇒ larger k ⇒ shorter wavelength; the wave oscillates faster where the particle moves faster."
+      },
+
+      {
+        "question": "A particle of energy E and wave number k travels in a region of zero potential and enters a region where the potential STEPS DOWN to a constant negative value −V_0 (with E still above it). Compared with k, the wave number in the lower-potential region is:",
+        "choices": [
+          "smaller, and the wave is oscillatory",
+          "larger, and the wave is oscillatory",
+          "the same",
+          "imaginary (the wave decays)",
+          "zero"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nStepping to a lower potential increases the kinetic energy to E + V_0, so the wave number k′ = √(2m(E+V_0))/ħ is larger than k, and the wave remains oscillatory because the particle is still above the potential (KE > 0). This is the same rule as inside a well. (Stepping UP toward V_0 < E would instead give a SMALLER k′; stepping up past E would give a decaying evanescent wave.)\n\n90-SECOND SOLUTION\nLower potential ⇒ higher KE ⇒ larger k, still oscillatory.\n\nWHAT TO MEMORIZE\nk(x) = √(2m(E−V))/ħ everywhere E > V. Step DOWN ⇒ larger k (faster oscillation); step UP but still below E ⇒ smaller k; step up ABOVE E ⇒ evanescent decay."
+      },
+
+      {
+        "question": "A particle of energy E is incident on a potential barrier of height V_0 > E and finite width. What is the form of the wave function INSIDE the barrier (the classically forbidden region)?",
+        "image": "images/thermo-qm-1/barrier.png",
+        "choices": [
+          "A e^{ikx} (oscillatory)",
+          "A sin kx",
+          "A e^{−κx} + B e^{+κx}, κ real",
+          "A cos kx",
+          "A x + B (linear)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWhere E < V_0 the quantity E − V_0 is negative, so the Schrödinger equation gives ψ″ = +κ²ψ with κ = √(2m(V_0−E))/ħ REAL. The general solution is a sum of real exponentials A e^{−κx} + B e^{+κx} — non-oscillatory, exponentially decaying/growing. For a finite barrier both terms are kept (matched at the walls); a semi-infinite forbidden region keeps only the decaying e^{−κx}. This exponential tail is what makes quantum tunneling possible.\n\n90-SECOND SOLUTION\nE < V ⇒ ψ″ = +κ²ψ ⇒ real exponentials e^{±κx}, not oscillations.\n\nWHAT TO MEMORIZE\nIn a classically forbidden region (E < V) the curvature has the SAME sign as ψ, giving exponential solutions e^{±κx} with κ = √(2m(V−E))/ħ. In an allowed region (E > V) curvature is opposite ⇒ oscillatory e^{±ikx}."
+      },
+
+      {
+        "question": "An attractive finite square well supports several bound states. A particular bound eigenstate has energy such that its wave function has exactly TWO nodes strictly inside the well (not counting the exponential tails). Which statement best describes this state?",
+        "choices": [
+          "It is the ground state (n = 1)",
+          "It is the first excited state (n = 2)",
+          "It is the third state (n = 3), and has odd parity",
+          "It is the third state (n = 3), and has even parity",
+          "It cannot be a bound state — bound states have no nodes"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a symmetric well the bound states alternate parity starting from an even (node-free) ground state: n = 1 has 0 nodes (even), n = 2 has 1 node (odd), n = 3 has 2 nodes (even), and in general the nth state has (n−1) interior nodes. A state with 2 interior nodes is therefore n = 3, and since n is odd the state is even (symmetric) parity. Inside the well ψ oscillates; outside it decays exponentially (the tails carry no nodes).\n\n90-SECOND SOLUTION\nInterior nodes = n − 1, so 2 nodes ⇒ n = 3; odd n in a symmetric well ⇒ even parity.\n\nWHAT TO MEMORIZE\nIn a symmetric 1-D well the nth bound state has (n−1) interior nodes and parity (−1)^{n−1}: ground state even/0 nodes, then alternating. Bound-state wave functions oscillate inside and decay outside."
+      },
+
+      {
+        "question": "A particle is confined to a one-dimensional infinite square well with walls at x = 0 and x = L. Which of the following is an allowed stationary-state spatial wave function?",
+        "choices": [
+          "A cos(πx/L)",
+          "A e^{ikx}",
+          "A (constant)",
+          "A sin(2πx/L)",
+          "A x(L+x)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe walls are infinite, so ψ must VANISH at both x = 0 and x = L. Check each: sin(2πx/L) is zero at x = 0 and at x = L (since sin 2π = 0) — allowed (it is the n = 2 state). cos(πx/L) equals A at x = 0, not zero — forbidden. A plane wave e^{ikx} and a constant never vanish — forbidden. x(L+x) is zero at x = 0 but not at x = L — forbidden. Only the sine with an integer number of half-wavelengths fitting the well satisfies both boundary conditions.\n\n90-SECOND SOLUTION\nInfinite-well eigenstates are sin(nπx/L): they must be zero at both walls. Only A sin(2πx/L) qualifies.\n\nWHAT TO MEMORIZE\nInfinite square well (0 to L): ψ_n = √(2/L) sin(nπx/L), which vanishes at both walls. Cosines, constants, and plane waves fail the ψ(0) = ψ(L) = 0 boundary conditions."
+      },
+
+      {
+        "question": "Which of the following is an acceptable one-dimensional wave function for a particle that can be found anywhere on the infinite line −∞ < x < ∞?",
+        "choices": [
+          "ψ = A e^{+x²}",
+          "ψ = A/x",
+          "ψ = A tan(x)",
+          "ψ = A e^{−x²}",
+          "ψ = A (a nonzero constant)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA physical wave function on the whole line must be single-valued, continuous, and NORMALIZABLE (square-integrable), which requires ψ → 0 as x → ±∞. Only the Gaussian A e^{−x²} decays at both infinities and has a finite ∫|ψ|² — acceptable. A e^{+x²} blows up; A/x diverges at x = 0; tan(x) diverges periodically; a nonzero constant gives an infinite integral over an infinite line. Normalizability is the discriminating condition.\n\n90-SECOND SOLUTION\nNeed ψ square-integrable ⇒ must decay at ±∞. Only the Gaussian e^{−x²} does.\n\nWHAT TO MEMORIZE\nA valid free-space wave function is single-valued, continuous, and normalizable (∫|ψ|² finite), so it must vanish at infinity. Growing exponentials, poles, and nonzero constants over an infinite domain are all disqualified."
+      },
+
+      {
+        "question": "A hydrogen-like atom's electron is in a state whose radial wave function R(r) must be normalizable over 0 ≤ r < ∞. Two students propose R(r) = A r e^{−br} and R(r) = A e^{−br}/r (A, b > 0). Which is/are physically acceptable?",
+        "choices": [
+          "Only A e^{−br}/r",
+          "Both are acceptable",
+          "Neither is acceptable",
+          "Only if b = 0",
+          "Only A r e^{−br}"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA physical radial wave function must be FINITE at the origin and must decay at infinity to be normalizable (∫|R|² r² dr must converge). R = A r e^{−br} is zero at r = 0, finite everywhere, and decays exponentially — acceptable (it is the form of the hydrogen 2p radial function). R = A e^{−br}/r DIVERGES as r → 0: a genuine bound electron cannot have an infinite radial amplitude at the nucleus, so this is not an acceptable radial function. Only the first is acceptable.\n\n90-SECOND SOLUTION\nBound radial function: finite at r = 0 and decaying at ∞. r e^{−br} passes; e^{−br}/r blows up at the origin.\n\nWHAT TO MEMORIZE\nAtomic radial functions decay exponentially at large r and stay finite at the origin. A factor of r (as in 2p, R ∝ r e^{−r/2a₀}) is fine; a 1/r singularity at the origin is not physical."
+      },
+
+      {
+        "question": "A particle is in the FIRST EXCITED state of a symmetric one-dimensional potential V(x) = V(−x). Which statement about the wave function ψ_1(x) is correct?",
+        "choices": [
+          "It is even: ψ(−x) = ψ(x), with no nodes",
+          "It is neither even nor odd",
+          "It is even, with one node at x = 0",
+          "It has two nodes and even parity",
+          "It is odd: ψ(−x) = −ψ(x), with one node at x = 0"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a symmetric potential the Hamiltonian commutes with the parity operator, so the eigenstates have definite parity, alternating with energy: the ground state is even (no node), the first excited state is odd, the second even, and so on. An odd function satisfies ψ(−x) = −ψ(x), which forces ψ(0) = 0 — a node at the center. So the first excited state is odd with exactly one node, at x = 0.\n\n90-SECOND SOLUTION\nSymmetric V ⇒ alternating parity from an even ground state; the first excited state is odd ⇒ ψ(0) = 0 (one central node).\n\nWHAT TO MEMORIZE\nIn a symmetric potential eigenstates alternate parity: even, odd, even, … starting from the node-free ground state. An odd state always has a node at the symmetry center x = 0."
+      },
+
+      {
+        "question": "A particle of energy E moves in a smoothly varying one-dimensional potential V(x) < E everywhere (so it is classically allowed everywhere and never turns around). In which region is the probability density |ψ|² LARGEST?",
+        "choices": [
+          "Where V(x) is smallest (particle fastest)",
+          "|ψ|² is uniform everywhere",
+          "At the midpoint of the range",
+          "Where the potential is exactly zero",
+          "Where V(x) is largest (particle slowest)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nClassically, a particle spends the most time where it moves slowest, so it is most likely to be found there. It moves slowest where its kinetic energy E − V is smallest, i.e. where V(x) is LARGEST. Quantum mechanically this shows up as a larger |ψ|² (and a longer local wavelength) in the high-potential, low-speed regions. The distractor 'where V is smallest' has it backwards — that is where the particle zips through fastest and is least likely to be found.\n\n90-SECOND SOLUTION\nSlowest where KE = E − V is smallest ⇒ largest V ⇒ most time spent ⇒ largest |ψ|².\n\nWHAT TO MEMORIZE\nProbability density is largest where the particle moves slowest — the high-potential (low kinetic-energy) regions. The local wavelength λ = h/√(2m(E−V)) also lengthens there. This is the WKB amplitude ∝ 1/√(speed)."
+      },
+
+      {
+        "question": "A particle of fixed energy E travels from left to right through a region where the potential energy increases in a series of steps (all below E). As the particle moves into higher-potential regions, how does the de Broglie wavelength of its wave function change, and does it stay oscillatory?",
+        "choices": [
+          "Wavelength shortens; stays oscillatory",
+          "Wavelength lengthens; becomes decaying",
+          "Wavelength shortens; becomes decaying",
+          "Wavelength unchanged",
+          "Wavelength lengthens; stays oscillatory"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe local wavelength is λ(x) = h/p = h/√(2m(E−V(x))). As V increases (but stays below E), the kinetic energy E − V decreases, the momentum drops, and λ LENGTHENS. Because E is still above V, the solution remains oscillatory (never decaying). So a correct sketch shows the wave stretching out — longer wavelength, smaller amplitude of curvature — as the particle climbs into higher potential, without turning into an exponential.\n\n90-SECOND SOLUTION\nHigher V (still < E) ⇒ less KE ⇒ smaller momentum ⇒ longer wavelength, still oscillatory.\n\nWHAT TO MEMORIZE\nLocal de Broglie wavelength λ = h/√(2m(E−V)) lengthens where V rises toward E and shortens where V drops. It stays oscillatory as long as E > V; it only becomes a decaying exponential once V exceeds E."
+      },
+
+      {
+        "question": "A particle of energy E tunnels through a rectangular barrier of height V_0 > E and width L. If the barrier WIDTH L is doubled (everything else fixed), the transmission probability T is most nearly:",
+        "choices": [
+          "unchanged",
+          "halved",
+          "reduced to T²  (for T ≪ 1)",
+          "doubled",
+          "increased, because the particle has more room"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a thick/high barrier the transmission probability is approximately T ≈ e^{−2κL} with κ = √(2m(V_0−E))/ħ. Doubling the width L → 2L doubles the exponent: T_new ≈ e^{−2κ(2L)} = (e^{−2κL})² = T². Since T ≪ 1, squaring it makes it dramatically smaller — tunnelling is exponentially sensitive to barrier width. The distractors 'halved' or 'unchanged' miss the exponential dependence.\n\nNUMERICS WITHOUT A CALCULATOR\nT ≈ e^{−2κL}; L → 2L ⇒ exponent doubles ⇒ T → T² (e.g. T = 0.01 becomes 0.0001).\n\n90-SECOND SOLUTION\nTunnelling T ≈ e^{−2κL} is exponential in width; doubling L squares T.\n\nWHAT TO MEMORIZE\nBarrier tunnelling: T ≈ e^{−2κL}, κ = √(2m(V_0−E))/ħ. Transmission is exponentially sensitive to width and to √(V_0−E) — small changes in either change T by orders of magnitude."
+      }
+
+    ]
+  },
 
 ];
