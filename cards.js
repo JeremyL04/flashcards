@@ -7114,6 +7114,141 @@ const EXAMS = [
     ]
   },
   {
+    "name": "Circuits Test 3 (Hard)",
+    "added": "2026-09-12",
+    "category": "em",
+    "cards": [
+      {
+        "question": "The 12 V bridge circuit shown uses an ideal battery. What is the current through the central 2 Ω resistor?",
+        "choices": [
+          "0 A",
+          "0.50 A from right to left",
+          "0.86 A from left to right",
+          "1.0 A from left to right",
+          "2.0 A from right to left"
+        ],
+        "answer": "C",
+        "image": "images/circuits-3/q0.png",
+        "explanation": "WORKED SOLUTION\nLet the left and right midpoint potentials be x and y. Kirchhoff's junction rule gives (x−12)/2 + x/4 + (x−y)/2 = 0 and (y−12)/4 + y/2 + (y−x)/2 = 0. Solving gives x = 48/7 V and y = 36/7 V. The central current is (x−y)/(2 Ω) = 6/7 A ≈ 0.86 A from left to right. The zero-current distractor incorrectly treats the visibly unbalanced bridge as balanced.\n\nNUMERICS WITHOUT A CALCULATOR\nAfter clearing denominators, the node equations are 5x−2y = 24 and −2x+5y = 12. Elimination gives x = 48/7 and y = 36/7, so their difference is 12/7 V; dividing by 2 Ω gives 6/7 A, just under 1 A.\n\n90-SECOND SOLUTION\nWrite the two midpoint node equations and eliminate once. Since the left divider alone would sit at 8 V and the right at 4 V, current must run left to right; the bridge resistor reduces that difference, selecting 0.86 A rather than a larger value.\n\nWHAT TO MEMORIZE\nAn unbalanced bridge is not reducible by ordinary series-parallel rules because the central branch changes both midpoint voltages. Use two node-voltage equations; before calculating, use the open-bridge divider voltages to determine the current direction."
+      },
+      {
+        "question": "The switch has been at a for a long time. At t = 0 it moves to b. How long does the capacitor take to fall from 12 V to 8 V?",
+        "choices": [
+          "0.69 ms",
+          "1.4 ms",
+          "2.0 ms",
+          "2.8 ms",
+          "4.0 ms"
+        ],
+        "answer": "B",
+        "image": "images/circuits-3/q1.png",
+        "explanation": "WORKED SOLUTION\nAfter the switch moves, the capacitor approaches 4 V rather than zero. With R = 2.0 kΩ and C = 1.0 μF, τ = RC = 2.0 ms and V_C(t) = 4 V + (12 V−4 V)e^(−t/τ). Setting V_C = 8 V gives 4 = 8e^(−t/τ), so t = τ ln 2 = 1.4 ms. The 2.0 ms distractor treats the requested voltage as one time constant without accounting for the nonzero final value.\n\nNUMERICS WITHOUT A CALCULATOR\nThe voltage above the final level falls from 8 V to 4 V: it halves. A halving takes τ ln 2 ≈ 0.69τ, and 0.69 × 2.0 ms ≈ 1.4 ms.\n\n90-SECOND SOLUTION\nSubtract the 4 V final level first. The excess voltage goes 8 V → 4 V, a factor of two, so t = τ ln 2 = (2.0 ms)(0.69) = 1.4 ms.\n\nWHAT TO MEMORIZE\nFor a first-order transient, V(t) = V_final + (V_initial−V_final)e^(−t/τ). Always measure the exponential from the final value, not from zero."
+      },
+      {
+        "question": "The switch has been at a for a long time. At t = 0 it moves to b, disconnecting the battery and closing the R₁–L–R₂ loop. How much energy is eventually dissipated in R₁?",
+        "choices": [
+          "0.108 J",
+          "0.162 J",
+          "0.216 J",
+          "0.324 J",
+          "0.648 J"
+        ],
+        "answer": "A",
+        "image": "images/circuits-3/q2.png",
+        "explanation": "WORKED SOLUTION\nBefore switching, the steady inductor is a short, so I₀ = 12 V/2 Ω = 6 A. Its stored energy is U₀ = ½LI₀² = ½(18 mH)(6²) = 0.324 J. During discharge the same current passes through R₁ = 2 Ω and R₂ = 4 Ω at every instant, so their integrated I²R losses divide in the ratio 2:4. R₁ receives one third of U₀, or 0.108 J. The 0.324 J distractor assigns all the inductor's energy to R₁ and ignores R₂.\n\nNUMERICS WITHOUT A CALCULATOR\nHalf of 18 mH is 9 mH; 9 × 10⁻³ × 36 = 324 × 10⁻³ = 0.324 J. One third is 0.108 J.\n\n90-SECOND SOLUTION\nFind U₀ = 0.324 J, then split it in proportion to resistance because both resistors carry the identical decaying current: R₁ gets 2/(2+4) = 1/3, hence 0.108 J.\n\nWHAT TO MEMORIZE\nIn a series discharge loop, ∫I²R dt is proportional to R. The inductor's initial energy is shared among series resistors in the ratio of their resistances."
+      },
+      {
+        "question": "The parallel RLC circuit shown is driven at resonance by a 100 V rms source. The inductor and capacitor are ideal. What rms current does the source supply?",
+        "choices": [
+          "0 A",
+          "2.0 A",
+          "10 A",
+          "12 A",
+          "20 A"
+        ],
+        "answer": "B",
+        "image": "images/circuits-3/q3.png",
+        "explanation": "WORKED SOLUTION\nThe resistor branch draws I_R = V/R = 100/50 = 2.0 A in phase with the source voltage. Each reactive branch has reactance 10 Ω, so the inductor and capacitor each carry 10 A, but those currents are 180° apart in phasor space and cancel at resonance. The source therefore supplies only the 2.0 A resistive current. The 20 A distractor adds the two reactive-current magnitudes instead of their phasors.\n\nNUMERICS WITHOUT A CALCULATOR\nThe only uncancelled branch is 50 Ω across 100 V: 100/50 = 2. The two 10 A reactive currents are equal and opposite.\n\n90-SECOND SOLUTION\nAt parallel resonance, I_C + I_L = 0. Ignore both in the source-current sum and use I_source = V/R = 2.0 A.\n\nWHAT TO MEMORIZE\nAt parallel resonance the reactive branch currents can be large but cancel at the source. A parallel resonant circuit draws minimum source current; a series resonant circuit draws maximum current."
+      },
+      {
+        "question": "In a series RLC circuit at angular frequency ω, the measured rms voltages satisfy V_L = 40 V and V_C = 80 V. If L and ω remain fixed, what new capacitance produces resonance?",
+        "choices": [
+          "C/4",
+          "C/2",
+          "C",
+          "2C",
+          "4C"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe same current flows through both elements, so V_L/V_C = X_L/X_C = ω²LC. The measured ratio is 40/80 = 1/2. Resonance requires ω²LC_new = 1, so C_new must be twice C. Choosing C/2 reverses how capacitive reactance depends on capacitance: X_C = 1/(ωC), so increasing C reduces X_C and raises V_L/V_C toward unity.\n\nNUMERICS WITHOUT A CALCULATOR\nThe present ratio is one half; the target is one. With L and ω fixed, the ratio is directly proportional to C, so double C.\n\n90-SECOND SOLUTION\nUse V_L/V_C = ω²LC. It is currently 1/2 and must become 1, so C → 2C.\n\nWHAT TO MEMORIZE\nIn a series circuit, V_L/V_C = X_L/X_C = ω²LC. At resonance V_L and V_C have equal magnitudes even though both may greatly exceed the source voltage."
+      },
+      {
+        "question": "In the series RC circuit shown, the measured rms voltages at frequency f are V_R = 30 V and V_C = 40 V. The source rms voltage is held fixed while the frequency is doubled. What is the ratio of the new average power to the original average power?",
+        "choices": [
+          "13/25",
+          "4/3",
+          "3/2",
+          "13/8",
+          "25/13"
+        ],
+        "answer": "E",
+        "image": "images/circuits-3/q5.png",
+        "explanation": "WORKED SOLUTION\nBecause the same current flows through both elements, V_R/V_C = R/X_C = 30/40 = 3/4. Write R = 3k and X_C = 4k. Doubling the frequency halves the capacitive reactance, so the new reactance is 2k. With source voltage fixed, P = V²R/(R²+X_C²). Therefore P_new/P_old = (R²+X_C²)/(R²+(X_C/2)²) = (9+16)/(9+4) = 25/13. The 13/25 distractor reverses the ratio.\n\nNUMERICS WITHOUT A CALCULATOR\nUse the 3–4–5 voltage triangle to set R:X_C = 3:4. After doubling frequency, the impedance-squared factor changes from 3²+4² = 25 to 3²+2² = 13. Since power varies inversely with that factor, the ratio is 25/13.\n\n90-SECOND SOLUTION\nRead R:X_C = 3:4 from the two voltage drops. Doubling f makes X_C half as large, so compare 3²+4² with 3²+2². Fixed-voltage power increases by 25/13.\n\nWHAT TO MEMORIZE\nCapacitive reactance X_C = 1/(2πfC), so doubling frequency halves X_C. For a series RC circuit at fixed rms voltage, average power is V²R/(R²+X_C²)."
+      },
+      {
+        "question": "For the ideal op-amp circuit shown, what is the output voltage?",
+        "choices": [
+          "−1.0 V",
+          "−0.8 V",
+          "−0.6 V",
+          "+0.6 V",
+          "+1.0 V"
+        ],
+        "answer": "C",
+        "image": "images/circuits-3/q6.png",
+        "explanation": "WORKED SOLUTION\nNegative feedback holds the inverting input at virtual ground. The two input currents into that node are (0.20 V)/(10 kΩ) = 20 μA and (−0.10 V)/(20 kΩ) = −5 μA, for a net 15 μA entering. The feedback current must remove that net current, so V_out = −(40 kΩ)(15 μA) = −0.60 V. The −1.0 V distractor adds the magnitudes of the two input contributions instead of respecting the negative input voltage.\n\nNUMERICS WITHOUT A CALCULATOR\nUse gain contributions: −(40/10)(0.20) = −0.80 V and −(40/20)(−0.10) = +0.20 V. Their sum is −0.60 V.\n\n90-SECOND SOLUTION\nSuperpose the two inverting gains: −4(0.20) − 2(−0.10) = −0.8 + 0.2 = −0.6 V.\n\nWHAT TO MEMORIZE\nFor an ideal inverting summer, V_out = −R_f Σ(V_i/R_i). Keep the sign of every input; a negative input makes a positive output contribution."
+      },
+      {
+        "question": "The ideal-diode limiter shown is driven by a sine wave ranging from −5 V to +5 V. What is the peak-to-peak output voltage?",
+        "choices": [
+          "1 V",
+          "2 V",
+          "3 V",
+          "4 V",
+          "6 V"
+        ],
+        "answer": "D",
+        "image": "images/circuits-3/q7.png",
+        "explanation": "WORKED SOLUTION\nFor positive excursions, the upper ideal diode turns on when V_out tries to exceed +3 V and clamps it there. For negative excursions, the lower diode turns on when V_out tries to fall below −1 V and clamps it there. The output therefore ranges from −1 V to +3 V, so V_pp = 3−(−1) = 4 V. The 3 V distractor reports only the positive clamp level rather than the full peak-to-peak span.\n\nNUMERICS WITHOUT A CALCULATOR\nPeak-to-peak means maximum minus minimum: +3 − (−1) = 4 V.\n\n90-SECOND SOLUTION\nRead the two clamp levels, −1 V and +3 V, then subtract: V_pp = 4 V.\n\nWHAT TO MEMORIZE\nAn ideal biased limiter clips at its reference voltages. Peak-to-peak voltage is V_max−V_min, so a negative lower limit must be subtracted with its sign."
+      },
+      {
+        "question": "After the source is disconnected, the unprobed circuit shown has decay time constant 100 μs. The oscilloscope input is then connected as shown. What time constant will the scope observe?",
+        "choices": [
+          "It remains 100 μs",
+          "It becomes 50 μs",
+          "It becomes 200 μs",
+          "It becomes 400 μs",
+          "It cannot be determined"
+        ],
+        "answer": "A",
+        "image": "images/circuits-3/q8.png",
+        "explanation": "WORKED SOLUTION\nWithout the scope, τ = RC = (1.0 MΩ)(100 pF) = 100 μs. The scope places another 1.0 MΩ and 100 pF in parallel with the circuit. The resistance halves to 0.50 MΩ while the capacitance doubles to 200 pF, so τ_loaded = (0.50 MΩ)(200 pF) = 100 μs: unchanged. The 50 μs and 200 μs distractors account for only the added resistance or only the added capacitance.\n\nNUMERICS WITHOUT A CALCULATOR\nOne factor halves and the other doubles; their product is unchanged.\n\n90-SECOND SOLUTION\nThe scope makes R → R/2 and C → 2C, so RC stays RC. The observed time constant remains 100 μs.\n\nWHAT TO MEMORIZE\nA measuring instrument can change more than one circuit parameter at once. Evaluate the complete loaded equivalent rather than assuming that added capacitance must always slow a circuit."
+      },
+      {
+        "question": "Twelve identical cells, each of emf ℰ and internal resistance 1.0 Ω, are connected to a 3.0 Ω load. Which arrangement gives the largest load current?",
+        "choices": [
+          "Six parallel branches, each containing 2 cells in series",
+          "Four parallel branches, each containing 3 cells in series",
+          "Three parallel branches, each containing 4 cells in series",
+          "One series string containing all 12 cells",
+          "Two parallel branches, each containing 6 cells in series"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nIf each branch contains m cells in series, there are 12/m identical branches in parallel. The pack emf is mℰ and its internal resistance is (m Ω)/(12/m) = m²/12 Ω. The load current is therefore I = mℰ/(3 + m²/12), which is maximized when the pack's internal resistance matches the 3 Ω load: m²/12 = 3, so m = 6. Thus two parallel branches of six cells each give the largest current. A single 12-cell string has twice the emf but four times the matched internal resistance, so it performs worse.\n\nNUMERICS WITHOUT A CALCULATOR\nMatching requires m² = 36, so m = 6 immediately. With two six-cell branches, the pack has emf 6ℰ and internal resistance 3 Ω, giving I = 6ℰ/(3+3) = ℰ.\n\n90-SECOND SOLUTION\nFor maximum current/power to a fixed load, arrange the cells so the pack's internal resistance equals the load. Here m²/12 = 3 gives m = 6: two parallel strings of six.\n\nWHAT TO MEMORIZE\nFor N identical cells arranged as N/m parallel branches of m series cells, ℰ_eq = mℰ and r_eq = m²r/N. The optimum discrete arrangement is the allowed m nearest √(NR/r_load)."
+      }
+    ]
+  },
+  {
     "name": "Lab Methods Test (Hard)",
     "added": "2026-08-29",
     "category": "lab",
