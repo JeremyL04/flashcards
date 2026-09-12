@@ -11847,16 +11847,16 @@ const EXAMS = [
     "cards": [
 
       {
-        "question": "A comet orbits the Sun with an aphelion distance 50 times its perihelion distance. What is the ratio of its speed at perihelion to its speed at aphelion?",
+        "question": "A particle of mass m moves in the one-dimensional potential V(x) = −a x² + b x⁴ with a, b > 0. What is the angular frequency of small oscillations about a stable equilibrium?",
         "choices": [
-          "7.1",
-          "25",
-          "50",
-          "2500",
-          "1"
+          "√(2a/m)",
+          "√(4a/m)",
+          "√(a/m)",
+          "√(8a/m)",
+          "√(a/2m)"
         ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nAngular momentum about the Sun is conserved: at perihelion and aphelion the velocity is perpendicular to the radius, so m v_p r_p = m v_a r_a. Thus v_p/v_a = r_a/r_p = 50.\n\nNUMERICS WITHOUT A CALCULATOR\nNo square roots needed — the perpendicular geometry at the apsides makes it a bare ratio of distances.\n\n90-SECOND SOLUTION\nAt the two apsides v ⊥ r, so L = mvr gives v ∝ 1/r. Speed ratio = distance ratio inverted = 50.\n\nWHAT TO MEMORIZE\nAt perihelion and aphelion only, velocity is perpendicular to the radius, so angular-momentum conservation reduces to v_p r_p = v_a r_a. (The vis-viva equation gives the same result but is unnecessary here.)"
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nEquilibria: V'(x) = −2ax + 4bx³ = 0 ⇒ x = 0 (a maximum, unstable) or x² = a/(2b) (the minima). At a minimum, V''(x) = −2a + 12bx² = −2a + 12b·(a/2b) = −2a + 6a = 4a. So ω = √(V''/m) = √(4a/m).\n\nNUMERICS WITHOUT A CALCULATOR\nV'' at the well bottom is 4a (not −2a, which is the curvature at the unstable center). ω = √(4a/m).\n\n90-SECOND SOLUTION\nFind the minima x² = a/2b, evaluate V'' = −2a + 12bx² = 4a, take √(V''/m).\n\nWHAT TO MEMORIZE\nFor a double-well V = −ax² + bx⁴, the stable minima sit at x² = a/2b and the small-oscillation stiffness there is V'' = 4a — the trap is using the curvature at x = 0 (which is negative) instead of at the minimum."
       },
 
       {
@@ -11873,43 +11873,43 @@ const EXAMS = [
       },
 
       {
-        "question": "A puck moving at 6.0 m/s strikes an identical stationary puck on a frictionless table in an elastic collision. After the collision the incident puck moves at 3.6 m/s. What is the speed of the struck puck?",
+        "question": "A helium atom (mass 4 u) makes an elastic head-on collision with a stationary atom and rebounds straight back with 0.60 of its incident speed. What is the mass of the struck atom?",
         "choices": [
-          "2.4 m/s",
-          "3.6 m/s",
-          "4.8 m/s",
-          "5.0 m/s",
-          "6.0 m/s"
+          "1 u",
+          "8 u",
+          "16 u",
+          "2 u",
+          "4 u"
         ],
         "answer": "C",
-        "explanation": "WORKED SOLUTION\nFor equal masses in a 2-D elastic collision with one initially at rest, the two outgoing velocities are perpendicular, and speeds satisfy v₁'² + v₂'² = v₀² (from combining momentum and kinetic-energy conservation). So v₂' = √(6.0² − 3.6²) = √(36 − 12.96) = √23.04 = 4.8 m/s.\n\nNUMERICS WITHOUT A CALCULATOR\n6-3.6 form a 3-4-5-like triple scaled: 3.6 = 0.6·6, and √(1−0.36) = 0.8, so v₂' = 0.8·6 = 4.8.\n\n90-SECOND SOLUTION\nEqual-mass elastic + one at rest ⇒ right angle ⇒ v₀² = v₁'² + v₂'². Pythagoras gives 4.8.\n\nWHAT TO MEMORIZE\nEqual masses, one at rest, elastic: outgoing paths are perpendicular and speeds obey v₀² = v₁'² + v₂'². The figure's right angle is the whole point."
+        "explanation": "WORKED SOLUTION\nFor an elastic head-on collision the projectile's final velocity is v₁' = v₁(m₁ − m₂)/(m₁ + m₂). Rebounding means v₁' = −0.60 v₁, so (4 − m₂)/(4 + m₂) = −0.60. Then 4 − m₂ = −0.60(4 + m₂) = −2.4 − 0.6m₂ ⇒ 6.4 = 0.4 m₂ ⇒ m₂ = 16 u.\n\nNUMERICS WITHOUT A CALCULATOR\n(4−m)/(4+m) = −0.6 ⇒ 4−m = −2.4−0.6m ⇒ 6.4 = 0.4m ⇒ m = 16.\n\n90-SECOND SOLUTION\nUse v₁' = v₁(m₁−m₂)/(m₁+m₂) = −0.6v₁; solve for m₂ = 16 u.\n\nWHAT TO MEMORIZE\nElastic 1-D: v₁' = v₁(m₁−m₂)/(m₁+m₂). A rebound (negative v₁') means the target is heavier; the ratio fixes the mass."
       },
 
       {
         "question": "A spool of thread rests on a table. The thread comes off the BOTTOM of the inner radius and is pulled horizontally as shown in the figure. The spool rolls without slipping. Which way does the spool move?",
         "image": "images/full-practice-2/q3.png",
         "choices": [
+          "It rolls in the direction of the pull (toward the hand)",
           "It rolls away from the hand",
           "It stays put and the thread simply unwinds",
-          "It rolls in the direction of the pull (toward the hand)",
           "It rolls toward the hand only if the inner radius exceeds the outer radius",
           "It spins in place without translating"
         ],
-        "answer": "C",
+        "answer": "A",
         "explanation": "WORKED SOLUTION\nTake torques about the contact point (the instantaneous axis of rolling). The tension is horizontal and applied at the bottom of the inner radius, a height below the axle but ABOVE the contact point. Its line of action passes above the contact point, so the torque about the contact point drives the spool to roll in the direction of the pull. (If the thread came off the top, the lever arm sign flips and it would still roll toward the pull; the classic counter-case is pulling at an angle where the line of action passes through the contact point, giving no rolling.)\n\n90-SECOND SOLUTION\nTorque about the CONTACT point, not the axle. Tension applied below the axle but above the ground still has its line of action above the contact point ⇒ rolls toward the pull.\n\nWHAT TO MEMORIZE\nFor a spool, analyze torque about the contact point. The direction of rolling is set by which side of the contact point the string's line of action passes. A horizontal pull from the underside rolls the spool toward the hand."
       },
 
       {
-        "question": "A uniform meterstick (length L = 1.0 m) is pivoted about a horizontal axis through a point a distance L/4 from its center. What is the period of small oscillations? (g = 10 m/s².)",
+        "question": "A massless rod of length L is pivoted at one end and swings in a vertical plane as a physical pendulum. In configuration I, a point mass m is fixed at the free end; in configuration II, the same mass m is placed at the MIDPOINT of the rod. What is the ratio of the small-oscillation period T_II/T_I?",
         "choices": [
-          "1.3 s",
-          "1.5 s",
-          "1.7 s",
-          "2.0 s",
-          "2.4 s"
+          "√2",
+          "1/√2",
+          "2",
+          "1/2",
+          "1"
         ],
         "answer": "B",
-        "explanation": "WORKED SOLUTION\nPhysical pendulum: T = 2π√(I/(mgd)), with d = L/4 = 0.25 m. The moment of inertia about the pivot (parallel-axis): I = mL²/12 + m(L/4)² = mL²(1/12 + 1/16) = 7mL²/48. Then T = 2π√((7mL²/48)/(mg·L/4)) = 2π√(7L/(12g)) = 2π√(7·1.0/120) = 2π·0.242 = 1.52 s ≈ 1.5 s.\n\nNUMERICS WITHOUT A CALCULATOR\nT = 2π√(7L/12g) = 2π√(7/120) ≈ 2π(0.24) ≈ 1.5 s.\n\n90-SECOND SOLUTION\nUse I = mL²/12 + m(L/4)² = 7mL²/48 and T = 2π√(I/mgd) with d = L/4; the result is ≈ 1.5 s.\n\nWHAT TO MEMORIZE\nPhysical pendulum period T = 2π√(I/mgd), with I about the pivot (parallel-axis theorem) and d the pivot-to-CM distance."
+        "explanation": "WORKED SOLUTION\nPhysical pendulum: T = 2π√(I/(mgd)), with d the pivot-to-mass distance. Config I: I = mL², d = L ⇒ T_I = 2π√(mL²/(mgL)) = 2π√(L/g). Config II: I = m(L/2)², d = L/2 ⇒ T_II = 2π√(m(L/2)²/(mg·L/2)) = 2π√(L/2g). Ratio T_II/T_I = √((L/2g)/(L/g)) = √(1/2) = 1/√2.\n\nNUMERICS WITHOUT A CALCULATOR\nT ∝ √(I/d) = √(md²/d) = √d for a point mass, so T ∝ √d. Halving d gives 1/√2.\n\n90-SECOND SOLUTION\nFor a point mass on a massless rod, T ∝ √d (since I = md²). Midpoint ⇒ d halves ⇒ T ×1/√2.\n\nWHAT TO MEMORIZE\nPoint mass on a massless rod: T = 2π√(d/g) — the same as a simple pendulum of length d. Moving the bob inward to L/2 shortens the effective length, giving T ∝ √d."
       },
 
       {
@@ -11918,11 +11918,11 @@ const EXAMS = [
         "choices": [
           "sin θ = g/(ω²R)",
           "cos θ = ω²R/g",
-          "cos θ = g/(ω²R)",
           "tan θ = g/(ω²R)",
+          "cos θ = g/(ω²R)",
           "cos θ = ω²R/(2g)"
         ],
-        "answer": "C",
+        "answer": "D",
         "explanation": "WORKED SOLUTION\nIn the rotating frame the bead feels gravity mg down and centrifugal force mω²(R sin θ) outward (horizontal), where R sin θ is the distance from the axis. Balancing along the hoop (tangential direction): the component of gravity mg sin θ must equal the tangential component of the centrifugal force mω²R sin θ · cos θ. Cancel sin θ (nonzero branch): g = ω²R cos θ, i.e. cos θ = g/(ω²R).\n\n90-SECOND SOLUTION\nTangential balance on the hoop: mg sin θ = mω²R sin θ cos θ. Divide by sin θ ⇒ cos θ = g/(ω²R). The θ = 0 solution is the other branch.\n\nWHAT TO MEMORIZE\nBead-on-rotating-hoop: nonzero equilibrium exists only for ω² > g/R, and there cos θ = g/(ω²R). The distance from the rotation axis is R sin θ, which sets the centrifugal term."
       },
 
@@ -11930,13 +11930,13 @@ const EXAMS = [
         "question": "The figure shows the effective potential energy U_eff(r) for a particle of fixed nonzero angular momentum in an attractive central force. Which statement about circular orbits is correct?",
         "image": "images/full-practice-2/q6.png",
         "choices": [
-          "A stable circular orbit exists at the radius where U_eff is a minimum",
           "A stable circular orbit exists where U_eff crosses zero",
           "A stable circular orbit exists on the steep inner wall",
+          "A stable circular orbit exists at the radius where U_eff is a minimum",
           "A stable circular orbit exists far out on the flat tail",
           "No circular orbit is possible for any radius"
         ],
-        "answer": "A",
+        "answer": "C",
         "explanation": "WORKED SOLUTION\nA circular orbit occurs where the radial force vanishes, i.e. dU_eff/dr = 0 — an extremum of the curve. Stability requires d²U_eff/dr² > 0, a local MINIMUM: a small radial nudge produces a restoring force back toward r₀, giving bounded radial oscillations. This attractive-potential curve has a single minimum, and that is the stable circular orbit.\n\n90-SECOND SOLUTION\nCircular orbit = extremum of U_eff; stable = minimum. Read off the bottom of the well.\n\nWHAT TO MEMORIZE\nCircular orbits sit at dU_eff/dr = 0; a minimum is stable (bounded radial oscillation), a maximum is unstable. The zero-crossing and the tail are not extrema, so no orbit sits there."
       },
 
@@ -11954,42 +11954,42 @@ const EXAMS = [
       },
 
       {
-        "question": "A uniform block of density 900 kg/m³ floats at the interface between oil (density 750 kg/m³) on top and water (density 1000 kg/m³) below. What fraction of the block's volume is submerged in the water?",
+        "question": "Water (density 1000 kg/m³) flows through a horizontal Venturi tube. The wide section has cross-sectional area A and speed 2.0 m/s; the throat has area A/3. What is the pressure DROP from the wide section to the throat?",
         "choices": [
-          "0.40",
-          "0.50",
-          "0.60",
-          "0.75",
-          "0.90"
+          "8.0×10³ Pa",
+          "1.6×10⁴ Pa",
+          "3.2×10⁴ Pa",
+          "2.0×10³ Pa",
+          "6.4×10⁴ Pa"
         ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nLet f be the fraction in water, (1−f) in oil. Buoyancy balances weight: ρ_oil(1−f) + ρ_water f = ρ_block. So 750(1−f) + 1000 f = 900 → 750 + 250 f = 900 → f = 150/250 = 0.60.\n\nNUMERICS WITHOUT A CALCULATOR\n(ρ_block − ρ_oil)/(ρ_water − ρ_oil) = (900−750)/(1000−750) = 150/250 = 0.6.\n\n90-SECOND SOLUTION\nWeighted average of the two fluid densities must equal the block density; solve the lever rule f = (ρ_b−ρ_oil)/(ρ_water−ρ_oil) = 0.60.\n\nWHAT TO MEMORIZE\nFor a body floating at a fluid interface, the fraction in the denser fluid is (ρ_body − ρ_top)/(ρ_bottom − ρ_top)."
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nContinuity: v_throat = v_wide·(A/(A/3)) = 3·2.0 = 6.0 m/s. Bernoulli (horizontal): ΔP = ½ρ(v_throat² − v_wide²) = ½·1000·(36 − 4) = 500·32 = 1.6×10⁴ Pa.\n\nNUMERICS WITHOUT A CALCULATOR\nv_throat = 3·2 = 6 m/s; ΔP = ½·1000·(36−4) = 1.6×10⁴ Pa.\n\n90-SECOND SOLUTION\nv ∝ 1/A ⇒ v_throat = 6 m/s; ΔP = ½ρ(6²−2²) = 1.6×10⁴ Pa.\n\nWHAT TO MEMORIZE\nVenturi: continuity gives v ∝ 1/A, then Bernoulli ΔP = ½ρ(v₂²−v₁²). The faster throat is at lower pressure."
       },
 
       {
-        "question": "Inside a uniform solid sphere of mass M and radius R, the gravitational field at radius r < R is proportional to r. At r = R/2, what is the gravitational acceleration as a fraction of its value g_s at the surface?",
+        "question": "A satellite orbits under a hypothetical central force F = −GMm/r^(2+ε) with ε a small positive constant. Which statement is FALSE?",
         "choices": [
-          "1/8",
-          "1/4",
-          "1/2",
-          "1",
-          "2"
+          "The force is still central and conservative",
+          "Circular orbits are still possible at any radius",
+          "Total mechanical energy is conserved",
+          "The orbit generally does not close (it precesses)",
+          "Angular momentum about the center is not conserved"
         ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nInside a uniform sphere g(r) = GM_enc/r² with M_enc = M(r/R)³, so g(r) = GMr/R³ ∝ r. At r = R/2, g = g_s·(r/R) = g_s/2.\n\nNUMERICS WITHOUT A CALCULATOR\ng ∝ r inside ⇒ half the radius ⇒ half the surface value.\n\n90-SECOND SOLUTION\nEnclosed mass ∝ r³, field ∝ M_enc/r² ∝ r. So g(R/2) = g_s/2.\n\nWHAT TO MEMORIZE\nInside a uniform sphere the field grows linearly with r (g ∝ r); outside it falls as 1/r². The two match at the surface."
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAny central force (pointing along r, magnitude a function of r only) exerts zero torque about the center, so angular momentum IS conserved — the statement claiming it is not conserved is FALSE. Such a force is conservative (energy conserved), admits circular orbits at any radius, but the closed-orbit (non-precessing) property is special to 1/r² and Hooke's law (Bertrand's theorem), so a 1/r^(2+ε) orbit precesses.\n\n90-SECOND SOLUTION\nCentral force ⇒ L conserved always. The 'L not conserved' claim is the false one.\n\nWHAT TO MEMORIZE\nEvery central force conserves angular momentum and energy and allows circular orbits; only inverse-square and linear (Hooke) forces give closed non-precessing orbits (Bertrand's theorem)."
       },
 
       {
-        "question": "A rocket in free space has an exhaust speed of 2.5 km/s relative to itself. To achieve a final speed of 5.0 km/s starting from rest, what fraction of the initial mass must be exhausted as propellant?",
+        "question": "A spherical raindrop falls from rest through a stationary mist, accreting water so that its mass grows in proportion to the cube of the distance fallen (m ∝ x³). Assuming the mist it picks up is initially at rest, the drop falls with a constant acceleration equal to:",
         "choices": [
-          "0.50",
-          "0.63",
-          "0.75",
-          "0.86",
-          "0.95"
+          "g/2",
+          "g/3",
+          "g",
+          "g/7",
+          "g/4"
         ],
         "answer": "D",
-        "explanation": "WORKED SOLUTION\nTsiolkovsky: Δv = u ln(m_i/m_f). Here Δv/u = 5.0/2.5 = 2, so m_i/m_f = e² ≈ 7.39. The propellant fraction is 1 − m_f/m_i = 1 − e^{−2} = 1 − 0.135 = 0.865.\n\nNUMERICS WITHOUT A CALCULATOR\nΔv/u = 2 ⇒ m_f/m_i = e^{−2} ≈ 0.135 ⇒ fraction burned ≈ 0.865.\n\n90-SECOND SOLUTION\nΔv = u ln(m_i/m_f); solve ratio = e². Fuel fraction = 1 − e^{−2} ≈ 0.86.\n\nWHAT TO MEMORIZE\nRocket equation Δv = u ln(m_i/m_f). Propellant mass fraction = 1 − e^{−Δv/u}. e^{−2} ≈ 0.135 is worth knowing."
+        "explanation": "WORKED SOLUTION\nMomentum accretion: d(mv)/dt = mg (the mist adds no momentum since it starts at rest). Try a constant acceleration, v = √(2ax). With m = kx³, d(mv)/dt = v·d(mv)/dx. Substituting and requiring consistency gives a = g/7.\n\nNUMERICS WITHOUT A CALCULATOR\nWith m ∝ x³ and v ∝ √x, balancing d(mv)/dt against mg forces a = g/7.\n\n90-SECOND SOLUTION\nThe accreting-raindrop problem (m ∝ x³, mist at rest) gives constant acceleration g/7.\n\nWHAT TO MEMORIZE\nMomentum-accreting raindrop with m ∝ x³ falls at a constant g/7 — far below g, because the growing mass must be dragged up to speed. Use d(mv)/dt = mg, not m dv/dt = mg."
       },
 
       {
@@ -12006,43 +12006,43 @@ const EXAMS = [
       },
 
       {
-        "question": "A mass m hangs from a light cord wrapped around a uniform disk pulley of mass M and radius R, free to rotate about its axis. When released, what is the downward acceleration of the mass?",
+        "question": "A uniform disk (mass M, radius R, I = ½MR²) spins about its center at angular speed ω₀ while its center moves in a straight line at speed v₀ = ω₀R/2 across a frictionless table. What is the magnitude of its total angular momentum about a fixed point P on the table lying a perpendicular distance R from the line of the center's motion, at the instant the center is closest to P?",
         "choices": [
-          "g",
-          "g/(1 + M/m)",
-          "g/(1 + 2M/m)",
-          "mg/M",
-          "g/(1 + M/2m)"
-        ],
-        "answer": "E",
-        "explanation": "WORKED SOLUTION\nFor the hanging mass: mg − T = ma. For the disk (I = ½MR²): torque TR = Iα = ½MR²(a/R), so T = ½Ma. Substitute: mg − ½Ma = ma ⇒ a = g/(1 + M/2m).\n\nNUMERICS WITHOUT A CALCULATOR\nThe disk adds effective inertia M/2, so a = mg/(m + M/2) = g/(1 + M/2m).\n\n90-SECOND SOLUTION\nTreat the disk's rotational inertia as an added mass M/2 at the rim: a = g/(1 + M/2m).\n\nWHAT TO MEMORIZE\nA disk pulley (I = ½MR²) with a hanging mass acts like adding M/2 to the inertia: a = g/(1 + M/2m). A hoop pulley would add the full M."
-      },
-
-      {
-        "question": "A simple pendulum hangs from the ceiling of a car that accelerates horizontally at a = 5.0 m/s². At what angle from the vertical does the pendulum hang in equilibrium? (g = 10 m/s².)",
-        "choices": [
-          "14°",
-          "20°",
-          "27°",
-          "30°",
-          "45°"
-        ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nIn the car's frame a pseudo-force ma acts backward. The string aligns with the effective gravity, so tan θ = a/g = 5.0/10 = 0.5 → θ = 26.6° ≈ 27°.\n\nNUMERICS WITHOUT A CALCULATOR\ntan θ = a/g = 0.5; arctan 0.5 ≈ 26.6°.\n\n90-SECOND SOLUTION\ntan θ = a/g = 0.5 ⇒ θ ≈ 27°.\n\nWHAT TO MEMORIZE\nIn a linearly accelerating frame the plumb line tilts to the effective gravity: tan θ = a/g."
-      },
-
-      {
-        "question": "Singly ionized helium (He⁺, Z = 2) is a hydrogen-like ion. What is the energy required to ionize He⁺ from its ground state? (Hydrogen ground-state binding energy is 13.6 eV.)",
-        "image": "images/full-practice-2/q14.png",
-        "choices": [
-          "13.6 eV",
-          "27.2 eV",
-          "40.8 eV",
-          "54.4 eV",
-          "108.8 eV"
+          "½MR²ω₀",
+          "MRv₀",
+          "½MR²ω₀ − MRv₀",
+          "½MR²ω₀ + MRv₀",
+          "2MR²ω₀"
         ],
         "answer": "D",
-        "explanation": "WORKED SOLUTION\nHydrogen-like energies scale as Z²: E_n = −13.6·Z²/n² eV. Ground state (n=1) of He⁺ (Z=2): E₁ = −13.6·4 = −54.4 eV. Ionization energy = +54.4 eV.\n\nNUMERICS WITHOUT A CALCULATOR\nZ² = 4, so 4·13.6 = 54.4 eV.\n\n90-SECOND SOLUTION\nMultiply the hydrogen binding energy by Z² = 4.\n\nWHAT TO MEMORIZE\nHydrogen-like ion energies: E_n = −13.6 Z²/n² eV. The Z² factor makes He⁺ four times more tightly bound than hydrogen."
+        "explanation": "WORKED SOLUTION\nTotal L about P = spin angular momentum (½MR²ω₀ about the center) plus the orbital term M(r × v_cm). At closest approach the position vector from P to the center (length R) is perpendicular to v_cm, so the orbital magnitude is M·R·v₀ = MRv₀. Both contributions add (same sense here), giving L = ½MR²ω₀ + MRv₀.\n\n90-SECOND SOLUTION\nL_P = L_spin + M r×v_cm = ½MR²ω₀ + MRv₀ at closest approach.\n\nWHAT TO MEMORIZE\nAngular momentum about an external point = spin (I_cm ω) + orbital (M r × v_cm). The two must be added with correct signs; at closest approach r ⊥ v_cm so the orbital part is simply M R v_cm."
+      },
+
+      {
+        "question": "A small block sits at radius r on a horizontal turntable that starts from rest and spins up with constant angular acceleration α. At the instant its angular speed is ω, the magnitude of the total horizontal friction force needed to keep the block from sliding is:",
+        "choices": [
+          "m r (ω² + α)",
+          "m r √(ω⁴ + α²)",
+          "m r ω²",
+          "m r α",
+          "m r (ω⁴ + α²)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe block needs a centripetal acceleration ω²r (radially inward) and a tangential acceleration αr (to spin up). These are perpendicular, so the required friction has magnitude m√((ω²r)² + (αr)²) = m r √(ω⁴ + α²).\n\nNUMERICS WITHOUT A CALCULATOR\nRadial ω²r and tangential αr add in quadrature: mr√(ω⁴+α²).\n\n90-SECOND SOLUTION\nFriction supplies BOTH centripetal (ω²r) and tangential (αr) acceleration; combine in quadrature: mr√(ω⁴+α²).\n\nWHAT TO MEMORIZE\nSpin-up on a turntable: friction provides centripetal (ω²r) and tangential (αr) components at right angles, so its magnitude is mr√(ω⁴+α²) — note the ω⁴, a classic GRE trap."
+      },
+
+      {
+        "question": "Singly ionized helium (He⁺, Z = 2, a hydrogen-like ion whose levels are shown) is initially in the n = 4 state and emits a photon of energy 10.2 eV. To which level n_f does it drop? (Hydrogen ground-state energy −13.6 eV; E_n = −13.6 Z²/n² eV.)",
+        "image": "images/full-practice-2/q14.png",
+        "choices": [
+          "n_f = 3",
+          "n_f = 1",
+          "n_f = 5",
+          "n_f = 2",
+          "It cannot emit 10.2 eV from n = 4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor He⁺, E_n = −13.6·4/n² = −54.4/n² eV. So E_4 = −54.4/16 = −3.40 eV. The emitted photon carries E_4 − E_{n_f} = 10.2 eV, so E_{n_f} = −3.40 − 10.2 = −13.6 eV. Setting −54.4/n_f² = −13.6 gives n_f² = 4, i.e. n_f = 2 (and indeed E_2 = −54.4/4 = −13.6 eV).\n\nNUMERICS WITHOUT A CALCULATOR\nE_4 = −3.4 eV; subtract 10.2 ⇒ −13.6 eV = E_2 of He⁺ ⇒ n_f = 2.\n\n90-SECOND SOLUTION\nHe⁺ levels are 4× hydrogen's. E_4 = −3.4 eV, minus the 10.2 eV photon = −13.6 eV = E_2, so n_f = 2.\n\nWHAT TO MEMORIZE\nHydrogen-like energies scale as Z²: for He⁺, E_n = −54.4/n² eV. Match the photon to the level difference E_i − E_f."
       },
 
       {
@@ -12059,42 +12059,42 @@ const EXAMS = [
       },
 
       {
-        "question": "Electric-dipole selection rules for one-electron atoms require Δl = ±1 (and Δm = 0, ±1). Which of the following transitions is allowed?",
+        "question": "An atomic term has total spin S = 1 and total orbital angular momentum L = 2 (a ³D term). How many distinct fine-structure levels (values of J) does it have?",
         "choices": [
-          "2s → 1s",
-          "3d → 1s",
-          "3p → 2s",
-          "3s → 1s",
-          "3d → 2d"
+          "5",
+          "3",
+          "1",
+          "2",
+          "7"
         ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nRequire Δl = ±1. 2s→1s: Δl = 0 (forbidden). 3d→1s: Δl = −2 (forbidden). 3p→2s: Δl = −1 (allowed). 3s→1s: Δl = 0 (forbidden). 3d→2d: Δl = 0, and there is no 2d subshell anyway (forbidden). Only 3p→2s satisfies Δl = ±1.\n\n90-SECOND SOLUTION\nScan for Δl = ±1: only 3p→2s qualifies.\n\nWHAT TO MEMORIZE\nElectric-dipole selection rule Δl = ±1. s→s and d→s (Δl = 0, ±2) are dipole-forbidden."
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nJ runs from |L−S| to L+S in integer steps: |2−1| = 1 to 2+1 = 3, i.e. J = 1, 2, 3 — three levels (³D₁, ³D₂, ³D₃).\n\n90-SECOND SOLUTION\nNumber of J values = min(2S+1, 2L+1) when neither is zero; here 2S+1 = 3 levels.\n\nWHAT TO MEMORIZE\nFine-structure multiplicity: J from |L−S| to L+S. The number of levels is 2S+1 (if L ≥ S) — here a triplet D term splits into 3 levels."
       },
 
       {
         "question": "A quantum harmonic oscillator is in its ground state. What fraction of the total ground-state energy is, on average, potential energy?",
         "choices": [
-          "1/2",
           "0",
+          "1/2",
           "1/4",
           "3/4",
           "1"
         ],
-        "answer": "A",
+        "answer": "B",
         "explanation": "WORKED SOLUTION\nBy the virial theorem for a harmonic potential (V ∝ x²), the average kinetic and potential energies are equal: ⟨T⟩ = ⟨V⟩. Each is therefore half the total energy. So the potential fraction is 1/2.\n\n90-SECOND SOLUTION\nVirial theorem for V∝x²: ⟨T⟩ = ⟨V⟩ ⇒ each is half ⇒ 1/2.\n\nWHAT TO MEMORIZE\nFor the harmonic oscillator the virial theorem gives ⟨T⟩ = ⟨V⟩ in any energy eigenstate, so energy splits 50/50 on average."
       },
 
       {
-        "question": "How many electrons can occupy the 3d subshell of an atom?",
+        "question": "Two electrons occupy spin states built from |↑⟩ and |↓⟩. Consider: (I) |↑⟩₁|↑⟩₂, (II) (|↑⟩₁|↓⟩₂ − |↓⟩₁|↑⟩₂)/√2, (III) (|↑⟩₁|↓⟩₂ + |↓⟩₁|↑⟩₂)/√2. Which are symmetric under exchange of the two electrons?",
         "choices": [
-          "2",
-          "6",
-          "10",
-          "14",
-          "18"
+          "II only",
+          "I only",
+          "I, II, and III",
+          "I and III",
+          "III only"
         ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nThe d subshell has l = 2, giving m_l = −2,−1,0,1,2 (5 orbitals), each holding 2 electrons (spin up/down): 5·2 = 10.\n\n90-SECOND SOLUTION\nd ⇒ l=2 ⇒ 2(2l+1) = 10 electrons.\n\nWHAT TO MEMORIZE\nSubshell capacity = 2(2l+1): s=2, p=6, d=10, f=14."
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nExchange swaps labels 1 ↔ 2. (I) |↑↑⟩ → |↑↑⟩: symmetric. (II) the antisymmetric singlet picks up a minus sign: antisymmetric. (III) the symmetric triplet component is unchanged: symmetric. So I and III are symmetric (they are two of the three triplet states, S = 1); II is the antisymmetric singlet (S = 0).\n\n90-SECOND SOLUTION\nTriplet (S=1) states are symmetric: |↑↑⟩ and the '+' combination. The '−' combination is the antisymmetric singlet.\n\nWHAT TO MEMORIZE\nTwo spin-½: the three triplet (S=1) spin states are symmetric; the one singlet (S=0) is antisymmetric. The overall electron wavefunction (space×spin) must be antisymmetric, so a symmetric spin state pairs with an antisymmetric spatial state."
       },
 
       {
@@ -12125,162 +12125,162 @@ const EXAMS = [
       },
 
       {
-        "question": "How many radial nodes does the hydrogen 3p orbital have? (Radial nodes = n − l − 1.)",
+        "question": "For which of the following does hydrogen show a LINEAR (first-order) Stark effect in a weak uniform electric field?",
         "choices": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4"
+          "The n = 1 ground state",
+          "No hydrogen level, ever",
+          "The n = 2 level (which is degenerate)",
+          "Only the highest-n levels",
+          "Every level equally"
         ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\nRadial nodes = n − l − 1 = 3 − 1 − 1 = 1.\n\n90-SECOND SOLUTION\nn−l−1 = 1.\n\nWHAT TO MEMORIZE\nHydrogen orbitals: radial nodes = n − l − 1, angular nodes = l, total nodes = n − 1."
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA first-order Stark shift requires degenerate states of opposite parity that the field can mix. The n = 1 ground state is nondegenerate with definite parity, so ⟨r⟩ = 0 and there is NO linear shift (only quadratic). But n = 2 is degenerate (2s and 2p have the same energy in hydrogen), and 2s/2p have opposite parity, so the field mixes them and produces a LINEAR Stark splitting.\n\n90-SECOND SOLUTION\nLinear Stark needs degenerate opposite-parity states: n = 2 (2s/2p degeneracy) qualifies; the ground state does not.\n\nWHAT TO MEMORIZE\nHydrogen ground state: quadratic Stark only (parity). Excited n ≥ 2: linear Stark, because the l-degeneracy lets the field mix opposite-parity states."
       },
 
       {
-        "question": "A particle is in the spherical-harmonic state Y₂¹(θ,φ). What are the eigenvalues of L² and L_z, respectively?",
+        "question": "A rigid rotor is in the state ψ(θ,φ) = √(3/4π) sin θ sin φ. A measurement of L_z is made. Which values can be obtained, and with what probabilities?",
         "choices": [
-          "2ħ², ħ",
-          "6ħ², ħ",
-          "6ħ², 2ħ",
-          "4ħ², ħ",
-          "6ħ², 0"
+          "0 with probability 1",
+          "+ħ and −ħ, each with probability 1/2",
+          "+ħ with probability 1",
+          "+ħ, 0, −ħ with equal probability",
+          "+2ħ and −2ħ, each 1/2"
         ],
         "answer": "B",
-        "explanation": "WORKED SOLUTION\nFor Y_l^m, L² = l(l+1)ħ² and L_z = mħ. Here l = 2, m = 1: L² = 2·3·ħ² = 6ħ², L_z = 1·ħ = ħ.\n\n90-SECOND SOLUTION\nl(l+1)ħ² = 6ħ²; mħ = ħ.\n\nWHAT TO MEMORIZE\nL²Y_l^m = l(l+1)ħ²Y_l^m and L_zY_l^m = mħY_l^m. For l=2: L² = 6ħ²."
+        "explanation": "WORKED SOLUTION\nWrite sin φ = (e^{iφ} − e^{−iφ})/(2i). The state is proportional to sin θ (e^{iφ} − e^{−iφ}), i.e. a combination of Y₁¹ (∝ sin θ e^{iφ}, m = +1) and Y₁^{−1} (∝ sin θ e^{−iφ}, m = −1) with equal weight. So L_z can be +ħ or −ħ, each with probability 1/2. There is no m = 0 component.\n\n90-SECOND SOLUTION\nsin φ mixes e^{±iφ} equally ⇒ m = ±1 only, 50/50 ⇒ L_z = ±ħ.\n\nWHAT TO MEMORIZE\nExpand angular states in e^{imφ} to read off L_z = mħ eigenvalues and their weights. sin φ and cos φ are each 50/50 mixtures of m = +1 and m = −1."
       },
 
       {
-        "question": "When light of wavelength 250 nm shines on a metal, the most energetic photoelectrons have kinetic energy 1.0 eV. What is the work function of the metal? (hc ≈ 1240 eV·nm.)",
+        "question": "For a certain metal, light of wavelength 200 nm produces photoelectrons with a stopping potential of 2.0 V, and light of 250 nm gives a stopping potential of 0.75 V. What value of Planck's constant do these data imply? (Use hc from the two-point slope; e = 1.6×10⁻¹⁹ C, c = 3×10⁸ m/s.)",
         "choices": [
-          "2.0 eV",
-          "5.0 eV",
-          "3.0 eV",
-          "4.0 eV",
-          "1.0 eV"
+          "6.7×10⁻³⁴ J·s",
+          "4.1×10⁻³⁴ J·s",
+          "1.0×10⁻³³ J·s",
+          "3.3×10⁻³⁴ J·s",
+          "6.6×10⁻³³ J·s"
         ],
-        "answer": "D",
-        "explanation": "WORKED SOLUTION\nPhoton energy = 1240/250 = 4.96 eV. Work function W = hf − KE_max = 4.96 − 1.0 = 3.96 ≈ 4.0 eV.\n\nNUMERICS WITHOUT A CALCULATOR\n1240/250 ≈ 5.0; minus 1.0 ⇒ ≈ 4.0.\n\n90-SECOND SOLUTION\nW = hc/λ − KE_max = 4.96 − 1.0 ≈ 4.0 eV.\n\nWHAT TO MEMORIZE\nPhotoelectric: W = hc/λ − KE_max. Solve for whichever of {W, KE, λ} is unknown."
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\neV_s = hc/λ − W. Subtract the two equations to eliminate W: e(V₁ − V₂) = hc(1/λ₁ − 1/λ₂). So h = e(V₁−V₂) / [c(1/λ₁ − 1/λ₂)]. Numerically: V₁−V₂ = 1.25 V; 1/λ₁ − 1/λ₂ = 1/200nm − 1/250nm = (1/200 − 1/250)×10⁹ = (5−4)/1000×10⁹ = 1.0×10⁶ m⁻¹. h = (1.6×10⁻¹⁹·1.25)/(3×10⁸·1.0×10⁶) = (2.0×10⁻¹⁹)/(3×10¹⁴) = 6.7×10⁻³⁴ J·s.\n\nNUMERICS WITHOUT A CALCULATOR\nΔ(1/λ) = 10⁶ m⁻¹; h = eΔV/(cΔ(1/λ)) = (1.6e−19·1.25)/(3e14) ≈ 6.7e−34.\n\n90-SECOND SOLUTION\nSubtract to kill W: h = eΔV/(cΔ(1/λ)) ≈ 6.7×10⁻³⁴ J·s.\n\nWHAT TO MEMORIZE\nTwo (λ, V_s) points give h without knowing the work function: h = eΔV_s / [c Δ(1/λ)]. This is Millikan's method for measuring h."
       },
 
       {
-        "question": "A particle's wavefunction on 0 ≤ x ≤ L is ψ(x) = A x(L − x). What normalization constant A makes ∫|ψ|²dx = 1?",
+        "question": "A particle has wavefunction ψ(x,t) = (A cos kx + B sin kx) e^{−iωt}, where A and B are real constants. What is the probability current density j?",
         "choices": [
-          "√(6/L³)",
-          "√(30/L⁵)",
-          "√(2/L)",
-          "√(15/L⁵)",
-          "√(3/L³)"
+          "(ħk/m)(A² + B²)",
+          "(ħk/m)AB",
+          "(ħk/m)(A² − B²)",
+          "(ħk/m)(B² − A²)",
+          "0"
         ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\n∫₀ᴸ A²x²(L−x)²dx = A²∫₀ᴸ(L²x² − 2Lx³ + x⁴)dx = A²(L⁵/3 − 2L·L⁴/4 + L⁵/5) = A²L⁵(1/3 − 1/2 + 1/5) = A²L⁵(10−15+6)/30 = A²L⁵/30. Set = 1 ⇒ A = √(30/L⁵).\n\n90-SECOND SOLUTION\n∫x²(L−x)²dx = L⁵/30. So A = √(30/L⁵).\n\nWHAT TO MEMORIZE\n∫₀ᴸ x²(L−x)² dx = L⁵/30 — a handy standard integral for parabolic trial wavefunctions."
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nj = (ħ/2mi)(ψ*∂ψ/∂x − ψ ∂ψ*/∂x). Here A, B are REAL and the time factor cancels in ψ*ψ' , so ψ*∂ψ/∂x is real, making (ψ*ψ' − ψψ*') = 2i·Im(ψ*ψ') = 0 because ψ*ψ' is real. Hence j = 0: a real spatial wavefunction (up to a global phase) carries no current — it is a standing wave, not a traveling one.\n\n90-SECOND SOLUTION\nReal spatial part ⇒ ψ*ψ' is real ⇒ its imaginary part is zero ⇒ j = 0.\n\nWHAT TO MEMORIZE\nProbability current j = (ħ/m)Im(ψ*∇ψ). A wavefunction with a real spatial part (a standing wave like cos kx or sin kx) carries zero current; you need a complex combination like e^{ikx} to get a net flux."
       },
 
       {
         "question": "A spin-½ particle is prepared in the spin-up state along z. Its spin is then measured along an axis making an angle of 60° with the z-axis. What is the probability of finding it 'up' along the new axis?",
         "choices": [
-          "3/4",
           "1/2",
           "1/4",
           "cos60° = 1/2",
+          "3/4",
           "1/3"
         ],
-        "answer": "A",
+        "answer": "D",
         "explanation": "WORKED SOLUTION\nFor spin-½, the probability of measuring 'up' along an axis at angle θ from the prepared spin is cos²(θ/2). With θ = 60°: cos²(30°) = (√3/2)² = 3/4.\n\nNUMERICS WITHOUT A CALCULATOR\ncos²(30°) = 3/4.\n\n90-SECOND SOLUTION\nP(up) = cos²(θ/2) = cos²30° = 3/4. (Note it is θ/2, not θ — the half-angle is the spin-½ signature.)\n\nWHAT TO MEMORIZE\nSpin-½ projection probability: P(up along axis at angle θ) = cos²(θ/2). At θ = 90° this gives 1/2; at 60° it gives 3/4."
       },
 
       {
         "question": "Two identical noninteracting spin-½ fermions occupy a 1-D infinite square well of width L. What is the ground-state energy of the system, in units of E₁ = π²ħ²/(2mL²)?",
         "choices": [
-          "2E₁",
           "3E₁",
           "4E₁",
           "5E₁",
+          "2E₁",
           "E₁"
         ],
-        "answer": "A",
+        "answer": "D",
         "explanation": "WORKED SOLUTION\nSpin-½ fermions can share the n=1 spatial state with opposite spins (a spin singlet), so both go into n=1. Total energy = E₁ + E₁ = 2E₁.\n\n90-SECOND SOLUTION\nOpposite spins let both fermions sit in n=1: 2E₁. (Two spinless fermions would need n=1 and n=2, giving 5E₁ — a common trap.)\n\nWHAT TO MEMORIZE\nSpin-½ fermions: two can share each spatial level (↑↓). Ground state of two is 2E₁; the n=1+n=2 = 5E₁ answer applies only to spin-polarized or spinless fermions."
       },
 
       {
-        "question": "A particle in an infinite square well is in the state Ψ = (1/√5)ψ₁ + (2/√5)ψ₂, where ψ₁, ψ₂ are the n=1,2 energy eigenstates. If the energy is measured, what is the probability of obtaining E₂?",
+        "question": "Two spin-½ particles interact via H = −J S₁·S₂ with J > 0 (ħ = 1). What is the ground-state energy?",
         "choices": [
-          "1/5",
-          "2/5",
-          "3/5",
-          "1/√5",
-          "4/5"
+          "−J/4",
+          "+J/4",
+          "−3J/4",
+          "+3J/4",
+          "−J/2"
         ],
-        "answer": "E",
-        "explanation": "WORKED SOLUTION\nProbability of E_n is the squared modulus of its coefficient: |2/√5|² = 4/5.\n\n90-SECOND SOLUTION\n(2/√5)² = 4/5.\n\nWHAT TO MEMORIZE\nFor Ψ = Σc_nψ_n, P(E_n) = |c_n|². The coefficients here give 1/5 and 4/5, summing to 1."
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nUse S₁·S₂ = ½(S² − S₁² − S₂²), with S₁² = S₂² = s(s+1) = 3/4. For the triplet (S = 1): S² = 2, so S₁·S₂ = ½(2 − 3/4 − 3/4) = ½(1/2) = 1/4. For the singlet (S = 0): S₁·S₂ = ½(0 − 3/2) = −3/4. Since H = −J S₁·S₂ with J > 0, energy is minimized by MAXIMIZING S₁·S₂, i.e. the triplet: E = −J·(1/4) = −J/4.\n\n90-SECOND SOLUTION\nTriplet gives S₁·S₂ = +1/4 (the max), so with H = −J S₁·S₂ the ground state is E = −J/4.\n\nWHAT TO MEMORIZE\nS₁·S₂ = ½(S²−S₁²−S₂²) gives +1/4 (triplet) or −3/4 (singlet) for two spin-½. A ferromagnetic coupling (−J S₁·S₂, J>0) favors the aligned triplet."
       },
 
       {
         "question": "A particle of energy E tunnels through a rectangular barrier of height V₀ and width L, with T ≈ e^{−2κL} and κ = √(2m(V₀−E))/ħ (see figure). If (V₀ − E) is quadrupled while L is held fixed, the decay constant κ:",
         "image": "images/full-practice-2/q28.png",
         "choices": [
+          "doubles",
           "is halved",
           "quadruples",
           "is unchanged",
-          "increases by √2",
-          "doubles"
+          "increases by √2"
         ],
-        "answer": "E",
+        "answer": "A",
         "explanation": "WORKED SOLUTION\nκ = √(2m(V₀−E))/ħ ∝ √(V₀−E). Quadrupling (V₀−E) multiplies κ by √4 = 2.\n\n90-SECOND SOLUTION\nκ ∝ √(V₀−E); ×4 inside the root ⇒ κ doubles.\n\nWHAT TO MEMORIZE\nThe tunneling decay constant κ ∝ √(V₀−E): a higher or 'taller' barrier increases κ as the square root, and T falls exponentially as e^{−2κL}."
       },
 
       {
-        "question": "In Compton scattering a photon backscatters off a free electron (scattering angle 180°, see figure). By how much does its wavelength increase, in units of the Compton wavelength λ_C = h/m_ec?",
+        "question": "A photon of energy 0.50 MeV Compton-scatters off a free electron (m_ec² = 0.511 MeV) through 90° (see figure). What fraction of the photon's original energy is transferred to the electron?",
         "image": "images/full-practice-2/q29.png",
         "choices": [
-          "0",
-          "0.5 λ_C",
-          "1.0 λ_C",
-          "1.5 λ_C",
-          "2.0 λ_C"
+          "0.11",
+          "0.33",
+          "0.49",
+          "0.66",
+          "0.25"
         ],
-        "answer": "E",
-        "explanation": "WORKED SOLUTION\nΔλ = λ_C(1 − cos θ). At θ = 180°, cos θ = −1, so Δλ = λ_C(1−(−1)) = 2λ_C — the maximum possible shift.\n\n90-SECOND SOLUTION\n1 − cos180° = 2, so Δλ = 2λ_C.\n\nWHAT TO MEMORIZE\nCompton shift Δλ = λ_C(1−cosθ) is maximized at backscatter (θ=180°), where it equals 2λ_C = 2h/m_ec."
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nEnergy form: 1/E′ = 1/E + (1−cosθ)/m_ec². At 90°, 1−cosθ = 1, so 1/E′ = 1/0.50 + 1/0.511 = 2.00 + 1.957 = 3.957 ⇒ E′ = 0.253 MeV. Energy to the electron = E − E′ = 0.50 − 0.253 = 0.247 MeV. Fraction = 0.247/0.50 = 0.49.\n\nNUMERICS WITHOUT A CALCULATOR\nE′ = 1/(2 + 1/0.511) ≈ 0.25 MeV; the electron takes ≈ half, so fraction ≈ 0.49.\n\n90-SECOND SOLUTION\nAt 90°, E′ = E/(1+E/m_ec²) ≈ 0.25 MeV; the electron gets the other ≈ 0.25 MeV, about 49%.\n\nWHAT TO MEMORIZE\nWhen E ~ m_ec², a single Compton scatter can transfer a large fraction of the photon energy; at 90° here nearly half goes to the electron."
       },
 
       {
         "question": "A square conducting loop moves at constant velocity completely through a region of uniform magnetic field (into the page) that is wider than the loop. The four graphs' setup: the induced EMF is plotted versus time as the loop enters, is fully inside, and exits. Which description matches the induced EMF? (See figure.)",
         "image": "images/full-practice-2/q30.png",
         "choices": [
-          "A positive pulse on entry, zero while fully inside, a negative pulse on exit",
           "A single constant EMF for the whole crossing",
           "Zero on entry, a pulse only while fully inside",
+          "A positive pulse on entry, zero while fully inside, a negative pulse on exit",
           "A negative pulse on entry, positive on exit, and a constant EMF in between",
           "A steadily increasing EMF throughout"
         ],
-        "answer": "A",
+        "answer": "C",
         "explanation": "WORKED SOLUTION\nEMF = −dΦ/dt. While ENTERING, flux increases at a constant rate (only the leading edge cuts field lines) → constant EMF of one sign. FULLY INSIDE, flux is constant → EMF = 0. While EXITING, flux decreases → constant EMF of the opposite sign. So: pulse, zero, opposite pulse.\n\n90-SECOND SOLUTION\nEMF is nonzero only when the flux is changing — that happens on entry and exit, not while fully immersed. The two pulses have opposite sign.\n\nWHAT TO MEMORIZE\nFor a loop crossing a uniform-field region wider than itself: constant EMF during entry, zero while fully inside (flux constant), reversed constant EMF during exit."
       },
 
       {
-        "question": "In a velocity selector, a charged particle passes undeflected through crossed electric and magnetic fields (see figure) with E = 3.0×10⁴ V/m and B = 0.020 T. What is the selected speed?",
+        "question": "In the apparatus shown, a charged particle passes undeflected through a velocity selector with E = 3.0×10⁴ V/m and B₁ = 0.020 T, then enters a region of pure magnetic field B₂ = 0.10 T perpendicular to its velocity, where it moves in a circle of radius 5.0 cm. What is the particle's charge-to-mass ratio q/m?",
         "image": "images/full-practice-2/q31.png",
         "choices": [
-          "6.0×10² m/s",
-          "6.0×10⁵ m/s",
-          "1.5×10⁶ m/s",
-          "1.5×10⁵ m/s",
-          "6.0×10⁶ m/s"
+          "1.5×10⁶ C/kg",
+          "6.7×10⁻⁹ C/kg",
+          "3.0×10⁶ C/kg",
+          "1.5×10⁸ C/kg",
+          "3.0×10⁸ C/kg"
         ],
-        "answer": "C",
-        "explanation": "WORKED SOLUTION\nUndeflected ⇒ electric and magnetic forces balance: qE = qvB ⇒ v = E/B = 3.0×10⁴/0.020 = 1.5×10⁶ m/s.\n\nNUMERICS WITHOUT A CALCULATOR\n3×10⁴ / 2×10⁻² = 1.5×10⁶.\n\n90-SECOND SOLUTION\nv = E/B, independent of charge and mass.\n\nWHAT TO MEMORIZE\nVelocity selector: v = E/B for the undeflected particle, regardless of q or m."
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nSelector picks v = E/B₁ = 3.0×10⁴/0.020 = 1.5×10⁶ m/s. In the second field, r = mv/(qB₂), so q/m = v/(r B₂) = 1.5×10⁶/(0.050·0.10) = 1.5×10⁶/5.0×10⁻³ = 3.0×10⁸ C/kg.\n\nNUMERICS WITHOUT A CALCULATOR\nv = E/B₁ = 1.5×10⁶; q/m = v/(rB₂) = 1.5×10⁶/(5×10⁻³) = 3×10⁸.\n\n90-SECOND SOLUTION\nCombine v = E/B₁ with r = mv/qB₂: q/m = E/(B₁ B₂ r) = 3×10⁸ C/kg.\n\nWHAT TO MEMORIZE\nThe selector fixes v = E/B₁ regardless of q, m; the second field's radius then yields q/m = E/(B₁B₂r). This is the mass-spectrometer principle."
       },
 
       {
         "question": "A sphere of radius R carries a volume charge density that varies as ρ(r) = ρ₀ r/R. What is the total charge of the sphere?",
         "choices": [
+          "πρ₀R³",
           "ρ₀R³",
           "(4/3)πρ₀R³",
           "(4/5)πρ₀R³",
-          "πρ₀R³",
           "(2/3)πρ₀R³"
         ],
-        "answer": "D",
+        "answer": "A",
         "explanation": "WORKED SOLUTION\nQ = ∫ρ dV = ∫₀ᴿ (ρ₀ r/R)(4πr²)dr = (4πρ₀/R)∫₀ᴿ r³dr = (4πρ₀/R)(R⁴/4) = πρ₀R³.\n\n90-SECOND SOLUTION\n∫(ρ₀r/R)4πr²dr from 0 to R = πρ₀R³.\n\nWHAT TO MEMORIZE\nFor radially varying ρ(r), integrate ρ(r)·4πr² dr over the radius. Here the r¹ dependence gives Q = πρ₀R³."
       },
 
@@ -12288,66 +12288,66 @@ const EXAMS = [
         "question": "A wire carries current I along three-quarters of a circle of radius R, centered on point P (see figure). What is the magnitude of the magnetic field at P due to the arc alone?",
         "image": "images/full-practice-2/q33.png",
         "choices": [
-          "3μ₀I/(8R)",
           "μ₀I/(8R)",
           "μ₀I/(4R)",
           "μ₀I/(2R)",
-          "3μ₀I/(4R)"
+          "3μ₀I/(4R)",
+          "3μ₀I/(8R)"
         ],
-        "answer": "A",
+        "answer": "E",
         "explanation": "WORKED SOLUTION\nA full loop gives B = μ₀I/(2R) at its center. An arc subtending fraction f of the circle contributes fraction f. Three-quarters ⇒ B = (3/4)·μ₀I/(2R) = 3μ₀I/(8R).\n\n90-SECOND SOLUTION\n(3/4) of the full-loop field μ₀I/(2R) = 3μ₀I/(8R).\n\nWHAT TO MEMORIZE\nField at the center of a circular arc = (arc fraction)·μ₀I/(2R). Straight radial leads pointing at P contribute nothing."
       },
 
       {
-        "question": "A series RLC circuit (see figure) has an inductance L = 8.0 mH. What capacitance is needed for the circuit to resonate at an angular frequency of 5.0×10³ rad/s?",
+        "question": "A series RLC circuit (shown) has R = 10 Ω, L = 2.0 μH, and C = 1.3 pF, driven at its resonant frequency by a source of amplitude 5.0 V. What is the quality factor Q of the circuit?",
         "image": "images/full-practice-2/q34.png",
         "choices": [
-          "2.0 μF",
-          "8.0 μF",
-          "10 μF",
-          "1.0 μF",
-          "5.0 μF"
+          "39",
+          "12",
+          "390",
+          "3.9",
+          "120"
         ],
         "answer": "E",
-        "explanation": "WORKED SOLUTION\nResonance: ω₀ = 1/√(LC) ⇒ C = 1/(ω₀²L) = 1/((5.0×10³)²·8.0×10⁻³) = 1/(2.5×10⁷·8.0×10⁻³) = 1/(2.0×10⁵) = 5.0×10⁻⁶ F = 5.0 μF.\n\nNUMERICS WITHOUT A CALCULATOR\nω₀² = 2.5×10⁷; ×L = 2×10⁵; reciprocal = 5×10⁻⁶ F.\n\n90-SECOND SOLUTION\nC = 1/(ω₀²L) = 5.0 μF.\n\nWHAT TO MEMORIZE\nResonance ω₀ = 1/√(LC); solve for whichever element is unknown. Here C = 1/(ω₀²L)."
+        "explanation": "WORKED SOLUTION\nQ = (1/R)√(L/C) = (1/10)√(2.0×10⁻⁶/1.3×10⁻¹²) = (1/10)√(1.54×10⁶) = (1/10)(1240) = 124 ≈ 120.\n\nNUMERICS WITHOUT A CALCULATOR\n√(L/C) = √(2e−6/1.3e−12) = √(1.5e6) ≈ 1240; ÷R(10) ≈ 124.\n\n90-SECOND SOLUTION\nQ = (1/R)√(L/C) ≈ 124/1 ≈ 120.\n\nWHAT TO MEMORIZE\nSeries-RLC quality factor Q = (1/R)√(L/C) = ω₀L/R. High Q (narrow, sharp resonance) needs small R and large L/C."
       },
 
       {
-        "question": "A parallel-plate capacitor is being charged so that the conduction current in the wire is 3.0 A. What is the displacement current between the plates?",
+        "question": "A parallel-plate capacitor is charged and then DISCONNECTED from the battery. A dielectric slab of constant K is then inserted to fill the gap. By what factor does the electric field between the plates change?",
         "choices": [
-          "0",
-          "3.0 A",
-          "1.5 A",
-          "6.0 A",
-          "depends on the plate separation"
-        ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\nMaxwell's key insight: the displacement current between the plates exactly equals the conduction current in the wire, so the magnetic field is continuous. Hence 3.0 A.\n\n90-SECOND SOLUTION\nDisplacement current = conduction current = 3.0 A (that's the point of Maxwell's correction).\n\nWHAT TO MEMORIZE\nIn a charging capacitor, I_displacement = ε₀ dΦ_E/dt = I_conduction. This is what makes Ampère's law consistent."
-      },
-
-      {
-        "question": "A ring of radius R carries total charge Q. At what distance from the center, along the axis, is the axial electric field a MAXIMUM?",
-        "choices": [
-          "z = 0",
-          "z = R",
-          "z = R√2",
-          "z = R/√2",
-          "z → ∞"
+          "increases by K",
+          "unchanged",
+          "decreases by K²",
+          "decreases by K",
+          "increases by K²"
         ],
         "answer": "D",
-        "explanation": "WORKED SOLUTION\nOn the axis, E(z) = kQz/(R²+z²)^{3/2}. Setting dE/dz = 0 gives R² + z² = 3z², i.e. z² = R²/2, z = R/√2. (At z=0 the field is zero by symmetry; far away it falls off.)\n\n90-SECOND SOLUTION\nMaximize kQz/(R²+z²)^{3/2}: derivative zero at z = R/√2.\n\nWHAT TO MEMORIZE\nOn a ring's axis E(z) = kQz/(R²+z²)^{3/2}, zero at the center, peaking at z = R/√2."
+        "explanation": "WORKED SOLUTION\nDisconnected ⇒ the free charge Q on the plates is fixed. The field from fixed free charge is E = σ_f/(Kε₀) = E₀/K once the dielectric is present (the bound charge partially cancels the free charge). So the field DECREASES by the factor K.\n\n90-SECOND SOLUTION\nQ fixed; dielectric screens the field by K ⇒ E = E₀/K.\n\nWHAT TO MEMORIZE\nDielectric inserted, battery DISCONNECTED (Q fixed): E↓K, V↓K, C↑K, U↓K. The field drops because bound surface charge opposes the fixed free charge."
+      },
+
+      {
+        "question": "Two concentric conducting spherical shells have radii a < b. The inner shell carries charge +Q and the outer shell carries −Q. What is the potential in the region between the shells (a < r < b), taking V = 0 at infinity? (k = 1/4πε₀.)",
+        "choices": [
+          "kQ(1/r − 1/b)",
+          "kQ/r",
+          "kQ(1/a − 1/r)",
+          "kQ(1/r − 1/a)",
+          "0"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBetween the shells only the inner +Q contributes to the field (Gauss), E = kQ/r². Integrating from r to b, and noting the outer shell (−Q) sits at potential V(b): the field outside b is zero (net enclosed charge 0), so V(b) = 0 relative to infinity. Then V(r) = V(b) + ∫_r^b E dr' = 0 + kQ(1/r − 1/b) = kQ(1/r − 1/b).\n\n90-SECOND SOLUTION\nOutside is field-free ⇒ V(b) = 0; integrate E = kQ/r² inward: V(r) = kQ(1/r − 1/b).\n\nWHAT TO MEMORIZE\nFor +Q inner, −Q outer shells, the field lives only in the gap; the outer shell is at V = 0 (no external field), so V(r) = kQ(1/r − 1/b) between them."
       },
 
       {
         "question": "Three equal charges +q sit at the vertices of an equilateral triangle of side a. What is the magnitude of the net electric force on any one of them? (k = 1/4πε₀.)",
         "choices": [
+          "√3 kq²/a²",
           "kq²/a²",
           "2 kq²/a²",
           "kq²/(2a²)",
-          "3 kq²/a²",
-          "√3 kq²/a²"
+          "3 kq²/a²"
         ],
-        "answer": "E",
+        "answer": "A",
         "explanation": "WORKED SOLUTION\nEach of the other two charges exerts a force of magnitude F₀ = kq²/a² on the corner charge, and the two force vectors are separated by 60°. Their resultant has magnitude 2F₀cos(30°) = 2F₀(√3/2) = √3 F₀ = √3 kq²/a².\n\nNUMERICS WITHOUT A CALCULATOR\nTwo equal forces at 60° add to 2cos30° = √3 times one force.\n\n90-SECOND SOLUTION\nResultant of two equal F₀ vectors 60° apart is √3 F₀, directed radially outward.\n\nWHAT TO MEMORIZE\nTwo equal vectors at angle θ add to 2F₀cos(θ/2). For the equilateral-triangle geometry (60°), that's √3 F₀."
       },
 
@@ -12365,45 +12365,45 @@ const EXAMS = [
       },
 
       {
-        "question": "In the bridge circuit shown, the four arms have resistances 10 Ω, 20 Ω, 30 Ω, and 60 Ω arranged so that 10/20 = 30/60. A galvanometer bridges the two midpoints (see figure). What current flows through the galvanometer?",
+        "question": "In the bridge shown, three arms are 10 Ω, 20 Ω, and 30 Ω, and the fourth arm is an unknown R. The galvanometer reads zero (balanced). Given the arrangement 10 Ω and 20 Ω on the left divider (top and bottom) and 30 Ω and R on the right divider, what is R?",
         "image": "images/full-practice-2/q39.png",
         "choices": [
-          "A current proportional to the supply voltage",
-          "Half the supply current",
-          "A current that depends on the galvanometer's resistance",
-          "Zero",
-          "Cannot be determined"
+          "15 Ω",
+          "40 Ω",
+          "60 Ω",
+          "45 Ω",
+          "25 Ω"
         ],
-        "answer": "D",
-        "explanation": "WORKED SOLUTION\nThe bridge is balanced when the ratios of adjacent arms are equal: 10/20 = 30/60 = 1/2. Balanced ⇒ the two midpoints are at equal potential ⇒ no current through the galvanometer, regardless of its resistance.\n\n90-SECOND SOLUTION\nRatio condition R₁/R₂ = R₃/R₄ holds ⇒ balanced bridge ⇒ zero galvanometer current.\n\nWHAT TO MEMORIZE\nWheatstone bridge balances when R₁/R₂ = R₃/R₄; then the detector arm carries no current and can be removed without changing anything."
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBalance condition: the two dividers have equal ratios, R_top/R_bottom equal on both sides: 10/20 = 30/R ⇒ R = 30·20/10 = 60 Ω.\n\nNUMERICS WITHOUT A CALCULATOR\n10/20 = 1/2 = 30/R ⇒ R = 60.\n\n90-SECOND SOLUTION\nBalanced bridge: 10/20 = 30/R ⇒ R = 60 Ω.\n\nWHAT TO MEMORIZE\nWheatstone balance: the products of opposite arms are equal (R₁R₄ = R₂R₃), equivalently the divider ratios match. Solve for the unknown arm."
       },
 
       {
-        "question": "In the RC circuit shown, a 2.0 μF capacitor charges through a 3.0 kΩ resistor when the switch closes (see figure). How long after closing does the capacitor voltage reach about 63% of its final value?",
+        "question": "In the circuit shown, a capacitor C is charged to voltage V₀ through the battery, then (switch thrown) discharges entirely through the resistor R. How much energy is dissipated in the resistor during the complete discharge?",
         "image": "images/full-practice-2/q40.png",
         "choices": [
-          "1.5 ms",
-          "3.0 ms",
-          "0.67 ms",
-          "6.0 ms",
-          "9.0 ms"
+          "CV₀²",
+          "¼CV₀²",
+          "½CV₀²·(1−e⁻¹)",
+          "½CV₀²",
+          "RC·V₀²"
         ],
         "answer": "D",
-        "explanation": "WORKED SOLUTION\n63% of the final value is reached in one time constant τ = RC = 3.0×10³·2.0×10⁻⁶ = 6.0×10⁻³ s = 6.0 ms.\n\nNUMERICS WITHOUT A CALCULATOR\nRC = 3k·2μ = 6 ms.\n\n90-SECOND SOLUTION\nτ = RC = 6 ms; 63% ⇔ one τ.\n\nWHAT TO MEMORIZE\nRC charging reaches 1 − e⁻¹ ≈ 63% of final in one time constant τ = RC."
+        "explanation": "WORKED SOLUTION\nThe capacitor initially stores ½CV₀². During a COMPLETE discharge through R, all of that stored energy is dissipated as heat in the resistor (regardless of R): ∫₀^∞ I²R dt = ½CV₀². (R only sets the time scale τ = RC, not the total energy.)\n\n90-SECOND SOLUTION\nAll the stored energy ½CV₀² ends up in R; R affects only how fast, not how much.\n\nWHAT TO MEMORIZE\nA capacitor discharging fully through any resistor dissipates its entire stored energy ½CV₀² there — the total is independent of R. (During CHARGING through a resistor, the resistor also dissipates ½CV₀², matching what the capacitor gains — half the battery's work.)"
       },
 
       {
-        "question": "The figure shows the voltage across a capacitor versus time after a switch closes in an RC circuit: it rises from zero and asymptotically approaches a final value. The time constant τ = RC is best identified on the graph as:",
+        "question": "The figure shows a capacitor's voltage rising toward its final value after a switch closes. The capacitor C charges through a series resistor R₁, but a second resistor R₂ is connected in PARALLEL with the capacitor. What is the charging time constant?",
         "image": "images/full-practice-2/q41.png",
         "choices": [
-          "The time at which the voltage reaches its final value exactly",
-          "The time at which the voltage reaches about 63% of its final value",
-          "The time at which the voltage reaches 50% of its final value",
-          "The time at which the voltage reaches 100% and then overshoots",
-          "The initial slope's value in volts"
+          "(R₁+R₂)C",
+          "R₁C",
+          "(R₁R₂/(R₁+R₂))·C",
+          "R₂C",
+          "(R₁R₂/(R₁−R₂))·C"
         ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\nFor charging, V(t) = V_f(1 − e^{−t/τ}). At t = τ, V = V_f(1 − e^{−1}) = 0.632 V_f. So the time constant is read off the curve as the time to reach ~63% of the final value. (Equivalently, the initial tangent extrapolates to V_f at t = τ.)\n\n90-SECOND SOLUTION\nτ is where the charging curve hits 63% of its asymptote.\n\nWHAT TO MEMORIZE\nRC charging reaches 63% of final in one τ; discharging falls to 37% in one τ. The initial tangent line hits the asymptote at t = τ."
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe time constant is C times the Thévenin resistance seen by the capacitor. Looking out from the capacitor's terminals (battery shorted), R₁ and R₂ appear in PARALLEL: R_th = R₁R₂/(R₁+R₂). So τ = R_th·C = R₁R₂C/(R₁+R₂).\n\n90-SECOND SOLUTION\nτ = C × (Thévenin R at the cap) = C × (R₁ ∥ R₂).\n\nWHAT TO MEMORIZE\nFor RC transients, τ = C·R_Thévenin, where R_Thévenin is the resistance seen from the capacitor with sources nulled. A shunt R₂ appears in parallel with the charging R₁."
       },
 
       {
@@ -12412,26 +12412,26 @@ const EXAMS = [
         "choices": [
           "The circuit with the input through a resistor and the output taken across the capacitor",
           "The circuit with the output taken across the series combination",
-          "The circuit with the input through a capacitor and the output taken across the resistor",
           "The circuit with two capacitors in series",
-          "None of them can pass high frequencies"
+          "None of them can pass high frequencies",
+          "The circuit with the input through a capacitor and the output taken across the resistor"
         ],
-        "answer": "C",
+        "answer": "E",
         "explanation": "WORKED SOLUTION\nA high-pass filter must attenuate low frequencies and pass high ones. With a series capacitor and the output across the RESISTOR: at low frequency the capacitor's reactance X_C = 1/(ωC) is large, dropping most of the voltage, so little reaches the resistor (blocked); at high frequency X_C → 0, so nearly all the voltage appears across the resistor (passed). That is a high-pass response. (Output across the CAPACITOR instead gives a low-pass filter.)\n\n90-SECOND SOLUTION\nOutput across R with series C ⇒ high-pass; output across C ⇒ low-pass.\n\nWHAT TO MEMORIZE\nRC filter rule: output across the resistor (series C) = high-pass; output across the capacitor (series R) = low-pass. The corner frequency is f_c = 1/(2πRC)."
       },
 
       {
-        "question": "An ideal gas is taken around the closed cycle shown in the P–V diagram (a rectangle from V₀ to 3V₀ and P₀ to 2P₀), traversed clockwise (see figure). What is the net work done BY the gas per cycle?",
+        "question": "One mole of an ideal gas is taken around the rectangular cycle shown on the P–V diagram (between P₀, 2P₀ and V₀, 3V₀, clockwise). Over the COMPLETE cycle, what is the net heat added to the gas?",
         "image": "images/full-practice-2/q43.png",
         "choices": [
-          "P₀V₀",
-          "3P₀V₀",
-          "4P₀V₀",
-          "6P₀V₀",
-          "2P₀V₀"
+          "0",
+          "2P₀V₀",
+          "−2P₀V₀",
+          "5P₀V₀",
+          "P₀V₀"
         ],
-        "answer": "E",
-        "explanation": "WORKED SOLUTION\nNet work per cycle equals the area enclosed by the loop on the P–V diagram, and it is positive (work done by the gas) for a clockwise cycle. The rectangle has width ΔV = 3V₀ − V₀ = 2V₀ and height ΔP = 2P₀ − P₀ = P₀, so area = 2V₀·P₀ = 2P₀V₀.\n\nNUMERICS WITHOUT A CALCULATOR\nArea = (2V₀)(P₀) = 2P₀V₀.\n\n90-SECOND SOLUTION\nEnclosed rectangle area = ΔP·ΔV = P₀·2V₀ = 2P₀V₀; clockwise ⇒ done BY the gas.\n\nWHAT TO MEMORIZE\nNet cycle work = area enclosed on the P–V diagram; clockwise = work out (engine), counterclockwise = work in (refrigerator)."
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOver a complete cycle ΔU = 0 (internal energy is a state function), so by the first law Q_net = W_net. The net work is the enclosed area: ΔP·ΔV = (2P₀−P₀)(3V₀−V₀) = P₀·2V₀ = 2P₀V₀. Clockwise ⇒ positive. So Q_net = +2P₀V₀.\n\nNUMERICS WITHOUT A CALCULATOR\nCycle ⇒ ΔU=0 ⇒ Q_net = W_net = enclosed area = 2P₀V₀.\n\n90-SECOND SOLUTION\nQ_net = W_net = enclosed area = 2P₀V₀ (ΔU=0 over a cycle).\n\nWHAT TO MEMORIZE\nOver any complete cycle ΔU = 0, so net heat = net work = enclosed P–V area. Individual legs exchange heat, but only the enclosed area survives."
       },
 
       {
@@ -12439,26 +12439,26 @@ const EXAMS = [
         "choices": [
           "−0.50 J/K",
           "0 J/K",
+          "+0.50 J/K",
           "+1.5 J/K",
-          "+3.5 J/K",
-          "+0.50 J/K"
+          "+3.5 J/K"
         ],
-        "answer": "E",
+        "answer": "C",
         "explanation": "WORKED SOLUTION\nΔS = −Q/T_hot + Q/T_cold = −600/400 + 600/300 = −1.5 + 2.0 = +0.50 J/K. Positive, as required for an irreversible process.\n\nNUMERICS WITHOUT A CALCULATOR\n600/300 − 600/400 = 2.0 − 1.5 = 0.5 J/K.\n\n90-SECOND SOLUTION\nΔS = Q(1/T_c − 1/T_h) = 600(1/300 − 1/400) = +0.5 J/K.\n\nWHAT TO MEMORIZE\nDirect heat flow hot→cold: the cold reservoir gains more entropy than the hot loses, so ΔS_universe = Q(1/T_c − 1/T_h) > 0."
       },
 
       {
-        "question": "The figure shows the blackbody spectral radiance versus wavelength for three temperatures T₁ < T₂ < T₃. Which statement correctly describes how the curves relate?",
+        "question": "Two stars radiate as blackbodies. Star B has twice the surface temperature and half the radius of Star A. What is the ratio of their total luminosities L_B/L_A? (Luminosity L ∝ R²T⁴.)",
         "image": "images/full-practice-2/q45.png",
         "choices": [
-          "The higher-temperature curve peaks at a LONGER wavelength and lies below the others",
-          "All three curves peak at the same wavelength",
-          "The curves cross, so a hotter body can radiate less at every wavelength",
-          "The higher-temperature curve peaks at a SHORTER wavelength and lies entirely above the lower-temperature curves",
-          "The peak wavelength is independent of temperature"
+          "8",
+          "2",
+          "16",
+          "1",
+          "4"
         ],
-        "answer": "D",
-        "explanation": "WORKED SOLUTION\nWien's law λ_max ∝ 1/T: hotter ⇒ peak shifts to shorter wavelength. Stefan–Boltzmann (total area ∝ T⁴) plus the fact that Planck curves for different T never cross means the hotter curve lies entirely above the cooler ones at every wavelength. So the T₃ curve peaks leftmost and sits above the others everywhere.\n\n90-SECOND SOLUTION\nHotter ⇒ peak shifts left (Wien) AND whole curve rises (Planck curves don't cross).\n\nWHAT TO MEMORIZE\nBlackbody curves: higher T shifts the peak to shorter λ (Wien) and raises the curve everywhere (they never cross), with total area ∝ T⁴ (Stefan–Boltzmann)."
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nL ∝ R²T⁴. L_B/L_A = (R_B/R_A)²(T_B/T_A)⁴ = (1/2)²·(2)⁴ = (1/4)(16) = 4.\n\nNUMERICS WITHOUT A CALCULATOR\n(½)²·2⁴ = ¼·16 = 4.\n\n90-SECOND SOLUTION\nL ∝ R²T⁴: (1/2)²(2)⁴ = 4.\n\nWHAT TO MEMORIZE\nStefan–Boltzmann luminosity L = 4πR²σT⁴ ∝ R²T⁴; the T⁴ dependence usually dominates over the geometric factor."
       },
 
       {
@@ -12480,11 +12480,11 @@ const EXAMS = [
         "choices": [
           "P₀V₀",
           "4P₀V₀",
+          "2P₀V₀",
           "0.5 P₀V₀",
-          "3P₀V₀",
-          "2P₀V₀"
+          "3P₀V₀"
         ],
-        "answer": "E",
+        "answer": "C",
         "explanation": "WORKED SOLUTION\nNet work = enclosed area of the triangle. Base along the isobar = 3V₀ − V₀ = 2V₀; height along the isochore = 3P₀ − P₀ = 2P₀. Area = ½·base·height = ½·(2V₀)(2P₀) = 2P₀V₀. Clockwise ⇒ work done BY the gas.\n\nNUMERICS WITHOUT A CALCULATOR\n½·(2V₀)(2P₀) = 2P₀V₀.\n\n90-SECOND SOLUTION\nTriangle area = ½·2V₀·2P₀ = 2P₀V₀; clockwise ⇒ positive work out.\n\nWHAT TO MEMORIZE\nNet cycle work = enclosed area on the P–V plane, whatever the shape — ½·base·height for a triangle. Clockwise = engine (work out)."
       },
 
@@ -12493,12 +12493,12 @@ const EXAMS = [
         "image": "images/full-practice-2/q48.png",
         "choices": [
           "T_H ΔS",
-          "(T_H − T_C)ΔS",
           "T_C ΔS",
           "(T_H + T_C)ΔS",
-          "½(T_H − T_C)ΔS"
+          "½(T_H − T_C)ΔS",
+          "(T_H − T_C)ΔS"
         ],
-        "answer": "B",
+        "answer": "E",
         "explanation": "WORKED SOLUTION\nOn a T–S diagram, heat = area under the process curve (Q = ∫T dS). Heat absorbed at the top isotherm = T_H ΔS; heat rejected at the bottom = T_C ΔS. The net heat, equal to the enclosed rectangle's area, is (T_H − T_C)ΔS. By the first law over a cycle (ΔU = 0), this also equals the net work.\n\n90-SECOND SOLUTION\nEnclosed rectangle on T–S = (T_H − T_C)ΔS = net heat = net work.\n\nWHAT TO MEMORIZE\nOn a T–S diagram, area under a curve is heat and the area enclosed by a cycle is the net heat (= net work). A Carnot cycle is a rectangle there, giving W = (T_H − T_C)ΔS."
       },
 
@@ -12507,26 +12507,26 @@ const EXAMS = [
         "image": "images/full-practice-2/q49.png",
         "choices": [
           "More work on the surroundings",
+          "Less work on the surroundings",
           "Exactly the same work",
           "No work at all",
-          "Negative work (compression)",
-          "Less work on the surroundings"
+          "Negative work (compression)"
         ],
-        "answer": "E",
+        "answer": "B",
         "explanation": "WORKED SOLUTION\nIn an adiabatic expansion the gas cools (no heat in), so its pressure drops faster than in the isothermal case. On a P–V plot the adiabat lies BELOW the isotherm for V > V_i, so the area under it — the work done by the gas — is smaller. Adiabatic expansion does less work.\n\n90-SECOND SOLUTION\nAdiabat falls faster than isotherm ⇒ smaller area under the curve ⇒ less work by the gas.\n\nWHAT TO MEMORIZE\nFrom a common start to a common volume, W_isothermal > W_adiabatic, because the adiabat drops below the isotherm (the gas cools and loses pressure)."
       },
 
       {
-        "question": "Two thin converging lenses of focal lengths 10 cm and 15 cm are placed in contact. What is the focal length of the combination?",
+        "question": "Two thin lenses of focal lengths f₁ = +10 cm and f₂ = +20 cm are separated by 5.0 cm along a common axis. What is the effective focal length of the combination? (1/f = 1/f₁ + 1/f₂ − d/(f₁f₂).)",
         "choices": [
-          "12.5 cm",
-          "25 cm",
+          "6.7 cm",
+          "30 cm",
+          "13 cm",
           "5.0 cm",
-          "2.5 cm",
-          "6.0 cm"
+          "8.0 cm"
         ],
         "answer": "E",
-        "explanation": "WORKED SOLUTION\nIn contact, powers add: 1/f = 1/f₁ + 1/f₂ = 1/10 + 1/15 = 3/30 + 2/30 = 5/30, so f = 6.0 cm.\n\nNUMERICS WITHOUT A CALCULATOR\n1/10 + 1/15 = 1/6 ⇒ f = 6 cm.\n\n90-SECOND SOLUTION\nAdd powers: P = 0.10 + 0.0667 = 0.167 cm⁻¹ ⇒ f = 6 cm.\n\nWHAT TO MEMORIZE\nThin lenses in contact: 1/f = 1/f₁ + 1/f₂ (powers add). The combination is stronger (shorter f) than either lens."
+        "explanation": "WORKED SOLUTION\n1/f = 1/f₁ + 1/f₂ − d/(f₁f₂) = 1/10 + 1/20 − 5/(10·20) = 0.10 + 0.05 − 0.025 = 0.125 cm⁻¹. So f = 8.0 cm.\n\nNUMERICS WITHOUT A CALCULATOR\n0.10 + 0.05 − 0.025 = 0.125 ⇒ f = 8.0 cm.\n\n90-SECOND SOLUTION\nUse the separated-lens formula 1/f = 1/f₁ + 1/f₂ − d/(f₁f₂) = 0.125 ⇒ 8 cm.\n\nWHAT TO MEMORIZE\nSeparated thin lenses: 1/f = 1/f₁ + 1/f₂ − d/(f₁f₂). The −d/(f₁f₂) term (absent for lenses in contact) shortens the effective focal length."
       },
 
       {
@@ -12556,82 +12556,82 @@ const EXAMS = [
       },
 
       {
-        "question": "Light of wavelength 600 nm illuminates a diffraction grating with 5000 lines per cm. At what angle does the first-order maximum appear?",
+        "question": "In a double-slit pattern, the slit separation is d and each slit has width w. A double-slit interference maximum is 'missing' (suppressed) when it coincides with a single-slit diffraction minimum. The first missing order is the m-th, where m = d/w. If d = 4w, which interference orders are missing?",
         "choices": [
-          "17°",
-          "30°",
-          "45°",
-          "9°",
-          "60°"
+          "Orders m = 2, 4, 6, …",
+          "Order m = 1 only",
+          "No orders are missing",
+          "Orders m = 3, 6, 9, …",
+          "Orders m = 4, 8, 12, …"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nInterference maxima occur at d sin θ = mλ; single-slit minima at w sin θ = pλ. A maximum is missing when both hold simultaneously: (d/w) = m/p. With d = 4w, m/p = 4, so the missing orders are m = 4p = 4, 8, 12, … (each single-slit minimum kills the 4th, 8th, … interference order).\n\n90-SECOND SOLUTION\nMissing orders at m = (d/w)p. With d/w = 4: m = 4, 8, 12, ….\n\nWHAT TO MEMORIZE\nThe single-slit diffraction envelope suppresses interference maxima at m = (d/w)·p. When d/w is an integer N, every Nth order is missing."
+      },
+
+      {
+        "question": "A stationary siren emits 1000 Hz. A wind blows at 40 m/s FROM the siren TOWARD a stationary listener. The speed of sound in still air is 340 m/s. What frequency does the listener hear?",
+        "choices": [
+          "1000 Hz",
+          "1130 Hz",
+          "880 Hz",
+          "1120 Hz",
+          "1042 Hz"
         ],
         "answer": "A",
-        "explanation": "WORKED SOLUTION\nGrating spacing d = 1 cm/5000 = 2.0×10⁻⁴ cm = 2000 nm. First order: sin θ = mλ/d = 600/2000 = 0.30, θ = 17.5° ≈ 17°.\n\nNUMERICS WITHOUT A CALCULATOR\nd = 2000 nm; sinθ = 600/2000 = 0.3 ⇒ θ ≈ 17°.\n\n90-SECOND SOLUTION\nd sinθ = mλ ⇒ sinθ = 0.30 ⇒ θ ≈ 17°.\n\nWHAT TO MEMORIZE\nGrating equation d sinθ = mλ; convert lines/cm to spacing d first."
+        "explanation": "WORKED SOLUTION\nWind carries the whole medium but does NOT change the frequency when both source and observer are stationary relative to the ground. Wind adds equally to the sound speed in both the wavelength and the propagation, so the received frequency is unchanged: 1000 Hz. (A steady wind shifts wavelength and speed together, leaving f = v/λ fixed.) This is the classic trap — wind alone produces no Doppler shift.\n\n90-SECOND SOLUTION\nStationary source AND observer ⇒ no Doppler shift, wind or not. f = 1000 Hz.\n\nWHAT TO MEMORIZE\nA uniform wind does NOT cause a Doppler shift when source and observer are both at rest relative to the ground — it changes the sound's ground speed and its wavelength by the same factor. Doppler shifts require relative motion of source or observer, not of the medium."
       },
 
       {
-        "question": "A stationary siren emits sound at 400 Hz. A car drives AWAY from it at 30 m/s. What frequency does the driver hear? (speed of sound 340 m/s.)",
-        "choices": [
-          "435 Hz",
-          "400 Hz",
-          "370 Hz",
-          "365 Hz",
-          "330 Hz"
-        ],
-        "answer": "D",
-        "explanation": "WORKED SOLUTION\nObserver receding from a stationary source: f' = f(v − v_o)/v = 400(340 − 30)/340 = 400·310/340 = 400·0.912 = 365 Hz.\n\nNUMERICS WITHOUT A CALCULATOR\n310/340 ≈ 0.91; ×400 ≈ 365.\n\n90-SECOND SOLUTION\nMoving observer ⇒ shift in the NUMERATOR: f' = f(v − v_o)/v = 365 Hz.\n\nWHAT TO MEMORIZE\nDoppler with a MOVING OBSERVER puts the correction in the numerator: f' = f(v ± v_o)/v; receding uses the minus sign. (Moving source puts it in the denominator.)"
-      },
-
-      {
-        "question": "The figure shows a standing wave on a string of length L fixed at both ends. The pattern displays three antinodes (three half-wavelengths fit on the string). If the fundamental frequency is f₁, what is the frequency of this mode?",
+        "question": "A string of length L is fixed at one end and attached at the other end to a ring of negligible mass that slides FREELY on a frictionless rod (a free end). The figure shows one normal mode. What are the allowed wavelengths of the normal modes?",
         "image": "images/full-practice-2/q55.png",
         "choices": [
-          "f₁",
-          "2f₁",
-          "1.5f₁",
-          "3f₁",
-          "6f₁"
+          "λ_n = 2L/n",
+          "λ_n = L/n",
+          "λ_n = 4L/(2n−1), n = 1,2,3,…",
+          "λ_n = 4L/n",
+          "λ_n = 2L/(2n−1)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA fixed end forces a node; a free end forces an antinode. The distance from a node to the nearest antinode is a quarter wavelength, and the mode must fit an odd number of quarter-wavelengths: L = (2n−1)λ/4. So λ_n = 4L/(2n−1), giving the fundamental λ₁ = 4L and only ODD harmonics (like a closed organ pipe).\n\n90-SECOND SOLUTION\nNode at one end, antinode at the other ⇒ L = (2n−1)λ/4 ⇒ λ = 4L/(2n−1); odd harmonics only.\n\nWHAT TO MEMORIZE\nFixed–free string (or closed–open pipe): L = (2n−1)λ/4, λ = 4L/(2n−1), fundamental 4L, only odd harmonics present."
+      },
+
+      {
+        "question": "In a body-centered cubic (bcc) crystal with conventional cube edge a, the atoms are hard spheres that touch along the body diagonal. What is the radius of each atom?",
+        "choices": [
+          "a/2",
+          "a√2/4",
+          "a√3/2",
+          "a√3/4",
+          "a/4"
         ],
         "answer": "D",
-        "explanation": "WORKED SOLUTION\nWith both ends fixed, the nth harmonic has n half-wavelengths (n antinodes) and frequency f_n = n f₁. Three antinodes ⇒ n = 3 ⇒ f = 3f₁.\n\n90-SECOND SOLUTION\nCount the antinodes: 3 ⇒ third harmonic ⇒ 3f₁.\n\nWHAT TO MEMORIZE\nString fixed at both ends: f_n = n f₁, and the number of antinodes equals the harmonic number n (n half-wavelengths span L)."
+        "explanation": "WORKED SOLUTION\nIn bcc the corner atom and the body-center atom touch along the body diagonal, whose length is a√3. That diagonal spans 4 radii (corner radius + diameter of center + center radius): 4r = a√3, so r = a√3/4.\n\n90-SECOND SOLUTION\nbcc: atoms touch along the body diagonal, 4r = a√3 ⇒ r = a√3/4.\n\nWHAT TO MEMORIZE\nTouching directions: bcc along the body diagonal (4r = a√3), fcc along the face diagonal (4r = a√2), simple cubic along the edge (2r = a)."
       },
 
       {
-        "question": "First-order Bragg reflection of 0.16 nm X-rays from a set of crystal planes is observed at a glancing angle of 24° from the planes. What is the spacing of these planes? (sin 24° ≈ 0.41.)",
+        "question": "A 5.0 MeV alpha particle is fired head-on at a gold nucleus (Z = 79) and backscatters at 180°. Approximately what is its distance of closest approach? (k e²  ≈ 1.44 MeV·fm; alpha charge 2e.)",
         "choices": [
-          "0.16 nm",
-          "0.20 nm",
-          "0.24 nm",
-          "0.33 nm",
-          "0.41 nm"
-        ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\nBragg: 2d sinθ = mλ. First order m=1: d = λ/(2 sinθ) = 0.16/(2·0.41) = 0.16/0.82 = 0.195 ≈ 0.20 nm.\n\nNUMERICS WITHOUT A CALCULATOR\n0.16/0.82 ≈ 0.20.\n\n90-SECOND SOLUTION\nd = λ/(2 sinθ) = 0.16/0.82 ≈ 0.20 nm.\n\nWHAT TO MEMORIZE\nBragg 2d sinθ = mλ solved for the unknown of interest; here the plane spacing d, with θ from the planes."
-      },
-
-      {
-        "question": "A radioactive source initially has an activity of 800 decays per second and a half-life of 12 hours. What is its activity 36 hours later?",
-        "choices": [
-          "400 /s",
-          "200 /s",
-          "50 /s",
-          "100 /s",
-          "67 /s"
-        ],
-        "answer": "D",
-        "explanation": "WORKED SOLUTION\n36 hours = 3 half-lives. Activity ∝ number of nuclei, both fall by (1/2)³ = 1/8. So A = 800/8 = 100 decays per second.\n\nNUMERICS WITHOUT A CALCULATOR\n3 half-lives ⇒ ÷8 ⇒ 100.\n\n90-SECOND SOLUTION\nActivity halves each half-life: 800→400→200→100 over three.\n\nWHAT TO MEMORIZE\nActivity A = λN decays with the same half-life as N: after n half-lives it is the initial activity ÷2ⁿ."
-      },
-
-      {
-        "question": "A proton is a baryon with electric charge +1e. Given up quarks (charge +2/3) and down quarks (charge −1/3), which quark content gives a proton?",
-        "choices": [
-          "uud",
-          "udd",
-          "uds",
-          "uu",
-          "uudd"
+          "45 fm",
+          "4.5 fm",
+          "91 fm",
+          "23 fm",
+          "0.45 fm"
         ],
         "answer": "A",
-        "explanation": "WORKED SOLUTION\nBaryons are three quarks. uud: 2/3 + 2/3 − 1/3 = +1. Correct. udd (2/3 −1/3 −1/3 = 0) is the neutron. uds is a Λ (charge 0). uu and uudd are not valid baryons.\n\n90-SECOND SOLUTION\nProton = uud (charges +2/3 +2/3 −1/3 = +1).\n\nWHAT TO MEMORIZE\nProton = uud, neutron = udd; a baryon is three quarks, a meson a quark–antiquark pair."
+        "explanation": "WORKED SOLUTION\nAt closest approach all kinetic energy becomes electrostatic PE: E = k(2e)(Ze)/r ⇒ r = 2Zke²/E = 2·79·1.44/5.0 MeV·fm/MeV = 227.5/5.0 = 45.5 fm ≈ 45 fm.\n\nNUMERICS WITHOUT A CALCULATOR\nr = 2·79·1.44/5.0 = 227/5 ≈ 45 fm.\n\n90-SECOND SOLUTION\nSet KE = k·(2e)(Ze)/r: r = 2Z·(1.44)/E = 2·79·1.44/5 ≈ 45 fm.\n\nWHAT TO MEMORIZE\nRutherford closest approach: r = 2Zke²/E for an alpha, using ke² = 1.44 MeV·fm. It's much larger than the nuclear radius, which is why low-energy alphas don't reach the nucleus."
+      },
+
+      {
+        "question": "Which of the following quark combinations does NOT correspond to a physically allowed hadron?",
+        "choices": [
+          "Three quarks (qqq)",
+          "Quark–antiquark (qq̄)",
+          "Two quarks (qq)",
+          "Three antiquarks (q̄q̄q̄)",
+          "(uud) specifically"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nColor confinement requires color-neutral combinations. Baryons (qqq) and antibaryons (q̄q̄q̄) are colorless (one of each color / anticolor), and mesons (qq̄) are colorless (color + anticolor). A bare two-quark state (qq) cannot be color-neutral, so it is not an allowed hadron. (uud is the proton — allowed.)\n\n90-SECOND SOLUTION\nAllowed: qqq, q̄q̄q̄, qq̄ (all colorless). qq alone can't be color-neutral ⇒ not allowed.\n\nWHAT TO MEMORIZE\nHadrons must be color singlets: qqq (baryon), q̄q̄q̄ (antibaryon), qq̄ (meson). A diquark qq by itself carries net color and cannot exist as a free hadron."
       },
 
       {
@@ -12640,116 +12640,116 @@ const EXAMS = [
           "n → p + e⁻ + ν̄_e",
           "μ⁻ → e⁻ + ν̄_e + ν_μ",
           "π⁰ → γ + γ",
-          "p → e⁺ + γ",
-          "Λ⁰ → p + π⁻"
+          "Λ⁰ → p + π⁻",
+          "p → e⁺ + γ"
         ],
-        "answer": "D",
+        "answer": "E",
         "explanation": "WORKED SOLUTION\np → e⁺ + γ conserves charge and energy but violates baryon-number conservation (baryon number goes 1 → 0). This is why proton decay, if it occurs at all, requires physics beyond the Standard Model. The others all conserve the standard quantum numbers.\n\n90-SECOND SOLUTION\np → e⁺ + γ: baryon number 1 → 0. Forbidden.\n\nWHAT TO MEMORIZE\nBaryon number is conserved in all observed processes; a lone nucleon cannot decay to leptons/photons. Run the checklist: charge, baryon #, lepton #, energy."
       },
 
       {
-        "question": "Energy is released by nuclear FUSION only when the product nucleus has a higher binding energy per nucleon than the reactants. For which pair of light nuclei does fusion release energy?",
+        "question": "A U-238 nucleus (binding energy ≈ 7.6 MeV per nucleon) undergoes symmetric fission into two fragments each with binding energy ≈ 8.5 MeV per nucleon. Approximately how much energy is released?",
         "choices": [
-          "Fusing two light nuclei such as deuterium and tritium",
-          "Fusing two very heavy nuclei near uranium",
-          "Fusing two iron-56 nuclei",
-          "Splitting a helium nucleus",
-          "Fusion never releases energy"
+          "0.9 MeV",
+          "900 MeV",
+          "110 MeV",
+          "210 MeV",
+          "7.6 MeV"
         ],
-        "answer": "A",
-        "explanation": "WORKED SOLUTION\nThe binding-energy-per-nucleon curve rises steeply from hydrogen up to iron-56, then falls. Fusing LIGHT nuclei (like D + T → He) climbs toward the peak and releases energy. Fusing nuclei already at or beyond iron would move DOWN the curve and cost energy; that regime releases energy by fission instead.\n\n90-SECOND SOLUTION\nFusion releases energy only below the iron peak — light nuclei like deuterium + tritium.\n\nWHAT TO MEMORIZE\nBoth fusion (light nuclei) and fission (heavy nuclei) release energy by moving toward the iron-56 peak of the binding-energy-per-nucleon curve."
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEnergy released = (final total binding energy) − (initial total binding energy) = A·(B/A_final − B/A_initial) = 238·(8.5 − 7.6) = 238·0.9 ≈ 214 ≈ 210 MeV.\n\nNUMERICS WITHOUT A CALCULATOR\n238 × 0.9 ≈ 214 ≈ 210 MeV.\n\n90-SECOND SOLUTION\nΔE = A·Δ(B/A) = 238·(8.5−7.6) ≈ 210 MeV.\n\nWHAT TO MEMORIZE\nFission energy ≈ (nucleons)×(gain in binding energy per nucleon). For U-238, ~238×0.9 ≈ 200 MeV — the well-known per-fission yield."
       },
 
       {
-        "question": "Silicon (group IV) is doped with phosphorus (group V). The resulting material is:",
+        "question": "Silicon (group IV) is separately doped with each of the following. Which dopant produces a p-type semiconductor?",
         "choices": [
-          "n-type, with electrons as majority carriers",
-          "p-type, with holes as majority carriers",
-          "intrinsic, with equal electrons and holes",
-          "an insulator",
-          "a superconductor"
+          "Gallium (group III)",
+          "Phosphorus (group V)",
+          "Arsenic (group V)",
+          "Antimony (group V)",
+          "Nitrogen (group V)"
         ],
         "answer": "A",
-        "explanation": "WORKED SOLUTION\nPhosphorus has 5 valence electrons vs silicon's 4, so each dopant donates one extra, loosely bound electron to the conduction band. Extra electrons ⇒ n-type, electrons are the majority carriers.\n\n90-SECOND SOLUTION\nGroup-V donor in group-IV host ⇒ extra electrons ⇒ n-type.\n\nWHAT TO MEMORIZE\nDonors (group V in Si) → n-type (electron carriers); acceptors (group III) → p-type (hole carriers)."
+        "explanation": "WORKED SOLUTION\np-type requires an ACCEPTOR — a group-III atom with one fewer valence electron than silicon, creating a hole. Gallium (group III) is the acceptor here; all the others are group-V donors giving n-type.\n\n90-SECOND SOLUTION\np-type ⇐ group-III acceptor ⇒ gallium.\n\nWHAT TO MEMORIZE\nGroup-III dopants (B, Al, Ga, In) → p-type (holes); group-V dopants (P, As, Sb) → n-type (electrons). Gallium is the group-III acceptor."
       },
 
       {
         "question": "A particle has rest energy 3.0 MeV and total energy 5.0 MeV. What is the magnitude of its momentum?",
         "choices": [
           "2.0 MeV/c",
-          "4.0 MeV/c",
           "8.0 MeV/c",
           "5.0 MeV/c",
-          "3.0 MeV/c"
+          "3.0 MeV/c",
+          "4.0 MeV/c"
         ],
-        "answer": "B",
+        "answer": "E",
         "explanation": "WORKED SOLUTION\nE² = (pc)² + (mc²)² ⇒ (pc)² = 5.0² − 3.0² = 25 − 9 = 16 ⇒ pc = 4.0 MeV, p = 4.0 MeV/c.\n\nNUMERICS WITHOUT A CALCULATOR\n3-4-5 triple: pc = 4.0 MeV.\n\n90-SECOND SOLUTION\npc = √(E² − (mc²)²) = √(25−9) = 4.\n\nWHAT TO MEMORIZE\nE² = (pc)² + (mc²)² — the relativistic Pythagorean relation, here the 3-4-5 triple."
       },
 
       {
-        "question": "A meterstick (1.00 m proper length) flies past a lab at 0.60c along its length. What is its length as measured in the lab frame?",
+        "question": "In frame O two flashes occur simultaneously, 10 m apart along the x-axis. In frame O′, moving parallel to x, the two flashes are measured to be 13 ns apart in time. What is the speed of O′ relative to O?",
         "choices": [
-          "1.00 m",
-          "0.80 m",
-          "0.60 m",
-          "0.64 m",
-          "1.25 m"
+          "0.36c",
+          "0.39c",
+          "0.13c",
+          "0.50c",
+          "0.26c"
         ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\nLength contraction: L = L₀/γ = L₀√(1−v²/c²) = 1.00·√(1−0.36) = √0.64 = 0.80 m.\n\nNUMERICS WITHOUT A CALCULATOR\n√(1−0.36) = √0.64 = 0.8.\n\n90-SECOND SOLUTION\nL = L₀/γ; at 0.6c, γ = 1.25, so L = 1/1.25 = 0.80 m.\n\nWHAT TO MEMORIZE\nMoving lengths contract along the motion: L = L₀√(1−β²). At β = 0.6, the factor is 0.8."
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nLorentz time transform with Δt = 0 (simultaneous in O): Δt′ = γ(Δt − vΔx/c²) = −γvΔx/c². Take magnitudes: γv = c²|Δt′|/Δx = (9×10¹⁶)(13×10⁻⁹)/10 = 1.17×10⁸ m/s, so γβ = γv/c = 0.39. Then β = γβ/√(1+(γβ)²) = 0.39/√(1+0.152) = 0.39/1.073 = 0.363 ≈ 0.36. So v ≈ 0.36c.\n\nNUMERICS WITHOUT A CALCULATOR\nγβ = c|Δt′|·c/Δx = 0.39; then β = 0.39/√(1+0.39²) ≈ 0.36.\n\n90-SECOND SOLUTION\nΔt′ = γvΔx/c² gives γβ = 0.39; convert to β = γβ/√(1+γβ²) ≈ 0.36c. (The trap is stopping at γβ = 0.39.)\n\nWHAT TO MEMORIZE\nSimultaneous-but-separated events (Δt=0) give Δt′ = −γvΔx/c². This yields γβ directly; convert to β via β = γβ/√(1+(γβ)²) — don't mistake γβ for β."
       },
 
       {
-        "question": "A spaceship moves at 0.80c relative to Earth. It fires a probe forward at 0.50c relative to the ship. How fast does the probe move relative to Earth?",
+        "question": "A particle of mass M at rest decays into two identical particles each of mass m (with 2m < M). What is the speed of each product particle?",
         "choices": [
-          "1.30c",
-          "0.93c",
-          "0.80c",
-          "0.50c",
-          "0.96c"
+          "c(1 − 2m/M)",
+          "c√(1 − 2m/M)",
+          "c/2",
+          "c√(1 − m²/M²)",
+          "c√(1 − 4m²/M²)"
         ],
-        "answer": "B",
-        "explanation": "WORKED SOLUTION\nRelativistic velocity addition: w = (u+v)/(1+uv/c²) = (0.80+0.50)/(1+0.40) = 1.30/1.40 = 0.929c ≈ 0.93c.\n\nNUMERICS WITHOUT A CALCULATOR\n1.30/1.40 = 13/14 ≈ 0.93.\n\n90-SECOND SOLUTION\nw = (0.8+0.5)/(1+0.4) = 0.93c — still under c.\n\nWHAT TO MEMORIZE\nRelativistic velocity addition w = (u+v)/(1+uv/c²); adding two sub-light speeds never reaches c."
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBy symmetry each product has energy M c²/2. Then γ = E/(mc²) = M/(2m). Speed: β = √(1 − 1/γ²) = √(1 − (2m/M)²) = √(1 − 4m²/M²). So v = c√(1 − 4m²/M²).\n\n90-SECOND SOLUTION\nEach gets E = Mc²/2 ⇒ γ = M/2m ⇒ β = √(1 − (2m/M)²).\n\nWHAT TO MEMORIZE\nSymmetric two-body decay from rest: each product has E = Mc²/2, so γ = M/2m and β = √(1 − 4m²/M²)."
       },
 
       {
         "question": "Two photons, each of energy E, travel in opposite directions. What is the invariant mass of the two-photon system?",
         "choices": [
           "0",
+          "2E/c²",
           "E/c²",
           "√2 E/c²",
-          "4E/c²",
-          "2E/c²"
+          "4E/c²"
         ],
-        "answer": "E",
+        "answer": "B",
         "explanation": "WORKED SOLUTION\nTotal energy = 2E, total momentum = 0 (equal and opposite). Invariant mass: (Mc²)² = E_tot² − (p_tot c)² = (2E)² − 0 = 4E², so Mc² = 2E, M = 2E/c².\n\n90-SECOND SOLUTION\nBack-to-back photons: net p = 0, so M = E_tot/c² = 2E/c².\n\nWHAT TO MEMORIZE\nA single photon has zero invariant mass, but a system of photons with nonzero net energy and zero net momentum has M = E_tot/c². Back-to-back pair ⇒ 2E/c²."
       },
 
       {
-        "question": "Two sinusoidal signals of the same frequency are displayed on an oscilloscope. One full period spans 8.0 horizontal divisions, and the second trace is shifted 1.0 division to the right of the first (see figure). What is the phase difference between them?",
+        "question": "On an oscilloscope in X–Y mode, a sinusoid drives the horizontal (X) plates and another sinusoid of TWICE the frequency drives the vertical (Y) plates, in phase. What is the shape of the resulting Lissajous figure?",
         "image": "images/full-practice-2/q66.png",
         "choices": [
-          "30°",
-          "45°",
-          "60°",
-          "90°",
-          "180°"
+          "A single ellipse",
+          "A figure-eight (two loops)",
+          "A straight diagonal line",
+          "A circle",
+          "A single parabola-like arc traced back and forth"
         ],
         "answer": "B",
-        "explanation": "WORKED SOLUTION\nA full period corresponds to 360° over 8.0 divisions, so each division is 45°. A shift of 1.0 division is 45°.\n\nNUMERICS WITHOUT A CALCULATOR\n360°/8 = 45° per division; ×1 division = 45°.\n\n90-SECOND SOLUTION\nPhase = (shift/period)×360° = (1/8)×360° = 45°.\n\nWHAT TO MEMORIZE\nOn a scope, phase difference = (horizontal shift ÷ one-period width)×360°."
+        "explanation": "WORKED SOLUTION\nWith f_Y = 2f_X, the vertical oscillation completes two cycles for each horizontal cycle, producing a Lissajous figure that crosses itself once — a 'figure-eight' with two lobes. (Equal frequencies give an ellipse/line/circle depending on phase; a 2:1 ratio gives the figure-eight.)\n\n90-SECOND SOLUTION\nFrequency ratio 2:1 ⇒ figure-eight Lissajous pattern.\n\nWHAT TO MEMORIZE\nLissajous figures: a 1:1 ratio gives a line/ellipse/circle (set by phase); a 2:1 ratio gives a figure-eight. The frequency ratio equals the ratio of tangencies on the two axes."
       },
 
       {
-        "question": "A radiation detector records 2500 counts in a fixed interval. Assuming Poisson statistics, what is the approximate fractional uncertainty in the count?",
+        "question": "A long-lived radioactive source gives a mean count rate of 2.0 counts per second. Approximately how long must you count to determine the rate to a fractional (statistical) uncertainty of 1%?",
         "choices": [
-          "0.02",
-          "0.04",
-          "0.002",
-          "0.20",
-          "0.005"
+          "100 s",
+          "50 s",
+          "500 s",
+          "5000 s",
+          "2500 s"
         ],
-        "answer": "A",
-        "explanation": "WORKED SOLUTION\nPoisson: σ = √N = √2500 = 50. Fractional uncertainty = σ/N = 50/2500 = 0.02 (i.e. 2%).\n\nNUMERICS WITHOUT A CALCULATOR\n√2500 = 50; 50/2500 = 1/50 = 0.02.\n\n90-SECOND SOLUTION\nσ/N = 1/√N = 1/50 = 0.02.\n\nWHAT TO MEMORIZE\nFor Poisson counts, σ = √N and the fractional uncertainty is 1/√N — quadrupling counts halves the relative error."
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFractional uncertainty = 1/√N, so 1% = 0.01 requires √N = 100, i.e. N = 10⁴ total counts. At 2.0 counts/s, the time is N/rate = 10⁴/2.0 = 5000 s.\n\nNUMERICS WITHOUT A CALCULATOR\nN = (1/0.01)² = 10⁴; t = 10⁴/2 = 5000 s.\n\n90-SECOND SOLUTION\n1% ⇒ N = 10⁴ counts; at 2/s that's 5000 s.\n\nWHAT TO MEMORIZE\nPoisson fractional error 1/√N: reaching x% needs N = (100/x)² counts, then divide by the rate for the time. 1% needs 10⁴ counts."
       },
 
       {
@@ -12771,18 +12771,17 @@ const EXAMS = [
         "image": "images/full-practice-2/q69.png",
         "choices": [
           "1",
+          "2",
           "π",
           "2/π",
-          "1/2",
-          "2"
+          "1/2"
         ],
-        "answer": "E",
+        "answer": "B",
         "explanation": "WORKED SOLUTION\nThe sawtooth is odd, so only sine terms appear with bₙ = (1/π)∫_{−π}^{π} t sin(nt) dt. Integrating by parts: ∫ t sin(nt) dt = [−t cos(nt)/n + sin(nt)/n²]. Evaluated from −π to π, the sin(nt) terms vanish and bₙ = (1/π)·(−2π cos(nπ)/n)·… giving bₙ = −2cos(nπ)/n = 2(−1)^{n+1}/n. For n = 1: b₁ = 2(−1)²/1 = 2.\n\nNUMERICS WITHOUT A CALCULATOR\nStandard result bₙ = 2(−1)^{n+1}/n for this sawtooth; n=1 gives 2.\n\n90-SECOND SOLUTION\nOdd function ⇒ sine series; the sawtooth's known coefficients are bₙ = 2(−1)^{n+1}/n, so b₁ = 2.\n\nWHAT TO MEMORIZE\nThe sawtooth f(t)=t on (−π,π) has Fourier sine coefficients bₙ = 2(−1)^{n+1}/n. Odd functions give pure sine series; the 1/n falloff is characteristic of a jump discontinuity."
       }
 
     ]
   },
-
 
 
   {
