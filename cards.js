@@ -18799,5 +18799,272 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Lab Methods Practice Set 2 (Hard)",
+    "added": "2026-09-13",
+    "category": "lab",
+    "cards": [
+      {
+        "question": "Student A counts a long-lived source for 150 s and records 900 counts. Student B counts the SAME source for 350 s and records 700 counts. What is the best combined estimate of the counting rate and its uncertainty?",
+        "choices": [
+          "3.2 ± 0.04 /s",
+          "3.2 ± 0.08 /s",
+          "3.5 ± 0.08 /s",
+          "3.5 ± 0.11 /s",
+          "4.6 ± 0.08 /s"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nBoth students are sampling the same Poisson process, so the correct way to combine unequal-duration counts is to pool the TOTALS, not average the two individual rates. The best rate estimate is\nR = (N_A + N_B)/(t_A + t_B) = (900 + 700)/(150 + 350) = 1600/500 = 3.2 /s.\nFor a Poisson total, sigma_N = sqrt(N), so the uncertainty in the rate is\nsigma_R = sqrt(N_A+N_B)/(t_A+t_B) = sqrt(1600)/500 = 40/500 = 0.08 /s.\nThe trap 3.5 ± 0.08 /s comes from a straight (unweighted) average of the two individual rates, 4/s and 2/s: that treats the shorter, noisier measurement as equally trustworthy as the longer one, which throws away information.\n\nNUMERICS WITHOUT A CALCULATOR\nAdd counts and times separately first: 1600 total counts over 500 total seconds. 1600/500 = 3.2 exactly, and sqrt(1600) = 40 is exact, so sigma = 40/500 = 0.08 with no approximation anywhere.\n\n90-SECOND SOLUTION\nPool, don't average: rate = sum(N)/sum(t) = 1600/500 = 3.2/s; sigma = sqrt(sum(N))/sum(t) = 40/500 = 0.08/s.\n\nWHAT TO MEMORIZE\nFor Poisson counting, always combine unequal-time measurements by pooling total counts over total time — this is automatically the correct inverse-variance weighting, since a longer count has smaller relative uncertainty and the pooled formula naturally gives it more weight. Averaging the two rates arithmetically is the error to watch for whenever exposure times differ."
+      },
+
+      {
+        "question": "A Geiger counter has a nonparalyzable dead time of 25 μs per count. It registers a measured rate of 8000 counts/s. Using n = m/(1 − mτ) for the true rate n in terms of the measured rate m and dead time τ, what is the true counting rate?",
+        "choices": [
+          "6400 /s",
+          "8000 /s",
+          "9600 /s",
+          "10000 /s",
+          "40000 /s"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nDuring each dead-time window τ after a count, the detector is blind, so the measured rate always undercounts the true rate. Solving the given formula:\nmτ = (8000)(25 × 10⁻⁶) = 0.20 (the fraction of time the detector is dead).\nn = m/(1 − mτ) = 8000/(1 − 0.20) = 8000/0.80 = 10000 /s.\nThe trap 6400/s comes from multiplying instead of dividing (m(1−mτ)), which would describe how a paralyzable detector's measured rate saturates, not how to correct a nonparalyzable one back to the true rate.\n\nNUMERICS WITHOUT A CALCULATOR\nmτ = 8000 × 25 × 10⁻⁶ = 0.2 exactly (8 × 25 = 200, and the exponents combine to 10⁻³, giving 0.2). Then 8000/0.8 = 10000, since dividing by 0.8 is the same as multiplying by 5/4.\n\n90-SECOND SOLUTION\nmτ = 0.2, so n = m/(1−mτ) = 8000/0.8 = 10000/s.\n\nWHAT TO MEMORIZE\nDead time always makes the measured rate an UNDERESTIMATE, so the corrected true rate must come out larger than the measured one (10000 > 8000) — a fast check that eliminates any answer at or below 8000/s immediately. The nonparalyzable correction n = m/(1−mτ) is the standard formula; a paralyzable detector's measured-vs-true relation is different and does not invert algebraically the same way."
+      },
+
+      {
+        "question": "A student measures a length as 12.3 cm using a ruler marked in millimeters, and reports the result as 12.300 cm ± 0.05 cm. What is wrong with this reported result?",
+        "choices": [
+          "Nothing; the result is reported correctly",
+          "The uncertainty should be given to more significant figures than the value",
+          "The value should be reported without any decimal places",
+          "The percent uncertainty is too small to be physically meaningful",
+          "The value carries more significant figures than its own stated uncertainty justifies"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAn uncertainty of ± 0.05 cm means the measurement is only meaningful to the hundredths place — the digit in that place is already uncertain by about half its own value. Writing the central value as 12.300 cm falsely claims certainty down to the thousandths place, three decimal digits beyond where the measurement actually has any resolving power. The correctly reported result is 12.30 cm ± 0.05 cm: the value and its uncertainty should end at the same decimal place.\nThe trap \"more significant figures in the uncertainty\" reverses the actual rule — the uncertainty itself is normally kept to one or two significant figures, and it is the CENTRAL VALUE that must be truncated to match, not the other way around.\n\nNUMERICS WITHOUT A CALCULATOR\nNot a numeric question — the point is a formatting/rounding convention, not a calculation.\n\n90-SECOND SOLUTION\nMatch the decimal place of the value to the decimal place of its uncertainty; extra digits beyond that in the value are meaningless.\n\nWHAT TO MEMORIZE\nA reported result x ± σ should state the uncertainty σ to about one or two significant figures, and then round the central value x to the SAME decimal place as σ — never further. Carrying extra digits in x beyond what σ justifies is called \"false precision,\" and it is one of the most common formatting errors in reporting lab results, independent of whether the underlying measurement or calculation was done correctly."
+      },
+
+      {
+        "question": "A Fabry-Perot cavity has its two mirrors separated by 2.0 cm, with c = 3.0 × 10⁸ m/s. What is the free spectral range (the frequency spacing between adjacent longitudinal cavity modes)?",
+        "choices": [
+          "1.5 GHz",
+          "3.75 GHz",
+          "7.5 GHz",
+          "15 GHz",
+          "75 GHz"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA Fabry-Perot cavity supports standing waves whose round-trip optical path is an integer number of wavelengths: 2d = mλ for integer m, equivalently each mode's frequency is f_m = mc/(2d). Adjacent modes (m and m+1) are spaced by\nΔf = c/(2d) = (3.0×10⁸)/(2×0.020) = (3.0×10⁸)/(0.040) = 7.5×10⁹ Hz = 7.5 GHz.\nThe trap 15 GHz forgets the factor of 2 for the round trip (using c/d instead of c/2d).\n\nNUMERICS WITHOUT A CALCULATOR\n2×0.020 = 0.040 m. Then 3.0×10⁸/4.0×10⁻² = 0.75×10¹⁰ = 7.5×10⁹ — dividing the mantissas (3.0/4.0 = 0.75) and combining the powers of ten (10⁸/10⁻² = 10¹⁰).\n\n90-SECOND SOLUTION\nΔf = c/(2d) = 3.0×10⁸/0.040 = 7.5 GHz.\n\nWHAT TO MEMORIZE\nThe free spectral range of any two-mirror cavity of length d is Δf = c/(2d) — the same round-trip logic that gives a Michelson interferometer's fringe spacing when a mirror moves by half a wavelength. A shorter cavity has widely-spaced modes (useful for single-mode operation), while a longer cavity packs modes closely together, which is why very short cavities are used when a laser must run on a single longitudinal mode."
+      },
+
+      {
+        "question": "Two quantities are measured independently: A = 50.0 ± 3.0 and B = 30.0 ± 4.0 (same units). What is R = A − B and its uncertainty?",
+        "choices": [
+          "20.0 ± 1.0",
+          "20.0 ± 3.5",
+          "20.0 ± 5.0",
+          "20.0 ± 7.0",
+          "20.0 ± 12.0"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor a SUM or DIFFERENCE of independent quantities, the ABSOLUTE uncertainties add in quadrature (never the relative ones, and never by simple subtraction):\nsigma_R = sqrt(sigma_A² + sigma_B²) = sqrt(3.0² + 4.0²) = sqrt(9+16) = sqrt(25) = 5.0.\nR = 50.0 − 30.0 = 20.0, so R = 20.0 ± 5.0.\nThe trap 20.0 ± 1.0 subtracts the uncertainties directly (4.0 − 3.0), which would incorrectly let a difference of two uncertain quantities come out MORE certain than either input alone.\n\nNUMERICS WITHOUT A CALCULATOR\n3² + 4² = 9 + 16 = 25 is the classic 3-4-5 right triangle in disguise, so the square root is exact: 5.0, with no estimation needed.\n\n90-SECOND SOLUTION\nQuadrature always applies to sums/differences of absolute uncertainties: sqrt(3²+4²) = 5.0.\n\nWHAT TO MEMORIZE\nFor R = A ± B (addition OR subtraction), absolute uncertainties combine as sigma_R = sqrt(sigma_A² + sigma_B²) — the sign of the combination (+ or −) never appears in the uncertainty formula, only in the central value. This is the additive counterpart to the multiplicative rule (where RELATIVE uncertainties combine in quadrature instead); mixing the two up — adding relative uncertainties for a sum, or absolute ones for a product — is the single most common propagation error."
+      },
+
+      {
+        "question": "In a counting experiment, a detector registers 1400 counts with the radioactive source present and 1100 counts from background alone, both over the same time interval. By how many standard deviations does the net signal differ from zero?",
+        "choices": [
+          "2σ",
+          "3σ",
+          "4σ",
+          "6σ",
+          "12σ"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe net count is N_net = 1400 − 1100 = 300. Each measurement is an independent Poisson count with variance equal to the count itself, and subtracting independent quantities still ADDS their variances:\nsigma_net = sqrt(1400 + 1100) = sqrt(2500) = 50.\nThe significance (how many standard deviations the net signal is from zero) is the net count divided by its own uncertainty:\nN_net/sigma_net = 300/50 = 6.\nThe trap 3σ divides by the WRONG denominator — sqrt(1100) alone (the background count's own uncertainty), ignoring that the source count also carries Poisson uncertainty and both must be combined.\n\nNUMERICS WITHOUT A CALCULATOR\n1400 + 1100 = 2500, a perfect square (50²), so sigma_net = 50 exactly. Then 300/50 = 6 with no estimation.\n\n90-SECOND SOLUTION\nsigma_net = sqrt(1400+1100) = sqrt(2500) = 50; significance = 300/50 = 6σ.\n\nWHAT TO MEMORIZE\n\"How many sigma\" always means (measured value − expected/null value) divided by the uncertainty of that difference — here the null hypothesis is zero net signal, so it is simply net count over sigma_net. This significance calculation is the standard way experimentalists decide whether an observed excess is a real detection or could be a statistical fluctuation of the background alone; by convention, 5σ or more is typically required to claim a discovery."
+      },
+
+      {
+        "question": "A single 10 s trial of a long-lived source registers 100 counts. If additional INDEPENDENT 10 s trials are averaged together, how many total trials (including the first) are needed to bring the relative uncertainty on the mean rate down to 2.0%?",
+        "choices": [
+          "4",
+          "9",
+          "16",
+          "25",
+          "50"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA single trial of N = 100 counts has relative (fractional) uncertainty 1/sqrt(N) = 1/sqrt(100) = 10%. Averaging n independent trials of the same duration reduces the relative uncertainty on the mean by a further factor of 1/sqrt(n), since averaging independent measurements is equivalent to pooling their total counts:\n(relative uncertainty of mean) = 10%/sqrt(n).\nSetting this equal to the target 2.0%:\n10%/sqrt(n) = 2.0% -> sqrt(n) = 5 -> n = 25.\nThe trap 4 comes from confusing this with a simple factor of the RATIO (10/2 = 5) without squaring it, forgetting that uncertainty shrinks as 1/sqrt(n), not 1/n.\n\nNUMERICS WITHOUT A CALCULATOR\n10/2 = 5 exactly, and squaring gives 5² = 25 -- no approximation needed anywhere.\n\n90-SECOND SOLUTION\nRequired reduction factor = 10%/2% = 5; since uncertainty scales as 1/sqrt(n), need n = 5² = 25 trials.\n\nWHAT TO MEMORIZE\nAveraging n independent, equal-duration counting trials is mathematically identical to pooling them into one trial of n times the duration: both reduce the relative uncertainty by 1/sqrt(n). To improve relative precision by a factor of k, you always need k² times the total counting time or number of trials -- a direct consequence of Poisson statistics, and the single most common 'how much more data do I need' calculation in a counting lab."
+      },
+
+      {
+        "question": "A voltage divider consists of R1 = 10 kΩ (top) and R2 = 30 kΩ (bottom) across a 12 V supply. A voltmeter with input resistance 15 kΩ is connected across R2 to measure the divider's output. What voltage does the voltmeter actually read (accounting for its own loading effect)?",
+        "choices": [
+          "3.0 V",
+          "4.5 V",
+          "6.0 V",
+          "8.0 V",
+          "9.0 V"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe voltmeter's own input resistance (15 kΩ) is not infinite, so it loads the divider by appearing in PARALLEL with R2. The effective lower-leg resistance becomes\nR2' = (R2 · R_m)/(R2 + R_m) = (30 × 15)/(30 + 15) = 450/45 = 10 kΩ.\nThe loaded divider then reads\nV = V_s · R2'/(R1 + R2') = 12 × 10/(10 + 10) = 12 × 0.5 = 6.0 V.\nThe trap 9.0 V is the IDEAL (unloaded) divider reading, V_s·R2/(R1+R2) = 12×30/40 = 9.0 V -- correct only for a perfect, infinite-impedance voltmeter, which no real meter is.\n\nNUMERICS WITHOUT A CALCULATOR\n(30×15)/(45) = 450/45 = 10 exactly. Then 10/(10+10) = 1/2, and 12×0.5 = 6.0 -- every step is a clean integer or simple fraction.\n\n90-SECOND SOLUTION\nParallel-combine R2 with R_m first (10 kΩ), then apply the divider formula with the new lower resistance: V = 12×10/20 = 6.0 V.\n\nWHAT TO MEMORIZE\nAny real voltmeter has finite input resistance and therefore always loads the circuit it measures, pulling the reading toward zero relative to the ideal (unloaded) value -- so a real measured voltage across a divider is always LESS than the calculated ideal voltage, never more. This loading effect is most severe when the meter's resistance is comparable to (rather than much larger than) the resistances in the circuit being measured, which is exactly why lab voltmeters are built with as high an input resistance as practical."
+      },
+
+      {
+        "question": "An ideal operational amplifier is wired as a summing (inverting) amplifier: input V₁ = 2.0 V through a 20 kΩ resistor and input V₂ = 4.0 V through a 30 kΩ resistor both feed the inverting input, with a 60 kΩ feedback resistor from the output to the inverting input. What is the output voltage?",
+        "choices": [
+          "−6.0 V",
+          "−8.0 V",
+          "−12.0 V",
+          "−14.0 V",
+          "−18.0 V"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nWith the non-inverting input grounded, the inverting input is a virtual ground drawing no current, so each input contributes independently through its own resistor, and the feedback resistor sums their currents:\nV_out = −(R_f/R₁)V₁ − (R_f/R₂)V₂ = −(60/20)(2.0) − (60/30)(4.0) = −(3)(2.0) − (2)(4.0) = −6.0 − 8.0 = −14.0 V.\nThe trap −12.0 V comes from applying only ONE input's gain factor to both voltages (e.g., using 60/30 = 2 for both terms: −2(2.0) −2(4.0) = −12.0), ignoring that each input channel has its own independent gain set by its own resistor.\n\nNUMERICS WITHOUT A CALCULATOR\n60/20 = 3 and 60/30 = 2 are both clean integer gains. 3×2.0 = 6.0 and 2×4.0 = 8.0; summing gives 14.0, with the overall minus sign from the inverting configuration.\n\n90-SECOND SOLUTION\nEach input scales by R_f over its OWN resistor: −(3)(2.0) − (2)(4.0) = −14.0 V.\n\nWHAT TO MEMORIZE\nA summing amplifier generalizes the single-input inverting amplifier: V_out = −R_f·Σ(Vᵢ/Rᵢ), with each input weighted independently by the ratio of the feedback resistor to that input's OWN series resistor. This lets the circuit compute a weighted sum (or, with equal resistors, a simple sum) of several voltages — the single most common building block for analog signal mixing and simple digital-to-analog conversion."
+      },
+
+      {
+        "question": "In a Wheatstone bridge, the two ratio arms have resistances 100 Ω and 400 Ω, and the third known arm is set to 250 Ω when the bridge is balanced (zero current through the galvanometer). What is the value of the unknown resistance?",
+        "choices": [
+          "62.5 Ω",
+          "100 Ω",
+          "625 Ω",
+          "1000 Ω",
+          "10000 Ω"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt balance, no current flows through the galvanometer, which means the bridge's two voltage-divider legs are proportioned identically. This gives the balance condition\nR1/R2 = R3/R_x,\nwhere R1, R2 are the ratio arms and R3 is the known adjustable arm. Solving for the unknown,\nR_x = R3 × (R2/R1) = 250 × (400/100) = 250 × 4 = 1000 Ω.\nThe trap 62.5 Ω inverts the ratio (R1/R2 instead of R2/R1).\n\nNUMERICS WITHOUT A CALCULATOR\n400/100 = 4 exactly, and 250 × 4 = 1000 — every step is a clean integer operation.\n\n90-SECOND SOLUTION\nBalance gives R_x = R3(R2/R1) = 250 × 4 = 1000 Ω.\n\nWHAT TO MEMORIZE\nThe Wheatstone bridge null-detection method finds an unknown resistance by adjusting a known arm until the galvanometer reads zero — no calibration of the meter itself is needed, only that it detects zero, which is why the method is prized for precision. The balance condition is a simple ratio equality; the key step is identifying which two arms are the fixed \"ratio\" pair versus which is the adjustable comparison arm before writing R1/R2 = R3/R_x."
+      },
+
+      {
+        "question": "An LC resonant (tank) circuit has inductance L = 1.0 mH and capacitance C = 1.0 nF. Using the shortcut 1/2π ≈ 0.16, what is its resonant frequency?",
+        "choices": [
+          "16 kHz",
+          "50 kHz",
+          "500 kHz",
+          "1.6 MHz",
+          "160 kHz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe resonant frequency of an LC tank is f = 1/(2π√(LC)) ≈ 0.16/√(LC).\n√(LC) = √((1.0×10⁻³)(1.0×10⁻⁹)) = √(1.0×10⁻¹²) = 1.0×10⁻⁶ s.\nf ≈ 0.16/(1.0×10⁻⁶) = 1.6×10⁵ Hz = 160 kHz.\nThe trap 16 kHz drops a factor of 10 by mishandling the exponent when taking the square root.\n\nNUMERICS WITHOUT A CALCULATOR\nLC = 10⁻³ × 10⁻⁹ = 10⁻¹², and its square root is exact: 10⁻⁶ (half the exponent). Then 0.16/10⁻⁶ = 0.16×10⁶ = 1.6×10⁵ Hz.\n\n90-SECOND SOLUTION\n√(LC) = 10⁻⁶ s exactly; f ≈ 0.16/10⁻⁶ = 160 kHz.\n\nWHAT TO MEMORIZE\nThe LC resonant frequency f = 1/(2π√(LC)) is the electrical analogue of a mechanical oscillator's natural frequency, and appears throughout instrumentation wherever a tuned circuit is used (radio tuning, resonant filters, oscillators). Since L and C both sit inside a square root, doubling either one only lowers the resonant frequency by a factor of √2, not a full factor of 2 -- a common point of confusion with the plain RC corner-frequency formula, where R and C enter linearly instead."
+      },
+
+      {
+        "question": "The Reynolds number characterizing fluid flow is formed from the fluid density ρ, flow speed v, a characteristic length L, and the dynamic viscosity μ (which has SI units of Pa·s = kg·m⁻¹·s⁻¹). Which combination of these four quantities is DIMENSIONLESS?",
+        "choices": [
+          "ρvL/μ",
+          "ρv/μL",
+          "ρL/μv",
+          "μv/ρL",
+          "ρvμ/L"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nWrite the SI dimensions of each quantity: [ρ] = kg·m⁻³, [v] = m·s⁻¹, [L] = m, [μ] = kg·m⁻¹·s⁻¹. Testing ρvL/μ:\nNumerator: (kg·m⁻³)(m·s⁻¹)(m) = kg·m⁻¹·s⁻¹.\nThis is IDENTICAL to the units of μ, so dividing by μ cancels every unit exactly, leaving a pure number.\nThe trap ρv/μL fails: [ρv] = kg·m⁻²·s⁻¹ while [μL] = kg·s⁻¹, and these do not match, so ρv/(μL) is not dimensionless — only ρvL/μ cancels completely, and this must be checked term by term rather than guessed by pattern.\n\nNUMERICS WITHOUT A CALCULATOR\nNo arithmetic — pure unit bookkeeping. Multiply/divide the exponents of kg, m, and s separately for each candidate and check which gives (kg⁰, m⁰, s⁰).\n\n90-SECOND SOLUTION\nBuild [ρvL] = kg·m⁻¹·s⁻¹ first, then note this already matches [μ] exactly, so ρvL/μ is the dimensionless combination without needing to test the other four options individually.\n\nWHAT TO MEMORIZE\nThe Reynolds number Re = ρvL/μ is the standard dimensionless number governing the transition from laminar to turbulent flow, and its construction — velocity times length times density, divided by viscosity — is worth memorizing directly since dimensional analysis alone (as done here) reconstructs the same formula. The general method (write out base SI units for every quantity, then solve for the exponents that cancel all of them) works for constructing any dimensionless group, not just this one."
+      },
+
+      {
+        "question": "Two sinusoidal signals of the same frequency are displayed on an oscilloscope. Their zero-crossings (rising through zero in the same direction) are separated horizontally by 1.0 cm, and one full period of either signal spans 8.0 cm on the screen. What is the phase difference between the two signals?",
+        "choices": [
+          "22.5°",
+          "45°",
+          "60°",
+          "90°",
+          "180°"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOne full period corresponds to a full cycle of 360°, so the phase difference is the fraction of a period the crossings are offset by, scaled to 360°:\ndelta_phi = (delta_x/period) × 360° = (1.0 cm/8.0 cm) × 360° = 45°.\nThe trap 22.5° would come from mistaking the given screen span for a HALF period (180°) rather than a full period.\n\nNUMERICS WITHOUT A CALCULATOR\n1.0/8.0 = 1/8, and 360°/8 = 45° — a clean eighth of a turn, requiring no decimal arithmetic.\n\n90-SECOND SOLUTION\ndelta_phi = (1.0/8.0) × 360° = 45°.\n\nWHAT TO MEMORIZE\nReading phase from a dual-trace oscilloscope is always a ratio: (horizontal separation)/(one full period) × 360°, entirely independent of the sweep speed in seconds/cm — the time base cancels because both the separation and the period are read in the same screen units. The only care needed is confirming both measurements are taken between corresponding features (e.g., both rising zero-crossings), not a rising crossing on one trace against a falling one on the other."
+      },
+
+      {
+        "question": "Two quantities A and B are each measured with some uncertainty, and their SUM A + B is computed. If A and B happen to be strongly CORRELATED (rather than independent), how does the true uncertainty in A + B compare to the naive quadrature estimate sqrt(sigma_A² + sigma_B²)?",
+        "choices": [
+          "It is always smaller than the quadrature estimate",
+          "It equals the quadrature estimate regardless of correlation",
+          "Correlation only affects uncertainties in differences, never in sums",
+          "It is undefined unless A and B are measured in the same units",
+          "It can be larger OR smaller than the quadrature estimate, depending on the sign of the correlation"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe general formula for the variance of a sum includes a covariance term: sigma_(A+B)² = sigma_A² + sigma_B² + 2·Cov(A,B). The simple quadrature rule sqrt(sigma_A² + sigma_B²) is only correct when Cov(A,B) = 0, i.e., when A and B are independent (uncorrelated). If they are POSITIVELY correlated (errors tend to move together), the covariance term is positive and the true uncertainty is LARGER than the quadrature estimate; if NEGATIVELY correlated (errors tend to move oppositely), it is SMALLER, and could even partly cancel. The trap \"always smaller\" describes only the negative-correlation case, not the general one.\n\nNUMERICS WITHOUT A CALCULATOR\nNot a numeric question — the key is recognizing that the standard propagation formulas silently assume zero correlation, an assumption worth checking explicitly when two measured quantities share a common calibration, instrument, or systematic effect.\n\n90-SECOND SOLUTION\nRemember the extra 2·Cov(A,B) term in the exact variance-of-a-sum formula: it vanishes only for uncorrelated variables, otherwise it can push the true uncertainty either above or below the naive quadrature value.\n\nWHAT TO MEMORIZE\nEvery error-propagation formula taught for sums, differences, and products (adding relative or absolute uncertainties in quadrature) implicitly assumes the measured quantities are STATISTICALLY INDEPENDENT. When two quantities share a common source of error — the same calibration standard, the same reference thermometer, the same batch of equipment — that assumption breaks down, and the covariance term must be included explicitly rather than ignored."
+      },
+
+      {
+        "question": "A gain medium has energy levels with E_n proportional to n² (n = 1, 2, 3, ...), and all downward transitions between levels are allowed (fast) EXCEPT the 2→1 transition, which is forbidden and therefore long-lived (metastable). Atoms are optically pumped from level 1 to level 3. For laser action to occur on a particular transition, which level pairing gives a sustained population inversion?",
+        "choices": [
+          "Inversion between levels 2 and 1",
+          "Inversion between levels 3 and 1",
+          "Inversion between levels 3 and 2",
+          "Inversion between levels 1 and 3",
+          "No population inversion is possible in this scheme"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nPumping populates level 3, but the 3→2 transition is fast (allowed), so atoms pumped to level 3 drain almost immediately into level 2. Level 2, however, can only decay to level 1 via the FORBIDDEN 2→1 transition, so atoms pile up there — level 2 is metastable and accumulates population while level 1 (the ground state, rapidly being pumped away) stays comparatively empty. A population inversion (more atoms in the upper level than the lower one for that specific transition) therefore builds up between levels 2 and 1, and lasing occurs on the 2→1 transition. The trap \"3 and 2\" fails because level 3 empties too fast (via the allowed 3→2 decay) to ever hold more population than the metastable level below it.\n\nNUMERICS WITHOUT A CALCULATOR\nNot a numeric question — the reasoning is purely about relative decay rates and where population bottlenecks.\n\n90-SECOND SOLUTION\nFind the bottleneck: the ONLY slow (forbidden) transition is 2→1, so that is where population piles up on one side and drains slowly on the other — inversion is between 2 and 1.\n\nWHAT TO MEMORIZE\nA population inversion requires a METASTABLE upper level feeding into a rapidly-depopulated lower level — this is the general recipe behind every practical laser (e.g., the fast pump-band decay and metastable upper laser level in a three-level or four-level scheme). The pump level itself is almost never the lasing upper level; look instead for the level that traps population because its only exit is a forbidden or otherwise slow transition."
+      },
+
+      {
+        "question": "A researcher needs a laser that is continuously and widely tunable across a broad range of visible wavelengths (roughly 400–700 nm) for absorption spectroscopy of an unknown sample. Which type of laser is the appropriate choice?",
+        "choices": [
+          "Dye laser",
+          "Helium-neon (gas) laser",
+          "Ruby (solid-state) laser",
+          "Nd:YAG (solid-state) laser",
+          "Carbon dioxide (gas) laser"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nMost laser gain media (He-Ne, ruby, Nd:YAG, CO2) lase on one or a few essentially FIXED atomic or vibrational transitions, giving output at one specific wavelength (or a narrow discrete set) that cannot be continuously tuned. A dye laser instead uses a broad organic dye molecule with closely-spaced vibrational-rotational sublevels, giving a continuous gain band that can be tuned smoothly across a wide range by a tunable intracavity element (e.g., a diffraction grating) — this is exactly the property needed for scanning across an unknown absorption spectrum. The trap He-Ne is tempting because it operates in the visible (632.8 nm), but it is fixed-wavelength, not tunable.\n\nNUMERICS WITHOUT A CALCULATOR\nNot a numeric question — the key discriminator is tunability, not the specific wavelength any candidate laser happens to emit at.\n\n90-SECOND SOLUTION\nThe question asks for WIDE TUNABILITY, which immediately rules out every fixed-line atomic/solid-state laser and points to the dye laser, the classic broadly-tunable choice.\n\nWHAT TO MEMORIZE\nMatch laser type to the discriminating property the question asks about, not just to \"which laser is visible\" or \"which laser is powerful\": dye lasers for broad continuous tunability, gas lasers (He-Ne, CO2, argon-ion) for narrow fixed lines at high stability, solid-state lasers (ruby, Nd:YAG) for high pulse energy, and semiconductor diode lasers for compactness and current-tunability over a much narrower range. \"Tunable across a broad range\" is a near-unique fingerprint for a dye (or, more recently, Ti:sapphire) laser."
+      },
+
+      {
+        "question": "A Michelson-based wavemeter uses a stabilized reference laser of known wavelength 600 nm as one channel and the unknown laser as the other, both viewing the SAME moving mirror. As the mirror translates through a fixed distance d, the reference channel counts 50000 fringes and the unknown-laser channel counts 60000 fringes. What is the unknown laser's wavelength?",
+        "choices": [
+          "416.7 nm",
+          "480.0 nm",
+          "500.0 nm",
+          "600.0 nm",
+          "720.0 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBoth channels measure the SAME physical mirror displacement d, and each fringe corresponds to a mirror motion of half a wavelength for that channel: d = N_ref(lambda_ref/2) = N_unk(lambda_unk/2). The factor of 1/2 cancels, leaving\nN_ref · lambda_ref = N_unk · lambda_unk → lambda_unk = lambda_ref × (N_ref/N_unk) = 600 × (50000/60000) = 600 × (5/6) = 500 nm.\nThe trap 720.0 nm inverts the fringe-count ratio (multiplying by N_unk/N_ref instead), which would apply if the unknown channel had counted FEWER fringes than the reference for the same displacement.\n\nNUMERICS WITHOUT A CALCULATOR\n50000/60000 reduces to 5/6, and 600 × 5/6 = 500 — cancel the common factor before multiplying rather than dividing large numbers directly.\n\n90-SECOND SOLUTION\nSame d means N_ref · lambda_ref = N_unk · lambda_unk, so lambda_unk = 600 × (50000/60000) = 500 nm.\n\nWHAT TO MEMORIZE\nA wavemeter works by comparing fringe counts from two lasers viewing an identical mirror displacement — the shorter-wavelength light always produces MORE fringes for the same distance, so the laser with the higher count must have the shorter wavelength (60000 > 50000 correctly predicts lambda_unk < lambda_ref here). This ratio method achieves very high precision because it needs no absolute distance measurement at all, only a fringe count on each channel."
+      },
+
+      {
+        "question": "A small NaI detector, held with its face perpendicular to the line from an isotropic point source, registers 40% of the emitted particles when placed 10 cm from the source. If the detector is moved straight back to 20 cm, ignoring any change in intrinsic (per-particle) detection efficiency, what fraction is now detected?",
+        "choices": [
+          "5%",
+          "10%",
+          "20%",
+          "28%",
+          "80%"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAn isotropic source spreads its output over an expanding sphere, so the GEOMETRIC fraction intercepted by a fixed-area detector falls as 1/d². Doubling the distance from 10 cm to 20 cm therefore reduces the detected fraction by (10/20)² = 1/4:\nnew fraction = 40% × (1/4) = 10%.\nThe trap 20% halves the fraction instead of applying the square, treating the geometric falloff as 1/d rather than 1/d².\n\nNUMERICS WITHOUT A CALCULATOR\nDoubling distance means the relevant factor is (1/2)² = 1/4, and 40/4 = 10 — a one-step mental calculation once the inverse-square scaling is recognized.\n\n90-SECOND SOLUTION\nGeometric efficiency proportional to 1/d²; doubling d gives ×1/4: 40% → 10%.\n\nWHAT TO MEMORIZE\nDetector efficiency splits into a GEOMETRIC factor (the solid angle subtended, falling as 1/d² for a point source) and an INTRINSIC factor (the probability a particle that enters the detector is actually registered, independent of distance). Only the geometric factor changes with distance — the problem's phrase \"ignoring any change in intrinsic efficiency\" is telling you to apply the 1/d² scaling directly to the whole given fraction."
+      },
+
+      {
+        "question": "The kinetic energy of an object is computed from its measured mass and speed via KE = (1/2)mv². The mass is measured with a relative uncertainty of 6.0% and the speed with a relative uncertainty of 4.0%. What is the approximate relative uncertainty in the computed kinetic energy?",
+        "choices": [
+          "7.2%",
+          "8.0%",
+          "10.0%",
+          "14.0%",
+          "16.0%"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nKE = (1/2)·m·v² is a product of powers, with m to the first power and v to the power 2 (the factor 1/2 carries no uncertainty). Relative uncertainties combine in quadrature, each scaled by the magnitude of its exponent:\n(sigma_KE/KE)² = (1·sigma_m/m)² + (2·sigma_v/v)² = (6.0)² + (2×4.0)² = 36 + 64 = 100.\nsigma_KE/KE = sqrt(100) = 10.0%.\nThe trap 14.0% adds the two contributions linearly instead of in quadrature (6.0 + 8.0); 8.0% forgets to double the speed term for its exponent.\n\nNUMERICS WITHOUT A CALCULATOR\n2×4.0 = 8, and 6² + 8² = 36 + 64 = 100 — a 6-8-10 triangle (twice the familiar 3-4-5), so the root comes out exact at 10.0%.\n\n90-SECOND SOLUTION\nsqrt(6² + (2×4)²) = sqrt(36+64) = 10.0%.\n\nWHAT TO MEMORIZE\nKinetic energy's quadratic dependence on speed means a speed uncertainty is DOUBLED before being combined in quadrature — this is why velocity measurements dominate the uncertainty budget in energy calculations far more than mass measurements do, quantity-for-quantity. Whenever a variable enters a formula squared (or to any power greater than one), its fractional uncertainty is amplified by that exponent before the quadrature sum — always apply the exponent first."
+      },
+
+      {
+        "question": "A galvanometer has coil resistance 45 Ω and deflects full-scale for a current of 0.50 A. To convert it into an ammeter reading full-scale at 5.0 A, a shunt resistor is connected in PARALLEL with the coil. What shunt resistance is required?",
+        "choices": [
+          "0.50 Ω",
+          "5.0 Ω",
+          "9.0 Ω",
+          "40.5 Ω",
+          "450 Ω"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe shunt diverts the excess current so that only the galvanometer's own full-scale current (0.50 A) ever flows through the coil, with the remaining 5.0 − 0.50 = 4.5 A flowing through the shunt. Since the shunt and coil are in parallel, they share the same voltage:\nI_g R_g = I_shunt R_shunt → (0.50)(45) = (4.5)(R_shunt).\nR_shunt = (0.50 × 45)/4.5 = 22.5/4.5 = 5.0 Ω.\nThe trap 40.5 Ω comes from using the FULL 5.0 A (instead of the excess 4.5 A) as the shunt current.\n\nNUMERICS WITHOUT A CALCULATOR\nThe excess current is 5.0 − 0.5 = 4.5 A. Then 0.5 × 45 = 22.5, and 22.5/4.5 = 5.0 exactly — the numbers were chosen so the excess current divides the numerator evenly.\n\n90-SECOND SOLUTION\nExcess current 4.5 A carries the coil's I_gR_g = 22.5 (V·unit), so R_shunt = 22.5/4.5 = 5.0 Ω.\n\nWHAT TO MEMORIZE\nA shunt resistor extends a galvanometer's range by carrying the current ABOVE the coil's own full-scale rating, always in parallel so the voltage across both paths matches: I_gR_g = I_shuntR_shunt, with I_shunt = I_total − I_g. This is the ammeter analogue of the voltmeter multiplier resistor (added in SERIES to extend voltage range) — mixing up which configuration goes with which instrument is the most common conceptual slip."
+      }
+
+    ]
+  },
 
 ];
