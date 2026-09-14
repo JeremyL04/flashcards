@@ -19066,5 +19066,947 @@ const EXAMS = [
 
     ]
   },
+  {
+    "name": "Full Practice Exam 3 (70 Questions)",
+    "added": "2026-09-14",
+    "category": "practice",
+    "cards": [
+      {
+        "question": "Three identical masses m lie in a line between fixed walls. Four identical springs of constant k connect wall–mass–mass–mass–wall. In the normal mode for which the middle mass remains at rest, the angular frequency is",
+        "choices": [
+          "√(2k/m)",
+          "√(k/m)",
+          "√(3k/m)",
+          "2√(k/m)",
+          "√(k/2m)"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-3/q0.png",
+        "explanation": "WORKED SOLUTION\nIn this mode the outer masses move oppositely while the middle mass stays fixed. Each outer mass is therefore restored by two springs, so mẍ = −2kx and ω = √(2k/m). The choice √(k/m) counts only the wall spring.\n\n90-SECOND SOLUTION\nA stationary middle mass acts like a fixed support. Each moving outer mass sees two springs in parallel, giving k_eff = 2k.\n\nWHAT TO MEMORIZE\nFor a proposed normal mode, exploit its nodes first; they often reduce a coupled system to independent oscillators."
+      },
+
+      {
+        "question": "A simple pendulum of length L hangs in a railcar accelerating horizontally with constant magnitude a. Its angular frequency for small oscillations about equilibrium is",
+        "choices": [
+          "√[(g+a)/L]",
+          "(g²+a²)^(1/4)/√L",
+          "√[(g²+a²)/L]",
+          "√(g/L) + √(a/L)",
+          "√[(g−a)/L]"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nIn the car frame, gravity and the horizontal inertial acceleration combine into an effective acceleration of magnitude g_eff = √(g²+a²). Small oscillations about the tilted equilibrium have ω = √(g_eff/L) = (g²+a²)^(1/4)/√L. Adding g and a directly ignores that they are perpendicular.\n\n90-SECOND SOLUTION\nDraw the effective-gravity vector, take its magnitude, and use the ordinary pendulum formula with g replaced by g_eff.\n\nWHAT TO MEMORIZE\nA uniformly accelerating frame replaces gravity by the vector sum of gravity and the frame’s inertial acceleration."
+      },
+
+      {
+        "question": "The figure shows two stable minima A and B of the potential energy of a particle of mass m. The local curvatures are U″(A)=4k and U″(B)=k. The ratio of the small-oscillation periods T_A/T_B is",
+        "choices": [
+          "4",
+          "2",
+          "1/2",
+          "1/4",
+          "1"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-3/q2.png",
+        "explanation": "WORKED SOLUTION\nNear a stable minimum, U is harmonic with effective spring constant U″, so T = 2π√(m/U″). Therefore T_A/T_B = √[U″(B)/U″(A)] = √(k/4k) = 1/2. The choice 2 reverses the curvature ratio.\n\nNUMERICS WITHOUT A CALCULATOR\nThe curvature ratio is 4, and the period varies as its inverse square root, giving 1/2.\n\n90-SECOND SOLUTION\nThe steeper well oscillates faster. Take the inverse square root of the curvature ratio.\n\nWHAT TO MEMORIZE\nFor any smooth potential, ω² = U″(x₀)/m at a stable equilibrium x₀."
+      },
+
+      {
+        "question": "A mass m descends with acceleration a while unwinding a cord from a flywheel of radius R and moment of inertia I. The axle exerts a constant friction torque τ_f. The cord does not slip. The magnitude of τ_f is",
+        "choices": [
+          "m(g+a)R + Ia/R",
+          "m(g−a)R + Ia/R",
+          "m(g+a)R − Ia/R",
+          "m(g−a)R − Ia/R",
+          "mgR − Ia"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor the mass, mg−T=ma, so T=m(g−a). For the wheel, TR−τ_f=Iα with α=a/R. Hence τ_f=m(g−a)R−Ia/R. Adding the rotational term would correspond to friction helping the unwinding rather than opposing it.\n\n90-SECOND SOLUTION\nFind the cord tension from the falling mass, then subtract the torque needed for the observed angular acceleration.\n\nWHAT TO MEMORIZE\nFor a no-slip cord, a=αR; keep the translation and rotation equations separate until the end."
+      },
+
+      {
+        "question": "A uniform free rod of length L and mass M is initially at rest. A perpendicular impulse J is delivered a distance L/4 from its center. Immediately afterward, which point on the rod is instantaneously at rest? Positions s are measured from the center, positive toward the impact point.",
+        "choices": [
+          "s=−L/2",
+          "s=−L/4",
+          "s=0",
+          "s=L/3",
+          "s=−L/3"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-3/q4.png",
+        "explanation": "WORKED SOLUTION\nThe center acquires speed J/M. The impulse also gives ω=J(L/4)/(ML²/12)=3J/(ML). A point at coordinate s has transverse velocity J/M+ωs, which vanishes at s=−L/3. Choosing −L/4 incorrectly assumes the impact point and instantaneous center are symmetric about the center of mass.\n\nNUMERICS WITHOUT A CALCULATOR\nI=ML²/12 makes ω=3J/(ML); dividing J/M by that gives L/3.\n\n90-SECOND SOLUTION\nUse impulse for center-of-mass motion, angular impulse for rotation, then set V_CM+ωs=0.\n\nWHAT TO MEMORIZE\nAn off-center impulse produces translation and rotation simultaneously; velocities, not impulses, locate the instantaneous center."
+      },
+
+      {
+        "question": "A particle moves in the effective radial potential U(r)=−a/r+b/r², where a,b>0. A circular orbit occurs at",
+        "choices": [
+          "r=2b/a, and it is stable",
+          "r=b/a, and it is stable",
+          "r=2b/a, and it is unstable",
+          "r=b/2a, and it is unstable",
+          "no finite radius"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA circular orbit is a stationary point: U′=a/r²−2b/r³=0, so r=2b/a. At that radius U″=−2a/r³+6b/r⁴=2b/r⁴>0, making it a stable minimum. Calling it unstable confuses an attractive 1/r term with the full effective potential.\n\n90-SECOND SOLUTION\nSet U′=0, then inspect whether the stationary point is a bowl or a hill using U″.\n\nWHAT TO MEMORIZE\nCircular orbits are extrema of the effective potential; stability requires a local minimum."
+      },
+
+      {
+        "question": "A satellite in a circular orbit of radius r receives a tangential impulse that changes its speed to √(3/2) times the circular speed. The impulse point becomes the perigee of the new orbit. Its apogee radius is",
+        "choices": [
+          "2r",
+          "3r",
+          "4r",
+          "(3/2)r",
+          "5r"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith v²=(3/2)GM/r, the new specific energy is v²/2−GM/r=−GM/(4r). Since the orbital energy is −GM/(2a), the semimajor axis is a=2r. With r_p+r_a=2a and r_p=r, the apogee is r_a=3r. The choice 2r mistakes the semimajor axis for the apogee.\n\nNUMERICS WITHOUT A CALCULATOR\nThe energy gives a=2r, so r+r_a=4r and r_a=3r.\n\n90-SECOND SOLUTION\nUse energy to get a, then use perigee plus apogee equals 2a.\n\nWHAT TO MEMORIZE\nFor a bound Kepler orbit, ε=−GM/(2a) and r_p+r_a=2a."
+      },
+
+      {
+        "question": "A block of mass m rests on a block of mass 3m on a frictionless floor. A force F is applied to the upper block at 30° below horizontal. If the coefficient of static friction between the blocks is μ, the largest F for which they move together is",
+        "choices": [
+          "μmg/(cos30°−μsin30°)",
+          "4μmg/(cos30°−3μsin30°)",
+          "4μmg/(3cos30°−4μsin30°)",
+          "3μmg/(4cos30°−μsin30°)",
+          "4μmg/(3cos30°+4μsin30°)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIf the blocks move together, a=Fcos30°/(4m). Friction must accelerate the lower block, so f=3ma=3Fcos30°/4. The normal force is N=mg+Fsin30°. Setting f=μN at impending slip gives F=4μmg/(3cos30°−4μsin30°). Omitting the downward component produces the wrong denominator.\n\n90-SECOND SOLUTION\nFind the common acceleration, calculate the friction needed by the lower block, and compare it with μ times the enhanced normal force.\n\nWHAT TO MEMORIZE\nWhen a force is angled downward, it changes both the acceleration demand and the maximum static friction."
+      },
+
+      {
+        "question": "A mass m on a 30° incline is connected over an ideal pulley to a hanging mass M. The coefficient of static friction on the incline is 1/√3. The largest value of M/m for which the system can remain at rest is",
+        "choices": [
+          "1/2",
+          "1/√3",
+          "√3/2",
+          "1",
+          "3/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt the largest M, the hanging mass tends to pull m up the incline, so friction on m acts downward. Limiting equilibrium gives Mg=mg sin30°+μmg cos30°=mg(1/2+1/2)=mg. Thus M/m=1. The value 1/2 ignores friction entirely.\n\nNUMERICS WITHOUT A CALCULATOR\n(1/√3)(√3/2)=1/2, so gravity down the slope and limiting friction contribute equal halves.\n\n90-SECOND SOLUTION\nFor the upper endpoint of the equilibrium range, point friction down the incline and add it to mg sinθ.\n\nWHAT TO MEMORIZE\nStatic-friction problems usually give a range; determine the impending direction separately at each endpoint."
+      },
+
+      {
+        "question": "A particle makes an elastic collision with an identical particle initially at rest. Afterward the incident particle moves at 30° to its original direction. What fraction of the initial kinetic energy belongs to the struck particle?",
+        "choices": [
+          "3/4",
+          "1/2",
+          "1/3",
+          "√3/2",
+          "1/4"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor an elastic collision of equal masses with one initially at rest, the two final velocity vectors are perpendicular. The incident particle retains speed v cos30°, while the target receives v sin30°. Its energy fraction is sin²30°=1/4. The choice 1/2 confuses equal masses with equal sharing.\n\nNUMERICS WITHOUT A CALCULATOR\nThe target speed is v/2, so its kinetic energy is one quarter of the original.\n\n90-SECOND SOLUTION\nRecall the right-angle result for equal masses, then resolve the original velocity along the two final directions.\n\nWHAT TO MEMORIZE\nEqual-mass elastic collision with a stationary target: final velocities are perpendicular and form a vector decomposition of the initial velocity."
+      },
+
+      {
+        "question": "A bead of mass m slides without friction on a horizontal radial wire rotating at constant angular speed ω. It is released from rest relative to the wire at radius r₀. The magnitude of the force exerted by the wire on the bead at time t is",
+        "choices": [
+          "2mω²r₀sinh(ωt)",
+          "mω²r₀cosh(ωt)",
+          "2mω²r₀cosh(ωt)",
+          "mω²r₀sinh(ωt)",
+          "zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe radial equation is r̈=ω²r, so the initial conditions give r=r₀cosh(ωt) and ṙ=ωr₀sinh(ωt). The wire supplies the transverse acceleration a_θ=2ωṙ, hence N=2mω²r₀sinh(ωt). Using mω²r confuses the radial acceleration with the perpendicular constraint force.\n\n90-SECOND SOLUTION\nThe force from a frictionless radial wire is transverse. Use the polar-coordinate term a_θ=2ṙω after obtaining ṙ from the radial motion.\n\nWHAT TO MEMORIZE\nFor fixed angular speed, polar acceleration has components a_r=r̈−rω² and a_θ=2ṙω."
+      },
+
+      {
+        "question": "The graph shows F_x=+4 N from x=0 to 2 m and F_x=−2 N from x=2 m onward. A 1 kg particle starts at x=0 moving right with kinetic energy 2 J. Its turning point is at",
+        "choices": [
+          "x=5 m",
+          "x=7 m",
+          "x=6 m",
+          "x=8 m",
+          "x=4 m"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-3/q11.png",
+        "explanation": "WORKED SOLUTION\nThe first segment adds 4×2=8 J, so the kinetic energy at x=2 m is 10 J. The −2 N region must do −10 J to stop the particle, requiring another 5 m. The turning point is therefore x=7 m. The choice 5 m forgets that this distance begins at x=2 m.\n\nNUMERICS WITHOUT A CALCULATOR\nK rises from 2 J to 10 J, then falls at 2 J per metre for 5 m.\n\n90-SECOND SOLUTION\nAccumulate signed area under the force graph until the total work equals −2 J.\n\nWHAT TO MEMORIZE\nOn an F-versus-x graph, area is work; a turning point occurs when the running kinetic energy reaches zero."
+      },
+
+      {
+        "question": "A cart begins accelerating horizontally at constant A. At that instant, a ball is launched from it with vertical speed u and forward horizontal speed v relative to the cart. Neglect air resistance. For the ball to return to its launch point on the cart, v must equal",
+        "choices": [
+          "2Au/g",
+          "Au/2g",
+          "Au/g",
+          "gu/A",
+          "gA/u"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe vertical return time is 2u/g. Relative horizontally, the ball advances vt while the accelerating cart gains ½At². Reuniting requires v=At/2, so at t=2u/g, v=Au/g. The factor-of-two distractor comes from using the vertical flight time incorrectly.\n\n90-SECOND SOLUTION\nSet the vertical flight time first, then equate the ball’s relative horizontal displacement vt to ½At².\n\nWHAT TO MEMORIZE\nSplit projectile motion into independent components, but compare positions in the same frame."
+      },
+
+      {
+        "question": "A cylindrical vessel of liquid rotates at angular speed ω while accelerating horizontally with magnitude A in the +x direction. In vessel coordinates, the lowest point of the free surface is displaced from the rotation axis by",
+        "choices": [
+          "A/2ω² toward +x",
+          "A/ω² toward −x",
+          "2A/ω² toward +x",
+          "A/ω² toward +x",
+          "A/g toward +x"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe free surface is an equipotential of Φ=gz+Ax−½ω²(x²+y²). Completing the square gives its minimum at x=A/ω², y=0. The displacement is toward +x because the centrifugal rise is centered where ω²x balances the translational inertial tilt. Using A/g gives the slope for pure translation, not the location of the minimum when rotation is present.\n\n90-SECOND SOLUTION\nSet the horizontal effective acceleration to zero: ω²x−A=0.\n\nWHAT TO MEMORIZE\nA rotating liquid surface is parabolic; uniform horizontal acceleration shifts the paraboloid’s center by A/ω²."
+      },
+
+      {
+        "question": "A point charge +q is inside a grounded spherical conducting cavity of radius R, a distance a<R from its center. The magnitude of the electrostatic force on q is",
+        "choices": [
+          "q²R/[4πε₀(R²−a²)]",
+          "q²R²/[4πε₀(R²−a²)²]",
+          "q²a/[4πε₀(R²−a²)²]",
+          "q²R/[4πε₀a(R−a)²]",
+          "q²Ra/[4πε₀(R²−a²)²]"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor the interior grounded-sphere problem, the image charge is −qR/a at radius R²/a, outside the physical cavity. Its distance from q is (R²−a²)/a, so Coulomb’s law gives F=q²Ra/[4πε₀(R²−a²)²], directed toward the nearest wall. Reusing the exterior-sphere placement without reversing which radius is larger gives the wrong denominator.\n\n90-SECOND SOLUTION\nPlace the image beyond the cavity wall at R²/a, form the separation from the real charge, and apply Coulomb’s law.\n\nWHAT TO MEMORIZE\nA charge inside a grounded spherical boundary uses q′=−qR/a at r′=R²/a; the image lies outside the physical region."
+      },
+
+      {
+        "question": "A capacitor C bridges the midpoints of two resistor branches. The left branch is R above the midpoint and 2R below it; the right branch is 2R above and R below. After the ideal battery is disconnected and its terminals are shorted together, the capacitor’s discharge time constant is",
+        "choices": [
+          "3RC/2",
+          "2RC/3",
+          "3RC",
+          "RC",
+          "2RC"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-3/q15.png",
+        "explanation": "WORKED SOLUTION\nWith the source terminals shorted, the capacitor sees two paths between its plates. The upper path is R+2R=3R and the lower path is 2R+R=3R; these paths are in parallel, giving R_th=3R/2. Thus τ=R_thC=3RC/2. Combining all four resistors as though they shared the same two nodes gives the 2RC/3 trap.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo equal 3R paths in parallel give 3R/2.\n\n90-SECOND SOLUTION\nRemove the capacitor, kill the ideal voltage source by shorting it, and find the resistance seen between the capacitor terminals.\n\nWHAT TO MEMORIZE\nA one-capacitor network has τ=R_thC, where independent voltage sources are shorted and current sources opened."
+      },
+
+      {
+        "question": "Equal positive charges occupy all four vertices of a regular tetrahedron. The charge at vertex A is removed. The electric field at the center of the tetrahedron points",
+        "choices": [
+          "away from A",
+          "toward A",
+          "toward the opposite edge",
+          "perpendicular to the face opposite A",
+          "the field remains zero"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nWith all four charges present, symmetry makes the central field zero. Removing the charge at A is equivalent, by superposition, to keeping the symmetric configuration and adding a negative charge at A. The remaining field therefore points toward A. Saying away from A follows the removed positive charge in isolation instead of subtracting its former field.\n\n90-SECOND SOLUTION\nStart from the zero-field four-charge configuration and represent removal as adding −q at A.\n\nWHAT TO MEMORIZE\nWhen symmetry is broken by removing something, restore the symmetric system and subtract the missing contribution."
+      },
+
+      {
+        "question": "A charged particle enters a uniform magnetic field with fixed velocity components parallel and perpendicular to the field. If B is doubled while the entry velocity is unchanged, the helix pitch and radius become, respectively,",
+        "choices": [
+          "unchanged and halved",
+          "halved and unchanged",
+          "both halved",
+          "both doubled",
+          "quarter and half"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe cyclotron period is 2πm/(|q|B), so the pitch v_parallel T halves when B doubles. The radius mv_perp/(|q|B) also halves. The parallel speed itself is unchanged, but pitch is a distance accumulated during one field-dependent period.\n\n90-SECOND SOLUTION\nBoth relevant length scales contain one inverse power of B: r_L∝1/B and pitch=v_parallelT∝1/B.\n\nWHAT TO MEMORIZE\nA magnetic field changes direction but not speed; cyclotron radius and period both scale as 1/B."
+      },
+
+      {
+        "question": "An infinite ladder begins with a series resistor R, followed by a shunt resistor 2R, after which the entire pattern repeats. The equivalent resistance of the ladder is",
+        "choices": [
+          "R",
+          "(1+√3)R",
+          "√2R",
+          "2R",
+          "(3/2)R"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-3/q18.png",
+        "explanation": "WORKED SOLUTION\nLet the full equivalent resistance be X. After the first R, the remaining node sees 2R in parallel with another copy X, so X=R+(2R·X)/(2R+X). Writing x=X/R gives x²−x−2=0, whose physical root is x=2. The negative root must be rejected; 3R/2 is the result of truncating the ladder too early.\n\nNUMERICS WITHOUT A CALCULATOR\nThe quadratic factors as (x−2)(x+1)=0, leaving x=2.\n\n90-SECOND SOLUTION\nName the whole ladder X, recognize the repeated tail as the same X, and write one recursion.\n\nWHAT TO MEMORIZE\nInfinite ladders are self-similarity problems, not long series-parallel reductions."
+      },
+
+      {
+        "question": "A rectangular loop of height h spans x=0 to x=L in a field into the page with magnitude B(x)=B₀(1+x/L). It carries clockwise current I. The net magnetic force is",
+        "choices": [
+          "zero",
+          "IB₀L toward +x",
+          "2IB₀h toward +x",
+          "IB₀h toward −x",
+          "IB₀h toward +x"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-3/q19.png",
+        "explanation": "WORKED SOLUTION\nForces on the horizontal sides cancel. The left vertical side feels IB₀h toward −x, while the right side, where B=2B₀, feels 2IB₀h toward +x. Their difference is IB₀h toward +x. Declaring zero imports the uniform-field result into a field gradient.\n\n90-SECOND SOLUTION\nIgnore the canceling horizontal sides and subtract the forces on the two vertical sides using their local field values.\n\nWHAT TO MEMORIZE\nA closed current loop has zero net force only in a uniform magnetic field; gradients expose the unequal opposite-side forces."
+      },
+
+      {
+        "question": "A conducting disk of radius R and moment of inertia I rotates in a uniform axial magnetic field B. Current from axle to rim passes through a resistor, and magnetic braking is the only torque. As the angular speed falls from ω_i to ω_f, the total charge through the resistor is",
+        "choices": [
+          "2I(ω_i−ω_f)/(BR²)",
+          "I(ω_i−ω_f)/(BR²)",
+          "BR²(ω_i−ω_f)/(2I)",
+          "2IB(ω_i−ω_f)/R²",
+          "I(ω_i²−ω_f²)/(BR²)"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-3/q20.png",
+        "explanation": "WORKED SOLUTION\nA radial current i in the disk experiences magnetic torque τ=BR²i/2. Integrating angular impulse gives I(ω_i−ω_f)=∫τdt=(BR²/2)∫i dt=(BR²/2)Q. Hence Q=2I(ω_i−ω_f)/(BR²). Using the energy change instead of angular impulse incorrectly introduces squared angular speeds.\n\n90-SECOND SOLUTION\nRelate magnetic torque to current, then integrate torque over time; the current integral is exactly the transported charge.\n\nWHAT TO MEMORIZE\nWhen a requested total is an integral, look for a dynamical law that contains the same integrand."
+      },
+
+      {
+        "question": "Two loops have mutual inductance M(x)=M₀e^{−x/a}. The first carries I(t)=I₀t/T while the second moves away so x=vt. At what time is the induced emf in the second loop zero?",
+        "choices": [
+          "v/a",
+          "a/v",
+          "T/a",
+          "aT/v",
+          "T"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-3/q21.png",
+        "explanation": "WORKED SOLUTION\nThe linked flux is Φ₂=M(x)I(t). Its derivative is M[I₀/T−(v/a)I₀t/T]. The induced emf vanishes when the growth of current exactly offsets the loss of mutual inductance, giving t=a/v. Ignoring the motion leaves only the transformer-emf term and misses the cancellation.\n\nNUMERICS WITHOUT A CALCULATOR\nSet 1−vt/a=0, so t=a/v; I₀, M₀, and T cancel.\n\n90-SECOND SOLUTION\nDifferentiate the product MI, not just I, and set the two logarithmic rates equal.\n\nWHAT TO MEMORIZE\nFor moving coupled circuits, ε=−d(MI)/dt includes both transformer and motional contributions."
+      },
+
+      {
+        "question": "A parallel-plate capacitor of circular plate radius R is charged by a steady current I. Neglect fringing. The magnetic-field magnitudes at radii R/2 and 2R from the axis, both in the gap, have ratio B(R/2)/B(2R) equal to",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nInside the plate radius, the enclosed displacement current is I(r²/R²), so B=μ₀Ir/(2πR²). At R/2 this is μ₀I/(4πR). Outside the plates, the full current is enclosed and B=μ₀I/(2πr), which at 2R is the same value. Using a single 1/r law at both radii gives 4.\n\nNUMERICS WITHOUT A CALCULATOR\nInside contributes a factor r/R²=1/(2R); outside contributes 1/r=1/(2R).\n\n90-SECOND SOLUTION\nUse B∝r inside a uniform displacement-current disk and B∝1/r outside. The two chosen radii give equal values.\n\nWHAT TO MEMORIZE\nFor a uniformly charging circular capacitor, B rises linearly inside the plate radius and falls as 1/r outside."
+      },
+
+      {
+        "question": "A 12 V battery feeds two parallel dividers. The left divider is R above node A and 2R below it; the right is 2R above node B and R below it. A capacitor connects A to B. After steady state, the battery is removed and its terminals are shorted. The initial discharge current through the capacitor is",
+        "choices": [
+          "2/R A from A to B",
+          "4/R A from A to B",
+          "4/(3R) A from B to A",
+          "8/(3R) A from A to B",
+          "8/R A from B to A"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-3/q23.png",
+        "explanation": "WORKED SOLUTION\nInitially A=8 V and B=4 V, so V_AB=4 V. After the source is shorted, the resistance seen between A and B is two 3R paths in parallel, or 3R/2. Capacitor voltage cannot jump, so i(0⁺)=4/(3R/2)=8/(3R) A from A to B. Recomputing the divider voltages after switching wrongly allows the capacitor voltage to change instantly.\n\nNUMERICS WITHOUT A CALCULATOR\nThe stored 4 V is divided by 1.5R, giving 8/(3R) A.\n\n90-SECOND SOLUTION\nFind V_C(0⁻), preserve it at 0⁺, then divide by the post-switch Thévenin resistance.\n\nWHAT TO MEMORIZE\nCapacitor voltage is continuous across an ideal switching instant."
+      },
+
+      {
+        "question": "A dielectric slab is pulled farther into an isolated parallel-plate capacitor carrying fixed charge. Neglect fringing. As the slab enters, the capacitor is pulled inward while its voltage and stored energy",
+        "choices": [
+          "both increase",
+          "remain fixed and increase",
+          "increase and decrease",
+          "remain fixed and decrease",
+          "both decrease"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nInsertion increases C. Because the capacitor is isolated, Q is fixed, so V=Q/C decreases and U=Q²/(2C) also decreases. The falling field energy supplies the mechanical attraction. The common opposite answer applies to a battery-connected capacitor, where V rather than Q is fixed.\n\n90-SECOND SOLUTION\nIdentify the clamp first: isolated means fixed Q. Then every result follows from C increasing.\n\nWHAT TO MEMORIZE\nFixed Q: U=Q²/2C decreases with C. Fixed V: U=CV²/2 increases, with the battery providing energy."
+      },
+
+      {
+        "question": "An electric dipole moment rotates uniformly in the xy-plane: p=p₀(x̂cosωt+ŷsinωt). The ratio of its time-averaged radiated intensity along the z-axis to that in any direction in the xy-plane is",
+        "choices": [
+          "2",
+          "1",
+          "1/2",
+          "4",
+          "zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nRadiation is proportional to the squared component of p̈ perpendicular to the observation direction. Along z, the rotating acceleration is always perpendicular, giving the full value. Along a fixed in-plane direction, its squared perpendicular component averages to one half, so the ratio is 2. Assuming a static-dipole sin²θ pattern misses the time averaging over a rotating axis.\n\n90-SECOND SOLUTION\nAlong the rotation axis all acceleration radiates; in the plane, one of two equal rotating components survives on average.\n\nWHAT TO MEMORIZE\nDipole radiation depends on transverse acceleration; a rotating dipole has axial maximum rather than the axial zero of a fixed linear dipole."
+      },
+
+      {
+        "question": "A series RLC circuit carries the same current amplitude at two angular frequencies ω₁ below resonance and ω₂ above resonance. Their product is",
+        "choices": [
+          "R/L",
+          "1/(LC)",
+          "R²/L²",
+          "1/√(LC)",
+          "R/(LC)"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-3/q26.png",
+        "explanation": "WORKED SOLUTION\nEqual current means equal impedance magnitude, so the reactances ωL−1/(ωC) have equal magnitude and opposite signs at the two frequencies. This condition reduces to ω₁ω₂=1/(LC)=ω₀². The choice 1/√(LC) is the resonance frequency itself rather than the product.\n\n90-SECOND SOLUTION\nEqual points on opposite sides of the series-resonance curve are paired geometrically: ω₀=√(ω₁ω₂).\n\nWHAT TO MEMORIZE\nFor a series RLC response, equal-amplitude frequencies bracketing resonance have geometric mean ω₀."
+      },
+
+      {
+        "question": "A spin-1/2 particle starts in |+z⟩. An ideal measurement of S_x is made but its result is discarded. A subsequent measurement along any axis in the yz-plane gives the + result with probability",
+        "choices": [
+          "1",
+          "cos²(θ/2)",
+          "1/2",
+          "sin²(θ/2)",
+          "zero"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nDiscarding the S_x result produces an equal incoherent mixture of |+x⟩ and |−x⟩. Its Bloch vector is zero, so every later spin direction gives equal + and − probabilities. Keeping coherence would incorrectly preserve information about the original +z state.\n\n90-SECOND SOLUTION\nAn unread x measurement dephases the state in the x basis; +z has equal weights there, leaving the maximally mixed state.\n\nWHAT TO MEMORIZE\nA measurement whose outcome is ignored still changes the density matrix by removing coherence in the measured basis."
+      },
+
+      {
+        "question": "Two plane-wave states have forms ψ_I=Ae^{ikx} and ψ_II=Ae^{−2ikx}, with the same real A and k>0. The ratio of their probability currents j_II/j_I is",
+        "choices": [
+          "2",
+          "1/2",
+          "−1/2",
+          "−2",
+          "−4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a plane wave Ae^{iqx}, j=ħq|A|²/m. Region I has q=k and region II has q=−2k, so the ratio is −2. Comparing only |ψ|² would predict equal currents, but density contains no information about propagation direction or wave number.\n\n90-SECOND SOLUTION\nRead the signed wave number from the exponential; current is proportional to q|A|².\n\nWHAT TO MEMORIZE\nPlane-wave probability current is j=ħk|A|²/m, including the sign of k."
+      },
+
+      {
+        "question": "For canonical operators [x,p]=iħ, the commutator [x²,p²] equals",
+        "choices": [
+          "2iħxp",
+          "4iħxp",
+          "2iħ(xp−px)",
+          "4iħ²",
+          "2iħ(xp+px)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nUse [A,BC]=[A,B]C+B[A,C]. First [x,p²]=2iħp, then [x²,p²]=x[x,p²]+[x,p²]x=2iħ(xp+px). Writing 4iħxp drops the ordering correction and is not manifestly Hermitian after division by i.\n\n90-SECOND SOLUTION\nPeel off one x, evaluate [x,p²], and preserve both operator orderings.\n\nWHAT TO MEMORIZE\nCommutators obey product rules, but noncommuting factors cannot be rearranged casually."
+      },
+
+      {
+        "question": "An infinite square well initially symmetric about x=0 is suddenly widened only on its right side. Immediately after the change, which statement about expansion in the new energy eigenstates is necessarily true?",
+        "choices": [
+          "No parity-about-x=0 rule forces alternating coefficients to vanish",
+          "Only even-parity states occur",
+          "Only odd-parity states occur",
+          "The old state becomes one new eigenstate",
+          "Energy is conserved in each trial"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-3/q30.png",
+        "explanation": "WORKED SOLUTION\nThe one-sided widening destroys reflection symmetry about x=0, so the new Hamiltonian has no even/odd classification about that point. The unchanged wavefunction must be expanded in the complete new basis, and no alternating set of overlaps is forced to vanish by parity. Sudden changes preserve the state at that instant, not its energy.\n\n90-SECOND SOLUTION\nAsk what symmetry the new Hamiltonian actually has. Once left-right symmetry is gone, parity-based eliminations are gone too.\n\nWHAT TO MEMORIZE\nIn the sudden approximation the wavefunction is continuous through the change; probabilities come from overlaps with the new eigenstates."
+      },
+
+      {
+        "question": "A particle traverses two identical barriers separated by a classically allowed region of width L and wave number k. Perfect resonant transmission can occur when the round-trip phase in the middle region, including the reflection phase φ at each barrier, satisfies",
+        "choices": [
+          "kL+φ=π/2",
+          "2kL+2φ=2πn",
+          "kL=2πn regardless of φ",
+          "2kL+φ=π/2",
+          "kL+2φ=πn/2"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-3/q31.png",
+        "explanation": "WORKED SOLUTION\nMultiple reflected amplitudes in the middle add constructively when a complete round trip returns with phase 2πn. The propagation contributes 2kL and the two reflections contribute 2φ, giving 2kL+2φ=2πn. Ignoring φ is valid only for a special barrier phase, not in general.\n\n90-SECOND SOLUTION\nTrack one full round trip between the barriers: two traversals plus two reflections. Set its phase to an integer multiple of 2π.\n\nWHAT TO MEMORIZE\nResonant tunnelling is Fabry–Pérot interference for matter waves."
+      },
+
+      {
+        "question": "A harmonic oscillator potential ½mω²x² is made infinite for x≤0 while unchanged for x>0. Its ground-state energy is",
+        "choices": [
+          "½ħω",
+          "ħω",
+          "3ħω/2",
+          "2ħω",
+          "5ħω/2"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-3/q32.png",
+        "explanation": "WORKED SOLUTION\nThe wall requires ψ(0)=0, so only the odd eigenfunctions of the full oscillator survive on x>0. The lowest allowed full-oscillator state is n=1, with energy 3ħω/2; restricting and renormalizing it does not change the energy. The value ħω is an unjustified midpoint between the first two ordinary levels.\n\n90-SECOND SOLUTION\nThe wall selects odd parity. Take the first odd oscillator level, n=1.\n\nWHAT TO MEMORIZE\nA half-harmonic oscillator keeps the odd full-oscillator energies: 3ħω/2, 7ħω/2, and so on."
+      },
+
+      {
+        "question": "For l=1 and s=1/2 coupled to |j=3/2,m=1/2⟩, the expectation value of S_z is",
+        "choices": [
+          "ħ/2",
+          "ħ/3",
+          "zero",
+          "ħ/6",
+          "−ħ/6"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe state is √(2/3)|m_l=0,m_s=1/2⟩+√(1/3)|m_l=1,m_s=−1/2⟩. Thus ⟨S_z⟩=(2/3)(ħ/2)+(1/3)(−ħ/2)=ħ/6. Simply assigning all of mħ to the spin ignores angular-momentum coupling.\n\nNUMERICS WITHOUT A CALCULATOR\nWeighted spin projections give ħ/3−ħ/6=ħ/6.\n\n90-SECOND SOLUTION\nWrite the two Clebsch–Gordan components and average m_sħ using squared coefficients.\n\nWHAT TO MEMORIZE\nExpectation values in coupled states use probabilities—the squares of Clebsch–Gordan amplitudes."
+      },
+
+      {
+        "question": "A beam of spin-1/2 particles in state |+z⟩ crosses a uniform magnetic field B in the +x direction over length L at speed v. Neglect fringe fields. Complete conversion to |−z⟩ first occurs when",
+        "choices": [
+          "|γ|BL/v=π/2",
+          "|γ|Bv/L=π",
+          "|γ|BL/v=2π",
+          "|γ|BLv=π",
+          "|γ|BL/v=π"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-3/q34.png",
+        "explanation": "WORKED SOLUTION\nThe spin’s Bloch vector precesses about x through angle θ=|γ|Bt=|γ|BL/v. Reversing +z to −z requires a π rotation, so the first condition is |γ|BL/v=π. A π/2 rotation produces an equal superposition, not a complete flip.\n\n90-SECOND SOLUTION\nReplace transit time by L/v and demand a half-turn of the spin direction.\n\nWHAT TO MEMORIZE\nLarmor rotation angle is |γ|Bt; orthogonal spin states correspond to opposite Bloch vectors, separated by π."
+      },
+
+      {
+        "question": "Exactly three noninteracting spinless bosons occupy two nondegenerate one-particle levels with energies 0 and ε. With x=e^{−βε}, their canonical partition function is",
+        "choices": [
+          "1+x+x²+x³",
+          "(1+x)³",
+          "1+3x+3x²+x³",
+          "1+x+x²",
+          "1/(1−x)³"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA bosonic many-particle state is specified only by the occupation n of the excited level. For exactly three bosons, n may be 0, 1, 2, or 3, producing Boltzmann weights 1, x, x², and x³. Thus Z=1+x+x²+x³. The binomial expression (1+x)³ counts three distinguishable labeled particles and overcounts bosonic occupation states.\n\n90-SECOND SOLUTION\nList the four possible excited-level occupation numbers; each occupation is one bosonic state because both levels are nondegenerate.\n\nWHAT TO MEMORIZE\nFor indistinguishable bosons, count occupation-number configurations, not assignments of labeled particles."
+      },
+
+      {
+        "question": "Two identical noninteracting bosons enter opposite input ports of an ideal 50:50 beam splitter simultaneously. The probability that one boson exits each output port is",
+        "choices": [
+          "1/4",
+          "0",
+          "1/2",
+          "3/4",
+          "1"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe two indistinguishable coincidence amplitudes have equal magnitude and opposite beam-splitter phase, so they cancel. Both bosons bunch into one output or the other, and the coincidence probability is zero. The value 1/2 is correct for distinguishable particles whose alternatives do not interfere.\n\n90-SECOND SOLUTION\nRecognize Hong–Ou–Mandel bunching: identical bosons avoid split outputs at a balanced beam splitter.\n\nWHAT TO MEMORIZE\nIndistinguishable two-particle amplitudes interfere; probabilities cannot be assigned independently to each boson."
+      },
+
+      {
+        "question": "Approximating the muon mass as 207 times the electron mass, the Bohr radius and ground-state binding energy of muonic hydrogen are, relative to ordinary hydrogen,",
+        "choices": [
+          "207 times and 1/207",
+          "1/207 and 1/207",
+          "1/207 and 207 times",
+          "207 times and 207 times",
+          "unchanged and 207 times"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor the same nuclear charge, the Bohr radius scales as 1/μ and the binding energy as μ, where μ is the reduced mass. Replacing the electron by a much heavier muon therefore shrinks the atom by about 207 and deepens the binding by about 207. Scaling both quantities in the same direction misses their reciprocal mass dependence.\n\n90-SECOND SOLUTION\nHeavier orbiting particle means smaller wavelength and tighter orbit: radius down, energy magnitude up by the same factor.\n\nWHAT TO MEMORIZE\nHydrogenic scalings: a∝1/μZ and |E_n|∝μZ²/n²."
+      },
+
+      {
+        "question": "A ground-state hydrogen atom absorbs exactly enough energy to reach n=4. If it subsequently emits through every allowed sequence of lower levels, the number of distinct photon wavelengths that can appear is",
+        "choices": [
+          "3",
+          "4",
+          "5",
+          "6",
+          "10"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEvery pair of levels among n=1,2,3,4 can define a distinct downward transition, so the number is 4·3/2=6. Counting only the three direct decays to the ground state omits cascade transitions between excited levels.\n\nNUMERICS WITHOUT A CALCULATOR\nThe pairs are 4→3, 4→2, 4→1, 3→2, 3→1, and 2→1.\n\n90-SECOND SOLUTION\nFor n populated levels, count unordered level pairs: n(n−1)/2.\n\nWHAT TO MEMORIZE\nA cascade can produce every energy difference between populated levels, subject to any stated selection rules."
+      },
+
+      {
+        "question": "In LS coupling, the ground-state term symbol for two equivalent p electrons is",
+        "choices": [
+          "¹S₀",
+          "¹D₂",
+          "³D₁",
+          "³P₂",
+          "³P₀"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nHund’s first rule selects maximum spin S=1, and the allowed triplet term for p² is ³P with L=1. Because the shell is less than half full, the lowest J is |L−S|=0, giving ³P₀. The ³P₂ choice applies the more-than-half-filled J ordering.\n\n90-SECOND SOLUTION\nMaximize S, then L; for p², less than half full means choose the smallest J.\n\nWHAT TO MEMORIZE\nHund ordering: maximize S, then L; minimum J below half filling and maximum J above half filling."
+      },
+
+      {
+        "question": "An atom in a weak magnetic field emits a normal Zeeman triplet. Observed along the magnetic-field direction, the spectrum contains",
+        "choices": [
+          "only the two σ components",
+          "only the π component",
+          "all three components with equal intensity",
+          "the unsplit original line only",
+          "no radiation"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe π component, with Δm=0, is linearly polarized along the field and has no radiation intensity on its axis. Looking along the field therefore reveals only the circularly polarized σ⁺ and σ⁻ components. Seeing all three is the transverse-view result.\n\n90-SECOND SOLUTION\nA dipole does not radiate along its oscillation axis; the π dipole oscillates parallel to B and disappears in the axial view.\n\nWHAT TO MEMORIZE\nZeeman observation along B: σ components only. Perpendicular to B: π and σ components can appear."
+      },
+
+      {
+        "question": "A photon with wavelength equal to the electron Compton wavelength scatters through 90°. The recoil electron makes an angle φ with the incident photon direction. Then tanφ is",
+        "choices": [
+          "2",
+          "1/2",
+          "1",
+          "1/√2",
+          "√2"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-3/q41.png",
+        "explanation": "WORKED SOLUTION\nAt 90°, the Compton shift is one Compton wavelength, so λ′=2λ and p′=p/2. Momentum conservation gives electron components p_e,x=p and p_e,y=−p′, hence tanφ=p′/p=1/2. Using the photon scattering angle as the electron angle gives 1.\n\nNUMERICS WITHOUT A CALCULATOR\nThe scattered wavelength doubles, so its momentum halves; the momentum triangle immediately gives tanφ=1/2.\n\n90-SECOND SOLUTION\nUse the Compton shift first, then read the electron direction from the two perpendicular photon momenta.\n\nWHAT TO MEMORIZE\nPhoton momentum is h/λ, and the recoil electron momentum is the vector difference of initial and final photon momenta."
+      },
+
+      {
+        "question": "In an x-ray tube, the accelerating voltage is doubled while the target material is unchanged. Which change occurs in the emitted spectrum?",
+        "choices": [
+          "All characteristic wavelengths halve",
+          "Characteristic wavelengths double",
+          "The cutoff wavelength halves while characteristic wavelengths remain fixed",
+          "The cutoff stays fixed while characteristic wavelengths halve",
+          "Both cutoff and characteristic wavelengths halve"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-3/q42.png",
+        "explanation": "WORKED SOLUTION\nThe bremsstrahlung cutoff obeys eV=hc/λ_min, so doubling V halves λ_min. Characteristic lines are set by atomic level differences in the target and therefore do not move. The belief that every feature scales with voltage confuses electron kinetic energy with target energy levels.\n\n90-SECOND SOLUTION\nSeparate the two mechanisms: voltage controls the continuum endpoint; target identity controls the sharp lines.\n\nWHAT TO MEMORIZE\nDuane–Hunt: λ_min=hc/eV. Characteristic x-ray frequencies depend on the target element."
+      },
+
+      {
+        "question": "Two identical bodies, each with constant heat capacity C, are isolated together. Their initial temperatures are T and 4T. After equilibrium, the total entropy change is",
+        "choices": [
+          "C ln(5/4)",
+          "2C ln(5/4)",
+          "C ln(16/25)",
+          "C ln(25/16)",
+          "2C ln(25/16)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEnergy conservation gives T_f=(T+4T)/2=5T/2. The entropy change is C ln[(5T/2)/T]+C ln[(5T/2)/(4T)]=C ln[(5/2)(5/8)]=C ln(25/16). The negative logarithm reverses initial and final temperatures.\n\nNUMERICS WITHOUT A CALCULATOR\nMultiply the two temperature ratios: (5/2)(5/8)=25/16.\n\n90-SECOND SOLUTION\nFind the arithmetic-mean final temperature, then add C ln(T_f/T_i) for both bodies.\n\nWHAT TO MEMORIZE\nFor constant heat capacity, ΔS=C ln(T_f/T_i); entropy changes add even when the heat transfer is irreversible."
+      },
+
+      {
+        "question": "The figure shows a reversible rectangular cycle on a T–S diagram. If both T_H and T_C are halved while the entropy width ΔS is doubled, the magnitude of the net work per cycle",
+        "choices": [
+          "doubles",
+          "is halved",
+          "quadruples",
+          "falls to one quarter",
+          "is unchanged"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-3/q44.png",
+        "explanation": "WORKED SOLUTION\nFor a reversible cycle, the net work equals the enclosed T–S area: W=(T_H−T_C)ΔS. Halving both temperatures halves their difference, while doubling ΔS supplies the compensating factor of two, so W is unchanged. Saying the work doubles tracks only the wider cycle and ignores its reduced height.\n\n90-SECOND SOLUTION\nTreat the cycle as a rectangle. Its height is halved and its width doubled, leaving its area unchanged.\n\nWHAT TO MEMORIZE\nOn a reversible T–S diagram, enclosed area is net heat and therefore net work over a complete cycle."
+      },
+
+      {
+        "question": "Body A has heat capacity C_A=αT and body B has C_B=βT³. A begins at T₀, B at zero temperature, and the pair is isolated. The equilibrium temperature T_f satisfies",
+        "choices": [
+          "αT_f²/2+βT_f⁴/4=αT₀²/2",
+          "αT_f+βT_f³=αT₀",
+          "αT_f²+βT_f⁴=αT₀²/2",
+          "αln(T_f/T₀)+βT_f³/3=0",
+          "αT_f²/2+βT_f⁴/4=αT₀"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nInternal energy changes are integrals of heat capacity. Body A initially contains ∫₀^{T₀}αT dT=αT₀²/2. At equilibrium the two energies are αT_f²/2 and βT_f⁴/4, whose sum equals the initial energy. Equating heat capacities at T_f is not energy conservation.\n\n90-SECOND SOLUTION\nIntegrate each C(T) once before writing the isolated-system energy balance.\n\nWHAT TO MEMORIZE\nWhen heat capacity varies with temperature, ΔU=∫C(T)dT, not CΔT with a conveniently chosen C."
+      },
+
+      {
+        "question": "Equal numbers of molecules of masses m and 4m occupy a vessel with a tiny effusion hole at fixed temperature. If each species obeys dN/dt=−kN/√mass, then N_m/N_{4m} varies as",
+        "choices": [
+          "e^{+kt/2√m}",
+          "e^{−kt/2√m}",
+          "e^{−2kt/√m}",
+          "1/2",
+          "it remains 1"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe fractional effusion rate scales as 1/√mass. Thus N_m=N₀e^{−kt/√m}, whereas N_{4m}=N₀e^{−kt/(2√m)}. Their ratio is e^{−kt/(2√m)}, so the remaining gas becomes enriched in the heavier species. A constant ratio ignores the mass dependence of molecular speed.\n\n90-SECOND SOLUTION\nWrite one exponential loss law per species; the light species has twice the fractional escape rate.\n\nWHAT TO MEMORIZE\nEffusion rate at fixed temperature scales as number density divided by √m."
+      },
+
+      {
+        "question": "A two-level system with energy gap ε has populations N_upper/N_lower=3. If described by a Boltzmann temperature, that temperature is",
+        "choices": [
+          "ε/(3k)",
+          "ε/(k ln3)",
+          "−ε/(k ln3)",
+          "−3ε/k",
+          "zero"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBoltzmann populations obey N_upper/N_lower=e^{−ε/kT}. Setting this ratio to 3 gives −ε/(kT)=ln3, hence T=−ε/(kln3). A positive temperature always makes the upper level less populated, so the sign can be identified before any algebra.\n\n90-SECOND SOLUTION\nPopulation inversion means negative temperature; use the ratio only to determine its magnitude.\n\nWHAT TO MEMORIZE\nNegative absolute temperatures can occur in systems with bounded spectra and inverted populations; they are hotter than any positive temperature."
+      },
+
+      {
+        "question": "One mole of gas follows the cycle (V₀,P₀)→(2V₀,P₀)→(2V₀,3P₀)→(V₀,P₀) on the P–V diagram. The net work done by the gas per cycle is",
+        "choices": [
+          "2P₀V₀",
+          "P₀V₀",
+          "zero",
+          "−P₀V₀",
+          "−2P₀V₀"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-3/q48.png",
+        "explanation": "WORKED SOLUTION\nThe magnitude of the cyclic work is the triangle’s area, ½(V₀)(2P₀)=P₀V₀. The path is counterclockwise, so compression occurs at higher average pressure than expansion and the work done by the gas is negative. Choosing +P₀V₀ gets the area right but misses the orientation.\n\nNUMERICS WITHOUT A CALCULATOR\nTriangle area is one half times V₀ times 2P₀, or P₀V₀.\n\n90-SECOND SOLUTION\nRead magnitude from enclosed area and sign from direction: clockwise positive, counterclockwise negative for work by the gas.\n\nWHAT TO MEMORIZE\nFor a closed P–V cycle, ∮P dV is the signed enclosed area."
+      },
+
+      {
+        "question": "Two spherical blackbody stars at the same distance produce equal observed bolometric flux. Star 1 has a spectral peak at half the wavelength of star 2. The radius ratio R₁/R₂ is",
+        "choices": [
+          "2",
+          "1/2",
+          "4",
+          "1/√2",
+          "1/4"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWien’s law gives T₁=2T₂. Equal observed flux at equal distance requires R₁²T₁⁴=R₂²T₂⁴. Therefore R₁/R₂=(T₂/T₁)²=1/4. Using 1/2 accounts for one power of the temperature ratio instead of the fourth-power luminosity.\n\nNUMERICS WITHOUT A CALCULATOR\nDoubling T multiplies surface flux by 16, so radius squared must fall by 16 and radius by 4.\n\n90-SECOND SOLUTION\nPeak wavelength fixes the inverse temperature ratio; equal brightness then combines R² with T⁴.\n\nWHAT TO MEMORIZE\nWien: λ_peakT=constant. Stefan–Boltzmann: luminosity ∝R²T⁴."
+      },
+
+      {
+        "question": "At the marked point a medium has dispersion relation ω=ak² with a>0 and k>0. The ratio of group speed to phase speed is",
+        "choices": [
+          "2",
+          "1",
+          "1/2",
+          "k",
+          "a"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-3/q50.png",
+        "explanation": "WORKED SOLUTION\nThe phase speed is ω/k=ak, whereas the group speed is dω/dk=2ak. Their ratio is 2. Equating them imports the nondispersive result ω∝k into a quadratic dispersion relation.\n\n90-SECOND SOLUTION\nPhase is secant slope from the origin; group is tangent slope. For a parabola the tangent slope is twice the secant slope.\n\nWHAT TO MEMORIZE\nv_p=ω/k and v_g=dω/dk."
+      },
+
+      {
+        "question": "A transverse displacement pulse travels from a string of impedance Z₁ into a finite string of impedance Z₂ and then a semi-infinite string of impedance Z₃, where Z₁<Z₂<Z₃. The first two reflected pulses eventually observed back in string 1 are",
+        "choices": [
+          "upright, then inverted",
+          "both inverted",
+          "inverted, then upright",
+          "both upright",
+          "the second is absent"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nReflection from a lower to higher impedance reverses a displacement pulse, so the first reflection at Z₁→Z₂ is inverted. The portion entering string 2 reflects at Z₂→Z₃ with another inversion; transmission back through Z₂→Z₁ does not add an inversion, so the second returning pulse is also inverted. Treating the two interface inversions as acting on the same pulse gives the upright trap.\n\n90-SECOND SOLUTION\nTrack each returning pulse separately. Each one has encountered exactly one reflection from lower to higher impedance.\n\nWHAT TO MEMORIZE\nA displacement pulse reflects inverted when it meets a higher wave impedance and upright from a lower one."
+      },
+
+      {
+        "question": "A point object is placed in front of a converging lens of focal length f. A plane mirror lies farther along the same axis. For light emerging from the lens to reflect and return to the object independent of the lens–mirror separation, the object must be",
+        "choices": [
+          "2f in front of the lens",
+          "f/2 in front of the lens",
+          "f in front of the lens",
+          "at the lens",
+          "at the mirror’s center of curvature"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-3/q52.png",
+        "explanation": "WORKED SOLUTION\nAn object at the lens’s front focal point emerges as a parallel beam. The plane mirror returns that beam parallel in the opposite direction, and the lens then focuses it back to its front focal point. The mirror separation drops out. Placing the object at 2f creates a finite image whose return depends on the geometry.\n\n90-SECOND SOLUTION\nThe phrase independent of separation signals a collimated intermediate beam, so put the object at the focal point.\n\nWHAT TO MEMORIZE\nA point at a converging lens’s focal plane maps to a parallel beam and vice versa."
+      },
+
+      {
+        "question": "One output port of a balanced Mach–Zehnder interferometer is initially dark. A lossless plate adding phase π is inserted into one arm. The previously dark port becomes",
+        "choices": [
+          "unchanged",
+          "half as bright as the other",
+          "randomly bright or dark",
+          "bright while the other port becomes dark",
+          "dark only for one polarization"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-3/q53.png",
+        "explanation": "WORKED SOLUTION\nThe π plate reverses the sign of one arm’s amplitude. At the second beam splitter, the port that formerly had destructive interference now has constructive interference, while the formerly bright port becomes destructive. Splitting the power equally would apply if coherence were lost, not when a definite phase is added.\n\n90-SECOND SOLUTION\nA π phase shift multiplies one path amplitude by −1, swapping sum and difference outputs.\n\nWHAT TO MEMORIZE\nIn a balanced two-path interferometer, a relative π phase exchanges the bright and dark ports."
+      },
+
+      {
+        "question": "A grating has equally spaced slits separated by d, but every other slit is covered by a plate that adds a phase π. Which feature of the ordinary grating pattern is necessarily suppressed?",
+        "choices": [
+          "the central maximum",
+          "only the first order",
+          "only even orders except zero",
+          "only odd orders",
+          "all principal maxima of the original d-spacing grating"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAt every ordinary principal maximum, adjacent uncovered and phase-shifted slit amplitudes would otherwise be in phase, but the added π makes each neighboring pair cancel. Thus all principal maxima of the original d-period grating, including zero order, are suppressed; new maxima appear at the half-order positions of the doubled 2d pattern. Selecting only odd orders misses the cancellation at zero order.\n\n90-SECOND SOLUTION\nGroup adjacent slits into pairs. At an ordinary grating maximum their propagation phases match, so the imposed π makes every pair cancel.\n\nWHAT TO MEMORIZE\nA periodic phase alternation doubles the unit cell and changes the reciprocal-lattice selection rules."
+      },
+
+      {
+        "question": "Unpolarized light of intensity I₀ passes through a linear polarizer, then an ideal quarter-wave plate whose axes are at 45° to the polarizer, and finally a linear analyzer. The transmitted intensity after the analyzer is",
+        "choices": [
+          "I₀/4 for every analyzer angle",
+          "I₀/2 for every analyzer angle",
+          "I₀cos²θ/2",
+          "I₀sin²2θ/4",
+          "zero at one analyzer angle"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe first polarizer leaves intensity I₀/2. Equal components along the quarter-wave plate axes acquire a 90° relative phase, producing circular polarization. Any linear analyzer transmits half of circularly polarized light, so the result is I₀/4 independent of angle. Applying Malus’s law directly to the first polarizer ignores the intervening phase plate.\n\n90-SECOND SOLUTION\nPolarizer at 45° to a quarter-wave plate produces circular light; every analyzer angle then transmits one half.\n\nWHAT TO MEMORIZE\nEqual orthogonal components with a quarter-cycle phase difference form circular polarization."
+      },
+
+      {
+        "question": "A radioactive parent P decays to a radioactive daughter D, with initially no D present. The daughter population reaches its maximum when",
+        "choices": [
+          "N_P=N_D",
+          "λ_PN_P=λ_DN_D",
+          "λ_P=λ_D",
+          "half the parent remains",
+          "the daughter half-life has elapsed"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe daughter rate equation is dN_D/dt=λ_PN_P−λ_DN_D. Its population is maximal when this derivative vanishes, so the production and decay activities are equal. Equal populations matter only if the decay constants also happen to be equal.\n\n90-SECOND SOLUTION\nAt a maximum, rate in equals rate out. Write that balance without solving the two exponentials.\n\nWHAT TO MEMORIZE\nFor an intermediate species in a decay chain, an extremum occurs when its production and removal rates match."
+      },
+
+      {
+        "question": "For a nonrelativistic endothermic reaction a+A→products with target A initially at rest and Q<0, the projectile threshold kinetic energy is approximately",
+        "choices": [
+          "−Q",
+          "−Qm_A/m_a",
+          "−Q(1+m_a/m_A)",
+          "−Q(1+m_A/m_a)",
+          "Q(1+m_a/m_A)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nAt threshold the products can be at rest relative to one another, but their center of mass must still carry the incident momentum. That unavoidable kinetic energy makes K_th=−Q(1+m_a/m_A). The answer −Q would be possible only if momentum could disappear or if the target were infinitely massive.\n\n90-SECOND SOLUTION\nThreshold exceeds |Q| by the projectile-to-target mass correction required by momentum conservation.\n\nWHAT TO MEMORIZE\nFor a stationary target and nonrelativistic two-body threshold, K_th≈−Q(1+m_projectile/m_target)."
+      },
+
+      {
+        "question": "Which decay is allowed by electric charge, baryon number, and electron-family lepton number?",
+        "choices": [
+          "p→e⁺+γ",
+          "e⁻→ν_e+γ",
+          "n→p+e⁻+ν_e",
+          "n→p+e⁻+anti-ν_e",
+          "π⁺→e⁻+ν_e"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBeta-minus decay is n→p+e⁻+anti-ν_e. Charge is 0 on both sides, baryon number remains 1, and electron-family lepton number is 0 because e⁻ contributes +1 and anti-ν_e contributes −1. Using ν_e instead gives lepton number +2.\n\n90-SECOND SOLUTION\nCheck conservation laws column by column; the antineutrino is required to cancel the electron’s lepton number.\n\nWHAT TO MEMORIZE\nBeta minus: neutron becomes proton plus electron plus electron antineutrino."
+      },
+
+      {
+        "question": "In the band diagram, both E_c and E_v rise with x. Since electron potential energy is −eφ, the built-in electric field points in the +x direction. Under weak illumination, electrons and holes initially drift, respectively,",
+        "choices": [
+          "both toward +x",
+          "both toward −x",
+          "electrons +x, holes −x",
+          "neither drifts",
+          "electrons −x, holes +x"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-3/q59.png",
+        "explanation": "WORKED SOLUTION\nThe stated band slope corresponds to E in +x. Electrons carry negative charge and drift opposite the field, toward −x; holes act as positive carriers and drift with it, toward +x. Sending both the same way confuses carrier drift with the motion of a neutral excitation.\n\n90-SECOND SOLUTION\nOnce the field direction is known, apply F=qE separately to negative electrons and positive holes.\n\nWHAT TO MEMORIZE\nElectrons drift opposite an electric field; holes drift with it."
+      },
+
+      {
+        "question": "The first three allowed powder-diffraction peaks of a cubic crystal have sin²θ values in the ratio 3:4:8. The Bravais lattice is",
+        "choices": [
+          "face-centered cubic",
+          "body-centered cubic",
+          "simple cubic",
+          "hexagonal close packed",
+          "the ratio cannot distinguish any lattices"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a cubic lattice, sin²θ is proportional to h²+k²+l². An fcc lattice allows indices all odd or all even, producing the first values 3 for (111), 4 for (200), and 8 for (220). Simple cubic begins 1:2:3, while bcc begins 2:4:6.\n\n90-SECOND SOLUTION\nMatch the sequence of allowed squared reciprocal-lattice lengths, not just a single spacing.\n\nWHAT TO MEMORIZE\nFcc reflections require h,k,l all odd or all even; bcc requires h+k+l even."
+      },
+
+      {
+        "question": "Using F(k)=∫f(x)e^{−ikx}dx, the Fourier transform of d[f(x−a)]/dx is",
+        "choices": [
+          "−ike^{ika}F(k)",
+          "ike^{−ika}F(k)",
+          "e^{−ika}F(k)",
+          "ikF(k−a)",
+          "−ike^{−ika}F(k)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nTranslation by a multiplies the transform by e^{−ika}, while differentiation multiplies it by ik under the stated convention. Applying both gives ike^{−ika}F(k). The sign-reversed answer belongs to the opposite exponential convention.\n\n90-SECOND SOLUTION\nApply the two transform rules independently: shift gives a phase; derivative gives ik.\n\nWHAT TO MEMORIZE\nWith e^{−ikx}: f(x−a)↔e^{−ika}F(k) and f′(x)↔ikF(k)."
+      },
+
+      {
+        "question": "Two photons of energies E₁ and E₂ travel at angle θ to one another. The invariant mass M of the two-photon system satisfies",
+        "choices": [
+          "Mc²=E₁+E₂",
+          "M²c⁴=E₁E₂cosθ",
+          "M²c⁴=2E₁E₂(1−cosθ)",
+          "Mc²=|E₁−E₂|",
+          "M²c⁴=2E₁E₂(1+cosθ)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe total four-momentum gives M²c⁴=(E₁+E₂)²−c²|p₁+p₂|². With |p_i|=E_i/c, expanding cancels E₁² and E₂² and leaves 2E₁E₂(1−cosθ). The plus sign would incorrectly make parallel photons massive.\n\n90-SECOND SOLUTION\nUse the invariant and demand the parallel limit θ=0 give zero; this immediately selects 1−cosθ.\n\nWHAT TO MEMORIZE\nA collection of individually massless particles can have nonzero invariant mass when their momenta are not parallel."
+      },
+
+      {
+        "question": "Uniform fields satisfy E⊥B and E<cB. A frame moving with velocity v can make the electric field vanish. The required velocity is directed along E×B and has magnitude",
+        "choices": [
+          "cE/B",
+          "c²B/E",
+          "EB/c",
+          "E/B",
+          "c²E/B"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a boost perpendicular to both fields, E′_perp=γ(E+v×B). Choosing v along E×B makes v×B oppose E, and cancellation requires vB=E, so v=E/B. The condition E<cB guarantees this is subluminal. Extra factors of c arise from mixing SI field invariants with the force-balance relation.\n\n90-SECOND SOLUTION\nThis is the velocity-selector condition E=vB, interpreted as a change of frame.\n\nWHAT TO MEMORIZE\nWhen E⊥B and E<cB, a boost along E×B with speed E/B removes E."
+      },
+
+      {
+        "question": "Unstable particles have proper mean lifetime τ and move ultrarelativistically with Lorentz factor γ. The laboratory distance after which half remain is most nearly",
+        "choices": [
+          "cτ/γ",
+          "γcτ",
+          "cτln2/γ",
+          "γcτ/ln2",
+          "γcτln2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe lab mean lifetime is γτ, and ultrarelativistic particles travel nearly c. Survival is e^{−t/(γτ)}; setting it to 1/2 gives t=γτln2 and distance γcτln2. The choice γcτ is the mean decay length, not the half-survival distance.\n\n90-SECOND SOLUTION\nDilate the lifetime by γ, multiply by c, and include ln2 because the question asks for half rather than 1/e survival.\n\nWHAT TO MEMORIZE\nExponential survival: half-life equals mean lifetime times ln2."
+      },
+
+      {
+        "question": "In frame S, two events occur simultaneously at positions separated by L along +x. In frame S′ moving at speed v along +x, their time separation Δt′=t′_right−t′_left is",
+        "choices": [
+          "−γvL/c²",
+          "+γvL/c²",
+          "−vL/c²",
+          "+vL/c²",
+          "zero"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe Lorentz time transformation gives Δt′=γ(Δt−vΔx/c²). With Δt=0 and Δx=L, Δt′=−γvL/c², so the event farther right occurs earlier in S′. Omitting γ uses a low-speed approximation as an exact result.\n\n90-SECOND SOLUTION\nInsert Δt=0 and Δx=L directly into the interval form of the Lorentz transformation.\n\nWHAT TO MEMORIZE\nSpatially separated simultaneous events in one frame are generally nonsimultaneous in another: Δt′=γ(Δt−vΔx/c²)."
+      },
+
+      {
+        "question": "A log–log fit gives y=Ax^n with n=2.0±0.1. Ignoring uncertainty in A and x, the predicted factor y(2x)/y(x) is 4 with an approximate fractional uncertainty of",
+        "choices": [
+          "2%",
+          "7%",
+          "10%",
+          "14%",
+          "20%"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe ratio is 2^n. Logarithmic propagation gives δr/r=ln2·δn≈0.69×0.1≈0.07, or 7%. Using 10% copies the exponent’s absolute uncertainty directly without accounting for the logarithmic sensitivity.\n\nNUMERICS WITHOUT A CALCULATOR\nln2≈0.69, so 0.69×0.1≈0.07.\n\n90-SECOND SOLUTION\nTake a logarithm: ln r=n ln2, then propagate the uncertainty in n.\n\nWHAT TO MEMORIZE\nFor y=a^n, fractional uncertainty from n is δy/y≈|ln a|δn."
+      },
+
+      {
+        "question": "A Fabry–Pérot cavity’s length is doubled while its mirror reflectivity is changed so that its finesse is halved. Its free spectral range and resonance linewidth become, respectively,",
+        "choices": [
+          "unchanged and doubled",
+          "halved and halved",
+          "halved and unchanged",
+          "doubled and unchanged",
+          "doubled and halved"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe free spectral range is c/(2L), so doubling L halves it. The linewidth is free spectral range divided by finesse. Since both numerator and finesse are halved, their ratio is unchanged. Saying the linewidth halves tracks only the cavity length and ignores the reflectivity change.\n\n90-SECOND SOLUTION\nApply Δν_FSR∝1/L, then linewidth=FSR/finesse.\n\nWHAT TO MEMORIZE\nFabry–Pérot: free spectral range c/(2L); finesse is FSR divided by linewidth."
+      },
+
+      {
+        "question": "An ideal inverting summing amplifier has feedback resistance 20 kΩ. A sinusoid v(t) enters through 10 kΩ and a +1.0 V DC source enters through 20 kΩ. The output is",
+        "choices": [
+          "2v(t)+1 V",
+          "−v(t)−2 V",
+          "−2v(t)+1 V",
+          "−2v(t)−1 V",
+          "v(t)−1 V"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-3/q68.png",
+        "explanation": "WORKED SOLUTION\nThe inverting summer gives v_o=−R_f[v/10kΩ+1V/20kΩ]=−2v−1V. The sinusoid is inverted with gain 2 and rides on a −1 V offset. The +1 V offset choice forgets that the DC input enters the same inverting node.\n\nNUMERICS WITHOUT A CALCULATOR\nThe resistance ratios are 20/10=2 and 20/20=1.\n\n90-SECOND SOLUTION\nCompute one negative gain −R_f/R_in for each input and add the two output contributions.\n\nWHAT TO MEMORIZE\nAn ideal inverting summer has v_o=−R_fΣ(v_i/R_i)."
+      },
+
+      {
+        "question": "An oscilloscope in XY mode receives equal-frequency sinusoids of equal amplitude. The displayed ellipse crosses the y-axis at ±(√3/2) of its maximum height, and its major axis has negative slope. The phase difference is",
+        "choices": [
+          "30°",
+          "45°",
+          "60°",
+          "90°",
+          "120°"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-3/q69.png",
+        "explanation": "WORKED SOLUTION\nFor x=A sinωt and y=A sin(ωt+φ), the y-intercept magnitude divided by A is |sinφ|=√3/2, allowing 60° or 120°. The ellipse’s negative orientation means cosφ<0, selecting 120°. Reporting 60° uses the intercept but ignores the slope information.\n\nNUMERICS WITHOUT A CALCULATOR\n|sinφ|=√3/2 gives 60° or 120°; negative cosine selects 120°.\n\n90-SECOND SOLUTION\nUse the intercept for |sinφ| and the ellipse tilt for the sign of cosφ.\n\nWHAT TO MEMORIZE\nA same-frequency Lissajous ellipse gives phase from its normalized intercept; its tilt resolves the quadrant."
+      }
+
+    ]
+  },
 
 ];
