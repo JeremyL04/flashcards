@@ -20008,5 +20008,309 @@ const EXAMS = [
 
     ]
   },
+{
+  "name": "E&M: Superposition, Coulomb & Biot-Savart (20 Questions)",
+  "added": "2026-09-15",
+  "category": "em",
+  "cards": [
+
+// Q1 [EM/magnetostatics & Lorentz force] (H)
+{
+  "question": "A wire carries current I along two radial segments joined by a circular arc of radius R that subtends an angle 120° at P, as shown. The magnetic field at P has magnitude",
+  "choices": [
+    "μ₀I/(4R)",
+    "μ₀I/(6R)",
+    "μ₀I/(3R)",
+    "μ₀I/(2πR)",
+    "zero"
+  ],
+  "answer": "B",
+  "image": "images/em-superposition-biot-20/q0.png",
+  "explanation": "WORKED SOLUTION\nFor either radial segment, dℓ is parallel or antiparallel to the vector from the element to P, so dℓ × r̂=0. Only the arc contributes. The field at the center of an arc of angle θ is B=μ₀Iθ/(4πR). With θ=120°=2π/3, B=μ₀I/(6R). The choice μ₀I/(3R) misses the factor of 4π in the arc formula.\n\nNUMERICS WITHOUT A CALCULATOR\nSubstitute θ=2π/3 directly: (2π/3)/(4π)=1/6.\n\n90-SECOND SOLUTION\nDiscard the radial pieces immediately because their cross products vanish, then scale the full-circle result by 120°/360°.\n\nWHAT TO MEMORIZE\nAt the center of a circular arc, B=μ₀Iθ/(4πR), with θ in radians. Radial current segments contribute zero there."
+},
+
+// Q2 [EM/electrostatics] (H)
+{
+  "question": "A particle of mass m and positive charge q enters midway between parallel plates with speed v at angle θ above the horizontal. The uniform electric field points downward. If the particle leaves the far edge, a horizontal distance L away, at its initial height, the field magnitude is",
+  "choices": [
+    "mv²sinθ/(qL)",
+    "2mv²cos²θ/(qL)",
+    "mv²sin(2θ)/(qL)",
+    "2mv²sin²θ/(qL)",
+    "mv²tanθ/(qL)"
+  ],
+  "answer": "C",
+  "image": "images/em-superposition-biot-20/q1.png",
+  "explanation": "WORKED SOLUTION\nHorizontal motion gives t=L/(v cosθ). Returning to the initial height requires 0=v sinθ·t−(qE/2m)t². Hence E=2mv sinθ/(qt)=2mv²sinθ cosθ/(qL)=mv²sin(2θ)/(qL). Using tanθ treats the horizontal flight time correctly but loses the factor associated with constant vertical acceleration.\n\n90-SECOND SOLUTION\nThis is projectile motion with g replaced by qE/m. Use the range relation L=v²sin(2θ)/(qE/m).\n\nWHAT TO MEMORIZE\nIn a uniform electric field, a charged particle has constant acceleration qE/m; resolve the motion into components exactly as for a projectile."
+},
+
+// Q3 [EM/electrostatics] (H)
+{
+  "question": "Seven identical positive point charges q occupy seven vertices of a cube of side a. The eighth vertex P is vacant. The magnitude of the electric field at P is",
+  "choices": [
+    "[q/(4πε₀a²)](√3+√(3/2)+1/3)",
+    "[q/(4πε₀a²)](1+1/√2+1/(3√3))",
+    "[q/(4πε₀a²)](3+3/2+1/3)",
+    "√3q/(4πε₀a²)",
+    "7q/(4πε₀a²)"
+  ],
+  "answer": "A",
+  "image": "images/em-superposition-biot-20/q2.png",
+  "explanation": "WORKED SOLUTION\nBy cubic symmetry the three field components at P are equal. One component receives contributions from the charge one edge away, two charges across face diagonals, and the charge across the body diagonal. Its magnitude is [q/(4πε₀a²)][1+1/√2+1/(3√3)]. Multiplying by √3 to combine three equal components gives [q/(4πε₀a²)](√3+√(3/2)+1/3). Choice B is only one Cartesian component, not the total magnitude.\n\n90-SECOND SOLUTION\nCompute one component by grouping edge, face-diagonal, and body-diagonal sources, then multiply it by √3.\n\nWHAT TO MEMORIZE\nIn a three-dimensional symmetric arrangement, equal components combine to a magnitude √3 times one component; do not confuse a component with the vector magnitude."
+},
+
+// Q4 [EM/electrostatics] (H)
+{
+  "question": "The upper semicircle of radius R shown has linear charge density λ(θ)=λ₀sinθ for 0≤θ≤π, where θ is measured from the positive x-axis. The electric field at its center is",
+  "choices": [
+    "+(λ₀/4ε₀R) ŷ",
+    "−(λ₀/4ε₀R) ŷ",
+    "+(λ₀/8ε₀R) ŷ",
+    "zero",
+    "−(λ₀/8ε₀R) ŷ"
+  ],
+  "answer": "E",
+  "image": "images/em-superposition-biot-20/q3.png",
+  "explanation": "WORKED SOLUTION\nAn element has dq=λ₀R sinθ dθ and produces dE=[1/(4πε₀)]dq/R² toward the center. The x-components cancel between θ and π−θ. The y-component is E_y=−[λ₀/(4πε₀R)]∫₀^π sin²θ dθ=−[λ₀/(4πε₀R)](π/2)=−λ₀/(8ε₀R). Choice B effectively replaces the integral of sin²θ by π.\n\n90-SECOND SOLUTION\nUse symmetry to eliminate E_x. The remaining integral is proportional to ∫₀^πsin²θ dθ=π/2.\n\nWHAT TO MEMORIZE\nFor a nonuniform arc, include the charge-density factor and the directional projection separately; here they supply two factors of sinθ."
+},
+
+// Q5 [EM/electrostatics] (H)
+{
+  "question": "A particle of mass m and positive charge q is released from rest at radius 4R from the center of a positively charged insulating sphere of radius R and total charge Q. Its charge is small enough not to disturb the sphere's charge distribution. Its speed at infinity is",
+  "choices": [
+    "√[2Qq/(4πε₀mR)]",
+    "√[Qq/(4πε₀mR)]",
+    "√[Qq/(16πε₀mR)]",
+    "√[Qq/(8πε₀mR)]",
+    "zero"
+  ],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nOutside the sphere, V(r)=Q/(4πε₀r). Energy conservation from r=4R to infinity gives (1/2)mv_∞²=Qq/(16πε₀R). Therefore v_∞=√[Qq/(8πε₀mR)]. Choice B omits the factor of 4 in the initial radius.\n\n90-SECOND SOLUTION\nAll of the initial repulsive potential energy kQq/(4R) becomes kinetic energy at infinity.\n\nWHAT TO MEMORIZE\nOutside any spherically symmetric charge distribution, the potential is the same as that of a point charge at its center."
+},
+
+// Q6 [EM/magnetostatics & Lorentz force] (H)
+{
+  "question": "Two circular loops lie in parallel planes on a common axis. Loop 1 has radius R and current I. Loop 2 has radius 2R and carries current I₂ in the opposite sense. Their centers are separated by 2√2R. For the magnetic fields to cancel at the midpoint between the loops, I₂/I must equal",
+  "choices": [
+    "1/√2",
+    "1/2",
+    "√2",
+    "2",
+    "1/4"
+  ],
+  "answer": "A",
+  "image": "images/em-superposition-biot-20/q5.png",
+  "explanation": "WORKED SOLUTION\nAt axial distance z, a loop produces B=μ₀IR²/[2(R²+z²)^(3/2)]. The midpoint is z=√2R from each loop. Loop 1 contributes a factor IR²/(3R²)^(3/2). Loop 2 contributes I₂(4R²)/(6R²)^(3/2). Equating them gives I₂/I=6^(3/2)/[4·3^(3/2)]=1/√2. The larger loop does not simply require half the current because the axial-distance denominator also changes.\n\nNUMERICS WITHOUT A CALCULATOR\n6^(3/2)/3^(3/2)=2^(3/2)=2√2; dividing by 4 gives 1/√2.\n\n90-SECOND SOLUTION\nWrite only the proportionality B∝IR²/(R²+z²)^(3/2) for each loop and cancel common factors.\n\nWHAT TO MEMORIZE\nThe on-axis loop field contains both an area factor R² and a distance factor (R²+z²)^(−3/2)."
+},
+
+// Q7 [EM/electrostatics] (H)
+{
+  "question": "Three corners of a square carry charges +q, +q, and −q as shown. A charge Q is placed at the fourth corner. If the electric potential at the center is zero, Q and the direction of the electric field at the center are",
+  "choices": [
+    "+q; toward the upper side",
+    "−q; toward the upper side",
+    "+q; toward the lower side",
+    "−q; toward the lower side",
+    "−3q; toward the lower side"
+  ],
+  "answer": "D",
+  "image": "images/em-superposition-biot-20/q6.png",
+  "explanation": "WORKED SOLUTION\nAll four corners are equally distant from the center, so zero potential requires the algebraic charge sum to vanish: q+q−q+Q=0, giving Q=−q. The two upper positive charges produce downward field components at the center, and the two lower negative charges also produce downward components. Horizontal components cancel, so the net field points toward the lower side. Choice B gets the charge right but treats the vector field like the scalar potential.\n\n90-SECOND SOLUTION\nUse scalar addition to find Q, then redraw the force directions on a positive test charge to determine the field direction.\n\nWHAT TO MEMORIZE\nPotential superposes as a scalar; electric field superposes as a vector. A zero potential does not imply a zero field."
+},
+
+// Q8 [EM/electrostatics] (H)
+{
+  "question": "An annulus with inner radius a and outer radius b carries total charge Q with surface charge density proportional to radius: σ(r)=kr. Taking V=0 at infinity, the potential at the center of the annulus is",
+  "choices": [
+    "Q/[4πε₀(b−a)]",
+    "3Q(b²−a²)/[8πε₀(b³−a³)]",
+    "Q(b²−a²)/[8πε₀(b³−a³)]",
+    "3Q(b−a)/[4πε₀(b²−a²)]",
+    "Q(a+b)/[4πε₀ab]"
+  ],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nFirst normalize the density: Q=∫ₐᵇkr(2πr dr)=2πk(b³−a³)/3. At the center, every element of a ring of radius r is distance r away, so dV=[1/(4πε₀)]kr(2πr dr)/r=k r dr/(2ε₀). Thus V=k(b²−a²)/(4ε₀). Eliminating k gives 3Q(b²−a²)/[8πε₀(b³−a³)]. Choice C omits the normalization factor of 3.\n\n90-SECOND SOLUTION\nUse one integral to express k in terms of Q and a second, simpler integral for V. The factor of r in Coulomb's denominator cancels one area-element factor.\n\nWHAT TO MEMORIZE\nFor a planar ring element, dA=2πr dr and its contribution at the center is dV=[1/(4πε₀)]σ(r)dA/r."
+},
+
+// Q9 [EM/electrostatics] (H)
+{
+  "question": "Four charges +q initially occupy the corners of a square of side 2a centered at O. The upper-right charge is moved a small distance δ directly toward O, where δ≪a. To first order in δ, the magnitude of the resulting electric field at O is",
+  "choices": [
+    "qδ/(8πε₀a³)",
+    "qδ/(4πε₀a³)",
+    "qδ/(4π√2ε₀a³)",
+    "q/(8πε₀a²)",
+    "qδ²/(4πε₀a⁴)"
+  ],
+  "answer": "C",
+  "image": "images/em-superposition-biot-20/q8.png",
+  "explanation": "WORKED SOLUTION\nThe original four fields cancel. Therefore the new net field is just the change in the contribution from the moved charge. Its original distance is r=√2a, so ΔE≈[1/(4πε₀)]q(2δ/r³)=qδ/(4π√2ε₀a³). The answer proportional to δ² misses the nonzero first derivative of 1/r².\n\n90-SECOND SOLUTION\nDo not resummon all four charges. Start from zero and linearize only the changed contribution: d(kq/r²)/dr=−2kq/r³.\n\nWHAT TO MEMORIZE\nWhen a symmetric field initially vanishes and one source is perturbed, the first-order net field is the first-order change of that source alone."
+},
+
+// Q10 [EM/magnetostatics & Lorentz force] (H)
+{
+  "question": "A current I enters one end of the U-shaped wire shown, follows three sides of a square of side a, and exits the other end. The magnetic field magnitude at the square's center is",
+  "choices": [
+    "μ₀I/(2πa)",
+    "√2μ₀I/(2πa)",
+    "3μ₀I/(2πa)",
+    "3μ₀I/(4a)",
+    "3√2μ₀I/(2πa)"
+  ],
+  "answer": "E",
+  "image": "images/em-superposition-biot-20/q9.png",
+  "explanation": "WORKED SOLUTION\nFor one finite side, the perpendicular distance to the center is a/2 and both endpoint angles are 45°. Hence B_side=μ₀I(sin45°+sin45°)/[4π(a/2)]=√2μ₀I/(2πa). The current circulates around the center in the same sense on all three sides, so their fields add to 3√2μ₀I/(2πa). Choice B counts only one side.\n\nNUMERICS WITHOUT A CALCULATOR\nThe two endpoint sines sum to √2, and three identical sides simply multiply the result by 3.\n\n90-SECOND SOLUTION\nFind the field of one side using the finite-wire formula, check the right-hand-rule direction for all three, and multiply by 3.\n\nWHAT TO MEMORIZE\nFor a finite straight segment, B=μ₀I(sinθ₁+sinθ₂)/(4πs), where s is the perpendicular distance."
+},
+
+// Q11 [EM/electrostatics] (H)
+{
+  "question": "A particle of mass m and charge q enters horizontally with speed v into a region of upward uniform electric field E and length L. It then enters a region with downward field 2E and remains there until its velocity is horizontal again. Its vertical displacement from its original line when it leaves the second region is",
+  "choices": [
+    "qEL²/(2mv²)",
+    "3qEL²/(4mv²)",
+    "qEL²/(mv²)",
+    "qEL²/(4mv²)",
+    "3qEL²/(2mv²)"
+  ],
+  "answer": "B",
+  "image": "images/em-superposition-biot-20/q10.png",
+  "explanation": "WORKED SOLUTION\nLet t=L/v and A=qE/m. In the first region, v_y=At and y₁=At²/2. The downward acceleration in the second region is −2A, so canceling v_y takes t/2. The added displacement is At(t/2)−A(t/2)²=At²/4. Thus y=y₁+y₂=3At²/4=3qEL²/(4mv²). Choice D includes only the second-region displacement.\n\n90-SECOND SOLUTION\nThe second acceleration has twice the magnitude, so it cancels the acquired vertical speed in half the time. Add the areas under the two v_y-versus-time segments.\n\nWHAT TO MEMORIZE\nFor piecewise uniform fields, track velocity continuously across each boundary; displacement is the area under the velocity-time graph."
+},
+
+// Q12 [EM/electrostatics] (H)
+{
+  "question": "A ring of radius R in the xy-plane has linear charge density λ(φ)=λ₀(1+αcosφ), where φ is measured from +x. At the point (0,0,z), the electric field is",
+  "choices": [
+    "[πλ₀R/(4πε₀(R²+z²)^(3/2))](αR x̂+2z ẑ)",
+    "[πλ₀R/(4πε₀(R²+z²))](−αR x̂+z ẑ)",
+    "[2πλ₀Rz/(4πε₀(R²+z²)^(3/2))]ẑ",
+    "[πλ₀R/(4πε₀(R²+z²)^(3/2))](−αR x̂+2z ẑ)",
+    "[παλ₀R²/(4πε₀(R²+z²)^(3/2))]x̂"
+  ],
+  "answer": "D",
+  "image": "images/em-superposition-biot-20/q11.png",
+  "explanation": "WORKED SOLUTION\nAll source elements are the same distance √(R²+z²) from the observation point. The uniform part of λ gives the usual axial component 2πλ₀Rz/[4πε₀(R²+z²)^(3/2)]. For the αcosφ part, the z-component integrates to zero, while the x projection contributes −αλ₀R²∫₀^{2π}cos²φ dφ=−παλ₀R². Combining the terms gives choice D. Choice C incorrectly assumes that being on the geometric axis guarantees a purely axial field even when the charge density breaks rotational symmetry.\n\n90-SECOND SOLUTION\nSeparate λ into uniform and cosine pieces. The uniform piece gives E_z; for the cosine piece, only ∫cos²φ dφ survives.\n\nWHAT TO MEMORIZE\nAn observation point on a ring's geometric axis has a purely axial field only when the source distribution has rotational symmetry."
+},
+
+// Q13 [EM/electrostatics] (H)
+{
+  "question": "Five positive charges q occupy five vertices of a regular hexagon of circumradius R. A sixth positive test charge q is placed at the previously vacant vertex. The magnitude of the force on the test charge due to the other five is",
+  "choices": [
+    "[q²/(4πε₀R²)](5/4+1/√3)",
+    "[q²/(4πε₀R²)](1+1/√3)",
+    "5q²/(16πε₀R²)",
+    "√3q²/(4πε₀R²)",
+    "[q²/(4πε₀R²)](3/2+1/√3)"
+  ],
+  "answer": "A",
+  "image": "images/em-superposition-biot-20/q12.png",
+  "explanation": "WORKED SOLUTION\nPair the sources symmetric about the radius through the test charge. The two adjacent charges are each distance R away and together contribute kq²/R² radially outward. The next pair is each distance √3R away; their radial projections total kq²/(√3R²). The opposite charge is distance 2R away and contributes kq²/(4R²). Adding gives [q²/(4πε₀R²)](5/4+1/√3). Choice B omits the opposite vertex.\n\n90-SECOND SOLUTION\nGroup the five sources as an adjacent pair, a farther pair, and the opposite vertex. Symmetry cancels every transverse component.\n\nWHAT TO MEMORIZE\nIn regular polygons, pair mirror-related sources before calculating; their transverse components cancel and only radial projections remain."
+},
+
+// Q14 [EM/electrostatics] (H)
+{
+  "question": "A uniformly charged rod of density λ lies on the y-axis from y=−a to y=2a. Point P is at (a,0). The x-component of the electric field at P is",
+  "choices": [
+    "[λ/(4πε₀a)](1/√5+1/√2)",
+    "[λ/(4πε₀a)](2/√5−1/√2)",
+    "[λ/(4πε₀a)](2/√5+1/√2)",
+    "[λ/(4πε₀a)](1+1/√5)",
+    "3λ/(4πε₀a)"
+  ],
+  "answer": "C",
+  "image": "images/em-superposition-biot-20/q13.png",
+  "explanation": "WORKED SOLUTION\nFor an element at y, dE_x=[λ/(4πε₀)]a dy/(a²+y²)^(3/2). The antiderivative is [λ/(4πε₀a)]y/√(a²+y²). Evaluating from −a to 2a gives [λ/(4πε₀a)](2/√5+1/√2). Choice A fails to include the factor of 2 in the upper endpoint's y-coordinate.\n\n90-SECOND SOLUTION\nUse the endpoint-angle form E_⊥=[λ/(4πε₀a)](sinθ_upper+sinθ_lower), with the two sines 2/√5 and 1/√2.\n\nWHAT TO MEMORIZE\nThe perpendicular field of a finite line charge depends on the sum of the sines of the two endpoint angles measured from the perpendicular."
+},
+
+// Q15 [EM/electrostatics] (H)
+{
+  "question": "Positive charges q, 3q/4, and q are fixed on the x-axis at x=0, x=a, and x=3a, respectively. At which point in the interval a<x<3a is the net electric field zero?",
+  "choices": [
+    "x=3a/2",
+    "x=(1+√2)a",
+    "x=5a/2",
+    "x=(1+√3)a",
+    "x=2a"
+  ],
+  "answer": "E",
+  "explanation": "WORKED SOLUTION\nAt x=2a, the charges at 0 and a produce fields to the right of magnitudes kq/(4a²) and 3kq/(4a²), whose sum is kq/a². The charge at 3a produces kq/a² to the left, so the net field vanishes. The selected interval matters because field directions change on crossing a charge; adding unsigned magnitudes everywhere would miss the cancellation.\n\nNUMERICS WITHOUT A CALCULATOR\nAt 2a the two rightward contributions are 1/4 and 3/4 in units of kq/a², exactly matching the leftward contribution 1.\n\n90-SECOND SOLUTION\nTest the simple midpoint x=2a first. The distances are 2a, a, and a, and the chosen charge ratio makes the cancellation immediate.\n\nWHAT TO MEMORIZE\nFor collinear charges, determine the direction of every contribution separately in each interval before equating magnitudes."
+},
+
+// Q16 [EM/electrostatics] (H)
+{
+  "question": "A particle of mass m and positive charge q approaches from far away along the axis of a uniformly charged disk of radius R and positive surface density σ. Neglecting radiation, the minimum initial speed required to reach the disk is",
+  "choices": [
+    "√[qσR/(2mε₀)]",
+    "√[qσR/(mε₀)]",
+    "√[2qσR/(mε₀)]",
+    "qσR/(mε₀)",
+    "√[qσ/(mε₀R)]"
+  ],
+  "answer": "B",
+  "image": "images/em-superposition-biot-20/q15.png",
+  "explanation": "WORKED SOLUTION\nThe potential on the positive axis is V(z)=σ[√(z²+R²)−z]/(2ε₀), so V(∞)=0 and V(0)=σR/(2ε₀). At threshold the particle arrives with zero speed, giving (1/2)mv²=qV(0)=qσR/(2ε₀). Therefore v=√[qσR/(mε₀)]. Choice A forgets that kinetic energy contains the factor 1/2.\n\n90-SECOND SOLUTION\nFind only the potential difference between infinity and the disk center, then equate the initial kinetic energy to the increase in electric potential energy.\n\nWHAT TO MEMORIZE\nThe axial potential of a uniformly charged disk is σ[√(z²+R²)−|z|]/(2ε₀); energy is usually faster than integrating the force along the trajectory."
+},
+
+// Q17 [EM/magnetostatics & Lorentz force] (H)
+{
+  "question": "A straight wire on the x-axis carries current I in the +x direction from x=−a to x=2a. Point P is at (0,a). The magnetic field at P is",
+  "choices": [
+    "[μ₀I/(4πa)](1/√2+1/√5), out of the page",
+    "[μ₀I/(4πa)](2/√5−1/√2), into the page",
+    "[μ₀I/(2πa)](2/√5+1/√2), out of the page",
+    "[μ₀I/(4πa)](2/√5+1/√2), out of the page",
+    "[μ₀I/(4πa)](2/√5+1/√2), into the page"
+  ],
+  "answer": "D",
+  "image": "images/em-superposition-biot-20/q16.png",
+  "explanation": "WORKED SOLUTION\nThe perpendicular distance is a. The endpoint angles measured from the perpendicular have sines 1/√2 for the left endpoint and 2/√5 for the right endpoint. Thus B=μ₀I(1/√2+2/√5)/(4πa). Since dℓ points right and the vector toward P has an upward component, the right-hand rule gives a field out of the page. Choice E has the correct magnitude but reverses the cross product.\n\n90-SECOND SOLUTION\nApply the finite-wire endpoint-angle formula and use +x × +y=+z for the direction.\n\nWHAT TO MEMORIZE\nFor a finite wire, use the two endpoint angles; the infinite-wire result is recovered only when both angles approach 90°."
+},
+
+// Q18 [EM/electrostatics] (H)
+{
+  "question": "A positively charged droplet is initially moving horizontally while an upward electric field exactly balances gravity. If the droplet's charge instantaneously reverses sign without changing magnitude, its vertical acceleration immediately afterward is",
+  "choices": [
+    "2g downward",
+    "g downward",
+    "zero",
+    "g upward",
+    "2g upward"
+  ],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nInitially qE=mg upward. After the sign reversal, the electric force has the same magnitude mg but points downward. Gravity also contributes mg downward, so the total force is 2mg downward and the acceleration is 2g downward. Choice B ignores the reversed electric force and keeps only gravity.\n\n90-SECOND SOLUTION\nThe balancing upward force flips downward while gravity remains downward; two equal downward forces add.\n\nWHAT TO MEMORIZE\nReversing a charge reverses the electric force qE but does not affect gravity or the particle's instantaneous velocity."
+},
+
+// Q19 [EM/magnetostatics & Lorentz force] (H)
+{
+  "question": "A current I follows a semicircular arc of radius R, a radial connector, a concentric semicircular arc of radius 2R in the opposite angular sense, and a second radial connector, as shown. The magnetic field magnitude at the common center is",
+  "choices": [
+    "3μ₀I/(8R)",
+    "μ₀I/(4R)",
+    "μ₀I/(8R)",
+    "μ₀I/(8πR)",
+    "zero"
+  ],
+  "answer": "C",
+  "image": "images/em-superposition-biot-20/q18.png",
+  "explanation": "WORKED SOLUTION\nThe radial connectors contribute zero at the center. A semicircle of radius r contributes μ₀I/(4r). The two arcs carry current around the center in opposite senses, so their fields oppose: B=μ₀I/(4R)−μ₀I/(8R)=μ₀I/(8R), directed as the inner arc's field. Choice A adds the two arc magnitudes instead of subtracting them.\n\n90-SECOND SOLUTION\nIgnore the radial pieces, write the two semicircle fields, and subtract because the current circulates oppositely on the two arcs.\n\nWHAT TO MEMORIZE\nA semicircle gives B=μ₀I/(4R) at its center; determine signs with the current's clockwise or counterclockwise sense."
+},
+
+// Q20 [EM/electrostatics] (H)
+{
+  "question": "An infinite nonconducting cylinder has uniform volume charge density ρ. A cylindrical cavity is bored through it with its axis displaced from the original axis by vector b. At any point inside the cavity, the electric field is",
+  "choices": [
+    "ρr/(2ε₀)",
+    "−ρb/(2ε₀)",
+    "ρ(r−b)/(2ε₀)",
+    "zero",
+    "ρb/(2ε₀)"
+  ],
+  "answer": "E",
+  "image": "images/em-superposition-biot-20/q19.png",
+  "explanation": "WORKED SOLUTION\nRepresent the cavity by superposing a full cylinder of density +ρ centered on the original axis and a cylinder of density −ρ centered on the cavity axis. At a point whose position from the original axis is r, the two fields are ρr/(2ε₀) and −ρ(r−b)/(2ε₀). Their sum is ρb/(2ε₀), independent of position. Choice C is only the field of the negative cylinder, not the superposed result.\n\n90-SECOND SOLUTION\nFill the cavity, then cancel it with a negative cylinder. Subtract the two displacement vectors before doing any component algebra.\n\nWHAT TO MEMORIZE\nInside a uniformly charged infinite cylinder, E=ρr/(2ε₀). An off-axis cylindrical cavity therefore has a uniform field."
+}
+
+]
+}
 
 ];
