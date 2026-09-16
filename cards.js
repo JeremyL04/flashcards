@@ -20520,7 +20520,7 @@ const EXAMS = [
 
 // Q15 [SP/nuclear & particle physics] (M)
 {
-  "question": "In the nuclear reaction ²⁷Al(α, x)³⁰P, the emitted particle x is a",
+  "question": "In the nuclear reaction ²⁷Al + α → ³⁰P + x, the emitted particle x is a",
   "choices": [
     "proton",
     "neutron",
@@ -21606,6 +21606,277 @@ const EXAMS = [
   }
 
   ]
-  }
+  },
+  {
+    "name": "Special Topics Practice (20 Questions)",
+    "added": "2026-09-16",
+    "category": "specialized",
+    "cards": [
+      {
+        "question": "A nuclide (A,Z) undergoes beta-minus decay followed by alpha decay. The final nuclide is",
+        "choices": [
+          "(A−4,Z−3)",
+          "(A−4,Z−1)",
+          "(A−4,Z+1)",
+          "(A,Z−1)",
+          "(A−2,Z−1)"
+        ],
+        "answer": "B",
+        "explanation": "Beta-minus decay leaves A unchanged and raises Z by 1. Alpha decay then lowers A by 4 and Z by 2, so the net result is (A−4,Z−1)."
+      },
+
+      {
+        "question": "A nuclide has two independent decay channels with partial half-lives 12 min and 18 min. Its effective half-life is",
+        "choices": [
+          "30 min",
+          "15 min",
+          "9.0 min",
+          "7.2 min",
+          "6.0 min"
+        ],
+        "answer": "D",
+        "explanation": "Independent decay constants add. Since λ = ln2/t₁/₂, the effective half-life obeys 1/t = 1/12 + 1/18, giving t = 36/5 = 7.2 min."
+      },
+
+      {
+        "question": "A stationary nucleus alpha-decays with Q=6.0 MeV. Taking the alpha and daughter masses as 4 u and 236 u, respectively, the alpha particle's kinetic energy is closest to",
+        "choices": [
+          "0.10 MeV",
+          "3.0 MeV",
+          "5.9 MeV",
+          "6.0 MeV",
+          "354 MeV"
+        ],
+        "answer": "C",
+        "explanation": "Momentum conservation gives the alpha and daughter equal momentum, so their kinetic energies are inversely proportional to their masses. The alpha receives 236/(236+4) of Q, or about 5.9 MeV."
+      },
+
+      {
+        "question": "A nucleus with A=200 and binding energy 7.6 MeV per nucleon splits into fragments having 8.4 MeV per nucleon. The energy released is",
+        "choices": [
+          "160 MeV",
+          "80 MeV",
+          "16 MeV",
+          "8 MeV",
+          "1.6 MeV"
+        ],
+        "answer": "A",
+        "explanation": "The binding energy per nucleon increases by 8.4−7.6 = 0.8 MeV. Multiplying by 200 nucleons gives an energy release of 160 MeV."
+      },
+
+      {
+        "question": "The decay p→n+e⁺+ν_e, when energetically possible inside a nucleus, is mediated by the",
+        "choices": [
+          "gravitational interaction",
+          "electromagnetic interaction",
+          "strong interaction",
+          "residual nuclear interaction",
+          "weak interaction"
+        ],
+        "answer": "E",
+        "explanation": "This is beta-plus decay at the nucleon level: a proton changes into a neutron while emitting a positron and an electron neutrino. Flavor-changing beta processes are mediated by the weak interaction."
+      },
+
+      {
+        "question": "Which of the following particles is a lepton?",
+        "choices": [
+          "proton",
+          "muon",
+          "pion",
+          "neutron",
+          "deuteron"
+        ],
+        "answer": "B",
+        "explanation": "The muon is an elementary charged lepton, in the same particle family as the electron. Protons, neutrons, pions, and deuterons are hadrons or composite nuclei."
+      },
+
+      {
+        "question": "A single photon traveling through empty space cannot produce an electron–positron pair because",
+        "choices": [
+          "electric charge would not be conserved",
+          "lepton number would not be conserved",
+          "angular momentum would not be conserved",
+          "energy and momentum cannot both be conserved",
+          "electrons are composite particles"
+        ],
+        "answer": "D",
+        "explanation": "The initial photon has nonzero energy and momentum but zero invariant mass. A massive electron–positron pair cannot conserve both energy and momentum without a third body, such as a nearby nucleus, taking recoil."
+      },
+
+      {
+        "question": "A thin target contains 2.0×10²⁰ nuclei/cm². If 4.0×10⁻⁵ of an incident beam is scattered into a specified range, the corresponding cross section is",
+        "choices": [
+          "2.0×10⁻²⁷ cm²",
+          "8.0×10⁻²⁶ cm²",
+          "2.0×10⁻²⁵ cm²",
+          "5.0×10⁻²⁵ cm²",
+          "8.0×10⁻²⁵ cm²"
+        ],
+        "answer": "C",
+        "explanation": "For a thin target, the scattered fraction is approximately Nσ. Thus σ = (4.0×10⁻⁵)/(2.0×10²⁰ cm⁻²) = 2.0×10⁻²⁵ cm²."
+      },
+
+      {
+        "question": "A 5.0 MeV alpha particle approaches a stationary gold nucleus (Z=79) head-on. Using e²/(4πε₀)=1.44 MeV·fm, its distance of closest approach is approximately",
+        "choices": [
+          "46 fm",
+          "4.6 fm",
+          "18 fm",
+          "160 fm",
+          "230 fm"
+        ],
+        "answer": "A",
+        "explanation": "At the turning point, the alpha particle's kinetic energy has become Coulomb potential energy. Thus r = (2)(79)(1.44 MeV·fm)/(5.0 MeV), which is about 46 fm."
+      },
+
+      {
+        "question": "The 14.4 keV Mössbauer absorption line shown has a Doppler-velocity FWHM of 0.20 mm/s. Using ħ=6.6×10⁻¹⁶ eV·s, the excited-state lifetime is closest to",
+        "choices": [
+          "7×10⁻¹⁰ s",
+          "3×10⁻⁹ s",
+          "1×10⁻⁸ s",
+          "3×10⁻⁸ s",
+          "7×10⁻⁸ s"
+        ],
+        "answer": "E",
+        "image": "images/special-topics-20/q9.png",
+        "explanation": "The Doppler width is Γ/E = Δv/c. Hence Γ = 14,400 eV × (2.0×10⁻⁴ m/s)/(3.0×10⁸ m/s) = 9.6×10⁻⁹ eV, and τ ≈ ħ/Γ ≈ 6.9×10⁻⁸ s."
+      },
+
+      {
+        "question": "A material has a negative Hall coefficient. Its dominant mobile charge carriers are",
+        "choices": [
+          "holes",
+          "electrons",
+          "photons",
+          "Cooper pairs",
+          "positive ions"
+        ],
+        "answer": "B",
+        "explanation": "The Hall coefficient has the sign of the dominant mobile carrier charge in the one-carrier model. A negative coefficient therefore indicates negatively charged carriers: electrons."
+      },
+
+      {
+        "question": "Pure silicon is doped with phosphorus, which has one more valence electron than silicon. The result is primarily",
+        "choices": [
+          "an intrinsic semiconductor",
+          "a p-type semiconductor",
+          "an insulator",
+          "an n-type semiconductor",
+          "a superconductor"
+        ],
+        "answer": "D",
+        "explanation": "Phosphorus contributes one more valence electron than silicon, so it acts as a donor. The donated electrons become the majority carriers, producing an n-type semiconductor."
+      },
+
+      {
+        "question": "Which graph best represents the resistivity ρ of an intrinsic semiconductor as its temperature T increases?",
+        "choices": [
+          "Graph A",
+          "Graph B",
+          "Graph C",
+          "Graph D",
+          "Graph E"
+        ],
+        "answer": "C",
+        "image": "images/special-topics-20/q12.png",
+        "explanation": "In an intrinsic semiconductor, increasing temperature excites many more electrons across the band gap. The carrier density rises rapidly, so resistivity falls rapidly; Graph C shows this behavior."
+      },
+
+      {
+        "question": "X rays of wavelength 0.20 nm undergo first-order Bragg reflection from crystal planes separated by 0.40 nm. The glancing angle θ shown is closest to",
+        "choices": [
+          "14°",
+          "30°",
+          "45°",
+          "60°",
+          "75°"
+        ],
+        "answer": "A",
+        "image": "images/special-topics-20/q13.png",
+        "explanation": "Bragg's law is 2d sinθ = nλ. For first order, sinθ = 0.20/(2×0.40) = 0.25, so θ is approximately 14 degrees."
+      },
+
+      {
+        "question": "Electrons must have a de Broglie wavelength of approximately 0.25 nm to diffract strongly from a crystal. Their nonrelativistic kinetic energy is closest to",
+        "choices": [
+          "2.4 eV",
+          "12 eV",
+          "48 eV",
+          "240 eV",
+          "24 eV"
+        ],
+        "answer": "E",
+        "explanation": "For a nonrelativistic electron, λ = h/p and K = p²/(2m), so K = h²/(2mλ²). Substituting λ = 0.25 nm gives approximately 24 eV."
+      },
+
+      {
+        "question": "A metal has Fermi temperature 1.0×10⁵ K. Taking the electron mass as 9.1×10⁻³¹ kg, its characteristic Fermi speed is closest to",
+        "choices": [
+          "2×10⁴ m/s",
+          "2×10⁶ m/s",
+          "2×10⁸ m/s",
+          "3×10¹⁰ m/s",
+          "6×10¹² m/s"
+        ],
+        "answer": "B",
+        "explanation": "The Fermi energy is E_F = kT_F and also equals mv_F²/2. Therefore v_F = sqrt(2kT_F/m), which is approximately 1.7×10⁶ m/s, closest to 2×10⁶ m/s."
+      },
+
+      {
+        "question": "At temperatures well above its characteristic lattice temperature, the molar heat capacity of a three-dimensional crystalline solid approaches",
+        "choices": [
+          "R/2",
+          "R",
+          "2R",
+          "3R",
+          "6R"
+        ],
+        "answer": "D",
+        "explanation": "At high temperature, each of the three lattice-vibration directions contributes k per atom by equipartition. One mole therefore has the Dulong–Petit heat capacity 3R."
+      },
+
+      {
+        "question": "The eigenvalues of the Hermitian matrix [[3,i],[−i,3]] are",
+        "choices": [
+          "1 and 5",
+          "3 and 3",
+          "2 and 4",
+          "−2 and 4",
+          "3−i and 3+i"
+        ],
+        "answer": "C",
+        "explanation": "The characteristic equation is (3−λ)²−1 = 0 because the off-diagonal product is i(−i)=1. Thus 3−λ = ±1, giving eigenvalues 2 and 4."
+      },
+
+      {
+        "question": "For the periodic function shown, which Fourier coefficients must vanish?",
+        "choices": [
+          "All sine coefficients",
+          "All cosine coefficients",
+          "Only the constant term",
+          "All coefficients",
+          "No coefficients"
+        ],
+        "answer": "A",
+        "image": "images/special-topics-20/q18.png",
+        "explanation": "The graph is symmetric about the vertical axis, so f(−x)=f(x): it is even. Every sine function is odd, and its product with an even function integrates to zero over a symmetric period, so all sine coefficients vanish."
+      },
+
+      {
+        "question": "A galaxy 100 Mpc away recedes according to Hubble's law with H₀=70 km/s/Mpc. A spectral line whose laboratory wavelength is 500 nm is observed closest to",
+        "choices": [
+          "501 nm",
+          "503 nm",
+          "507 nm",
+          "510 nm",
+          "512 nm"
+        ],
+        "answer": "E",
+        "explanation": "Hubble's law gives v = H₀d = 7000 km/s. For this small speed, z ≈ v/c ≈ 0.0233, so λ_obs = 500(1+z) nm ≈ 512 nm."
+      }
+
+    ]
+  },
 
 ];
