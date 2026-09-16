@@ -20604,6 +20604,1008 @@ const EXAMS = [
 }
 
 ]
-}
+},
+  {
+    "name": "Full Practice Exam 4 (70 Questions)",
+    "added": "2026-09-16",
+    "category": "practice",
+    "cards": [
+
+  // Q1 [CM/oscillatory motion] (E)
+  {
+    "question": "Two simple harmonic oscillators have the same maximum speed. Oscillator B has twice the angular frequency of oscillator A. The ratio of their maximum accelerations a_B/a_A is",
+    "choices": [
+      "2",
+      "1/2",
+      "1",
+      "4",
+      "1/4"
+    ],
+    "answer": "A",
+    "explanation": "Since v_max=ωA and a_max=ω²A=ωv_max, equal maximum speeds make maximum acceleration proportional to angular frequency. Doubling ω therefore doubles a_max."
+  },
+
+  // Q2 [CM/Newton's laws & friction] (E)
+  {
+    "question": "A 5 kg crate is pulled horizontally across a floor at constant speed by a 20 N force. Taking g=10 m/s², the coefficient of kinetic friction is",
+    "choices": [
+      "0.20",
+      "0.40",
+      "0.50",
+      "2.0",
+      "4.0"
+    ],
+    "answer": "B",
+    "explanation": "Constant speed means the pull balances kinetic friction: 20 N=μ_k(5 kg)(10 m/s²). Thus μ_k=20/50=0.40."
+  },
+
+  // Q3 [CM/rotational motion & rigid bodies] (H)
+  {
+    "question": "A mass m falls while unwinding a cord from a uniform solid cylinder of mass M and radius R. The axle is frictionless and the cord does not slip. The downward acceleration of m is",
+    "choices": [
+      "gM/(M+2m)",
+      "2mg/(M+2m)",
+      "2mg/(M+4m)",
+      "mg/(M+m)",
+      "g"
+    ],
+    "answer": "B",
+    "image": "images/full-practice-4/q2.png",
+    "explanation": "For the mass, mg−T=ma. For the cylinder, TR=Iα=(MR²/2)(a/R), so T=Ma/2. Solving gives a=2mg/(M+2m)."
+  },
+
+  // Q4 [EM/electrostatics] (M)
+  {
+    "question": "A neutral conducting spherical shell surrounds a point charge +q at its center. A charge −3q is then placed on the shell. The charges on the inner and outer surfaces are, respectively,",
+    "choices": [
+      "+q and −4q",
+      "−q and −2q",
+      "−q and −3q",
+      "+q and −3q",
+      "+q and −2q"
+    ],
+    "answer": "B",
+    "explanation": "The central +q induces −q on the inner surface. Since the conductor itself has net charge −3q, the remaining outer-surface charge is −2q."
+  },
+
+  // Q5 [EM/magnetostatics & Lorentz force] (M)
+  {
+    "question": "A velocity selector passes particles of speed v=E/B. They then enter a region containing only a magnetic field 2B perpendicular to their motion. Their circular radius is",
+    "choices": [
+      "mv/(qB)",
+      "2mv/(qB)",
+      "mE/(2qB²)",
+      "qE/(2mB²)",
+      "mE/(qB²)"
+    ],
+    "answer": "C",
+    "explanation": "The selector fixes v=E/B. In the field 2B, qv(2B)=mv²/r, giving r=mv/(2qB)=mE/(2qB²)."
+  },
+
+  // Q6 [EM/currents, DC & RC circuits] (E)
+  {
+    "question": "The circuit shown contains a 12 V ideal battery and three identical 6 Ω resistors. What current does the battery supply?",
+    "choices": [
+      "1 A",
+      "4/3 A",
+      "2 A",
+      "3 A",
+      "4 A"
+    ],
+    "answer": "B",
+    "image": "images/full-practice-4/q5.png",
+    "explanation": "The two parallel 6 Ω resistors have equivalent resistance 3 Ω; adding the series 6 Ω gives 9 Ω. Hence I=12/9=4/3 A."
+  },
+
+  // Q7 [QM/formalism: operators, wavefunctions, measurement] (M)
+  {
+    "question": "A normalized state is |ψ⟩=(1/3)|1⟩+(2√2/3)|2⟩, where |1⟩ and |2⟩ are orthonormal energy eigenstates. The probability of measuring the energy of |2⟩ is",
+    "choices": [
+      "1/9",
+      "2/3",
+      "8/9",
+      "2√2/3",
+      "1"
+    ],
+    "answer": "C",
+    "explanation": "Measurement probabilities are squared coefficient magnitudes. The coefficient of |2⟩ is 2√2/3, so its probability is |2√2/3|²=8/9."
+  },
+
+  // Q8 [QM/standard Hamiltonians: wells, oscillator, barrier] (H)
+  {
+    "question": "A particle tunnels through a barrier with T≈e^{−2κL}. A second particle has the same energy and κ but crosses two adjacent identical barriers with no allowed region between them. Its transmission is approximately",
+    "choices": [
+      "T²",
+      "2T",
+      "T/2",
+      "√T",
+      "T"
+    ],
+    "answer": "A",
+    "explanation": "With no allowed region between the barriers, they form one barrier of width 2L. Thus exp(−2κ·2L)=[exp(−2κL)]²=T²."
+  },
+
+  // Q9 [QM/Bohr model & hydrogen atom] (E)
+  {
+    "question": "The energy of a He⁺ ion in the n=2 state is",
+    "choices": [
+      "−54.4 eV",
+      "−13.6 eV",
+      "−6.8 eV",
+      "−3.4 eV",
+      "−27.2 eV"
+    ],
+    "answer": "B",
+    "explanation": "Hydrogenic energies are E_n=−13.6Z²/n² eV. For He⁺, Z=2 and n=2, so E=−13.6 eV, the same numerical value as hydrogen's ground-state energy."
+  },
+
+  // Q10 [TS/laws of thermodynamics (1st & 2nd)] (M)
+  {
+    "question": "A body with constant heat capacity C cools reversibly from 2T to T. Its entropy change is",
+    "choices": [
+      "−2C ln2",
+      "−C ln2",
+      "C ln2",
+      "−CT",
+      "0"
+    ],
+    "answer": "B",
+    "explanation": "For reversible cooling, ΔS=∫C dT/T=C ln(T/2T)=−C ln2. Entropy decreases because the body's temperature falls."
+  },
+
+  // Q11 [OW/wave properties & propagation] (M)
+  {
+    "question": "A string fixed at both ends has fundamental frequency f. If its length is doubled while tension and linear density remain fixed, its third-harmonic frequency becomes",
+    "choices": [
+      "3f/2",
+      "3f",
+      "f/2",
+      "2f/3",
+      "6f"
+    ],
+    "answer": "A",
+    "explanation": "String frequencies scale as n/L. Doubling L halves every harmonic, so the new third harmonic is 3(f/2)=3f/2."
+  },
+
+  // Q12 [SP/nuclear & particle physics] (E)
+  {
+    "question": "In alpha decay, the daughter nucleus has mass number and atomic number that differ from the parent by",
+    "choices": [
+      "−2 and −4",
+      "−4 and −2",
+      "−1 and −1",
+      "0 and −2",
+      "−4 and 0"
+    ],
+    "answer": "B",
+    "explanation": "An alpha particle is a helium-4 nucleus containing two protons and two neutrons. The daughter therefore has A reduced by 4 and Z reduced by 2."
+  },
+
+  // Q13 [SR/relativistic energy & momentum] (M)
+  {
+    "question": "A particle of rest mass m has momentum mc. Its momentum is then increased to 2mc. The ratio of its new total energy to its original total energy is",
+    "choices": [
+      "1",
+      "√(5/4)",
+      "√(3/2)",
+      "√(5/2)",
+      "2"
+    ],
+    "answer": "D",
+    "explanation": "Relativistic energy is E=√[(pc)²+(mc²)²]. The energies at p=mc and 2mc are √2 mc² and √5 mc², giving √(5/2)."
+  },
+
+  // Q14 [LM/data & error analysis] (M)
+  {
+    "question": "Independent measurements give x with 3% uncertainty and y with 4% uncertainty. The fractional uncertainty in z=x/y is approximately",
+    "choices": [
+      "1%",
+      "3.5%",
+      "5%",
+      "7%",
+      "12%"
+    ],
+    "answer": "C",
+    "explanation": "For independent uncertainties in a quotient, fractional uncertainties add in quadrature: √(0.03²+0.04²)=0.05, or 5 percent."
+  },
+
+  // Q15 [LM/electronics] (M)
+  {
+    "question": "For the ideal op-amp circuit shown, the noninverting input is grounded, R_in=10 kΩ, R_f=30 kΩ, and v_in=0.50 V. The output is",
+    "choices": [
+      "−1.5 V",
+      "−0.17 V",
+      "+0.17 V",
+      "+1.5 V",
+      "−15 V"
+    ],
+    "answer": "A",
+    "image": "images/full-practice-4/q14.png",
+    "explanation": "An ideal inverting amplifier has gain −R_f/R_in=−30/10=−3. Multiplying by 0.50 V gives v_out=−1.5 V."
+  },
+
+  // Q16 [CM/central forces & celestial mechanics] (H)
+  {
+    "question": "A satellite in a circular orbit is given an instantaneous radial impulse. Immediately afterward, which orbital quantity is unchanged?",
+    "choices": [
+      "Total mechanical energy",
+      "Angular momentum about the planet",
+      "Eccentricity",
+      "Semimajor axis",
+      "Orbital period"
+    ],
+    "answer": "B",
+    "explanation": "A radial impulse changes radial momentum but supplies no torque about the planet. Angular momentum about the planet is therefore unchanged immediately after the impulse."
+  },
+
+  // Q17 [CM/oscillatory motion] (M)
+  {
+    "question": "A uniform rod of length L is pivoted a distance L/4 from its center. For small oscillations in a vertical plane, its angular frequency is",
+    "choices": [
+      "√(3g/4L)",
+      "√(12g/7L)",
+      "√(6g/7L)",
+      "√(g/L)",
+      "√(7g/6L)"
+    ],
+    "answer": "B",
+    "explanation": "The pivot is L/4 from the center of mass. Using I_p=ML²/12+M(L/4)²=7ML²/48 and ω²=Mgd/I_p gives ω=√(12g/7L)."
+  },
+
+  // Q18 [CM/work and energy] (E)
+  {
+    "question": "A 1000 kg car moving at 20 m/s stops after a constant braking force acts over 50 m. The force magnitude is",
+    "choices": [
+      "2×10³ N",
+      "4×10³ N",
+      "8×10³ N",
+      "2×10⁴ N",
+      "4×10⁴ N"
+    ],
+    "answer": "B",
+    "explanation": "Work by the braking force removes the initial kinetic energy: F(50)=½(1000)(20²). Therefore F=4000 N."
+  },
+
+  // Q19 [EM/electrostatics] (M)
+  {
+    "question": "An infinite slab of thickness 2a has uniform charge density ρ. The electric-field magnitude at a point inside, a distance x from the midplane, is",
+    "choices": [
+      "ρa/ε₀",
+      "ρx/ε₀",
+      "ρx/(2ε₀)",
+      "ρ(a−x)/ε₀",
+      "zero"
+    ],
+    "answer": "B",
+    "explanation": "A Gaussian pillbox from the midplane to x encloses charge per area ρx. Symmetry and Gauss's law give E=ρx/ε₀ inside the slab."
+  },
+
+  // Q20 [EM/induction & inductance] (H)
+  {
+    "question": "A square loop moves right with speed v through the nonuniform field shown, B(x)=B₀x/L into the page. When the loop spans x=L to x=2L, the induced-emf magnitude is",
+    "choices": [
+      "B₀Lv",
+      "2B₀Lv",
+      "B₀Lv/2",
+      "3B₀Lv",
+      "zero"
+    ],
+    "answer": "A",
+    "image": "images/full-practice-4/q19.png",
+    "explanation": "For a translating loop, |ℰ|=vL|B(2L)−B(L)|. Here the field difference is B₀, so the induced-emf magnitude is B₀Lv."
+  },
+
+  // Q21 [EM/magnetostatics & Lorentz force] (M)
+  {
+    "question": "Two long parallel wires separated by d carry currents I and 2I in opposite directions. The force per unit length on either wire has magnitude",
+    "choices": [
+      "μ₀I²/(2πd)",
+      "μ₀I²/(πd)",
+      "2μ₀I²/(πd)",
+      "μ₀I²/(4πd)",
+      "zero"
+    ],
+    "answer": "B",
+    "explanation": "Parallel-wire force per length is μ₀I₁I₂/(2πd). With currents I and 2I, the magnitude is μ₀I²/(πd)."
+  },
+
+  // Q22 [QM/angular momentum & spin] (H)
+  {
+    "question": "A spin-½ particle is in the normalized S_z-basis state (1/√6)(1+i, 2). The probability that a measurement of S_x gives +ħ/2 is",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3",
+      "5/6"
+    ],
+    "answer": "E",
+    "explanation": "The S_x=+ħ/2 eigenstate is (1,1)/√2. Its overlap with (1+i,2)/√6 is (3+i)/√12, whose squared magnitude is 10/12=5/6."
+  },
+
+  // Q23 [QM/identical particles & electron configuration] (E)
+  {
+    "question": "The maximum number of electrons in a subshell with ℓ=2 is",
+    "choices": [
+      "2",
+      "5",
+      "6",
+      "10",
+      "14"
+    ],
+    "answer": "D",
+    "explanation": "For ℓ=2 there are 2ℓ+1=5 orbital states, and each can hold two opposite spins. The subshell therefore holds 10 electrons."
+  },
+
+  // Q24 [QM/atomic spectra & selection rules] (H)
+  {
+    "question": "An atom is initially in a state with orbital quantum number ℓ=2. In a one-photon electric-dipole transition, the final orbital quantum number can be",
+    "choices": [
+      "0 only",
+      "1 only",
+      "2 only",
+      "1 or 3",
+      "0, 2, or 4"
+    ],
+    "answer": "D",
+    "explanation": "Electric-dipole transitions require Δℓ=±1. Starting from ℓ=2, the allowed final orbital quantum numbers are consequently ℓ=1 or 3."
+  },
+
+  // Q25 [QM/photon & particle phenomena] (M)
+  {
+    "question": "A photon Compton-scatters through 60°. Its wavelength increase is what fraction of the electron Compton wavelength?",
+    "choices": [
+      "1/4",
+      "1",
+      "3/2",
+      "1/2",
+      "2"
+    ],
+    "answer": "D",
+    "explanation": "The Compton shift is Δλ=λ_C(1−cosθ). At 60 degrees, cosθ=1/2, so the wavelength increase is Δλ=λ_C/2."
+  },
+
+  // Q26 [TS/ideal gases & kinetic theory] (E)
+  {
+    "question": "A sealed rigid container holds an ideal gas at 300 K and pressure P. When heated to 600 K, its pressure becomes",
+    "choices": [
+      "P/2",
+      "P",
+      "√2P",
+      "2P",
+      "4P"
+    ],
+    "answer": "D",
+    "explanation": "At fixed volume and particle number, the ideal-gas law gives P proportional to T. Doubling the absolute temperature therefore doubles the pressure to 2P."
+  },
+
+  // Q27 [OW/geometrical optics] (M)
+  {
+    "question": "For the object and thin converging lens shown, the transverse magnification is",
+    "choices": [
+      "−2",
+      "−1",
+      "−1/2",
+      "+1/2",
+      "+2"
+    ],
+    "answer": "C",
+    "image": "images/full-practice-4/q26.png",
+    "explanation": "The thin-lens equation with d_o=3f gives d_i=3f/2. Thus the transverse magnification is −d_i/d_o=−1/2."
+  },
+
+  // Q28 [SP/condensed matter physics] (M)
+  {
+    "question": "X rays produce a first-order Bragg maximum at θ=15° from the crystal planes shown. At the same wavelength, the second-order maximum occurs closest to",
+    "choices": [
+      "15°",
+      "22°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "answer": "C",
+    "image": "images/full-practice-4/q27.png",
+    "explanation": "Bragg's law is nλ=2d sinθ. Changing from first to second order doubles sinθ: sinθ₂=2sin15°≈0.52, so θ₂≈30°."
+  },
+
+  // Q29 [SR/time dilation] (M)
+  {
+    "question": "Unstable particles with proper lifetime τ travel at 0.60c. Their mean lifetime in the laboratory is",
+    "choices": [
+      "0.60τ",
+      "0.80τ",
+      "1.25τ",
+      "1.67τ",
+      "2.0τ"
+    ],
+    "answer": "C",
+    "explanation": "Time dilation gives the laboratory lifetime γτ. At v=0.60c, γ=1/√(1−0.36)=1.25, so the mean laboratory lifetime is 1.25τ."
+  },
+
+  // Q30 [LM/instrumentation] (M)
+  {
+    "question": "An oscilloscope in XY mode displays the stationary figure shown. The frequency ratio f_y/f_x is",
+    "choices": [
+      "2/3",
+      "1",
+      "3",
+      "3/2",
+      "6"
+    ],
+    "answer": "D",
+    "image": "images/full-practice-4/q29.png",
+    "explanation": "A Lissajous trace with three horizontal lobes and two vertical lobes corresponds to f_y:f_x=3:2. Hence f_y/f_x=3/2."
+  },
+
+  // Q31 [CM/systems of particles & collisions] (H)
+  {
+    "question": "A bullet of mass m embeds in a block of mass 4m at rest. The combined body rises to height h as a pendulum. The bullet's initial speed was",
+    "choices": [
+      "√(2gh)",
+      "4√(2gh)",
+      "5√(2gh)",
+      "√(10gh)",
+      "25√(2gh)"
+    ],
+    "answer": "C",
+    "image": "images/full-practice-4/q30.png",
+    "explanation": "After impact the combined mass 5m has speed √(2gh) from energy conservation. Momentum conservation then gives mv=5m√(2gh), so v=5√(2gh)."
+  },
+
+  // Q32 [CM/kinematics] (E)
+  {
+    "question": "A projectile is launched horizontally. Neglecting air resistance, which graph correctly describes its horizontal velocity v_x versus time?",
+    "choices": [
+      "Graph A",
+      "Graph B",
+      "Graph C",
+      "Graph D",
+      "Graph E"
+    ],
+    "answer": "A",
+    "image": "images/full-practice-4/q31.png",
+    "explanation": "With no horizontal force, horizontal acceleration is zero. The projectile's horizontal velocity therefore remains a constant positive value, corresponding to Graph A."
+  },
+
+  // Q33 [CM/rotational motion & rigid bodies] (M)
+  {
+    "question": "A hoop and a solid cylinder roll without slipping from the same height. The ratio of their speeds at the bottom, v_cylinder/v_hoop, is",
+    "choices": [
+      "√(4/3)",
+      "√(3/4)",
+      "2",
+      "1",
+      "√2"
+    ],
+    "answer": "A",
+    "explanation": "Rolling energy gives v²=2gh/[1+I/(MR²)]. This yields v_cyl²=4gh/3 and v_hoop²=gh, so their speed ratio is √(4/3)."
+  },
+
+  // Q34 [EM/conductors, capacitance & dielectrics] (M)
+  {
+    "question": "Half the area of a parallel-plate capacitor is filled with dielectric κ; the other half remains vacuum. Neglect fringing. Relative to the vacuum capacitance C₀, the new capacitance is",
+    "choices": [
+      "κC₀",
+      "2κC₀/(κ+1)",
+      "(κ+1)C₀/2",
+      "C₀/κ",
+      "(κ−1)C₀/2"
+    ],
+    "answer": "C",
+    "image": "images/full-practice-4/q33.png",
+    "explanation": "The two half-area regions act as parallel capacitors. Their capacitances add to κC₀/2+C₀/2=(κ+1)C₀/2."
+  },
+
+  // Q35 [EM/electrostatics] (H)
+  {
+    "question": "A thin ring of radius R has line charge density λ(φ)=λ₀cosφ. The electric field at its center points in the −x direction with magnitude",
+    "choices": [
+      "λ₀/(2ε₀R)",
+      "λ₀/(4ε₀)",
+      "λ₀/(2ε₀)",
+      "λ₀/(4ε₀R)",
+      "zero"
+    ],
+    "answer": "D",
+    "explanation": "At the center, dE_x=−[kλ₀/R]cos²φ dφ. Integrating around the ring gives magnitude kλ₀π/R=λ₀/(4ε₀R)."
+  },
+
+  // Q36 [EM/Maxwell's equations & EM waves] (M)
+  {
+    "question": "Between the plates of a charging capacitor, the circulation ∮B·dℓ is determined by",
+    "choices": [
+      "conduction current only",
+      "the electric flux itself",
+      "zero because no charges cross the gap",
+      "displacement current only",
+      "the scalar potential"
+    ],
+    "answer": "D",
+    "explanation": "No conduction current crosses the capacitor gap, but changing electric flux contributes the displacement current. The Ampère–Maxwell law makes that term determine the circulation."
+  },
+
+  // Q37 [QM/formalism: operators, wavefunctions, measurement] (H)
+  {
+    "question": "If [x,p]=iħ, then [x,p³] equals",
+    "choices": [
+      "iħp²",
+      "2iħp²",
+      "3iħp²",
+      "3iħp",
+      "iħ³"
+    ],
+    "answer": "C",
+    "explanation": "Using [x,p]=iħ and [x,AB]=[x,A]B+A[x,B], expanding p³ gives three identical terms. Therefore [x,p³]=3iħp²."
+  },
+
+  // Q38 [QM/standard Hamiltonians: wells, oscillator, barrier] (M)
+  {
+    "question": "An infinite-well eigenfunction has three internal nodes. Its energy is how many times the ground-state energy?",
+    "choices": [
+      "4",
+      "9",
+      "16",
+      "25",
+      "3"
+    ],
+    "answer": "C",
+    "explanation": "The nth infinite-well eigenfunction has n−1 internal nodes. Three nodes mean n=4, and because E_n=n²E₁, its energy is 16E₁."
+  },
+
+  // Q39 [QM/Bohr model & hydrogen atom] (E)
+  {
+    "question": "The ratio λ_{3→2}/λ_{2→1} for hydrogen is",
+    "choices": [
+      "5/27",
+      "4/9",
+      "9/4",
+      "27/5",
+      "1"
+    ],
+    "answer": "D",
+    "explanation": "Hydrogen wavelengths are inversely proportional to |1/n_f²−1/n_i²|. The ratio is (3/4)/(5/36)=27/5."
+  },
+
+  // Q40 [TS/thermodynamic processes & cycles] (M)
+  {
+    "question": "One mole of a monatomic ideal gas follows the clockwise rectangular P–V cycle shown. The efficiency is",
+    "choices": [
+      "1/13",
+      "1/5",
+      "2/9",
+      "2/13",
+      "1/3"
+    ],
+    "answer": "D",
+    "image": "images/full-practice-4/q39.png",
+    "explanation": "The net work is the rectangle area P₀V₀. Heat enters on the isochoric and upper isobaric legs: Q_in=(3/2+5)P₀V₀=13P₀V₀/2, giving efficiency 2/13."
+  },
+
+  // Q41 [OW/interference] (H)
+  {
+    "question": "A Michelson interferometer mirror moves at constant speed u. If light of wavelength λ is used, bright fringes cross the detector at frequency",
+    "choices": [
+      "u/λ",
+      "λ/u",
+      "u/(2λ)",
+      "4u/λ",
+      "2u/λ"
+    ],
+    "answer": "E",
+    "image": "images/full-practice-4/q40.png",
+    "explanation": "Moving a Michelson mirror by distance dx changes the round-trip path by 2dx. Thus fringes pass at rate (2u)/λ."
+  },
+
+  // Q42 [SP/nuclear & particle physics] (M)
+  {
+    "question": "A stationary nucleus decays into an alpha particle of mass 4 u and a daughter of mass 196 u, releasing 5.0 MeV. Nonrelativistically, the alpha particle receives kinetic energy closest to",
+    "choices": [
+      "0.10 MeV",
+      "1.0 MeV",
+      "2.5 MeV",
+      "4.9 MeV",
+      "5.0 MeV"
+    ],
+    "answer": "D",
+    "explanation": "The products have equal momenta, so their kinetic energies are inversely proportional to mass. The alpha receives 196/(196+4) of 5.0 MeV, or 4.9 MeV."
+  },
+
+  // Q43 [SR/Lorentz transformation & four-vectors] (H)
+  {
+    "question": "In inertial frame S, two events have separations cΔt=5 m and Δx=3 m. In the inertial frame in which the events occur at the same position, c times their time separation is",
+    "choices": [
+      "2 m",
+      "5 m",
+      "√34 m",
+      "8 m",
+      "4 m"
+    ],
+    "answer": "E",
+    "explanation": "For events at one position in some frame, cΔτ is the invariant interval. Thus cΔτ=√[(5 m)²−(3 m)²]=4 m."
+  },
+
+  // Q44 [SR/length contraction] (M)
+  {
+    "question": "A spaceship of proper length L₀ passes a laboratory at speed v. The time between the nose and tail passing one laboratory clock is",
+    "choices": [
+      "L₀/v",
+      "γL₀/v",
+      "L₀γ/c",
+      "L₀/c",
+      "L₀/(γv)"
+    ],
+    "answer": "E",
+    "explanation": "The laboratory measures the contracted ship length L₀/γ. Dividing that passing distance by speed v gives the interval L₀/(γv)."
+  },
+
+  // Q45 [LM/lasers & interferometers] (M)
+  {
+    "question": "In a Michelson interferometer using wavelength λ, one mirror is displaced by λ/4. The number of fringes that pass a reference point is",
+    "choices": [
+      "1/4",
+      "1/2",
+      "1",
+      "2",
+      "4"
+    ],
+    "answer": "B",
+    "image": "images/full-practice-4/q44.png",
+    "explanation": "A mirror displacement λ/4 changes the round-trip optical path by λ/2. That is half a wavelength, so one-half fringe passes the reference point."
+  },
+
+  // Q46 [CM/central forces & celestial mechanics] (H)
+  {
+    "question": "A particle moves in U_eff(r)=a/r²−b/r with a,b>0. The radius of its stable circular orbit is",
+    "choices": [
+      "a/b",
+      "b/a",
+      "b/(2a)",
+      "√(a/b)",
+      "2a/b"
+    ],
+    "answer": "E",
+    "explanation": "A circular orbit occurs at an extremum of U_eff. Setting dU_eff/dr=−2a/r³+b/r²=0 gives r=2a/b, and the second derivative there is positive."
+  },
+
+  // Q47 [CM/Newton's laws & friction] (E)
+  {
+    "question": "A car moves at constant speed v around a level curve of radius R. The minimum coefficient of static friction is",
+    "choices": [
+      "v²/(gR)",
+      "gR/v²",
+      "v/(gR)",
+      "v²R/g",
+      "g/(v²R)"
+    ],
+    "answer": "A",
+    "explanation": "Static friction supplies centripetal force: μ_smg must be at least mv²/R. Therefore the minimum coefficient is v²/(gR)."
+  },
+
+  // Q48 [EM/induction & inductance] (M)
+  {
+    "question": "Current in an RL circuit rises as I=I₀(1−e^{−t/τ}). At t=τ ln2, the current is",
+    "choices": [
+      "I₀/4",
+      "I₀/√2",
+      "3I₀/4",
+      "I₀",
+      "I₀/2"
+    ],
+    "answer": "E",
+    "explanation": "Substituting t=τln2 gives exp(−t/τ)=exp(−ln2)=1/2. Hence the rising current is I=I₀(1−1/2)=I₀/2."
+  },
+
+  // Q49 [EM/magnetostatics & Lorentz force] (M)
+  {
+    "question": "A coaxial cable carries current I outward in the inner conductor and I inward in the outer conductor. Outside the cable, the magnetic field is",
+    "choices": [
+      "μ₀I/(2πr)",
+      "μ₀I/(πr)",
+      "zero",
+      "μ₀I/(4πr)",
+      "uniform"
+    ],
+    "answer": "C",
+    "explanation": "An Amperian loop outside the cable encloses equal and opposite currents, so the net enclosed current is zero. Ampère's law therefore gives B=0 outside."
+  },
+
+  // Q50 [QM/angular momentum & spin] (H)
+  {
+    "question": "For a single electron with orbital quantum number ℓ=2, spin-orbit coupling splits the level into two j values. Counting all m_j states, the total number of states is",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "10",
+      "12"
+    ],
+    "answer": "D",
+    "explanation": "Coupling ℓ=2 with s=1/2 gives j=3/2 and 5/2. Their magnetic-sublevel counts are 2j+1=4 and 6, totaling 10 states."
+  },
+
+  // Q51 [QM/identical particles & electron configuration] (M)
+  {
+    "question": "Two identical spin-½ fermions occupy the same spatial orbital. Their spin state must be",
+    "choices": [
+      "triplet",
+      "symmetric",
+      "either singlet or triplet",
+      "fully polarized",
+      "singlet"
+    ],
+    "answer": "E",
+    "explanation": "Identical fermions require an antisymmetric total state. If both particles share the same symmetric spatial orbital, their spin state must be the antisymmetric singlet."
+  },
+
+  // Q52 [QM/x-rays] (M)
+  {
+    "question": "Electrons accelerated through voltage V strike a metal target. The shortest emitted x-ray wavelength is",
+    "choices": [
+      "hc/(eV)",
+      "eV/(hc)",
+      "h/(eV)",
+      "hcV/e",
+      "independent of V"
+    ],
+    "answer": "A",
+    "explanation": "An electron accelerated through V has energy eV. Setting the largest possible photon energy hc/λ_min equal to eV gives λ_min=hc/(eV)."
+  },
+
+  // Q53 [TS/laws of thermodynamics (1st & 2nd)] (M)
+  {
+    "question": "An ideal gas expands freely into vacuum in an insulated container. For the gas, ΔU and ΔS are, respectively,",
+    "choices": [
+      "0 and positive",
+      "negative and zero",
+      "0 and zero",
+      "positive and positive",
+      "negative and positive"
+    ],
+    "answer": "A",
+    "explanation": "Free expansion into vacuum has W=0 and, for an insulated container, Q=0; hence ΔU=0. The irreversible expansion increases the accessible volume, so ΔS>0."
+  },
+
+  // Q54 [OW/wave properties & propagation] (E)
+  {
+    "question": "The wave y=Acos(kx−ωt) travels in the",
+    "choices": [
+      "+x direction with speed ω/k",
+      "−x direction with speed ω/k",
+      "+x direction with speed k/ω",
+      "−x direction with speed k/ω",
+      "y direction"
+    ],
+    "answer": "A",
+    "explanation": "A phase kx−ωt held constant moves toward increasing x, and dx/dt=ω/k. The wave therefore travels in the +x direction at speed ω/k."
+  },
+
+  // Q55 [OW/diffraction] (H)
+  {
+    "question": "A grating with N illuminated lines just resolves wavelengths λ and λ+Δλ in second order. If only N/2 lines are illuminated and third order is used, the new minimum resolvable separation is",
+    "choices": [
+      "2Δλ/3",
+      "3Δλ/4",
+      "4Δλ/3",
+      "Δλ",
+      "3Δλ/2"
+    ],
+    "answer": "C",
+    "explanation": "A grating's resolving power is R=mN=λ/Δλ. It changes from 2N to 3N/2, so the minimum separation grows by (2N)/(3N/2)=4/3."
+  },
+
+  // Q56 [SP/mathematical methods] (M)
+  {
+    "question": "For the Fourier series of f(x)=x on the interval −π<x<π, which coefficients vanish?",
+    "choices": [
+      "Only the constant term",
+      "Only all sine coefficients",
+      "All cosine and sine coefficients",
+      "No coefficients",
+      "The constant term and all cosine coefficients"
+    ],
+    "answer": "E",
+    "explanation": "The function f(x)=x is odd. An odd function has zero average and zero cosine coefficients, leaving only sine terms in its Fourier series."
+  },
+
+  // Q57 [SP/condensed matter physics] (M)
+  {
+    "question": "Two metals have the same electron effective mass, but metal B has four times the Fermi temperature of metal A. The ratio of their characteristic Fermi speeds v_B/v_A is",
+    "choices": [
+      "1/2",
+      "1",
+      "√2",
+      "2",
+      "4"
+    ],
+    "answer": "D",
+    "explanation": "Fermi energy is proportional to Fermi temperature and also to v_F² for fixed effective mass. Quadrupling T_F therefore doubles v_F."
+  },
+
+  // Q58 [CM/oscillatory motion] (M)
+  {
+    "question": "A lightly damped oscillator has amplitude A=A₀e^{−βt}. Its mechanical energy falls to one quarter of its initial value after time",
+    "choices": [
+      "(ln2)/β",
+      "(ln4)/β",
+      "1/(4β)",
+      "2/β",
+      "4/β"
+    ],
+    "answer": "A",
+    "explanation": "Mechanical energy is proportional to amplitude squared. Since A²=A₀²e^{−2βt}, setting E/E₀=1/4 gives t=(ln2)/β."
+  },
+
+  // Q59 [CM/Lagrangian & Hamiltonian formalism] (H)
+  {
+    "question": "A coordinate q has L=½m q̇²+αq q̇−½kq², where α is constant. In terms of the canonical momentum p, the Hamiltonian is",
+    "choices": [
+      "(p−αq)²/(2m)+½kq²",
+      "(p+αq)²/(2m)+½kq²",
+      "p²/(2m)+½kq²",
+      "p²/(2m)−½kq²",
+      "(p−αq)²/m+½kq²"
+    ],
+    "answer": "A",
+    "explanation": "The canonical momentum is p=mq̇+αq, so q̇=(p−αq)/m. Computing H=pq̇−L then gives (p−αq)²/(2m)+kq²/2."
+  },
+
+  // Q60 [CM/non-inertial frames & fluid dynamics] (M)
+  {
+    "question": "Water flows steadily through a horizontal pipe whose cross-sectional area decreases from 4A to A. If the initial speed is v, the final speed and pressure are",
+    "choices": [
+      "4v and higher",
+      "v/4 and lower",
+      "v/4 and higher",
+      "v and unchanged",
+      "4v and lower"
+    ],
+    "answer": "E",
+    "image": "images/full-practice-4/q59.png",
+    "explanation": "Continuity gives 4Av=A v_f, so v_f=4v. Bernoulli's equation in a horizontal pipe then requires the faster narrow section to have lower pressure."
+  },
+
+  // Q61 [EM/radiation, dipoles & fields in matter] (M)
+  {
+    "question": "For an electric dipole oscillating along the z axis, the time-averaged radiated intensity is zero along the",
+    "choices": [
+      "x axis only",
+      "y axis only",
+      "entire xy plane",
+      "directions making 45° with z",
+      "z axis only"
+    ],
+    "answer": "E",
+    "explanation": "Dipole radiation varies as sin²θ, where θ is measured from the oscillation axis. It is therefore zero along the z axis and maximal in the xy plane."
+  },
+
+  // Q62 [EM/AC circuits (RLC)] (M)
+  {
+    "question": "In a series RLC circuit driven below resonance, the current",
+    "choices": [
+      "lags the source voltage",
+      "is exactly in phase",
+      "is zero",
+      "has a frequency above the source frequency",
+      "leads the source voltage"
+    ],
+    "answer": "E",
+    "explanation": "Below resonance, the capacitive reactance exceeds the inductive reactance, so the circuit is net capacitive. In a capacitive circuit, current leads the source voltage."
+  },
+
+  // Q63 [QM/formalism: operators, wavefunctions, measurement] (H)
+  {
+    "question": "A system is in (√3/2)|1⟩+(1/2)|2⟩, where the corresponding energies are E and 4E. The uncertainty ΔE in an energy measurement is",
+    "choices": [
+      "E/4",
+      "3E/4",
+      "√3E/2",
+      "3√3E/4",
+      "7E/4"
+    ],
+    "answer": "D",
+    "explanation": "The probabilities are 3/4 and 1/4, so ⟨E⟩=7E/4 and ⟨E²⟩=19E²/4. Thus ΔE=√(⟨E²⟩−⟨E⟩²)=3√3E/4."
+  },
+
+  // Q64 [QM/standard Hamiltonians: wells, oscillator, barrier] (M)
+  {
+    "question": "At fixed energy below a rectangular barrier, replacing a particle by an isotope of four times the mass changes the tunneling exponent 2κL by a factor",
+    "choices": [
+      "1/2",
+      "1",
+      "2",
+      "4",
+      "16"
+    ],
+    "answer": "C",
+    "explanation": "The tunneling decay constant κ is proportional to the square root of particle mass at fixed energy and barrier. Multiplying the mass by 4 therefore doubles the exponent."
+  },
+
+  // Q65 [QM/atomic spectra & selection rules] (M)
+  {
+    "question": "An excited atomic state has natural linewidth Δν. If its lifetime is increased by a factor of 4, its natural linewidth becomes",
+    "choices": [
+      "Δν/16",
+      "Δν/2",
+      "2Δν",
+      "4Δν",
+      "Δν/4"
+    ],
+    "answer": "E",
+    "explanation": "Natural linewidth is inversely proportional to lifetime through the energy–time uncertainty relation. Increasing the lifetime fourfold reduces Δν to Δν/4."
+  },
+
+  // Q66 [TS/heat capacity & thermal transfer] (E)
+  {
+    "question": "Equal masses of the same material at temperatures T and 3T are placed in thermal contact in an insulated container. Their final temperature is",
+    "choices": [
+      "T",
+      "3T/2",
+      "√3T",
+      "5T/2",
+      "2T"
+    ],
+    "answer": "E",
+    "explanation": "Energy conservation for equal masses and equal heat capacities gives C(T_f−T)+C(T_f−3T)=0. Solving yields T_f=2T."
+  },
+
+  // Q67 [TS/statistical mechanics & ensembles] (M)
+  {
+    "question": "A system has a nondegenerate ground level at 0 and a triply degenerate excited level at energy ε. Its single-particle partition function is",
+    "choices": [
+      "1+e^{−βε}",
+      "3+e^{−βε}",
+      "3e^{−βε}",
+      "(1+e^{−βε})³",
+      "1+3e^{−βε}"
+    ],
+    "answer": "E",
+    "explanation": "The partition function sums degeneracy times Boltzmann factor. The ground state contributes 1, while the triply degenerate excited level contributes 3e^{−βε}."
+  },
+
+  // Q68 [TS/blackbody radiation] (M)
+  {
+    "question": "Two spherical blackbodies have equal radiated power. If body B has twice the absolute temperature of A, the radius ratio R_B/R_A is",
+    "choices": [
+      "1/4",
+      "1/2",
+      "1/√2",
+      "2",
+      "4"
+    ],
+    "answer": "A",
+    "explanation": "Blackbody power is 4πR²σT⁴. Equal powers imply R proportional to 1/T², so doubling temperature reduces the radius by a factor of 4."
+  },
+
+  // Q69 [OW/polarization] (M)
+  {
+    "question": "Unpolarized light passes through three ideal polarizers. The first and last axes are perpendicular. The middle polarizer is set to maximize transmission. The emerging fraction is",
+    "choices": [
+      "0",
+      "1/16",
+      "1/8",
+      "1/4",
+      "1/2"
+    ],
+    "answer": "C",
+    "explanation": "The first polarizer transmits 1/2. Maximum transmission through crossed endpoints occurs with the middle axis at 45 degrees, adding two factors cos²45°=1/2; total transmission is 1/8."
+  },
+
+  // Q70 [SP/nuclear & particle physics] (H)
+  {
+    "question": "A nucleus of mass number 16 has binding energy 8.0 MeV per nucleon and splits into two nuclei, each with 8.5 MeV per nucleon. The released energy is",
+    "choices": [
+      "0.5 MeV",
+      "8 MeV",
+      "16 MeV",
+      "68 MeV",
+      "136 MeV"
+    ],
+    "answer": "B",
+    "explanation": "The initial binding energy is 16×8.0=128 MeV and the final total is 16×8.5=136 MeV. The increase in binding energy, released as energy, is 8 MeV."
+  }
+
+  ]
+  }
 
 ];
