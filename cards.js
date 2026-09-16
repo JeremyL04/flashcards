@@ -20311,6 +20311,299 @@ const EXAMS = [
 }
 
 ]
+},
+
+{
+  "name": "Atomic & Nuclear Physics",
+  "added": "2026-09-16",
+  "category": "practice",
+  "cards": [
+
+// Q1 [QM/Bohr model & hydrogen atom] (M)
+{
+  "question": "A He⁺ ion makes a transition from n = 4 to n = 2, while a hydrogen atom makes a transition from n = 2 to n = 1. Neglecting reduced-mass corrections, the ratio E_{He⁺}/E_H of the emitted photon energies is",
+  "choices": [
+    "1/4",
+    "1/2",
+    "1",
+    "2",
+    "4"
+  ],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nFor a hydrogenlike ion, E_n = −13.6Z²/n² eV. The He⁺ photon has energy 13.6(2²)(1/2² − 1/4²) = 13.6(4)(3/16) = 13.6(3/4) eV. The hydrogen photon has energy 13.6(1 − 1/4) = 13.6(3/4) eV. The two energies are equal, so the ratio is 1. The factor-of-four choice keeps the Z² scaling but misses that the He⁺ transition occurs between levels whose n values are twice as large.\n\n90-SECOND SOLUTION\nBoth n values for He⁺ are twice the corresponding hydrogen values, producing a factor 1/4 from the n dependence; Z² = 4 cancels it exactly.\n\nWHAT TO MEMORIZE\nHydrogenlike energies scale as E_n ∝ −Z²/n². Compare both Z and n before applying the familiar Z² scaling."
+},
+
+// Q2 [QM/Bohr model & hydrogen atom] (M)
+{
+  "question": "In the nonrelativistic Schrödinger theory of hydrogen, neglecting fine structure and external fields, which pair of states has exactly the same energy?",
+  "choices": [
+    "3s and 3d",
+    "2s and 3s",
+    "2p and 3d",
+    "3p and 4p",
+    "1s and 2s"
+  ],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nFor the ideal nonrelativistic hydrogen atom, the energy E_n = −13.6 eV/n² depends only on the principal quantum number n, not on l or m. The 3s and 3d states both have n = 3, so they are degenerate. Every other listed pair has different principal quantum numbers. Fine structure, the Lamb shift, or an external field can remove some of this accidental degeneracy, but all are excluded in the question.\n\n90-SECOND SOLUTION\nIgnore the orbital letters and compare n. Only 3s and 3d share the same principal quantum number.\n\nWHAT TO MEMORIZE\nIn ideal hydrogen, energy depends only on n. In many-electron atoms, screening and penetration make the energy depend on l as well."
+},
+
+// Q3 [QM/angular momentum & spin] (M)
+{
+  "question": "In LS coupling, an atomic state has total orbital angular momentum quantum number L = 2 and total spin quantum number S = 1/2. The allowed values of the total electronic angular momentum quantum number J are",
+  "choices": [
+    "1/2 only",
+    "2 only",
+    "3/2 only",
+    "1/2 and 3/2",
+    "3/2 and 5/2"
+  ],
+  "answer": "E",
+  "explanation": "WORKED SOLUTION\nWhen angular momenta L and S are added, J takes every value from |L − S| to L + S in unit steps. Thus J = |2 − 1/2|, |2 − 1/2| + 1 = 3/2, 5/2. Choice D would result from using L = 1 rather than L = 2.\n\n90-SECOND SOLUTION\nThe endpoints are L ± S = 2 ± 1/2, and because S = 1/2 there are only those two values.\n\nWHAT TO MEMORIZE\nAngular-momentum addition gives j = |j₁ − j₂|, |j₁ − j₂| + 1, …, j₁ + j₂."
+},
+
+// Q4 [QM/angular momentum & spin] (H)
+{
+  "question": "An unpolarized beam of spin-1/2 atoms passes through the three ideal Stern–Gerlach selectors shown. At each selector, only the labeled output channel is transmitted. What fraction of the original beam emerges from the final selector?",
+  "choices": [
+    "0",
+    "1/8",
+    "1/4",
+    "1/2",
+    "1"
+  ],
+  "answer": "B",
+  "image": "images/atomic-nuclear-draft/q3.png",
+  "explanation": "WORKED SOLUTION\nThe first z selector transmits half of the unpolarized beam. A |+z⟩ state has probability 1/2 to be measured as |+x⟩, so the second selector transmits another factor 1/2. The resulting |+x⟩ state has probability 1/2 to be measured as |−z⟩, giving a final fraction (1/2)³ = 1/8. Choice A incorrectly assumes the first z measurement permanently prevents a later −z result; the intervening x measurement resets the spin state.\n\n90-SECOND SOLUTION\nThree filters each contribute a factor 1/2: unpolarized→+z, +z→+x, and +x→−z. Therefore 1/8 survives.\n\nWHAT TO MEMORIZE\nFor spin 1/2, eigenstates along perpendicular axes have overlap probability 1/2. A measurement along a new axis prepares a new state."
+},
+
+// Q5 [QM/identical particles & electron configuration] (M)
+{
+  "question": "The ground-state electron configuration of a neutral oxygen atom is 1s²2s²2p⁴. In the independent-electron picture, the number of unpaired electrons in this configuration is",
+  "choices": [
+    "0",
+    "1",
+    "3",
+    "2",
+    "4"
+  ],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nThe three 2p orbitals are degenerate before interactions are included. Hund's first rule places one electron in each orbital with parallel spins before pairing. For 2p⁴, three electrons first occupy the three orbitals singly and the fourth pairs in one orbital, leaving two unpaired electrons. Choice A ignores Hund's rule and pairs electrons prematurely.\n\n90-SECOND SOLUTION\nA p subshell has three orbitals. Four electrons distribute as ↑↓, ↑, ↑, leaving two unpaired.\n\nWHAT TO MEMORIZE\nFill degenerate orbitals singly with parallel spins before pairing. The p² and p⁴ configurations each have two unpaired electrons."
+},
+
+// Q6 [QM/atomic spectra & selection rules] (M)
+{
+  "question": "Ignoring spin, which one of the following hydrogenic transitions is forbidden as a single-photon electric-dipole transition?",
+  "choices": [
+    "3p → 1s",
+    "4d → 3p",
+    "3s → 2p",
+    "4f → 3d",
+    "3d → 1s"
+  ],
+  "answer": "E",
+  "explanation": "WORKED SOLUTION\nThe electric-dipole selection rule is Δl = ±1. The first four transitions change l by one. For 3d → 1s, l changes from 2 to 0, so Δl = −2 and the E1 matrix element vanishes. The transition can occur only through a much weaker higher-order process, not as an ordinary single-photon electric-dipole line.\n\n90-SECOND SOLUTION\nTranslate the letters: s=0, p=1, d=2, f=3. Only d→s skips an angular-momentum step.\n\nWHAT TO MEMORIZE\nElectric-dipole atomic transitions require Δl = ±1, with Δm = 0, ±1; parity changes."
+},
+
+// Q7 [QM/perturbation & approximation methods] (M)
+{
+  "question": "An excited atomic level with J = 1 and Landé factor g = 1 decays by an electric-dipole transition to a nondegenerate J = 0 level. In a weak magnetic field, and observing all allowed polarizations, the single spectral line splits into how many distinct frequencies?",
+  "choices": [
+    "1",
+    "3",
+    "2",
+    "4",
+    "6"
+  ],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nThe J = 1 upper level has m_J = −1, 0, +1, shifted by ΔE = gμ_Bm_JB. The J = 0 lower level has only m_J = 0 and is not split. Electric-dipole transitions with Δm = 0, ±1 connect each upper sublevel to the lower state, so three distinct photon energies appear. Choice C counts only the outer pair and forgets the unshifted π component.\n\n90-SECOND SOLUTION\nA J = 1 level has 2J + 1 = 3 magnetic sublevels; the unsplit J = 0 lower state turns them directly into three line frequencies.\n\nWHAT TO MEMORIZE\nA weak-field Zeeman level has m_J = −J,…,+J and shifts by gμ_Bm_JB. Allowed E1 changes are Δm = 0, ±1."
+},
+
+// Q8 [QM/atomic spectra & selection rules] (H)
+{
+  "question": "The figure shows four stationary states of a one-electron atom, labeled by orbital type and parity. The atom is initially in its 1s ground state and is illuminated by weak broadband light. Ignoring multiphoton and magnetic-dipole processes, which photon energy can be absorbed?",
+  "choices": [
+    "3 eV only",
+    "2 eV only",
+    "5 eV only",
+    "2 eV and 5 eV only",
+    "2 eV, 3 eV, and 5 eV"
+  ],
+  "answer": "A",
+  "image": "images/atomic-nuclear-draft/q7.png",
+  "explanation": "WORKED SOLUTION\nAn electric-dipole photon requires Δl = ±1 and a parity change. From the 1s ground state (l = 0, even), the 2p state at 3 eV (l = 1, odd) is allowed. The 2s state at 2 eV has Δl = 0, and the 3d state at 5 eV has Δl = 2, so neither is reached by a single E1 photon. Choice E treats every energy difference as an allowed absorption line and ignores the selection rule.\n\n90-SECOND SOLUTION\nFrom an s state, a single electric-dipole photon can reach a p state. The only p level shown is at 3 eV.\n\nWHAT TO MEMORIZE\nEnergy conservation says where a line could occur; selection rules determine whether that line is strong or absent. For E1 absorption, Δl = ±1 and parity changes."
+},
+
+// Q9 [QM/photon & particle phenomena] (M)
+{
+  "question": "A Franck–Hertz experiment produces the collector-current curve shown. The wavelength of the strongest photon emitted when the excited atoms return directly to the ground state is most nearly",
+  "choices": [
+    "25 nm",
+    "100 nm",
+    "490 nm",
+    "250 nm",
+    "1000 nm"
+  ],
+  "answer": "D",
+  "image": "images/atomic-nuclear-draft/q8.png",
+  "explanation": "WORKED SOLUTION\nSuccessive minima occur whenever electrons acquire enough additional energy for another inelastic excitation, so the excitation energy is 4.9 eV. The emitted photon has λ = hc/E ≈ (1240 eV·nm)/(4.9 eV) ≈ 253 nm, most nearly 250 nm. Choice C effectively uses hc ≈ 2400 eV·nm, while choice B mistakes a several-eV atomic transition for a much higher-energy ultraviolet photon.\n\n90-SECOND SOLUTION\nRead 4.9 eV from the voltage spacing and use λ(nm) ≈ 1240/E(eV): 1240/4.9 ≈ 250.\n\nWHAT TO MEMORIZE\nFranck–Hertz voltage spacing directly measures an atomic excitation energy in electron-volts. Convert with hc ≈ 1240 eV·nm."
+},
+
+// Q10 [QM/x-rays] (H)
+{
+  "question": "For Kα x rays, Moseley's law may be approximated as √f = C(Z − 1). The Kα frequency of an unknown element is four times that of sodium (Z = 11). The atomic number of the unknown element is most nearly",
+  "choices": [
+    "12",
+    "20",
+    "21",
+    "40",
+    "44"
+  ],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nBecause the frequency ratio is 4, the square-root ratio is 2. Thus (Z − 1)/(11 − 1) = 2, giving Z − 1 = 20 and Z = 21. Choice B forgets to restore the screening constant after doubling Z − 1; choice D doubles the frequency factor instead of taking its square root.\n\n90-SECOND SOLUTION\nFour times the frequency means twice √f. Double sodium's screened charge 11 − 1 = 10 to get 20, then add 1: Z = 21.\n\nWHAT TO MEMORIZE\nMoseley's law gives x-ray frequency proportional to the square of an effective nuclear charge: f ∝ (Z − σ)²."
+},
+
+// Q11 [QM/angular momentum & spin] (M)
+{
+  "question": "An electron in an atom is in an orbital state for which a measurement of L_z gives +ħ. Ignoring the electron spin, the z component of its orbital magnetic moment is",
+  "choices": [
+    "−μ_B",
+    "+μ_B",
+    "−2μ_B",
+    "+2μ_B",
+    "0"
+  ],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nThe orbital magnetic moment of an electron is μ_L = −(e/2m_e)L. Its z component is therefore μ_{L,z} = −(e/2m_e)L_z. With L_z = +ħ, this becomes −eħ/(2m_e) = −μ_B. The minus sign arises because the electron has negative charge: its magnetic moment points opposite to its orbital angular momentum. Choice B has the correct magnitude but treats the electron as positively charged.\n\n90-SECOND SOLUTION\nOne unit of orbital angular momentum corresponds to one Bohr magneton, but the electron's negative charge reverses the direction: +ħ → −μ_B.\n\nWHAT TO MEMORIZE\nFor electron orbital motion, μ_L = −μ_B L/ħ and μ_{L,z} = −m_lμ_B."
+},
+
+// Q12 [QM/atomic spectra & selection rules] (M)
+{
+  "question": "The familiar sodium D line is a closely spaced doublet. In the simplest description, the doublet occurs primarily because",
+  "choices": [
+    "the sodium nucleus has two stable charge states",
+    "the 3s state is split by the linear Stark effect",
+    "the emitted photon can have either helicity",
+    "the ground state contains two equivalent valence electrons",
+    "spin–orbit coupling splits the 3p level into J = 1/2 and J = 3/2 levels"
+  ],
+  "answer": "E",
+  "explanation": "WORKED SOLUTION\nSodium's single valence electron makes transitions from the fine-structure-split 3p levels, 3p ²P_{1/2} and 3p ²P_{3/2}, to the common 3s ²S_{1/2} level. The two slightly different upper-level energies produce two nearby wavelengths. Photon helicity affects polarization selection, not the existence of two zero-field line frequencies.\n\n90-SECOND SOLUTION\nA p electron has l = 1 and s = 1/2, so spin–orbit coupling gives j = 1/2 and 3/2: two upper energies, hence a doublet.\n\nWHAT TO MEMORIZE\nAtomic fine structure commonly comes from spin–orbit coupling. For one p electron, j = l ± 1/2 gives the ²P_{1/2}, ²P_{3/2} doublet."
+},
+
+// Q13 [QM/photon & particle phenomena] (M)
+{
+  "question": "A hydrogen atom initially in the n = 2 state absorbs a 20.0 eV photon and is ionized. Neglecting recoil, the kinetic energy of the emitted electron is most nearly",
+  "choices": [
+    "3.4 eV",
+    "6.4 eV",
+    "13.6 eV",
+    "16.6 eV",
+    "20.0 eV"
+  ],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nThe binding energy in the n = 2 state is 13.6/2² = 3.4 eV. Photoionization uses 3.4 eV to free the electron, leaving K = 20.0 − 3.4 = 16.6 eV. Choice B subtracts the ground-state ionization energy even though the atom begins excited; choice E ignores the binding energy entirely.\n\n90-SECOND SOLUTION\nIonization from n = 2 costs only 3.4 eV, so the photoelectron keeps 20.0 − 3.4 = 16.6 eV.\n\nWHAT TO MEMORIZE\nHydrogen's binding energy at level n is 13.6/n² eV, and photoelectron kinetic energy is photon energy minus the binding energy of the initial state."
+},
+
+// Q14 [SP/nuclear & particle physics] (M)
+{
+  "question": "Consider the reaction ⁷Li + p → ⁴He + ⁴He. Using the atomic masses m(⁷Li) = 7.0160 u, m(¹H) = 1.0078 u, and m(⁴He) = 4.0026 u, with 1 u = 931.5 MeV/c², the Q value is most nearly",
+  "choices": [
+    "−17.3 MeV",
+    "−8.7 MeV",
+    "+17.3 MeV",
+    "+8.7 MeV",
+    "+34.6 MeV"
+  ],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nAtomic electrons balance: lithium plus hydrogen has four electrons, as do two neutral helium atoms. The initial mass is 7.0160 + 1.0078 = 8.0238 u, and the final mass is 2(4.0026) = 8.0052 u. Thus Q = (8.0238 − 8.0052)(931.5 MeV) = 0.0186(931.5) ≈ +17.3 MeV. The positive sign means the reaction is exothermic. Choice D forgets that two alpha particles appear in the final state when interpreting the mass difference.\n\n90-SECOND SOLUTION\nInitial minus final mass is 0.0186 u; multiplying by about 930 MeV/u gives about 17.3 MeV, positive because mass decreased.\n\nWHAT TO MEMORIZE\nFor a reaction, Q = (total initial mass − total final mass)c². Atomic masses may be used directly when the total number of electrons balances."
+},
+
+// Q15 [SP/nuclear & particle physics] (M)
+{
+  "question": "In the nuclear reaction ²⁷Al(α, x)³⁰P, the emitted particle x is a",
+  "choices": [
+    "proton",
+    "neutron",
+    "deuteron",
+    "photon",
+    "positron"
+  ],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nConserve mass number and charge. Initially A = 27 + 4 = 31 and Z = 13 + 2 = 15. The ³⁰P product has A = 30 and Z = 15, leaving A = 1 and Z = 0 for x: a neutron. A proton would also reduce the charge of the residual nucleus by one and would not leave phosphorus.\n\n90-SECOND SOLUTION\nThe residual nucleus already carries all 15 units of initial charge, but it is short one nucleon. The missing particle is therefore ¹₀n.\n\nWHAT TO MEMORIZE\nBalance A and Z independently in every nuclear reaction; this usually identifies an unknown product without any dynamics."
+},
+
+// Q16 [SP/nuclear & particle physics] (H)
+{
+  "question": "A 3.0 MeV proton beam strikes stationary tritium nuclei whose masses may be taken as 3 times the proton mass. Before any reaction occurs, the total kinetic energy in the center-of-momentum frame is",
+  "choices": [
+    "0.75 MeV",
+    "1.0 MeV",
+    "1.5 MeV",
+    "2.25 MeV",
+    "3.0 MeV"
+  ],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nFor a projectile of mass m and laboratory kinetic energy K striking a stationary target of mass M, the nonrelativistic kinetic energy in the center-of-momentum frame is K_cm = K M/(m + M). Here M = 3m, so K_cm = (3.0 MeV)(3/4) = 2.25 MeV. The remaining 0.75 MeV is the kinetic energy of the center of mass itself and cannot be converted into internal excitation or reaction-product rest mass. Choice E incorrectly assumes all laboratory kinetic energy is available to the reaction.\n\n90-SECOND SOLUTION\nThe target carries three-fourths of the total mass, so the available center-of-momentum energy is three-fourths of 3.0 MeV: 2.25 MeV.\n\nWHAT TO MEMORIZE\nFor a stationary target, K_cm = K_lab M/(m + M). Heavy targets make K_cm ≈ K_lab; equal projectile and target masses give K_cm = K_lab/2."
+},
+
+// Q17 [SP/nuclear & particle physics] (H)
+{
+  "question": "The reaction ²H + ²H → ³He + n occurs with negligible initial kinetic energy. The binding energies are 2.22 MeV for ²H and 7.72 MeV for ³He; the neutron is unbound. The total kinetic energy released is most nearly",
+  "choices": [
+    "3.28 MeV",
+    "1.64 MeV",
+    "4.44 MeV",
+    "5.50 MeV",
+    "9.94 MeV"
+  ],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nA positive increase in total binding energy appears as released kinetic energy. The two deuterons initially have total binding energy 2(2.22) = 4.44 MeV. The final ³He nucleus has binding energy 7.72 MeV, while the free neutron contributes zero. Thus Q = 7.72 − 4.44 = +3.28 MeV, which becomes product kinetic energy when the initial kinetic energy is negligible. Choice D gives the difference 7.72 − 2.22 and forgets that there are two deuterons initially.\n\n90-SECOND SOLUTION\nFinal binding minus initial binding: 7.72 − 2(2.22) = 3.28 MeV. More tightly bound products mean positive Q.\n\nWHAT TO MEMORIZE\nReaction energy can be found from binding energies: Q = B_final − B_initial. A positive Q means energy is released."
+},
+
+// Q18 [SP/nuclear & particle physics] (H)
+{
+  "question": "The figure shows the spin and parity of three levels in an even–even nucleus. Which transition is forbidden by angular-momentum conservation as a single-photon gamma decay, regardless of electric or magnetic multipolarity?",
+  "choices": [
+    "2.5 MeV (0⁺) → 1.0 MeV (2⁺)",
+    "1.0 MeV (2⁺) → 0 MeV (0⁺)",
+    "2.5 MeV (0⁺) → 0 MeV (0⁺) by emission of two photons",
+    "None; every transition shown can emit one gamma ray",
+    "2.5 MeV (0⁺) → 0 MeV (0⁺)"
+  ],
+  "answer": "E",
+  "image": "images/atomic-nuclear-draft/q17.png",
+  "explanation": "WORKED SOLUTION\nA real photon carries at least one unit of angular momentum, so a single gamma ray cannot connect J_i = 0 directly to J_f = 0. The direct 0⁺ → 0⁺ transition is therefore forbidden as one-photon gamma emission; it may proceed by internal conversion, internal pair creation if energetic enough, or two-photon emission. The 0⁺ ↔ 2⁺ transitions can proceed as electric quadrupole (E2) transitions. Choice C is not forbidden because two photons can couple to total angular momentum zero.\n\n90-SECOND SOLUTION\nApply the special nuclear-spectroscopy rule: 0 → 0 cannot emit one gamma ray. The two transitions involving J = 2 can be E2.\n\nWHAT TO MEMORIZE\nA single photon has no J = 0 multipole, so 0 → 0 single-gamma decay is forbidden. Such transitions often reveal themselves through conversion electrons or pair emission."
+},
+
+// Q19 [SP/nuclear & particle physics] (H)
+{
+  "question": "In a Mössbauer experiment using a 14.4 keV gamma ray, the source moves directly toward the absorber at 1.0 mm/s. The magnitude of the first-order Doppler energy shift is most nearly",
+  "choices": [
+    "4.8 × 10⁻¹⁴ eV",
+    "4.8 × 10⁻¹¹ eV",
+    "4.8 × 10⁻⁸ eV",
+    "4.8 × 10⁻⁵ eV",
+    "4.8 × 10⁻² eV"
+  ],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nFor v ≪ c, the fractional Doppler shift is ΔE/E = v/c. Thus ΔE = (1.44 × 10⁴ eV)(1.0 × 10⁻³ m/s)/(3.0 × 10⁸ m/s) = 4.8 × 10⁻⁸ eV. The remarkably small energy scale is precisely why millimetre-per-second Doppler scanning is useful in Mössbauer spectroscopy. Choice B commonly results from converting millimetres to metres twice.\n\n90-SECOND SOLUTION\nThe fractional shift is about 10⁻³/(3×10⁸) ≈ 3.3×10⁻¹²; multiply by 1.44×10⁴ eV to get about 4.8×10⁻⁸ eV.\n\nWHAT TO MEMORIZE\nFor nonrelativistic source motion, ΔE/E ≈ v/c. Mössbauer linewidths are so narrow that laboratory velocities of mm/s produce resolvable shifts."
+},
+
+// Q20 [SP/nuclear & particle physics] (M)
+{
+  "question": "At the same low kinetic energy, a neutron and a proton are incident separately on the same heavy nucleus. A nonresonant nuclear reaction is generally much more likely for the neutron primarily because",
+  "choices": [
+    "the neutron experiences a stronger short-range nuclear force",
+    "the neutron does not have to tunnel through a repulsive Coulomb barrier",
+    "the neutron has much less rest mass than the proton",
+    "charge conservation forbids most proton-induced reactions",
+    "the neutron's de Broglie wavelength is always shorter than the proton's"
+  ],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nThe strong nuclear interaction is short-ranged, so an incident particle must first reach the nuclear surface. A proton is repelled by the positive nuclear charge and, at low energy, can reach the nucleus only by tunneling through the Coulomb barrier. A neutron feels no long-range electrostatic repulsion and can approach the nuclear surface directly. The proton and neutron have nearly equal masses and experience comparable strong interactions once inside the nucleus, so choices A and C do not explain the large difference.\n\n90-SECOND SOLUTION\nBefore the strong force can act, the projectile must get close. The neutral neutron has no Coulomb barrier; the positive proton does.\n\nWHAT TO MEMORIZE\nLow-energy neutron-induced reactions are important because neutrons face no Coulomb barrier. Charged-particle reaction probabilities are strongly suppressed by Coulomb tunneling."
+}
+
+]
 }
 
 ];
