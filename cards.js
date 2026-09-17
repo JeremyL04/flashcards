@@ -21879,4 +21879,816 @@ const EXAMS = [
     ]
   },
 
+  {
+    "name": "Formula Recall — 67",
+    "added": "2026-09-17",
+    "category": "practice",
+    "cards": [
+      {
+        "question": "A source recedes directly from an observer at speed βc. If λ₀ is the emitted wavelength, which expression gives the received wavelength λ?",
+        "choices": [
+          "λ = λ₀√((1 + β)/(1 − β))",
+          "λ = λ₀√((1 − β)/(1 + β))",
+          "λ = λ₀(1 − β)",
+          "λ = λ₀/(1 + β)",
+          "λ = γλ₀"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nRelativistic recession gives λ/λ₀ = √((1 + β)/(1 − β)). Choice B is the approaching-source result.\n\n90-SECOND SOLUTION\nRecession means redshift, so λ must exceed λ₀.\n\nWHAT TO MEMORIZE\nλ_received/λ_emitted = √((1 + β)/(1 − β)) for recession."
+      },
+      {
+        "question": "Frame S̄ moves in the +x direction at speed v relative to S. Which transverse electric-field transformation is correct?",
+        "choices": [
+          "Ē_y = E_y − vB_z",
+          "Ē_y = γ(E_y − vB_z)",
+          "Ē_y = γ(E_y + vB_z)",
+          "Ē_y = γ(E_y − vB_y)",
+          "Ē_y = E_y/γ"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor an x-directed boost, Ē_y = γ(E_y − vB_z). Choice C has the wrong cross-product sign.\n\n90-SECOND SOLUTION\nThe y electric component couples to the z magnetic component.\n\nWHAT TO MEMORIZE\nĒ_y = γ(E_y − vB_z); Ē_z = γ(E_z + vB_y)."
+      },
+      {
+        "question": "Which is the general uncertainty relation for observables A and B?",
+        "choices": [
+          "σ_Aσ_B ≥ ħ",
+          "σ_A²σ_B² ≥ |⟨AB⟩|²",
+          "σ_A²σ_B² ≥ |⟨[A,B]⟩|²/4",
+          "σ_Aσ_B = |⟨[A,B]⟩|",
+          "σ_A² + σ_B² ≥ ħ²/4"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe Robertson relation is σ_A²σ_B² ≥ |⟨[A,B]⟩|²/4. The commutator, not ⟨AB⟩, controls the bound.\n\n90-SECOND SOLUTION\nFor x and p it must reduce to σ_xσ_p ≥ ħ/2.\n\nWHAT TO MEMORIZE\nσ_Aσ_B ≥ |⟨[A,B]⟩|/2."
+      },
+      {
+        "question": "What are the energy eigenvalues of a one-dimensional quantum harmonic oscillator?",
+        "choices": [
+          "E_n = nħω",
+          "E_n = (n − 1/2)ħω",
+          "E_n = n²ħω",
+          "E_n = (n + 1/2)ħω",
+          "E_n = (2n + 1)ħω"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe oscillator spectrum is E_n = (n + 1/2)ħω, including zero-point energy ħω/2.\n\n90-SECOND SOLUTION\nAt n = 0 the energy cannot vanish.\n\nWHAT TO MEMORIZE\nE_n = (n + 1/2)ħω, n = 0,1,2,…"
+      },
+      {
+        "question": "A particle is in an infinite square well spanning 0 ≤ x ≤ a. Which energy spectrum is correct?",
+        "choices": [
+          "E_n = nπħ²/(2ma²)",
+          "E_n = n²πħ²/(ma²)",
+          "E_n = n²π²ħ²/(ma)",
+          "E_n = (n + 1/2)π²ħ²/(2ma²)",
+          "E_n = n²π²ħ²/(2ma²)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nBoundary nodes require k_n = nπ/a, giving E_n = ħ²k_n²/(2m) = n²π²ħ²/(2ma²).\n\n90-SECOND SOLUTION\nEnergy scales as n² and 1/a².\n\nWHAT TO MEMORIZE\nInfinite well: ψ_n = √(2/a) sin(nπx/a), E_n = n²π²ħ²/(2ma²)."
+      },
+      {
+        "question": "What is the energy of a one-dimensional free-particle plane wave e^{ikx}?",
+        "choices": [
+          "E = ħ²k²/(2m)",
+          "E = ħk/m",
+          "E = ħ²k/(2m)",
+          "E = ħk²/(2m)",
+          "E = mc² + ħk"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nApplying −ħ²(d²/dx²)/(2m) to e^{ikx} gives E = ħ²k²/(2m). Choice C misses one power of k.\n\n90-SECOND SOLUTION\nUse p = ħk and E = p²/(2m).\n\nWHAT TO MEMORIZE\np = ħk; E = ħ²k²/(2m)."
+      },
+      {
+        "question": "For a bound state in a finite square well, how must the wavefunction behave far outside the well?",
+        "choices": [
+          "Oscillate with constant amplitude",
+          "Decay exponentially",
+          "Grow exponentially",
+          "Remain constant",
+          "Vanish discontinuously at the walls"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOutside a bound well, E < V and the physical solution decays exponentially. The growing exponential is removed by normalizability.\n\n90-SECOND SOLUTION\nBound means localized, so ψ → 0 as |x| → ∞.\n\nWHAT TO MEMORIZE\nClassically forbidden regions give exponential solutions; retain only the decaying branch at infinity."
+      },
+      {
+        "question": "Which expression is the one-dimensional probability-current density for ψ(x)?",
+        "choices": [
+          "J = (ħ/2m)(ψ*ψ)",
+          "J = (iħ/m)(dψ*/dx)(dψ/dx)",
+          "J = (iħ/2m)(ψ dψ*/dx − ψ* dψ/dx)",
+          "J = −(ħ²/2m)d²ψ/dx²",
+          "J = |ψ|²v²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe current is J = (iħ/2m)(ψ dψ*/dx − ψ* dψ/dx). It is real despite the explicit i.\n\n90-SECOND SOLUTION\nCurrent must contain one spatial derivative and an antisymmetric ψ–ψ* combination.\n\nWHAT TO MEMORIZE\nJ = (ħ/m) Im(ψ* dψ/dx)."
+      },
+      {
+        "question": "For lossless one-dimensional scattering, which relation must the reflection and transmission coefficients satisfy?",
+        "choices": [
+          "R = T",
+          "R − T = 1",
+          "RT = 1",
+          "R + T = 1",
+          "R² + T² = 1"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nProbability-current conservation gives R + T = 1. Choice E incorrectly squares quantities already defined as current ratios.\n\n90-SECOND SOLUTION\nEvery incident particle is reflected or transmitted.\n\nWHAT TO MEMORIZE\nR = J_ref/J_inc, T = J_trans/J_inc, and R + T = 1."
+      },
+      {
+        "question": "Which matrix is the Pauli matrix σ_y?",
+        "choices": [
+          "[[0,1],[1,0]]",
+          "[[1,0],[0,−1]]",
+          "[[0,i],[−i,0]]",
+          "[[1,0],[0,1]]",
+          "[[0,−i],[i,0]]"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nσ_y = [[0,−i],[i,0]]. Choice C is −σ_y.\n\n90-SECOND SOLUTION\nThe upper-right entry is −i and the lower-left is +i.\n\nWHAT TO MEMORIZE\nσ_x swaps components, σ_y swaps with ±i, and σ_z is diagonal ±1."
+      },
+      {
+        "question": "For H = H₀ + λH′, what is the first-order correction to a nondegenerate energy E_n?",
+        "choices": [
+          "ΔE_n^{(1)} = λ⟨n|H′|n⟩",
+          "ΔE_n^{(1)} = λ²⟨n|H′|n⟩",
+          "ΔE_n^{(1)} = λΣ_{m≠n}|⟨m|H′|n⟩|²",
+          "ΔE_n^{(1)} = ⟨n|H₀|n⟩",
+          "ΔE_n^{(1)} = λ/(E_n − E_m)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFirst order is the diagonal matrix element λ⟨n|H′|n⟩. Off-diagonal squared terms first enter at second order.\n\n90-SECOND SOLUTION\nFirst order means one power of λ and one expectation value.\n\nWHAT TO MEMORIZE\nE_n^{(1)} = ⟨n|H′|n⟩, with λ included if H = H₀ + λH′."
+      },
+      {
+        "question": "Which denominator appears in the second-order nondegenerate energy correction for state n?",
+        "choices": [
+          "E_m⁰ + E_n⁰",
+          "E_n⁰ − E_m⁰",
+          "(E_n⁰ − E_m⁰)²",
+          "E_m⁰ − E_n⁰ squared",
+          "ħω"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSecond order contains Σ_{m≠n}|⟨m|H′|n⟩|²/(E_n⁰ − E_m⁰). Reversing the denominator changes every sign.\n\n90-SECOND SOLUTION\nThe reference-state energy E_n⁰ comes first.\n\nWHAT TO MEMORIZE\nE_n^{(2)} = Σ_{m≠n}|H′_{mn}|²/(E_n⁰ − E_m⁰)."
+      },
+      {
+        "question": "Which is Wien’s displacement law?",
+        "choices": [
+          "λ_max/T = 2.9 × 10⁻³ m·K",
+          "λ_maxT⁴ = constant",
+          "λ_maxT = 2.9 × 10⁻³ m·K",
+          "λ_max = 2.9 × 10⁻³T m",
+          "λ_max = hc/(k_BT²)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWien’s law is λ_maxT = 2.9 × 10⁻³ m·K. Hotter bodies peak at shorter wavelength.\n\n90-SECOND SOLUTION\nλ_max must vary as 1/T.\n\nWHAT TO MEMORIZE\nλ_maxT = 2.9 mm·K."
+      },
+      {
+        "question": "With E = −∇V, which is Poisson’s equation in vacuum permittivity ε₀?",
+        "choices": [
+          "∇²V = ρ/ε₀",
+          "∇²V = 0 for all ρ",
+          "∇V = −ρ/ε₀",
+          "∇²V = −ρ/ε₀",
+          "∇ × V = ρ/ε₀"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nGauss’s law gives ∇·E = ρ/ε₀; substituting E = −∇V gives ∇²V = −ρ/ε₀. Choice A misses the minus sign.\n\n90-SECOND SOLUTION\nThe minus sign comes directly from E = −∇V.\n\nWHAT TO MEMORIZE\nPoisson: ∇²V = −ρ/ε₀; Laplace: ∇²V = 0 where ρ = 0."
+      },
+      {
+        "question": "What is the electric-field magnitude on either side of an infinite nonconducting sheet with uniform surface charge density σ?",
+        "choices": [
+          "σ/ε₀",
+          "σ/(4πε₀r²)",
+          "σr/(2ε₀)",
+          "2σ/ε₀",
+          "σ/(2ε₀)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA Gaussian pillbox gives 2EA = σA/ε₀, so E = σ/(2ε₀). Choice A is the total jump across the sheet.\n\n90-SECOND SOLUTION\nThe flux leaves through two equal faces.\n\nWHAT TO MEMORIZE\nInfinite sheet: E = σ/(2ε₀); field jump: E_⊥⁺ − E_⊥⁻ = σ/ε₀."
+      },
+      {
+        "question": "What is the capacitance of parallel plates of area A separated by vacuum distance d?",
+        "choices": [
+          "C = ε₀A/d",
+          "C = ε₀d/A",
+          "C = A/(4πε₀d²)",
+          "C = 4πε₀Ad",
+          "C = ε₀A²/d"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor parallel plates, C = Q/V = ε₀A/d. Greater area increases C; greater separation decreases it.\n\n90-SECOND SOLUTION\nUse the scaling C ∝ A/d.\n\nWHAT TO MEMORIZE\nC_parallel = εA/d."
+      },
+      {
+        "question": "What is the magnetic-field magnitude a distance r from an infinite straight wire carrying current I?",
+        "choices": [
+          "μ₀I/(4πr²)",
+          "μ₀I/(2πr)",
+          "μ₀Ir/(2π)",
+          "μ₀I/(2r²)",
+          "μ₀I/(4πr)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAmpère’s law gives B(2πr) = μ₀I, so B = μ₀I/(2πr). Choice E has the point-source 4π pattern.\n\n90-SECOND SOLUTION\nCircular symmetry gives circumference 2πr.\n\nWHAT TO MEMORIZE\nInfinite wire: B = μ₀I/(2πr), direction by the right-hand rule."
+      },
+      {
+        "question": "What is the potential energy of a magnetic dipole m in a magnetic field B?",
+        "choices": [
+          "U = m × B",
+          "U = mB",
+          "U = −m · B",
+          "U = ∇(m · B)",
+          "U = −m × B"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe dipole energy is U = −m · B, minimized when m aligns with B. Choice A is related to torque, not energy.\n\n90-SECOND SOLUTION\nStable alignment must have the lowest energy.\n\nWHAT TO MEMORIZE\nU = −m · B; τ = m × B; F = ∇(m · B)."
+      },
+      {
+        "question": "Which equation is Faraday’s law in integral form?",
+        "choices": [
+          "∮B · dℓ = μ₀I",
+          "∮E · dA = Q/ε₀",
+          "∮B · dA = 0",
+          "∮E · dℓ = −dΦ_B/dt",
+          "∇ · E = 0"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFaraday’s law states that the induced emf is −dΦ_B/dt. The minus sign encodes Lenz’s law.\n\n90-SECOND SOLUTION\nChanging magnetic flux produces a circulating electric field.\n\nWHAT TO MEMORIZE\n∮E · dℓ = −dΦ_B/dt."
+      },
+      {
+        "question": "Far from an electric dipole p, how does its electrostatic potential scale with distance r?",
+        "choices": [
+          "1/r",
+          "1/r³",
+          "r",
+          "1/r⁴",
+          "1/r²"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe dipole potential is V = (p · r̂)/(4πε₀r²), so it falls as 1/r². The dipole field falls as 1/r³.\n\n90-SECOND SOLUTION\nEach multipole order adds one inverse power relative to monopole potential.\n\nWHAT TO MEMORIZE\nDipole potential ∝ 1/r²; dipole field ∝ 1/r³."
+      },
+      {
+        "question": "According to the Larmor formula, the power radiated by a slowly accelerating charge q is",
+        "choices": [
+          "P = μ₀q²a²/(6πc)",
+          "P = μ₀q²a/(6πc)",
+          "P = q²a²/(4πε₀c)",
+          "P = μ₀q²v²/(6πc)",
+          "P = μ₀qa²/(6πc²)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe nonrelativistic Larmor power is P = μ₀q²a²/(6πc). Radiation depends on acceleration squared, not velocity squared.\n\n90-SECOND SOLUTION\nPower must be unchanged if the acceleration reverses, so it contains a².\n\nWHAT TO MEMORIZE\nP_Larmor = μ₀q²a²/(6πc)."
+      },
+      {
+        "question": "An initially uncharged capacitor C charges through R from emf ℰ. Which expression gives its charge?",
+        "choices": [
+          "q = Cℰe^{−t/(RC)}",
+          "q = Cℰ(1 − e^{−t/(RC)})",
+          "q = (ℰ/R)(1 − e^{−t/(RC)})",
+          "q = Cℰ(1 + e^{−t/(RC)})",
+          "q = Cℰe^{t/(RC)}"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nCharging starts at zero and approaches Cℰ: q = Cℰ(1 − e^{−t/(RC)}). Choice A is the discharge shape.\n\n90-SECOND SOLUTION\nCheck q(0) = 0 and q(∞) = Cℰ.\n\nWHAT TO MEMORIZE\nRC charge: q = Q_f(1 − e^{−t/RC}); discharge: q = Q_0e^{−t/RC}."
+      },
+      {
+        "question": "What is the undamped resonant angular frequency of an ideal RLC circuit?",
+        "choices": [
+          "ω₀ = R/L",
+          "ω₀ = 1/(RC)",
+          "ω₀ = 1/√(LC)",
+          "ω₀ = √(L/C)",
+          "ω₀ = R/√(LC)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nElectrical energy exchanges between L and C at ω₀ = 1/√(LC). Resistance controls damping, not the ideal resonance.\n\n90-SECOND SOLUTION\nLC has units of time squared.\n\nWHAT TO MEMORIZE\nω₀ = 1/√(LC)."
+      },
+      {
+        "question": "A point charge q is distance d from an infinite grounded conducting plane. What image charge reproduces the field outside?",
+        "choices": [
+          "+q at the real charge",
+          "−q/2 at distance d behind the plane",
+          "+q at distance d behind the plane",
+          "−q at distance d behind the plane",
+          "−q at distance 2d behind the plane"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe grounded plane is replaced by image charge −q at the mirror point, distance d behind it. This makes the plane an equipotential at zero.\n\n90-SECOND SOLUTION\nMirror the position and reverse the sign.\n\nWHAT TO MEMORIZE\nGrounded plane: image −q at equal perpendicular distance."
+      },
+      {
+        "question": "Which condition gives minima for single-slit diffraction from a slit of width a?",
+        "choices": [
+          "a cosθ = mλ",
+          "2a sinθ = mλ",
+          "a sinθ = (m + 1/2)λ",
+          "d sinθ = mλ",
+          "a sinθ = mλ, m = 1,2,…"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nSingle-slit minima satisfy a sinθ = mλ for nonzero integer m. Half-integers describe double-slit minima.\n\n90-SECOND SOLUTION\nSingle-slit dark fringes use whole wavelengths across the slit.\n\nWHAT TO MEMORIZE\nSingle slit: a sinθ = mλ, m ≠ 0."
+      },
+      {
+        "question": "What is the Rayleigh angular resolution of a circular aperture of diameter D?",
+        "choices": [
+          "θ_min ≈ 1.22λ/D",
+          "θ_min ≈ λ/(2D)",
+          "θ_min ≈ D/λ",
+          "θ_min ≈ 2λ/D²",
+          "θ_min ≈ 1.22D/λ"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA circular aperture resolves angular separation θ_min ≈ 1.22λ/D. Larger diameter improves resolution.\n\n90-SECOND SOLUTION\nResolution must improve as D increases, so θ_min ∝ 1/D.\n\nWHAT TO MEMORIZE\nCircular aperture: θ_min = 1.22λ/D."
+      },
+      {
+        "question": "Which is the thin-lens equation using object distance s, image distance s′, and focal length f?",
+        "choices": [
+          "1/s − 1/s′ = 1/f",
+          "1/s + 1/s′ = 1/f",
+          "s + s′ = f",
+          "ss′ = f²",
+          "1/f = s/s′"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe thin-lens relation is 1/s + 1/s′ = 1/f under the stated sign convention.\n\n90-SECOND SOLUTION\nObject and image vergences add to lens power.\n\nWHAT TO MEMORIZE\n1/s + 1/s′ = 1/f; magnification m = −s′/s."
+      },
+      {
+        "question": "For particles much smaller than the wavelength, Rayleigh-scattered intensity varies with wavelength as",
+        "choices": [
+          "λ²",
+          "λ⁻²",
+          "λ⁻⁴",
+          "λ⁴",
+          "λ⁻¹"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nRayleigh scattering varies as I ∝ λ⁻⁴, so shorter wavelengths scatter much more strongly.\n\n90-SECOND SOLUTION\nThis strong inverse fourth power explains the blue sky.\n\nWHAT TO MEMORIZE\nRayleigh: I_scattered ∝ a⁶/λ⁴."
+      },
+      {
+        "question": "Two tones have frequencies f₁ and f₂. What beat frequency is heard?",
+        "choices": [
+          "f₁ + f₂",
+          "(f₁ + f₂)/2",
+          "f₁f₂",
+          "|f₁ − f₂|",
+          "2|f₁ − f₂|"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe envelope repeats at the absolute frequency difference |f₁ − f₂|. The average sets the rapid carrier oscillation.\n\n90-SECOND SOLUTION\nNearly equal tones produce slow beats equal to their small difference.\n\nWHAT TO MEMORIZE\nf_beat = |f₁ − f₂|."
+      },
+      {
+        "question": "For Poisson counting with mean λ, which probability gives exactly n counts?",
+        "choices": [
+          "P(n) = e^{−n}λ/n!",
+          "P(n) = λⁿe^{−n}/n!",
+          "P(n) = λⁿe^{−λ}",
+          "P(n) = n!e^{−λ}/λⁿ",
+          "P(n) = λⁿe^{−λ}/n!"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Poisson probability is P(n) = λⁿe^{−λ}/n!. Its variance and mean are both λ.\n\n90-SECOND SOLUTION\nThe exponential uses the mean λ; the factorial uses the observed count n.\n\nWHAT TO MEMORIZE\nP(n) = λⁿe^{−λ}/n! and σ = √λ."
+      },
+      {
+        "question": "What is the complex impedance of an ideal capacitor C at angular frequency ω?",
+        "choices": [
+          "Z_C = −i/(ωC)",
+          "Z_C = iωC",
+          "Z_C = ωC",
+          "Z_C = i/(ωC)",
+          "Z_C = 1/C"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA capacitor has Z_C = 1/(iωC) = −i/(ωC), with phase −π/2.\n\n90-SECOND SOLUTION\nCapacitive reactance decreases as frequency increases.\n\nWHAT TO MEMORIZE\nZ_R = R, Z_L = iωL, Z_C = −i/(ωC)."
+      },
+      {
+        "question": "What is the Compton wavelength shift for scattering angle θ?",
+        "choices": [
+          "Δλ = (h/mc)cosθ",
+          "Δλ = (h/mc)(1 − cosθ)",
+          "Δλ = (mc/h)(1 − cosθ)",
+          "Δλ = h/(mc sinθ)",
+          "Δλ = (h/mc)(1 + cosθ)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nCompton scattering gives Δλ = (h/mc)(1 − cosθ). It vanishes in the forward direction.\n\n90-SECOND SOLUTION\nAt θ = 0, no momentum transfer means no wavelength shift.\n\nWHAT TO MEMORIZE\nΔλ = λ_C(1 − cosθ), λ_C = h/(mc)."
+      },
+      {
+        "question": "A radioactive population has mean lifetime τ. Which decay law is correct?",
+        "choices": [
+          "N = N₀(1 − t/τ)",
+          "N = N₀e^{t/τ}",
+          "N = N₀e^{−t/τ}",
+          "N = N₀/t²",
+          "N = N₀e^{−τ/t}"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nExponential decay is N = N₀e^{−t/τ}. A positive exponent would make the population grow.\n\n90-SECOND SOLUTION\nAt late times a decaying population must approach zero.\n\nWHAT TO MEMORIZE\nN = N₀e^{−t/τ}; t_{1/2} = τ ln2."
+      },
+      {
+        "question": "For Michelson interferometer arm lengths L₁ and L₂, what is the round-trip optical path difference in vacuum?",
+        "choices": [
+          "L₂ − L₁",
+          "(L₂ − L₁)/2",
+          "L₁ + L₂",
+          "2(L₂ − L₁)",
+          "2(L₁ + L₂)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nEach beam travels out and back, so the path difference is Δ = 2(L₂ − L₁). Choice A forgets the return trip.\n\n90-SECOND SOLUTION\nMirror displacement changes round-trip path by twice that amount.\n\nWHAT TO MEMORIZE\nMichelson: Δ = 2ΔL; constructive when Δ = mλ."
+      },
+      {
+        "question": "Neglecting reduced-mass effects, what is the energy of level n in a hydrogenlike ion of nuclear charge Z?",
+        "choices": [
+          "E_n = −13.6 eV/(Zn²)",
+          "E_n = −13.6 eV·Z/n",
+          "E_n = −13.6 eV·n²/Z²",
+          "E_n = −13.6 eV·Z²n²",
+          "E_n = −13.6 eV·Z²/n²"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nHydrogenic energies scale as E_n = −13.6 eV·Z²/n². Choice A uses the wrong dependence on Z.\n\n90-SECOND SOLUTION\nStronger nuclear charge deepens binding as Z².\n\nWHAT TO MEMORIZE\nE_n ∝ −Z²/n²; r_n ∝ n²/Z."
+      },
+      {
+        "question": "Which orbital-angular-momentum change is allowed for a single electric-dipole atomic transition?",
+        "choices": [
+          "Δℓ = ±1",
+          "Δℓ = 0 only",
+          "Δℓ = ±2",
+          "Any Δℓ",
+          "Δℓ = ±1/2"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nElectric-dipole transitions require Δℓ = ±1. Choice B would preserve parity, whereas E1 transitions change parity.\n\n90-SECOND SOLUTION\nThe photon carries one unit of angular momentum.\n\nWHAT TO MEMORIZE\nE1: Δℓ = ±1, Δm = 0,±1, Δs = 0."
+      },
+      {
+        "question": "In atomic hyperfine coupling, which total angular momentum is formed from electronic J and nuclear spin I?",
+        "choices": [
+          "F = J − I only",
+          "F = J + I",
+          "F = L + S only",
+          "F = J × I",
+          "F = L − S"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nHyperfine structure couples electronic angular momentum J to nuclear spin I, defining F = J + I.\n\n90-SECOND SOLUTION\nFine structure couples L and S; hyperfine adds the nucleus.\n\nWHAT TO MEMORIZE\nF = J + I, with F ranging from |J − I| to J + I."
+      },
+      {
+        "question": "In the strong-field Paschen–Back limit, which combination sets the electron magnetic energy shift?",
+        "choices": [
+          "m_ℓ + m_s",
+          "m_ℓ − 2m_s",
+          "m_ℓ + 2m_s",
+          "2m_ℓ + m_s",
+          "m_j only, with no spin term"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nWhen L and S decouple, ΔE = μ_BB(m_ℓ + 2m_s). The factor 2 is the electron spin g factor.\n\n90-SECOND SOLUTION\nOrbital contributes once; spin contributes twice.\n\nWHAT TO MEMORIZE\nPaschen–Back: ΔE = μ_BB(m_ℓ + 2m_s)."
+      },
+      {
+        "question": "What is the rotational energy spectrum of a rigid diatomic molecule with moment of inertia I?",
+        "choices": [
+          "E_j = ħω(j + 1/2)",
+          "E_j = ħ²j²/I",
+          "E_j = ħ²(j + 1/2)/(2I)",
+          "E_j = ħ²j(j + 1)/(2I)",
+          "E_j = Iω²j/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA rigid rotor has E_j = ħ²j(j + 1)/(2I). Choice A is the harmonic-vibration spectrum.\n\n90-SECOND SOLUTION\nRotational angular momentum has eigenvalue ħ²j(j + 1).\n\nWHAT TO MEMORIZE\nRotor: E_j = ħ²j(j + 1)/(2I); vibrator: E_n = ħω(n + 1/2)."
+      },
+      {
+        "question": "According to Hund’s first rule, electrons in degenerate orbitals arrange to",
+        "choices": [
+          "minimize total spin",
+          "pair immediately",
+          "minimize orbital angular momentum first",
+          "make J = 0",
+          "maximize total spin"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nHund’s first rule maximizes total spin by filling degenerate orbitals singly with parallel spins before pairing.\n\n90-SECOND SOLUTION\nSpread out with parallel spins first.\n\nWHAT TO MEMORIZE\nHund: maximize S, then maximize L; choose J by shell filling."
+      },
+      {
+        "question": "What is the canonical probability of microstate i with energy E_i?",
+        "choices": [
+          "p_i = e^{−βE_i}/Z",
+          "p_i = E_i/Z",
+          "p_i = e^{βE_i}/Z",
+          "p_i = 1/E_i",
+          "p_i = Z/e^{−βE_i}"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe canonical Boltzmann weight is p_i = e^{−βE_i}/Z, where Z normalizes the probabilities.\n\n90-SECOND SOLUTION\nHigher-energy states must be exponentially suppressed.\n\nWHAT TO MEMORIZE\nZ = Σ_i e^{−βE_i}; p_i = e^{−βE_i}/Z."
+      },
+      {
+        "question": "What is the thermal de Broglie wavelength of a nonrelativistic particle of mass m?",
+        "choices": [
+          "λ = h√(2πmk_BT)",
+          "λ = h/√(2πmk_BT)",
+          "λ = ħ/(mk_BT)",
+          "λ = h/(2πmk_BT)",
+          "λ = √(h/(mk_BT))"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe thermal wavelength is λ = h/√(2πmk_BT). It decreases with mass and temperature.\n\n90-SECOND SOLUTION\nFaster thermal motion means a shorter wavelength.\n\nWHAT TO MEMORIZE\nλ_th = h/√(2πmk_BT)."
+      },
+      {
+        "question": "Using work W done by the system, which form of the first law is correct?",
+        "choices": [
+          "ΔU = Q + W",
+          "ΔU = W − Q",
+          "ΔU = Q − W",
+          "ΔU = −Q − W",
+          "ΔU = QW"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nIf W is work done by the system, that energy leaves it, so ΔU = Q − W.\n\n90-SECOND SOLUTION\nHeat in raises U; work out lowers U.\n\nWHAT TO MEMORIZE\nWith system-work convention: ΔU = Q − W."
+      },
+      {
+        "question": "Ignoring vibration, what is the internal energy of N classical diatomic ideal-gas molecules with active translation and rotation?",
+        "choices": [
+          "U = Nk_BT",
+          "U = (3/2)Nk_BT",
+          "U = 2Nk_BT",
+          "U = (5/2)Nk_BT",
+          "U = (7/2)Nk_BT"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThree translational plus two rotational quadratic degrees of freedom give U = (5/2)Nk_BT.\n\n90-SECOND SOLUTION\nFive active quadratic degrees, each contributing Nk_BT/2.\n\nWHAT TO MEMORIZE\nMonatomic: 3/2 Nk_BT; rotational diatomic: 5/2 Nk_BT; with vibration: 7/2 Nk_BT."
+      },
+      {
+        "question": "For a monatomic ideal gas of N particles, what is C_P?",
+        "choices": [
+          "(1/2)Nk_B",
+          "(3/2)Nk_B",
+          "2Nk_B",
+          "3Nk_B",
+          "(5/2)Nk_B"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nC_V = (3/2)Nk_B and C_P = C_V + Nk_B = (5/2)Nk_B.\n\n90-SECOND SOLUTION\nAdd Nk_B to C_V for an ideal gas.\n\nWHAT TO MEMORIZE\nMonatomic: C_V = 3Nk_B/2, C_P = 5Nk_B/2."
+      },
+      {
+        "question": "What is the maximum efficiency of a heat engine operating between absolute temperatures T_H and T_C?",
+        "choices": [
+          "η = 1 − T_C/T_H",
+          "η = T_C/T_H",
+          "η = 1 − T_H/T_C",
+          "η = (T_H + T_C)/T_H",
+          "η = T_H/(T_H − T_C)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe reversible Carnot limit is η = 1 − T_C/T_H. No engine between those reservoirs can exceed it.\n\n90-SECOND SOLUTION\nEfficiency approaches 1 as T_C approaches zero.\n\nWHAT TO MEMORIZE\nη_Carnot = 1 − T_C/T_H, using kelvin."
+      },
+      {
+        "question": "What is the speed of sound in an ideal gas with molecular mass m and heat-capacity ratio γ?",
+        "choices": [
+          "c = √(k_BT/(γm))",
+          "c = √(γk_BT/m)",
+          "c = γk_BT/m",
+          "c = √(m/(γk_BT))",
+          "c = √(γm/k_BT)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor an ideal gas, c = √(γP/ρ) = √(γk_BT/m). Choice A puts γ in the wrong place.\n\n90-SECOND SOLUTION\nSound speed increases as √T and decreases as 1/√m.\n\nWHAT TO MEMORIZE\nc = √(K/ρ) = √(γP/ρ) = √(γk_BT/m)."
+      },
+      {
+        "question": "Which is the Fermi–Dirac mean occupation number?",
+        "choices": [
+          "1/(e^{(ε−μ)/k_BT} − 1)",
+          "e^{−(ε−μ)/k_BT}",
+          "1/(e^{(ε−μ)/k_BT} + 1)",
+          "e^{(ε−μ)/k_BT} + 1",
+          "1/(ε − μ)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFermions use n̄ = 1/(e^{(ε−μ)/k_BT} + 1). The minus sign in the denominator is Bose–Einstein.\n\n90-SECOND SOLUTION\nPauli exclusion caps the occupation at 1, requiring +1.\n\nWHAT TO MEMORIZE\nFD has +1; BE has −1."
+      },
+      {
+        "question": "At T = 0, what is the total energy of an ideal three-dimensional degenerate Fermi gas?",
+        "choices": [
+          "U = NE_F",
+          "U = (3/2)NE_F",
+          "U = (2/3)NE_F",
+          "U = (3/5)NE_F",
+          "U = (5/3)NE_F"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFilling all states through E_F gives average energy 3E_F/5, so U = (3/5)NE_F. Choice B is the error in the handwritten source.\n\n90-SECOND SOLUTION\nThe particles fill a range below E_F; their average cannot exceed E_F.\n\nWHAT TO MEMORIZE\nAt T = 0: U/N = 3E_F/5 and P = 2U/(3V)."
+      },
+      {
+        "question": "Below the Bose–Einstein condensation temperature T_c, what fraction of particles occupies the ground state in an ideal 3D gas?",
+        "choices": [
+          "(T/T_c)^{3/2}",
+          "1 − T/T_c",
+          "(T_c/T)^{3/2}",
+          "1 − (T/T_c)²",
+          "1 − (T/T_c)^{3/2}"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe excited fraction is (T/T_c)^{3/2}; therefore N₀/N = 1 − (T/T_c)^{3/2}.\n\n90-SECOND SOLUTION\nAt T = 0 the ground-state fraction must be 1; at T = T_c it must be 0.\n\nWHAT TO MEMORIZE\nN₀/N = 1 − (T/T_c)^{3/2} for T < T_c."
+      },
+      {
+        "question": "What is the rms speed of molecules of mass m in a classical ideal gas?",
+        "choices": [
+          "v_rms = √(3k_BT/m)",
+          "v_rms = √(2k_BT/m)",
+          "v_rms = √(8k_BT/(πm))",
+          "v_rms = 3k_BT/m",
+          "v_rms = √(k_BT/(3m))"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nEquipartition gives (1/2)m⟨v²⟩ = (3/2)k_BT, so v_rms = √(3k_BT/m).\n\n90-SECOND SOLUTION\nThree translational dimensions produce the factor 3.\n\nWHAT TO MEMORIZE\nv_mp = √(2k_BT/m), v_avg = √(8k_BT/(πm)), v_rms = √(3k_BT/m)."
+      },
+      {
+        "question": "What is the Coriolis force on mass m moving with velocity v in a frame rotating with angular velocity Ω?",
+        "choices": [
+          "F_C = −mΩ²r",
+          "F_C = −2mΩ × v",
+          "F_C = m v²/r",
+          "F_C = −m dΩ/dt × r",
+          "F_C = 2m v × r"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe Coriolis force is F_C = −2mΩ × v. Choice A is the simple radial form associated with centrifugal force.\n\n90-SECOND SOLUTION\nCoriolis is velocity-dependent and contains a cross product with Ω.\n\nWHAT TO MEMORIZE\nF_Coriolis = −2mΩ × v."
+      },
+      {
+        "question": "An axis parallel to a center-of-mass axis is displaced by distance d. Which is the parallel-axis theorem?",
+        "choices": [
+          "I = I_CM − Md²",
+          "I = Md² only",
+          "I = I_CM + Md²",
+          "I = I_CM + MR²/2",
+          "I = I_CM/d²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nMoving the axis away from the center of mass adds Md²: I = I_CM + Md².\n\n90-SECOND SOLUTION\nA displaced axis must have greater inertia.\n\nWHAT TO MEMORIZE\nParallel axis: I = I_CM + Md²."
+      },
+      {
+        "question": "What is the moment of inertia of a uniform solid sphere about a diameter?",
+        "choices": [
+          "MR²",
+          "(1/2)MR²",
+          "(2/3)MR²",
+          "(2/5)MR²",
+          "(1/3)MR²"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nA uniform solid sphere has I = (2/5)MR². The hollow spherical shell has I = (2/3)MR².\n\n90-SECOND SOLUTION\nMass distributed throughout the volume lies closer to the axis than a shell.\n\nWHAT TO MEMORIZE\nSolid sphere 2/5; spherical shell 2/3."
+      },
+      {
+        "question": "Which is the Euler–Lagrange equation for generalized coordinate q_i?",
+        "choices": [
+          "dL/dt = 0",
+          "∂L/∂q_i = 0 always",
+          "d(∂L/∂q_i)/dt = ∂L/∂q̇_i",
+          "q̈_i = −∂L/∂q_i",
+          "d/dt(∂L/∂q̇_i) = ∂L/∂q_i"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe Euler–Lagrange equation is d/dt(∂L/∂q̇_i) = ∂L/∂q_i. Choice C interchanges q_i and q̇_i.\n\n90-SECOND SOLUTION\nDifferentiate the momentum-like derivative ∂L/∂q̇_i with respect to time.\n\nWHAT TO MEMORIZE\nd/dt(∂L/∂q̇_i) − ∂L/∂q_i = 0."
+      },
+      {
+        "question": "Which orbit corresponds to eccentricity e = 1 and total energy E = 0 in an inverse-square central force?",
+        "choices": [
+          "Parabolic",
+          "Circular",
+          "Elliptical",
+          "Hyperbolic",
+          "Spiral"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe marginally unbound Kepler orbit has e = 1 and E = 0, giving a parabola.\n\n90-SECOND SOLUTION\nEllipse: e < 1; parabola: e = 1; hyperbola: e > 1.\n\nWHAT TO MEMORIZE\nCircular e = 0; elliptical 0 < e < 1; parabolic e = 1; hyperbolic e > 1."
+      },
+      {
+        "question": "What is the angular frequency of a mass m attached to an ideal spring of constant k?",
+        "choices": [
+          "ω = √(m/k)",
+          "ω = √(k/m)",
+          "ω = k/m",
+          "ω = 2π√(k/m)",
+          "ω = km"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFrom m ẍ + kx = 0, the frequency is ω = √(k/m). Choice A is its inverse.\n\n90-SECOND SOLUTION\nA stiffer spring raises ω; a heavier mass lowers it.\n\nWHAT TO MEMORIZE\nω = √(k/m), E = kA²/2."
+      },
+      {
+        "question": "For ẍ + 2βẋ + ω₀²x = A cosωt, at what angular frequency is the displacement amplitude maximal?",
+        "choices": [
+          "ω_R = ω₀",
+          "ω_R = √(ω₀² − β²)",
+          "ω_R = √(ω₀² − 2β²)",
+          "ω_R = ω₀ − 2β",
+          "ω_R = √(ω₀² + 2β²)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe displacement resonance occurs at ω_R = √(ω₀² − 2β²). The damped free frequency instead contains −β².\n\n90-SECOND SOLUTION\nDo not confuse resonance frequency with the damped natural frequency.\n\nWHAT TO MEMORIZE\nω_1² = ω₀² − β²; ω_R² = ω₀² − 2β²."
+      },
+      {
+        "question": "What is the small-angle angular frequency of a simple pendulum of length L?",
+        "choices": [
+          "√(L/g)",
+          "g/L",
+          "2π√(g/L)",
+          "√(g/L)",
+          "√(mgL/I) for every pendulum"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor small angles, θ̈ + (g/L)θ = 0, so ω = √(g/L). Choice A is proportional to the period scale.\n\n90-SECOND SOLUTION\nLonger pendulums swing more slowly.\n\nWHAT TO MEMORIZE\nSimple pendulum: ω = √(g/L), T = 2π√(L/g)."
+      },
+      {
+        "question": "Mass m_A moving at speed v strikes stationary mass m_B elastically in one dimension. What is the final speed of m_B?",
+        "choices": [
+          "[(m_A − m_B)/(m_A + m_B)]v",
+          "[m_A/(m_A + m_B)]v",
+          "[2m_B/(m_A + m_B)]v",
+          "[(m_A + m_B)/(2m_A)]v",
+          "[2m_A/(m_A + m_B)]v"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a stationary target in a 1D elastic collision, v_B′ = [2m_A/(m_A + m_B)]v. The numerator contains the incident mass.\n\n90-SECOND SOLUTION\nFor equal masses the formula must give v_B′ = v.\n\nWHAT TO MEMORIZE\nv_A′ = (m_A − m_B)v/(m_A + m_B); v_B′ = 2m_Av/(m_A + m_B)."
+      },
+      {
+        "question": "A stretched string of length L is fixed at both ends. What is the wavelength of its nth harmonic?",
+        "choices": [
+          "λ_n = 2L/n",
+          "λ_n = L/n",
+          "λ_n = nL/2",
+          "λ_n = 2nL",
+          "λ_n = L/(2n)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe string contains n half-wavelengths: L = nλ_n/2, hence λ_n = 2L/n.\n\n90-SECOND SOLUTION\nThe fundamental fits half a wavelength in the string.\n\nWHAT TO MEMORIZE\nλ_n = 2L/n and f_n = nv/(2L)."
+      },
+      {
+        "question": "What is the impedance of a series RLC circuit?",
+        "choices": [
+          "Z = R + i(ωC − 1/(ωL))",
+          "Z = R + i(ωL − 1/(ωC))",
+          "Z = 1/R + i(ωL − 1/(ωC))",
+          "Z = R + ωL + 1/(ωC)",
+          "Z = iR(ωL − 1/(ωC))"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSeries impedances add: Z = R + iωL − i/(ωC) = R + i(ωL − 1/(ωC)).\n\n90-SECOND SOLUTION\nInductor contributes +i; capacitor contributes −i.\n\nWHAT TO MEMORIZE\nSeries RLC: Z = R + i(X_L − X_C)."
+      },
+      {
+        "question": "What is the quality factor of an ideal parallel RLC circuit with resistance R?",
+        "choices": [
+          "Q = (1/R)√(L/C)",
+          "Q = R√(L/C)",
+          "Q = R√(C/L)",
+          "Q = (1/R)√(C/L)",
+          "Q = 1/(RC)"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFor the parallel form shown, Q = R√(C/L) = ω₀RC. Choice A is the series-circuit quality factor.\n\n90-SECOND SOLUTION\nParallel Q grows with R; series Q falls with R.\n\nWHAT TO MEMORIZE\nSeries: Q = √(L/C)/R. Parallel: Q = R√(C/L)."
+      },
+      {
+        "question": "Which constitutive definition of electric displacement D is correct?",
+        "choices": [
+          "D = ε₀E − P",
+          "D = E/ε₀ + P",
+          "D = ε₀(E × P)",
+          "D = ε₀E + P",
+          "D = P − ε₀E"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nElectric displacement is D = ε₀E + P. In a linear isotropic medium this becomes D = εE.\n\n90-SECOND SOLUTION\nPolarization adds to the vacuum displacement.\n\nWHAT TO MEMORIZE\nD = ε₀E + P; H = B/μ₀ − M."
+      },
+      {
+        "question": "What is the skin depth of a good conductor with conductivity σ and permeability μ at angular frequency ω?",
+        "choices": [
+          "δ = √(ωμσ/2)",
+          "δ = 1/(ωμσ)",
+          "δ = √(2ω/(μσ))",
+          "δ = 2/(ωμσ)",
+          "δ = √(2/(ωμσ))"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor σ ≫ ωε, the skin depth is δ = √(2/(ωμσ)). It decreases with frequency and conductivity.\n\n90-SECOND SOLUTION\nBetter conductors and higher frequencies confine fields more strongly.\n\nWHAT TO MEMORIZE\nGood conductor: δ = √(2/(ωμσ))."
+      },
+      {
+        "question": "What is the relativistic addition law for collinear velocities u and v in the same direction?",
+        "choices": [
+          "w = (u + v)/(1 + uv/c²)",
+          "w = u + v",
+          "w = (u − v)/(1 + uv/c²)",
+          "w = (u + v)/(1 − uv/c²)",
+          "w = uv/(u + v)"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nCollinear velocities add as w = (u + v)/(1 + uv/c²). The denominator prevents a result above c.\n\n90-SECOND SOLUTION\nAt low speed the denominator approaches 1; if either speed is c, the result is c.\n\nWHAT TO MEMORIZE\nw = (u + v)/(1 + uv/c²)."
+      },
+      {
+        "question": "Which is the relativistic energy–momentum relation for rest mass m?",
+        "choices": [
+          "E = pc + mc²",
+          "E² = m²c⁴ + p²c²",
+          "E² = m²c² + p²c⁴",
+          "E = p²/(2m) + mc² exactly",
+          "E² = p²c² − m²c⁴"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nRelativistic energy obeys E² = m²c⁴ + p²c². It reduces to E = pc for a massless particle.\n\n90-SECOND SOLUTION\nSet p = 0 and recover E = mc².\n\nWHAT TO MEMORIZE\nE² = m²c⁴ + p²c²; T = E − mc²."
+      }
+    ]
+  },
+
 ];
