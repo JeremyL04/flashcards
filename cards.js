@@ -22690,5 +22690,255 @@ const EXAMS = [
       }
     ]
   },
+  {
+    "name": "Electromagnetism Test 9 (20 Questions)",
+    "added": "2026-10-11",
+    "category": "em",
+    "cards": [
+      {
+        "question": "An infinitely long solid cylinder of radius R has volume charge density ρ(r)=ρ₀r/R for r<R. The electric field magnitude at r=R/2 is",
+        "choices": [
+          "ρ₀R/(24ε₀)",
+          "ρ₀R/(12ε₀)",
+          "ρ₀R/(8ε₀)",
+          "ρ₀R/(6ε₀)",
+          "ρ₀R/(3ε₀)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a Gaussian cylinder of radius r, the enclosed charge per unit length is ∫₀ʳ(ρ₀r′/R)2πr′ dr′=2πρ₀r³/(3R). Gauss's law then gives E=ρ₀r²/(3ε₀R), so at r=R/2 the field is ρ₀R/(12ε₀). Choice D results from treating the density as uniform at its local value.\n\n90-SECOND SOLUTION\nFor cylindrical symmetry, E(r) is proportional to Q_enclosed/r. Since ρ is proportional to r, Q_enclosed is proportional to r³, so E is proportional to r²; one short integral supplies the factor 1/3.\n\nWHAT TO MEMORIZE\nChoose a Gaussian surface that makes E constant, then integrate the actual charge density."
+      },
+      {
+        "question": "In a region, the electrostatic potential is V=(V₀/a²)(x²−y²). The volume charge density in the region is",
+        "choices": [
+          "−4ε₀V₀/a²",
+          "−2ε₀V₀/a²",
+          "0",
+          "+2ε₀V₀/a²",
+          "+4ε₀V₀/a²"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nPoisson's equation gives ρ=−ε₀∇²V. The x and y second derivatives are +2V₀/a² and −2V₀/a², so they cancel and ρ=0. Choices A and E come from adding the magnitudes instead of retaining the signs.\n\n90-SECOND SOLUTION\nTake two second derivatives: x² contributes +2 and −y² contributes −2. Their sum is zero.\n\nWHAT TO MEMORIZE\nPoisson's equation is ∇²V=−ρ/ε₀; in a charge-free region it reduces to Laplace's equation."
+      },
+      {
+        "question": "Equal positive charges q occupy three corners of a square of side a. The fourth corner is empty. At the center, the net electric field has magnitude and direction",
+        "choices": [
+          "0",
+          "kq/a², toward the empty corner",
+          "2kq/a², toward the empty corner",
+          "2kq/a², away from the empty corner",
+          "4kq/a², away from the empty corner"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFour identical corner charges would give zero field at the center. Therefore the field of the three present charges is the negative of the field that the missing charge would have produced. The center-to-corner distance is a/√2, so the magnitude is kq/(a²/2)=2kq/a² and the direction is toward the empty corner.\n\n90-SECOND SOLUTION\nAdd an imaginary fourth charge to make a configuration whose field is zero. The three-charge field must cancel that imaginary charge's field.\n\nWHAT TO MEMORIZE\nRestore symmetry, solve the easy configuration, then subtract what is missing."
+      },
+      {
+        "question": "Two conducting spheres are very far apart. Sphere 1 has radius R and charge +Q; sphere 2 has radius 2R and charge +q. A thin wire containing switch S connects them. For what value of q will closing S cause no charge to flow through the wire?",
+        "choices": [
+          "Q/4",
+          "Q/2",
+          "Q",
+          "2Q",
+          "4Q"
+        ],
+        "answer": "D",
+        "image": "images/em-9/q3.png",
+        "explanation": "WORKED SOLUTION\nNo charge flows when the two spheres already have equal potentials before the switch closes. For widely separated conducting spheres, V₁=kQ/R and V₂=kq/(2R). Setting them equal gives q=2Q. Choice C incorrectly assumes equal charge, rather than equal potential, is the equilibrium condition.\n\n90-SECOND SOLUTION\nClosing a wire changes nothing only if its endpoints are already at the same potential. Use V=kQ/R for each isolated sphere and equate the two values.\n\nWHAT TO MEMORIZE\nA connection causes no charge flow only when its endpoints already have equal potential."
+      },
+      {
+        "question": "A point charge +q is a distance d from the center of a grounded conducting sphere of radius a, where d>a. The exterior potential is reproduced by +q and an image charge",
+        "choices": [
+          "+qa/d at distance a²/d from the center",
+          "−qa/d at distance a²/d from the center",
+          "−qd/a at distance a²/d from the center",
+          "−qa/d at distance ad from the center",
+          "−q at the center"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe image must lie inside the sphere on the line joining the center to q. Enforcing zero potential on r=a gives q′=−qa/d at distance a²/d from the center. Choice C reverses the ratio and would make the image magnitude grow as the real charge moves away.\n\n90-SECOND SOLUTION\nFor a grounded sphere, remember the paired ratios: q′/q=−a/d and d′/d=a²/d². Both image magnitude and image distance shrink when d increases.\n\nWHAT TO MEMORIZE\nGrounded sphere: q′=−qa/d and d′=a²/d."
+      },
+      {
+        "question": "A straight wire of length 2L carries current I. Point P is a perpendicular distance L from the wire's midpoint. The magnetic field magnitude at P is",
+        "choices": [
+          "μ₀I/(4πL)",
+          "μ₀I/(√2πL)",
+          "μ₀I/(2πL)",
+          "√2μ₀I/(4πL)",
+          "√2μ₀I/(2πL)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a finite straight wire, B=μ₀I(sin θ₁+sin θ₂)/(4πs), where s is the perpendicular distance. Here s=L and both endpoint angles are 45°, giving B=√2μ₀I/(4πL). Choice C is the infinite-wire result.\n\n90-SECOND SOLUTION\nThe wire subtends equal 45° endpoint angles. Insert 2 sin45°=√2 into the finite-wire expression.\n\nWHAT TO MEMORIZE\nFinite wire: B=μ₀I(sin θ₁+sin θ₂)/(4πs)."
+      },
+      {
+        "question": "Two singly ionized positive ions are accelerated from rest through the same potential difference and then enter the same uniform magnetic field perpendicular to their velocities. Their masses are m and 4m. The ratio of their orbit radii r_{4m}/r_m is",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1",
+          "2",
+          "4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAcceleration through V gives qV=mv²/2, while circular motion gives r=mv/(qB). Combining them yields r=√(2mV/q)/B, so r is proportional to √m for equal charge. Increasing the mass by four therefore doubles the radius; choice E incorrectly assumes r is directly proportional to mass at fixed voltage.\n\n90-SECOND SOLUTION\nAt fixed accelerating voltage, momentum p=√(2mqV), and r=p/(qB). Thus r scales as √m.\n\nWHAT TO MEMORIZE\nAt fixed accelerating voltage, compare momenta before using magnetic rigidity r=p/(qB)."
+      },
+      {
+        "question": "An infinite sheet in the xy-plane carries uniform surface current density K in the +x direction. The magnetic field immediately above the sheet has magnitude",
+        "choices": [
+          "0",
+          "μ₀K/4",
+          "μ₀K/2",
+          "μ₀K",
+          "2μ₀K"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA rectangular Ampère loop straddling the sheet has equal field magnitudes on its two long sides. Ampère's law gives 2Bℓ=μ₀Kℓ, hence B=μ₀K/2. Choice D misses that the circulation receives equal contributions from both sides.\n\n90-SECOND SOLUTION\nThe field jump across a surface current is μ₀K. Symmetry divides that jump equally between the two sides.\n\nWHAT TO MEMORIZE\nAn infinite current sheet produces B=μ₀K/2 on each side, with opposite directions."
+      },
+      {
+        "question": "Two windings share the same ideal toroidal core. With switch S in position 1 for a long time, a source V drives an N-turn winding through resistance R. The switch is then moved to position 2, disconnecting that branch and connecting a 2N-turn winding in series with resistance 3R and source ℰ. The windings produce fields in the same direction. What value of ℰ makes the final magnetic field equal to the initial field?",
+        "choices": [
+          "V/3",
+          "2V/3",
+          "V",
+          "3V",
+          "3V/2"
+        ],
+        "answer": "E",
+        "image": "images/em-9/q8.png",
+        "explanation": "WORKED SOLUTION\nThe initial steady current is I₁=V/R, so the initial field is proportional to NI₁=NV/R. The final current is I₂=ℰ/(3R), and the final field is proportional to (2N)I₂=2Nℰ/(3R). Equating the ampere-turns gives ℰ=3V/2. Choice B reverses the resistance and turn-count factors.\n\n90-SECOND SOLUTION\nFor the same toroidal core, equal fields require equal NI. Set N(V/R)=2N(ℰ/3R) and cancel N and R.\n\nWHAT TO MEMORIZE\nWith unchanged magnetic geometry, compare ampere-turns NI rather than currents alone."
+      },
+      {
+        "question": "A conducting rod of length ℓ slides at constant speed v on frictionless rails through a uniform magnetic field perpendicular to the rail plane. The rails and rod form a circuit of total resistance R. The external force required to maintain the speed is",
+        "choices": [
+          "Bℓv/R",
+          "B²ℓv/R",
+          "B²ℓ²v/R",
+          "Bℓ²v²/R",
+          "B²ℓ²v²/R"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe motional emf is Bℓv, so the induced current is I=Bℓv/R. The magnetic force on the rod is IℓB=B²ℓ²v/R and opposes the motion by Lenz's law. Choice A is the current, not the force.\n\n90-SECOND SOLUTION\nWrite emf Bℓv, divide by R for the current, then multiply by Bℓ for the force.\n\nWHAT TO MEMORIZE\nFor sliding-rod problems, follow the chain: motional emf → current → magnetic force."
+      },
+      {
+        "question": "Two coils have mutual inductance M. The secondary is closed through resistance R, and the primary current is increased from 0 to I₀ in an arbitrary time. Neglecting the secondary's self-inductance, the total charge that passes through the secondary is",
+        "choices": [
+          "0",
+          "MI₀/R",
+          "MI₀R",
+          "M/(RI₀)",
+          "I₀/(MR)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe induced emf magnitude is M dI₁/dt, so the secondary current is i₂=(M/R)dI₁/dt. Integrating over the entire change gives Q=∫i₂dt=(M/R)ΔI₁=MI₀/R, independent of how quickly the change occurs. Choice A confuses zero final emf with zero total transported charge.\n\n90-SECOND SOLUTION\nIntegrate Faraday's law over time: the time derivative disappears and only the total current change remains.\n\nWHAT TO MEMORIZE\nIntegrating an induced current converts dI/dt into the total change ΔI."
+      },
+      {
+        "question": "A loop of area A and resistance R lies in a uniform magnetic field directed into the page and increasing at constant rate β=dB/dt. The switch is initially open. What battery emf ℰ and polarity will make the current remain zero when the switch is closed?",
+        "choices": [
+          "ℰ=Aβ, with the upper terminal positive",
+          "ℰ=Aβ, with the lower terminal positive",
+          "ℰ=Aβ/R, with the upper terminal positive",
+          "ℰ=Aβ/R, with the lower terminal positive",
+          "No finite battery emf can keep the current zero"
+        ],
+        "answer": "A",
+        "image": "images/em-9/q11.png",
+        "explanation": "WORKED SOLUTION\nThe increasing into-page flux produces a counterclockwise induced emf of magnitude Aβ. A battery with its upper terminal positive drives clockwise current around the external loop, so choosing ℰ=Aβ makes the two emfs cancel and the current remain zero. Choices C and D divide an emf by resistance and therefore have the wrong units.\n\n90-SECOND SOLUTION\nLenz's law gives a counterclockwise induced tendency. The battery must oppose it, so it must drive clockwise; in the pictured left branch that means the upper terminal is positive. Match magnitudes: ℰ=Aβ.\n\nWHAT TO MEMORIZE\nUse Lenz's law for direction, then add all emfs algebraically around the loop."
+      },
+      {
+        "question": "A plane electromagnetic wave travels in the +x direction in vacuum and has E=(E₀/√2)(ŷ+ẑ)cos(kx−ωt). Its magnetic field is",
+        "choices": [
+          "(E₀/c√2)(ŷ+ẑ)cos(kx−ωt)",
+          "(E₀/c√2)(ẑ−ŷ)cos(kx−ωt)",
+          "(E₀/c√2)(ŷ−ẑ)cos(kx−ωt)",
+          "(cE₀/√2)(ẑ−ŷ)cos(kx−ωt)",
+          "(E₀/c)x̂ cos(kx−ωt)"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor a vacuum plane wave, B=(1/c)k̂×E. Since x̂×ŷ=ẑ and x̂×ẑ=−ŷ, the result is (E₀/c√2)(ẑ−ŷ)cos(kx−ωt). Choice C reverses the cross product.\n\n90-SECOND SOLUTION\nCross x̂ into each electric-field component separately, then divide the magnitude by c. Check that E×B points along +x.\n\nWHAT TO MEMORIZE\nIn vacuum, B=(1/c)k̂×E and E×B points in the propagation direction."
+      },
+      {
+        "question": "A beam of electromagnetic radiation of intensity S is normally incident on a perfectly absorbing flat surface of area A. The force on the surface is",
+        "choices": [
+          "0",
+          "SA/(2c)",
+          "2SA/c",
+          "SAc",
+          "SA/c"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe incident power is SA, and absorbed radiation transfers momentum at a rate equal to power divided by c. Therefore F=SA/c. Choice D is the force for perfect reflection, where the momentum reverses and the transfer doubles.\n\n90-SECOND SOLUTION\nAbsorption gives radiation pressure S/c; multiply by area.\n\nWHAT TO MEMORIZE\nRadiation pressure is S/c for absorption and 2S/c for normal perfect reflection."
+      },
+      {
+        "question": "An initially uncharged capacitor C is connected in series with a resistor R and an ideal battery. The time at which the capacitor has acquired one-half of its final charge is",
+        "choices": [
+          "RC/2",
+          "RC",
+          "2RC",
+          "RC/ln 2",
+          "RC ln 2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nDuring charging, q(t)=CV[1−e^{−t/RC}]. Setting q=CV/2 gives e^{−t/RC}=1/2, so t=RC ln2. Choice A incorrectly assumes the charge grows linearly in time.\n\n90-SECOND SOLUTION\nHalf the final charge means the remaining gap to equilibrium has also fallen to one-half. Exponential decay to one-half takes one factor of ln2.\n\nWHAT TO MEMORIZE\nIn any RC transient, the distance from the final value decays as e^{−t/RC}."
+      },
+      {
+        "question": "A Wheatstone bridge has resistances R and 2R in series in its left branch and 3R and 6R in series in its right branch. A galvanometer connects the two branch midpoints. When a battery is connected across the top and bottom nodes, the galvanometer current is",
+        "choices": [
+          "zero",
+          "V/(18R)",
+          "V/(9R)",
+          "V/(6R)",
+          "dependent on the galvanometer resistance"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe bridge is balanced because R/(2R)=3R/(6R). Each midpoint is therefore at the same fraction of the battery voltage, so the galvanometer has zero potential difference and carries no current. Choice E would matter for an unbalanced bridge, but not when the midpoint potentials are equal.\n\n90-SECOND SOLUTION\nCompare the upper-to-lower resistance ratios on the two sides: both are 1/2, so the midpoint potentials match.\n\nWHAT TO MEMORIZE\nA Wheatstone bridge is balanced when R₁/R₂=R₃/R₄."
+      },
+      {
+        "question": "An isolated parallel-plate capacitor initially has capacitance C₀, charge Q, and energy U₀. A dielectric of constant κ=3 is inserted to fill one-half of the plate area, spanning the full separation. The new stored energy is",
+        "choices": [
+          "U₀/2",
+          "U₀/3",
+          "U₀",
+          "2U₀",
+          "3U₀"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe filled and unfilled halves act as parallel capacitors, so C′=(C₀/2)+κ(C₀/2)=2C₀. Because the capacitor is isolated, Q is fixed and U=Q²/(2C); doubling C therefore halves the energy. Choice D uses the fixed-voltage rule even though no battery remains connected.\n\n90-SECOND SOLUTION\nSide-by-side dielectric regions are parallel capacitors. First find C′/C₀=(1+κ)/2=2, then use U proportional to 1/C at fixed Q.\n\nWHAT TO MEMORIZE\nBefore using an energy formula, identify whether the capacitor holds Q fixed or V fixed."
+      },
+      {
+        "question": "Two linear dielectric media meet at a plane interface carrying no free surface charge. The electric field is normal to the interface. If ε₂=3ε₁, then the field magnitudes satisfy",
+        "choices": [
+          "E₂=3E₁",
+          "E₂=√3E₁",
+          "E₂=E₁",
+          "E₂=E₁/√3",
+          "E₂=E₁/3"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nWith no free surface charge, the normal component of D is continuous: ε₁E₁=ε₂E₂. Since ε₂=3ε₁, E₂=E₁/3. Choice A incorrectly makes E, rather than D, grow with permittivity.\n\n90-SECOND SOLUTION\nNormal D is continuous here. The higher-permittivity medium therefore has the smaller normal electric field.\n\nWHAT TO MEMORIZE\nWithout free surface charge, normal D—not normal E—is continuous."
+      },
+      {
+        "question": "An electric dipole radiates with moment p(t)=p₀cos(ωt). In a second experiment, its amplitude is p₀/2 and its angular frequency is 2ω. The ratio of the average radiated powers P₂/P₁ is",
+        "choices": [
+          "1/4",
+          "1",
+          "2",
+          "4",
+          "16"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nDipole radiation power is proportional to the square of the second derivative of p, so its time average scales as p₀²ω⁴. Halving p₀ contributes 1/4, while doubling ω contributes 16, for a net factor of 4. Choice E accounts for the frequency change but ignores the reduced amplitude.\n\n90-SECOND SOLUTION\nRadiation depends on acceleration: two time derivatives make the frequency dependence ω⁴ after squaring. Combine (1/2)² with 2⁴.\n\nWHAT TO MEMORIZE\nFor a harmonically oscillating electric dipole, ⟨P⟩ is proportional to p₀²ω⁴."
+      },
+      {
+        "question": "A resistor, inductor, and capacitor are connected in parallel across an ideal sinusoidal voltage source of fixed amplitude. At ω=1/√(LC), the current supplied by the source is",
+        "choices": [
+          "minimum and in phase with the voltage",
+          "zero",
+          "maximum and leads the voltage by 90°",
+          "maximum and lags the voltage by 90°",
+          "minimum and 180° out of phase with the voltage"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe total admittance is Y=1/R+i(ωC−1/ωL). At ω=1/√(LC), the capacitive and inductive currents cancel, leaving only the resistive current V/R, which is in phase with the voltage and is the minimum source current. Choice A forgets that the resistor still draws current.\n\n90-SECOND SOLUTION\nAt parallel resonance, the equal and opposite L and C branch currents circulate between those branches. The source supplies only the resistor current.\n\nWHAT TO MEMORIZE\nSeries resonance minimizes impedance and maximizes source current; ideal parallel resonance maximizes impedance and minimizes source current."
+      }
+    ]
+  },
 
 ];

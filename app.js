@@ -50,7 +50,7 @@ const TIMED_SECONDS_DEFAULT = 120;
 
 // Not real security: this file is public, so anyone who views the page
 // source can read it. It only keeps casual visitors out.
-const PASSWORD = "im_so_lucky_to_be_dating_paula";
+const PASSWORD = "ilovepaula";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 const answerIndex = (card) => LETTERS.indexOf(card.answer);
