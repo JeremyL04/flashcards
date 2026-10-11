@@ -22815,6 +22815,7 @@ const EXAMS = [
           "B²ℓ²v²/R"
         ],
         "answer": "C",
+        "image": "images/em-9/q9.png",
         "explanation": "WORKED SOLUTION\nThe motional emf is Bℓv, so the induced current is I=Bℓv/R. The magnetic force on the rod is IℓB=B²ℓ²v/R and opposes the motion by Lenz's law. Choice A is the current, not the force.\n\n90-SECOND SOLUTION\nWrite emf Bℓv, divide by R for the current, then multiply by Bℓ for the force.\n\nWHAT TO MEMORIZE\nFor sliding-rod problems, follow the chain: motional emf → current → magnetic force."
       },
       {
@@ -22888,6 +22889,7 @@ const EXAMS = [
           "dependent on the galvanometer resistance"
         ],
         "answer": "A",
+        "image": "images/em-9/q15.png",
         "explanation": "WORKED SOLUTION\nThe bridge is balanced because R/(2R)=3R/(6R). Each midpoint is therefore at the same fraction of the battery voltage, so the galvanometer has zero potential difference and carries no current. Choice E would matter for an unbalanced bridge, but not when the midpoint potentials are equal.\n\n90-SECOND SOLUTION\nCompare the upper-to-lower resistance ratios on the two sides: both are 1/2, so the midpoint potentials match.\n\nWHAT TO MEMORIZE\nA Wheatstone bridge is balanced when R₁/R₂=R₃/R₄."
       },
       {
@@ -22900,6 +22902,7 @@ const EXAMS = [
           "3U₀"
         ],
         "answer": "A",
+        "image": "images/em-9/q16.png",
         "explanation": "WORKED SOLUTION\nThe filled and unfilled halves act as parallel capacitors, so C′=(C₀/2)+κ(C₀/2)=2C₀. Because the capacitor is isolated, Q is fixed and U=Q²/(2C); doubling C therefore halves the energy. Choice D uses the fixed-voltage rule even though no battery remains connected.\n\n90-SECOND SOLUTION\nSide-by-side dielectric regions are parallel capacitors. First find C′/C₀=(1+κ)/2=2, then use U proportional to 1/C at fixed Q.\n\nWHAT TO MEMORIZE\nBefore using an energy formula, identify whether the capacitor holds Q fixed or V fixed."
       },
       {
