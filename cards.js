@@ -23804,5 +23804,865 @@ const EXAMS = [
       }
     ]
   },
+  {
+    "name": "Full Practice Exam 6 (70 Questions)",
+    "added": "2026-10-11",
+    "category": "practice",
+    "cards": [
+      {
+        "question": "A 0.80 kg block on a frictionless surface is attached between two fixed walls by springs of constants 18 N/m and 32 N/m. If the block is displaced slightly, its period is most nearly",
+        "choices": [
+          "0.80 s",
+          "1.0 s",
+          "1.3 s",
+          "1.6 s",
+          "2.0 s"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nA displacement x stretches one spring and compresses the other, so both restoring forces point toward equilibrium: F = −(k₁+k₂)x. Thus k_eff = 18+32 = 50 N/m and T = 2π√(m/k_eff) = 2π√(0.80/50) ≈ 0.80 s. Treating the springs as series elements would describe a different geometry and gives a period that is too long.\n\nNUMERICS WITHOUT A CALCULATOR\nThe springs add: k = 50 N/m. Recognize 0.80/50 = 0.016 = 0.126², then multiply by 2π ≈ 6.3.\n\n90-SECOND SOLUTION\nRecognize immediately that the two restoring constants add. Then 0.80/50 = 0.016, whose square root is about 0.126; multiplying by 2π gives 0.80 s.\n\nWHAT TO MEMORIZE\nFor a mass between two fixed springs, k_eff = k₁+k₂ and T = 2π√(m/k_eff)."
+      },
+      {
+        "question": "Three corners of a square of side 0.30 m hold charges +4.0 nC, −1.0 nC, and +2.0 nC. How much work is required by an external agent to bring a −3.0 nC charge from infinity to the center of the square?",
+        "choices": [
+          "−1.27 μJ",
+          "−0.64 μJ",
+          "−0.21 μJ",
+          "+0.64 μJ",
+          "+1.27 μJ"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-6/q1.png",
+        "explanation": "WORKED SOLUTION\nEvery corner is the same distance r = a/√2 from the center, so potential is found by adding the charges algebraically before doing any geometry. V = k(4−1+2)nC/r ≈ 212 V, and the external work is ΔU = q_testV = (−3.0 nC)(212 V) = −0.64 μJ. Adding electric-field vectors instead of scalar potentials is the main trap.\n\nNUMERICS WITHOUT A CALCULATOR\nAll corners are equally distant, so add charges first: 5 nC. Use r = 0.30/√2 and keep the √2 upstairs to estimate V ≈ 210 V.\n\n90-SECOND SOLUTION\nCollapse the three source charges to their algebraic sum, +5 nC, because their distances are equal. Keep √2 in the numerator and multiply the resulting potential by −3 nC.\n\nWHAT TO MEMORIZE\nElectric potential is a scalar: V = Σkq_i/r_i, and quasistatic external work equals ΔU = qV."
+      },
+      {
+        "question": "A normalized state is ψ = (φ₁ + 2φ₂ + 2φ₃)/3, where the orthonormal states have energies E, 4E, and 9E, respectively. The uncertainty in an energy measurement is most nearly",
+        "choices": [
+          "1.3E",
+          "1.9E",
+          "2.4E",
+          "2.7E",
+          "2.9E"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe probabilities are 1/9, 4/9, and 4/9. Hence ⟨H⟩ = (1+16+36)E/9 = 53E/9 and ⟨H²⟩ = (1+64+324)E²/9 = 389E²/9. Therefore ΔE = √(⟨H²⟩−⟨H⟩²) = √692 E/9 ≈ 2.9E. Averaging the three energies without squaring the amplitudes gives a distractor.\n\nNUMERICS WITHOUT A CALCULATOR\nUse probability weights 1,4,4 over 9. Compute moments with integer numerators, subtract over 81, and take √692/9 ≈ 26.3/9.\n\n90-SECOND SOLUTION\nUse integer weights 1:4:4. Compute both moment numerators first, put the variance over 81, and estimate √692 ≈ 26.3.\n\nWHAT TO MEMORIZE\nMeasurement probabilities are squared amplitudes, and ΔA = √(⟨A²⟩−⟨A⟩²)."
+      },
+      {
+        "question": "A heat engine transfers 600 J from a reservoir at 400 K to a reservoir at 300 K during one irreversible process. The total entropy change of the two reservoirs is",
+        "choices": [
+          "0.50 J/K",
+          "1.0 J/K",
+          "1.5 J/K",
+          "2.0 J/K",
+          "3.5 J/K"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe hot reservoir loses entropy 600/400, while the cold reservoir gains 600/300. Thus ΔS_total = −1.5+2.0 = 0.50 J/K. A negative total would violate the second law for this isolated pair; using only the cold reservoir gives 2.0 J/K.\n\nNUMERICS WITHOUT A CALCULATOR\nFactor 600: ΔS = 600(1/300 − 1/400) = 600/1200.\n\n90-SECOND SOLUTION\nFactor the common heat: 600(1/300−1/400) = 600(100/120000) = 1/2 J/K.\n\nWHAT TO MEMORIZE\nA reservoir receiving heat Q changes entropy by +Q/T; one losing heat changes by −Q/T."
+      },
+      {
+        "question": "A 1.20 m string of mass 6.0 g is fixed at both ends and held under 96 N of tension. The frequency of its third harmonic is most nearly",
+        "choices": [
+          "58 Hz",
+          "87 Hz",
+          "116 Hz",
+          "139 Hz",
+          "173 Hz"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe linear density is μ = 0.006/1.20 = 0.005 kg/m, giving wave speed v = √(T/μ) = √19200 ≈ 139 m/s. For a string fixed at both ends, f₃ = 3v/(2L) ≈ 173 Hz. Choosing 58 Hz gives the fundamental and omits the third-harmonic factor.\n\nNUMERICS WITHOUT A CALCULATOR\nμ = 0.005 kg/m, so v = √19200 ≈ 139 m/s. Then 3v/(2L) = 3v/2.4 = 1.25v.\n\n90-SECOND SOLUTION\nAfter finding v ≈ 139 m/s, note that 3/(2L) = 3/2.4 = 1.25, so f₃ is simply 1.25v.\n\nWHAT TO MEMORIZE\nFor a fixed-fixed string, f_n = nv/(2L) and v = √(T/μ)."
+      },
+      {
+        "question": "A collider operates for 1.0 × 10⁶ s at luminosity 2.5 × 10³⁴ cm⁻²s⁻¹. A process has cross section 80 fb, and the detector records 60% of the events produced. Using 1 fb = 10⁻³⁹ cm², the expected number of recorded events is",
+        "choices": [
+          "120",
+          "480",
+          "4800",
+          "1.2 × 10⁴",
+          "1200"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe production rate is luminosity times cross section: (2.5×10³⁴)(80×10⁻³⁹) = 2.0×10⁻³ s⁻¹. In 10⁶ s this produces 2000 events, of which 0.60(2000) = 1200 are recorded. Forgetting detector efficiency gives the 2000-event intermediate value, not the requested count.\n\nNUMERICS WITHOUT A CALCULATOR\nMultiply luminosity and cross section first: 2.5 × 80 × 10⁻⁵ = 2.0 × 10⁻³ events/s. Over 10⁶ s that is 2000 events, and 60% gives 1200.\n\n90-SECOND SOLUTION\nCombine 2.5×80 = 200 and 10³⁴×10⁻³⁹ = 10⁻⁵, so the rate is 200×10⁻⁵ = 2×10⁻³ s⁻¹. The remaining factors are 10⁶ and 0.6.\n\nWHAT TO MEMORIZE\nExpected collider yield is N = luminosity × cross section × running time × efficiency."
+      },
+      {
+        "question": "A particle of rest mass m and Lorentz factor γ = 5/4 collides with an identical particle initially at rest, and the particles stick together. The rest mass of the composite is",
+        "choices": [
+          "2m",
+          "3m/√2",
+          "9m/4",
+          "5m/2",
+          "3m"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor γ = 5/4, β = 3/5. The moving particle has E = 5mc²/4 and p = 3mc/4; adding the stationary particle gives E_tot = 9mc²/4 and p_tot = 3mc/4. The composite invariant mass satisfies M²c⁴ = E_tot²−p_tot²c² = (9/2)m²c⁴, so M = 3m/√2. Simply adding rest masses gives 2m and ignores converted kinetic energy.\n\nNUMERICS WITHOUT A CALCULATOR\nγ = 5/4 corresponds to β = 3/5, so the moving particle has E = 5mc²/4 and p = 3mc/4. The total invariant gives M²/m² = (9/4)² − (3/4)² = 9/2.\n\n90-SECOND SOLUTION\nUse the 3-4-5 values implied by γ = 5/4, then subtract two small squares: (9/4)²−(3/4)² = (81−9)/16 = 9/2.\n\nWHAT TO MEMORIZE\nFor any system, M²c⁴ = E_tot²−p_tot²c²; composite rest mass need not equal the sum of constituent rest masses."
+      },
+      {
+        "question": "A detector records 2500 counts during a sample run and 900 counts during an equal-duration background run. Assuming Poisson statistics, the fractional uncertainty in the background-subtracted count is most nearly",
+        "choices": [
+          "2.0%",
+          "2.5%",
+          "3.0%",
+          "3.2%",
+          "3.6%"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe net signal is 2500−900 = 1600 counts. Independent Poisson variances add under subtraction, so σ_net = √(2500+900) = √3400 ≈ 58 counts. The fractional uncertainty is 58/1600 ≈ 0.036, or 3.6%. Using √1600 gives 2.5% and incorrectly treats the net as a single Poisson measurement.\n\nNUMERICS WITHOUT A CALCULATOR\nNet = 1600, while variances add: σ = √3400 ≈ 58. Since 58/1600 is a little over 1/28, it is 3.6%.\n\n90-SECOND SOLUTION\nEstimate √3400 as √34×10 ≈ 58. Then 58/1600 is 29/800, a little above 1/28, or 3.6%.\n\nWHAT TO MEMORIZE\nFor independent counts A and B, σ²_{A−B} = σ_A²+σ_B², with σ_N = √N for Poisson data."
+      },
+      {
+        "question": "A uniform disk of mass M and radius R is initially at rest on a frictionless axle. A small lump of putty of mass M/3 moving tangentially at speed v strikes the rim and sticks. The disk's angular speed immediately afterward is",
+        "choices": [
+          "v/(4R)",
+          "v/(3R)",
+          "v/(2R)",
+          "2v/(3R)",
+          "2v/(5R)"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nAngular momentum about the axle is conserved during the sticking collision. Initially L = (M/3)vR. Finally I = MR²/2+(M/3)R² = 5MR²/6, so ω = L/I = 2v/(5R). Omitting the putty from the final moment of inertia gives the larger 2v/(3R) distractor.\n\nNUMERICS WITHOUT A CALCULATOR\nConserve angular momentum about the axle. Initially L = (M/3)vR; finally I = MR²/2 + (M/3)R² = 5MR²/6, so ω = 2v/(5R).\n\n90-SECOND SOLUTION\nWrite the two coefficients only: initial angular momentum coefficient 1/3 and final inertia coefficient 1/2+1/3 = 5/6. Their ratio is (1/3)/(5/6) = 2/5.\n\nWHAT TO MEMORIZE\nDuring a short inelastic impact about a fixed axle, conserve angular momentum, not mechanical energy."
+      },
+      {
+        "question": "Ions pass undeflected through crossed fields E = 3.6 × 10⁴ V/m and B = 0.12 T, then enter a region containing only a 0.20 T magnetic field. Their circular path has radius 0.15 m. The charge-to-mass ratio q/m is",
+        "choices": [
+          "1.0 × 10⁷ C/kg",
+          "2.0 × 10⁷ C/kg",
+          "3.0 × 10⁷ C/kg",
+          "5.0 × 10⁷ C/kg",
+          "1.0 × 10⁸ C/kg"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-6/q9.png",
+        "explanation": "WORKED SOLUTION\nThe selector passes ions with v = E/B = 3.6×10⁴/0.12 = 3.0×10⁵ m/s. In the analyzer, qvB₂ = mv²/r, hence q/m = v/(B₂r) = 3.0×10⁵/(0.20×0.15) = 1.0×10⁷ C/kg. Reusing the selector field B instead of B₂ produces the wrong radius relation.\n\nNUMERICS WITHOUT A CALCULATOR\nFirst v = E/B = 3.0 × 10⁵ m/s. Then q/m = v/(B₂r); B₂r = 0.030, so division shifts to 10⁷.\n\n90-SECOND SOLUTION\nDivide by 0.12 as multiplying by 100/12 to get 3×10⁵. Since B₂r = 0.03, dividing by it multiplies by 100/3, leaving exactly 10⁷.\n\nWHAT TO MEMORIZE\nA velocity selector gives v = E/B; circular magnetic motion gives q/m = v/(Br)."
+      },
+      {
+        "question": "For a rectangular barrier, the transmission probability is approximated by T ∝ e^{−2κL}. If κ = 5.0 nm⁻¹, increasing the barrier width by 0.20 nm multiplies T by approximately",
+        "choices": [
+          "0.050",
+          "0.14",
+          "0.22",
+          "0.37",
+          "0.82"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nOnly the change in width matters in the ratio T_new/T_old = e^{−2κΔL}. Here 2κΔL = 2(5.0)(0.20) = 2, so the multiplier is e⁻² ≈ 0.14. Using e⁻¹ misses the factor of 2 in the tunneling exponent.\n\nNUMERICS WITHOUT A CALCULATOR\nOnly the width change matters: the exponent changes by −2(5)(0.20) = −2, and e⁻² ≈ 0.14.\n\n90-SECOND SOLUTION\nThe exponent is exactly −2. Recall e² ≈ 7.4, so its reciprocal is about 0.135.\n\nWHAT TO MEMORIZE\nFor a thick rectangular barrier, T scales approximately as e^{−2κL}."
+      },
+      {
+        "question": "A satellite moves in a circular orbit of radius 2R about a spherical planet of radius R = 6.0 × 10⁶ m. Its orbital period is 4.0 h. The gravitational acceleration at the planet's surface is most nearly",
+        "choices": [
+          "2.3 m/s²",
+          "4.6 m/s²",
+          "6.1 m/s²",
+          "7.3 m/s²",
+          "9.1 m/s²"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nCircular motion gives GM = 4π²r³/T² with r = 2R. Surface gravity is g = GM/R², so g = 32π²R/T². Substitution gives about 9.1 m/s². Using the orbital acceleration GM/(2R)² instead of surface gravity would be smaller by a factor of four.\n\nNUMERICS WITHOUT A CALCULATOR\nCombine T² = 4π²(2R)³/GM with g = GM/R² to get g = 32π²R/T². Use π² ≈ 10 and T = 1.44 × 10⁴ s.\n\n90-SECOND SOLUTION\nUse π² ≈ 10 and T = 1.44×10⁴ s: g ≈ 320(6×10⁶)/(2.07×10⁸) ≈ 9.2 m/s².\n\nWHAT TO MEMORIZE\nKepler's circular-orbit relation and surface gravity share the same GM; eliminate it before inserting numbers."
+      },
+      {
+        "question": "A 20-turn loop of area 0.015 m² is in a uniform 0.40 T field. In 0.10 s the angle between the loop's area vector and the field changes from 0° to 60°. The magnitude of the average induced emf is",
+        "choices": [
+          "0.12 V",
+          "0.30 V",
+          "0.48 V",
+          "0.60 V",
+          "1.20 V"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-6/q12.png",
+        "explanation": "WORKED SOLUTION\nThe flux per turn is BA cosθ. The cosine changes from 1 to 1/2, so |Δ(NΦ)| = NBA/2. Therefore |ε_avg| = 20(0.40)(0.015)(0.5)/0.10 = 0.60 V. Using sinθ instead of the cosine of the area-vector angle is the common trap.\n\nNUMERICS WITHOUT A CALCULATOR\nThe cosine changes from 1 to 1/2, so |ΔΦ| = NBA/2. Dividing by 0.10 multiplies by 10.\n\n90-SECOND SOLUTION\nCombine 20×0.015 = 0.30; multiplying by 0.40 and by the cosine change 0.5 gives 0.060 Wb-turn. Dividing by 0.10 s gives 0.60 V.\n\nWHAT TO MEMORIZE\nMagnetic flux is Φ = BA cosθ, where θ is measured from the area vector to the field."
+      },
+      {
+        "question": "For hydrogen, the ratio of the wavelength emitted in the transition n = 5 → 2 to that emitted in n = 3 → 1 is most nearly",
+        "choices": [
+          "0.24",
+          "1.06",
+          "2.37",
+          "3.56",
+          "4.23"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nHydrogen photon energy is proportional to Δ(1/n²), while wavelength is inversely proportional to that difference. Thus λ₅₂/λ₃₁ = (1−1/9)/(1/4−1/25) = (8/9)/(21/100) = 800/189 ≈ 4.23. Reversing the energy ratio gives the 0.24 distractor.\n\nNUMERICS WITHOUT A CALCULATOR\nWavelength is inverse to Δ(1/n²). The ratio is (1 − 1/9)/(1/4 − 1/25) = (8/9)/(21/100) = 800/189 ≈ 4.23.\n\n90-SECOND SOLUTION\nReduce the two differences to 8/9 and 21/100. The wavelength ratio is 800/189; 189×4.2 = 793.8, so the answer is just above 4.2.\n\nWHAT TO MEMORIZE\nFor hydrogen, 1/λ = R(1/n_f²−1/n_i²); wavelength ratios invert energy-difference ratios."
+      },
+      {
+        "question": "A 0.20 kg aluminum block at 200°C is placed in 0.30 kg of water at 20°C in an insulated container. Using c_Al = 900 J/(kg·K) and c_w = 4200 J/(kg·K), the final temperature is",
+        "choices": [
+          "42.5°C",
+          "50.0°C",
+          "65.0°C",
+          "80.0°C",
+          "110°C"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe aluminum and water heat capacities are 0.20(900) = 180 J/K and 0.30(4200) = 1260 J/K. Energy conservation makes the final temperature their heat-capacity-weighted average: T_f = [180(200)+1260(20)]/1440 = 42.5°C. A simple arithmetic average ignores the unequal heat capacities.\n\nNUMERICS WITHOUT A CALCULATOR\nHeat capacities are 180 and 1260 J/K, a 1:7 ratio. The final temperature is the weighted mean (200 + 7·20)/8 = 42.5°C.\n\n90-SECOND SOLUTION\nSince 1260 = 7(180), use the 1:7 weighted mean: (200+7×20)/8 = 340/8 = 42.5°C.\n\nWHAT TO MEMORIZE\nIn an insulated calorimetry problem, T_f = ΣC_iT_i/ΣC_i when heat capacities are constant and no phase change occurs."
+      },
+      {
+        "question": "A converging lens of focal length 20 cm and a diverging lens of focal length −50 cm are separated by 10 cm. The effective focal length of the combination is",
+        "choices": [
+          "20 cm",
+          "25 cm",
+          "33 cm",
+          "50 cm",
+          "100 cm"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor separated thin lenses, optical powers combine as P = P₁+P₂−dP₁P₂. In meters, P₁ = 5 D, P₂ = −2 D, and d = 0.10 m, giving P = 5−2−0.10(−10) = 4 D. Hence f = 1/P = 0.25 m. Treating the lenses as touching omits the separation term and gives 33 cm.\n\nNUMERICS WITHOUT A CALCULATOR\nUse powers in meters: P = 5 − 2 − (0.10)(5)(−2) = 4 D, so f = 1/4 m.\n\n90-SECOND SOLUTION\nWork in diopters: 5 and −2. Their product is −10, so subtracting dP₁P₂ adds 1. The final power is 4 D, whose reciprocal is 25 cm.\n\nWHAT TO MEMORIZE\nTwo thin lenses separated by d have P_eq = P₁+P₂−dP₁P₂."
+      },
+      {
+        "question": "A face-centered cubic metal has atomic mass 64 u and lattice constant 0.36 nm. Its density is most nearly",
+        "choices": [
+          "2.3 g/cm³",
+          "4.6 g/cm³",
+          "6.9 g/cm³",
+          "9.1 g/cm³",
+          "18.2 g/cm³"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAn FCC conventional cell contains four atoms. Its mass is 4(64 g/mol)/N_A, while its volume is (3.6×10⁻⁸ cm)³. Therefore ρ ≈ 256/[6.0×10²³(3.6×10⁻⁸)³] ≈ 9.1 g/cm³. Using one atom per cell gives a density four times too small.\n\nNUMERICS WITHOUT A CALCULATOR\nAn FCC cell has four atoms. In cgs, ρ = 256/[6.0 × 10²³(3.6 × 10⁻⁸)³]. Since 3.6³ ≈ 46.7, the denominator is about 28.\n\n90-SECOND SOLUTION\nCombine the powers first: 6×10²³ times 3.6³×10⁻²⁴ is 0.6×46.7 ≈ 28. Then 256/28 ≈ 9.1.\n\nWHAT TO MEMORIZE\nFCC has four atoms per conventional cubic cell; density is mass per cell divided by a³."
+      },
+      {
+        "question": "An 8.0 kg block on a horizontal surface is pulled by a 50 N force directed 37° above horizontal. If μ_k = 0.25, g = 10 m/s², and sin 37° = 3/5, its acceleration is most nearly",
+        "choices": [
+          "3.4 m/s²",
+          "4.1 m/s²",
+          "5.0 m/s²",
+          "6.3 m/s²",
+          "8.8 m/s²"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe applied force components are 40 N horizontal and 30 N upward. Thus N = 80−30 = 50 N, kinetic friction is 0.25(50) = 12.5 N, and the horizontal net force is 27.5 N. The acceleration is 27.5/8 = 3.4 m/s². Using mg for the normal force gives too much friction.\n\nNUMERICS WITHOUT A CALCULATOR\nResolve F into 40 N horizontal and 30 N vertical. Then N = 50 N, friction = 12.5 N, and a = 27.5/8 ≈ 3.4.\n\n90-SECOND SOLUTION\nUse the 3-4-5 triangle: the force components are 30 and 40 N. Then divide 27.5 by 8; 28/8 = 3.5, so the answer is slightly below 3.5.\n\nWHAT TO MEMORIZE\nAn upward pulling component reduces N and therefore reduces kinetic friction μ_kN."
+      },
+      {
+        "question": "A 6.0 μF capacitor is fully charged to 18 V. A switch then disconnects the battery and connects the capacitor across 3.0 kΩ and 6.0 kΩ resistors in series. The charge remaining after 54 ms is most nearly",
+        "choices": [
+          "30 μC",
+          "40 μC",
+          "54 μC",
+          "80 μC",
+          "108 μC"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-6/q18.png",
+        "explanation": "WORKED SOLUTION\nInitially Q₀ = CV = 6.0 μF(18 V) = 108 μC. In the discharge position the resistors are in series, so R = 9.0 kΩ and τ = RC = 54 ms. After one time constant Q = Q₀e⁻¹ ≈ 40 μC. Using only one resistor gives the wrong time constant.\n\nNUMERICS WITHOUT A CALCULATOR\nQ₀ = 108 μC and τ = (9 kΩ)(6 μF) = 54 ms. After one time constant, use Q₀/e ≈ 108/2.7 = 40 μC.\n\n90-SECOND SOLUTION\nThe stated 54 ms is exactly RC, so no exponent calculation is needed beyond 1/e. Divide 108 by 2.7 to obtain 40.\n\nWHAT TO MEMORIZE\nFor capacitor discharge, Q(t) = Q₀e^{−t/RC}; combine the resistors as seen by the capacitor."
+      },
+      {
+        "question": "A spin-1/2 particle prepared with S_z = +ħ/2 is measured first along the x axis and found to have S_x = +ħ/2. A second apparatus measures spin along an axis 60° from the +x axis. The probability that both stated outcomes occur, including a positive result at the second apparatus, is",
+        "choices": [
+          "1/8",
+          "1/4",
+          "1/2",
+          "3/4",
+          "3/8"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe first +x result occurs with probability 1/2 for a +z state. After that result, the state is +x, and the probability of a positive result along an axis 60° away is cos²(60°/2) = cos²30° = 3/4. The joint probability is (1/2)(3/4) = 3/8. Reporting 3/4 ignores the probability of the first stated outcome.\n\nNUMERICS WITHOUT A CALCULATOR\nThe first positive result has probability 1/2. Conditional on it, the next is cos²(60°/2) = 3/4. Multiply to get 3/8.\n\n90-SECOND SOLUTION\nA spin-1/2 overlap uses half the physical angle. Multiply 1/2 by cos²30° = 3/4.\n\nWHAT TO MEMORIZE\nFor spin-1/2, P(+ along b | + along a) = cos²(θ/2). Sequential probabilities multiply."
+      },
+      {
+        "question": "Two photons with energies 3.0 GeV and 4.0 GeV travel at right angles and collide. The invariant mass-energy of the two-photon system is",
+        "choices": [
+          "3.5 GeV",
+          "4.9 GeV",
+          "7.0 GeV",
+          "12 GeV",
+          "24 GeV"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFor two photons, M²c⁴ = 2E₁E₂(1−cosθ). At 90°, this is 2(3)(4) = 24 GeV², so Mc² = √24 = 2√6 ≈ 4.9 GeV. Adding photon energies gives 7 GeV, the total energy in this frame, not the invariant mass-energy.\n\nNUMERICS WITHOUT A CALCULATOR\nFor photons, M²c⁴ = 2E₁E₂(1 − cosθ). At 90°, this is 24 GeV², so Mc² = √24 = 2√6 ≈ 4.9 GeV.\n\n90-SECOND SOLUTION\nAt a right angle the cosine term vanishes. Recognize √24 = 2√6 and √6 ≈ 2.45.\n\nWHAT TO MEMORIZE\nA two-photon system can have nonzero invariant mass: M²c⁴ = 2E₁E₂(1−cosθ)."
+      },
+      {
+        "question": "In a Michelson interferometer using 600 nm light, 25 fringes pass a reference point when one mirror is moved. The mirror displacement is",
+        "choices": [
+          "1.5 μm",
+          "3.0 μm",
+          "3.75 μm",
+          "6.0 μm",
+          "7.5 μm"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nMoving one Michelson mirror by d changes the round-trip optical path by 2d. Each wavelength of path change produces one fringe, so N = 2d/λ and d = Nλ/2 = 25(600 nm)/2 = 7.5 μm. The essential factor of two comes from the light traveling to the mirror and back.\n\nNUMERICS WITHOUT A CALCULATOR\nThe round-trip path changes by 2d, so d = Nλ/2 = 25(0.60 μm)/2 = 7.5 μm.\n\n90-SECOND SOLUTION\nConvert 600 nm to 0.60 μm and compute 25×0.60/2 = 7.5 μm.\n\nWHAT TO MEMORIZE\nIn a Michelson interferometer, mirror displacement d produces path change 2d and fringe count N = 2d/λ."
+      },
+      {
+        "question": "A 2.5 kg object initially at rest explodes into a 1.0 kg fragment moving east at 6.0 m/s and a 1.5 kg fragment. The increase in total kinetic energy is",
+        "choices": [
+          "12 J",
+          "18 J",
+          "24 J",
+          "30 J",
+          "36 J"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nMomentum conservation requires the 1.5 kg fragment to carry 6 kg·m/s west, so its speed is 4 m/s. The final kinetic energy is ½(1)(6²)+½(1.5)(4²) = 18+12 = 30 J. Setting the fragment speeds equal violates momentum conservation.\n\nNUMERICS WITHOUT A CALCULATOR\nMomentum gives the second speed as 6/1.5 = 4 m/s west. Then K = ½(1)(36) + ½(1.5)(16) = 18 + 12.\n\n90-SECOND SOLUTION\nFind the second speed from 6/1.5 = 4. Then use the half-square pattern: 18 J plus 12 J.\n\nWHAT TO MEMORIZE\nAn explosion conserves momentum but increases mechanical kinetic energy by converting internal energy."
+      },
+      {
+        "question": "A parallel-plate capacitor remains connected to a battery. Dielectric slabs of constants 2 and 6 are inserted in layers, each filling the full plate area and one-half of the plate separation. Relative to its original energy U₀, the stored energy becomes",
+        "choices": [
+          "U₀/3",
+          "2U₀/3",
+          "3U₀/2",
+          "4U₀",
+          "3U₀"
+        ],
+        "answer": "E",
+        "image": "images/full-practice-6/q23.png",
+        "explanation": "WORKED SOLUTION\nThe dielectric layers lie along the field direction and therefore act as two capacitors in series. Relative to the vacuum capacitor, C/C₀ = 1/[½/2+½/6] = 3. Because the battery remains attached, V is fixed and U = ½CV² becomes 3U₀. Using fixed-charge scaling would incorrectly invert the factor.\n\nNUMERICS WITHOUT A CALCULATOR\nThe layers act in series through the thickness: C/C₀ = 1/[½/2 + ½/6] = 3. The battery keeps V fixed, so U scales with C.\n\n90-SECOND SOLUTION\nThe denominator is 1/4+1/12 = 1/3, so the capacitance factor is 3. Fixed voltage means energy follows that same factor.\n\nWHAT TO MEMORIZE\nDielectric slabs stacked through the plate separation combine in series; at fixed V, U ∝ C, while at fixed Q, U ∝ 1/C."
+      },
+      {
+        "question": "In LS coupling, the Landé g factor for a ²P₃/₂ state is",
+        "choices": [
+          "2/3",
+          "1",
+          "3/2",
+          "2",
+          "4/3"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nFor a ²P₃/₂ state, L = 1, S = 1/2, and J = 3/2. The Landé formula gives g_J = 1+[J(J+1)+S(S+1)−L(L+1)]/[2J(J+1)] = 1+(5/2)/(15/2) = 4/3. The value 2 would be the approximate pure-spin electron factor, not this coupled state.\n\nNUMERICS WITHOUT A CALCULATOR\nInsert J(J+1)=15/4, S(S+1)=3/4, and L(L+1)=2. The correction is (5/2)/(15/2) = 1/3.\n\n90-SECOND SOLUTION\nUse the tabulated products 15/4, 3/4, and 2. The numerator becomes 5/2 and the denominator 15/2, immediately giving a 1/3 correction.\n\nWHAT TO MEMORIZE\nLandé factor: g_J = 1+[J(J+1)+S(S+1)−L(L+1)]/[2J(J+1)]."
+      },
+      {
+        "question": "Helium atoms at temperature T_He have the same rms speed as nitrogen molecules at 300 K. Taking the molecular masses to be 4 u and 28 u, T_He is",
+        "choices": [
+          "21 K",
+          "43 K",
+          "75 K",
+          "150 K",
+          "2100 K"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nSince v_rms = √(3kT/m), equal rms speeds require T_He/m_He = T_N/m_N. Thus T_He = 300(4/28) = 300/7 ≈ 43 K. Multiplying by 28/4 instead would make the lighter helium much hotter for the same speed, the wrong trend.\n\nNUMERICS WITHOUT A CALCULATOR\nEqual rms speeds mean T/m is equal. Thus T_He = 300(4/28) = 300/7 ≈ 43 K.\n\n90-SECOND SOLUTION\nCancel the common factor 4/28 to 1/7, then estimate 300/7 between 42 and 43.\n\nWHAT TO MEMORIZE\nAt equal rms speed, temperature is proportional to molecular mass."
+      },
+      {
+        "question": "A film of refractive index 1.50 lies between glass of index 1.80 and air. Light of vacuum wavelength 600 nm is incident normally from the glass. The smallest nonzero film thickness that gives a reflected maximum is",
+        "choices": [
+          "50 nm",
+          "100 nm",
+          "150 nm",
+          "200 nm",
+          "300 nm"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt the glass-to-film boundary and film-to-air boundary, each reflection is from higher to lower refractive index, so neither reflected ray acquires a π phase shift. Constructive reflected interference therefore requires 2nt = mλ. The smallest nonzero thickness uses m = 1: t = 600/(2×1.50) = 200 nm. Applying the one-phase-reversal quarter-wave rule gives 100 nm, a distractor.\n\nNUMERICS WITHOUT A CALCULATOR\nBoth reflections are from higher to lower index, so neither gets a π phase shift. Reflected constructive interference requires 2nt = λ for the smallest nonzero thickness.\n\n90-SECOND SOLUTION\nFirst count phase reversals: zero. Then divide 600 nm by 3, since 2n = 3.\n\nWHAT TO MEMORIZE\nFor reflected thin-film interference, count π phase reversals before choosing the half-wave or quarter-wave condition."
+      },
+      {
+        "question": "A sample initially contains 8.0 × 10⁶ radioactive nuclei with a half-life of 6.0 h. Its average activity during the first 18 h is most nearly",
+        "choices": [
+          "27 Bq",
+          "54 Bq",
+          "81 Bq",
+          "100 Bq",
+          "108 Bq"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nEighteen hours is three half-lives, so the remaining population is N₀/8 and the number decayed is 7N₀/8 = 7.0×10⁶. Average activity over the interval is total decays divided by 18 h = 64,800 s, giving about 108 Bq. The instantaneous activity at 18 h is a different quantity.\n\nNUMERICS WITHOUT A CALCULATOR\nThree half-lives leave 1/8, so 7.0 × 10⁶ nuclei decay. Divide by 18 h = 64,800 s; 7.0 × 10⁶/6.48 × 10⁴ ≈ 108.\n\n90-SECOND SOLUTION\nUse 6.48×10⁴ s for 18 h. Then 7.0×10⁶/6.48×10⁴ = (7/6.48)×10² ≈ 108.\n\nWHAT TO MEMORIZE\nAverage activity over an interval is ΔN/Δt, whereas instantaneous activity is λN(t)."
+      },
+      {
+        "question": "A one-dimensional system has Hamiltonian H = p²/(2m) + λpq + ½kq². At an instant when m = 2, λ = 1, k = 8, and q = 0.50, Hamilton's equations give q̈ equal to",
+        "choices": [
+          "−3.0",
+          "−1.5",
+          "0",
+          "+1.5",
+          "+3.0"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nHamilton's equations give q̇ = ∂H/∂p = p/m+λq and ṗ = −∂H/∂q = −λp−kq. Differentiating q̇ gives q̈ = ṗ/m+λq̇; substituting causes the p terms to cancel, leaving q̈ = (λ²−k/m)q. The given values yield (1−4)(0.50) = −1.5. Treating p/m as q̇ and ignoring the λq term misses the cancellation.\n\nNUMERICS WITHOUT A CALCULATOR\nHamilton's equations give q̇ = p/m + λq and ṗ = −λp − kq. Differentiate q̇: the p terms cancel, leaving q̈ = (λ² − k/m)q = (1 − 4)(0.5).\n\n90-SECOND SOLUTION\nSubstitute symbolically before using numbers. The λp/m terms cancel, so only (1−8/2)(1/2) remains.\n\nWHAT TO MEMORIZE\nHamilton's equations are q̇ = ∂H/∂p and ṗ = −∂H/∂q."
+      },
+      {
+        "question": "A uniformly charged rod extends from x = −3.0 m to x = +3.0 m and has linear charge density 5.0 nC/m. The electric field magnitude at the point (0, 4.0 m) is",
+        "choices": [
+          "4.5 N/C",
+          "9.0 N/C",
+          "13.5 N/C",
+          "18.0 N/C",
+          "27.0 N/C"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nBy symmetry only the perpendicular components of the rod's field survive. Integrating gives E = 2kλa/[y√(a²+y²)]. With a = 3 m and y = 4 m, the square root is 5 m, so E = 2(9×10⁹)(5×10⁻⁹)(3)/(4×5) = 13.5 N/C. Treating the whole charge as a point charge at the origin gives a different result.\n\nNUMERICS WITHOUT A CALCULATOR\nFor half-length a and perpendicular distance y, E = 2kλa/[y√(a²+y²)]. The 3-4-5 triangle makes the denominator 20.\n\n90-SECOND SOLUTION\nUse the 3-4-5 triangle. The factors 9×5 and 2×3 give 270 in the numerator; divide by 20 to get 13.5.\n\nWHAT TO MEMORIZE\nFor a finite symmetric rod observed on its perpendicular bisector, horizontal field components cancel."
+      },
+      {
+        "question": "In the high-spin state of a free ion with a 3d⁴ configuration, the spin-only magnetic moment is most nearly",
+        "choices": [
+          "2.0 μ_B",
+          "2.8 μ_B",
+          "3.9 μ_B",
+          "4.9 μ_B",
+          "5.9 μ_B"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nHigh-spin d⁴ places one electron in each of four d orbitals before pairing, so there are n = 4 unpaired electrons. The spin-only moment is μ = √[n(n+2)]μ_B = √24 μ_B ≈ 4.9μ_B. Counting all four electrons as paired would contradict Hund's rule.\n\nNUMERICS WITHOUT A CALCULATOR\nHigh-spin d⁴ has four unpaired electrons. Use μ/μ_B = √[n(n+2)] = √24, just under 5.\n\n90-SECOND SOLUTION\n√24 lies just below √25 = 5, so select 4.9μ_B without long arithmetic.\n\nWHAT TO MEMORIZE\nFor n unpaired electrons, the spin-only magnetic moment is √[n(n+2)]μ_B; apply Hund's rule first."
+      },
+      {
+        "question": "A 2.0 kg particle starts from rest at x = 0 and moves along the x axis under the force F_x = 12x − 3x², with x in meters and F_x in newtons. Its speed at x = 4.0 m is most nearly",
+        "choices": [
+          "4.0 m/s",
+          "4.9 m/s",
+          "5.7 m/s",
+          "6.9 m/s",
+          "8.0 m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe work is the area under F(x): W = ∫₀⁴(12x−3x²)dx = [6x²−x³]₀⁴ = 96−64 = 32 J. Work-energy gives 32 = ½(2)v² = v², so v = √32 ≈ 5.7 m/s. Substituting the final force into FΔx would be invalid because the force varies.\n\nNUMERICS WITHOUT A CALCULATOR\nIntegrate once: W = [6x² − x³]₀⁴ = 96 − 64 = 32 J. Since ½mv² = v² for m = 2 kg, v = √32.\n\n90-SECOND SOLUTION\nThe mass 2 kg makes ½mv² exactly v². Once the integral gives 32, use √32 = 4√2 ≈ 5.66.\n\nWHAT TO MEMORIZE\nFor a position-dependent force, W = ∫F dx = ΔK."
+      },
+      {
+        "question": "A wire carrying 3.0 A consists of a semicircular arc of radius 0.20 m joined to two straight radial segments. The magnetic field at the center of the arc is",
+        "choices": [
+          "1.5 μT",
+          "3.0 μT",
+          "4.7 μT",
+          "9.4 μT",
+          "15 μT"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-6/q32.png",
+        "explanation": "WORKED SOLUTION\nThe straight segments are radial relative to O, so dℓ is parallel to the displacement vector and their Biot-Savart contributions vanish. A semicircle gives B = μ₀I/(4R) = (4π×10⁻⁷)(3)/(0.8) ≈ 4.7 μT. Treating it as a full circle doubles the answer.\n\nNUMERICS WITHOUT A CALCULATOR\nThe radial segments give zero at the center. A semicircle gives B = μ₀I/(4R) = (4π × 10⁻⁷)(3)/(0.8) ≈ 4.7 μT.\n\n90-SECOND SOLUTION\nCompute 12π/0.8 ×10⁻⁷ = 15π×10⁻⁷ T ≈ 4.7×10⁻⁶ T.\n\nWHAT TO MEMORIZE\nA circular arc of angle φ produces B = μ₀Iφ/(4πR) at its center; radial segments contribute zero."
+      },
+      {
+        "question": "A normalized one-dimensional wavefunction has the form ψ(x) = A e^{−|x|/a}. For this state, the uncertainty product ΔxΔp is",
+        "choices": [
+          "ħ/2",
+          "ħ/√2",
+          "ħ",
+          "√2ħ",
+          "2ħ"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nNormalization gives A² = 1/a. Symmetry makes ⟨x⟩ = ⟨p⟩ = 0. Direct integration gives ⟨x²⟩ = a²/2, while ⟨p²⟩ = ħ²∫|ψ′|²dx = ħ²/a². Therefore ΔxΔp = (a/√2)(ħ/a) = ħ/√2. Choosing ħ/2 assumes every state saturates the uncertainty bound, which this non-Gaussian state does not.\n\nNUMERICS WITHOUT A CALCULATOR\nThe probability density is a two-sided exponential with scale a/2, giving ⟨x²⟩ = a²/2. Also ∫|ψ′|²dx gives ⟨p²⟩ = ħ²/a².\n\n90-SECOND SOLUTION\nThe scale a cancels. Once the two variances are recognized as a²/2 and ħ²/a², the product is immediately ħ/√2.\n\nWHAT TO MEMORIZE\nThe Heisenberg bound is a minimum, not a universal equality; use moments of the given state."
+      },
+      {
+        "question": "A system has a nondegenerate ground level of energy 0 and a threefold-degenerate excited level of energy ε. At a temperature satisfying kT = ε/ln 3, the mean energy is",
+        "choices": [
+          "ε/4",
+          "ε/3",
+          "2ε/3",
+          "3ε/4",
+          "ε/2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nThe excited Boltzmann factor is e^{−ε/kT} = e^{−ln3} = 1/3. Multiplying by degeneracy 3 gives total excited weight 1, equal to the ground weight 1. Thus the excited-state probability is 1/2 and U = ε/2. Ignoring degeneracy gives ε/4.\n\nNUMERICS WITHOUT A CALCULATOR\nHere e^{−ε/kT} = e^{−ln3} = 1/3. The excited level's degeneracy multiplies that to weight 1, equal to the ground-state weight.\n\n90-SECOND SOLUTION\nDo not calculate an exponential numerically: the temperature was chosen so that the Boltzmann factor is exactly 1/3, which cancels the degeneracy.\n\nWHAT TO MEMORIZE\nA level's statistical weight is degeneracy times its Boltzmann factor, g e^{−E/kT}."
+      },
+      {
+        "question": "A diffraction grating has 600 lines per millimeter. For 500 nm light, the angle of the second-order maximum is most nearly",
+        "choices": [
+          "36.9°",
+          "17.5°",
+          "30.0°",
+          "53.1°",
+          "No second-order maximum exists"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nThe grating spacing is d = 1/(600 mm⁻¹) = 1.667 μm = 1667 nm. The grating equation d sinθ = mλ gives sinθ = 2(500)/1667 = 0.600, so θ = 36.9°. Using first order gives about 17.5°.\n\nNUMERICS WITHOUT A CALCULATOR\nThe spacing is 1/600 mm = 1667 nm. Thus sinθ = 2(500)/1667 = 0.60, the familiar 3-4-5 angle.\n\n90-SECOND SOLUTION\nKeep units in nanometers. The ratio becomes exactly about 3/5, so use the familiar 3-4-5 angle 36.9°.\n\nWHAT TO MEMORIZE\nDiffraction grating maxima obey d sinθ = mλ."
+      },
+      {
+        "question": "The matrix A = [[2, 1], [1, 2]] acts four successive times on the vector (1, 1). By what factor is the vector's magnitude increased?",
+        "choices": [
+          "9",
+          "16",
+          "27",
+          "64",
+          "81"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nA(1,1) = (3,3) = 3(1,1), so the starting vector is already an eigenvector with eigenvalue 3. Four successive applications give A⁴v = 3⁴v = 81v; its magnitude therefore increases by 81. Multiplying by 4×3 would confuse repeated multiplication with repeated addition.\n\nNUMERICS WITHOUT A CALCULATOR\nDo not multiply four matrices. The vector (1,1) is an eigenvector of A with eigenvalue 3, so four applications multiply it by 3⁴ = 81.\n\n90-SECOND SOLUTION\nCheck whether the vector is an eigenvector before multiplying matrices. Once the eigenvalue 3 is seen, compute 3⁴ = 81.\n\nWHAT TO MEMORIZE\nIf Av = λv, then Aⁿv = λⁿv."
+      },
+      {
+        "question": "Muons of proper mean lifetime 2.2 μs travel through the laboratory at 0.80c. Their mean distance traveled before decay is most nearly",
+        "choices": [
+          "350 m",
+          "530 m",
+          "660 m",
+          "880 m",
+          "1100 m"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nAt 0.80c, γ = 1/√(1−0.64) = 5/3. The laboratory mean lifetime is γτ₀, so the mean distance is vγτ₀ = 0.80c(5/3)(2.2 μs) ≈ 880 m. Using the proper lifetime directly gives about 530 m.\n\nNUMERICS WITHOUT A CALCULATOR\nAt 0.80c, γ = 5/3. Then distance = 0.8(3 × 10⁸)(2.2 × 10⁻⁶)(5/3); cancel 3 with the denominator first.\n\n90-SECOND SOLUTION\nCancel 0.80×5 = 4 and the factor of 3 in γ against c = 3×10⁸. What remains is 4×2.2×10² = 880 m.\n\nWHAT TO MEMORIZE\nUnstable-particle travel distance in the lab is vγτ₀."
+      },
+      {
+        "question": "A projectile is launched from a 20 m cliff with horizontal and upward velocity components 15 m/s and 10 m/s. Taking g = 10 m/s², its horizontal range before reaching the ground is most nearly",
+        "choices": [
+          "30 m",
+          "39 m",
+          "45 m",
+          "49 m",
+          "60 m"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nVertical motion satisfies 0 = 20+10t−5t². The positive root is t = 1+√5 ≈ 3.24 s. Horizontal speed is constant, so the range is 15t ≈ 48.5 m, or 49 m. Using the level-ground flight time 2v_y/g would ignore the 20 m launch height.\n\nNUMERICS WITHOUT A CALCULATOR\nVertical motion gives 20 + 10t − 5t² = 0, or t = 1 + √5 ≈ 3.24 s. Multiply by 15 as 3.24(10 + 5) ≈ 48.6.\n\n90-SECOND SOLUTION\nSolve the reduced quadratic t²−2t−4 = 0 to get 1+√5. Use √5 ≈ 2.24, then multiply 3.24 by 15 as 32.4+16.2 = 48.6.\n\nWHAT TO MEMORIZE\nSeparate projectile motion into constant horizontal velocity and independently accelerated vertical motion."
+      },
+      {
+        "question": "A 50-turn coil of area 20 cm² is perpendicular to a uniform field B(t) = 0.30t² tesla, where t is in seconds. The magnitude of the induced emf at t = 2.0 s is",
+        "choices": [
+          "0.024 V",
+          "0.060 V",
+          "0.12 V",
+          "0.24 V",
+          "1.2 V"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nFaraday's law gives |ε| = NA|dB/dt|. Since B = 0.30t², dB/dt = 0.60t = 1.2 T/s at t = 2 s. With A = 20 cm² = 0.002 m², ε = 50(0.002)(1.2) = 0.12 V. Forgetting the cm²-to-m² conversion produces an enormous error.\n\nNUMERICS WITHOUT A CALCULATOR\nConvert 20 cm² to 0.002 m². Since dB/dt = 0.60t = 1.2 T/s, N A = 50(0.002) = 0.10.\n\n90-SECOND SOLUTION\nRecognize 50×0.002 = 0.10, so the final multiplication by 1.2 is immediate.\n\nWHAT TO MEMORIZE\nFor a fixed perpendicular coil, |ε| = NA|dB/dt| and 1 cm² = 10⁻⁴ m²."
+      },
+      {
+        "question": "A particle is in the ground state of an infinite square well 0 < x < L. A weak perturbation V₀ is applied only over 0 < x < L/3. To first order, the energy shift is",
+        "choices": [
+          "V₀(1/6 − √3/8π)",
+          "V₀(1/3 − √3/4π)",
+          "V₀/3",
+          "V₀(1/3 + √3/4π)",
+          "2V₀/3"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nFirst-order perturbation theory gives ΔE₁ = ⟨1|V|1⟩ = V₀ times the ground-state probability in 0 < x < L/3. With ψ₁ = √(2/L)sin(πx/L), the integral is V₀[1/3−sin(2π/3)/(2π)] = V₀(1/3−√3/4π). Taking one-third of V₀ assumes uniform probability density, which the ground state does not have.\n\nNUMERICS WITHOUT A CALCULATOR\nThe shift is V₀ times the probability in the first third. Use 2sin²u = 1 − cos2u; the integral becomes 1/3 − sin(2π/3)/(2π).\n\n90-SECOND SOLUTION\nUse 2sin²u = 1−cos2u. The constant term contributes 1/3, and the endpoint sine gives √3/(4π).\n\nWHAT TO MEMORIZE\nA first-order energy shift is the expectation value of the perturbing potential in the unperturbed state."
+      },
+      {
+        "question": "One mole of a monatomic ideal gas follows the clockwise triangular P–V cycle A(P₀,V₀) → B(3P₀,V₀) → C(P₀,3V₀) → A, where B → C is a straight line. The thermal efficiency is",
+        "choices": [
+          "1/7",
+          "2/7",
+          "1/3",
+          "3/7",
+          "1/2"
+        ],
+        "answer": "B",
+        "image": "images/full-practice-6/q41.png",
+        "explanation": "WORKED SOLUTION\nThe cycle work is the triangular area: W_net = ½(2P₀)(2V₀) = 2P₀V₀. Along A→B, W = 0 and ΔU = (3/2)Δ(PV) = 3P₀V₀, so Q_AB = 3P₀V₀. Along B→C the endpoint values of PV are equal, so ΔU = 0, while the straight-line work is average pressure times ΔV = 2P₀(2V₀) = 4P₀V₀. Thus Q_in = 7P₀V₀ and η = 2/7. Dividing by heat on only one leg gives a distractor.\n\nNUMERICS WITHOUT A CALCULATOR\nNet work is the triangle area 2P₀V₀. Heat enters on A→B: 3P₀V₀, and on B→C: ΔU = 0 because PV is equal at the endpoints, while W = 4P₀V₀. Thus η = 2/7.\n\n90-SECOND SOLUTION\nRead the triangle area for net work. Then notice PV is the same at B and C, eliminating ΔU on the diagonal; only 3+4 = 7 units of heat enter.\n\nWHAT TO MEMORIZE\nFor a monatomic ideal gas, ΔU = (3/2)Δ(PV), and efficiency is W_net/Q_in."
+      },
+      {
+        "question": "An ideal inverting amplifier has R_in = 12 kΩ and R_f = 30 kΩ. Its noninverting input is held at +0.50 V and the signal input is +0.80 V. The output voltage is",
+        "choices": [
+          "−0.25 V",
+          "−2.0 V",
+          "−0.80 V",
+          "+0.25 V",
+          "+1.75 V"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-6/q42.png",
+        "explanation": "WORKED SOLUTION\nFor an ideal op-amp with negative feedback, both inputs sit at 0.50 V. The input current is (0.80−0.50)/12 kΩ = 25 μA into the summing node, and the same current must flow through the 30 kΩ feedback resistor. Thus 0.50−V_out = (25 μA)(30 kΩ) = 0.75 V, giving V_out = −0.25 V. Applying the ordinary grounded inverting-gain formula would give −2.0 V and ignore the bias.\n\nNUMERICS WITHOUT A CALCULATOR\nThe inverting node is at 0.50 V. Apply current balance: V_out = V_ref + (R_f/R_in)(V_ref − V_in) = 0.5 + 2.5(−0.3).\n\n90-SECOND SOLUTION\nUse the resistance ratio 30/12 = 2.5: V_out = 0.50+2.5(0.50−0.80) = 0.50−0.75.\n\nWHAT TO MEMORIZE\nWith a biased noninverting input V_ref, V_out = V_ref+(R_f/R_in)(V_ref−V_in)."
+      },
+      {
+        "question": "Water flows steadily through a horizontal pipe. Where the cross-sectional area is A, its speed is 3.0 m/s. Where the area is A/2, the pressure is lower by",
+        "choices": [
+          "4.5 kPa",
+          "9.0 kPa",
+          "13.5 kPa",
+          "18 kPa",
+          "27 kPa"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nContinuity gives A(3) = (A/2)v₂, so v₂ = 6 m/s. Bernoulli at equal height gives P₁−P₂ = ½ρ(v₂²−v₁²) = 500(36−9) Pa = 13.5 kPa. Using the speed difference rather than the difference of squared speeds gives the wrong pressure drop.\n\nNUMERICS WITHOUT A CALCULATOR\nContinuity doubles the speed to 6 m/s. Bernoulli gives ΔP = ½ρ(6² − 3²) = 500(27) Pa = 13.5 kPa.\n\n90-SECOND SOLUTION\nThe area halves, so speed doubles. Then 6²−3² = (6−3)(6+3) = 27, and half the water density is 500.\n\nWHAT TO MEMORIZE\nSteady incompressible flow obeys Av = constant and P+½ρv²+ρgy = constant."
+      },
+      {
+        "question": "An oscillating electric dipole p(t) = p₀ cosωt radiates average power P. If its amplitude is doubled and its frequency is halved, the new average power is",
+        "choices": [
+          "P/4",
+          "P/8",
+          "P/2",
+          "P",
+          "2P"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nAverage electric-dipole radiation scales as p₀²ω⁴. Doubling p₀ contributes a factor 4, while halving ω contributes (1/2)⁴ = 1/16. The net factor is 4/16 = 1/4. Treating power as proportional to ω² gives the incorrect unchanged result.\n\nNUMERICS WITHOUT A CALCULATOR\nDipole radiation scales as p₀²ω⁴. The amplitude contributes 4, while halving frequency contributes 1/16, for 4/16.\n\n90-SECOND SOLUTION\nSquare the amplitude factor and fourth-power the frequency factor: 2²/2⁴ = 1/4.\n\nWHAT TO MEMORIZE\nOscillating electric-dipole radiation has ⟨P⟩ ∝ p₀²ω⁴."
+      },
+      {
+        "question": "A photon emitted in the n = 4 → 2 transition of singly ionized helium strikes a hydrogen atom in its n = 2 state. If the photon ionizes the hydrogen atom, the ejected electron's kinetic energy is",
+        "choices": [
+          "3.4 eV",
+          "6.8 eV",
+          "10.2 eV",
+          "13.6 eV",
+          "40.8 eV"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nHydrogenic energies scale as Z². The He⁺ 4→2 photon has energy 4(13.6 eV)(1/4−1/16) = 10.2 eV. Hydrogen in n = 2 requires 13.6/4 = 3.4 eV to ionize, leaving 10.2−3.4 = 6.8 eV as electron kinetic energy. Using 13.6 eV as the n = 2 threshold gives no emission and ignores the excited initial state.\n\nNUMERICS WITHOUT A CALCULATOR\nFor He⁺, multiply hydrogen energies by Z² = 4: ΔE₄₂ = 4(13.6)(3/16) = 10.2 eV. Subtract the n=2 hydrogen binding energy, 3.4 eV.\n\n90-SECOND SOLUTION\nThe He⁺ transition is four times the hydrogen 4→2 value: 4×2.55 = 10.2 eV. Subtract the familiar hydrogen n=2 binding energy 3.4 eV.\n\nWHAT TO MEMORIZE\nHydrogenic binding energies are 13.6Z²/n² eV; excess photon energy becomes kinetic energy."
+      },
+      {
+        "question": "Unpolarized light of intensity I₀ passes through three ideal polarizers whose axes are at 0°, 30°, and 90°, respectively. The transmitted intensity is",
+        "choices": [
+          "3I₀/32",
+          "I₀/32",
+          "I₀/8",
+          "3I₀/16",
+          "I₀/4"
+        ],
+        "answer": "A",
+        "image": "images/full-practice-6/q46.png",
+        "explanation": "WORKED SOLUTION\nThe first polarizer transmits I₀/2. Malus's law then gives factors cos²30° = 3/4 and cos²60° = 1/4 for the next two polarizers. Therefore I = (I₀/2)(3/4)(1/4) = 3I₀/32. Applying cos²90° directly between the first and last axes ignores the intermediate repolarization.\n\nNUMERICS WITHOUT A CALCULATOR\nThe first polarizer gives I₀/2. Then multiply by cos²30° = 3/4 and cos²60° = 1/4.\n\n90-SECOND SOLUTION\nMultiply the three simple factors: 1/2, 3/4, and 1/4. Numerators give 3 and denominators give 32.\n\nWHAT TO MEMORIZE\nUnpolarized light loses half at the first ideal polarizer; each later polarizer contributes cos² of the angle from the preceding axis."
+      },
+      {
+        "question": "At low temperature a metal has molar heat capacity C = γT + βT³. Measurements give C(2 K) = 0.12 J/(mol·K) and C(4 K) = 0.40 J/(mol·K). What is C at 6 K?",
+        "choices": [
+          "0.60 J/(mol·K)",
+          "0.72 J/(mol·K)",
+          "0.84 J/(mol·K)",
+          "1.00 J/(mol·K)",
+          "1.20 J/(mol·K)"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe equations are 2γ+8β = 0.12 and 4γ+64β = 0.40. Doubling the first and subtracting gives 48β = 0.16, so β = 1/300. Then γ = 7/150. At 6 K, C = 6γ+216β = 0.28+0.72 = 1.00 J/(mol·K). Scaling the entire heat capacity as T³ would ignore the electronic γT term.\n\nNUMERICS WITHOUT A CALCULATOR\nDouble the 2 K equation and subtract it from the 4 K equation: 48β = 0.16, so β = 1/300. Then γ = 7/150; at 6 K the two terms are 0.28 and 0.72.\n\n90-SECOND SOLUTION\nEliminate γ by doubling the 2 K equation. The resulting fractions were chosen so that at 6 K the two contributions are 0.28 and 0.72.\n\nWHAT TO MEMORIZE\nAt low temperature, a normal metal often has C = γT+βT³: electronic plus phonon terms."
+      },
+      {
+        "question": "The amplitude of a lightly damped oscillator decreases from 8.0 cm to 2.0 cm in three periods. Its quality factor Q is most nearly",
+        "choices": [
+          "2.2",
+          "3.4",
+          "4.5",
+          "6.8",
+          "9.4"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe amplitude envelope is A = A₀e^{−βt}. A/A₀ = 1/4 after 3T gives βT = ln4/3. For light damping, Q = ω₀/(2β) and T ≈ 2π/ω₀, hence Q ≈ π/(βT) = 3π/ln4 ≈ 6.8. Using energy decay instead of amplitude decay introduces a factor of two.\n\nNUMERICS WITHOUT A CALCULATOR\nA/A₀ = e^{−βt} gives βT = ln4/3 ≈ 0.462. For light damping, Q ≈ π/(βT), so 3.14/0.462 ≈ 6.8.\n\n90-SECOND SOLUTION\nUse ln4 = 2ln2 ≈ 1.386, so βT ≈ 0.462. Then 3.14/0.462 is about 6.8.\n\nWHAT TO MEMORIZE\nFor light damping, amplitude decays as e^{−βt} and Q ≈ π/(logarithmic amplitude decrement per cycle)."
+      },
+      {
+        "question": "A series RLC circuit has R = 30 Ω, X_L = 50 Ω, and X_C = 10 Ω. It is connected to a 150 V rms source. The average power dissipated is",
+        "choices": [
+          "90 W",
+          "180 W",
+          "270 W",
+          "360 W",
+          "450 W"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-6/q49.png",
+        "explanation": "WORKED SOLUTION\nThe net reactance is X_L−X_C = 40 Ω. Therefore Z = √(R²+X²) = √(30²+40²) = 50 Ω and I_rms = 150/50 = 3 A. Only the resistor dissipates average power, so P = I²R = 9(30) = 270 W. Multiplying source voltage by current gives apparent power, not average real power.\n\nNUMERICS WITHOUT A CALCULATOR\nNet reactance is 40 Ω, so Z = √(30² + 40²) = 50 Ω. Thus I = 3 A and P = I²R = 9(30).\n\n90-SECOND SOLUTION\nSpot the 30-40-50 triangle. Current is then 3 A, and squaring it before multiplying by 30 gives 270 W.\n\nWHAT TO MEMORIZE\nFor a series RLC circuit, Z = √[R²+(X_L−X_C)²] and average power is I_rms²R."
+      },
+      {
+        "question": "For an electron with l = 2, s = 1/2, and total angular momentum j = 3/2, the eigenvalue of L·S is",
+        "choices": [
+          "−3ħ²/2",
+          "−ħ²",
+          "−ħ²/2",
+          "+ħ²",
+          "+3ħ²/2"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nUse L·S = [J²−L²−S²]/2. With j = 3/2, l = 2, and s = 1/2, the coefficient is ½[15/4−6−3/4] = ½(−3) = −3/2. A positive sign corresponds to the aligned j = l+1/2 state, not the given j = l−1/2 state.\n\nNUMERICS WITHOUT A CALCULATOR\nUse L·S = [J² − L² − S²]/2. The bracket is 15/4 − 6 − 3/4 = −3, then divide by 2.\n\n90-SECOND SOLUTION\nThe quarter terms combine first: 15/4−3/4 = 3. Then 3−6 = −3 and the outer factor gives −3/2.\n\nWHAT TO MEMORIZE\nL·S = ½[J(J+1)−L(L+1)−S(S+1)]ħ²."
+      },
+      {
+        "question": "A star's radius doubles while its surface temperature falls to 80% of its original value. Treating it as a blackbody, its luminosity changes by a factor of",
+        "choices": [
+          "0.82",
+          "1.02",
+          "1.28",
+          "1.64",
+          "2.56"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nBlackbody luminosity scales as L ∝ R²T⁴. The radius contributes 2² = 4 and the temperature contributes 0.8⁴ = 0.4096, so L_new/L_old = 1.6384 ≈ 1.64. Using surface area proportional to R rather than R² gives the smaller 0.82 distractor.\n\nNUMERICS WITHOUT A CALCULATOR\nL ∝ R²T⁴, so the factor is 4(0.8)⁴. Since 0.8² = 0.64, square again to get 0.4096, then multiply by 4.\n\n90-SECOND SOLUTION\nSquare 0.8 to get 0.64 and square again to get 0.4096; multiplying by 4 gives 1.6384.\n\nWHAT TO MEMORIZE\nStefan-Boltzmann luminosity is L = 4πR²σT⁴."
+      },
+      {
+        "question": "In its rest frame, a rod has components 3.0 m parallel and 4.0 m perpendicular to the direction in which it moves. If its speed is 0.80c, its length measured in the laboratory is most nearly",
+        "choices": [
+          "3.0 m",
+          "3.6 m",
+          "4.0 m",
+          "4.4 m",
+          "5.0 m"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nOnly the component parallel to motion contracts. At 0.80c, γ = 5/3, so the 3.0 m parallel component becomes 3/(5/3) = 1.8 m while the 4.0 m transverse component is unchanged. The lab length is √(1.8²+4²) = √19.24 ≈ 4.4 m. Contracting the entire 5 m rest length would incorrectly give 3.0 m.\n\nNUMERICS WITHOUT A CALCULATOR\nOnly the parallel component contracts. With γ = 5/3, 3.0 m becomes 1.8 m; the length is √(1.8² + 4²) = √19.24 ≈ 4.4 m.\n\n90-SECOND SOLUTION\nUse the 3-4-5 rest-frame components. Replace only 3 by 1.8, then note √19.24 is slightly below √19.36 = 4.4.\n\nWHAT TO MEMORIZE\nLength contraction applies only to separations parallel to the relative velocity."
+      },
+      {
+        "question": "A sinusoidal signal viewed with a 10× probe spans 6.0 vertical divisions peak-to-peak on an oscilloscope set to 0.50 V/div. The signal's rms voltage is most nearly",
+        "choices": [
+          "1.1 V",
+          "3.0 V",
+          "7.5 V",
+          "10.6 V",
+          "21.2 V"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-6/q53.png",
+        "explanation": "WORKED SOLUTION\nThe displayed peak-to-peak voltage is 6.0 divisions×0.50 V/div = 3.0 V, but the 10× probe means the actual signal has V_pp = 30 V. For a sine wave V_rms = V_peak/√2 = V_pp/(2√2) = 10.6 V. Using 3.0 V directly ignores the probe attenuation.\n\nNUMERICS WITHOUT A CALCULATOR\nThe displayed 3.0 V peak-to-peak represents 30 V at the probe. For a sine wave, V_rms = V_pp/(2√2) ≈ 30/2.83 = 10.6 V.\n\n90-SECOND SOLUTION\nConvert directly from peak-to-peak: 30/(2√2). Since 2√2 ≈ 2.83, 30/2.83 ≈ 10.6.\n\nWHAT TO MEMORIZE\nFor a sine wave, V_rms = V_pp/(2√2); multiply the displayed voltage by the probe factor first."
+      },
+      {
+        "question": "A flywheel with moment of inertia 3.0 kg·m² initially rotates at 20 rad/s. A brake exerts an opposing torque whose magnitude is τ = (0.50 N·m/rad)θ, where θ is the angle turned after the brake is applied. How many revolutions does the wheel complete before stopping?",
+        "choices": [
+          "3.9",
+          "5.5",
+          "7.8",
+          "11",
+          "16"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe initial rotational energy is ½Iω² = ½(3)(20²) = 600 J. The braking work through angle θ is ∫₀^θ(0.50θ′)dθ′ = 0.25θ². Setting this equal to 600 gives θ = √2400 ≈ 49 rad, or θ/(2π) ≈ 7.8 revolutions. Treating the final torque as constant over the motion doubles the work and gives the wrong stopping angle.\n\nNUMERICS WITHOUT A CALCULATOR\nSet initial rotational energy ½Iω² = 600 J equal to brake work ∫₀^θ0.50θ dθ = 0.25θ². Thus θ = √2400 ≈ 49 rad, or 49/(2π) ≈ 7.8 revolutions.\n\n90-SECOND SOLUTION\n√2400 = 20√6 ≈ 49. Divide by 2π ≈ 6.28 to get just under 8 revolutions.\n\nWHAT TO MEMORIZE\nRotational work is W = ∫τdθ; a torque proportional to angle cannot be replaced by its final value over the whole interval."
+      },
+      {
+        "question": "A 900 W/m² electromagnetic wave is normally incident on a perfectly reflecting mirror of area 0.25 m². The average force on the mirror is",
+        "choices": [
+          "0.38 μN",
+          "0.75 μN",
+          "1.5 μN",
+          "3.0 μN",
+          "6.0 μN"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nA perfectly reflecting surface reverses the wave momentum, so radiation pressure is p = 2I/c. Thus p = 1800/(3×10⁸) = 6.0×10⁻⁶ Pa. Multiplying by 0.25 m² gives F = 1.5×10⁻⁶ N. Using I/c is appropriate for absorption and gives half the force.\n\nNUMERICS WITHOUT A CALCULATOR\nA reflecting surface has pressure 2I/c = 1800/(3 × 10⁸) = 6 μPa. Multiply by one-quarter square meter.\n\n90-SECOND SOLUTION\nCancel 1800/3 = 600 and attach 10⁻⁸ to get 6×10⁻⁶ Pa. One quarter of that is 1.5 μN.\n\nWHAT TO MEMORIZE\nRadiation pressure is I/c for absorption and 2I/c for perfect reflection."
+      },
+      {
+        "question": "Adjacent lines in the pure rotational spectrum of a diatomic molecule are separated by 1.20 × 10¹¹ Hz. Treating the molecule as a rigid rotor, its moment of inertia is most nearly",
+        "choices": [
+          "1.4 × 10⁻⁴⁶ kg·m²",
+          "3.5 × 10⁻⁴⁷ kg·m²",
+          "7.0 × 10⁻⁴⁷ kg·m²",
+          "2.8 × 10⁻⁴⁶ kg·m²",
+          "5.6 × 10⁻⁴⁶ kg·m²"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a rigid rotor, E_J = ħ²J(J+1)/(2I), and allowed adjacent transitions have frequencies separated by Δν = h/(4π²I). Therefore I = h/(4π²Δν) = 6.626×10⁻³⁴/[4π²(1.20×10¹¹)] ≈ 1.4×10⁻⁴⁶ kg·m². Missing the factor of two between B and the line spacing changes the answer by two.\n\nNUMERICS WITHOUT A CALCULATOR\nThe spacing is 2B, so B = 6.0 × 10¹⁰ Hz. Use I = h/(8π²B), with 8π² ≈ 79; the denominator is about 4.7 × 10¹².\n\n90-SECOND SOLUTION\nUse 4π² ≈ 39.5; multiplying by 1.2×10¹¹ gives about 4.74×10¹². Then 6.63/4.74×10⁻⁴⁶ ≈ 1.4×10⁻⁴⁶.\n\nWHAT TO MEMORIZE\nRigid-rotor lines are equally spaced by Δν = h/(4π²I)."
+      },
+      {
+        "question": "Surface waves obey the dispersion relation ω² = gk + βk³. At k = 7.0 m⁻¹, take g = 9.8 m/s² and β = 0.20 m³/s². The group velocity is most nearly",
+        "choices": [
+          "0.84 m/s",
+          "1.2 m/s",
+          "1.7 m/s",
+          "2.4 m/s",
+          "3.3 m/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nDifferentiate ω² = gk+βk³: v_g = dω/dk = (g+3βk²)/(2ω). At k = 7, βk² = 0.20(49) = 9.8 = g, while ω = √[k(g+βk²)] = √137.2 ≈ 11.7 s⁻¹. Hence v_g = 39.2/(23.4) ≈ 1.7 m/s. Using ω/k gives the phase velocity, not the requested group velocity.\n\nNUMERICS WITHOUT A CALCULATOR\nHere gk = βk³ = 68.6, so ω = √137.2 ≈ 11.7 s⁻¹. Differentiate: v_g = (g + 3βk²)/(2ω) = 39.2/23.4 ≈ 1.7 m/s.\n\n90-SECOND SOLUTION\nNotice the numbers make the gravity and capillary terms equal. Then the numerator is 4g = 39.2 and the denominator is twice √137.2 ≈ 23.4.\n\nWHAT TO MEMORIZE\nGroup velocity is dω/dk; phase velocity is ω/k, and they differ in a dispersive medium."
+      },
+      {
+        "question": "A proton beam strikes stationary protons and produces p + p → p + p + π⁰. Using m_pc² = 938 MeV and m_πc² = 135 MeV, the threshold kinetic energy of a beam proton is most nearly",
+        "choices": [
+          "135 MeV",
+          "145 MeV",
+          "270 MeV",
+          "280 MeV",
+          "405 MeV"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nFor a stationary target, use the invariant s. At threshold the final particles have no relative motion in their center-of-momentum frame, so s_f = (2m_p+m_π)²c⁴. Equating this to s_i = 2m_p²c⁴+2m_pE_beamc² gives K_th = 2m_πc²+m_π²c²/(2m_p) ≈ 270+9.7 = 280 MeV. Taking K_th = m_πc² ignores momentum conservation.\n\nNUMERICS WITHOUT A CALCULATOR\nFor a stationary target, K_th = 2m_πc² + m_π²c²/(2m_p). The correction is 135²/(1876) ≈ 9.7 MeV, so the total is about 280 MeV.\n\n90-SECOND SOLUTION\nThe main term is twice 135 MeV. The correction 135²/(2×938) is about 18,000/1,900 ≈ 9.5 MeV.\n\nWHAT TO MEMORIZE\nThreshold production on a stationary target costs extra kinetic energy because total momentum must be conserved."
+      },
+      {
+        "question": "A spacecraft enters an elliptical orbit whose periapsis and apoapsis distances are R and 3R. If the circular-orbit speed at radius R is 8.0 km/s, the spacecraft's speed at periapsis is most nearly",
+        "choices": [
+          "8.7 km/s",
+          "9.2 km/s",
+          "9.8 km/s",
+          "11.3 km/s",
+          "13.9 km/s"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe semimajor axis is a = (R+3R)/2 = 2R. Vis-viva gives v_p² = GM(2/R−1/2R) = (3/2)GM/R. Since v_c² = GM/R, v_p = √(3/2)v_c = 8.0√1.5 ≈ 9.8 km/s. Using escape speed √2v_c gives 11.3 km/s, which corresponds to an unbound trajectory.\n\nNUMERICS WITHOUT A CALCULATOR\nThe semimajor axis is 2R. Vis-viva at R gives v_p²/v_c² = 2 − R/(2R) = 3/2, so v_p = 8√1.5 ≈ 9.8 km/s.\n\n90-SECOND SOLUTION\nEstimate √1.5 ≈ 1.225 and multiply by 8: 8+0.225×8 = 9.8.\n\nWHAT TO MEMORIZE\nVis-viva: v² = GM(2/r−1/a), with a equal to the average of periapsis and apoapsis radii."
+      },
+      {
+        "question": "Charges +1.0 nC and +4.0 nC are fixed 3.0 m apart. A −2.0 nC charge is brought from infinity to the point between them where the electric field is zero. The change in electric potential energy is",
+        "choices": [
+          "−54 nJ",
+          "−108 nJ",
+          "−27 nJ",
+          "+27 nJ",
+          "+54 nJ"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nBetween the charges, zero field requires k(1 nC)/x² = k(4 nC)/(3−x)². Thus 3−x = 2x and x = 1 m, leaving distances 1 m and 2 m. The potential is 9×10⁹[1×10⁻⁹/1+4×10⁻⁹/2] = 27 V, so ΔU = (−2 nC)(27 V) = −54 nJ. Zero field does not mean zero potential.\n\nNUMERICS WITHOUT A CALCULATOR\nZero field requires distances 1 m and 2 m because fields scale as q/r². The potential there is k(1 nC/1 + 4 nC/2) = 27 V; multiply by −2 nC.\n\n90-SECOND SOLUTION\nTake square roots in the field balance to get the distance ratio 1:2 immediately. Potential then becomes 9(1+2) = 27 V in convenient nC-m units.\n\nWHAT TO MEMORIZE\nElectric fields cancel vectorially, but electric potentials add scalarly and need not vanish at a zero-field point."
+      },
+      {
+        "question": "Four noninteracting spin-1/2 fermions occupy a three-dimensional isotropic harmonic oscillator. The one-particle energies are (n_x + n_y + n_z + 3/2)ħω. The total energy of the many-particle ground state is",
+        "choices": [
+          "6ħω",
+          "7ħω",
+          "8ħω",
+          "9ħω",
+          "10ħω"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe 3D oscillator ground spatial state has energy 3ħω/2 and can hold two fermions of opposite spin, contributing 3ħω total. The next shell has energy 5ħω/2 and spatial degeneracy three, so it easily holds the remaining two fermions, contributing 5ħω. The total is 8ħω. Putting all four particles in the spatial ground state violates Pauli exclusion.\n\nNUMERICS WITHOUT A CALCULATOR\nTwo opposite spins occupy the spatial ground state, contributing 2(3/2) = 3. The next shell has energy 5ħω/2 and enough degeneracy for the other two, contributing 5.\n\n90-SECOND SOLUTION\nFill by shells: two particles at 3/2 and two at 5/2. The total coefficient is 3+5 = 8.\n\nWHAT TO MEMORIZE\nEach spatial orbital holds two spin-1/2 fermions; the 3D oscillator energy is (n_x+n_y+n_z+3/2)ħω."
+      },
+      {
+        "question": "A block of mass m rests on a block of mass 3m on a frictionless floor. The coefficient of static friction between them is 0.60. A horizontal force F is applied to the upper block. If m = 3.0 kg and g = 10 m/s², the largest F for which the blocks move together is",
+        "choices": [
+          "18 N",
+          "24 N",
+          "36 N",
+          "54 N",
+          "72 N"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nIf the blocks move together, their acceleration is a = F/(4m). The only horizontal force on the lower 3m block is friction, so f = 3ma = 3F/4. At impending slip f_max = μ_smg, where the normal between blocks is mg. Thus 3F/4 = μ_smg and F_max = 4μ_smg/3 = 24 N. Using the total weight in f_max overestimates the available friction.\n\nNUMERICS WITHOUT A CALCULATOR\nThe lower block is accelerated only by friction: f = 3ma. At the limit f = μmg, so a = μg/3. Since F accelerates total mass 4m, F = 4μmg/3 = 24 N.\n\n90-SECOND SOLUTION\nThe lower block needs three quarters of the applied force as friction. Maximum friction is 0.60(3 kg)(10) = 18 N, so 3F/4 = 18 gives F = 24 N.\n\nWHAT TO MEMORIZE\nFor stacked blocks, find the friction needed to accelerate the block that is not directly pulled, then compare with μ_sN."
+      },
+      {
+        "question": "A long straight wire carries 20 A. A coplanar rectangular loop carries 5.0 A; its two 0.40 m sides parallel to the wire are 0.10 m and 0.30 m away. The magnitude of the net magnetic force on the loop is most nearly",
+        "choices": [
+          "1.6 × 10⁻⁵ N",
+          "2.7 × 10⁻⁵ N",
+          "4.0 × 10⁻⁵ N",
+          "5.3 × 10⁻⁵ N",
+          "8.0 × 10⁻⁵ N"
+        ],
+        "answer": "D",
+        "image": "images/full-practice-6/q63.png",
+        "explanation": "WORKED SOLUTION\nThe two sides perpendicular to the long wire experience equal and opposite vertical forces. The parallel sides give F/L = μ₀I₁I₂/(2πr), so the net magnitude is [μ₀I₁I₂L/(2π)](1/r_near−1/r_far). Substitution gives 2×10⁻⁷(20)(5)(0.40)(10−3.33) = 5.3×10⁻⁵ N. Adding the two parallel-side forces ignores that they point oppositely.\n\nNUMERICS WITHOUT A CALCULATOR\nSubtract the forces on the parallel sides: 2 × 10⁻⁷I₁I₂L(1/r₁ − 1/r₂). The prefactor is 8 × 10⁻⁶ and the bracket is 20/3.\n\n90-SECOND SOLUTION\nThe prefactor is 2×10⁻⁷×100×0.4 = 8×10⁻⁶. The inverse-distance difference is 10−10/3 = 20/3, giving 160/3×10⁻⁶.\n\nWHAT TO MEMORIZE\nParallel currents attract and antiparallel currents repel; for a rectangular loop near a wire, subtract the unequal forces on the parallel sides."
+      },
+      {
+        "question": "A two-state Hamiltonian is H = E₀[[1, 1], [1, 3]]. The separation between its two energy eigenvalues is",
+        "choices": [
+          "2√2E₀",
+          "√2E₀",
+          "2E₀",
+          "3E₀",
+          "4E₀"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nFor a symmetric 2×2 Hamiltonian [[a,b],[b,d]], the eigenvalue separation is √[(a−d)²+4b²]. Here a = 1, d = 3, and b = 1 in units of E₀, so the gap is √(4+4)E₀ = 2√2E₀. Taking the trace, 4E₀, gives the sum of eigenvalues, not their separation.\n\nNUMERICS WITHOUT A CALCULATOR\nFor a 2×2 matrix, the eigenvalue gap is √[(a−d)² + 4bc] = E₀√(4 + 4) = 2√2E₀.\n\n90-SECOND SOLUTION\nAvoid solving the full quadratic: use the 2×2 gap formula. The two contributions are both 4, so the square root is √8 = 2√2.\n\nWHAT TO MEMORIZE\nFor a 2×2 Hermitian matrix, eigenvalue gap = √[(a−d)²+4|b|²]."
+      },
+      {
+        "question": "A particle initially in the ground state of an infinite well 0 < x < L has the right wall suddenly moved to x = 2L. Immediately afterward, the probability of measuring the ground-state energy of the expanded well is",
+        "choices": [
+          "32/(9π²)",
+          "8/(9π²)",
+          "16/(9π²)",
+          "1/4",
+          "1/2"
+        ],
+        "answer": "A",
+        "explanation": "WORKED SOLUTION\nImmediately after the sudden expansion, the wavefunction is unchanged on 0 < x < L and zero on L < x < 2L. The overlap with the new ground state is c₁ = ∫₀ᴸ√(2/L)sin(πx/L)·√(1/L)sin(πx/2L)dx = 4√2/(3π). Therefore P₁ = |c₁|² = 32/(9π²). Assuming the particle automatically becomes the new ground state violates the sudden approximation.\n\nNUMERICS WITHOUT A CALCULATOR\nThe overlap amplitude is (√2/L)∫₀ᴸsin(πx/L)sin(πx/2L)dx = 4√2/(3π). Squaring gives 32/(9π²).\n\n90-SECOND SOLUTION\nUse sinA sinB = [cos(A−B)−cos(A+B)]/2. The integral is 4L/(3π), and the normalization factor √2/L leaves 4√2/(3π) before squaring.\n\nWHAT TO MEMORIZE\nAfter a sudden Hamiltonian change, project the unchanged state onto the new energy eigenstates."
+      },
+      {
+        "question": "A photon of wavelength 0.0500 nm Compton-scatters through 90°. What fraction of its initial energy is transferred to the electron? Use h/(m_ec) = 0.00243 nm.",
+        "choices": [
+          "2.4%",
+          "4.6%",
+          "9.3%",
+          "18%",
+          "49%"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nAt 90°, the Compton shift is one electron Compton wavelength, so λ′ = 0.0500+0.00243 = 0.05243 nm. Photon energy is proportional to 1/λ, hence the outgoing photon retains λ/λ′ ≈ 0.954 of its energy. The electron receives 1−0.954 = 0.046, or 4.6%. Confusing wavelength increase with energy loss would give 4.9% rather than the correct ratio.\n\nNUMERICS WITHOUT A CALCULATOR\nAt 90°, λ′ = 0.05243 nm. Since photon energy is proportional to 1/λ, the retained fraction is λ/λ′ ≈ 0.0500/0.05243 ≈ 0.954.\n\n90-SECOND SOLUTION\nThe fractional loss is Δλ/(λ+Δλ) = 0.00243/0.05243. Since the denominator is about 0.0525, the ratio is about 0.046.\n\nWHAT TO MEMORIZE\nCompton shift: Δλ = (h/m_ec)(1−cosθ); photon-energy ratios are inverse wavelength ratios."
+      },
+      {
+        "question": "An x-ray tube operated at 25 kV has a short-wavelength cutoff of 0.0496 nm. If the voltage is increased by 20%, the new cutoff is",
+        "choices": [
+          "0.0331 nm",
+          "0.0397 nm",
+          "0.0413 nm",
+          "0.0476 nm",
+          "0.0595 nm"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nThe Duane-Hunt cutoff satisfies eV = hc/λ_min, so λ_min is inversely proportional to tube voltage. Raising V by 20% gives λ_new = 0.0496/1.20 = 0.0413 nm. Multiplying by 1.20 gives the wrong trend: higher-energy electrons produce shorter, not longer, minimum wavelength.\n\nNUMERICS WITHOUT A CALCULATOR\nThe cutoff varies as 1/V. Divide 0.0496 by 1.20, equivalently multiply by 5/6, to get 0.0413 nm.\n\n90-SECOND SOLUTION\nDividing by 1.20 is multiplying by 5/6. Compute 0.0496×5/6 = 0.248/6 ≈ 0.0413.\n\nWHAT TO MEMORIZE\nX-ray cutoff wavelength obeys λ_min = hc/(eV)."
+      },
+      {
+        "question": "Two equal masses m lie between fixed walls, with three identical springs of constant k connecting wall–mass–mass–wall. If √(k/m) = 10 rad/s, the difference between the two normal-mode angular frequencies is most nearly",
+        "choices": [
+          "4.1 rad/s",
+          "5.0 rad/s",
+          "7.3 rad/s",
+          "10 rad/s",
+          "17 rad/s"
+        ],
+        "answer": "C",
+        "image": "images/full-practice-6/q68.png",
+        "explanation": "WORKED SOLUTION\nFor equal masses with wall and coupling springs all k, the in-phase mode leaves the middle spring unstretched and has ω₁ = √(k/m). The out-of-phase mode stretches the middle spring and has ω₂ = √(3k/m). Thus Δω = (√3−1)√(k/m) = 10(1.732−1) = 7.3 rad/s. Adding the frequencies instead of subtracting gives about 27 rad/s.\n\nNUMERICS WITHOUT A CALCULATOR\nThe mode frequencies are √(k/m) and √(3k/m). Their difference is 10(√3 − 1) ≈ 10(1.732 − 1) = 7.32 rad/s.\n\n90-SECOND SOLUTION\nUse √3 ≈ 1.732, subtract 1 first, then move the decimal by multiplying by 10.\n\nWHAT TO MEMORIZE\nFor two equal masses with three equal springs, the normal frequencies are √(k/m) and √(3k/m)."
+      },
+      {
+        "question": "A rigid container is divided into two equal volumes. One side contains 0.50 mol of ideal helium and the other 0.50 mol of ideal neon at the same temperature and pressure. When the partition is removed, the entropy increase is most nearly",
+        "choices": [
+          "2.9 J/K",
+          "4.2 J/K",
+          "5.8 J/K",
+          "8.3 J/K",
+          "11.5 J/K"
+        ],
+        "answer": "C",
+        "explanation": "WORKED SOLUTION\nEach gas expands freely from half the container to the full container while remaining at the same temperature. For each species ΔS = nRln(V_f/V_i) = 0.50Rln2. Adding helium and neon gives ΔS = Rln2 ≈ 5.8 J/K. The zero entropy result applies when the partition separates samples of the same gas, where mixing creates no new distinguishable arrangements.\n\nNUMERICS WITHOUT A CALCULATOR\nEach gas expands to twice its volume, so ΔS = (0.5R ln2) + (0.5R ln2) = R ln2. Use 8.31 × 0.693 ≈ 5.8.\n\n90-SECOND SOLUTION\nThe two 0.50-mol contributions add to one full Rln2. Use 8.31×0.693 ≈ 5.76.\n\nWHAT TO MEMORIZE\nMixing equal amounts of two distinct ideal gases at equal T and P gives a positive entropy; identical gases give no Gibbs mixing entropy."
+      }
+    ]
+  },
 
 ];
