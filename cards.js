@@ -25664,6 +25664,461 @@ const EXAMS = [
   }
 
   ]
+  },
+  {
+    "name": "Normal Modes & Circuits (30 Questions)",
+    "added": "2026-10-15",
+    "category": "practice",
+    "cards": [
+  
+  // Q1 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "In the circuit shown, the three lower terminals are at the same potential. What is the current through the 4.0 Ω resistor connected from junction P to the lower terminal?",
+    "choices": [
+      "0.75 A",
+      "1.2 A",
+      "1.5 A",
+      "1.9 A",
+      "3.0 A"
+    ],
+    "answer": "D",
+    "image": "images/normal-modes-circuits-30/q1.png",
+    "explanation": "WORKED SOLUTION\nTake the common lower node as 0 V. The battery-side ends of the three branches are then at 12 V, 6 V, and 0 V. Kirchhoff's junction rule at P gives (V_P − 12)/2 + (V_P − 6)/4 + V_P/4 = 0, with resistances in ohms. Multiplying by 4 gives 2(V_P − 12) + (V_P − 6) + V_P = 0, so 4V_P = 30 and V_P = 7.5 V. The current through the vertical 4.0 Ω resistor is therefore 7.5/4.0 = 1.875 A, or 1.9 A. Treating the batteries as simply adding to 18 V ignores that they feed the junction through different resistances.\n\n90-SECOND SOLUTION\nWrite one node-voltage equation at P. The conductance-weighted source voltage is V_P = (12/2 + 6/4)/(1/2 + 1/4 + 1/4) = 7.5 V, then divide by 4 Ω.\n\nWHAT TO MEMORIZE\nFor several branches meeting at one node, node voltage equals the conductance-weighted average of the branch source voltages."
+  },
+  
+  // Q2 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Two identical masses m slide without friction. Each mass is attached to a wall by a spring of constant k, and the masses are coupled by a spring of constant 2k, as shown. What is the ratio of the higher normal-mode angular frequency to the lower one?",
+    "choices": [
+      "√2",
+      "√5",
+      "2",
+      "√6",
+      "3"
+    ],
+    "answer": "B",
+    "image": "images/normal-modes-circuits-30/q2.png",
+    "explanation": "WORKED SOLUTION\nFor the low mode the masses move together, so the middle spring is not stretched. Each mass then feels only its wall spring, giving ω_low² = k/m. For the high mode the masses move oppositely with equal amplitude. If the left mass is displaced by x, the coupling spring changes length by 2x and exerts force 2k(2x) = 4kx on that mass; its wall spring contributes another kx. Thus ω_high² = 5k/m. The requested ratio is ω_high/ω_low = √5. The answer is not √2 because the coupling spring has constant 2k and is stretched by twice the displacement in the antisymmetric mode.\n\n90-SECOND SOLUTION\nUse the mode shapes directly: together means only k acts; opposite means the effective restoring constant on either mass is k + 4k = 5k. The frequency ratio is √(5k/k) = √5.\n\nWHAT TO MEMORIZE\nIn an antisymmetric two-mass mode, a spring between the masses changes length by twice either mass's displacement."
+  },
+  
+  // Q3 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "The switch in the circuit shown has been at a for a long time. It is then moved to b, disconnecting the battery and the 3.0 kΩ resistor. How long after the switch is moved does the capacitor voltage fall to 3.0 V?",
+    "choices": [
+      "4.2 ms",
+      "8.3 ms",
+      "17 ms",
+      "24 ms",
+      "32 ms"
+    ],
+    "answer": "C",
+    "image": "images/normal-modes-circuits-30/q3.png",
+    "explanation": "WORKED SOLUTION\nWith the switch at a for a long time, the capacitor is an open circuit. The 3.0 kΩ and 6.0 kΩ resistors form a divider, so the capacitor initially has V₀ = 18(6)/(3 + 6) = 12 V. After the switch moves to b, the battery and 3.0 kΩ resistor are disconnected, and the capacitor discharges only through 6.0 kΩ. The time constant is τ = RC = (6.0 kΩ)(2.0 μF) = 12 ms. Using V = V₀e^(−t/τ), 3/12 = e^(−t/τ), so t = τ ln 4 = 12(1.386) ms = 16.6 ms, most nearly 17 ms.\n\n90-SECOND SOLUTION\nThe divider leaves 12 V on the capacitor. Falling to 3 V is two halvings, so t = 2t₁/₂ = 2(0.693)(12 ms) ≈ 17 ms.\n\nWHAT TO MEMORIZE\nAt long DC time a capacitor is open; during discharge V = V₀e^(−t/RC) and t₁/₂ = 0.693RC."
+  },
+  
+  // Q4 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "Six identical resistors, each of resistance R, form the six edges of a tetrahedron. What is the equivalent resistance measured between any two vertices?",
+    "choices": [
+      "R/2",
+      "2R/3",
+      "R",
+      "3R/2",
+      "2R"
+    ],
+    "answer": "A",
+    "image": "images/normal-modes-circuits-30/q4.png",
+    "explanation": "WORKED SOLUTION\nCall the measured vertices a and b and the other two vertices c and d. By symmetry c and d must be at the same potential when a voltage is applied between a and b, so no current flows through the resistor joining c and d. The two resistors from a to c and d are therefore parallel, giving R/2 from a to the equipotential pair. The two resistors from that pair to b also give R/2. Those two equivalents are in series, producing R through the four side branches. This path is in parallel with the direct edge resistor R between a and b, so R_eq = R ∥ R = R/2.\n\n90-SECOND SOLUTION\nThe two unused vertices are symmetry partners and therefore equipotential. Delete their connecting resistor; the remaining network is a direct R in parallel with a second R.\n\nWHAT TO MEMORIZE\nSymmetry can identify equal-potential nodes. A resistor between equal-potential nodes carries no current."
+  },
+  
+  // Q5 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Two identical masses m are connected to each other by a spring of constant k on a frictionless horizontal surface, with neither mass attached to a wall. Initially the masses pass through equilibrium with velocities +v and −v. Which normal mode is excited, and what is its angular frequency?",
+    "choices": [
+      "Translation only; ω = 0",
+      "In-phase oscillation; ω = √(k/m)",
+      "An equal mixture of both modes",
+      "Opposite-phase oscillation; ω = 2√(k/m)",
+      "Opposite-phase oscillation; ω = √(2k/m)"
+    ],
+    "answer": "E",
+    "image": "images/normal-modes-circuits-30/q5.png",
+    "explanation": "WORKED SOLUTION\nThe center-of-mass coordinate is the translation mode: both masses move with the same velocity and the spring length does not change, so ω = 0. Here the velocities are equal and opposite, so the center of mass remains fixed and only the relative coordinate is excited. Let the displacements be x and −x. The spring extension is 2x, so the force magnitude on either mass is 2kx. Thus m ẍ = −2kx and ω² = 2k/m. The motion is the opposite-phase normal mode with ω = √(2k/m). Calling it a mixture overlooks that the initial velocity vector is already exactly one eigenvector.\n\n90-SECOND SOLUTION\nVelocity pattern (+v, −v) is proportional to the antisymmetric eigenvector (1, −1), so only that mode appears. Its spring extension is 2x, giving ω² = 2k/m.\n\nWHAT TO MEMORIZE\nFor two free equal masses joined by one spring: translation has ω = 0; relative motion has ω = √(2k/m)."
+  },
+  
+  // Q6 [EM/AC circuits (RLC)] (M)
+  {
+    "question": "A resistor R = 300 Ω and a capacitor whose reactance is 400 Ω are connected in series across a 100 V rms source. What average power is delivered to the circuit?",
+    "choices": [
+      "12 W",
+      "16 W",
+      "20 W",
+      "24 W",
+      "30 W"
+    ],
+    "answer": "A",
+    "explanation": "WORKED SOLUTION\nFor a series RC circuit the impedance magnitude is Z = √(R² + X_C²) = √(300² + 400²) Ω = 500 Ω. The rms current is therefore I = V/Z = 100/500 = 0.20 A. Only the resistor dissipates average power, so P = I²R = (0.20)²(300) = 12 W. Using V²/R would give the power only if the full 100 V appeared across the resistor; here part of the source voltage appears across the capacitor, which stores and returns energy rather than dissipating it.\n\n90-SECOND SOLUTION\nRecognize the 3-4-5 triangle: 300-400-500 Ω. Then I = 100/500 = 0.2 A and P = I²R = 0.04(300) = 12 W.\n\nWHAT TO MEMORIZE\nIn series AC circuits, find current from the total impedance, but average power is I_rms²R."
+  },
+  
+  // Q7 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Three identical pendulums of length ℓ and bob mass m hang side by side. Adjacent bobs are connected by identical light springs of constant k. For small horizontal oscillations, one normal mode has displacement amplitudes proportional to (A, 0, −A). What is its angular frequency?",
+    "choices": [
+      "√(g/ℓ)",
+      "√(g/ℓ + 2k/m)",
+      "√(2g/ℓ + k/m)",
+      "√(2g/ℓ + 2k/m)",
+      "√(g/ℓ + k/m)"
+    ],
+    "answer": "E",
+    "image": "images/normal-modes-circuits-30/q7.png",
+    "explanation": "WORKED SOLUTION\nEach pendulum alone contributes the restoring acceleration −(g/ℓ)x. For the pattern (A, 0, −A), the left-center spring is extended by A and the center-right spring is also extended by A. On an outer bob the spring force is therefore −k times its own displacement. On the center bob the two spring forces cancel, consistent with zero amplitude. Thus an outer bob obeys m ẍ = −(mg/ℓ + k)x, giving ω² = g/ℓ + k/m. A factor of 2k/m would apply to a two-bob antisymmetric mode in which one spring changes length by 2A, not to either outer spring here.\n\n90-SECOND SOLUTION\nInspect one outer bob. Gravity supplies m(g/ℓ)A and its one spring supplies kA, so divide their total restoring coefficient by m.\n\nWHAT TO MEMORIZE\nTest a proposed mode by writing the force on one convenient mass; a zero-amplitude mass must also have zero net force."
+  },
+  
+  // Q8 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "When switches S₁ and S₂ are closed, two batteries with internal resistance are connected in parallel across a 3.0 Ω load, as shown. What current flows through the load?",
+    "choices": [
+      "1.5 A",
+      "2.0 A",
+      "2.7 A",
+      "3.3 A",
+      "4.0 A"
+    ],
+    "answer": "C",
+    "image": "images/normal-modes-circuits-30/q8.png",
+    "explanation": "WORKED SOLUTION\nLet V be the voltage across the 3.0 Ω load. Currents delivered toward the top node by the two source branches are (12 − V)/1 and (6 − V)/2, while the load current is V/3. Kirchhoff's junction rule gives (12 − V) + (6 − V)/2 = V/3. Multiplying by 6 gives 72 − 6V + 18 − 3V = 2V, so 90 = 11V and V = 8.18 V. Therefore I_load = V/3 = 2.73 A, or 2.7 A. Simply adding the emfs is wrong because parallel sources share one terminal voltage and their internal resistances control how much current each supplies.\n\n90-SECOND SOLUTION\nUse conductances: V = (12/1 + 6/2)/(1/1 + 1/2 + 1/3) = 90/11 V. Divide by 3 Ω to get 30/11 ≈ 2.7 A.\n\nWHAT TO MEMORIZE\nParallel nonidentical batteries require a node equation; do not combine their emfs as though they were in series."
+  },
+  
+  // Q9 [LM/electronics] (M)
+  {
+    "question": "The operational amplifier shown is ideal. What is the output voltage V_out?",
+    "choices": [
+      "−1.0 V",
+      "−0.60 V",
+      "−0.20 V",
+      "+0.20 V",
+      "+0.60 V"
+    ],
+    "answer": "B",
+    "image": "images/normal-modes-circuits-30/q9.png",
+    "explanation": "WORKED SOLUTION\nFor an ideal op-amp with negative feedback, the inverting input is at the same potential as the grounded non-inverting input, so the summing node is at 0 V. No current enters the op-amp input. The +0.40 V branch sends 0.40/10 kΩ = 40 μA into the node. The −0.20 V branch sends 10 μA out of the node. The net 30 μA entering must leave through the 20 kΩ feedback resistor. Thus (0 − V_out)/20 kΩ = 30 μA, giving V_out = −0.60 V. Treating both input magnitudes as positive would incorrectly ignore the sign of the −0.20 V source.\n\n90-SECOND SOLUTION\nUse the summing-amplifier formula: V_out = −20 kΩ[(0.40/10 kΩ) + (−0.20/20 kΩ)] = −0.60 V.\n\nWHAT TO MEMORIZE\nAn ideal negatively fed back op-amp has equal input voltages and draws zero input current."
+  },
+  
+  // Q10 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Two identical pendulums each have uncoupled angular frequency ω₀. Their bobs are joined by a spring such that k/m = ω₀²/2. What are the angular frequencies of the in-phase and opposite-phase normal modes, respectively?",
+    "choices": [
+      "ω₀/√2 and ω₀",
+      "ω₀ and 2ω₀",
+      "√2ω₀ and 2ω₀",
+      "ω₀ and √2ω₀",
+      "ω₀/2 and 3ω₀/2"
+    ],
+    "answer": "D",
+    "image": "images/normal-modes-circuits-30/q10.png",
+    "explanation": "WORKED SOLUTION\nIn the in-phase mode the two bobs move together, so the coupling spring is not stretched and the frequency remains ω₀. In the opposite-phase mode, displacements x and −x change the spring length by 2x. The spring therefore adds 2k/m to ω² for either bob: ω_anti² = ω₀² + 2k/m. Given k/m = ω₀²/2, this becomes ω_anti² = ω₀² + ω₀² = 2ω₀², so ω_anti = √2ω₀. The requested ordered pair is ω₀ and √2ω₀.\n\n90-SECOND SOLUTION\nThe spring does nothing in phase. Out of phase it contributes 2k/m = ω₀² to the existing ω₀², so the new frequency is √2ω₀.\n\nWHAT TO MEMORIZE\nCoupling usually leaves the common-motion mode unchanged and raises the relative-motion frequency."
+  },
+  
+  // Q11 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "What is the equivalent capacitance between terminals a and b for the network shown?",
+    "choices": [
+      "1.5 μF",
+      "2.0 μF",
+      "2.25 μF",
+      "3.0 μF",
+      "4.5 μF"
+    ],
+    "answer": "C",
+    "image": "images/normal-modes-circuits-30/q11.png",
+    "explanation": "WORKED SOLUTION\nThe 6.0 μF and 3.0 μF capacitors share both endpoints, so they are in parallel and combine to 9.0 μF. That 9.0 μF equivalent is in series with the 3.0 μF capacitor next to terminal a. Therefore 1/C_eq = 1/3 + 1/9 in inverse microfarads, or C_eq = (3)(9)/(3 + 9) = 27/12 = 2.25 μF. Adding all three values would treat every capacitor as parallel; combining the two 3.0 μF capacitors first would ignore that they do not share the same two nodes.\n\n90-SECOND SOLUTION\nCollapse the obvious parallel pair: 6 + 3 = 9 μF. Then use the two-capacitor series shortcut, 3×9/(3+9) = 2.25 μF.\n\nWHAT TO MEMORIZE\nParallel capacitors add directly; series capacitors add reciprocally."
+  },
+  
+  // Q12 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Three identical masses m can move tangentially around a circular track. Identical springs of constant k connect each mass to its two neighbors, forming a closed ring. Besides the rigid-rotation mode, what are the other two normal-mode angular frequencies?",
+    "choices": [
+      "Both are √(3k/m)",
+      "Both are √(2k/m)",
+      "√(k/m) and √(3k/m)",
+      "√(2k/m) and 2√(k/m)",
+      "√(k/m) and 2√(k/m)"
+    ],
+    "answer": "A",
+    "image": "images/normal-modes-circuits-30/q12.png",
+    "explanation": "WORKED SOLUTION\nLet the tangential displacements be x₁, x₂, and x₃. The spring-force matrix is k times the ring Laplacian, with diagonal entries 2 and off-diagonal entries −1. The vector (1,1,1) has eigenvalue 0 and represents rigid rotation. Any vector whose components sum to zero lies in the remaining two-dimensional subspace. For such a vector, the matrix gives 3k times the original vector, so both remaining modes have ω² = 3k/m. Their degeneracy follows from the threefold rotational symmetry: two independent patterns can be rotated into combinations of one another without changing the physics.\n\n90-SECOND SOLUTION\nFor a three-site ring the spring matrix has eigenvalues 0, 3k, and 3k. Divide by m and take square roots.\n\nWHAT TO MEMORIZE\nA symmetric three-mass ring has one zero rigid-rotation mode and a doubly degenerate pair at √(3k/m)."
+  },
+  
+  // Q13 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "The bridge circuit shown has been connected to the 12 V battery for a long time. What is the magnitude of the charge on the 5.0 μF capacitor?",
+    "choices": [
+      "5.0 μC",
+      "7.5 μC",
+      "20 μC",
+      "10 μC",
+      "30 μC"
+    ],
+    "answer": "D",
+    "image": "images/normal-modes-circuits-30/q13.png",
+    "explanation": "WORKED SOLUTION\nAt long time the capacitor carries no DC current, so each side of the bridge is just a voltage divider. Taking the bottom vertex as 0 V and the top as 12 V, the left midpoint is 12[4/(2+4)] = 8 V. The right midpoint is 12[3/(3+3)] = 6 V. The capacitor therefore has a voltage magnitude of 2 V across it, and its charge is Q = CΔV = (5.0 μF)(2.0 V) = 10 μC. Using 12 V across the capacitor ignores the divider midpoints to which its plates are actually connected.\n\n90-SECOND SOLUTION\nFind only the two divider voltages: 8 V on the left and 6 V on the right. Their 2 V difference times 5 μF gives 10 μC.\n\nWHAT TO MEMORIZE\nIn DC steady state a capacitor is open, but its voltage is the difference between the two node voltages at its plates."
+  },
+  
+  // Q14 [EM/induction & inductance] (M)
+  {
+    "question": "The switch has been at a for a long time. At t = 0 it moves to b, disconnecting the battery and allowing the inductor to discharge through both resistors. What is the current 0.10 s later?",
+    "choices": [
+      "0.11 A",
+      "0.81 A",
+      "2.2 A",
+      "4.0 A",
+      "0.30 A"
+    ],
+    "answer": "E",
+    "image": "images/normal-modes-circuits-30/q14.png",
+    "explanation": "WORKED SOLUTION\nBefore switching, the inductor is a short circuit at DC and only R₁ = 2.0 Ω limits the current. Thus I₀ = 12/2 = 6.0 A. After switching, the battery is removed and the inductor discharges through R₁ + R₂ = 6.0 Ω. The time constant is τ = L/R = 0.20/6.0 = 0.033 s. At t = 0.10 s, t/τ = 3, so I = I₀e^(−3) ≈ 6.0(0.0498) = 0.30 A. Starting the decay from 2 A would incorrectly include R₂ in the pre-switch steady-state circuit.\n\n90-SECOND SOLUTION\nInitial current is 6 A. The discharge time constant is 1/30 s, so 0.10 s is exactly three time constants. Since e⁻³ ≈ 0.05, the current is about 0.30 A.\n\nWHAT TO MEMORIZE\nInductor current is continuous at switching, and an RL discharge follows I = I₀e^(−tR/L)."
+  },
+  
+  // Q15 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "A string of length L is fixed at its left end and attached at its right end to a massless ring that slides freely on a frictionless vertical rod. What is the wavelength of the third-lowest normal mode?",
+    "choices": [
+      "2L/3",
+      "4L/5",
+      "L",
+      "4L/3",
+      "2L"
+    ],
+    "answer": "B",
+    "image": "images/normal-modes-circuits-30/q15.png",
+    "explanation": "WORKED SOLUTION\nA fixed end is a displacement node. A freely sliding end has zero transverse force, so the string slope vanishes there; it is a displacement antinode. A fixed-free string therefore fits an odd number of quarter-wavelengths: L = (2n−1)λ/4 for n = 1,2,3,…. The third-lowest mode has 2n−1 = 5, giving λ = 4L/5. The result 2L/3 belongs to the third harmonic of a string with the same boundary condition at both ends, not to a fixed-free string.\n\n90-SECOND SOLUTION\nList the allowed fixed-free wavelengths: 4L, 4L/3, 4L/5, …. The third is 4L/5.\n\nWHAT TO MEMORIZE\nFixed-free systems support only odd quarter-wave patterns: λ_n = 4L/(2n−1)."
+  },
+  
+  // Q16 [EM/currents, DC & RC circuits] (E)
+  {
+    "question": "Four identical resistors form the sides of the symmetric diamond shown. The switch connects the two midpoints. When the switch is closed, how does the current supplied by the ideal battery change?",
+    "choices": [
+      "It doubles",
+      "It increases by 50%",
+      "It is unchanged",
+      "It decreases by 25%",
+      "It falls to zero"
+    ],
+    "answer": "C",
+    "image": "images/normal-modes-circuits-30/q16.png",
+    "explanation": "WORKED SOLUTION\nWith the switch open, each side of the diamond contains two equal resistors in series, and the two identical branches are in parallel. Because the branches are identical, their midpoints are at the same potential. Closing the switch joins two already-equipotential points, so no current flows through the switch and none of the resistor currents changes. Equivalently, after the switch closes, the two upper resistors are in parallel and the two lower resistors are in parallel: R/2 + R/2 = R, the same equivalent resistance as two 2R branches in parallel. Therefore the battery current is unchanged.\n\n90-SECOND SOLUTION\nThe bridge is balanced by symmetry, so the midpoint voltage difference is zero. A zero-current connection cannot change the circuit.\n\nWHAT TO MEMORIZE\nClosing the diagonal of a balanced bridge does not affect its equivalent resistance."
+  },
+  
+  // Q17 [LM/electronics] (M)
+  {
+    "question": "An ideal transformer with N_p:N_s = 3:1 is connected to a 120 V rms source. Its secondary drives an ideal full-wave bridge rectifier and a 12 Ω resistive load. What is the rms current in the load?",
+    "choices": [
+      "3.3 A",
+      "1.7 A",
+      "2.4 A",
+      "4.7 A",
+      "10 A"
+    ],
+    "answer": "A",
+    "image": "images/normal-modes-circuits-30/q17.png",
+    "explanation": "WORKED SOLUTION\nAn ideal transformer changes rms voltage in the turns ratio. The secondary voltage is V_s = 120(1/3) = 40 V rms. An ideal full-wave bridge reverses the negative half-cycles but does not change the squared waveform, so the rectified voltage still has rms value 40 V. With an ideal diode bridge and a 12 Ω load, I_rms = 40/12 = 3.33 A, or 3.3 A. Using the average rectified voltage instead would answer a question about average current, not rms current.\n\n90-SECOND SOLUTION\nStep down 120 V by 3 to get 40 V rms. Full-wave rectification leaves rms unchanged, so 40/12 ≈ 3.3 A.\n\nWHAT TO MEMORIZE\nAn ideal full-wave rectifier changes waveform sign but not rms magnitude; transformer voltage follows V_s/V_p = N_s/N_p."
+  },
+  
+  // Q18 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Four identical masses lie between fixed walls and are connected in a line by five identical springs. Which displacement pattern represents the lowest-frequency normal mode?",
+    "choices": [
+      "Adjacent masses alternate direction with equal amplitudes",
+      "The two outer masses are stationary while the two inner masses move oppositely",
+      "The left pair moves right and the right pair moves left, all with equal amplitude",
+      "Only one mass moves while the other three remain fixed",
+      "All four masses move in the same direction, with the two inner amplitudes larger than the equal outer amplitudes"
+    ],
+    "answer": "E",
+    "image": "images/normal-modes-circuits-30/q18.png",
+    "explanation": "WORKED SOLUTION\nFor four equal masses between fixed walls, the normal-mode components are proportional to sin(jnπ/5), where j labels the mass and n labels the mode. For the lowest mode n = 1, all four sine values are positive. The two inner values, sin(2π/5) and sin(3π/5), are equal and larger than the equal outer values sin(π/5) and sin(4π/5). Thus every mass moves in the same direction at an instant, with larger amplitudes on the inner pair. Alternating signs correspond to a higher mode with more nodes and therefore greater spring distortion.\n\n90-SECOND SOLUTION\nThe lowest mode has no internal node: all masses move the same way. Fixed ends suppress the outer masses more, so the inner amplitudes must be larger.\n\nWHAT TO MEMORIZE\nThe lowest mode of a fixed chain has no sign changes; higher modes acquire additional nodes."
+  },
+  
+  // Q19 [LM/measurement & instrumentation] (M)
+  {
+    "question": "A voltmeter of resistance 6.0 kΩ is connected across the lower resistor in the divider shown. What voltage does the meter read?",
+    "choices": [
+      "3.0 V",
+      "4.0 V",
+      "8.0 V",
+      "6.0 V",
+      "9.0 V"
+    ],
+    "answer": "D",
+    "image": "images/normal-modes-circuits-30/q19.png",
+    "explanation": "WORKED SOLUTION\nThe voltmeter is not ideal: its 6.0 kΩ resistance is in parallel with the lower 6.0 kΩ divider resistor. Their equivalent is 3.0 kΩ. The loaded divider is therefore 3.0 kΩ on top and 3.0 kΩ on the bottom, so the meter reads half the 12 V supply, or 6.0 V. An infinite-resistance voltmeter would read 8.0 V from the unloaded 3 kΩ-6 kΩ divider; that choice is the trap for ignoring meter loading.\n\n90-SECOND SOLUTION\nReplace the lower resistor and meter by 6 kΩ ∥ 6 kΩ = 3 kΩ. Equal top and bottom resistances split 12 V in half.\n\nWHAT TO MEMORIZE\nA real voltmeter loads the element it measures because its finite resistance appears in parallel with that element."
+  },
+  
+  // Q20 [EM/AC circuits (RLC)] (M)
+  {
+    "question": "A 40 Ω resistor and an inductor of reactance 30 Ω are connected in parallel across a 120 V rms source. What is the power factor of the combination?",
+    "choices": [
+      "0.40 lagging",
+      "0.60 lagging",
+      "0.60 leading",
+      "0.80 leading",
+      "0.80 lagging"
+    ],
+    "answer": "B",
+    "image": "images/normal-modes-circuits-30/q20.png",
+    "explanation": "WORKED SOLUTION\nThe resistor branch current is I_R = 120/40 = 3 A and is in phase with the voltage. The inductor branch current is I_L = 120/30 = 4 A and lags by 90°. These perpendicular current phasors give total current magnitude √(3² + 4²) = 5 A. The power factor is the in-phase fraction, cosφ = I_R/I_total = 3/5 = 0.60. Because the reactive current is inductive, the total current lags the voltage. Using 0.80 chooses the reactive fraction rather than the real-power fraction.\n\n90-SECOND SOLUTION\nBranch currents make a 3-4-5 triangle. The in-phase leg is 3, so power factor is 3/5 = 0.60, lagging because the other branch is inductive.\n\nWHAT TO MEMORIZE\nFor parallel AC branches, add currents as phasors; power factor is the in-phase current divided by total current."
+  },
+  
+  // Q21 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "A particle of mass m moves in two dimensions in the potential U(x,y) = ½k(x² + y²) + ½kxy. For the lower-frequency normal mode, what is the relation between x and y, and what is the angular frequency?",
+    "choices": [
+      "y = x; ω = √(k/2m)",
+      "y = −x; ω = √(k/2m)",
+      "y = x; ω = √(3k/2m)",
+      "y = −x; ω = √(3k/2m)",
+      "y = 0; ω = √(k/m)"
+    ],
+    "answer": "B",
+    "explanation": "WORKED SOLUTION\nWrite the potential as one-half of a quadratic form. The stiffness matrix is K = [[k, k/2], [k/2, k]], because the cross term in ½(x,y)K(x,y)^T is K_xyxy. Its eigenvectors are (1,1) with eigenvalue 3k/2 and (1,−1) with eigenvalue k/2. The lower-frequency mode is therefore y = −x, and ω² = (k/2)/m, giving ω = √(k/2m). Taking the cross-term coefficient itself as k rather than k/2 is the usual factor-of-two error.\n\n90-SECOND SOLUTION\nTry y = ±x. The negative-sign pattern reduces the positive xy term, so it is the lower mode. Substitution gives effective stiffness k/2 per coordinate and ω = √(k/2m).\n\nWHAT TO MEMORIZE\nIn U = ½K_xx x² + K_xyxy + ½K_yy y², the coefficient of xy is the off-diagonal matrix element K_xy."
+  },
+  
+  // Q22 [EM/currents, DC & RC circuits] (H)
+  {
+    "question": "The infinite resistor ladder shown continues forever. Every series resistor has resistance 2R and every shunt resistor has resistance R. What is the equivalent resistance between terminals a and b?",
+    "choices": [
+      "√2R",
+      "(1 + √2)R",
+      "(1 + √3)R",
+      "2R",
+      "(2 + √3)R"
+    ],
+    "answer": "C",
+    "image": "images/normal-modes-circuits-30/q22.png",
+    "explanation": "WORKED SOLUTION\nLet X be the equivalent resistance of the entire infinite ladder. After the first 2R series resistor, the remaining node sees the shunt R in parallel with another complete ladder X. Self-similarity therefore gives X = 2R + RX/(R + X). Put x = X/R: x = 2 + x/(1+x). Multiplying through gives x² − 2x − 2 = 0, so x = 1 ± √3. Resistance must be positive, leaving x = 1 + √3. Hence X = (1 + √3)R. The choice (1 + √2)R comes from writing the wrong self-similarity equation for the shunt branch.\n\n90-SECOND SOLUTION\nSet X/R = x and write x = 2 + x/(1+x). The positive root of x² − 2x − 2 = 0 is 1 + √3.\n\nWHAT TO MEMORIZE\nFor an infinite ladder, remove one repeating cell and replace the untouched remainder by the original equivalent resistance."
+  },
+  
+  // Q23 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "With S₁ closed and S₂ open, capacitor C₁ is charged to 9.0 V and capacitor C₂ is charged to 3.0 V with the polarities shown. S₁ is then opened and S₂ closed, connecting like-polarity plates together. How much energy is lost during charge redistribution?",
+    "choices": [
+      "6 μJ",
+      "12 μJ",
+      "18 μJ",
+      "24 μJ",
+      "48 μJ"
+    ],
+    "answer": "D",
+    "image": "images/normal-modes-circuits-30/q23.png",
+    "explanation": "WORKED SOLUTION\nInitially, U_i = ½C₁V₁² + ½C₂V₂² = ½(2 μF)(9²) + ½(4 μF)(3²) = 81 μJ + 18 μJ = 99 μJ. The connected positive plates carry total charge Q = C₁V₁ + C₂V₂ = 18 μC + 12 μC = 30 μC. With total capacitance 6 μF, the final common voltage is 5 V and U_f = ½(6 μF)(5²) = 75 μJ. The lost energy is 99 − 75 = 24 μJ. Charge is conserved, but electrostatic energy is not; the missing energy is dissipated during the transient.\n\n90-SECOND SOLUTION\nUse the charge-sharing shortcut: ΔU = ½[C₁C₂/(C₁+C₂)](V₁−V₂)² = ½(8/6 μF)(6 V)² = 24 μJ.\n\nWHAT TO MEMORIZE\nWhen isolated capacitors are joined like-to-like, total charge is conserved; the final voltage is the capacitance-weighted average."
+  },
+  
+  // Q24 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Two freely rotating disks with moments of inertia I and 4I are joined by a torsion spring of constant κ. For the nonzero-frequency normal mode, what are the amplitude relation and angular frequency?",
+    "choices": [
+      "θ₁ = θ₂; ω = √(κ/5I)",
+      "θ₁ = −θ₂; ω = √(2κ/I)",
+      "4θ₁ = −θ₂; ω = √(5κ/4I)",
+      "θ₁ = −4θ₂; ω = √(κ/4I)",
+      "θ₁ = −4θ₂; ω = √(5κ/4I)"
+    ],
+    "answer": "E",
+    "image": "images/normal-modes-circuits-30/q24.png",
+    "explanation": "WORKED SOLUTION\nFor the nonzero mode the torsion spring twists, but the system has no external torque. Its total angular momentum can therefore remain zero: Iθ₁ + 4Iθ₂ = 0 for the mode amplitudes, so θ₁ = −4θ₂. The relative twist obeys a frequency set by both inverse inertias: ω² = κ(1/I + 1/4I) = 5κ/(4I). Therefore ω = √(5κ/4I). The equal-and-opposite pattern would be correct only for equal moments of inertia; the lighter disk must have four times the angular amplitude.\n\n90-SECOND SOLUTION\nZero external torque gives Iθ₁ + 4Iθ₂ = 0. Then use the two-rotor relative-mode formula ω² = κ(1/I₁ + 1/I₂).\n\nWHAT TO MEMORIZE\nFor two free rotors coupled by a torsion spring, the nonzero mode has I₁θ₁ + I₂θ₂ = 0 and ω² = κ(1/I₁ + 1/I₂)."
+  },
+  
+  // Q25 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "In the two-loop circuit shown, what is the magnitude and direction of the current through the shared 2.0 Ω resistor?",
+    "choices": [
+      "1.0 A downward",
+      "1.0 A upward",
+      "2.0 A downward",
+      "3.0 A upward",
+      "4.0 A downward"
+    ],
+    "answer": "A",
+    "image": "images/normal-modes-circuits-30/q25.png",
+    "explanation": "WORKED SOLUTION\nTake the common lower wire as 0 V. The left battery places its upper node at +10 V, while the reversed right battery places its upper node at −4 V. The center node is connected through three equal 2.0 Ω resistors to +10 V, −4 V, and 0 V. Its voltage is therefore their average: V_c = (10 − 4 + 0)/3 = 2 V. The current through the shared 2.0 Ω resistor is V_c/2.0 = 1.0 A from the center node down to the common node. Reading both batteries as having the same polarity would describe a different circuit and give a different current.\n\n90-SECOND SOLUTION\nWith three equal branches, the center voltage is simply the average of the three remote-node voltages: (10 − 4 + 0)/3 = 2 V. Divide by 2 Ω; positive voltage means downward current.\n\nWHAT TO MEMORIZE\nFor equal resistors meeting at a node, the node voltage is the arithmetic mean of the voltages at their far ends."
+  },
+  
+  // Q26 [EM/AC circuits (RLC)] (M)
+  {
+    "question": "A series RLC circuit has R = 30 Ω, X_L = 50 Ω, and X_C = 10 Ω at the driving frequency. It is connected to a 100 V rms source. What average power is dissipated?",
+    "choices": [
+      "60 W",
+      "80 W",
+      "100 W",
+      "120 W",
+      "200 W"
+    ],
+    "answer": "D",
+    "explanation": "WORKED SOLUTION\nThe net series reactance is X = X_L − X_C = 50 − 10 = 40 Ω. The impedance magnitude is Z = √(R² + X²) = √(30² + 40²) = 50 Ω. Thus I_rms = 100/50 = 2.0 A. Only the resistor dissipates average power, so P = I²R = (2.0)²(30) = 120 W. Using V²/R would give 333 W and assumes the entire source voltage is across the resistor, which is false when the net reactance is nonzero.\n\n90-SECOND SOLUTION\nThe impedance is another 3-4-5 triangle: 30-40-50 Ω. Current is 2 A, so P = 4×30 = 120 W.\n\nWHAT TO MEMORIZE\nFor a series RLC circuit, Z = √[R² + (X_L−X_C)²] and average power is I_rms²R."
+  },
+  
+  // Q27 [EM/induction & inductance] (M)
+  {
+    "question": "Two identical inductors, each of self-inductance L, have mutual inductance M and are connected in series as shown. The reference current enters the dotted terminal of both coils. What is the equivalent inductance?",
+    "choices": [
+      "2(L − M)",
+      "2(L + M)",
+      "L + M",
+      "L − M",
+      "2L"
+    ],
+    "answer": "B",
+    "image": "images/normal-modes-circuits-30/q27.png",
+    "explanation": "WORKED SOLUTION\nThe reference current enters the dotted terminal of both coils, so the mutually induced voltages have the same polarity as the self-induced voltages. The connection is series aiding. The total flux linkage per current is therefore L_eq = L₁ + L₂ + 2M = L + L + 2M = 2(L + M). The expression 2(L − M) applies when the current enters the dotted terminal of one coil and the undotted terminal of the other, producing a series-opposing connection.\n\n90-SECOND SOLUTION\nApply the dot rule: current enters both dots, so use the plus sign in L_eq = L₁ + L₂ ± 2M. With L₁ = L₂ = L, the result is 2(L + M).\n\nWHAT TO MEMORIZE\nSeries coupled inductors add +2M when the reference current enters both dotted terminals, and −2M when it enters only one dot."
+  },
+  
+  // Q28 [LM/electronics] (M)
+  {
+    "question": "For ideal diodes and logic levels 0 V and +5 V, which logic operation does the circuit shown perform at the output?",
+    "choices": [
+      "OR",
+      "NAND",
+      "NOR",
+      "XOR",
+      "AND"
+    ],
+    "answer": "E",
+    "image": "images/normal-modes-circuits-30/q28.png",
+    "explanation": "WORKED SOLUTION\nThe resistor tends to pull Y up to +5 V. If either input is at 0 V, the diode from Y to that input becomes forward biased and, for an ideal diode, clamps Y to 0 V. Only when both A and B are at +5 V are both diodes nonconducting while the pull-up resistor brings Y to +5 V. The output is therefore high only when both inputs are high, which is the AND operation. Reversing both diodes would instead produce the complementary style of diode logic with a pull-down network.\n\n90-SECOND SOLUTION\nTest one decisive case: if either input is low, its diode conducts and forces Y low. Y can be high only for A = B = high, so the gate is AND.\n\nWHAT TO MEMORIZE\nA pull-up resistor with diodes that clamp the output to any low input implements positive-logic AND."
+  },
+  
+  // Q29 [EM/currents, DC & RC circuits] (M)
+  {
+    "question": "The capacitor is initially uncharged. The switch is held at a for one time constant R₁C and then moved instantly to b. Immediately after the move, what is the magnitude and direction of the current through R₂?",
+    "choices": [
+      "1.6 mA from the capacitor toward the 6 V battery",
+      "1.6 mA from the 6 V battery toward the capacitor",
+      "4.4 mA from the capacitor toward the 6 V battery",
+      "6.0 mA from the 6 V battery toward the capacitor",
+      "7.6 mA from the capacitor toward the 6 V battery"
+    ],
+    "answer": "A",
+    "image": "images/normal-modes-circuits-30/q29.png",
+    "explanation": "WORKED SOLUTION\nDuring charging at a, the capacitor approaches 12 V with time constant R₁C. After one time constant its voltage is V_C = 12(1 − e⁻¹) ≈ 12(0.632) = 7.58 V. Capacitor voltage cannot change instantly when the switch moves to b. The other side of R₂ is held at +6.0 V, so the initial voltage across R₂ is 7.58 − 6.0 = 1.58 V. Thus I = 1.58 V/1.0 kΩ = 1.58 mA, most nearly 1.6 mA, flowing from the higher-voltage capacitor plate toward the 6 V battery. Using 12 V assumes the capacitor was charged for a long time rather than for one time constant.\n\n90-SECOND SOLUTION\nOne time constant means 63.2% charged: 0.632×12 = 7.6 V. That is 1.6 V above the 6 V source, so 1.6 mA flows from the capacitor through 1 kΩ.\n\nWHAT TO MEMORIZE\nAfter one RC time constant, a charging capacitor reaches 1 − e⁻¹ ≈ 0.632 of its final voltage, and its voltage is continuous at switching."
+  },
+  
+  // Q30 [CM/coupled oscillators & normal modes] (M)
+  {
+    "question": "Three identical masses lie on a frictionless line. The center mass is connected to each outer mass by an identical spring of constant k, and there are no wall springs. Which displacement pattern and angular frequency describe the highest-frequency normal mode?",
+    "choices": [
+      "(A, A, A); ω = 0",
+      "(A, 0, −A); ω = √(k/m)",
+      "(A, −2A, A); ω = √(3k/m)",
+      "(A, −A, 0); ω = √(2k/m)",
+      "(A, −A, A); ω = 2√(k/m)"
+    ],
+    "answer": "C",
+    "image": "images/normal-modes-circuits-30/q30.png",
+    "explanation": "WORKED SOLUTION\nThe spring-force matrix for the free three-mass chain is k times [[1,−1,0], [−1,2,−1], [0,−1,1]]. Its eigenvectors are (1,1,1) with eigenvalue 0, (1,0,−1) with eigenvalue k, and (1,−2,1) with eigenvalue 3k. The largest eigenvalue gives the highest frequency, so the pattern is (A,−2A,A) and ω² = 3k/m. The outer masses move together while the center moves oppositely with twice their amplitude, stretching both springs strongly. The pattern (A,0,−A) is the intermediate mode, not the highest one.\n\n90-SECOND SOLUTION\nFor the highest mode both springs should distort as much as possible. Pattern (1,−2,1) does that and is an eigenvector with eigenvalue 3k, so ω = √(3k/m).\n\nWHAT TO MEMORIZE\nA free equal-mass three-chain has mode eigenvalues 0, k, and 3k, with patterns (1,1,1), (1,0,−1), and (1,−2,1)."
+  }
+  
+  ]
   }
 
 ];
