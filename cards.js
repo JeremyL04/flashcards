@@ -7249,6 +7249,399 @@ const EXAMS = [
     ]
   },
   {
+    "name": "Circuits Test 4 (30 Questions)",
+    "added": "2026-10-17",
+    "category": "em",
+    "cards": [
+      {
+        "question": "In the circuit shown, the switch is initially open. When the switch is closed, by what factor does the current supplied by the ideal 18 V battery change?",
+        "choices": [
+          "9/5",
+          "3/2",
+          "6/5",
+          "2",
+          "5/9"
+        ],
+        "answer": "A",
+        "image": "images/circuits-4/q1.png",
+        "explanation": "WORKED SOLUTION\nWith the switch open, the 3 Ω and 6 Ω resistors are in series, so R_open = 9 Ω and I_open = 18/9 = 2 A. With the switch closed, the branch resistance is 6 Ω ∥ 3 Ω = 2 Ω. This is in series with the original 3 Ω resistor, so R_closed = 5 Ω and I_closed = 18/5 A. The requested factor is I_closed/I_open = (18/5)/2 = 9/5. The 5/9 choice reverses the ratio.\n\n90-SECOND SOLUTION\nCompute only the two equivalent resistances: 9 Ω before and 3 + (6 ∥ 3) = 5 Ω after. For a fixed ideal-battery voltage, current varies as 1/R, so the factor is 9/5.\n\nWHAT TO MEMORIZE\nFor a fixed voltage source, I_new/I_old = R_old/R_new."
+      },
+      {
+        "question": "In the circuit shown, switches S₁ and S₂ are closed simultaneously. Both batteries have their positive terminals toward junction P. What current then flows through the 3 Ω load resistor?",
+        "choices": [
+          "18/11 A",
+          "24/11 A",
+          "5/2 A",
+          "30/11 A",
+          "3 A"
+        ],
+        "answer": "B",
+        "image": "images/circuits-4/q2.png",
+        "explanation": "WORKED SOLUTION\nLet the lower rail be zero and let junction P have voltage V. Taking downward branch currents as positive, Kirchhoff's current law gives (V−12)/2 + (V−6)/1 + V/3 = 0. Multiplying by 6 gives 3V−36 + 6V−36 + 2V = 0, so 11V = 72 and V = 72/11 V. The load current is V/3 = 24/11 A. Adding the battery emfs directly would be wrong because each source has its own series resistance and both act on the same node.\n\n90-SECOND SOLUTION\nWrite one node equation at P. Clear denominators immediately: 3(V−12)+6(V−6)+2V=0. Solve for V, then divide by the 3 Ω load.\n\nWHAT TO MEMORIZE\nFor parallel source branches, node voltage plus KCL is usually faster and safer than loop equations."
+      },
+      {
+        "question": "The bridge circuit shown is connected to an ideal battery. What value of R makes the current through the galvanometer zero?",
+        "choices": [
+          "3 Ω",
+          "4 Ω",
+          "6 Ω",
+          "9 Ω",
+          "13.5 Ω"
+        ],
+        "answer": "C",
+        "image": "images/circuits-4/q3.png",
+        "explanation": "WORKED SOLUTION\nZero galvanometer current means the two midpoint potentials are equal. A balanced Wheatstone bridge therefore satisfies the ratio condition 4/6 = R/9. Cross-multiplying gives 36 = 6R, so R = 6 Ω. The 13.5 Ω distractor results from inverting only one of the two branch ratios.\n\n90-SECOND SOLUTION\nAt balance, top-left/bottom-left equals top-right/bottom-right: 4/6 = R/9. The arithmetic is immediate.\n\nWHAT TO MEMORIZE\nA Wheatstone bridge is balanced when R₁/R₂ = R₃/R₄ for corresponding upper and lower arms."
+      },
+      {
+        "question": "Three resistors form the sides of the triangular network shown. What is the equivalent resistance between terminals a and b?",
+        "choices": [
+          "3/2 Ω",
+          "2 Ω",
+          "9/4 Ω",
+          "12/5 Ω",
+          "3 Ω"
+        ],
+        "answer": "D",
+        "image": "images/circuits-4/q4.png",
+        "explanation": "WORKED SOLUTION\nBetween a and b there are two complete paths. The direct path is 3 Ω. The path through c contains the two 6 Ω resistors in series, giving 12 Ω. Those two paths are in parallel, so R_eq = (3×12)/(3+12) = 36/15 = 12/5 Ω. Treating all three resistors as series ignores the branching at a and b.\n\n90-SECOND SOLUTION\nCollapse the upper path first: 6 + 6 = 12 Ω. Then compute 3 ∥ 12 = 3×12/15 = 12/5 Ω.\n\nWHAT TO MEMORIZE\nElements are in series only when their shared node has no other connection; complete paths sharing both endpoints are in parallel."
+      },
+      {
+        "question": "A battery of emf ℰ and internal resistance r delivers maximum possible power to a variable load. What fraction of the battery's total generated power is dissipated in the load?",
+        "choices": [
+          "1/4",
+          "1/3",
+          "2/3",
+          "3/4",
+          "1/2"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nMaximum power transfer occurs when the load resistance equals the battery's internal resistance: R_L = r. The same current flows through both, so each dissipates I²r. The generated power is the sum of load and internal dissipation, 2I²r, while the load receives I²r. The fraction is therefore 1/2. A value such as 1/4 confuses the maximum load power ℰ²/(4r) with its fraction of the power generated at that operating point.\n\n90-SECOND SOLUTION\nAt maximum power, R_L = r. Equal series resistances dissipate equal power, so the load receives half of the total.\n\nWHAT TO MEMORIZE\nMaximum power transfer gives R_L = r and 50% efficiency."
+      },
+      {
+        "question": "A 40 kΩ resistor and a 20 kΩ resistor form a voltage divider across a 120 V ideal source. A voltmeter of resistance 20 kΩ is connected across the 20 kΩ resistor. What voltage does the meter read?",
+        "choices": [
+          "24 V",
+          "30 V",
+          "36 V",
+          "40 V",
+          "60 V"
+        ],
+        "answer": "A",
+        "image": "images/circuits-4/q6.png",
+        "explanation": "WORKED SOLUTION\nThe meter loads the lower divider resistor. Its 20 kΩ resistance is in parallel with the lower 20 kΩ resistor, giving 10 kΩ. The source therefore sees 40 kΩ + 10 kΩ = 50 kΩ, and the voltage across the lower equivalent resistance is 120(10/50) = 24 V. The 40 V choice is the unloaded-divider value and ignores the finite meter resistance.\n\n90-SECOND SOLUTION\nReplace the lower resistor and meter by 20 kΩ ∥ 20 kΩ = 10 kΩ. The divider is then 40 kΩ over 10 kΩ, so the lower section receives one fifth of 120 V.\n\nWHAT TO MEMORIZE\nA real voltmeter is a resistor in parallel with the component being measured."
+      },
+      {
+        "question": "A galvanometer has resistance 99 Ω and gives full-scale deflection at 1.0 mA. What shunt resistance converts it into an ammeter with a 1.0 A full-scale range?",
+        "choices": [
+          "0.050 Ω",
+          "0.099 Ω",
+          "0.99 Ω",
+          "9.9 Ω",
+          "99 Ω"
+        ],
+        "answer": "B",
+        "image": "images/circuits-4/q7.png",
+        "explanation": "WORKED SOLUTION\nAt full scale the galvanometer carries 1.0 mA, so its voltage is V_G = (0.001 A)(99 Ω) = 0.099 V. The shunt must carry the remaining 1.000−0.001 = 0.999 A at the same voltage. Thus R_s = 0.099/0.999 Ω ≈ 0.099 Ω. The 0.99 Ω choice is a factor-of-ten error in the shunt current.\n\n90-SECOND SOLUTION\nThe meter drop is about 0.10 V, while essentially 1 A must bypass it. Therefore the shunt is about 0.10 Ω; the precise value is 0.099 Ω.\n\nWHAT TO MEMORIZE\nA shunt is in parallel with the galvanometer, so both branches have the same voltage."
+      },
+      {
+        "question": "Capacitor C₁ = 3.0 μF is charged to 12 V and capacitor C₂ = 2.0 μF is charged to 6.0 V. They are disconnected from their sources and then connected in parallel with opposite polarities, as shown. What is the magnitude of their final common voltage?",
+        "choices": [
+          "2.4 V",
+          "3.6 V",
+          "4.8 V",
+          "6.0 V",
+          "7.2 V"
+        ],
+        "answer": "C",
+        "image": "images/circuits-4/q8.png",
+        "explanation": "WORKED SOLUTION\nThe initial charge magnitudes are Q₁ = C₁V₁ = 3.0 μF×12 V = 36 μC and Q₂ = C₂V₂ = 2.0 μF×6.0 V = 12 μC. Because opposite polarities are joined, the charges subtract: Q_net = 24 μC. The connected capacitance is C₁+C₂ = 5.0 μF, so the final voltage magnitude is 24/5 = 4.8 V. Adding the charges would apply to like-polarity connection, not the arrangement shown.\n\n90-SECOND SOLUTION\nCompute signed charge, not energy: (36−12) μC divided by (3+2) μF gives 4.8 V.\n\nWHAT TO MEMORIZE\nFor isolated capacitors joined in parallel, total charge is conserved; use signs set by the connected plate polarities."
+      },
+      {
+        "question": "The capacitor in the circuit shown is initially uncharged. The switch is closed at t = 0. How long does it take the capacitor voltage to reach 3.0 V?",
+        "choices": [
+          "2.8 ms",
+          "4.0 ms",
+          "4.8 ms",
+          "5.5 ms",
+          "8.0 ms"
+        ],
+        "answer": "D",
+        "image": "images/circuits-4/q9.png",
+        "explanation": "WORKED SOLUTION\nThe capacitor's final voltage is the divider voltage across 2.0 kΩ: V_f = 12(2/6) = 4.0 V. With the ideal source replaced by a short, the resistance seen by the capacitor is 4.0 kΩ ∥ 2.0 kΩ = 4/3 kΩ. Hence τ = R_thC = (4/3 kΩ)(3.0 μF) = 4.0 ms. Charging gives 3.0 = 4.0(1−e^{−t/τ}), so e^{−t/τ} = 1/4 and t = τ ln 4 ≈ 4.0 ms×1.386 = 5.5 ms. Using 6 kΩ for the time constant fails to turn off the ideal source.\n\n90-SECOND SOLUTION\nFind V_f = 4 V and τ = (4 kΩ ∥ 2 kΩ)(3 μF) = 4 ms. Reaching 3 V means one quarter of the gap remains, so t = τ ln 4 ≈ 1.39τ = 5.5 ms.\n\nWHAT TO MEMORIZE\nFor a one-capacitor network, use its Thévenin voltage and R_th with independent sources turned off."
+      },
+      {
+        "question": "A capacitor C is charged to voltage V and disconnected from the battery. It is then connected in parallel to an initially uncharged capacitor 3C. What fraction of the initial electrostatic energy is converted to thermal and radiated energy during the redistribution?",
+        "choices": [
+          "1/4",
+          "1/3",
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        "answer": "E",
+        "image": "images/circuits-4/q10.png",
+        "explanation": "WORKED SOLUTION\nInitially Q = CV and U_i = (1/2)CV². After connection, charge conservation gives the common voltage V_f = Q/(C+3C) = V/4. The final energy is U_f = (1/2)(4C)(V/4)² = (1/8)CV², which is one quarter of U_i. Therefore three quarters of the initial energy is converted to heat and radiation. The 1/4 choice is the fraction remaining, not the fraction lost.\n\n90-SECOND SOLUTION\nWhen C shares charge with 3C, the total capacitance is four times larger, so the final energy is 1/4 of the initial energy at fixed total charge. Thus 3/4 is lost.\n\nWHAT TO MEMORIZE\nCharge is conserved during capacitor redistribution, but electrostatic energy generally is not."
+      },
+      {
+        "question": "Capacitors C and 2C are connected in series across a battery of voltage V and allowed to reach equilibrium. The battery is then disconnected, and a dielectric of constant 3 is inserted fully into the capacitor C without allowing charge to pass between the capacitors. What is the new voltage across the two-capacitor combination?",
+        "choices": [
+          "5V/9",
+          "2V/3",
+          "3V/4",
+          "5V/6",
+          "V"
+        ],
+        "answer": "A",
+        "image": "images/circuits-4/q11.png",
+        "explanation": "WORKED SOLUTION\nInitially the series equivalent is C_eq = (C·2C)/(C+2C) = 2C/3, so each capacitor carries Q = (2C/3)V. After disconnection that series charge cannot change. Inserting κ = 3 changes the first capacitor from C to 3C, while the second remains 2C. The new total voltage is Q/(3C) + Q/(2C) = Q(5/6C) = (2CV/3)(5/6C) = 5V/9. Treating V as fixed after disconnection incorrectly assumes the battery is still attached.\n\n90-SECOND SOLUTION\nThe fixed charge is Q = (2C/3)V. After insertion, add the two voltage drops: Q/3C + Q/2C. Substitution gives 5V/9.\n\nWHAT TO MEMORIZE\nDisconnected capacitors keep charge fixed; a fully inserted dielectric multiplies capacitance by κ."
+      },
+      {
+        "question": "A wire of length L and resistivity ρ consists of two equal-length cylindrical sections. The first has radius r and the second has radius 2r. What is its resistance divided by the resistance of a uniform wire of length L and radius r made of the same material?",
+        "choices": [
+          "1/2",
+          "5/8",
+          "3/4",
+          "4/5",
+          "5/4"
+        ],
+        "answer": "B",
+        "image": "images/circuits-4/q12.png",
+        "explanation": "WORKED SOLUTION\nThe two sections are in series, so their resistances add. Relative to a uniform wire resistance R₀ = ρL/(πr²), the first half contributes R₀/2. The second half has length L/2 and area π(2r)² = 4πr², so it contributes R₀/8. Therefore R/R₀ = 1/2 + 1/8 = 5/8. The 3/4 distractor does not account for the area scaling as radius squared.\n\n90-SECOND SOLUTION\nNormalize to the full thin-wire resistance. The thin half contributes 1/2; the thick half is another factor of four smaller, contributing 1/8. Add to obtain 5/8.\n\nWHAT TO MEMORIZE\nFor a cylindrical wire, R = ρL/A and A = πr²."
+      },
+      {
+        "question": "An ideal battery powers two parallel branches. One branch contains a single identical lamp; the other contains two identical lamps in series. If one lamp in the series branch burns out and becomes an open circuit, what happens to the brightness of the lamp in the other branch?",
+        "choices": [
+          "It goes out",
+          "It becomes dimmer",
+          "It is unchanged",
+          "It becomes twice as bright",
+          "It becomes four times as bright"
+        ],
+        "answer": "C",
+        "image": "images/circuits-4/q13.png",
+        "explanation": "WORKED SOLUTION\nEach parallel branch is directly across the ideal battery. When a lamp in the two-lamp branch burns out, that entire branch becomes open and carries no current. The other branch remains connected across the same fixed battery voltage, so its current and power—and therefore its brightness—are unchanged. It would become dimmer only if the source had appreciable internal resistance and its terminal voltage changed.\n\n90-SECOND SOLUTION\nAn ideal battery fixes the voltage across every parallel branch. Opening one branch cannot change the voltage across the surviving branch.\n\nWHAT TO MEMORIZE\nIndependent parallel branches share voltage; one branch opening does not alter another when the source is ideal."
+      },
+      {
+        "question": "An initially uncharged capacitor is charged through a resistor by an ideal battery. At what time is the energy stored in the capacitor one quarter of its final value?",
+        "choices": [
+          "RC/4",
+          "RC/2",
+          "RC ln(4/3)",
+          "RC ln 2",
+          "2RC ln 2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nCapacitor energy is U = (1/2)CV_C². One quarter of the final energy therefore means V_C²/V² = 1/4, so V_C/V = 1/2. During charging, V_C = V(1−e^{−t/RC}). Setting this equal to V/2 gives e^{−t/RC} = 1/2, hence t = RC ln 2. The RC ln(4/3) distractor comes from treating energy as proportional to voltage instead of voltage squared.\n\n90-SECOND SOLUTION\nQuarter energy means half voltage. A charging capacitor reaches half its final voltage at one half-life, t = RC ln 2.\n\nWHAT TO MEMORIZE\nCapacitor energy scales as V²; charging voltage is V(1−e^{−t/RC})."
+      },
+      {
+        "question": "With S₁ closed and S₂ open, a 9 V battery supplies a 4 Ω load through its 1 Ω internal resistance. Switch S₂ is then closed, connecting a 3 V battery with 1 Ω internal resistance across the same load but with opposite polarity. What is the new current through the load?",
+        "choices": [
+          "1/3 A",
+          "1/2 A",
+          "3/5 A",
+          "4/5 A",
+          "2/3 A"
+        ],
+        "answer": "E",
+        "image": "images/circuits-4/q15.png",
+        "explanation": "WORKED SOLUTION\nLet the bottom rail be zero and the top rail be V. Taking downward currents as positive, the 9 V branch carries V−9 amperes, the reversed 3 V branch carries V+3 amperes, and the load carries V/4. Kirchhoff's current law gives (V−9)+(V+3)+V/4 = 0. Thus (9/4)V = 6, so V = 8/3 V and I_load = V/4 = 2/3 A. Subtracting the emfs and dividing only by the load resistance ignores both internal resistances.\n\n90-SECOND SOLUTION\nUse one node equation: (V−9)+(V+3)+V/4=0. It gives V=8/3 V, then divide by 4 Ω.\n\nWHAT TO MEMORIZE\nThe sign of a battery term in a branch-current equation is set by its polarity relative to the chosen node voltage."
+      },
+      {
+        "question": "The switch has been at a for a long time. At t = 0 it moves to b, disconnecting the battery and allowing the inductor to discharge through both resistors. How long after switching is the current one half of its initial value?",
+        "choices": [
+          "0.17 s",
+          "0.25 s",
+          "0.35 s",
+          "0.50 s",
+          "0.69 s"
+        ],
+        "answer": "A",
+        "image": "images/circuits-4/q16.png",
+        "explanation": "WORKED SOLUTION\nAfter the switch moves to b, the inductor discharges through R₁+R₂ = 12 Ω. The decay time constant is τ = L/R = 3.0/12 = 0.25 s. Since I = I₀e^{−t/τ}, half current requires e^{−t/τ} = 1/2, so t = τ ln 2 = 0.25(0.693) ≈ 0.17 s. The 0.25 s choice is the time constant itself, at which the current is I₀/e rather than I₀/2.\n\n90-SECOND SOLUTION\nUse the discharge-loop resistance, 4+8=12 Ω. Then τ=3/12=0.25 s and the half-current time is 0.693τ≈0.17 s.\n\nWHAT TO MEMORIZE\nAn RL discharge has τ=L/R and half-life τ ln 2."
+      },
+      {
+        "question": "Two coils have mutual inductance 4.0 mH. The current in the primary rises uniformly from 0 to 3.0 A in 2.0 ms. If the secondary is a closed loop of total resistance 6.0 Ω and its self-inductance is negligible, what current is induced in it during the rise?",
+        "choices": [
+          "0.50 A",
+          "1.0 A",
+          "1.5 A",
+          "2.0 A",
+          "3.0 A"
+        ],
+        "answer": "B",
+        "image": "images/circuits-4/q17.png",
+        "explanation": "WORKED SOLUTION\nThe primary current changes at di_p/dt = 3.0 A/(2.0×10⁻³ s) = 1500 A/s. The induced-emf magnitude is M di_p/dt = (4.0×10⁻³ H)(1500 A/s) = 6.0 V. With negligible secondary inductance, the induced current magnitude is 6.0 V/6.0 Ω = 1.0 A. The 2.0 A choice typically comes from using 3 A/ms instead of 1.5 A/ms.\n\n90-SECOND SOLUTION\nThe current ramp is 1.5 A/ms. Multiplying by 4.0 mH gives 6.0 V because mH·A/ms = V. Divide by 6.0 Ω to get 1.0 A.\n\nWHAT TO MEMORIZE\nMutual induction gives |ε_s| = M|di_p/dt|."
+      },
+      {
+        "question": "A diode is connected in parallel with a relay coil and is reverse-biased while the coil is energized. What is the diode's principal purpose when the controlling switch is opened?",
+        "choices": [
+          "To make the relay switch faster by increasing the coil voltage",
+          "To keep the battery current constant",
+          "To provide a path for the decaying coil current and limit the voltage spike",
+          "To store the magnetic energy permanently",
+          "To reverse the relay's magnetic field"
+        ],
+        "answer": "C",
+        "image": "images/circuits-4/q18.png",
+        "explanation": "WORKED SOLUTION\nWhile the switch is closed, the diode is reverse-biased and does not affect the relay current. Opening the switch makes the coil oppose the sudden decrease of current. The coil voltage reverses, forward-biasing the diode and giving the decaying current a closed path. This limits the otherwise large voltage spike and protects the switch or transistor. The diode does not store the magnetic energy permanently; that energy is dissipated during the decay.\n\n90-SECOND SOLUTION\nAn inductor resists an abrupt current change. The flyback diode becomes forward-biased after switch-off, carrying the current while it decays.\n\nWHAT TO MEMORIZE\nA diode placed antiparallel across an inductive load suppresses the turn-off voltage spike."
+      },
+      {
+        "question": "In an ideal LC circuit, the current at some instant is one half of its maximum value. What fraction of the total energy is stored in the capacitor at that instant?",
+        "choices": [
+          "1/4",
+          "1/2",
+          "1/√2",
+          "3/4",
+          "√3/2"
+        ],
+        "answer": "D",
+        "explanation": "WORKED SOLUTION\nThe total energy of the ideal LC oscillator is U = (1/2)LI_max². At the stated instant, the magnetic energy is U_L = (1/2)L(I_max/2)² = U/4. Energy conservation leaves U_C = U−U_L = 3U/4 in the capacitor. The 1/4 choice is the inductor's energy fraction, not the capacitor's.\n\n90-SECOND SOLUTION\nInductor energy scales as I². Half the maximum current means one quarter of the energy is magnetic, so three quarters is electric.\n\nWHAT TO MEMORIZE\nIn an ideal LC circuit, U_C+U_L is constant and U_L/U_total=(I/I_max)²."
+      },
+      {
+        "question": "In a series RLC circuit, the measured rms voltages are V_R = 60 V, V_L = 100 V, and V_C = 20 V. What is the rms voltage of the source?",
+        "choices": [
+          "40 V",
+          "60 V",
+          "80 V",
+          "140 V",
+          "100 V"
+        ],
+        "answer": "E",
+        "explanation": "WORKED SOLUTION\nIn a series RLC circuit, V_R is in phase with the current, V_L leads it by 90°, and V_C lags it by 90°. The reactive voltages therefore subtract: V_X = V_L−V_C = 100−20 = 80 V. The source voltage is the phasor magnitude √(V_R²+V_X²) = √(60²+80²) = 100 V. Adding all three magnitudes to obtain 180 V would ignore their phases.\n\n90-SECOND SOLUTION\nRecognize the 60–80–100 right triangle after forming the net reactive voltage 100−20=80 V.\n\nWHAT TO MEMORIZE\nFor a series RLC circuit, V_s²=V_R²+(V_L−V_C)²."
+      },
+      {
+        "question": "A resistor and an ideal capacitor are connected in parallel across an AC source. The rms currents in the resistor and capacitor are 3.0 A and 4.0 A, respectively. What is the rms source current and its phase relative to the source voltage?",
+        "choices": [
+          "5.0 A, leading by 53°",
+          "5.0 A, lagging by 53°",
+          "7.0 A, leading by 45°",
+          "7.0 A, lagging by 45°",
+          "1.0 A, in phase"
+        ],
+        "answer": "A",
+        "image": "images/circuits-4/q21.png",
+        "explanation": "WORKED SOLUTION\nThe 3.0 A resistor current is in phase with the source voltage, while the 4.0 A capacitor current leads by 90°. These perpendicular phasors give I = √(3²+4²) = 5.0 A. The phase lead is tan⁻¹(4/3) ≈ 53°. The lagging choice reverses the phase of capacitor current.\n\n90-SECOND SOLUTION\nRecognize a 3–4–5 current triangle. The capacitive component points in the leading direction, so the total current leads by tan⁻¹(4/3) ≈ 53°.\n\nWHAT TO MEMORIZE\nResistor current is in phase with voltage; capacitor current leads voltage by 90°."
+      },
+      {
+        "question": "A resonant circuit has resonant frequency 1.0 MHz and quality factor Q = 50. What is its approximate bandwidth between the half-power frequencies?",
+        "choices": [
+          "10 kHz",
+          "20 kHz",
+          "25 kHz",
+          "50 kHz",
+          "100 kHz"
+        ],
+        "answer": "B",
+        "explanation": "WORKED SOLUTION\nThe quality factor is Q = f₀/Δf, where Δf is the bandwidth between the half-power frequencies. Thus Δf = f₀/Q = (1.0 MHz)/50 = 0.020 MHz = 20 kHz. The 50 kHz choice comes from using the wrong divisor.\n\n90-SECOND SOLUTION\nWrite 1.0 MHz as 1000 kHz, then divide by 50: 1000/50 = 20 kHz.\n\nWHAT TO MEMORIZE\nFor a resonant circuit, Q = f₀/Δf = ω₀/Δω."
+      },
+      {
+        "question": "An ideal transformer has turns ratio N_p:N_s = 5:1. An 8.0 Ω resistor is connected across the secondary. What effective resistance is seen by the source connected to the primary?",
+        "choices": [
+          "0.32 Ω",
+          "40 Ω",
+          "200 Ω",
+          "320 Ω",
+          "1000 Ω"
+        ],
+        "answer": "C",
+        "image": "images/circuits-4/q23.png",
+        "explanation": "WORKED SOLUTION\nA load impedance reflected to the primary is multiplied by the square of the turns ratio: R_p = (N_p/N_s)²R_L = 5²(8.0 Ω) = 200 Ω. The 40 Ω choice neglects the square, while 0.32 Ω reflects the impedance in the wrong direction.\n\n90-SECOND SOLUTION\nSquare the 5:1 turns ratio first: 25×8 Ω = 200 Ω.\n\nWHAT TO MEMORIZE\nAn ideal transformer changes voltage by the turns ratio and impedance by the square of the turns ratio."
+      },
+      {
+        "question": "A 120 V rms, 60 Hz source supplies a load that consumes 600 W at power factor 0.80 lagging. What capacitance connected in parallel with the load will correct the overall power factor to unity?",
+        "choices": [
+          "42 μF",
+          "55 μF",
+          "69 μF",
+          "83 μF",
+          "110 μF"
+        ],
+        "answer": "D",
+        "image": "images/circuits-4/q24.png",
+        "explanation": "WORKED SOLUTION\nWith cos φ = 0.80, the 3–4–5 triangle gives sin φ = 0.60 and tan φ = 0.75. The load's reactive power is Q_L = P tan φ = 600(0.75) = 450 var. A parallel capacitor must supply the same magnitude, and Q_C = ωCV². Therefore C = 450/[2π(60)(120²)] ≈ 8.29×10⁻⁵ F = 83 μF.\n\n90-SECOND SOLUTION\nUse the 3–4–5 triangle: tan φ = 0.75, so Q = 450 var. Then C = 450/(377×14400) ≈ 83 μF.\n\nWHAT TO MEMORIZE\nFor unity power-factor correction, Q_C = P tan φ and Q_C = ωCV²."
+      },
+      {
+        "question": "A capacitor and resistor are connected in series, with the output voltage measured across the resistor. Which statement correctly describes this circuit?",
+        "choices": [
+          "It is a low-pass filter with zero output at very high frequency",
+          "It is a band-pass filter whose peak occurs at 1/RC",
+          "Its output amplitude is independent of frequency",
+          "At the cutoff frequency the output equals one half of the input amplitude",
+          "It is a high-pass filter, and at cutoff the output amplitude is 1/√2 times the input amplitude"
+        ],
+        "answer": "E",
+        "image": "images/circuits-4/q25.png",
+        "explanation": "WORKED SOLUTION\nAt very low frequency the capacitor acts nearly as an open circuit, so essentially no voltage appears across the resistor. At very high frequency the capacitor acts nearly as a short, so the resistor receives nearly the full input. The circuit is therefore high-pass. At the cutoff frequency ω = 1/RC, the amplitude ratio is 1/√2. The one-half value is the power ratio, not the voltage-amplitude ratio.\n\n90-SECOND SOLUTION\nUse the limiting cases: low frequency gives zero output and high frequency gives full output, so it is high-pass. Every first-order RC filter is down by 1/√2 in amplitude at cutoff.\n\nWHAT TO MEMORIZE\nFor a series RC circuit, output across R is high-pass; output across C is low-pass."
+      },
+      {
+        "question": "The ideal operational-amplifier circuit shown has V₁ = 0.10 V and V₂ = 0.40 V. What is V_out?",
+        "choices": [
+          "+0.90 V",
+          "+0.60 V",
+          "+0.30 V",
+          "−0.30 V",
+          "−0.90 V"
+        ],
+        "answer": "A",
+        "image": "images/circuits-4/q26.png",
+        "explanation": "WORKED SOLUTION\nThe non-inverting input is at V₊ = V₂[30/(10+30)] = 0.30 V. Negative feedback gives V₋ = 0.30 V. Kirchhoff's current rule at the inverting input gives (V₁−0.30)/10 kΩ + (V_out−0.30)/30 kΩ = 0. Multiplying through by 30 kΩ gives 3(0.10−0.30) + V_out−0.30 = 0, so V_out = +0.90 V.\n\n90-SECOND SOLUTION\nThe resistor ratios are matched, so this is a difference amplifier with gain 30/10 = 3: V_out = 3(V₂−V₁) = 3(0.30 V) = 0.90 V.\n\nWHAT TO MEMORIZE\nFor a matched difference amplifier, V_out = (R_f/R_in)(V₂−V₁)."
+      },
+      {
+        "question": "A transformer secondary supplies 12 V rms to a full-wave bridge rectifier. Each conducting diode has a 0.70 V forward drop, and there is no filter capacitor. What is the peak voltage across the load?",
+        "choices": [
+          "10.6 V",
+          "15.6 V",
+          "16.3 V",
+          "17.0 V",
+          "22.6 V"
+        ],
+        "answer": "B",
+        "image": "images/circuits-4/q27.png",
+        "explanation": "WORKED SOLUTION\nThe secondary peak voltage is 12√2 V ≈ 17.0 V. Current passes through two forward-biased diodes on each half-cycle, so the load peak is 17.0−2(0.70) = 15.6 V. The 16.3 V choice subtracts only one diode drop, while 17.0 V ignores both.\n\n90-SECOND SOLUTION\nConvert rms to peak: 12×1.414 ≈ 17.0 V. A bridge conduction path contains two diodes, so subtract 1.4 V to obtain 15.6 V.\n\nWHAT TO MEMORIZE\nA full-wave bridge uses two conducting diodes in series on every half-cycle."
+      },
+      {
+        "question": "For the transistor circuit shown, assume β = 100 and V_BE = 0.70 V. What is the collector voltage relative to ground?",
+        "choices": [
+          "1.0 V",
+          "2.0 V",
+          "3.0 V",
+          "4.0 V",
+          "5.0 V"
+        ],
+        "answer": "C",
+        "image": "images/circuits-4/q28.png",
+        "explanation": "WORKED SOLUTION\nThe base current is I_B = (5.0−0.70 V)/(430 kΩ) = 10 μA. Assuming active operation, I_C = βI_B = 100(10 μA) = 1.0 mA. The collector resistor then drops (1.0 mA)(2.0 kΩ) = 2.0 V, leaving V_C = 5.0−2.0 = 3.0 V. This is consistent with active operation because the collector remains above the base voltage.\n\n90-SECOND SOLUTION\nThe chosen numbers make 4.3 V/430 kΩ = 10 μA. Multiply by β = 100 to get 1 mA, producing a 2 V drop across 2 kΩ and leaving 3 V.\n\nWHAT TO MEMORIZE\nFor an active NPN transistor, I_C ≈ βI_B and V_C = V_CC−I_CR_C."
+      },
+      {
+        "question": "In the ideal-diode logic circuit shown, the output is pulled up to +5 V through a resistor. Each input is connected to the output by a diode oriented to conduct from the output toward the input. Taking +5 V as logic 1 and 0 V as logic 0, which logic operation is performed?",
+        "choices": [
+          "OR",
+          "NOR",
+          "NAND",
+          "AND",
+          "XOR"
+        ],
+        "answer": "D",
+        "image": "images/circuits-4/q29.png",
+        "explanation": "WORKED SOLUTION\nIf either input is at 0 V, its diode conducts from the pulled-up output toward that input and clamps Y low. Only when both inputs are at +5 V are neither diode pulling the output low, allowing the resistor to raise Y to logic 1. The output is therefore 1 only for A = 1 and B = 1: an AND operation.\n\n90-SECOND SOLUTION\nCheck the one decisive condition: Y can remain high only if both inputs are high. That is the AND truth table.\n\nWHAT TO MEMORIZE\nIn positive logic, a pull-up with diodes directed from the output toward the inputs implements diode AND."
+      },
+      {
+        "question": "A 10× oscilloscope probe uses a 9.0 MΩ series resistor and is connected to a scope input modeled as 1.0 MΩ in parallel with 100 pF. What capacitance placed in parallel with the probe's 9.0 MΩ resistor makes the attenuation independent of frequency?",
+        "choices": [
+          "1.1 pF",
+          "5.0 pF",
+          "9.0 pF",
+          "10 pF",
+          "11 pF"
+        ],
+        "answer": "E",
+        "image": "images/circuits-4/q30.png",
+        "explanation": "WORKED SOLUTION\nFrequency-independent attenuation requires equal RC time constants in the two divider arms: (9.0 MΩ)C_p = (1.0 MΩ)(100 pF). Thus C_p = 100/9 pF ≈ 11.1 pF, which rounds to 11 pF. The 10 pF choice treats the resistance ratio as exactly 10:1 rather than 9:1 between the two arms.\n\n90-SECOND SOLUTION\nThe upper resistance is nine times the lower resistance, so its parallel capacitance must be one ninth as large: 100/9 pF ≈ 11 pF.\n\nWHAT TO MEMORIZE\nA compensated probe satisfies R_probeC_probe = R_scopeC_scope."
+      }
+    ],
+    "added": "2026-10-17"
+  },
+  {
     "name": "Lab Methods Test (Hard)",
     "added": "2026-08-29",
     "category": "lab",
