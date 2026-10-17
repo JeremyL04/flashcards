@@ -27250,16 +27250,16 @@ const EXAMS = [
       "explanation": "WORKED SOLUTION\nThe magnetic force per length between parallel wires is proportional to the product of currents divided by their separation. For the third wire, the opposing forces balance when I/x = 4I/(d−x). Thus d−x = 4x and x = d/5. The third wire's current cancels from the balance.\n\n90-SECOND SOLUTION\nSet the field magnitudes equal: 1/x = 4/(d−x). Cross-multiplication gives d = 5x.\n\nWHAT TO MEMORIZE\nFor long parallel wires, F/L = μ₀I₁I₂/(2πr)."
     },
     {
-      "question": "For the ground state of a one-dimensional harmonic oscillator of mass m and angular frequency ω, the expectation value ⟨x⁴⟩ is",
+      "question": "A one-dimensional harmonic oscillator of mass m and angular frequency ω is in the energy eigenstate n = 3. What is the square of its classical turning-point displacement?",
       "choices": [
-        "(ħ/2mω)²",
-        "2(ħ/2mω)²",
-        "(ħ/mω)²",
-        "3(ħ/mω)²",
-        "3(ħ/2mω)²"
+        "ħ/(mω)",
+        "3ħ/(mω)",
+        "4ħ/(mω)",
+        "7ħ/(2mω)",
+        "7ħ/(mω)"
       ],
       "answer": "E",
-      "explanation": "WORKED SOLUTION\nThe ground-state position distribution is Gaussian with variance ⟨x²⟩ = ħ/(2mω). A zero-mean Gaussian has fourth moment ⟨x⁴⟩ = 3⟨x²⟩², so ⟨x⁴⟩ = 3(ħ/2mω)².\n\n90-SECOND SOLUTION\nUse the Gaussian identity ⟨x⁴⟩ = 3σ⁴ with σ² = ħ/(2mω).\n\nWHAT TO MEMORIZE\nFor the oscillator ground state, ⟨x²⟩ = ħ/(2mω) and ⟨x⁴⟩ = 3⟨x²⟩²."
+      "explanation": "WORKED SOLUTION\nThe n = 3 oscillator energy is E₃ = (3+1/2)ħω = 7ħω/2. At a classical turning point the kinetic energy is zero, so the entire energy is potential: (1/2)mω²x_t² = 7ħω/2. Therefore x_t² = 7ħ/(mω). The 7ħ/(2mω) distractor fails to cancel the factor of 1/2 appearing on both sides.\n\n90-SECOND SOLUTION\nSet the known level energy equal to the turning-point potential: (n+1/2)ħω = (1/2)mω²x_t². Multiplying by 2 gives x_t² = (2n+1)ħ/(mω) = 7ħ/(mω).\n\nWHAT TO MEMORIZE\nFor a harmonic oscillator, E_n = (n+1/2)ħω; at a classical turning point, E_n = (1/2)mω²x_t²."
     },
     {
       "question": "A frictionless wedge has an incline that rises to the right with tan θ = 3/4. What horizontal acceleration of the wedge will keep a small block at rest relative to the incline? Take g = 10 m/s².",
@@ -27300,17 +27300,16 @@ const EXAMS = [
       "explanation": "WORKED SOLUTION\nHydrogenic energy spacings are proportional to the reduced mass. For positronium the electron and positron have equal mass, so μ = m_e/2. For hydrogen with the proton-mass correction neglected, μ ≈ m_e. Corresponding positronium transitions therefore have half the hydrogen photon energy.\n\n90-SECOND SOLUTION\nReplace the orbiting mass by the reduced mass: equal masses give μ = m/2, so every corresponding energy spacing is halved.\n\nWHAT TO MEMORIZE\nHydrogenic energies scale linearly with reduced mass and as Z²/n²."
     },
     {
-      "question": "Parallel paraxial rays enter the glass sphere shown, whose refractive index is 3/2 and radius is R. The rays come to a focus at a distance from the rear surface equal to",
+      "question": "An object approaches a thin converging lens along its axis at speed u. At the instant the object distance is 2f, where f is the focal length, what is the velocity of the real image?",
       "choices": [
-        "R/2",
-        "R",
-        "3R/2",
-        "2R",
-        "3R"
+        "u away from the lens",
+        "u toward the lens",
+        "2u away from the lens",
+        "2u toward the lens",
+        "0"
       ],
       "answer": "A",
-      "image": "images/full-practice-9/q15.png",
-      "explanation": "WORKED SOLUTION\nAt the first surface, refraction from air into n = 3/2 forms a paraxial image 3R from the front surface, or R beyond the rear surface. That point is a virtual object for the second spherical surface. Applying spherical refraction there gives the final image R/2 beyond the rear surface.\n\n90-SECOND SOLUTION\nThe ball-lens effective focal length is 3R/2, measured from its central principal plane. The rear surface is R from that plane, leaving a back focal distance R/2.\n\nWHAT TO MEMORIZE\nFor a ball lens in air, EFL = nR/[2(n−1)] and the back focal length is EFL−R."
+      "explanation": "WORKED SOLUTION\nThe thin-lens equation is 1/f = 1/s + 1/s′. At s = 2f it gives s′ = 2f. Differentiate while f remains fixed: 0 = −(1/s²)(ds/dt) − (1/s′²)(ds′/dt), so ds′/dt = −(s′²/s²)ds/dt. At this instant s′ = s, hence ds′/dt = −ds/dt. The approaching object has ds/dt = −u, so ds′/dt = +u: the real image moves away from the lens at speed u. Saying the image approaches with the object misses the minus sign produced by differentiating the reciprocal distances.\n\n90-SECOND SOLUTION\nAt the 2f point, s = s′. Differentiate 1/f = 1/s + 1/s′ to get ds′/dt = −(s′/s)²ds/dt = −ds/dt. Object toward the lens means ds/dt = −u, so the image moves away at +u.\n\nWHAT TO MEMORIZE\nFor motion questions, differentiate the thin-lens equation; do not infer image motion from a static ray diagram."
     },
     {
       "question": "A rod of length L has thermal conductivity k and cross-sectional area A(x) = A₀(1 + x/L). Its ends at x = 0 and x = L are held at temperatures T_h and T_c, respectively. The steady heat current is",
@@ -27606,16 +27605,16 @@ const EXAMS = [
       "explanation": "WORKED SOLUTION\nFor reinforcing fluxes, the coupled-inductor energy is U = (1/2)L₁I₁² + (1/2)L₂I₂² + MI₁I₂. With I₁ = I and I₂ = 2I, this becomes L₁I²/2 + 2L₂I² + 2MI². The mutual term would be negative for opposing fluxes.\n\n90-SECOND SOLUTION\nInsert I and 2I into the standard energy formula and keep the plus sign because the fluxes reinforce.\n\nWHAT TO MEMORIZE\nCoupled-inductor energy contains ±MI₁I₂, with the sign set by the dot convention or flux reinforcement."
     },
     {
-      "question": "A harmonic oscillator is in a coherent state with mean excitation number ⟨n⟩ = 2. The probability of measuring the ground-state energy is",
+      "question": "Two orthonormal states are degenerate with unperturbed energy E₀. In their subspace, a weak perturbation has matrix λ[[1, 2], [2, −1]], where λ > 0. What is the first-order energy splitting between the two perturbed levels?",
       "choices": [
-        "1/2",
-        "2e⁻²",
-        "1−e⁻²",
-        "e⁻²",
-        "e⁻¹"
+        "λ",
+        "2λ",
+        "√5λ",
+        "2√5λ",
+        "4λ"
       ],
       "answer": "D",
-      "explanation": "WORKED SOLUTION\nA coherent state's number distribution is Poisson: P_n = e^{−n̄}n̄^n/n!. With n̄ = 2, the ground-state probability is P_0 = e⁻².\n\n90-SECOND SOLUTION\nFor a Poisson distribution, zero counts have probability e^{−mean}.\n\nWHAT TO MEMORIZE\nCoherent states have Poisson number statistics."
+      "explanation": "WORKED SOLUTION\nFirst-order corrections for a degenerate level are the eigenvalues of the perturbation matrix. Dividing out λ, the characteristic equation is det([[1−x,2],[2,−1−x]]) = (1−x)(−1−x)−4 = x²−5 = 0. Thus the shifts are ±√5λ, and the separation is (+√5λ)−(−√5λ) = 2√5λ. The √5λ distractor is one shift's magnitude, not the distance between both levels.\n\n90-SECOND SOLUTION\nThe matrix has trace zero and determinant −5λ², so its eigenvalues are ±√5λ. Their separation is twice the magnitude: 2√5λ.\n\nWHAT TO MEMORIZE\nIn degenerate perturbation theory, diagonalize the perturbation within the degenerate subspace; the eigenvalues are the first-order shifts."
     },
     {
       "question": "For a > 0, a contour encloses only the pole z = ia of the function 1/(z²+a²) in the upper half-plane. The counterclockwise contour integral is",
@@ -27752,16 +27751,16 @@ const EXAMS = [
       "explanation": "WORKED SOLUTION\nThe isotope effect is T_c ∝ M⁻¹ᐟ². Replacing M by 4M gives T_c'/T_c = 4⁻¹ᐟ² = 1/2.\n\n90-SECOND SOLUTION\nQuadrupling a quantity under an inverse square root halves the result.\n\nWHAT TO MEMORIZE\nThe conventional superconducting isotope exponent is approximately 1/2."
     },
     {
-      "question": "A single electron occupies a 3d orbital. In the ground fine-structure level, a weak magnetic field B is applied. Ignoring nuclear spin, the Zeeman energy shift of the m_j = +3/2 sublevel is",
+      "question": "A hydrogenic atom has energy levels E_n = −C/n². The photon energy for the transition n = 4 to n = 2 divided by that for the transition n = 3 to n = 2 is",
       "choices": [
-        "(3/2)μ_BB",
-        "2μ_BB",
-        "(4/5)μ_BB",
-        "(6/5)μ_BB",
-        "(2/5)μ_BB"
+        "5/9",
+        "4/5",
+        "20/27",
+        "27/20",
+        "9/4"
       ],
       "answer": "D",
-      "explanation": "WORKED SOLUTION\nFor one 3d electron, L = 2 and S = 1/2. The ground fine-structure level is J = L−S = 3/2. Its Landé factor is g_J = 1 + [J(J+1)+S(S+1)−L(L+1)]/[2J(J+1)] = 4/5. The weak-field shift is ΔE = g_Jm_jμ_BB = (4/5)(3/2)μ_BB = (6/5)μ_BB.\n\n90-SECOND SOLUTION\nFor the ²D₃⁄₂ ground level, use g_J = 4/5, then multiply by m_j = 3/2.\n\nWHAT TO MEMORIZE\nWeak-field Zeeman shift: ΔE = g_Jm_jμ_BB, with g_J from the Landé formula."
+      "explanation": "WORKED SOLUTION\nA downward transition emits the magnitude of the energy difference. For 4→2, E_γ = C(1/2²−1/4²) = C(1/4−1/16) = 3C/16. For 3→2, E_γ = C(1/4−1/9) = 5C/36. Their ratio is (3/16)/(5/36) = (3×36)/(16×5) = 108/80 = 27/20. The reciprocal 20/27 reverses the order of the requested transitions.\n\n90-SECOND SOLUTION\nWrite only the two positive gaps: 3/16 and 5/36. Divide by multiplying across: (3×36)/(16×5). Cancel 36/16 to 9/4, giving 27/20.\n\nWHAT TO MEMORIZE\nFor hydrogenic levels E_n ∝ −1/n², a photon energy is the positive difference between the two level energies."
     },
     {
       "question": "Star B has twice the radius and half the surface temperature of star A. Treating both as blackbodies, the luminosity ratio L_B/L_A is",
@@ -27922,7 +27921,7 @@ const EXAMS = [
       "explanation": "WORKED SOLUTION\nStarting from maximum displacement, the mass reaches equilibrium after one quarter of a period. Since T = 2π√(m/k), the first crossing time is T/4 = (π/2)√(m/k).\n\n90-SECOND SOLUTION\nMaximum to equilibrium is a quarter cycle. Divide the oscillator period by four.\n\nWHAT TO MEMORIZE\nFor SHM, turning point to equilibrium takes T/4."
     },
     {
-      "question": "A particle of mass m moves in the one-dimensional attractive potential V(x) = −gδ(x), where g > 0. The bound-state energy is",
+      "question": "For the attractive potential V(x) = −gδ(x), a bound state has ψ(x) = Ae^{−κ|x|}. Using the derivative condition ψ'(0⁺)−ψ'(0⁻) = −(2mg/ħ²)ψ(0), what is the bound-state energy?",
       "choices": [
         "−mg²/(2ħ²)",
         "−mg²/ħ²",
@@ -27931,7 +27930,7 @@ const EXAMS = [
         "0"
       ],
       "answer": "A",
-      "explanation": "WORKED SOLUTION\nFor a bound state write ψ ∝ e^{−κ|x|}. The delta-potential derivative jump gives ψ'(0⁺)−ψ'(0⁻) = −(2mg/ħ²)ψ(0), which yields κ = mg/ħ². Then E = −ħ²κ²/(2m) = −mg²/(2ħ²).\n\n90-SECOND SOLUTION\nRecall κ = mg/ħ² for the attractive delta well and substitute into E = −ħ²κ²/(2m).\n\nWHAT TO MEMORIZE\nA one-dimensional attractive delta potential has exactly one bound state with E = −mg²/(2ħ²)."
+      "explanation": "WORKED SOLUTION\nFor ψ = Ae^{−κ|x|}, the one-sided derivatives are ψ'(0⁺) = −κA and ψ'(0⁻) = +κA. Their difference is −2κA. Substituting into the supplied jump condition gives −2κA = −(2mg/ħ²)A, so κ = mg/ħ². Away from the delta function the decaying exponential has E = −ħ²κ²/(2m), hence E = −mg²/(2ħ²). The factor-of-two distractor comes from applying the jump condition to only one side of the cusp.\n\n90-SECOND SOLUTION\nThe two derivatives differ by −2κA. Equate that to the supplied right-hand side to obtain κ = mg/ħ², then insert it into E = −ħ²κ²/(2m).\n\nWHAT TO MEMORIZE\nNothing special about the delta-well coefficient is required here: evaluate both one-sided derivatives, use the supplied jump condition, and use E = −ħ²κ²/(2m) for an exponential bound-state tail."
     },
     {
       "question": "For any cyclic process, the Clausius inequality states that",
