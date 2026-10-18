@@ -28596,7 +28596,7 @@ const EXAMS = [
         "√(2K/M)"
       ],
       "answer": "C",
-      "explanation": "WORKED SOLUTION\nFor the optical k = 0 mode, neighboring unlike masses move oppositely while equivalent cells move together. The coupled equations give ω² = 2K(1/m + 1/M). Thus ω = √[2K(1/m+1/M)]. Omitting the factor 2 counts only one of the two springs acting on each mass.\n\n90-SECOND SOLUTION\nAt k = 0 in the optical branch, each mass is pulled by two springs; use the reduced-mass combination 1/m+1/M.\n\nWHAT TO MEMORIZE\nA diatomic chain has an optical branch with unlike neighbors moving out of phase."
+      "explanation": "WORKED SOLUTION\nNo diatomic-chain dispersion relation needs to be memorized. At k = 0, all masses m have displacement u and all masses M have displacement v. Each mass is attached to two springs, so m(d²u/dt²) = −2K(u−v) and M(d²v/dt²) = +2K(u−v). For the relative displacement y = u−v, subtracting the equations gives d²y/dt² = −2K(1/m+1/M)y. Therefore ω² = 2K(1/m+1/M), so ω = √[2K(1/m+1/M)].\n\n90-SECOND SOLUTION\nLet y be the displacement of m relative to M. The two springs give restoring force 2Ky, and the relative acceleration introduces 1/m+1/M. Thus d²y/dt² = −2K(1/m+1/M)y.\n\nWHAT TO MEMORIZE\nNothing special beyond writing F = ma for the two masses; the optical-mode formula follows from their relative motion."
     },
     {
       "question": "A capacitor C is first charged to voltage ε. At t = 0 it is disconnected from that battery and connected through a resistor R to a battery of emf 3ε with opposite polarity, so that the new battery initially drives discharge. The magnitude of the current immediately after switching is",
@@ -28839,7 +28839,7 @@ const EXAMS = [
         "16"
       ],
       "answer": "C",
-      "explanation": "WORKED SOLUTION\nMagnetic-dipole radiation scales as P ∝ m₀²ω⁴. The dipole amplitude m₀ is proportional to current amplitude, so halving current contributes 1/4. Doubling frequency contributes 2⁴ = 16. The net factor is 16/4 = 4. Ignoring the squared amplitude gives 8 instead.\n\n90-SECOND SOLUTION\nCombine the scalings: (1/2)²(2)⁴ = 4.\n\nWHAT TO MEMORIZE\nElectric- and magnetic-dipole radiated powers scale as amplitude squared times ω⁴."
+      "explanation": "WORKED SOLUTION\nThere is no numerical radiation coefficient to memorize. Dipole radiation power is proportional to the square of the dipole moment's second time derivative. For m(t) = m₀ cosωt, the second-derivative amplitude is ω²m₀, so P ∝ (ω²m₀)² = m₀²ω⁴. Because m₀ = I₀A for a fixed loop, halving I₀ contributes (1/2)², while doubling ω contributes 2⁴. The net factor is (1/2)²(2)⁴ = 4.\n\n90-SECOND SOLUTION\nTwo time derivatives give ω²; squaring for power gives ω⁴. Then combine the changes: (1/2)²(2)⁴ = 4.\n\nWHAT TO MEMORIZE\nRadiation power is set by the square of a dipole's second derivative; any constant prefactor cancels in a ratio question."
     },
     {
       "question": "In the WKB approximation, a particle tunnels through a rectangular barrier. The barrier width is doubled while the difference V₀ − E is reduced to one-fourth its original value. To leading exponential order, the transmission probability",
@@ -29060,7 +29060,7 @@ const EXAMS = [
         "16"
       ],
       "answer": "A",
-      "explanation": "WORKED SOLUTION\nBlackbody photon number density scales as T³, so total photon number scales as VT³. The new-to-old ratio is (V/2)(2T)³/(VT³) = (1/2)8 = 4. Using T⁴ would describe energy density, not photon number density.\n\n90-SECOND SOLUTION\nPhoton number scales as volume times T cubed: one-half times eight.\n\nWHAT TO MEMORIZE\nBlackbody energy density ∝T⁴, photon number density ∝T³."
+      "explanation": "WORKED SOLUTION\nThe T³ law does not require memorizing a photon-number integral or its numerical coefficient. Blackbody energy density scales as u ∝ T⁴, while a typical photon energy scales as kT. Therefore photon number density scales as nγ ∼ u/(kT) ∝ T³. Hence total photon number N ∝ VT³, and the new-to-old ratio is (V/2)(2T)³/(VT³) = (1/2)8 = 4.\n\n90-SECOND SOLUTION\nUse photon count ≈ total radiation energy divided by energy per photon: VT⁴/T = VT³. Then one-half times 2³ equals 4.\n\nWHAT TO MEMORIZE\nBlackbody energy density scales as T⁴ and the characteristic photon energy scales as kT; the T³ photon-count scaling follows immediately."
     },
     {
       "question": "A wave mode has dispersion relation ω² = ω₀² + c²k². The product of its phase velocity and group velocity is",
