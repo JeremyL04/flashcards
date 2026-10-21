@@ -30544,5 +30544,866 @@ const EXAMS = [
 
   ],
   "added": "2026-10-21"
+},
+{
+  "name": "Full Practice Exam 12 (70 Questions)",
+  "category": "practice",
+  "cards": [
+    {
+      "question": "A stone is dropped from rest from a bridge. One second later, a second stone is dropped from rest from the same point. Neglecting air resistance, how much farther has the first stone fallen 2 s after the second stone is released?",
+      "choices": [
+        "(5/2)g",
+        "2g",
+        "3g",
+        "(7/2)g",
+        "4g"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nWhen the second stone has been falling for 2 s, the first has been falling for 3 s. Their distances are y₁=(1/2)g(3 s)² and y₂=(1/2)g(2 s)². Thus y₁−y₂=(1/2)g(9−4) s²=(5/2)g s², written as (5/2)g when time is measured in seconds.\n\n90-SECOND SOLUTION\nUse the two elapsed times, 3 s and 2 s, in y=(1/2)gt² and subtract.\n\nWHAT TO MEMORIZE\nFor motion from rest with constant acceleration, displacement is proportional to the square of elapsed time."
+    },
+    {
+      "question": "Two charges +q are fixed at x = ±a. A charge −Q of mass m, where Q is a positive magnitude, is displaced a small distance y perpendicular to the x axis from the origin. The angular frequency of the resulting small oscillation is",
+      "choices": [
+        "sqrt(kqQ/ma^3)",
+        "sqrt(2kqQ/ma^3)",
+        "sqrt(kqQ/2ma^3)",
+        "2sqrt(kqQ/ma^3)",
+        "sqrt(3kqQ/ma^3)"
+      ],
+      "answer": "B",
+      "image": "images/full-practice-12/q2.png",
+      "explanation": "WORKED SOLUTION\nAt displacement y, each attraction has vertical component approximately −(kqQ/a²)(y/a) for y≪a. The two charges therefore give F_y≈−2kqQy/a³. Comparing with F=−mω²y gives ω=sqrt(2kqQ/ma³).\n\n90-SECOND SOLUTION\nEach charge contributes a restoring term kqQy/a³; add the two and divide the effective spring constant by m.\n\nWHAT TO MEMORIZE\nFor small oscillations, linearize the force as F≈−k_eff x and use ω=sqrt(k_eff/m)."
+    },
+    {
+      "question": "A normalized one-dimensional wavefunction is real and even. Which expectation value must be zero?",
+      "choices": [
+        "<x^2>",
+        "<p^2>",
+        "<x>",
+        "<|x|>",
+        "<V(x)> for every V"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nFor a real even wavefunction, the probability density |ψ(x)|² is even. The integrand in <x>=∫x|ψ|²dx is then odd, so its integral over the full line is zero. None of the other listed expectations must vanish for every such state.\n\n90-SECOND SOLUTION\nEven probability density times odd x gives an odd integrand.\n\nWHAT TO MEMORIZE\nThe expectation value of any odd function vanishes in a state of definite parity."
+    },
+    {
+      "question": "One mole of an ideal gas expands reversibly and isothermally from volume V to 3V. It then returns irreversibly to its initial state. The entropy change of the gas over the complete cycle is",
+      "choices": [
+        "R ln 3",
+        "−R ln 3",
+        "positive but less than R ln 3",
+        "0",
+        "dependent on the return path"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nEntropy is a state function. After the irreversible return, the gas is back at exactly its initial thermodynamic state, so its net entropy change over the cycle is zero. The entropy change of the universe is positive because the return is irreversible, but that is not what is asked.\n\n90-SECOND SOLUTION\nA complete cycle returns the gas to its starting state; every state function has zero net change.\n\nWHAT TO MEMORIZE\nEntropy is a state function even though entropy production depends on the path."
+    },
+    {
+      "question": "For x greater than or equal to zero, a particle has wavefunction psi(x) = A x exp(−x/a), and psi(x) = 0 for x < 0. The normalization constant A is",
+      "choices": [
+        "1/a",
+        "sqrt(2)/a",
+        "2/a",
+        "1/a^(3/2)",
+        "2/a^(3/2)"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nNormalization requires 1=A²∫₀∞x²e^(−2x/a)dx. Using ∫₀∞x²e^(−βx)dx=2/β³ with β=2/a gives the integral a³/4. Hence A²a³/4=1 and A=2/a^(3/2).\n\n90-SECOND SOLUTION\nScale x=a u: the normalization integral scales as A²a³. The exact integral supplies the factor 1/4, giving A=2/a^(3/2).\n\nWHAT TO MEMORIZE\nA one-dimensional normalized wavefunction has dimensions length^(−1/2)."
+    },
+    {
+      "question": "In Rutherford scattering from a fixed nucleus, an alpha particle aimed directly at the nucleus has distance of closest approach r. If its initial kinetic energy is doubled, the new distance of closest approach is",
+      "choices": [
+        "r/2",
+        "r/sqrt(2)",
+        "r/4",
+        "sqrt(2)r",
+        "2r"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nAt closest approach in a head-on encounter, the initial kinetic energy has become Coulomb potential energy: K=k(2e)(Ze)/r. Therefore r is inversely proportional to K. Doubling K halves r.\n\n90-SECOND SOLUTION\nUse energy conservation at the turning point: K∝1/r.\n\nWHAT TO MEMORIZE\nFor head-on Coulomb scattering, the closest approach follows directly from K_initial=U_Coulomb."
+    },
+    {
+      "question": "In frame S, a light ray travels in the xy plane with velocity components u_x = 3c/5 and u_y = 4c/5. Frame S' moves in the +x direction at speed 3c/5. In S', the ray travels",
+      "choices": [
+        "parallel to +x",
+        "parallel to +y",
+        "at 45 degrees above +x",
+        "at 30 degrees above +x",
+        "parallel to −y"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nThe longitudinal velocity transforms as u'_x=(u_x−v)/(1−u_xv/c²). Here u_x=v=3c/5, so u'_x=0. Light still has speed c in S', so its velocity is entirely along +y.\n\n90-SECOND SOLUTION\nThe frame moves at exactly the light ray's x component, making the transformed x component zero.\n\nWHAT TO MEMORIZE\nUse relativistic velocity transformation for components; never subtract transverse components Galileanly."
+    },
+    {
+      "question": "An object falling through a fluid experiences a drag force proportional to v^2. When it has reached terminal speed v_t, the rate at which mechanical energy is converted to thermal energy by drag is",
+      "choices": [
+        "mg/v_t",
+        "mgv_t/2",
+        "mv_t^2/2",
+        "mgv_t",
+        "zero"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nAt terminal speed the drag force balances weight, so F_drag=mg. The thermal conversion rate is the magnitude of drag power, P=F_drag v_t=mgv_t.\n\n90-SECOND SOLUTION\nTerminal speed means drag equals mg; multiply force by speed.\n\nWHAT TO MEMORIZE\nMechanical power delivered by a force is P=F·v."
+    },
+    {
+      "question": "A uniform disk of mass M and radius R is spinning with angular speed omega_0 but its center is initially at rest. It is placed gently on a rough horizontal surface. After slipping ceases, the speed of its center is",
+      "choices": [
+        "Romega_0",
+        "Romega_0/2",
+        "2Romega_0/3",
+        "Romega_0/4",
+        "Romega_0/3"
+      ],
+      "answer": "E",
+      "image": "images/full-practice-12/q9.png",
+      "explanation": "WORKED SOLUTION\nDuring slipping, angular momentum about the eventual contact point is conserved. Initially it is Iω₀. Once rolling begins it is (I+MR²)ω_f. With I=MR²/2, ω_f=ω₀/3, and rolling gives v_cm=Rω_f=Rω₀/3.\n\n90-SECOND SOLUTION\nAbout the contact point: (MR²/2)ω₀=(3MR²/2)ω_f. Then v=Rω_f.\n\nWHAT TO MEMORIZE\nFor a short frictional transition to rolling, angular momentum about the contact point is often the quickest conserved quantity."
+    },
+    {
+      "question": "A series combination of an inductor L and resistor R is connected by a two-position switch to a battery V until steady state is reached. The switch is then moved instantly to a battery 2V with the same polarity. Immediately after switching, dI/dt is",
+      "choices": [
+        "0",
+        "−V/L",
+        "2V/L",
+        "V/(RL)",
+        "V/L"
+      ],
+      "answer": "E",
+      "image": "images/full-practice-12/q10.png",
+      "explanation": "WORKED SOLUTION\nBefore switching, steady DC makes the inductor a wire, so I(0−)=V/R. Inductor current cannot jump, hence I(0+)=V/R. Immediately afterward the loop equation is 2V=RI+L dI/dt=V+L dI/dt, giving dI/dt=V/L.\n\n90-SECOND SOLUTION\nKeep the current continuous at V/R, then subtract the resistor drop V from the new battery emf 2V.\n\nWHAT TO MEMORIZE\nInductor current is continuous, and V_L=L dI/dt."
+    },
+    {
+      "question": "A particle is in an eigenstate of L^2 with l = 3 and of L_z with m = −1. The result of measuring L^2 is",
+      "choices": [
+        "3hbar^2",
+        "12hbar^2",
+        "hbar^2",
+        "sqrt(12)hbar",
+        "indeterminate"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nAn angular-momentum eigenstate with quantum number l has L² eigenvalue l(l+1)ħ². For l=3 this is 3×4ħ²=12ħ². The value of m affects L_z, not L².\n\n90-SECOND SOLUTION\nInsert l=3 into l(l+1)ħ².\n\nWHAT TO MEMORIZE\nL²→l(l+1)ħ² and L_z→mħ."
+    },
+    {
+      "question": "A satellite moves in an elliptical orbit about a planet. At periapsis its distance from the planet is one-half its distance at apoapsis. The ratio of its speed at periapsis to its speed at apoapsis is",
+      "choices": [
+        "sqrt(2)",
+        "1/sqrt(2)",
+        "2",
+        "4",
+        "1/2"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nAt periapsis and apoapsis the velocity is perpendicular to the radius. Conservation of angular momentum gives mv_pr_p=mv_ar_a. Since r_a=2r_p, v_p/v_a=r_a/r_p=2.\n\n90-SECOND SOLUTION\nUse r_pv_p=r_av_a at the two turning points.\n\nWHAT TO MEMORIZE\nCentral forces conserve angular momentum; at apsides, L=mrv."
+    },
+    {
+      "question": "A positive ion enters a uniform magnetic field B with speed v at an angle of 30 degrees to the field. The pitch of the resulting helical path is",
+      "choices": [
+        "sqrt(3)pi mv/(qB)",
+        "pi mv/(qB)",
+        "2pi mv/(qB)",
+        "sqrt(3)pi qB/(mv)",
+        "pi mv/(2qB)"
+      ],
+      "answer": "A",
+      "image": "images/full-practice-12/q13.png",
+      "explanation": "WORKED SOLUTION\nOnly the velocity component perpendicular to B produces circular motion, but the period is T=2πm/(qB). The parallel component is v_parallel=v cos30°=sqrt(3)v/2. The pitch is v_parallel T=sqrt(3)πmv/(qB).\n\n90-SECOND SOLUTION\nPitch=(parallel speed)(cyclotron period)=v cos30°×2πm/(qB).\n\nWHAT TO MEMORIZE\nA charged particle in uniform B follows a helix with cyclotron period 2πm/(|q|B)."
+    },
+    {
+      "question": "An observable A has no explicit time dependence and satisfies [A,H] = 0. For any state evolving under H, which quantity is constant in time?",
+      "choices": [
+        "the wavefunction at every point",
+        "the energy of every measurement outcome",
+        "the uncertainty in position",
+        "the expectation value of A",
+        "the expectation value of every observable"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nFor an operator with no explicit time dependence, d<A>/dt=(i/ħ)<[H,A]>. If [A,H]=0, this derivative vanishes, so <A> is constant. The state itself can still evolve through phase factors.\n\n90-SECOND SOLUTION\nA time-independent operator commuting with H represents a conserved observable.\n\nWHAT TO MEMORIZE\nNo explicit time dependence plus [A,H]=0 implies conservation of <A>."
+    },
+    {
+      "question": "For a Fermi-Dirac gas in thermal equilibrium, the occupation probability of a single-particle state whose energy equals the chemical potential is",
+      "choices": [
+        "0",
+        "1",
+        "e^(−1)",
+        "temperature dependent",
+        "1/2"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe Fermi-Dirac occupation is f(E)=1/[e^((E−μ)/kT)+1]. At E=μ the exponential is e⁰=1, so f=1/2 at every nonzero temperature.\n\n90-SECOND SOLUTION\nSet E−μ=0 in the Fermi-Dirac function.\n\nWHAT TO MEMORIZE\nThe Fermi function crosses 1/2 at the chemical potential."
+    },
+    {
+      "question": "Two identical converging lenses of focal length f are separated by 2f. An object is placed a distance f to the left of the first lens. The final image is located",
+      "choices": [
+        "a distance f to the right of the second lens",
+        "at the midpoint between the lenses",
+        "a distance f to the left of the first lens",
+        "a distance 2f to the right of the second lens",
+        "at infinity"
+      ],
+      "answer": "A",
+      "image": "images/full-practice-12/q16.png",
+      "explanation": "WORKED SOLUTION\nAn object at the front focal plane of the first converging lens emerges as a parallel beam. The second lens receives that parallel beam and focuses it at its back focal plane, a distance f to its right. The 2f lens separation does not change those two focal-plane facts.\n\n90-SECOND SOLUTION\nFront focal plane → parallel rays → back focal plane of the second lens.\n\nWHAT TO MEMORIZE\nAn object at a converging lens's focal point produces collimated output; a collimated beam focuses one focal length beyond a converging lens."
+    },
+    {
+      "question": "The binding energies of nuclei (A,Z) and (A−1,Z) are B(A,Z) and B(A−1,Z). Neglecting electron masses, the neutron separation energy of (A,Z) is",
+      "choices": [
+        "B(A,Z)+B(A−1,Z)",
+        "B(A,Z)−B(A−1,Z)",
+        "B(A−1,Z)−B(A,Z)",
+        "B(A,Z)/A",
+        "[B(A,Z)−B(A−1,Z)]/A"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nRemoving one neutron changes the nucleus from (A,Z) to (A−1,Z). The energy required is the decrease in total binding: S_n=B(A,Z)−B(A−1,Z). A positive separation energy means the original nucleus is bound against neutron emission.\n\n90-SECOND SOLUTION\nSeparation energy equals parent binding minus residual-nucleus binding.\n\nWHAT TO MEMORIZE\nOne-nucleon separation energy is the difference between the relevant nuclear binding energies."
+    },
+    {
+      "question": "A traveler moves away from Earth at speed 3c/5 for 4.0 yr according to Earth clocks, turns around instantly, and returns at speed 4c/5. The return trip lasts 3.0 yr according to Earth clocks. How much time elapses on the traveler's clock?",
+      "choices": [
+        "4.0 yr",
+        "4.8 yr",
+        "5.2 yr",
+        "5.0 yr",
+        "6.4 yr"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nFor 3c/5, γ=5/4, so the traveler accumulates 4.0 yr/γ=3.2 yr. For 4c/5, γ=5/3, so the return contributes 3.0 yr/γ=1.8 yr. The total proper time is 3.2+1.8=5.0 yr.\n\n90-SECOND SOLUTION\nUse the 3-4-5 values: divide 4 yr by 5/4 and 3 yr by 5/3, then add.\n\nWHAT TO MEMORIZE\nFor constant-speed motion, proper time is Δτ=Δt/γ."
+    },
+    {
+      "question": "A fit to 12 data points uses 2 fitted parameters and gives chi-squared = 15. The reduced chi-squared is",
+      "choices": [
+        "0.8",
+        "1.0",
+        "1.2",
+        "15",
+        "1.5"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe number of degrees of freedom is ν=N−p=12−2=10. Reduced chi-squared is χ²/ν=15/10=1.5.\n\n90-SECOND SOLUTION\nSubtract the two fitted parameters before dividing: 15/(12−2).\n\nWHAT TO MEMORIZE\nReduced chi-squared is χ² divided by the number of degrees of freedom, not simply by the number of data points."
+    },
+    {
+      "question": "A mass m hangs at rest from a vertical spring of constant k. A second identical mass is attached gently, and the two masses are released from the original equilibrium position. The amplitude of the subsequent oscillation is",
+      "choices": [
+        "mg/k",
+        "mg/2k",
+        "2mg/k",
+        "sqrt(2)mg/k",
+        "0"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nWith one mass, the equilibrium extension is x₁=mg/k. With total mass 2m, the new equilibrium is x₂=2mg/k. The system is released from x₁ with zero speed, so its displacement from the new equilibrium is x₂−x₁=mg/k, which is the amplitude.\n\n90-SECOND SOLUTION\nOld equilibrium mg/k; new equilibrium 2mg/k; their separation is the amplitude.\n\nWHAT TO MEMORIZE\nAfter a sudden change in a spring's equilibrium, the initial offset from the new equilibrium sets the amplitude when released from rest."
+    },
+    {
+      "question": "A long solid conducting cylinder of radius a carries charge per unit length +lambda and is surrounded by a coaxial conducting shell with inner radius b and net charge per unit length −lambda. In electrostatic equilibrium, the electric field for a < r < b has magnitude",
+      "choices": [
+        "0",
+        "lambda/(2pi epsilon_0 r)",
+        "lambda r/(2pi epsilon_0 a^2)",
+        "lambda/[2pi epsilon_0(b−a)]",
+        "lambda/(4pi epsilon_0 r^2)"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nChoose a coaxial Gaussian cylinder of radius r and length l with a<r<b. It encloses charge λl. Gauss's law gives E(2πrl)=λl/ε₀, so E=λ/(2πε₀r). Charges on the outer shell do not change this Gaussian result.\n\n90-SECOND SOLUTION\nCylindrical symmetry: E(2πrl)=λl/ε₀.\n\nWHAT TO MEMORIZE\nThe field of a long line charge is λ/(2πε₀r); use only the charge enclosed by the Gaussian surface."
+    },
+    {
+      "question": "A particle in a one-dimensional infinite well 0 < x < L is in the normalized state (psi_1 + i psi_2)/sqrt(2), where psi_n are stationary eigenfunctions. At t = 0, the expectation value of the energy is",
+      "choices": [
+        "E_1",
+        "E_2",
+        "(E_1+E_2)/2",
+        "sqrt(E_1E_2)",
+        "(E_2−E_1)/2"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe coefficients have equal squared magnitudes, 1/2. Because the Hamiltonian is diagonal in the energy basis, cross terms vanish and <H>=(1/2)E₁+(1/2)E₂. The relative phase i does not affect the energy probabilities.\n\n90-SECOND SOLUTION\nSquare the two amplitudes: each energy occurs with probability 1/2.\n\nWHAT TO MEMORIZE\nIn an energy eigenbasis, mean energy is Σ|c_n|²E_n."
+    },
+    {
+      "question": "A small block rests on a frictionless wedge whose surface rises at angle theta to the right. The wedge is accelerated horizontally to the left so that the block remains fixed relative to it. The required acceleration magnitude is",
+      "choices": [
+        "g sin theta",
+        "g cos theta",
+        "g cot theta",
+        "g tan theta",
+        "g"
+      ],
+      "answer": "D",
+      "image": "images/full-practice-12/q23.png",
+      "explanation": "WORKED SOLUTION\nIn the wedge frame, the leftward acceleration produces a rightward pseudo-force ma. Along the slope, the pseudo-force component ma cosθ points uphill and gravity's component mg sinθ points downhill. No sliding requires ma cosθ=mg sinθ, so a=g tanθ.\n\n90-SECOND SOLUTION\nBalance components along the incline: ma cosθ=mg sinθ.\n\nWHAT TO MEMORIZE\nIn a frame accelerating with a₀, include the pseudo-force −ma₀."
+    },
+    {
+      "question": "A monatomic ideal gas expands quasistatically from volume V to 2V along the path P = alpha V. The heat added to the gas is",
+      "choices": [
+        "(3/2)alpha V^2",
+        "3alpha V^2",
+        "4alpha V^2",
+        "5alpha V^2",
+        "6alpha V^2"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nAlong P=αV, the initial and final temperatures satisfy nRT_i=αV² and nRT_f=4αV². Thus ΔU=(3/2)nRΔT=(9/2)αV². The work is W=∫_V^{2V}αV dV=(3/2)αV². Therefore Q=ΔU+W=6αV².\n\n90-SECOND SOLUTION\nCompute Δ(PV)=3αV², so ΔU=(3/2)Δ(PV)=9αV²/2; add the triangular-area work 3αV²/2.\n\nWHAT TO MEMORIZE\nFor a monatomic ideal gas, U=(3/2)PV, and the first law gives Q=ΔU+W_by."
+    },
+    {
+      "question": "Two successive normal modes of a string fixed at both ends have frequencies in the ratio 4:3 and differ by 6 Hz. If the string length is L, the wave speed is",
+      "choices": [
+        "12L Hz",
+        "6L Hz",
+        "3L Hz",
+        "24L Hz",
+        "18L Hz"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nFixed-end string frequencies are integer multiples of f₁=v/(2L). Successive modes in the ratio 4:3 are the fourth and third harmonics, whose difference is one fundamental. Hence f₁=6 Hz and v=2Lf₁=12L Hz.\n\n90-SECOND SOLUTION\nAdjacent harmonics differ by the fundamental: f₁=6 Hz, then v=2Lf₁.\n\nWHAT TO MEMORIZE\nFor a string fixed at both ends, f_n=nv/(2L)."
+    },
+    {
+      "question": "Nuclei A decay to stable nuclei B with decay constant lambda. Initially a sample contains N_0 nuclei A and no B. The number of B nuclei present when the activity of A has fallen to one-third its initial value is",
+      "choices": [
+        "N_0/3",
+        "2N_0/3",
+        "N_0 ln 3",
+        "N_0/e",
+        "N_0(1−e^(−3))"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nActivity is A=λN_A, so activity falling to one-third means N_A=N₀/3. Every decayed A nucleus has produced one stable B nucleus, giving N_B=N₀−N_A=2N₀/3.\n\n90-SECOND SOLUTION\nOne-third of A remains, so two-thirds has become B.\n\nWHAT TO MEMORIZE\nFor a one-to-one decay into a stable daughter, N_parent+N_daughter remains constant."
+    },
+    {
+      "question": "Ignoring spin, a 3d electron is in the orbital state with m_l = −2. In a weak uniform magnetic field B in the +z direction, its first-order orbital Zeeman energy shift is (the electron charge is −e)",
+      "choices": [
+        "+2mu_B B",
+        "−mu_B B",
+        "−2mu_B B",
+        "0",
+        "+mu_B B"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nIgnoring spin, the orbital Zeeman perturbation is H_Z=(μ_B/ħ)BL_z for an electron. Therefore ΔE=m_l μ_BB. With m_l=−2, ΔE=−2μ_BB. No Clebsch-Gordan coefficient or term-symbol table is needed.\n\n90-SECOND SOLUTION\nUse ΔE=m_lμ_BB and insert m_l=−2.\n\nWHAT TO MEMORIZE\nIn the normal orbital Zeeman effect, adjacent m_l levels are separated by μ_BB."
+    },
+    {
+      "question": "A capacitor initially charged to voltage V_0 discharges through a resistor R. At what time is the instantaneous power dissipated in the resistor one-fourth of its initial value?",
+      "choices": [
+        "RC/4",
+        "RC/2",
+        "2RC ln 2",
+        "RC ln 2",
+        "RC"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nDuring discharge V(t)=V₀e^(−t/RC), so P=V²/R=P₀e^(−2t/RC). Setting P/P₀=1/4 gives e^(−2t/RC)=1/4, hence t=RC ln2.\n\n90-SECOND SOLUTION\nPower contains the square of the exponential voltage: e^(−2t/RC)=1/4.\n\nWHAT TO MEMORIZE\nIn RC discharge, charge and voltage decay as e^(−t/RC), while resistor power decays as e^(−2t/RC)."
+    },
+    {
+      "question": "A uniform yo-yo of mass M and moment of inertia MR^2/2 falls while a light string unwinds without slipping from its outer rim of radius R. The downward acceleration of its center is",
+      "choices": [
+        "2g/3",
+        "g/3",
+        "g/2",
+        "3g/4",
+        "g"
+      ],
+      "answer": "A",
+      "image": "images/full-practice-12/q29.png",
+      "explanation": "WORKED SOLUTION\nTranslation gives Mg−T=Ma. No slipping gives α=a/R, and rotation gives TR=Iα=(MR²/2)(a/R), so T=Ma/2. Substitution yields Mg−Ma/2=Ma, or a=2g/3.\n\n90-SECOND SOLUTION\nFor I=MR²/2, the torque equation gives T=Ma/2. Insert that into Mg−T=Ma.\n\nWHAT TO MEMORIZE\nFor an unwinding object, combine Mg−T=Ma, TR=Iα, and a=αR."
+    },
+    {
+      "question": "A twofold degenerate energy level E_0 is subject to a perturbation whose matrix in the degenerate subspace is [[2a, a], [a, 2a]]. To first order, the two perturbed energies are",
+      "choices": [
+        "E_0 and E_0+4a",
+        "E_0+a and E_0+3a",
+        "E_0−a and E_0+a",
+        "E_0+2a and E_0+2a",
+        "E_0−3a and E_0+3a"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nFirst-order shifts in a degenerate subspace are the eigenvalues of the perturbation matrix. The symmetric vector (1,1) has eigenvalue 3a and the antisymmetric vector (1,−1) has eigenvalue a. Adding these to E₀ gives E₀+a and E₀+3a.\n\n90-SECOND SOLUTION\nA matrix with equal diagonal entries d and off-diagonal entry b has eigenvalues d±b: 2a±a.\n\nWHAT TO MEMORIZE\nIn degenerate perturbation theory, diagonalize the perturbation within the degenerate subspace."
+    },
+    {
+      "question": "A particle of rest mass m has total relativistic energy 5mc^2/3. The magnitude of its momentum is",
+      "choices": [
+        "mc/3",
+        "mc",
+        "4mc/3",
+        "5mc/3",
+        "2mc"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nRelativistic energy and momentum obey E²=p²c²+m²c⁴. With E=5mc²/3, p²c²=(25/9−1)m²c⁴=(16/9)m²c⁴. Thus p=4mc/3.\n\n90-SECOND SOLUTION\nRecognize the 3-4-5 relation after writing E/(mc²)=5/3.\n\nWHAT TO MEMORIZE\nE²=(pc)²+(mc²)²."
+    },
+    {
+      "question": "A voltmeter has an unknown zero offset that is unchanged during 100 repeated measurements. Averaging the 100 readings primarily reduces",
+      "choices": [
+        "the zero offset",
+        "all systematic errors",
+        "the calibration error",
+        "random fluctuations",
+        "the true voltage"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nA fixed zero offset is systematic: every reading is shifted by the same amount, so averaging does not remove it. Independent random fluctuations partly cancel, shrinking roughly as 1/sqrt(N).\n\n90-SECOND SOLUTION\nAveraging fights scatter, not a common offset.\n\nWHAT TO MEMORIZE\nRandom uncertainty decreases with repeated independent measurements; systematic bias generally does not."
+    },
+    {
+      "question": "A system has one state of energy 0 and one state of energy epsilon. As T approaches zero, its heat capacity approaches",
+      "choices": [
+        "k",
+        "k/2",
+        "infinity",
+        "epsilon/k",
+        "0"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nAs T→0, the excited-state Boltzmann factor e^(−ε/kT) vanishes. The system stays in its ground state, its mean energy becomes temperature-independent, and C=d<U>/dT→0.\n\n90-SECOND SOLUTION\nAt very low temperature the excited level is frozen out, so the energy no longer changes with T.\n\nWHAT TO MEMORIZE\nA nondegenerate gapped system has vanishing heat capacity as T approaches zero."
+    },
+    {
+      "question": "Linearly polarized light enters a half-wave plate with its polarization 20 degrees from the fast axis. The angle through which the plane of polarization is rotated is",
+      "choices": [
+        "40 degrees",
+        "20 degrees",
+        "10 degrees",
+        "70 degrees",
+        "90 degrees"
+      ],
+      "answer": "A",
+      "image": "images/full-practice-12/q34.png",
+      "explanation": "WORKED SOLUTION\nA half-wave plate reflects the polarization direction across one of its principal axes. If the incident direction is 20° from the fast axis, the output is 20° on the other side, so the plane rotates through 40°.\n\n90-SECOND SOLUTION\nA half-wave plate rotates linear polarization by twice the angle to its axis.\n\nWHAT TO MEMORIZE\nFor incident linear polarization at angle θ to a half-wave plate axis, the polarization rotation is 2θ."
+    },
+    {
+      "question": "Charges +q are fixed at (0,0) and (a,0), and a charge −q is fixed at (0,a). The work required to bring another charge −q from infinity to (a,a) is",
+      "choices": [
+        "−kq^2/a",
+        "−kq^2/(sqrt(2)a)",
+        "0",
+        "+kq^2/(sqrt(2)a)",
+        "+kq^2/a"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nAt (a,a), the two charges at (a,0) and (0,a) are each distance a away and have opposite signs, so their potentials cancel. Only the +q at (0,0), distance sqrt(2)a, remains: V=kq/(sqrt(2)a). Bringing in −q requires work W=(−q)V=−kq²/(sqrt(2)a).\n\n90-SECOND SOLUTION\nThe two distance-a contributions cancel; multiply the remaining diagonal potential by the incoming charge −q.\n\nWHAT TO MEMORIZE\nAssembly work is qV_external, with V calculated from charges already present."
+    },
+    {
+      "question": "For a one-dimensional quantum harmonic oscillator in the n = 2 energy eigenstate, the classical turning-point distance from equilibrium corresponding to the same total energy is",
+      "choices": [
+        "sqrt(hbar/momega)",
+        "sqrt(2hbar/momega)",
+        "sqrt(5hbar/momega)",
+        "sqrt(3hbar/momega)",
+        "5sqrt(hbar/momega)"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe n=2 oscillator energy is E=(n+1/2)ħω=(5/2)ħω. At a classical turning point all energy is potential: (1/2)mω²A²=(5/2)ħω. Therefore A=sqrt(5ħ/mω).\n\n90-SECOND SOLUTION\nSet (1/2)mω²A²=(5/2)ħω and cancel the halves.\n\nWHAT TO MEMORIZE\nQuantum oscillator energies are (n+1/2)ħω; a corresponding classical turning point satisfies E=(1/2)mω²A²."
+    },
+    {
+      "question": "A uniform ladder of weight W leans against a frictionless wall at angle theta above a rough floor. The magnitude of the friction force exerted by the floor is",
+      "choices": [
+        "W tan theta",
+        "W cot theta",
+        "W/(2 tan theta)",
+        "W tan theta/2",
+        "W/2"
+      ],
+      "answer": "C",
+      "image": "images/full-practice-12/q37.png",
+      "explanation": "WORKED SOLUTION\nTake torques about the foot. The wall's horizontal normal force N_w gives torque N_w L sinθ, while the ladder's weight at its midpoint gives WL cosθ/2 oppositely. Thus N_w=(W/2)cotθ. Horizontal equilibrium makes the floor friction equal N_w, so f=W/(2tanθ).\n\n90-SECOND SOLUTION\nTorque about the base: N_wLsinθ=(W)(L/2)cosθ; then f=N_w.\n\nWHAT TO MEMORIZE\nChoose the contact point as the torque origin to eliminate unknown floor forces."
+    },
+    {
+      "question": "A particle at rest decays into two photons. Which statement must be true in the particle's rest frame?",
+      "choices": [
+        "The photons may have unequal energies if emitted at different times",
+        "Each photon has the rest energy of the parent",
+        "The photons travel in the same direction",
+        "The photons have equal energies and opposite momenta",
+        "The decay is forbidden by momentum conservation"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nThe initial momentum is zero. With only two photons in the final state, their momenta must be equal and opposite. Since photon energy is E=pc, equal momentum magnitudes also mean equal energies.\n\n90-SECOND SOLUTION\nZero initial momentum plus only two final particles forces back-to-back equal momenta.\n\nWHAT TO MEMORIZE\nIn a two-body decay at rest, the products have equal and opposite momenta."
+    },
+    {
+      "question": "A circular conducting loop of radius r expands so that dr/dt = u while it remains in a uniform magnetic field B perpendicular to its plane. The magnitude of the induced emf is",
+      "choices": [
+        "pi rBu",
+        "2pi r^2Bu",
+        "pi r^2B/u",
+        "Br/u",
+        "2pi rBu"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe magnetic flux is Φ=Bπr². Differentiating gives |emf|=|dΦ/dt|=B(2πr)(dr/dt)=2πrBu.\n\n90-SECOND SOLUTION\nArea grows at rate dA/dt=circumference×radial speed=2πru; multiply by B.\n\nWHAT TO MEMORIZE\nFaraday's law gives emf magnitude |dΦ_B/dt|."
+    },
+    {
+      "question": "Electrons with de Broglie wavelength lambda produce first-order Bragg reflection from crystal planes spaced by d. If the glancing angle is theta, the condition is",
+      "choices": [
+        "lambda = 2d sin theta",
+        "lambda = d sin theta",
+        "lambda = 2d cos theta",
+        "lambda = d/theta",
+        "lambda = 2d tan theta"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nBragg reflection from adjacent crystal planes is constructive when the extra path equals an integer number of wavelengths: 2d sinθ=nλ. For first order n=1, so λ=2d sinθ.\n\n90-SECOND SOLUTION\nSet n=1 in Bragg's law 2d sinθ=nλ.\n\nWHAT TO MEMORIZE\nBragg's law uses the glancing angle measured from the planes: 2d sinθ=nλ."
+    },
+    {
+      "question": "For a substance whose liquid is denser than its solid, the slope dP/dT of the solid-liquid coexistence curve is",
+      "choices": [
+        "positive",
+        "negative",
+        "zero",
+        "infinite",
+        "not determined by density"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nThe Clapeyron equation is dP/dT=L/[T(V_liquid−V_solid)]. The latent heat L and T are positive. If the liquid is denser, V_liquid<V_solid, so the denominator is negative and the slope is negative.\n\n90-SECOND SOLUTION\nDenser liquid means melting decreases volume; the Clapeyron slope has the sign of 1/ΔV.\n\nWHAT TO MEMORIZE\nFor phase coexistence, dP/dT=L/(TΔV)."
+    },
+    {
+      "question": "A stationary listener hears 4 beats per second from two stationary sources. One source has frequency 500 Hz. Which frequency could the other source have?",
+      "choices": [
+        "250 Hz",
+        "500 Hz",
+        "504 Hz",
+        "1000 Hz",
+        "2000 Hz"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nFor stationary sources and listener, the beat frequency is |f₁−f₂|. A 4 Hz beat with one source at 500 Hz allows 496 Hz or 504 Hz. Of the choices, 504 Hz is available.\n\n90-SECOND SOLUTION\nAdd or subtract the beat frequency from 500 Hz.\n\nWHAT TO MEMORIZE\nBeat frequency is the absolute difference between the two frequencies."
+    },
+    {
+      "question": "A lightly damped driven oscillator has quality factor Q = 100. The fractional width Delta omega/omega_0 of its resonance curve is approximately",
+      "choices": [
+        "100",
+        "10",
+        "0.01",
+        "0.1",
+        "0.001"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nFor a lightly damped resonance, Q≈ω₀/Δω, where Δω is the full width at half maximum. Thus Δω/ω₀≈1/Q=1/100=0.01.\n\n90-SECOND SOLUTION\nThe fractional resonance width is the reciprocal of Q.\n\nWHAT TO MEMORIZE\nFor weak damping, Q=ω₀/Δω."
+    },
+    {
+      "question": "A regular hexagonal wire loop of side a carries current I. The magnitude of the magnetic field at its center is",
+      "choices": [
+        "mu_0 I/(2a)",
+        "3mu_0 I/(pi a)",
+        "sqrt(3)mu_0 I/(2pi a)",
+        "sqrt(3)mu_0 I/(pi a)",
+        "6mu_0 I/a"
+      ],
+      "answer": "D",
+      "image": "images/full-practice-12/q44.png",
+      "explanation": "WORKED SOLUTION\nThe center is a perpendicular distance d=sqrt(3)a/2 from each side. Each endpoint subtends 30° from the perpendicular, so one side gives B_side=[μ₀I/(4πd)](sin30°+sin30°)=μ₀I/(2πsqrt(3)a). All six contributions point the same way, giving B=6B_side=sqrt(3)μ₀I/(πa).\n\n90-SECOND SOLUTION\nFind the apothem sqrt(3)a/2, use the finite-wire field for one side, and multiply by six.\n\nWHAT TO MEMORIZE\nFor a finite straight wire, B=μ₀I(sinθ₁+sinθ₂)/(4πd); derive polygon results rather than memorizing them."
+    },
+    {
+      "question": "An atom is in a stationary state of even spatial parity. In the electric-dipole approximation, a transition to another even-parity state is",
+      "choices": [
+        "always allowed",
+        "allowed only for Delta l = 0",
+        "allowed only if spin changes",
+        "allowed only at zero field",
+        "forbidden by parity"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe electric-dipole operator is odd under spatial inversion. Its matrix element between two even-parity states has an odd integrand and therefore vanishes. The transition is electric-dipole forbidden.\n\n90-SECOND SOLUTION\nAn odd dipole operator connects opposite parities, not equal parities.\n\nWHAT TO MEMORIZE\nElectric-dipole transitions require a parity change."
+    },
+    {
+      "question": "A photon with wavelength equal to the electron Compton wavelength scatters from a stationary electron through 60 degrees. The scattered photon's wavelength is",
+      "choices": [
+        "(3/2)lambda_C",
+        "lambda_C/2",
+        "2lambda_C",
+        "sqrt(3)lambda_C",
+        "lambda_C"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nThe Compton shift is Δλ=λ_C(1−cosθ). At θ=60°, cosθ=1/2, so Δλ=λ_C/2. Starting from λ=λ_C gives λ'=λ_C+λ_C/2=(3/2)λ_C.\n\n90-SECOND SOLUTION\nAt 60°, the shift is half a Compton wavelength; add it to the original one Compton wavelength.\n\nWHAT TO MEMORIZE\nCompton scattering: λ'−λ=λ_C(1−cosθ)."
+    },
+    {
+      "question": "A mass hangs from a vertical spring in an elevator accelerating downward with magnitude g/3. Compared with its extension in a stationary elevator, the spring's equilibrium extension is",
+      "choices": [
+        "one-third as large",
+        "two-thirds as large",
+        "the same",
+        "three-halves as large",
+        "zero"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nIn the downward-accelerating elevator, effective gravity is g_eff=g−a=g−g/3=2g/3. The equilibrium extension is proportional to effective weight, so x'=m(2g/3)/k=(2/3)(mg/k).\n\n90-SECOND SOLUTION\nReplace g by g−a=2g/3.\n\nWHAT TO MEMORIZE\nIn a downward-accelerating elevator, apparent weight is m(g−a)."
+    },
+    {
+      "question": "A dielectric slab is partly inserted into an isolated charged parallel-plate capacitor. Fringing is negligible. As the slab is pulled farther into the capacitor, the electrostatic energy and the force on the slab respectively",
+      "choices": [
+        "increase; pushes it out",
+        "increase; pulls it in",
+        "decrease; pull it in",
+        "remain constant; vanish",
+        "decrease; push it out"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe capacitor is isolated, so Q is fixed. Pulling more dielectric in increases C, and U=Q²/(2C) therefore decreases. The system lowers its energy by increasing the overlap, so the force pulls the slab farther in.\n\n90-SECOND SOLUTION\nFixed Q: larger C means smaller U. Force points toward lower energy, so it pulls inward.\n\nWHAT TO MEMORIZE\nFor an isolated capacitor use U=Q²/(2C); for a battery-connected capacitor, account for the battery when finding forces."
+    },
+    {
+      "question": "A spin-1/2 particle with positive gyromagnetic ratio is placed in a uniform magnetic field B in the +z direction. If its spin initially points along +x, the expectation value of the spin",
+      "choices": [
+        "remains fixed along +x",
+        "moves toward +z without precessing",
+        "oscillates only in magnitude",
+        "precesses about the z axis at the Larmor frequency",
+        "immediately becomes zero"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nA magnetic moment in a uniform field experiences torque μ×B. For a spin not initially parallel to B, this torque changes its direction without changing its magnitude, producing Larmor precession about the field axis.\n\n90-SECOND SOLUTION\nA transverse spin in uniform B precesses around B.\n\nWHAT TO MEMORIZE\nThe Larmor angular frequency magnitude is |γ|B; the sign of γ fixes the sense of precession."
+    },
+    {
+      "question": "For a dilute ideal gas of hard spheres at fixed temperature, the pressure is doubled while the molecular diameter is unchanged. The mean free path becomes",
+      "choices": [
+        "twice as large",
+        "sqrt(2) times as large",
+        "unchanged",
+        "four times as large",
+        "half as large"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nFor hard spheres, the mean free path is ell=kT/(sqrt(2)πd²P). At fixed T and d it is inversely proportional to pressure. Doubling P halves ell.\n\n90-SECOND SOLUTION\nMean free path scales as 1/P at fixed temperature.\n\nWHAT TO MEMORIZE\nFor a dilute gas, ell=1/(sqrt(2)nσ)."
+    },
+    {
+      "question": "A soap film of refractive index n is surrounded by air and illuminated normally with wavelength lambda in air. The smallest nonzero thickness that gives constructive interference in the reflected light is",
+      "choices": [
+        "lambda/(4n)",
+        "lambda/(2n)",
+        "lambda/n",
+        "2lambda/n",
+        "lambda/4"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nReflection at the air-to-film surface adds a π phase shift; reflection at the film-to-air surface does not. Therefore reflected constructive interference occurs when 2nt=(m+1/2)λ. The smallest thickness uses m=0, giving t=λ/(4n).\n\n90-SECOND SOLUTION\nOne reflection phase reversal makes the first reflected maximum a quarter-wave optical thickness.\n\nWHAT TO MEMORIZE\nA reflection from lower to higher refractive index adds a π phase shift; count phase reversals before using a thin-film condition."
+    },
+    {
+      "question": "The accelerating voltage in an x-ray tube is doubled. The minimum wavelength in the continuous x-ray spectrum becomes",
+      "choices": [
+        "four times as large",
+        "twice as large",
+        "unchanged",
+        "one-fourth as large",
+        "half as large"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe maximum photon energy is set by the electron energy eV, so hc/λ_min=eV. Thus λ_min=hc/(eV), which is inversely proportional to accelerating voltage. Doubling V halves λ_min.\n\n90-SECOND SOLUTION\nUse eV=hc/λ_min; voltage and cutoff wavelength are inversely related.\n\nWHAT TO MEMORIZE\nDuane-Hunt cutoff: λ_min=hc/(eV)."
+    },
+    {
+      "question": "A bead of mass m slides without friction on a circular hoop of radius R that rotates about its vertical diameter with constant angular speed Omega. If theta is measured from the downward vertical, the effective potential is",
+      "choices": [
+        "mgR cos theta + (1/2)mOmega^2R^2 sin^2 theta",
+        "−mgR cos theta + (1/2)mOmega^2R^2 sin^2 theta",
+        "mgR sin theta",
+        "−mgR cos theta − (1/2)mOmega^2R^2 sin^2 theta",
+        "mgR cos theta"
+      ],
+      "answer": "D",
+      "image": "images/full-practice-12/q53.png",
+      "explanation": "WORKED SOLUTION\nTaking zero gravitational potential at the hoop center gives U_g=−mgR cosθ. In the frame rotating with the hoop, the centrifugal potential is −(1/2)mΩ²rho², where rho=R sinθ is the distance from the rotation axis. Hence U_eff=−mgR cosθ−(1/2)mΩ²R²sin²θ.\n\n90-SECOND SOLUTION\nAdd gravitational potential −mgR cosθ to centrifugal potential −mΩ²(Rsinθ)²/2.\n\nWHAT TO MEMORIZE\nThe centrifugal potential in a uniformly rotating frame is −(1/2)mΩ²rho²; derive it rather than memorizing a hoop-specific result."
+    },
+    {
+      "question": "In a series RLC circuit, the rms voltage across the inductor is 30 V, across the capacitor is 10 V, and across the resistor is 15 V. The rms source voltage is",
+      "choices": [
+        "55 V",
+        "35 V",
+        "sqrt(325) V",
+        "20 V",
+        "25 V"
+      ],
+      "answer": "E",
+      "image": "images/full-practice-12/q54.png",
+      "explanation": "WORKED SOLUTION\nInductor and capacitor voltages are opposite in phase, so the net reactive voltage is 30−10=20 V. The resistor voltage is perpendicular to it in the phasor diagram. Therefore V_source=sqrt(15²+20²)=25 V.\n\n90-SECOND SOLUTION\nSubtract reactive voltages first, then use the 15-20-25 triangle.\n\nWHAT TO MEMORIZE\nIn a series RLC circuit, V_rms²=V_R²+(V_L−V_C)²."
+    },
+    {
+      "question": "A particle is in a bound state of a finite one-dimensional potential well. If the binding energy becomes smaller while the particle mass is unchanged, the exponential decay length of the wavefunction outside the well",
+      "choices": [
+        "increases",
+        "decreases",
+        "remains unchanged",
+        "becomes exactly zero",
+        "oscillates"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nOutside a finite well, a bound-state wavefunction decays as e^(−κx), with κ=sqrt(2m|E_binding|)/ħ. A smaller binding energy makes κ smaller, so the decay length 1/κ increases.\n\n90-SECOND SOLUTION\nWeaker binding means smaller κ and a longer exponential tail.\n\nWHAT TO MEMORIZE\nFor a classically forbidden region, the decay scale is set by κ=sqrt(2m(V−E))/ħ."
+    },
+    {
+      "question": "A straight-line fit of y versus x gives slope s. If y is measured in joules and x in seconds squared, the SI units of s are",
+      "choices": [
+        "watts",
+        "kg m^2 s^(−4)",
+        "newtons",
+        "kg m s^(−2)",
+        "dimensionless"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nSlope has units [y]/[x]. A joule is kg m² s^(−2), and x has units s². Therefore [slope]=kg m² s^(−4).\n\n90-SECOND SOLUTION\nDivide joules by seconds squared.\n\nWHAT TO MEMORIZE\nThe units of a graph's slope are vertical-axis units divided by horizontal-axis units."
+    },
+    {
+      "question": "A transverse pulse traveling on a light string reaches a junction with a heavier string under the same tension. The reflected pulse is",
+      "choices": [
+        "upright and faster",
+        "upright and slower",
+        "inverted and travels back at the original speed",
+        "inverted and stationary",
+        "absent"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe heavier string has larger linear density and therefore lower wave speed and larger wave impedance. Reflection from a higher-impedance string reverses the pulse. The reflected pulse remains on the original light string, so it travels back with the original string's wave speed.\n\n90-SECOND SOLUTION\nLight-to-heavy reflection behaves like reflection from a fixed end: inverted, returning on the original string.\n\nWHAT TO MEMORIZE\nA transverse pulse reflecting from a higher-impedance boundary is inverted."
+    },
+    {
+      "question": "In a steady DC circuit, electromagnetic energy reaches a resistor primarily by",
+      "choices": [
+        "being stored permanently in the battery",
+        "traveling only inside the metal with the drifting electrons",
+        "appearing spontaneously as thermal energy",
+        "flowing through the surrounding fields into the resistor's surface",
+        "propagating opposite to the Poynting vector"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nElectromagnetic energy flux is described by the Poynting vector S=(1/μ₀)E×B. In a working circuit, electric and magnetic fields exist around the conductors, and the Poynting vector near a resistor points inward through its surface. The slow electron drift is not the main energy-transport speed.\n\n90-SECOND SOLUTION\nUse the Poynting-vector picture: field energy flows from the surrounding space into the resistor.\n\nWHAT TO MEMORIZE\nElectromagnetic energy flux is S=E×B/μ₀."
+    },
+    {
+      "question": "Which hydrogen state has zero orbital angular momentum and exactly one radial node?",
+      "choices": [
+        "1s",
+        "2p",
+        "3s",
+        "3p",
+        "2s"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nZero orbital angular momentum means l=0, so the state is an s state. The number of radial nodes is n−l−1=n−1. Exactly one radial node therefore requires n=2, giving 2s.\n\n90-SECOND SOLUTION\nFor an s state l=0; one radial node means n−1=1.\n\nWHAT TO MEMORIZE\nHydrogen radial nodes: n−l−1."
+    },
+    {
+      "question": "A refrigerator removes 300 J from its cold compartment while consuming 100 J of work in each cycle. Its coefficient of performance is",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "1/3",
+        "1/4"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nA refrigerator's coefficient of performance is COP=Q_c/W. Here Q_c=300 J and W=100 J, so COP=300/100=3.\n\n90-SECOND SOLUTION\nDivide heat removed from the cold space by work input.\n\nWHAT TO MEMORIZE\nRefrigerator COP=Q_c/W; heat-pump COP=Q_h/W."
+    },
+    {
+      "question": "The continuous electron-energy spectrum observed in nuclear beta decay is direct evidence that",
+      "choices": [
+        "electrons are composite",
+        "a third particle carries away variable energy and momentum",
+        "energy is not conserved in nuclear processes",
+        "the daughter nucleus has no recoil",
+        "the electron rest mass varies"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nIf beta decay produced only the electron and daughter, two-body kinematics would give a discrete electron energy for each daughter state. The observed continuum requires another particle—the neutrino or antineutrino—to carry variable energy and momentum.\n\n90-SECOND SOLUTION\nA continuous spectrum cannot come from a fixed two-body final state; a third particle shares the energy.\n\nWHAT TO MEMORIZE\nThe beta spectrum motivated the neutrino: it preserves energy, momentum, and angular momentum conservation."
+    },
+    {
+      "question": "A car rounds a frictionless banked curve of radius r at speed v. The banking angle theta must satisfy",
+      "choices": [
+        "sin theta = v^2/(rg)",
+        "cos theta = v^2/(rg)",
+        "tan theta = v^2/(rg)",
+        "tan theta = rg/v^2",
+        "theta = 0"
+      ],
+      "answer": "C",
+      "image": "images/full-practice-12/q62.png",
+      "explanation": "WORKED SOLUTION\nThe vertical component of the normal force balances weight: N cosθ=mg. Its horizontal component supplies centripetal force: N sinθ=mv²/r. Dividing gives tanθ=v²/(rg).\n\n90-SECOND SOLUTION\nDivide horizontal by vertical force equations so N and m cancel.\n\nWHAT TO MEMORIZE\nFor an ideal frictionless banked turn, tanθ=v²/(rg)."
+    },
+    {
+      "question": "The normal component of the electric field immediately outside the surface of a conductor in electrostatic equilibrium is E_n. The surface charge density there is",
+      "choices": [
+        "E_n/epsilon_0",
+        "epsilon_0/E_n",
+        "0",
+        "epsilon_0 E_n",
+        "E_n^2 epsilon_0/2"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nUse a thin Gaussian pillbox straddling the conductor surface. The field inside the conductor is zero, and the outward flux is E_nA. Gauss's law gives E_nA=σA/ε₀, so σ=ε₀E_n.\n\n90-SECOND SOLUTION\nThe normal-field jump is σ/ε₀; inside a conductor E=0.\n\nWHAT TO MEMORIZE\nImmediately outside a conductor, E_perp=σ/ε₀."
+    },
+    {
+      "question": "A two-state system has density matrix rho = [[3/4, 0], [0, 1/4]]. The purity Tr(rho^2) is",
+      "choices": [
+        "1/2",
+        "1",
+        "3/4",
+        "1/4",
+        "5/8"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nSquaring the diagonal density matrix squares its eigenvalues: rho²=diag(9/16,1/16). Therefore Tr(rho²)=9/16+1/16=10/16=5/8.\n\n90-SECOND SOLUTION\nSquare 3/4 and 1/4, then add.\n\nWHAT TO MEMORIZE\nPurity is Tr(rho²): it equals 1 for a pure state and is less than 1 for a mixed state."
+    },
+    {
+      "question": "An optical fiber in air has core and cladding indices n_1 and n_2 satisfying n_1^2 − n_2^2 = 1/4. The largest acceptance half-angle is",
+      "choices": [
+        "30 degrees",
+        "15 degrees",
+        "45 degrees",
+        "60 degrees",
+        "90 degrees"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nFor a step-index fiber in air, sinθ_max=sqrt(n₁²−n₂²). The given difference is 1/4, so sinθ_max=1/2 and θ_max=30°.\n\n90-SECOND SOLUTION\nTake the square root of 1/4, then recognize arcsin(1/2).\n\nWHAT TO MEMORIZE\nIn air, the numerical aperture of a step-index fiber is NA=sqrt(n_core²−n_clad²)=sinθ_acceptance."
+    },
+    {
+      "question": "Both fusion of light nuclei and fission of very heavy nuclei can release energy because, in each case, the products have",
+      "choices": [
+        "greater total charge",
+        "greater binding energy per nucleon",
+        "fewer nucleons",
+        "greater rest mass",
+        "zero kinetic energy"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nNuclear reactions release energy when the final total binding energy is larger, equivalently when the products lie higher on the binding-energy-per-nucleon curve. Light nuclei move upward by fusion, while very heavy nuclei move upward by fission. The increase in binding appears as released energy.\n\n90-SECOND SOLUTION\nBoth processes move nuclei toward the high binding-energy-per-nucleon region near iron.\n\nWHAT TO MEMORIZE\nGreater binding energy means lower nuclear rest energy and therefore possible energy release."
+    },
+    {
+      "question": "A rapidly spinning wheel with angular momentum magnitude L is supported at one end of its axle. Its center of mass is a horizontal distance d from the support and its weight is Mg. The magnitude of its slow precession angular velocity is",
+      "choices": [
+        "L/Mgd",
+        "Mgd/L",
+        "Mg/Ld",
+        "Ld/Mg",
+        "sqrt(Mgd/L)"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nGravity produces torque magnitude τ=Mgd about the support. In slow steady precession, the angular-momentum vector changes direction at rate |dL/dt|=Ω_pL. Setting Ω_pL=τ gives Ω_p=Mgd/L.\n\n90-SECOND SOLUTION\nPrecession rate equals torque divided by spin angular momentum.\n\nWHAT TO MEMORIZE\nFor slow gyroscopic precession, Ω_p=τ/L."
+    },
+    {
+      "question": "In the circuit shown, S_1 is closed and S_2 is open for a long time. At t = 0, S_1 is opened and S_2 is closed simultaneously. What is the current in the right-hand branch immediately after switching?",
+      "choices": [
+        "0",
+        "V/R upward",
+        "2V/R downward",
+        "3V/R upward",
+        "3V/(2R) downward"
+      ],
+      "answer": "C",
+      "image": "images/full-practice-12/q68.png",
+      "explanation": "WORKED SOLUTION\nWith S₁ closed for a long time, the capacitor charges to top-plate voltage +V. Its voltage cannot jump, so immediately after switching the central top node is still at +V. The oppositely oriented right battery holds the far end of R at −V. The resistor therefore has a 2V drop from the central node toward the right branch, giving current 2V/R downward through that branch.\n\n90-SECOND SOLUTION\nFreeze the capacitor voltage at +V; the new battery presents −V, so the resistor sees V−(−V)=2V.\n\nWHAT TO MEMORIZE\nCapacitor voltage is continuous at a switching instant."
+    },
+    {
+      "question": "A system is in the state (phi_1 + phi_2)/sqrt(2), where phi_1 and phi_2 are energy eigenstates with energies E_1 and E_2. The probability of measuring E_1 at time t is",
+      "choices": [
+        "cos^2[(E_2−E_1)t/2hbar]",
+        "sin^2[(E_2−E_1)t/2hbar]",
+        "1/2",
+        "1",
+        "time dependent but not sinusoidal"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nTime evolution multiplies each energy amplitude by a phase: c_n(t)=c_n(0)e^(−iE_nt/ħ). These phases have magnitude one, so the probabilities |c_n|² do not change. The probability of E₁ remains |1/sqrt(2)|²=1/2.\n\n90-SECOND SOLUTION\nEnergy eigenstate phases evolve, but their squared amplitudes stay fixed.\n\nWHAT TO MEMORIZE\nFor a time-independent Hamiltonian, energy-measurement probabilities are constant in time."
+    },
+    {
+      "question": "Independent quantities x and y have small fractional uncertainties 3% and 4%. For z = xy, the fractional uncertainty in z is most nearly",
+      "choices": [
+        "1%",
+        "3.5%",
+        "4%",
+        "5%",
+        "7%"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nFor a product of independent quantities, small fractional uncertainties add in quadrature: (σ_z/z)²=(σ_x/x)²+(σ_y/y)². Thus σ_z/z=sqrt(0.03²+0.04²)=0.05, or 5%.\n\n90-SECOND SOLUTION\nRecognize the 3-4-5 triangle in percent uncertainties.\n\nWHAT TO MEMORIZE\nIndependent fractional uncertainties in products and quotients combine in quadrature."
+    }
+  ],
+  "added": "2026-10-21"
 }
 ];
