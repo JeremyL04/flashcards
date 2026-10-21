@@ -30097,5 +30097,452 @@ const EXAMS = [
     }
   ],
   "added": "2026-10-20"
+},
+{
+  "name": "Circuits Test 5 (20 Questions)",
+  "category": "em",
+  "cards": [
+
+// Q1 (E)
+{
+  "question": "In the circuit shown, what current is supplied by the 12 V ideal battery?",
+  "choices": ["2.0 A", "3.0 A", "4.0 A", "6.0 A", "12 A"],
+  "answer": "B",
+  "image": "images/circuits-5/q1.png",
+  "explanation": "WORKED SOLUTION\nThe 3.0 Ω and 6.0 Ω resistors are in parallel, so their equivalent resistance is (3×6)/(3+6)=2.0 Ω. This is in series with the other 2.0 Ω resistor, giving 4.0 Ω total. The battery current is I=V/R=12/4.0=3.0 A.\n\n90-SECOND SOLUTION\nNotice immediately that 3 Ω ∥ 6 Ω = 2 Ω. Then the circuit is simply 2 Ω + 2 Ω = 4 Ω, so 12 V/4 Ω = 3 A.\n\nWHAT TO MEMORIZE\nFor two parallel resistors, R_eq=R₁R₂/(R₁+R₂); series resistances then add."
+},
+
+// Q2 (E)
+{
+  "question": "With switch S open, the ideal battery supplies current I_open. When S is closed, it supplies current I_closed. What is I_closed/I_open?",
+  "choices": ["1/2", "2/3", "1", "3/2", "2"],
+  "answer": "D",
+  "image": "images/circuits-5/q2.png",
+  "explanation": "WORKED SOLUTION\nWith S open, only the upper 4.0 Ω branch conducts, so the total resistance is 2.0+4.0=6.0 Ω. With S closed, the two 4.0 Ω branch resistors are parallel and have equivalent resistance 2.0 Ω, so the total is 2.0+2.0=4.0 Ω. At fixed battery voltage, current is inversely proportional to resistance. Thus I_closed/I_open=6/4=3/2.\n\n90-SECOND SOLUTION\nFind only the before-and-after resistances: 6 Ω open and 4 Ω closed. Reverse their ratio because I=V/R, giving 6/4=3/2.\n\nWHAT TO MEMORIZE\nFor the same ideal source, I_new/I_old=R_old/R_new."
+},
+
+// Q3 (E)
+{
+  "question": "The two ideal batteries in the single loop shown oppose one another. What is the current in the loop?",
+  "choices": ["2.0 A, driven by the 12 V battery", "2.0 A, driven by the 4.0 V battery", "3.0 A, driven by the 12 V battery", "4.0 A, driven by the 12 V battery", "No current flows"],
+  "answer": "A",
+  "image": "images/circuits-5/q3.png",
+  "explanation": "WORKED SOLUTION\nBecause the batteries oppose, the net emf is 12−4=8 V, directed as the 12 V source drives it. The two 2.0 Ω resistors are in series, so R_total=4.0 Ω. Therefore I=8/4.0=2.0 A, driven by the 12 V battery.\n\n90-SECOND SOLUTION\nOpposing sources subtract and the series resistors add: I=(12−4)/(2+2)=2 A.\n\nWHAT TO MEMORIZE\nIn one loop, add emfs with signs determined by polarity and add all series resistances."
+},
+
+// Q4 (M)
+{
+  "question": "Both switches are closed in the circuit shown. What current flows through the 4.0 ohm load?",
+  "choices": ["0.90 A", "1.2 A", "1.8 A", "2.4 A", "3.6 A"],
+  "answer": "C",
+  "image": "images/circuits-5/q4.png",
+  "explanation": "WORKED SOLUTION\nLet V be the voltage of the top rail relative to the bottom rail, and take downward branch currents as positive. Kirchhoff's junction rule gives (V−12)/2+(V−6)/2+V/4=0. Multiplying by 4 gives 2V−24+2V−12+V=0, so V=36/5=7.2 V. The load current is V/(4.0 Ω)=1.8 A.\n\n90-SECOND SOLUTION\nUse one node voltage instead of several loop currents. Clear denominators in (V−12)/2+(V−6)/2+V/4=0 to get 5V=36, then divide V by 4 Ω.\n\nWHAT TO MEMORIZE\nFor several parallel source branches, a single KCL node equation is often fastest."
+},
+
+// Q5 (M)
+{
+  "question": "For what value of R is the current through the galvanometer zero?",
+  "choices": ["2.5 ohm", "4.0 ohm", "5.0 ohm", "8.0 ohm", "10 ohm"],
+  "answer": "E",
+  "image": "images/circuits-5/q5.png",
+  "explanation": "WORKED SOLUTION\nZero galvanometer current means the two midpoint potentials are equal, so the Wheatstone bridge is balanced. Corresponding resistance ratios must match: 3.0/6.0=5.0/R. Cross-multiplication gives 3R=30, hence R=10 Ω.\n\n90-SECOND SOLUTION\nAt bridge balance, upper-left/lower-left equals upper-right/lower-right: 3/6=5/R. The arithmetic gives R=10 Ω.\n\nWHAT TO MEMORIZE\nA balanced Wheatstone bridge has equal resistance ratios in its two divider branches."
+},
+
+// Q6 (E)
+{
+  "question": "A battery has emf 12 V and internal resistance 1.0 ohm. When it is connected to a 5.0 ohm resistor, its terminal voltage is",
+  "choices": ["2.0 V", "6.0 V", "8.0 V", "10 V", "12 V"],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nThe total series resistance is 5.0+1.0=6.0 Ω, so the current is 12/6.0=2.0 A. The terminal voltage is the voltage across the external resistor: V_terminal=I(5.0 Ω)=10 V. Equivalently, 12 V−I(1.0 Ω)=10 V.\n\n90-SECOND SOLUTION\nCurrent is 12/(5+1)=2 A. Multiply by the 5 Ω load to obtain 10 V.\n\nWHAT TO MEMORIZE\nFor a discharging battery, V_terminal=ℰ−Ir=IR_load."
+},
+
+// Q7 (E)
+{
+  "question": "Which statement best describes ideal meters used in a circuit?",
+  "choices": ["Both an ammeter and a voltmeter have zero resistance", "An ammeter has zero resistance and is placed in series; a voltmeter has infinite resistance and is placed in parallel", "An ammeter has infinite resistance and is placed in parallel; a voltmeter has zero resistance and is placed in series", "Both an ammeter and a voltmeter have infinite resistance", "Both meters must be placed in series"],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nAn ammeter measures the current through a branch, so it is inserted in series and ideally has zero resistance so it does not change that current. A voltmeter compares two node potentials, so it is placed in parallel and ideally has infinite resistance so it draws no current.\n\n90-SECOND SOLUTION\nA current meter must lie in the current's path; a voltage meter must span two points. The ideal versions cause no disturbance: zero resistance for the ammeter and infinite resistance for the voltmeter.\n\nWHAT TO MEMORIZE\nIdeal ammeter: series, zero resistance. Ideal voltmeter: parallel, infinite resistance."
+},
+
+// Q8 (M)
+{
+  "question": "The voltmeter shown has resistance 3.0 kohm. What voltage does it read?",
+  "choices": ["3.6 V", "4.5 V", "6.0 V", "9.0 V", "12 V"],
+  "answer": "A",
+  "image": "images/circuits-5/q8.png",
+  "explanation": "WORKED SOLUTION\nThe 3.0 kΩ meter is in parallel with the lower 3.0 kΩ resistor, so together they are 1.5 kΩ. That combination is in series with 6.0 kΩ, giving 7.5 kΩ total. The voltage across the lower parallel combination is 18(1.5/7.5)=3.6 V, which is the meter reading.\n\n90-SECOND SOLUTION\nTwo equal 3 kΩ parallel resistances give 1.5 kΩ. The lower part is then one fifth of 6+1.5=7.5 kΩ, so it receives one fifth of 18 V: 3.6 V.\n\nWHAT TO MEMORIZE\nA nonideal voltmeter acts as a parallel resistance and can load a voltage divider."
+},
+
+// Q9 (E)
+{
+  "question": "An initially uncharged capacitor C is connected in series with a resistor R and an ideal battery. The capacitor reaches one-half of its final voltage after a time",
+  "choices": ["RC/2", "RC", "RC ln 2", "2RC", "RC/ln 2"],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nDuring charging, V_C(t)=V_final(1−e^(−t/RC)). Setting V_C=V_final/2 gives e^(−t/RC)=1/2. Taking logarithms yields t=RC ln 2.\n\n90-SECOND SOLUTION\nHalf charged means the remaining gap to the final value is also one half. Exponential decay of that gap gives e^(−t/RC)=1/2, so t=RC ln 2.\n\nWHAT TO MEMORIZE\nFor first-order charging, the distance from the final value falls as e^(−t/τ), with τ=RC."
+},
+
+// Q10 (M)
+{
+  "question": "The capacitor is initially uncharged. Let I_0 be the battery current immediately after switch S is closed and I_infinity the battery current a long time later. What is I_0/I_infinity?",
+  "choices": ["1/3", "1/2", "1", "2", "3"],
+  "answer": "E",
+  "image": "images/circuits-5/q10.png",
+  "explanation": "WORKED SOLUTION\nImmediately after closing, the uncharged capacitor behaves like a wire and bypasses the 2R resistor. The battery therefore sees only R, so I_0=V/R. A long time later the capacitor behaves like an open circuit, leaving R and 2R in series; hence I_infinity=V/(3R). Their ratio is 3.\n\n90-SECOND SOLUTION\nReplace the capacitor by a short at t=0 and an open at t→∞. The source resistances are R and 3R, respectively, so the current ratio is 3.\n\nWHAT TO MEMORIZE\nAn initially uncharged capacitor is a short at the first instant; a fully charged capacitor is an open in DC steady state."
+},
+
+// Q11 (M)
+{
+  "question": "The switch has been at a for a long time and is moved to b at t = 0. What is the magnitude of the current through the 3.0 kohm resistor immediately afterward?",
+  "choices": ["4.0 mA", "2.0 mA", "1.0 mA", "0.50 mA", "0"],
+  "answer": "A",
+  "image": "images/circuits-5/q11.png",
+  "explanation": "WORKED SOLUTION\nAfter a long time at a, the capacitor is charged to 12 V because steady-state current through the charging resistor is zero. Capacitor voltage cannot change instantaneously, so immediately after moving to b it still supplies 12 V across the 3.0 kΩ resistor. Thus I=12 V/(3.0 kΩ)=4.0 mA.\n\n90-SECOND SOLUTION\nLong-time charging gives V_C=12 V. Keep that same voltage at the switching instant and divide by 3 kΩ: 4 mA.\n\nWHAT TO MEMORIZE\nCapacitor voltage is continuous at a switching instant."
+},
+
+// Q12 (E)
+{
+  "question": "Capacitors C and 2C are connected in series across an ideal battery of voltage V. The voltage across capacitor C is",
+  "choices": ["V/3", "V/2", "2V/3", "V", "2V"],
+  "answer": "C",
+  "image": "images/circuits-5/q12.png",
+  "explanation": "WORKED SOLUTION\nSeries capacitors carry equal charge magnitude Q. Their voltages are Q/C and Q/(2C), so the voltage across C is twice that across 2C. The two voltages sum to V, making them 2V/3 and V/3. Thus the voltage across C is 2V/3.\n\n90-SECOND SOLUTION\nIn series, equal charge means voltage is inversely proportional to capacitance. The smaller capacitor C gets twice the voltage of 2C, so it gets two thirds of the total.\n\nWHAT TO MEMORIZE\nSeries capacitors have equal charge; the smaller capacitance has the larger voltage."
+},
+
+// Q13 (M)
+{
+  "question": "A parallel-plate capacitor is charged, disconnected from its battery, and then completely filled with a dielectric of constant 3. Its stored electrostatic energy becomes",
+  "choices": ["9 times the original value", "3 times the original value", "unchanged", "one-third of the original value", "one-ninth of the original value"],
+  "answer": "D",
+  "image": "images/circuits-5/q13.png",
+  "explanation": "WORKED SOLUTION\nDisconnecting the battery fixes the charge Q. Filling the capacitor with dielectric multiplies its capacitance by κ=3. Using U=Q²/(2C), the new energy is U/3. The voltage also falls by a factor of 3; treating it as fixed would correspond to leaving the battery attached.\n\n90-SECOND SOLUTION\nDisconnected means fixed Q. Since C triples and U=Q²/(2C), the energy becomes one third as large.\n\nWHAT TO MEMORIZE\nDielectric problems hinge on what is fixed: disconnected means fixed Q; connected means fixed V."
+},
+
+// Q14 (E)
+{
+  "question": "An ideal battery is connected across two parallel branches. One branch contains one lamp of resistance R; the other contains two identical lamps in series. The power in each lamp in the series branch is what fraction of the power in the single-lamp branch?",
+  "choices": ["1/8", "1/4", "1/2", "1", "2"],
+  "answer": "B",
+  "image": "images/circuits-5/q14.png",
+  "explanation": "WORKED SOLUTION\nLet the battery voltage be V. The single lamp has power P_single=V²/R. The two series lamps split the voltage equally, so each has voltage V/2 and power P_series lamp=(V/2)²/R=V²/(4R). The ratio is 1/4.\n\n90-SECOND SOLUTION\nEach of the two equal series lamps gets half the branch voltage. Since P=V²/R, halving voltage makes the power one fourth as large.\n\nWHAT TO MEMORIZE\nFor a fixed resistance, power scales as the square of the voltage across it."
+},
+
+// Q15 (M)
+{
+  "question": "A uniform wire has resistance R. It is stretched to twice its original length without changing its volume or resistivity. Its new resistance is",
+  "choices": ["R/4", "R/2", "R", "2R", "4R"],
+  "answer": "E",
+  "explanation": "WORKED SOLUTION\nResistance is R=ρL/A. Constant volume requires AL to remain constant. Doubling L therefore halves A. The new resistance is ρ(2L)/(A/2)=4ρL/A=4R.\n\n90-SECOND SOLUTION\nAt fixed volume, doubling length halves area. In R=ρL/A, the numerator doubles and the denominator halves, giving a factor of 4.\n\nWHAT TO MEMORIZE\nFor a wire stretched at constant volume and resistivity, resistance scales as L²."
+},
+
+// Q16 (M)
+{
+  "question": "A resistor R and a capacitor with reactance X_C = R are connected in series to an AC source of rms voltage V. The rms current is",
+  "choices": ["V/(2R)", "V/(sqrt(2)R)", "V/R", "sqrt(2)V/R", "2V/R"],
+  "answer": "B",
+  "image": "images/circuits-5/q16.png",
+  "explanation": "WORKED SOLUTION\nThe resistance and capacitive reactance contribute perpendicular components of impedance, so |Z|=√(R²+X_C²). With X_C=R, |Z|=√2 R. Therefore I_rms=V_rms/|Z|=V/(√2 R). Adding R+X_C would incorrectly treat the phase-shifted voltage drops as scalar quantities.\n\n90-SECOND SOLUTION\nR and X_C are equal perpendicular impedance components, so their magnitude is the diagonal of a unit square: √2 R. Divide V by that.\n\nWHAT TO MEMORIZE\nFor a series RC circuit, |Z|=√(R²+X_C²)."
+},
+
+// Q17 (E)
+{
+  "question": "A series RLC circuit is driven at its resonant angular frequency. Its impedance is",
+  "choices": ["0", "omega L", "1/(omega C)", "R", "sqrt(R^2 + (omega L)^2)"],
+  "answer": "D",
+  "image": "images/circuits-5/q17.png",
+  "explanation": "WORKED SOLUTION\nFor a series RLC circuit, Z=R+i(X_L−X_C). At resonance, X_L=X_C, so the reactive terms cancel and Z=R. The impedance is not zero because the resistor remains in the circuit.\n\n90-SECOND SOLUTION\nResonance means ωL=1/(ωC). Cancel the two reactances and only R remains.\n\nWHAT TO MEMORIZE\nAt series resonance, impedance is minimum and equals R; current is maximum and in phase with voltage."
+},
+
+// Q18 (M)
+{
+  "question": "An ideal battery, resistor R, and inductor L are connected in series at t = 0. The current reaches one-half of its final value at",
+  "choices": ["(L/R) ln 2", "L/(2R)", "L/R", "2L/R", "L/(R ln 2)"],
+  "answer": "A",
+  "image": "images/circuits-5/q18.png",
+  "explanation": "WORKED SOLUTION\nFor RL current growth, I(t)=I_final(1−e^(−t/τ)) with τ=L/R. Setting I=I_final/2 gives e^(−t/τ)=1/2, hence t=τ ln 2=(L/R)ln 2.\n\n90-SECOND SOLUTION\nHalf the final current leaves half the exponential gap: e^(−tR/L)=1/2. Therefore t=(L/R)ln 2.\n\nWHAT TO MEMORIZE\nThe RL time constant is L/R, and current growth has the same 1−e^(−t/τ) form as capacitor-voltage growth."
+},
+
+// Q19 (M)
+{
+  "question": "An ideal transformer has N_p/N_s = 5. A 20 ohm resistor is connected across the secondary. What effective resistance is seen by the source at the primary?",
+  "choices": ["0.80 ohm", "4.0 ohm", "20 ohm", "100 ohm", "500 ohm"],
+  "answer": "E",
+  "image": "images/circuits-5/q19.png",
+  "explanation": "WORKED SOLUTION\nFor an ideal transformer, V_p/V_s=N_p/N_s=5 and I_p/I_s=N_s/N_p=1/5. Therefore the resistance ratio is (V_p/I_p)/(V_s/I_s)=5/(1/5)=25. The 20 Ω load is reflected to the primary as 25(20 Ω)=500 Ω.\n\n90-SECOND SOLUTION\nA load resistance reflects by the square of the turns ratio: R_seen=(N_p/N_s)²R_load=5²×20=500 Ω.\n\nWHAT TO MEMORIZE\nAn ideal transformer reflects impedance by the square of the turns ratio."
+},
+
+// Q20 (M)
+{
+  "question": "Capacitor C is initially charged to 12 V and capacitor 2C is initially uncharged. They are disconnected from all sources and joined in parallel with like plates together. Their final common voltage is",
+  "choices": ["2.0 V", "3.0 V", "4.0 V", "6.0 V", "8.0 V"],
+  "answer": "C",
+  "image": "images/circuits-5/q20.png",
+  "explanation": "WORKED SOLUTION\nThe initial charge on the charged capacitor is Q_i=C(12 V); the other capacitor has zero charge. After connection, the parallel capacitance is C+2C=3C and the common voltage is V_f=Q_i/(3C)=12/3=4.0 V. Charge is conserved, although some electrostatic energy is dissipated during redistribution.\n\n90-SECOND SOLUTION\nConserve charge: C(12)+2C(0)=(C+2C)V_f. Cancel C to get V_f=4 V.\n\nWHAT TO MEMORIZE\nFor isolated capacitors joined in parallel, conserve total charge and use the final total capacitance."
+}
+
+  ],
+  "added": "2026-10-21"
+},
+{
+  "name": "Electromagnetism Test 10 (30 Questions)",
+  "category": "em",
+  "cards": [
+
+// Q1 (E)
+{
+  "question": "In a uniform electric field E_0 in the +x direction, charges +q and -2q are held at x=0 and x=a, respectively. How much work must an external agent do to interchange their positions quasistatically? Ignore their mutual interaction.",
+  "choices": ["-qaE_0", "-2qaE_0", "-3qaE_0", "+2qaE_0", "+3qaE_0"],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nChoose electric potential V(x)=−E₀x. Initially, U_i=(+q)V(0)+(−2q)V(a)=2qaE₀. After interchange, U_f=(+q)V(a)+(−2q)V(0)=−qaE₀. For a quasistatic move, the external work is ΔU=U_f−U_i=−3qaE₀.\n\n90-SECOND SOLUTION\nMoving +q from 0 to a changes energy by −qaE₀. Moving −2q from a to 0 changes it by −2qaE₀. Add them to get −3qaE₀.\n\nWHAT TO MEMORIZE\nQuasistatic external work equals the change in electric potential energy, ΔU=qΔV."
+},
+
+// Q2 (E)
+{
+  "question": "Seven vertices of a cube of side a carry charge +q, while the eighth vertex carries charge -q. Taking zero potential at infinity, the potential at the cube's center is",
+  "choices": ["4 sqrt(3) kq/a", "2 sqrt(3) kq/a", "6kq/a", "0", "-4 sqrt(3) kq/a"],
+  "answer": "A",
+  "image": "images/em-10/q2.png",
+  "explanation": "WORKED SOLUTION\nEvery vertex is the same distance r=(√3/2)a from the center. Electric potential is a scalar, so V=k(7q−q)/r=6kq/[(√3/2)a]=4√3 kq/a. No vector components are needed.\n\n90-SECOND SOLUTION\nAll eight distances are equal, so add only the charges: 7q−q=6q. Divide k(6q) by √3a/2 and simplify.\n\nWHAT TO MEMORIZE\nPotential adds as a scalar; the center-to-vertex distance of a cube is √3a/2."
+},
+
+// Q3 (M)
+{
+  "question": "A conductor has a closed cavity and initially carries net charge +Q. A point charge +q is placed inside the cavity without touching the conductor. What total charge appears on the conductor's outer surface?",
+  "choices": ["-q", "Q-q", "Q", "Q+q/2", "Q+q"],
+  "answer": "E",
+  "image": "images/em-10/q3.png",
+  "explanation": "WORKED SOLUTION\nThe electric field inside the conducting material must be zero. A Gaussian surface within the conductor surrounding the cavity therefore encloses zero net charge, so the cavity wall carries −q. The conductor itself must retain net charge +Q, requiring Q_outer+(−q)=Q. Hence Q_outer=Q+q.\n\n90-SECOND SOLUTION\nThe inner surface must get −q. Since the conductor's total remains +Q, its outer surface must carry Q+q.\n\nWHAT TO MEMORIZE\nA charge q in a closed cavity induces total charge −q on the inner surface; use conductor charge conservation for the outer surface."
+},
+
+// Q4 (M)
+{
+  "question": "Charge of uniform volume density rho fills the spherical region a<r<b. For a<r<b, the electric field magnitude is",
+  "choices": ["rho r/(3 epsilon_0)", "rho(r^3-a^3)/(3 epsilon_0 r^2)", "rho(b^3-a^3)/(3 epsilon_0 r^2)", "rho(r-a)/(3 epsilon_0)", "rho a^3/(3 epsilon_0 r^2)"],
+  "answer": "B",
+  "image": "images/em-10/q4.png",
+  "explanation": "WORKED SOLUTION\nA Gaussian sphere of radius r encloses only the charged volume from a to r: Q_enc=ρ(4π/3)(r³−a³). Gauss's law gives E(4πr²)=Q_enc/ε₀, so E=ρ(r³−a³)/(3ε₀r²). The outer radius b is irrelevant while the field point lies inside the material.\n\n90-SECOND SOLUTION\nUse charged volume enclosed: (4π/3)(r³−a³). Divide by 4πr²ε₀.\n\nWHAT TO MEMORIZE\nIn Gauss's law, include only charge inside the chosen Gaussian surface."
+},
+
+// Q5 (M)
+{
+  "question": "A neutral conducting slab of thickness t is inserted between the plates of a parallel-plate capacitor of plate area A and separation d, without touching either plate. Fringing is negligible. The capacitance is",
+  "choices": ["epsilon_0 A/d", "epsilon_0 A/(d+t)", "epsilon_0 A t/d^2", "epsilon_0 A/(d-t)", "epsilon_0 A(d-t)/d^2"],
+  "answer": "D",
+  "image": "images/em-10/q5.png",
+  "explanation": "WORKED SOLUTION\nThe electric field is zero inside the conductor, so no potential drop occurs across its thickness t. The entire voltage drop occurs across the two vacuum gaps, whose total thickness is d−t. Thus V=E(d−t), while E=Q/(ε₀A). Therefore C=Q/V=ε₀A/(d−t).\n\n90-SECOND SOLUTION\nRemove the conductor's thickness from the distance over which voltage drops. Replace d by d−t in the parallel-plate formula.\n\nWHAT TO MEMORIZE\nA floating conducting slab has zero internal field and reduces the effective gap by its thickness."
+},
+
+// Q6 (E)
+{
+  "question": "An electric dipole of moment p is placed in a uniform electric field E with p perpendicular to E. The magnitude of the torque and the potential energy are, respectively,",
+  "choices": ["pE and 0", "0 and -pE", "pE and -pE", "0 and 0", "pE/2 and 0"],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nThe torque magnitude is τ=pE sinθ, and the potential energy is U=−pE cosθ. At θ=90°, sinθ=1 and cosθ=0, so τ=pE and U=0.\n\n90-SECOND SOLUTION\nAt 90°, sine is 1 and cosine is 0. Apply τ=pE sinθ and U=−pE cosθ.\n\nWHAT TO MEMORIZE\nA dipole has maximum torque and zero potential energy when perpendicular to a uniform field."
+},
+
+// Q7 (M)
+{
+  "question": "An initially neutral conducting spherical shell contains a point charge +q in an off-center cavity. A spherical Gaussian surface outside the conductor encloses electric flux",
+  "choices": ["0", "q/(2 epsilon_0)", "-q/epsilon_0", "q/epsilon_0", "2q/epsilon_0"],
+  "answer": "D",
+  "image": "images/em-10/q7.png",
+  "explanation": "WORKED SOLUTION\nThe external Gaussian surface encloses the point charge +q and the entire neutral conductor. Although charges −q and +q are induced on the conductor's inner and outer surfaces, their total is zero. Thus the net enclosed charge is q, and Gauss's law gives Φ_E=q/ε₀. The off-center position affects the field pattern, not total flux.\n\n90-SECOND SOLUTION\nCount total enclosed charge, not surface details: q plus a neutral conductor equals q. Therefore Φ=q/ε₀.\n\nWHAT TO MEMORIZE\nTotal electric flux through a closed surface depends only on net enclosed charge."
+},
+
+// Q8 (M)
+{
+  "question": "Which vector field can represent an electrostatic field throughout a simply connected region? Here alpha is a nonzero constant.",
+  "choices": ["alpha y x-hat", "alpha x y-hat", "alpha(x x-hat + y y-hat)", "alpha(x y-hat - y x-hat)", "alpha y z-hat"],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nAn electrostatic field must be conservative, so ∇×E=0 in a simply connected region. For E=α(x x-hat+y y-hat), the cross derivatives vanish and the curl is zero; indeed E=−∇[−α(x²+y²)/2]. Each other option has a nonzero curl component.\n\n90-SECOND SOLUTION\nTest ∂E_y/∂x−∂E_x/∂y. Only choice C gives 0−0=0 and has no hidden z-dependent curl terms.\n\nWHAT TO MEMORIZE\nElectrostatic fields satisfy ∇×E=0 and can be written E=−∇V."
+},
+
+// Q9 (M)
+{
+  "question": "A cylindrical wire of radius R carries current density J(r)=J_0(1-r^2/R^2). The total current is",
+  "choices": ["pi J_0 R^2/4", "pi J_0 R^2/2", "pi J_0 R^2", "2 pi J_0 R^2", "4 pi J_0 R^2"],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nIntegrate the current density over the cross-section: I=∫J dA=∫₀ᴿJ₀(1−r²/R²)2πr dr. This equals 2πJ₀[R²/2−R²/4]=πJ₀R²/2.\n\n90-SECOND SOLUTION\nThe area-weighted average of 1−r²/R² over a disk is 1/2, so I=J_average(πR²)=πJ₀R²/2.\n\nWHAT TO MEMORIZE\nFor cylindrical symmetry, a cross-sectional area element is dA=2πr dr."
+},
+
+// Q10 (E)
+{
+  "question": "A current I reaches a junction and divides between two parallel resistors R and 2R. The current through R is",
+  "choices": ["I/3", "I/2", "I", "3I/2", "2I/3"],
+  "answer": "E",
+  "image": "images/em-10/q10.png",
+  "explanation": "WORKED SOLUTION\nThe two branches have the same voltage, so their currents are inversely proportional to resistance. The R branch therefore carries twice the current of the 2R branch. Dividing total I in the ratio 2:1 gives 2I/3 through R.\n\n90-SECOND SOLUTION\nSmaller resistance gets more current. A 1:2 resistance ratio gives a 2:1 current ratio, so the R branch gets two thirds.\n\nWHAT TO MEMORIZE\nFor two parallel resistors, current divides inversely with resistance."
+},
+
+// Q11 (M)
+{
+  "question": "At t=0 an ideal constant-current source I is connected across a parallel combination of resistor R and an initially uncharged capacitor C. What is the capacitor voltage at t=RC ln 2?",
+  "choices": ["IR/4", "IR/2", "IR", "2IR", "IR ln 2"],
+  "answer": "B",
+  "image": "images/em-10/q11.png",
+  "explanation": "WORKED SOLUTION\nKCL gives I=V/R+C dV/dt. With V(0)=0, the solution is V(t)=IR(1−e^(−t/RC)). At t=RC ln2, the exponential is 1/2, so V=IR/2.\n\n90-SECOND SOLUTION\nThe final voltage is IR and the time constant is RC. At τln2 the voltage has completed half of its rise, giving IR/2.\n\nWHAT TO MEMORIZE\nA current-fed parallel RC circuit still has time constant RC and final voltage IR."
+},
+
+// Q12 (E)
+{
+  "question": "A particle of charge magnitude q and mass m enters a uniform magnetic field B with velocity components v_parallel parallel to B and v_perp perpendicular to B. The distance it advances parallel to B during one revolution is",
+  "choices": ["2 pi m v_perp/(qB)", "2 pi qB v_parallel/m", "m v_parallel/(qB)", "2 pi m v_perp v_parallel/(qB)", "2 pi m v_parallel/(qB)"],
+  "answer": "E",
+  "image": "images/em-10/q12.png",
+  "explanation": "WORKED SOLUTION\nThe perpendicular motion is circular with cyclotron period T=2πm/(qB). The parallel velocity is unchanged, so during one period the particle advances v_parallel T=2πm v_parallel/(qB). The perpendicular speed determines the helix radius, not its pitch.\n\n90-SECOND SOLUTION\nPitch equals parallel speed times one cyclotron period: v_parallel[2πm/(qB)].\n\nWHAT TO MEMORIZE\nIn a uniform B field, T=2πm/(|q|B); multiply by v_parallel to get helix pitch."
+},
+
+// Q13 (M)
+{
+  "question": "A proton and an alpha particle enter the same uniform magnetic field perpendicular to the field with equal momenta. What is r_alpha/r_proton?",
+  "choices": ["1/4", "1/sqrt(2)", "1/2", "sqrt(2)", "2"],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nFor perpendicular motion in a magnetic field, r=p/(|q|B). The particles have equal momenta and see the same B, but the alpha particle has charge +2e while the proton has +e. Therefore r_alpha/r_proton=e/(2e)=1/2. The masses do not enter once equal momentum is specified.\n\n90-SECOND SOLUTION\nUse r=p/(qB). Equal p and B leave only the inverse charge ratio; the alpha's double charge gives half the radius.\n\nWHAT TO MEMORIZE\nMagnetic bending at fixed momentum measures charge through r=p/(|q|B)."
+},
+
+// Q14 (M)
+{
+  "question": "A square loop of side a carries current I. The magnetic field magnitude at its center is",
+  "choices": ["2 sqrt(2) mu_0 I/(pi a)", "sqrt(2) mu_0 I/(pi a)", "mu_0 I/(2 pi a)", "2 mu_0 I/(pi a)", "4 mu_0 I/(pi a)"],
+  "answer": "A",
+  "image": "images/em-10/q14.png",
+  "explanation": "WORKED SOLUTION\nFor one finite straight side, B=μ₀I(sinθ₁+sinθ₂)/(4πr). At the center r=a/2 and θ₁=θ₂=45°, so one side contributes μ₀I√2/(2πa). All four sides point the same way and add, giving B=2√2 μ₀I/(πa).\n\n90-SECOND SOLUTION\nFor one side use r=a/2 and two 45° endpoint angles, then multiply by four. This gives 4[μ₀I(2/√2)/(4π(a/2))]=2√2 μ₀I/(πa).\n\nWHAT TO MEMORIZE\nYou do not need a special square-loop formula: use the finite-wire field for one side and symmetry."
+},
+
+// Q15 (E)
+{
+  "question": "A single-turn loop of area A carries current I in a uniform magnetic field B. The normal to the loop makes an angle of 30 degrees with B. The torque magnitude is",
+  "choices": ["0", "IAB/4", "sqrt(3)IAB/2", "IAB/2", "IAB"],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nThe loop's magnetic moment is μ=IA along its normal. The torque is τ=μB sinθ=IAB sin30°=IAB/2. The stated angle is already the angle between μ and B.\n\n90-SECOND SOLUTION\nUse τ=IAB sinθ with θ measured from the loop normal. Since sin30°=1/2, τ=IAB/2.\n\nWHAT TO MEMORIZE\nA current loop's magnetic moment points normal to its plane and has magnitude IA."
+},
+
+// Q16 (E)
+{
+  "question": "A long coaxial cable carries current +I uniformly on its inner conductor and return current -I on a thin outer cylindrical conductor. The magnetic field outside the outer conductor is",
+  "choices": ["mu_0 I/(2 pi r)", "mu_0 I/(4 pi r)", "0", "mu_0 I r/(2 pi R^2)", "dependent on the cable's dielectric"],
+  "answer": "C",
+  "image": "images/em-10/q16.png",
+  "explanation": "WORKED SOLUTION\nAn Amperian circle outside the cable encloses both +I and −I, so the net enclosed current is zero. Ampère's law gives B(2πr)=μ₀I_enc=0, hence B=0 for the ideal long coaxial geometry.\n\n90-SECOND SOLUTION\nOutside the cable, the forward and return currents cancel in I_enclosed. Therefore the Ampère-law field is zero.\n\nWHAT TO MEMORIZE\nAmpère's law uses net enclosed current, including its direction."
+},
+
+// Q17 (E)
+{
+  "question": "Two long wires perpendicular to the page are at x=-a and x=+a. The left wire carries current I out of the page and the right wire carries current I into the page. At the midpoint, the magnetic field is",
+  "choices": ["mu_0 I/(pi a) in the +y direction", "mu_0 I/(pi a) in the -y direction", "mu_0 I/(2 pi a) in the +y direction", "mu_0 I/(2 pi a) in the -y direction", "0"],
+  "answer": "A",
+  "image": "images/em-10/q17.png",
+  "explanation": "WORKED SOLUTION\nEach wire is distance a from the midpoint and produces field μ₀I/(2πa). By the right-hand rule, the field from the left out-of-page current points +y at the midpoint. The field from the right into-page current also points +y there. They add to μ₀I/(πa) in +y.\n\n90-SECOND SOLUTION\nUse the right-hand rule before adding: both contributions point upward. Double μ₀I/(2πa).\n\nWHAT TO MEMORIZE\nMagnetic fields superpose as vectors; opposite currents need not cancel at a point between them."
+},
+
+// Q18 (M)
+{
+  "question": "A circular conducting loop lies in a uniform magnetic field B perpendicular to its plane. Its radius increases as r(t)=r_0+ut. What is the induced emf magnitude?",
+  "choices": ["pi B u^2", "pi B(r_0+ut)^2", "B u(r_0+ut)", "2 pi B u(r_0+ut)", "2 pi B u^2 t"],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nThe magnetic flux is Φ_B=Bπr² because B is uniform and perpendicular. Faraday's law gives |ℰ|=|dΦ_B/dt|=2πBr(dr/dt). Since r=r₀+ut and dr/dt=u, |ℰ|=2πBu(r₀+ut).\n\n90-SECOND SOLUTION\nDifferentiate Bπr²: the result is 2πBr r-dot. Substitute r=r₀+ut and r-dot=u.\n\nWHAT TO MEMORIZE\nFaraday's law applies to changing area as well as changing magnetic field."
+},
+
+// Q19 (M)
+{
+  "question": "A conducting rod of length ell and mass m slides downward without friction on vertical rails in a uniform magnetic field B perpendicular to the rail plane. The rails are joined through resistance R. Neglecting all other resistance, the terminal speed is",
+  "choices": ["mg/(B ell R)", "mgB ell/R", "mgR/(B ell)", "mgR/(B ell^2)", "mgR/(B^2 ell^2)"],
+  "answer": "E",
+  "image": "images/em-10/q19.png",
+  "explanation": "WORKED SOLUTION\nAt speed v the motional emf is Bℓv, so the circuit current is I=Bℓv/R. The magnetic force opposing the fall is IℓB=B²ℓ²v/R. At terminal speed this balances mg, giving v_t=mgR/(B²ℓ²).\n\n90-SECOND SOLUTION\nChain the three relations: ℰ=Bℓv, I=ℰ/R, and F_B=IℓB. Set F_B=mg and solve.\n\nWHAT TO MEMORIZE\nFor a sliding rod, magnetic drag is proportional to speed: F_B=B²ℓ²v/R."
+},
+
+// Q20 (E)
+{
+  "question": "Two identical inductors, each of self-inductance L, have mutual inductance M=L/4. They are connected in series so that their magnetic fluxes oppose. Their equivalent inductance is",
+  "choices": ["L/2", "3L/2", "2L", "5L/2", "3L"],
+  "answer": "B",
+  "image": "images/em-10/q20.png",
+  "explanation": "WORKED SOLUTION\nFor series-opposing coupled inductors, L_eq=L₁+L₂−2M. Here L₁=L₂=L and M=L/4, so L_eq=2L−2(L/4)=2L−L/2=3L/2. The figure's dot markings identify the opposing sign, so no extra convention must be recalled.\n\n90-SECOND SOLUTION\nOpposing means subtract the two mutual terms: 2L−2M=2L−L/2=3L/2.\n\nWHAT TO MEMORIZE\nCoupled series inductors give L₁+L₂±2M; use plus for aiding and minus for opposing, as indicated by the dots/current direction."
+},
+
+// Q21 (M)
+{
+  "question": "Two nearby coaxial loops have their area vectors in the same direction. The current in loop 1 produces magnetic flux through loop 2 in that direction and is decreasing. The induced current in loop 2 produces a magnetic field",
+  "choices": ["opposite the original flux because induced fields always oppose applied fields", "perpendicular to the loop axes", "of zero magnitude", "whose direction alternates", "in the same direction as the original flux"],
+  "answer": "E",
+  "image": "images/em-10/q21.png",
+  "explanation": "WORKED SOLUTION\nThe original flux through loop 2 points along the common area-vector direction and is decreasing. By Lenz's law, the induced current acts to oppose that decrease, so it produces magnetic field in the same direction as the original flux. It opposes the change, not necessarily the field itself.\n\n90-SECOND SOLUTION\nAsk what is changing: a same-direction flux is getting smaller. The induced field tries to restore it, so it points in the same direction.\n\nWHAT TO MEMORIZE\nLenz's law opposes the change in flux, not automatically the original flux."
+},
+
+// Q22 (M)
+{
+  "question": "The electric flux through a fixed open surface is Phi_E(t)=alpha t^2. The displacement current through the surface is",
+  "choices": ["epsilon_0 alpha t^2", "2 epsilon_0 alpha t", "2 alpha t/epsilon_0", "epsilon_0 alpha", "0"],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nThe displacement current is I_d=ε₀ dΦ_E/dt. Differentiating Φ_E=αt² gives dΦ_E/dt=2αt, so I_d=2ε₀αt.\n\n90-SECOND SOLUTION\nDifferentiate the flux and multiply by ε₀: ε₀(2αt).\n\nWHAT TO MEMORIZE\nMaxwell's displacement current is I_d=ε₀ dΦ_E/dt in vacuum."
+},
+
+// Q23 (E)
+{
+  "question": "An electromagnetic wave of frequency f travels in a nonmagnetic dielectric with relative permittivity 4. Its wavelength is",
+  "choices": ["c/(2f)", "c/(4f)", "2c/f", "4c/f", "c/f"],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nIn a nonmagnetic dielectric, the wave speed is v=c/√ε_r=c/2. Frequency is unchanged at the boundary, so λ=v/f=c/(2f).\n\n90-SECOND SOLUTION\nIndex n=√ε_r=2, so speed and wavelength are each reduced by a factor of 2.\n\nWHAT TO MEMORIZE\nFor μ_r≈1, n=√ε_r and v=c/n."
+},
+
+// Q24 (M)
+{
+  "question": "A standing electromagnetic wave is formed in vacuum by two waves of equal amplitude traveling in opposite directions. At a point that is always a node of the electric field, the magnetic field is",
+  "choices": ["also always zero", "a traveling wave", "parallel to the electric field", "at an antinode and oscillating in time", "constant in time"],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nIn an electromagnetic standing wave, electric and magnetic spatial patterns are shifted by one quarter wavelength. Thus a fixed electric-field node coincides with a magnetic-field antinode. The magnetic field there still varies sinusoidally with time; it is not constant.\n\n90-SECOND SOLUTION\nE nodes and B antinodes alternate in a standing wave. Therefore an always-zero E point has maximum-amplitude, time-oscillating B.\n\nWHAT TO MEMORIZE\nFor a standing EM wave, E and B nodes are separated by λ/4."
+},
+
+// Q25 (E)
+{
+  "question": "A beam consists of photons of frequency f, all moving in the same direction, with number density n. Its energy flux is",
+  "choices": ["nhf/c", "nh/c", "nhfc", "nhf", "nf/c"],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nEach photon has energy hf, so the energy density is u=nhf. The photons travel at speed c, and a directed beam's energy flux is uc. Therefore the flux is nhfc.\n\n90-SECOND SOLUTION\nEnergy per volume is number density times energy per photon: nhf. Multiply by speed c to convert it to energy crossing per area per time.\n\nWHAT TO MEMORIZE\nFor a unidirectional beam, intensity equals energy density times wave speed."
+},
+
+// Q26 (E)
+{
+  "question": "A linear dielectric has electric susceptibility chi_e=2. When it completely fills a parallel-plate capacitor, the capacitance is multiplied by",
+  "choices": ["1/2", "2", "4", "3", "sqrt(3)"],
+  "answer": "D",
+  "explanation": "WORKED SOLUTION\nThe relative permittivity is ε_r=1+χ_e=3. Completely filling the gap multiplies the capacitance by ε_r, so the new capacitance is 3 times the original.\n\n90-SECOND SOLUTION\nConvert susceptibility to dielectric constant: κ=1+χ_e=3. Capacitance scales by κ.\n\nWHAT TO MEMORIZE\nFor a linear dielectric, ε_r=1+χ_e."
+},
+
+// Q27 (E)
+{
+  "question": "A small sample with negative magnetic susceptibility is placed in a nonuniform magnetic field. It is",
+  "choices": ["strongly attracted to the strongest-field region", "unaffected by the field", "weakly repelled from the strongest-field region", "permanently magnetized parallel to the field", "necessarily ferromagnetic"],
+  "answer": "C",
+  "explanation": "WORKED SOLUTION\nNegative magnetic susceptibility identifies a diamagnetic material. Its induced magnetization opposes the applied field, so in a nonuniform field it is weakly pushed toward the weaker-field region—equivalently, repelled from the strongest-field region.\n\n90-SECOND SOLUTION\nχ_m<0 means diamagnetic. Diamagnets are weakly repelled from strong magnetic-field regions.\n\nWHAT TO MEMORIZE\nDiamagnets have small negative susceptibility; paramagnets have small positive susceptibility."
+},
+
+// Q28 (M)
+{
+  "question": "In a series RLC circuit at a particular frequency, X_L=2R and X_C=R. The impedance magnitude and the phase of the current relative to the source voltage are",
+  "choices": ["R; in phase", "sqrt(2)R; current lags by 45 degrees", "sqrt(2)R; current leads by 45 degrees", "2R; current lags by 60 degrees", "3R; current lags by 45 degrees"],
+  "answer": "B",
+  "explanation": "WORKED SOLUTION\nThe net reactance is X_L−X_C=R, so Z=R+iR and |Z|=√2R. Because the net reactance is inductive, the source voltage leads the current; equivalently, the current lags. The phase angle is arctan(R/R)=45°.\n\n90-SECOND SOLUTION\nSubtract reactances first: 2R−R=R inductive. The impedance components are then R and R, giving √2R and a 45° current lag.\n\nWHAT TO MEMORIZE\nIn series RLC, |Z|=√[R²+(X_L−X_C)²]; net inductive means current lags."
+},
+
+// Q29 (E)
+{
+  "question": "The magnetic flux through a conducting loop is Phi_B(t)=Phi_0 cos^2(omega t). The induced emf oscillates with angular frequency",
+  "choices": ["2omega", "omega", "omega/2", "4omega", "0"],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nUse cos²(ωt)=[1+cos(2ωt)]/2. Differentiation removes the constant term and produces a sine at angular frequency 2ω. Therefore the induced emf oscillates at 2ω.\n\n90-SECOND SOLUTION\nRecognize the double-angle identity for cos². Its time-varying part has argument 2ωt, and differentiation does not change that frequency.\n\nWHAT TO MEMORIZE\nSquared sinusoids contain a constant term and a component at twice the original frequency."
+},
+
+// Q30 (M)
+{
+  "question": "A bar magnet is entirely enclosed by an arbitrary closed surface. The net magnetic flux through that surface is",
+  "choices": ["mu_0 times the north-pole strength", "positive because field lines leave the north pole", "negative because more field enters near the south pole", "dependent on the surface shape", "zero"],
+  "answer": "E",
+  "image": "images/em-10/q30.png",
+  "explanation": "WORKED SOLUTION\nGauss's law for magnetism states ∮B·dA=0 for every closed surface. Magnetic field lines that leave the surface must re-enter it because there are no magnetic monopoles. The result is zero regardless of the magnet's position or the surface shape.\n\n90-SECOND SOLUTION\nA bar magnet has north and south poles but no net magnetic charge. Any closed surface therefore has zero net magnetic flux.\n\nWHAT TO MEMORIZE\nGauss's law for magnetism is ∇·B=0, or zero net B-flux through any closed surface."
+}
+
+  ],
+  "added": "2026-10-21"
 }
 ];
