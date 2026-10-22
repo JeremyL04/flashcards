@@ -32267,5 +32267,377 @@ const EXAMS = [
     }
   ],
   "added": "2026-10-22"
+},
+{
+  "name": "Nuclear Physics: Spin–Orbit & Shell Model (30 Questions)",
+  "category": "specialized",
+  "cards": [
+    {
+      "question": "Nuclear radii are well approximated by R = r_0 A^(1/3). The ratio of the radius of an A = 27 nucleus to that of an A = 64 nucleus is",
+      "choices": [
+        "9/16",
+        "3/4",
+        "27/64",
+        "sqrt(3)/2",
+        "1"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nThe radius law gives R_27/R_64=(27/64)^(1/3). Both mass numbers are perfect cubes: 27=3^3 and 64=4^3. Therefore the ratio is 3/4. The constant r_0 cancels.\n\n90-SECOND SOLUTION\nTake the cube root of the ratio directly: cube root of 27 is 3 and cube root of 64 is 4.\n\nWHAT TO MEMORIZE\nNuclear radius scales as R=r_0 A^(1/3). Consequently nuclear volume is proportional to A and average nuclear density is approximately constant."
+    },
+    {
+      "question": "Each decay of a source emits a two-gamma cascade. Detector 1 registers the first gamma with efficiency 0.20, and detector 2 independently registers the second with efficiency 0.30. Ignoring accidental coincidences, how many true coincidence events are expected from 1000 decays?",
+      "choices": [
+        "30",
+        "50",
+        "60",
+        "200",
+        "500"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nA true coincidence requires both independent detections. The coincidence probability per decay is therefore (0.20)(0.30)=0.060. From 1000 decays, the expected number is 1000(0.060)=60. Adding the efficiencies would count single-detector events, not coincidences.\n\n90-SECOND SOLUTION\nFor independent requirements joined by 'and,' multiply: 0.2 times 0.3=0.06. Six percent of 1000 is 60.\n\nWHAT TO MEMORIZE\nIndependent detection probabilities multiply for coincidences. A coincidence count is reduced by every efficiency factor in the required detection chain."
+    },
+    {
+      "question": "A pure radioactive sample has N_0 undecayed nuclei at t = 0. At what time will 3N_0/4 nuclei remain, in terms of the half-life T_(1/2)?",
+      "choices": [
+        "T_(1/2)/4",
+        "T_(1/2)/2",
+        "T_(1/2) ln(4/3)",
+        "T_(1/2) log_2(4/3)",
+        "T_(1/2) log_2(3/2)"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nRadioactive decay written in terms of half-life is N/N_0=2^(-t/T_(1/2)). Set this equal to 3/4. Taking base-2 logarithms gives -t/T_(1/2)=log_2(3/4), so t/T_(1/2)=log_2(4/3). This is less than one half-life, as it must be because more than half the sample remains.\n\n90-SECOND SOLUTION\nWrite 3/4=2^(-t/T). Invert the fraction to remove the minus sign: t/T=log_2(4/3).\n\nWHAT TO MEMORIZE\nUse N/N_0=2^(-t/T_(1/2)). For noninteger numbers of half-lives, logarithms are the natural exact answer."
+    },
+    {
+      "question": "For a particular nucleus, the neutron separation energy is 7 MeV and the proton separation energy is 12 MeV. A 9 MeV photon is absorbed by the nucleus. Ignoring other reaction channels, which single-nucleon emission is energetically possible?",
+      "choices": [
+        "neutron emission only",
+        "proton emission only",
+        "both neutron and proton emission",
+        "neither neutron nor proton emission",
+        "the answer depends only on the nuclear radius"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nEmitting one nucleon requires at least that nucleon's separation energy. The 9 MeV photon exceeds the 7 MeV neutron separation energy, so neutron emission is energetically open. It does not reach the 12 MeV proton separation threshold, so proton emission is closed under the stated assumptions.\n\n90-SECOND SOLUTION\nCompare 9 MeV with the two thresholds: 9>7 but 9<12. Only the neutron channel opens.\n\nWHAT TO MEMORIZE\nA separation energy is the minimum energy required to remove that nucleon. A reaction channel is energetically open only when the available energy reaches its threshold."
+    },
+    {
+      "question": "In a simplified semi-empirical mass formula, all terms except the pairing term are equal for two isobars of the same A. The pairing contribution to the binding energy is +a_p/sqrt(A) for an even-even nucleus and -a_p/sqrt(A) for an odd-odd nucleus. The even-even isobar is therefore",
+      "choices": [
+        "less bound by 2a_p/sqrt(A)",
+        "less bound by a_p/sqrt(A)",
+        "more bound by 2a_p/sqrt(A)",
+        "more bound by a_p/sqrt(A)",
+        "equally bound"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe even-even isobar receives +a_p/sqrt(A) in binding energy, whereas the odd-odd isobar receives -a_p/sqrt(A). Their difference is [+a_p/sqrt(A)]-[-a_p/sqrt(A)]=2a_p/sqrt(A). Thus the even-even nucleus is more strongly bound by that amount.\n\n90-SECOND SOLUTION\nThe comparison runs from minus one pairing unit to plus one pairing unit, a separation of two units.\n\nWHAT TO MEMORIZE\nThe pairing term favors even-even nuclei and disfavors odd-odd nuclei. When comparing the two signs, remember that the difference is twice the magnitude of one term."
+    },
+    {
+      "question": "A target nucleus captures a neutron whose kinetic energy is negligible, forming the same isotope one mass unit heavier in an excited state. The neutron separation energy of the final ground-state nucleus is 6.5 MeV. The total energy of the gamma rays emitted as the compound nucleus reaches its ground state is approximately",
+      "choices": [
+        "0",
+        "3.25 MeV",
+        "5.5 MeV",
+        "6.5 MeV",
+        "13 MeV"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nCapturing a neutron into the final nucleus releases approximately its neutron separation energy: that is the energy required to reverse the process and remove the neutron. With negligible incident kinetic energy, the compound nucleus begins about 6.5 MeV above the final ground state. A gamma cascade may divide this energy among several photons, but their total energy is approximately 6.5 MeV.\n\n90-SECOND SOLUTION\nNeutron capture and neutron removal are reverse processes. Negligible incoming kinetic energy means the capture releases the 6.5 MeV separation energy.\n\nWHAT TO MEMORIZE\nFor radiative capture, the excitation energy is approximately separation energy plus projectile center-of-mass kinetic energy. Cascade photon energies add to the total excitation energy."
+    },
+    {
+      "question": "In experiment I, a nonrelativistic ion of kinetic energy K strikes an identical ion at rest. In experiment II, two identical ions, each of kinetic energy K, collide head-on. The ratio of the kinetic energy available in the center-of-mass frame in experiment II to that in experiment I is",
+      "choices": [
+        "4",
+        "2",
+        "1",
+        "1/2",
+        "1/4"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nFor equal projectile and target masses with the target at rest, half the projectile kinetic energy is center-of-mass motion, leaving K/2 available internally. In the head-on collider, the total momentum is zero, so the center of mass is stationary and both beam energies are available: 2K. The ratio is (2K)/(K/2)=4.\n\n90-SECOND SOLUTION\nEqual-mass fixed target: available energy K/2. Equal opposing beams: available energy 2K. Dividing gives 4.\n\nWHAT TO MEMORIZE\nFixed-target experiments waste energy in center-of-mass motion. Symmetric colliding beams have zero total momentum, so all beam kinetic energy is available for reactions."
+    },
+    {
+      "question": "An excited nuclear level decays to the ground state either directly or through one intermediate level. The two photons in the cascade have energies 0.70 MeV and 1.10 MeV. Neglecting recoil, the direct-transition photon energy is",
+      "choices": [
+        "0.40 MeV",
+        "1.80 MeV",
+        "0.77 MeV",
+        "1.10 MeV",
+        "2.20 MeV"
+      ],
+      "answer": "B",
+      "image": "images/nuclear-physics-30/q08.png",
+      "explanation": "WORKED SOLUTION\nBoth routes begin at the same upper level and end at the same ground state, so they release the same total energy. The cascade releases 0.70+1.10=1.80 MeV. Neglecting recoil, the direct photon therefore has energy 1.80 MeV.\n\n90-SECOND SOLUTION\nA direct transition spans both cascade gaps, so add the two photon energies: 0.70+1.10=1.80 MeV.\n\nWHAT TO MEMORIZE\nLevel-energy differences add along a cascade. A direct photon between the same endpoints has energy equal to the sum of the cascade photon energies."
+    },
+    {
+      "question": "A narrow neutron beam passes through material with number density n and absorption cross section sigma such that n sigma = 0.20 cm^(-1). Neglecting scattering back into the beam, what thickness reduces the transmitted intensity by one half?",
+      "choices": [
+        "0.14 cm",
+        "1.0 cm",
+        "3.5 cm",
+        "5.0 cm",
+        "10 cm"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nAttenuation obeys I/I_0=exp(-n sigma x). For half transmission, exp(-0.20x)=1/2. Thus 0.20x=ln2 and x=0.693/0.20=3.47 cm, most nearly 3.5 cm.\n\n90-SECOND SOLUTION\nA half-value thickness is ln2 divided by the attenuation coefficient: 0.69/0.20 is about 3.5 cm.\n\nWHAT TO MEMORIZE\nFor I=I_0 exp(-mu x), the half-value thickness is x_(1/2)=ln2/mu. Here the macroscopic coefficient is mu=n sigma."
+    },
+    {
+      "question": "At a fixed scattering angle, the Rutherford differential cross section is proportional to Z^2/K^2 for an alpha particle scattered from a heavy target of charge Ze and incident kinetic energy K. If Z and K are both doubled, the differential cross section at that angle is",
+      "choices": [
+        "one fourth as large",
+        "one half as large",
+        "twice as large",
+        "unchanged",
+        "four times as large"
+      ],
+      "answer": "D",
+      "image": "images/nuclear-physics-30/q10.png",
+      "explanation": "WORKED SOLUTION\nAt fixed angle the cross section scales as Z^2/K^2. Doubling Z multiplies it by 2^2=4, while doubling K divides it by 2^2=4. The factors cancel, leaving the cross section unchanged.\n\n90-SECOND SOLUTION\nBoth quantities are squared: the numerator gains a factor 4 and the denominator gains the same factor 4.\n\nWHAT TO MEMORIZE\nRutherford scattering at fixed angle scales as target charge squared and inverse projectile energy squared."
+    },
+    {
+      "question": "In the tunneling description of alpha decay, the decay probability contains a factor exp[-2 integral kappa(r) dr] through the Coulomb barrier. If the alpha-particle kinetic energy is increased slightly while the nuclear charge is unchanged, the decay rate generally",
+      "choices": [
+        "increases sharply because the forbidden-region integral decreases",
+        "decreases sharply because the barrier becomes wider",
+        "is unchanged because the alpha still tunnels",
+        "changes only through the alpha rest mass",
+        "becomes exactly zero unless the alpha energy exceeds the barrier maximum"
+      ],
+      "answer": "A",
+      "image": "images/nuclear-physics-30/q11.png",
+      "explanation": "WORKED SOLUTION\nInside the forbidden region, the wavefunction is suppressed by an exponential involving the integral of kappa. Raising the alpha energy reduces kappa and moves the outer turning point inward, so the forbidden-region integral decreases. Because that integral appears in a negative exponential, even a modest decrease can sharply increase the tunneling probability and decay rate. The alpha need not rise above the barrier to escape.\n\n90-SECOND SOLUTION\nMore alpha energy means a thinner and less strongly forbidden barrier. A smaller negative exponent produces a much larger decay probability.\n\nWHAT TO MEMORIZE\nTunneling probabilities are exponentially sensitive to barrier width and to the gap between barrier height and particle energy. This explains the strong energy dependence of alpha-decay lifetimes."
+    },
+    {
+      "question": "Electron capture by a nucleus is commonly followed by emission of characteristic x rays primarily because the capture",
+      "choices": [
+        "heats the entire nucleus until it radiates",
+        "leaves a vacancy in an inner atomic electron shell",
+        "always produces an energetic positron",
+        "converts an orbital electron directly into an x-ray photon",
+        "causes the daughter nucleus to fission"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nElectron capture most often removes an inner-shell electron because its wavefunction has appreciable density at the nucleus. The atom is then left with an inner-shell vacancy. An electron from a higher shell drops into the vacancy and releases the atomic energy difference as a characteristic x ray, or transfers it to an Auger electron.\n\n90-SECOND SOLUTION\nThe nucleus captures an inner electron, leaving an atomic hole. Refilling that hole produces the characteristic x ray.\n\nWHAT TO MEMORIZE\nElectron capture changes the nucleus and also leaves an atomic vacancy. The subsequent atomic rearrangement produces characteristic x rays or Auger electrons."
+    },
+    {
+      "question": "A beta-minus decay has Q = 3.0 MeV and populates a daughter level 1.2 MeV above the daughter ground state. Neglecting nuclear recoil, the maximum kinetic energy of the emitted electron for this branch is",
+      "choices": [
+        "0.6 MeV",
+        "1.2 MeV",
+        "3.0 MeV",
+        "4.2 MeV",
+        "1.8 MeV"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nPopulating the excited daughter consumes 1.2 MeV of the 3.0 MeV Q value, leaving 1.8 MeV for kinetic energy. The beta electron reaches its endpoint when the antineutrino carries arbitrarily little kinetic energy; with recoil neglected, K_(e,max)=3.0-1.2=1.8 MeV.\n\n90-SECOND SOLUTION\nSubtract the daughter excitation before assigning energy to the beta particles: 3.0-1.2=1.8 MeV. At the endpoint the electron takes essentially all of it.\n\nWHAT TO MEMORIZE\nA beta branch feeding a daughter excitation E* has endpoint Q-E*. Different daughter levels therefore produce different beta endpoints."
+    },
+    {
+      "question": "An electron-capture decay has an atomic-mass Q value of 2.4 MeV and populates a daughter level 0.9 MeV above its ground state. Neglecting recoil and atomic binding energies, the emitted neutrino energy is approximately",
+      "choices": [
+        "0.9 MeV",
+        "2.4 MeV",
+        "3.3 MeV",
+        "0.6 MeV",
+        "1.5 MeV"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nElectron capture is effectively a two-body nuclear decay when recoil and atomic binding are neglected: the excited daughter and neutrino have fixed energies. Populating the daughter excitation uses 0.9 MeV, so the neutrino receives approximately 2.4-0.9=1.5 MeV.\n\n90-SECOND SOLUTION\nFor this electron-capture line, subtract the excitation energy from Q: 2.4-0.9=1.5 MeV.\n\nWHAT TO MEMORIZE\nElectron capture produces nearly monoenergetic neutrinos for a specified daughter level. The neutrino energy is approximately Q-E* after small recoil and binding corrections."
+    },
+    {
+      "question": "A nuclear level with J^pi = 3+ decays to a level with J^pi = 1-. For a photon multipole of order L, take |J_i-J_f| <= L <= J_i+J_f. Electric EL radiation changes parity by (-1)^L, while magnetic ML radiation changes parity by (-1)^(L+1). What is the lowest allowed multipolarity?",
+      "choices": [
+        "E1",
+        "M1",
+        "E2",
+        "E3",
+        "M2"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe angular-momentum change is |3-1|=2, so the lowest possible photon multipole has L=2. The nuclear parity changes from positive to negative. For L=2, electric E2 radiation changes parity by (-1)^2=+1 and therefore would preserve parity; magnetic M2 radiation changes parity by (-1)^(2+1)=-1 and gives the required reversal. The lowest allowed multipolarity is M2.\n\n90-SECOND SOLUTION\nDelta J=2 forces L at least 2. At L=2, only the supplied magnetic parity factor is negative, so choose M2.\n\nWHAT TO MEMORIZE\nYou do not need a multipole table here: use the stated L range and parity factors. First find the smallest allowed L, then test electric versus magnetic parity."
+    },
+    {
+      "question": "A nuclear excited state has an unusually long lifetime even though lower-energy states are available. The most likely explanation is that its decay",
+      "choices": [
+        "would violate energy conservation",
+        "must emit a photon with zero energy",
+        "requires a strongly hindered transition involving a large angular-momentum change",
+        "can occur only by the strong interaction",
+        "is prevented because nuclei cannot emit photons"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nGamma transitions that require a large change in angular momentum are strongly suppressed because the photon field must carry high multipolarity. The excited state can then survive much longer than ordinary nuclear excited states and is called an isomer. Energy conservation is not violated; the decay is merely hindered.\n\n90-SECOND SOLUTION\nA long-lived excited nucleus usually signals a difficult angular-momentum or parity change, not a lack of lower levels.\n\nWHAT TO MEMORIZE\nA nuclear isomer is a metastable excited state. Large multipolarity and unfavorable parity changes can strongly hinder its electromagnetic decay."
+    },
+    {
+      "question": "For a nucleon with l = 3 and s = 1/2, the spin-orbit Hamiltonian is H_so = -a L dot S / hbar^2, where a > 0. Using L dot S = [j(j+1)-l(l+1)-s(s+1)]hbar^2/2, the energy separation E_(5/2)-E_(7/2) is",
+      "choices": [
+        "a/2",
+        "3a/2",
+        "2a",
+        "7a/2",
+        "7a"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nFor j=7/2, L dot S/hbar^2=[(7/2)(9/2)-3(4)-(1/2)(3/2)]/2=3/2, so E_(7/2)=-3a/2. For j=5/2, the bracket gives -2, so E_(5/2)=+2a. Therefore E_(5/2)-E_(7/2)=2a-(-3a/2)=7a/2.\n\n90-SECOND SOLUTION\nFor s=1/2, the aligned j=l+1/2 state has L dot S/hbar^2=l/2=3/2; the anti-aligned state has -(l+1)/2=-2. Apply the minus sign in H and subtract: 2a+1.5a=3.5a.\n\nWHAT TO MEMORIZE\nFor s=1/2, L dot S/hbar^2 equals l/2 for j=l+1/2 and -(l+1)/2 for j=l-1/2. The stem also supplies the general formula, so no coefficient table is required."
+    },
+    {
+      "question": "A p shell is split by H_so = -a L dot S / hbar^2 with a > 0. Which ordering results?",
+      "choices": [
+        "p_(3/2) lies below p_(1/2)",
+        "p_(1/2) lies below p_(3/2)",
+        "the two levels remain degenerate",
+        "the ordering depends on m_j",
+        "only the p_(1/2) level exists"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nFor l=1, the j=3/2 state is the aligned j=l+1/2 partner and has L dot S=+hbar^2/2. The j=1/2 state has L dot S=-hbar^2. Since H_so=-a L dot S/hbar^2 with a>0, the aligned p_(3/2) state receives a negative shift and lies lower, while p_(1/2) shifts upward.\n\n90-SECOND SOLUTION\nThe Hamiltonian has a minus sign, so positive L dot S lowers the energy. The aligned j=l+1/2 partner is therefore lower.\n\nWHAT TO MEMORIZE\nWith the nuclear sign convention supplied here, the high-j partner j=l+1/2 lies below j=l-1/2. Always check the sign of the stated Hamiltonian rather than assuming it."
+    },
+    {
+      "question": "For an f shell, H_so = -a L dot S/hbar^2 gives energy shifts -3a/2 for j = 7/2 and +2a for j = 5/2. When each level is weighted by its degeneracy 2j+1, the mean energy of all 14 states is",
+      "choices": [
+        "shifted downward by a/2",
+        "unchanged from the unsplit f-shell energy",
+        "shifted upward by a/2",
+        "shifted upward by 3a/2",
+        "shifted upward by 2a"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nThe j=7/2 level has degeneracy 2j+1=8 and shift -3a/2. The j=5/2 level has degeneracy 6 and shift +2a. The weighted mean shift is [8(-3a/2)+6(2a)]/14=(-12a+12a)/14=0. Thus spin-orbit coupling splits the shell but leaves its degeneracy-weighted centroid unchanged.\n\n90-SECOND SOLUTION\nMultiply shift by state count: 8(-1.5a)=-12a and 6(2a)=+12a. They cancel.\n\nWHAT TO MEMORIZE\nSpin-orbit splitting redistributes the states around the unsplit centroid. Weight energy averages by the degeneracy 2j+1, not by the number of displayed level lines."
+    },
+    {
+      "question": "Two nuclear single-particle levels have the same radial quantum number and l = 2, but total angular momenta j = 5/2 and j = 3/2. Their separation is most naturally identified as",
+      "choices": [
+        "a rotational band",
+        "a vibrational multiplet",
+        "a spin-orbit doublet",
+        "an isospin doublet",
+        "a hyperfine splitting caused by atomic electrons"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nCoupling orbital l=2 to spin s=1/2 produces the two total angular momenta j=l+1/2=5/2 and j=l-1/2=3/2. Because the radial and orbital quantum numbers are otherwise the same, the pair is precisely a spin-orbit doublet. A rotational band instead consists of collective states of the whole nucleus.\n\n90-SECOND SOLUTION\nSame n and l, with j differing only by the two ways to add spin 1/2, is the signature of spin-orbit partners.\n\nWHAT TO MEMORIZE\nA spin-1/2 particle in an orbital with l>0 produces partners j=l plus or minus 1/2. They share l and parity but generally have different energies."
+    },
+    {
+      "question": "In a simple independent-particle shell model, an odd-A nucleus consists of an even-even 0+ core plus one valence neutron in the 1f_(7/2) orbital. The predicted ground-state spin and parity are",
+      "choices": [
+        "1/2+",
+        "3/2-",
+        "5/2+",
+        "7/2-",
+        "7/2+"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nThe even-even core contributes J^pi=0+, so the valence neutron determines the odd-A spin and parity. Its orbital label gives j=7/2. Orbital parity is (-1)^l; an f orbital has l=3 and therefore negative parity. The prediction is J^pi=7/2-.\n\n90-SECOND SOLUTION\nRead j directly from f_(7/2), then use f means l=3, so parity is negative.\n\nWHAT TO MEMORIZE\nFor one valence particle outside a 0+ core, J=j and parity is (-1)^l. The letters s,p,d,f correspond to l=0,1,2,3."
+    },
+    {
+      "question": "Two identical valence neutrons occupy the same j = 5/2 subshell outside an even-even closed core. The nuclear pairing interaction most strongly favors a ground state in which the two neutrons couple to",
+      "choices": [
+        "J = 5",
+        "J = 4",
+        "J = 3",
+        "J = 2",
+        "J = 0"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe short-range nuclear pairing interaction energetically favors two like nucleons forming a time-reversed pair. Their angular momenta cancel, producing total J=0. This is why even-even nuclei overwhelmingly have 0+ ground states. The other listed couplings may describe excited configurations but are not the favored paired ground state.\n\n90-SECOND SOLUTION\nTwo identical valence nucleons under an attractive pairing interaction favor the fully paired J=0 state.\n\nWHAT TO MEMORIZE\nNuclear pairing favors J=0 pairs of like nucleons and helps explain 0+ even-even ground states and the odd-even staggering of nuclear masses."
+    },
+    {
+      "question": "A closed-shell nucleus has ground state 0+. Removing one neutron from a filled 1d_(3/2) subshell produces a one-hole nucleus. In the independent-particle model, the hole state has spin and parity",
+      "choices": [
+        "3/2+",
+        "3/2-",
+        "1/2+",
+        "2+",
+        "0+"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nA closed shell has J^pi=0+. Removing one particle from a filled j subshell leaves a hole that transforms with the same angular momentum j as the missing particle. The 1d_(3/2) hole therefore has J=3/2. Since d means l=2, its parity is (-1)^2=+, giving 3/2+.\n\n90-SECOND SOLUTION\nA one-hole state inherits the missing orbital's j and parity: d_(3/2) gives 3/2+.\n\nWHAT TO MEMORIZE\nRelative to a 0+ closed core, one particle and one hole in the same nlj orbital have the same spin and parity, although their energies and magnetic moments need not be identical."
+    },
+    {
+      "question": "An odd-odd nucleus has a valence proton in p_(3/2) and a valence neutron in d_(5/2). Ignoring residual interactions, which total spin-parity is NOT obtainable by angular-momentum coupling?",
+      "choices": [
+        "1-",
+        "0-",
+        "2-",
+        "3-",
+        "4-"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nAdding j_p=3/2 and j_n=5/2 gives every integer J from |5/2-3/2|=1 through 5/2+3/2=4: J=1,2,3,4. The parity is the product of the orbital parities. The p proton has negative parity and the d neutron positive parity, so all coupled states are negative. Thus 0- is not obtainable.\n\n90-SECOND SOLUTION\nAngular-momentum endpoints are 1 and 4, so 0 is excluded immediately. The p times d parity is negative.\n\nWHAT TO MEMORIZE\nWhen coupling j_1 and j_2, J runs from |j_1-j_2| to j_1+j_2 in unit steps. Multiply the two single-particle parities."
+    },
+    {
+      "question": "Beginning from an empty well, suppose the single-nucleon subshells are filled in the order 1s_(1/2), 1p_(3/2), 1p_(1/2), 1d_(5/2), 2s_(1/2), 1d_(3/2), 1f_(7/2). Each subshell holds 2j+1 identical nucleons. A shell closure immediately after filling 1f_(7/2) occurs at nucleon number",
+      "choices": [
+        "20",
+        "24",
+        "28",
+        "32",
+        "40"
+      ],
+      "answer": "C",
+      "image": "images/nuclear-physics-30/q25.png",
+      "explanation": "WORKED SOLUTION\nEach subshell holds 2j+1 nucleons. The capacities in the stated order are 2,4,2,6,2,4,8. Their cumulative total through 1d_(3/2) is 20; filling 1f_(7/2) adds 8 more, producing a closure at 28.\n\n90-SECOND SOLUTION\nUse the familiar cumulative closures through the listed levels: 2, 6, 8, 14, 16, 20, then add the eight states of f_(7/2) to reach 28.\n\nWHAT TO MEMORIZE\nA j subshell contains 2j+1 states for one nucleon species. The problem supplies the ordering, so the task is counting rather than memorizing the full nuclear level sequence."
+    },
+    {
+      "question": "Spin-orbit coupling separates levels with j = l+1/2 and j = l-1/2 but does not change the orbital quantum number l. Therefore the two members of a nuclear spin-orbit pair always have",
+      "choices": [
+        "the same energy",
+        "the same total angular momentum j",
+        "opposite parity",
+        "the same parity",
+        "the same degeneracy"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nParity depends only on orbital angular momentum: pi=(-1)^l. Spin-orbit coupling changes how the same l combines with s=1/2 to produce two j values, but it does not change l. Both partners therefore have the same parity. Their j values, energies, and degeneracies are different.\n\n90-SECOND SOLUTION\nBoth partners share l, and parity is only (-1)^l. Therefore their parities match.\n\nWHAT TO MEMORIZE\nSpin-orbit partners are j=l plus or minus 1/2. They have the same n, l, and parity, but different j and generally different energies."
+    },
+    {
+      "question": "In the Schmidt single-particle model, a neutron in a j = l + 1/2 orbital has magnetic moment mu = g_s mu_N/2 because g_l = 0. Using g_s = -3.826, its predicted magnetic moment is most nearly",
+      "choices": [
+        "+3.83 mu_N",
+        "+1.91 mu_N",
+        "0",
+        "-3.83 mu_N",
+        "-1.91 mu_N"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nThe supplied Schmidt expression is mu=g_s mu_N/2. Substituting g_s=-3.826 gives mu=(-3.826/2)mu_N=-1.913mu_N, most nearly -1.91mu_N. The negative sign reflects the neutron spin magnetic moment; no value needs to be recalled because g_s is given.\n\n90-SECOND SOLUTION\nHalve -3.826: -1.913, which rounds to -1.91mu_N.\n\nWHAT TO MEMORIZE\nUse the formula and g factor supplied in the stem. A neutron has g_l=0 in the simplest model, so its single-particle moment comes from spin."
+    },
+    {
+      "question": "A rotational band has excitation energies E_J = A J(J+1) for J = 0, 2, 4, .... If its 2+ level lies 0.18 MeV above the 0+ ground state, the excitation energy of its 4+ level is",
+      "choices": [
+        "0.30 MeV",
+        "0.36 MeV",
+        "0.45 MeV",
+        "0.54 MeV",
+        "0.60 MeV"
+      ],
+      "answer": "E",
+      "image": "images/nuclear-physics-30/q28.png",
+      "explanation": "WORKED SOLUTION\nFor J=2, E_2=A(2)(3)=6A=0.18 MeV, so A=0.030 MeV. For J=4, E_4=A(4)(5)=20A=0.60 MeV. Equivalently, E_4/E_2=20/6=10/3.\n\n90-SECOND SOLUTION\nAvoid solving for A: multiply 0.18 by [4(5)]/[2(3)]=20/6=10/3. One third of 0.18 is 0.06, so ten thirds gives 0.60 MeV.\n\nWHAT TO MEMORIZE\nA simple rotational band has E_J proportional to J(J+1). Ratios are usually faster than calculating the rotational constant."
+    },
+    {
+      "question": "For similarly shaped nuclei, take the moment of inertia to scale as I proportional to M R^2, with M proportional to A and R proportional to A^(1/3). The rotational constant hbar^2/(2I) for a nucleus with twice the mass number is multiplied by",
+      "choices": [
+        "2^(-5/3)",
+        "2^(-2/3)",
+        "1/2",
+        "2^(2/3)",
+        "2^(5/3)"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nThe moment of inertia scales as I proportional to MR^2. With M proportional to A and R proportional to A^(1/3), I is proportional to A times A^(2/3)=A^(5/3). The rotational constant is inversely proportional to I, so doubling A multiplies it by 2^(-5/3).\n\n90-SECOND SOLUTION\nCombine the powers first: A times (A^(1/3))^2=A^(5/3). Then invert because the rotational constant contains 1/I.\n\nWHAT TO MEMORIZE\nFor similarly shaped nuclei, rigid-body I scales roughly as A^(5/3), so rotational level spacings shrink as nuclei become heavier."
+    },
+    {
+      "question": "Delayed neutrons constitute only a small fraction of the neutrons released in a reactor, but they are crucial for control because they",
+      "choices": [
+        "carry away nearly all of the fission energy",
+        "lengthen the effective time scale on which the chain reaction changes",
+        "prevent any prompt neutrons from being absorbed",
+        "make every fission release exactly one neutron",
+        "eliminate the need for a moderator"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nPrompt neutrons are emitted almost immediately, so a chain reaction governed only by them would change on a time scale far too short for mechanical control systems. Delayed neutrons emerge from certain fission products on much longer time scales. Even though they are a small fraction, they greatly lengthen the effective reactor response time and make controlled operation possible.\n\n90-SECOND SOLUTION\nThe word 'delayed' is the key: those neutrons slow the growth or decline of the chain reaction to a controllable time scale.\n\nWHAT TO MEMORIZE\nDelayed neutrons are crucial for reactor kinetics because they lengthen the response time. They are not the main carriers of fission energy and do not replace moderators or control rods."
+    }
+  ],
+  "added": "2026-10-22"
 }
 ];
