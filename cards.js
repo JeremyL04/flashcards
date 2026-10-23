@@ -33228,5 +33228,268 @@ const EXAMS = [
     }
   ],
   "added": "2026-10-23"
+},
+{
+  "name": "Non-Inertial Frames & Coriolis (20 Questions)",
+  "category": "cm",
+  "cards": [
+    {
+      "question": "A bus accelerates horizontally at 3.0 m/s^2. A small mass hangs at rest relative to the bus from a light string. Taking g=10 m/s^2, the angle theta that the string makes with the vertical satisfies",
+      "choices": [
+        "tan theta=10/3",
+        "tan theta=3/10",
+        "sin theta=3/10",
+        "cos theta=3/10",
+        "theta=0"
+      ],
+      "answer": "B",
+      "image": "images/non-inertial-frames-20/q01_accelerating_bus_pendulum.png",
+      "explanation": "WORKED SOLUTION\nIn the accelerating bus frame, the mass is at rest under gravity mg downward and a fictitious force ma opposite the bus's acceleration. Resolving the tension gives T sin theta=ma and T cos theta=mg. Dividing yields tan theta=a/g=3/10.\n\n90-SECOND SOLUTION\nDraw effective gravity as the vector sum of g downward and a backward. The tilt satisfies tan theta=horizontal/vertical=a/g=3/10.\n\nWHAT TO MEMORIZE\nIn a frame with translational acceleration a_frame, add a fictitious acceleration -a_frame. A hanging mass aligns with the resulting effective-gravity vector."
+    },
+    {
+      "question": "A pendulum of length L is inside an elevator accelerating upward with acceleration g. For small oscillations about its equilibrium position, its angular frequency is",
+      "choices": [
+        "sqrt(2g/L)",
+        "sqrt(g/2L)",
+        "sqrt(g/L)",
+        "2sqrt(g/L)",
+        "zero"
+      ],
+      "answer": "A",
+      "image": "images/non-inertial-frames-20/q02_elevator_pendulum.png",
+      "explanation": "WORKED SOLUTION\nAn elevator accelerating upward with acceleration a has effective downward gravity g_eff=g+a. Here a=g, so g_eff=2g. The small-angle pendulum frequency is therefore omega=sqrt(g_eff/L)=sqrt(2g/L).\n\n90-SECOND SOLUTION\nUpward elevator acceleration makes the bob effectively heavier: replace g by g+a=2g in omega=sqrt(g/L).\n\nWHAT TO MEMORIZE\nFor a pendulum in a vertically accelerating frame, use the magnitude of the effective gravity in the ordinary small-angle formula."
+    },
+    {
+      "question": "A puck is initially held at rest at radius r on a horizontal platform rotating at constant angular speed Omega. The surface is frictionless. Immediately after the puck is released, its acceleration as measured in the rotating frame is",
+      "choices": [
+        "zero",
+        "Omega^2 r inward",
+        "2Omega^2 r outward",
+        "Omega^2 r outward",
+        "2Omega^2 r inward"
+      ],
+      "answer": "D",
+      "image": "images/non-inertial-frames-20/q03_released_puck.png",
+      "explanation": "WORKED SOLUTION\nImmediately after release, the puck has zero velocity relative to the platform, so its Coriolis acceleration is initially zero. The platform has constant angular speed, so there is no Euler term. The only fictitious acceleration at that instant is the centrifugal acceleration Omega^2 r directed radially outward.\n\n90-SECOND SOLUTION\nAt release v_rel=0, eliminating Coriolis. Constant Omega eliminates Euler acceleration. What remains is Omega^2 r outward.\n\nWHAT TO MEMORIZE\nIn a uniformly rotating frame, centrifugal acceleration is outward and equals Omega^2 r. Coriolis acceleration requires nonzero velocity relative to the frame."
+    },
+    {
+      "question": "A platform rotates counterclockwise as viewed from above. A particle moves clockwise along a circular groove relative to the platform. Using a_C=-2 Omega cross v_rel, the Coriolis acceleration is directed",
+      "choices": [
+        "tangentially clockwise",
+        "tangentially counterclockwise",
+        "radially inward",
+        "radially outward",
+        "vertically downward"
+      ],
+      "answer": "C",
+      "image": "images/non-inertial-frames-20/q04_clockwise_particle.png",
+      "explanation": "WORKED SOLUTION\nTake Omega upward because the platform rotates counterclockwise. Clockwise tangential motion means v_rel points in the negative tangential direction. The cross product Omega cross v_rel points radially outward, so the leading minus sign in a_C=-2 Omega cross v_rel makes the Coriolis acceleration radially inward.\n\n90-SECOND SOLUTION\nUse the right-hand rule for Omega cross v_rel, then reverse the result because of the minus sign. The final direction is inward.\n\nWHAT TO MEMORIZE\nCoriolis acceleration is -2 Omega cross v_rel. Its direction is perpendicular to both the rotation axis and the relative velocity."
+    },
+    {
+      "question": "A bead moves radially outward at constant speed u in a narrow straight groove on a horizontal turntable rotating with constant angular speed Omega. What magnitude of sideways force must the groove exert on the bead to prevent motion across the groove?",
+      "choices": [
+        "m Omega u/2",
+        "m Omega u",
+        "m Omega^2 u",
+        "m Omega^2 r",
+        "2m Omega u"
+      ],
+      "answer": "E",
+      "image": "images/non-inertial-frames-20/q05_radial_groove.png",
+      "explanation": "WORKED SOLUTION\nFor radial motion, v_rel is perpendicular to the vertical rotation axis, so the Coriolis acceleration has magnitude 2 Omega u and is sideways. The centrifugal acceleration is radial and therefore lies along the groove. To prevent sideways motion, the groove must exert a force that cancels the Coriolis term, with magnitude 2m Omega u.\n\n90-SECOND SOLUTION\nThe sideways term is Coriolis: a_C=2Omega u. Multiply by m. The radial centrifugal term does not push across the groove.\n\nWHAT TO MEMORIZE\nA radial guide on a rotating platform must supply a transverse reaction of magnitude 2m Omega v_rel when the relative velocity is perpendicular to the rotation axis."
+    },
+    {
+      "question": "A 60 kg astronaut stands against the inner wall of a rotating cylindrical spacecraft of radius 100 m. The wall speed is 10 m/s. The astronaut's apparent weight is",
+      "choices": [
+        "6 N",
+        "60 N",
+        "100 N",
+        "600 N",
+        "6000 N"
+      ],
+      "answer": "B",
+      "image": "images/non-inertial-frames-20/q06_rotating_habitat.png",
+      "explanation": "WORKED SOLUTION\nThe wall supplies the astronaut's centripetal force. Its magnitude is N=mv^2/R=(60)(10^2)/100=60 N. In the rotating frame, this inward normal force balances the outward centrifugal force and is felt as apparent weight.\n\n90-SECOND SOLUTION\nUse v^2/R rather than solving for Omega: 10^2/100=1 m/s^2, so N=60 N.\n\nWHAT TO MEMORIZE\nArtificial gravity in a rotating habitat is the required centripetal acceleration: g_artificial=Omega^2R=v^2/R."
+    },
+    {
+      "question": "A car travels at speed v around a level circular curve of radius R. A small mass suspended from the car's ceiling hangs at a fixed angle theta from the vertical. The angle satisfies",
+      "choices": [
+        "tan theta=v^2/(Rg)",
+        "tan theta=Rg/v^2",
+        "sin theta=v^2/(Rg)",
+        "tan theta=v/(Rg)",
+        "theta=0"
+      ],
+      "answer": "A",
+      "image": "images/non-inertial-frames-20/q07_turning_car_pendulum.png",
+      "explanation": "WORKED SOLUTION\nIn the car frame, the mass is stationary under gravity mg downward and a fictitious force mv^2/R horizontally outward from the curve. The string aligns opposite their vector sum. Resolving the tension gives tan theta=(mv^2/R)/(mg)=v^2/(Rg).\n\n90-SECOND SOLUTION\nThe car's inward centripetal acceleration produces an outward fictitious force. Horizontal divided by vertical gives tan theta=v^2/(Rg).\n\nWHAT TO MEMORIZE\nFor a mass hanging in a vehicle with horizontal acceleration a, tan theta=a/g. On a level circular curve, a=v^2/R."
+    },
+    {
+      "question": "In a frame rotating at constant angular speed Omega, the centrifugal potential energy of a mass m at distance r from the axis may be written U_c=-(1/2)m Omega^2 r^2. The change in U_c when the mass moves from r to 2r is",
+      "choices": [
+        "+(1/2)m Omega^2 r^2",
+        "+(3/2)m Omega^2 r^2",
+        "-(1/2)m Omega^2 r^2",
+        "-(3/2)m Omega^2 r^2",
+        "-2m Omega^2 r^2"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nEvaluate the supplied potential at both radii. U_c(2r)=-(1/2)mOmega^2(2r)^2=-2mOmega^2r^2, while U_c(r)=-(1/2)mOmega^2r^2. Thus Delta U_c=U_c(2r)-U_c(r)=-(3/2)mOmega^2r^2.\n\n90-SECOND SOLUTION\nBecause U_c is proportional to -r^2, doubling r multiplies it by 4. The change is -4/2+1/2=-3/2 times mOmega^2r^2.\n\nWHAT TO MEMORIZE\nThe centrifugal potential is negative and becomes more negative farther from the rotation axis, consistent with an outward centrifugal force."
+    },
+    {
+      "question": "A train accelerates to the right with constant acceleration a. A passenger throws a ball vertically upward relative to the train with speed u from the point x=0. Neglect air resistance. When the ball returns to its launch height, its horizontal position relative to the train is",
+      "choices": [
+        "2au^2/g^2 to the right",
+        "au^2/g^2 to the left",
+        "2au^2/g^2 to the left",
+        "au/g to the left",
+        "zero"
+      ],
+      "answer": "C",
+      "image": "images/non-inertial-frames-20/q09_train_projectile.png",
+      "explanation": "WORKED SOLUTION\nThe ball's vertical flight time is T=2u/g. In the accelerating train frame it has constant horizontal acceleration -a and initial horizontal velocity zero. Therefore Delta x=-(1/2)aT^2=-(1/2)a(2u/g)^2=-2au^2/g^2, so it lands to the left of the launch point.\n\n90-SECOND SOLUTION\nFind the ordinary up-and-down time 2u/g, then use x=(1/2)(-a)t^2.\n\nWHAT TO MEMORIZE\nA frame accelerating with a has a uniform fictitious acceleration -a. Projectile motion in that frame is ordinary constant-acceleration motion with this extra component."
+    },
+    {
+      "question": "A mass m hangs from a vertical spring of constant k inside an elevator accelerating downward with magnitude g/4. For small vertical oscillations about its shifted equilibrium position, the angular frequency is",
+      "choices": [
+        "sqrt(k/4m)",
+        "sqrt(3k/4m)",
+        "sqrt(4k/3m)",
+        "sqrt(k/m)-g/4",
+        "sqrt(k/m)"
+      ],
+      "answer": "E",
+      "image": "images/non-inertial-frames-20/q10_spring_in_elevator.png",
+      "explanation": "WORKED SOLUTION\nThe downward acceleration changes the effective gravity and therefore shifts the spring's equilibrium extension. Write the displacement from that new equilibrium as xi. The constant gravity and fictitious-force terms cancel at equilibrium, leaving m xi_ddot=-k xi. Hence omega=sqrt(k/m), independent of the elevator's constant acceleration.\n\n90-SECOND SOLUTION\nA constant force shifts a harmonic oscillator's equilibrium but does not change the curvature of its potential. The frequency remains sqrt(k/m).\n\nWHAT TO MEMORIZE\nAdding a constant force to an ideal mass-spring oscillator shifts equilibrium without changing its small-oscillation frequency."
+    },
+    {
+      "question": "An ideal Atwood machine is mounted in an elevator accelerating upward with acceleration a. The masses satisfy m_2>m_1. The magnitude of either mass's acceleration relative to the elevator is",
+      "choices": [
+        "(m_2-m_1)(g+a)/(m_1+m_2)",
+        "(m_2-m_1)g/(m_1+m_2)",
+        "(m_2-m_1)(g-a)/(m_1+m_2)",
+        "(m_1+m_2)(g+a)/(m_2-m_1)",
+        "a"
+      ],
+      "answer": "A",
+      "image": "images/non-inertial-frames-20/q11_atwood_in_elevator.png",
+      "explanation": "WORKED SOLUTION\nIn the upward-accelerating elevator, both masses behave as though gravity were g_eff=g+a. Applying the usual Atwood-machine result with this replacement gives a_rel=(m_2-m_1)g_eff/(m_1+m_2)=(m_2-m_1)(g+a)/(m_1+m_2).\n\n90-SECOND SOLUTION\nReplace g by g+a in the standard Atwood result because the elevator accelerates upward.\n\nWHAT TO MEMORIZE\nUniform translational acceleration can often be handled by replacing gravity with an effective-gravity vector before using familiar equilibrium or dynamics formulas."
+    },
+    {
+      "question": "In a small windowless laboratory, objects released from rest accelerate toward the floor at g and a scale supporting a mass m reads mg. These local observations are equally consistent with the laboratory being stationary in a uniform gravitational field or",
+      "choices": [
+        "moving at constant velocity through empty space",
+        "rotating in empty space with any angular speed",
+        "falling freely in a uniform gravitational field",
+        "accelerating upward at g in gravity-free space",
+        "accelerating downward at g in gravity-free space"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nIn gravity-free space, a laboratory accelerating upward at g leaves freely released objects inertial while the floor accelerates upward toward them. Relative to the laboratory, the objects accelerate downward at g. A supported mass requires an upward force mg from the floor, so the scale also reads mg. These are the same local observations as in a stationary laboratory with uniform downward gravity g.\n\n90-SECOND SOLUTION\nAn upward-accelerating lab creates an apparent downward gravity of equal magnitude. Setting the lab acceleration to g reproduces both the fall acceleration and the scale reading.\n\nWHAT TO MEMORIZE\nLocally, uniform gravity and uniform acceleration are equivalent. A freely falling laboratory is the complementary case: its occupants are locally weightless."
+    },
+    {
+      "question": "A stone is dropped from rest relative to the top of a tall tower in the Northern Hemisphere. Neglecting air resistance, Earth's rotation causes the stone to land slightly",
+      "choices": [
+        "north of the base",
+        "south of the base",
+        "east of the base",
+        "west of the base",
+        "at the base with no horizontal deflection"
+      ],
+      "answer": "C",
+      "image": "images/non-inertial-frames-20/q13_falling_stone_earth.png",
+      "explanation": "WORKED SOLUTION\nThe top of the tower is slightly farther from Earth's rotation axis than the base, so the stone initially has slightly more eastward tangential speed than the ground at the base. During the fall it retains this extra eastward motion and lands slightly east of the base. This is the same result obtained from the Coriolis force in the Earth-fixed frame.\n\n90-SECOND SOLUTION\nThe tower top moves east faster than the base. The dropped stone keeps that extra eastward speed, so it lands east.\n\nWHAT TO MEMORIZE\nYou need not memorize this deflection direction if you compare the eastward speeds of the release point and landing point."
+    },
+    {
+      "question": "At northern latitude lambda, a projectile moves horizontally due north with nearly constant speed v for a short time t. Keeping only Earth's vertical rotation component Omega sin lambda, its eastward Coriolis deflection is approximately",
+      "choices": [
+        "2 Omega v sin(lambda)t",
+        "Omega v cos(lambda)t^2",
+        "2 Omega v sin(lambda)t^2",
+        "Omega^2 v sin(lambda)t^2",
+        "Omega v sin(lambda)t^2"
+      ],
+      "answer": "E",
+      "image": "images/non-inertial-frames-20/q14_northward_projectile.png",
+      "explanation": "WORKED SOLUTION\nFor northward velocity v and vertical rotation component Omega sin lambda, the Coriolis acceleration has eastward magnitude a_C=2Omega v sin lambda. Over a short time it is approximately constant, so the deflection is x=(1/2)a_Ct^2=Omega v sin(lambda)t^2.\n\n90-SECOND SOLUTION\nThe factor 2 in the Coriolis acceleration cancels the factor 1/2 in constant-acceleration displacement.\n\nWHAT TO MEMORIZE\nFor short-time deflection from rest in the transverse direction, first find a_C from -2 Omega cross v and then use Delta x=(1/2)a_Ct^2."
+    },
+    {
+      "question": "In a frame rotating with angular speed Omega, a particle has speed v relative to the frame and its velocity makes an angle of 60 degrees with the rotation axis. The magnitude of its Coriolis acceleration is",
+      "choices": [
+        "Omega v",
+        "sqrt(3) Omega v",
+        "2Omega v",
+        "Omega v/2",
+        "zero"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nThe magnitude of the Coriolis acceleration is 2Omega v sin phi, where phi is the angle between Omega and v_rel. With phi=60 degrees, this is 2Omega v(sqrt(3)/2)=sqrt(3)Omega v.\n\n90-SECOND SOLUTION\nUse sin60=sqrt(3)/2; it cancels the leading factor of 2.\n\nWHAT TO MEMORIZE\nThe magnitude is 2Omega v sin phi. It vanishes for motion parallel to the rotation axis and is largest for perpendicular motion."
+    },
+    {
+      "question": "A turntable rotates counterclockwise at constant angular speed. An ant walks counterclockwise along a circular path centered on the axis. In the turntable frame, the centrifugal and Coriolis accelerations of the ant point, respectively,",
+      "choices": [
+        "outward and outward",
+        "outward and inward",
+        "inward and outward",
+        "inward and inward",
+        "outward and tangentially backward"
+      ],
+      "answer": "A",
+      "image": "images/non-inertial-frames-20/q16_ant_on_turntable.png",
+      "explanation": "WORKED SOLUTION\nCentrifugal acceleration is always radially outward. For the Coriolis term, Omega points upward and the ant's counterclockwise tangential velocity is in the positive tangential direction. Omega cross v_rel points inward, so -2 Omega cross v_rel points outward. Both fictitious accelerations are therefore outward.\n\n90-SECOND SOLUTION\nCentrifugal is outward by definition. Apply the right-hand rule to -2 Omega cross v_rel: for CCW tangential motion it is also outward.\n\nWHAT TO MEMORIZE\nOn a counterclockwise platform, counterclockwise tangential relative motion gives outward Coriolis acceleration; reversing the relative motion reverses the Coriolis direction."
+    },
+    {
+      "question": "A horizontal platform begins rotating counterclockwise from rest with angular acceleration alpha. At the initial instant, a small object is fixed at radius r and is at rest relative to the platform. Using a_E=-dOmega/dt cross r, the Euler acceleration is",
+      "choices": [
+        "alpha r radially outward",
+        "alpha r radially inward",
+        "2alpha r counterclockwise",
+        "zero",
+        "alpha r clockwise"
+      ],
+      "answer": "E",
+      "image": "images/non-inertial-frames-20/q17_euler_acceleration.png",
+      "explanation": "WORKED SOLUTION\nThe supplied Euler acceleration is a_E=-dOmega/dt cross r. Counterclockwise angular acceleration means dOmega/dt points upward. Its cross product with an outward radius points counterclockwise tangentially; the minus sign reverses this, so a_E has magnitude alpha r and points clockwise.\n\n90-SECOND SOLUTION\nUse the right-hand rule for alpha cross r, then reverse it because of the leading minus sign.\n\nWHAT TO MEMORIZE\nThe Euler term appears only when the frame's angular velocity changes: a_E=-dot(Omega) cross r. The formula is supplied here because it is less commonly tested than centrifugal and Coriolis terms."
+    },
+    {
+      "question": "A mass m can slide without friction along a radial spoke that rotates at constant angular speed Omega. It is attached to the axis by a spring of constant k and unstretched length L_0. If k>m Omega^2, the equilibrium distance of the mass from the axis is",
+      "choices": [
+        "L_0",
+        "L_0(1-m Omega^2/k)",
+        "kL_0/(k+m Omega^2)",
+        "kL_0/(k-m Omega^2)",
+        "m Omega^2 L_0/k"
+      ],
+      "answer": "D",
+      "image": "images/non-inertial-frames-20/q18_spring_on_spoke.png",
+      "explanation": "WORKED SOLUTION\nAt equilibrium in the rotating frame, the outward centrifugal force mOmega^2r balances the inward spring force k(r-L_0). Thus k(r-L_0)=mOmega^2r. Rearranging gives r(k-mOmega^2)=kL_0, so r=kL_0/(k-mOmega^2). The stated condition k>mOmega^2 keeps the denominator positive.\n\n90-SECOND SOLUTION\nWrite spring stretch as r-L_0, not r: k(r-L_0)=mOmega^2r. Collect the r terms.\n\nWHAT TO MEMORIZE\nIn rotating-frame equilibrium, balance real forces with the centrifugal force. Always express a spring force using its extension from natural length."
+    },
+    {
+      "question": "A block rests on a frictionless incline of angle theta fixed inside a cart that accelerates horizontally to the right with acceleration a. The incline rises to the right, and contact is maintained. The normal force on the block is",
+      "choices": [
+        "m(g cos theta+a sin theta)",
+        "m(g sin theta-a cos theta)",
+        "m(g cos theta-a sin theta)",
+        "m(g-a)cos theta",
+        "mg cos theta"
+      ],
+      "answer": "C",
+      "image": "images/non-inertial-frames-20/q19_accelerating_incline.png",
+      "explanation": "WORKED SOLUTION\nIn the cart frame, add a fictitious force ma to the left. Choose the outward unit normal to the incline, which has an upward component cos theta and a leftward component sin theta. Gravity contributes into the plane by mg cos theta, while the leftward fictitious force contributes away from the plane by ma sin theta. Normal balance gives N=mg cos theta-ma sin theta.\n\n90-SECOND SOLUTION\nProject effective gravity onto the plane normal. Rightward cart acceleration produces a leftward fictitious force that reduces the contact force for an incline rising right.\n\nWHAT TO MEMORIZE\nFor contact forces in an accelerating frame, add the fictitious force first and then resolve all forces perpendicular to the surface. The statement that contact is maintained ensures N remains positive."
+    },
+    {
+      "question": "On a platform rotating at constant angular speed Omega, a particle at radius r moves radially so that its velocity is perpendicular to the rotation axis. For what relative speed v are the magnitudes of its Coriolis and centrifugal accelerations equal?",
+      "choices": [
+        "Omega r/4",
+        "Omega r/2",
+        "Omega r",
+        "2Omega r",
+        "4Omega r"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nFor radial motion perpendicular to the rotation axis, the Coriolis acceleration has magnitude 2Omega v. The centrifugal acceleration has magnitude Omega^2r. Setting them equal gives 2Omega v=Omega^2r, and therefore v=Omega r/2.\n\n90-SECOND SOLUTION\nEquate 2Omega v and Omega^2r, then cancel one factor of Omega.\n\nWHAT TO MEMORIZE\nCoriolis acceleration scales with relative speed, whereas centrifugal acceleration scales with distance from the axis. Comparing the two is often faster than treating them as forces."
+    }
+  ],
+  "added": "2026-10-23"
 }
 ];
