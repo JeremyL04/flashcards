@@ -32639,5 +32639,594 @@ const EXAMS = [
     }
   ],
   "added": "2026-10-22"
+},
+{
+  "name": "Fluid Mechanics (15 Questions)",
+  "category": "cm",
+  "cards": [
+    {
+      "question": "A vertical rectangular hatch of width w extends from depth h to depth 2h below the free surface of a liquid of density rho. The liquid on the other side of the hatch is at atmospheric pressure. What is the magnitude of the net force on the hatch?",
+      "choices": [
+        "rho g w h^2",
+        "(3/2) rho g w h^2",
+        "2 rho g w h^2",
+        "3 rho g w h^2",
+        "4 rho g w h^2"
+      ],
+      "answer": "B",
+      "image": "images/fluids-15/q01_submerged_hatch.png",
+      "explanation": "WORKED SOLUTION\nAt depth y the gauge pressure is rho g y. For a plane surface, the total hydrostatic force equals the pressure at the centroid times the area. The hatch runs from depth h to 2h, so its centroid is at depth 3h/2 and its area is wh. Thus F = rho g(3h/2)(wh) = (3/2)rho g w h^2.\n\n90-SECOND SOLUTION\nUse average depth times area: y_c = (h+2h)/2 = 3h/2 and A = wh. Therefore F = rho g y_c A = (3/2)rho gwh^2.\n\nWHAT TO MEMORIZE\nFor a flat submerged surface, the magnitude of the hydrostatic force is F = rho g h_c A, where h_c is the depth of the surface's centroid. The force does not generally act at the centroid."
+    },
+    {
+      "question": "The large piston of an ideal hydraulic lift has 20 times the area of the small piston. If the small piston is pushed downward by 5.0 cm, how far does the large piston rise?",
+      "choices": [
+        "100 cm",
+        "20 cm",
+        "5.0 cm",
+        "0.25 cm",
+        "0.050 cm"
+      ],
+      "answer": "D",
+      "image": "images/fluids-15/q02_hydraulic_lift.png",
+      "explanation": "WORKED SOLUTION\nAn ideal hydraulic system conserves displaced fluid volume. If the small piston of area A moves 5.0 cm, it displaces A(5.0 cm). The large piston has area 20A, so A(5.0 cm) = (20A)Delta y. Hence Delta y = 5.0/20 cm = 0.25 cm.\n\n90-SECOND SOLUTION\nThe large piston has 20 times the area, so it moves 1/20 as far: 5.0 cm / 20 = 0.25 cm.\n\nWHAT TO MEMORIZE\nHydraulic pressure is transmitted equally, but piston displacements follow volume conservation: A_1 Delta x_1 = A_2 Delta x_2."
+    },
+    {
+      "question": "An open tank of liquid descends in an elevator with constant acceleration g/3. At a point a depth h below the free surface, the gauge pressure is",
+      "choices": [
+        "(2/3) rho g h",
+        "(1/3) rho g h",
+        "rho g h",
+        "(4/3) rho g h",
+        "0"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nIn an elevator accelerating downward with acceleration a, the effective downward gravitational acceleration is g_eff = g-a. Here a=g/3, so g_eff=2g/3. The hydrostatic gauge pressure at depth h is therefore rho g_eff h = (2/3)rho gh.\n\n90-SECOND SOLUTION\nReplace g by g-a for a downward-accelerating container: g-g/3=2g/3.\n\nWHAT TO MEMORIZE\nHydrostatics in a uniformly accelerating frame uses the effective gravity. Downward acceleration reduces g_eff; in free fall, g_eff and the hydrostatic pressure gradient vanish."
+    },
+    {
+      "question": "A block of volume V and density 3rho/4 is completely submerged in a liquid of density rho and held by a light cord tied to the bottom. The cord is cut. Neglecting drag, the block's initial upward acceleration is",
+      "choices": [
+        "g/4",
+        "g/2",
+        "2g/3",
+        "3g/4",
+        "g/3"
+      ],
+      "answer": "E",
+      "image": "images/fluids-15/q04_tethered_block.png",
+      "explanation": "WORKED SOLUTION\nThe buoyant force is rho Vg. The block's weight is (3rho/4)Vg. Immediately after the cord is cut, the net upward force is rho Vg-(3rho/4)Vg=(rho Vg)/4. The block's mass is (3rho/4)V, so a=[rho Vg/4]/[3rho V/4]=g/3 upward.\n\n90-SECOND SOLUTION\nBuoyancy minus weight is one quarter of rho Vg, while the mass is three quarters of rho V. Their ratio is g/3.\n\nWHAT TO MEMORIZE\nFor a fully submerged object, F_B=rho_fluid Vg. After a constraint is removed, use the actual net force divided by the object's mass; do not set buoyancy equal to weight unless it is in equilibrium."
+    },
+    {
+      "question": "A solid object weighs W in air and 0.60W when completely submerged in water. Neglecting air buoyancy, the density of the object is",
+      "choices": [
+        "0.40 times the density of water",
+        "0.60 times the density of water",
+        "2.5 times the density of water",
+        "4.0 times the density of water",
+        "5.0 times the density of water"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe loss of apparent weight is the buoyant force. Since the apparent weight is 0.60W, the buoyant force is 0.40W. With W=rho_obj Vg and F_B=rho_water Vg, rho_water/rho_obj=0.40. Therefore rho_obj=rho_water/0.40=2.5rho_water.\n\n90-SECOND SOLUTION\nThe object loses 40 percent of its weight in water, so rho_water/rho_object=0.40. Invert: rho_object=2.5rho_water.\n\nWHAT TO MEMORIZE\nFor complete submersion, W_apparent/W = 1-rho_fluid/rho_object. The difference between true and apparent weight is the buoyant force."
+    },
+    {
+      "question": "An incompressible liquid flows steadily from a lower pipe section of area 3A, speed v, and pressure P to an upper section of area A that is a height v^2/g above the lower section. The pressure in the upper section is",
+      "choices": [
+        "P - rho v^2",
+        "P - 3 rho v^2",
+        "P - 5 rho v^2",
+        "P - 8 rho v^2",
+        "P - 9 rho v^2"
+      ],
+      "answer": "C",
+      "image": "images/fluids-15/q06_rising_pipe.png",
+      "explanation": "WORKED SOLUTION\nContinuity gives (3A)v=A v_2, so v_2=3v. Bernoulli's equation between the lower and upper sections is P+(1/2)rho v^2 = P_2+(1/2)rho(3v)^2+rho g(v^2/g). Solving gives P_2=P-4rho v^2-rho v^2=P-5rho v^2.\n\n90-SECOND SOLUTION\nThe speed triples. The kinetic-pressure change is (1/2)rho(9-1)v^2=4rho v^2, and climbing v^2/g costs another rho v^2. Total pressure drop: 5rho v^2.\n\nWHAT TO MEMORIZE\nSteady incompressible flow obeys Av=constant and P+(1/2)rho v^2+rho gy=constant. Keep the kinetic and elevation contributions separate before combining them."
+    },
+    {
+      "question": "Water leaves a small hole with speed v_0 and then falls through an additional vertical distance such that its speed becomes 2v_0. If the jet remains continuous, its cross-sectional area at the lower point is what fraction of its area at the hole?",
+      "choices": [
+        "1/2",
+        "1/sqrt(2)",
+        "1",
+        "sqrt(2)",
+        "2"
+      ],
+      "answer": "A",
+      "image": "images/fluids-15/q07_falling_jet.png",
+      "explanation": "WORKED SOLUTION\nFor a steady incompressible jet, the volume flow rate Av is constant along the stream. Thus A_0v_0=A(2v_0), giving A=A_0/2. The jet narrows as gravity increases its speed.\n\n90-SECOND SOLUTION\nThe speed doubles, so continuity requires the cross-sectional area to halve.\n\nWHAT TO MEMORIZE\nFor steady incompressible flow, Av is constant. A freely falling jet becomes faster and therefore narrower."
+    },
+    {
+      "question": "A siphon carries liquid of density rho from a large open reservoir to an outlet a distance h below the reservoir surface. The highest point of the tube is a distance y above the surface. Neglecting viscosity and taking the speed at the reservoir surface to be zero, the pressure at the highest point is",
+      "choices": [
+        "P_atm + rho g(y-h)",
+        "P_atm - rho gy",
+        "P_atm - rho gh",
+        "P_atm - rho g(y+h)",
+        "P_atm + rho g(y+h)"
+      ],
+      "answer": "D",
+      "image": "images/fluids-15/q08_siphon.png",
+      "explanation": "WORKED SOLUTION\nApply Bernoulli from the reservoir surface to the outlet. Both are at atmospheric pressure, and the outlet is h lower, so v^2/2=gh. Now compare the surface with the crest, which is y higher: P_atm=P_top+(1/2)rho v^2+rho gy. Substituting v^2/2=gh gives P_top=P_atm-rho g(h+y).\n\n90-SECOND SOLUTION\nThe outlet drop supplies a dynamic head h. At the crest, subtract both that dynamic head and the elevation head y: P_top=P_atm-rho g(h+y).\n\nWHAT TO MEMORIZE\nIn a siphon, the crest pressure can be below atmospheric pressure. Bernoulli's equation must include pressure, kinetic, and gravitational terms at the same time."
+    },
+    {
+      "question": "A small hole in the side of a large open tank is a height y above the floor. The water surface is a height H above the floor. Neglecting viscosity, for what value of y does the horizontal jet travel the greatest distance before hitting the floor?",
+      "choices": [
+        "H/4",
+        "H/2",
+        "H/sqrt(2)",
+        "3H/4",
+        "H"
+      ],
+      "answer": "B",
+      "image": "images/fluids-15/q09_tank_jet_range.png",
+      "explanation": "WORKED SOLUTION\nThe hole lies a depth H-y below the surface, so Torricelli's law gives v=sqrt[2g(H-y)]. The fall time from height y is t=sqrt(2y/g). The range is vt=2sqrt[y(H-y)]. For fixed H, the product y(H-y) is maximal when its two factors are equal, so y=H/2.\n\n90-SECOND SOLUTION\nRange squared is proportional to y(H-y), a symmetric quadratic with its maximum halfway between 0 and H. Therefore y=H/2.\n\nWHAT TO MEMORIZE\nFor a side hole, combine Torricelli speed with projectile fall time. A hole halfway between the surface and landing level gives maximum horizontal range."
+    },
+    {
+      "question": "Two long capillary tubes of equal length, with radii r and 2r, are connected in parallel across the same pressure difference. For laminar flow obeying Poiseuille's law, what fraction of the total volume flow passes through the larger tube?",
+      "choices": [
+        "1/2",
+        "2/3",
+        "4/5",
+        "8/9",
+        "16/17"
+      ],
+      "answer": "E",
+      "image": "images/fluids-15/q10_parallel_capillaries.png",
+      "explanation": "WORKED SOLUTION\nPoiseuille's law gives volume flow Q proportional to r^4 for fixed pressure difference, viscosity, and tube length. The tube of radius 2r therefore carries 2^4=16 times the flow of the tube of radius r. Its fraction of the total is 16/(16+1)=16/17.\n\n90-SECOND SOLUTION\nRadius doubles, so flow gains a factor 16. The split is therefore 16 parts out of 17 total parts.\n\nWHAT TO MEMORIZE\nLaminar capillary flow scales as Q proportional to Delta P r^4/(eta L). The fourth power makes flow extremely sensitive to radius."
+    },
+    {
+      "question": "A soap bubble has surface tension gamma and is expanded quasistatically from radius R to radius 2R. Neglecting gravity, the work required is",
+      "choices": [
+        "24 pi gamma R^2",
+        "16 pi gamma R^2",
+        "12 pi gamma R^2",
+        "8 pi gamma R^2",
+        "4 pi gamma R^2"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nA soap bubble has two liquid-air surfaces, so its surface energy is U=2gamma(4pi r^2)=8pi gamma r^2. Expanding from R to 2R changes this energy by 8pi gamma[(2R)^2-R^2]=8pi gamma(3R^2)=24pi gamma R^2. For quasistatic expansion, the required work equals this increase.\n\n90-SECOND SOLUTION\nTwo surfaces give U=8pi gamma r^2. The area factor changes from 1 to 4, so Delta U=8pi gamma R^2(3)=24pi gamma R^2.\n\nWHAT TO MEMORIZE\nSurface energy equals gamma times area. A soap bubble has two surfaces; a liquid droplet has one."
+    },
+    {
+      "question": "A sealed tank of liquid of density rho accelerates horizontally to the right with magnitude a. Two points inside the liquid are at the same height and are separated horizontally by distance L. The pressure at the point farther to the left exceeds that at the point farther to the right by",
+      "choices": [
+        "rho gL",
+        "rho(g+a)L",
+        "rho(g-a)L",
+        "zero",
+        "rho aL"
+      ],
+      "answer": "E",
+      "image": "images/fluids-15/q12_accelerating_tank.png",
+      "explanation": "WORKED SOLUTION\nIn the accelerating tank frame, the fluid is in equilibrium under an effective body acceleration that includes a fictitious acceleration to the left. The horizontal pressure gradient is dP/dx=-rho a when +x points right. Across a horizontal separation L, pressure therefore decreases by rho aL from left to right, so the left point exceeds the right point by rho aL.\n\n90-SECOND SOLUTION\nThe horizontal hydrostatic analogue is Delta P=rho aL, with higher pressure opposite the tank's acceleration.\n\nWHAT TO MEMORIZE\nIn a uniformly accelerating fluid, the pressure gradient is rho times the effective gravity vector. Pressure increases opposite the container's acceleration."
+    },
+    {
+      "question": "A steady water jet of density rho, cross-sectional area A, and speed v is turned through 90 degrees by a stationary smooth vane and leaves with the same speed. The magnitude of the force exerted by the jet on the vane is",
+      "choices": [
+        "rho A v^2/2",
+        "rho A v^2",
+        "sqrt(2) rho A v^2",
+        "2 rho A v^2",
+        "4 rho A v^2"
+      ],
+      "answer": "C",
+      "image": "images/fluids-15/q13_turning_jet.png",
+      "explanation": "WORKED SOLUTION\nThe mass flow rate is rho Av. The incoming and outgoing velocity vectors have equal magnitude v and are perpendicular, so the magnitude of their difference is sqrt(v^2+v^2)=sqrt(2)v. The force on the fluid is mass flow rate times velocity change: F=rho Av(sqrt(2)v)=sqrt(2)rho Av^2. By Newton's third law, the jet exerts the same magnitude on the vane.\n\n90-SECOND SOLUTION\nA 90-degree turn changes the velocity vector by sqrt(2)v. Multiply by mass flow rate rho Av.\n\nWHAT TO MEMORIZE\nFor steady flow, force equals momentum flux: F_vector=(mass flow rate)(v_out-v_in). Use vector subtraction, not just the change in speed."
+    },
+    {
+      "question": "An ideal fluid moves with speed v through a horizontal pipe of area 2A and then divides equally between two identical horizontal branches, each of area A/2. If the pressure before the split is P, the pressure in either branch is",
+      "choices": [
+        "P + (3/2)rho v^2",
+        "P + rho v^2",
+        "P - rho v^2",
+        "P - (3/2)rho v^2",
+        "P - 2rho v^2"
+      ],
+      "answer": "D",
+      "image": "images/fluids-15/q14_branching_pipe.png",
+      "explanation": "WORKED SOLUTION\nThe upstream volume flow is (2A)v=2Av. Equal splitting sends flow Av into each branch. Since each branch has area A/2, its speed is (Av)/(A/2)=2v. Along either horizontal streamline, Bernoulli gives P+(1/2)rho v^2=P_b+(1/2)rho(2v)^2. Hence P_b=P-(3/2)rho v^2.\n\n90-SECOND SOLUTION\nEach branch carries half the total flow but has one quarter the upstream area, so its speed doubles. Bernoulli then gives a pressure drop (1/2)rho(4-1)v^2=(3/2)rho v^2.\n\nWHAT TO MEMORIZE\nAt a junction, conserve total volume flow first. Then apply Bernoulli along a streamline between the upstream pipe and one branch."
+    },
+    {
+      "question": "An open vessel has vertical height h and walls that flare outward, so its top is wider than its horizontal bottom of area A. It is completely filled with liquid of density rho. Compared with the liquid's weight, the downward pressure force rho g h A on the bottom is",
+      "choices": [
+        "greater, because the side walls push downward on the liquid",
+        "less, because the side walls support part of the liquid's weight",
+        "equal, by Newton's third law",
+        "zero, because atmospheric pressure cancels",
+        "not determined without the liquid viscosity"
+      ],
+      "answer": "B",
+      "image": "images/fluids-15/q15_flared_vessel.png",
+      "explanation": "WORKED SOLUTION\nThe bottom gauge pressure is rho gh, so the downward force exerted by the liquid on the bottom is rho ghA. Because the vessel flares outward, its volume is greater than Ah, so the liquid's weight rho gV is greater than rho ghA. The inclined side walls exert upward components of force on the liquid and support the difference.\n\n90-SECOND SOLUTION\nA flared vessel contains more volume than the vertical prism Ah, so its liquid weighs more than rho ghA. The walls support the excess.\n\nWHAT TO MEMORIZE\nBottom pressure depends only on depth, not vessel shape. The total liquid weight can differ from bottom pressure times bottom area because the side walls exert vertical forces—the hydrostatic paradox."
+    }
+  ],
+  "added": "2026-10-23"
+},
+{
+  "name": "Motional EMF: Open Conductors & Loops (15 Questions)",
+  "category": "em",
+  "cards": [
+    {
+      "question": "An isolated straight rod of length L moves with speed v through a uniform magnetic field B perpendicular to the plane containing the rod and its velocity. The rod makes an angle of 30 degrees with the velocity. The magnitude of the steady potential difference between its ends is",
+      "choices": [
+        "0",
+        "BLv/4",
+        "BLv/2",
+        "sqrt(3)BLv/2",
+        "BLv"
+      ],
+      "answer": "C",
+      "image": "images/motional-emf-15/q01_tilted_open_rod.png",
+      "explanation": "WORKED SOLUTION\nFor a rigid open conductor translating through a magnetic field, the end-to-end motional potential is the line integral of v cross B along the rod. Because B is perpendicular to the plane, v cross B lies in the plane and is perpendicular to v. The rod is 30 degrees from v, hence 60 degrees from v cross B. Therefore Delta V=BLv cos60 degrees=BLv/2.\n\n90-SECOND SOLUTION\nThe useful component of the rod lies along v cross B. It is L sin30 degrees=L/2, so Delta V=Bv(L/2).\n\nWHAT TO MEMORIZE\nFor a straight moving rod, Delta V=(v cross B) dot L_vector. An open circuit can have a motional voltage even though no steady current flows."
+    },
+    {
+      "question": "A straight isolated conducting rod moves with velocity parallel to its own length through a uniform magnetic field perpendicular to the rod. The potential difference between its ends is",
+      "choices": [
+        "zero",
+        "BLv",
+        "BLv/2",
+        "2BLv",
+        "dependent on the rod's resistance"
+      ],
+      "answer": "A",
+      "image": "images/motional-emf-15/q02_lengthwise_motion.png",
+      "explanation": "WORKED SOLUTION\nThe magnetic force per unit charge is v cross B, which is perpendicular to v. Here the rod and its line element are parallel to v, so (v cross B) dot dl=0 everywhere along the rod. The end-to-end motional potential difference is therefore zero.\n\n90-SECOND SOLUTION\nThe rod points along v, while v cross B points perpendicular to v. Their dot product is zero.\n\nWHAT TO MEMORIZE\nUse the dot product Delta V=integral(v cross B) dot dl. The familiar BLv applies only when the rod is aligned with v cross B."
+    },
+    {
+      "question": "Two differently shaped open wires have the same endpoints and translate with the same constant velocity through the same uniform magnetic field. Both wires are at rest with respect to each other. The motional potential differences between their corresponding endpoints are",
+      "choices": [
+        "always zero",
+        "larger for the longer wire",
+        "larger for the wire enclosing more area with an imagined return path",
+        "opposite in sign",
+        "equal"
+      ],
+      "answer": "E",
+      "image": "images/motional-emf-15/q03_two_open_paths.png",
+      "explanation": "WORKED SOLUTION\nFor rigid translation in uniform v and B, the vector v cross B is constant. Thus the motional potential between endpoints is integral_A^B(v cross B) dot dl=(v cross B) dot(r_B-r_A). It depends only on the endpoint displacement, not on the wire's shape or length. The two wires therefore have equal endpoint potential differences.\n\n90-SECOND SOLUTION\nA constant vector integrated along any path gives that vector dotted into the net endpoint displacement. Same endpoints means same voltage.\n\nWHAT TO MEMORIZE\nFor a rigid open wire translating through uniform B, the motional voltage is path independent. This is different from a closed loop moving through a nonuniform field."
+    },
+    {
+      "question": "Two straight conducting spokes of lengths R and 2R are joined at one end and rotate together with angular speed omega about their common endpoint. A uniform magnetic field B is perpendicular to the plane of rotation. The outer tips are not connected. The magnitude of the potential difference between the two outer tips is",
+      "choices": [
+        "B omega R^2/2",
+        "3B omega R^2/2",
+        "2B omega R^2",
+        "5B omega R^2/2",
+        "3B omega R^2"
+      ],
+      "answer": "B",
+      "image": "images/motional-emf-15/q04_unequal_rotating_spokes.png",
+      "explanation": "WORKED SOLUTION\nA radial conductor rotating about one end has hub-to-tip potential magnitude (1/2)B omega r^2, obtained by integrating B(omega r)dr. The tips of the R and 2R spokes are therefore at potentials differing by (1/2)B omega[(2R)^2-R^2]=(1/2)B omega(3R^2)=(3/2)B omega R^2.\n\n90-SECOND SOLUTION\nRotating-spoke voltage scales as r^2. Subtract the two values: (1/2)B omega(4R^2-R^2)=3B omega R^2/2.\n\nWHAT TO MEMORIZE\nFor a radial rod rotating in axial B, integrate because the speed is omega r: Delta V=(1/2)B omega(r_2^2-r_1^2). The limits matter."
+    },
+    {
+      "question": "An isolated rod moves through crossed uniform electric and magnetic fields. The rod is parallel to both E and v cross B, but these two vectors point in opposite directions. At what speed is there no charge separation between the ends?",
+      "choices": [
+        "EB",
+        "E/B^2",
+        "B/E",
+        "E/B",
+        "sqrt(E/B)"
+      ],
+      "answer": "D",
+      "image": "images/motional-emf-15/q05_crossed_fields_open_rod.png",
+      "explanation": "WORKED SOLUTION\nWith no charge separation, the net force per unit charge along the rod must vanish: E+v cross B=0. The vectors are stated to be opposite, so only their magnitudes need be equated: E=vB. Solving gives v=E/B.\n\n90-SECOND SOLUTION\nBalance electric and magnetic forces: qE=qvB, so v=E/B.\n\nWHAT TO MEMORIZE\nThe force on a charge is q(E+v cross B). Crossed-field balance gives v=E/B when v is perpendicular to B."
+    },
+    {
+      "question": "An isolated rod of length L is oriented along the y direction and moves in the +x direction with speed v. The magnetic field is perpendicular to the xy plane and has magnitude B(x)=B_0(1+x/a). When the rod is at x=a, the magnitude of the potential difference between its ends is",
+      "choices": [
+        "B_0Lv/2",
+        "B_0Lv",
+        "3B_0Lv/2",
+        "2B_0Lv",
+        "4B_0Lv"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nAt x=a the field magnitude is B(a)=B_0(1+a/a)=2B_0. Along the rod, x is constant, so the field is uniform over its length at that instant. With rod, velocity, and field mutually perpendicular, the potential difference is B(a)Lv=2B_0Lv.\n\n90-SECOND SOLUTION\nEvaluate the field first: B(a)=2B_0. Then apply Delta V=BLv.\n\nWHAT TO MEMORIZE\nIn a spatially varying field, use the field sampled along the conductor. If B varies along the rod, integrate; if it is constant along the rod at that instant, ordinary BLv applies."
+    },
+    {
+      "question": "A conducting rod falls under gravity while remaining perpendicular to a uniform magnetic field and to its velocity. The rod is electrically isolated, and air resistance is negligible. Although a potential difference develops between its ends, its downward acceleration after charge separation is complete is",
+      "choices": [
+        "0",
+        "g",
+        "g/2",
+        "g-BLv/m",
+        "dependent on the rod's resistance"
+      ],
+      "answer": "B",
+      "image": "images/motional-emf-15/q07_falling_open_rod.png",
+      "explanation": "WORKED SOLUTION\nThe magnetic force separates charges until an internal electric field balances the magnetic force on the mobile charges. Because the rod is isolated, there is no closed path and no sustained current. Consequently there is no magnetic braking force proportional to current. Ignoring air resistance, the rod's center of mass remains in free fall with acceleration g.\n\n90-SECOND SOLUTION\nOpen rod means voltage but no steady current. No current means no magnetic drag, so the acceleration remains g.\n\nWHAT TO MEMORIZE\nDo not equate motional emf with current. Magnetic braking requires a closed conducting path; an isolated rod merely develops charge separation and an endpoint voltage."
+    },
+    {
+      "question": "A conducting rod forms the right side of a closed U-shaped circuit and slides to the right, increasing the circuit area. A uniform magnetic field points out of the page. The induced current in the sliding rod is",
+      "choices": [
+        "downward",
+        "upward",
+        "to the right",
+        "to the left",
+        "zero"
+      ],
+      "answer": "A",
+      "image": "images/motional-emf-15/q08_sliding_u_circuit.png",
+      "explanation": "WORKED SOLUTION\nAs the rod moves right, the loop's area and the outward magnetic flux increase. By Lenz's law the induced current must create a field into the page. A clockwise current produces an into-page field. On the right side of a clockwise loop, current flows downward through the sliding rod.\n\n90-SECOND SOLUTION\nOutward flux is increasing, so the induced field points inward. That requires clockwise current, hence downward current in the right-hand rod.\n\nWHAT TO MEMORIZE\nFirst determine whether the external flux increases or decreases, then choose the induced field that opposes that change. Use the right-hand rule only after the Lenz-law step."
+    },
+    {
+      "question": "A rod of length L slides on conducting rails in a uniform perpendicular magnetic field B. A battery of emf epsilon in the circuit drives current through the rod in the direction that produces a magnetic force along the rod's motion. At what speed does the current become zero?",
+      "choices": [
+        "BL/epsilon",
+        "B epsilon/L",
+        "epsilon L/B",
+        "sqrt(epsilon/BL)",
+        "epsilon/(BL)"
+      ],
+      "answer": "E",
+      "image": "images/motional-emf-15/q09_rail_motor.png",
+      "explanation": "WORKED SOLUTION\nThe moving rod produces a motional emf BLv opposing the battery emf. The circuit current is proportional to epsilon-BLv. It becomes zero when the two emfs are equal: epsilon=BLv. Therefore v=epsilon/(BL).\n\n90-SECOND SOLUTION\nAt zero current, back emf equals the source: BLv=epsilon.\n\nWHAT TO MEMORIZE\nA moving conductor in a motor develops a back emf. In the ideal limit the current vanishes when the motional emf matches the applied emf."
+    },
+    {
+      "question": "A rigid rectangular conducting loop translates at constant velocity while remaining entirely inside a uniform, time-independent magnetic field. The induced current in the loop is",
+      "choices": [
+        "clockwise",
+        "counterclockwise",
+        "zero",
+        "proportional to its area",
+        "proportional to its speed squared"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe loop's area, orientation, and magnetic field are all constant, so the magnetic flux BA is constant and Faraday's law gives zero net emf. Equivalently, for rigid translation with constant v and B, the closed-loop integral of the constant vector v cross B is zero. Hence no induced current flows.\n\n90-SECOND SOLUTION\nThe loop never enters or leaves the field, and its flux does not change. Therefore the current is zero.\n\nWHAT TO MEMORIZE\nA loop translating wholly inside a uniform static magnetic field has no net emf. Induction occurs when flux changes, such as at a field boundary or in a nonuniform field."
+    },
+    {
+      "question": "A flexible closed conducting loop changes shape while remaining in a uniform, time-independent magnetic field perpendicular to its plane. If its enclosed area remains exactly constant, the induced emf around the loop is",
+      "choices": [
+        "BA",
+        "zero",
+        "B times the loop's perimeter speed",
+        "proportional to the resistance",
+        "not defined because the shape changes"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nMagnetic flux is Phi_B=BA when the uniform field is perpendicular to the loop. Although the boundary changes shape, both B and the enclosed area A remain constant. Therefore dPhi_B/dt=0 and the induced emf is zero.\n\n90-SECOND SOLUTION\nShape alone is irrelevant here: constant B and constant area mean constant flux.\n\nWHAT TO MEMORIZE\nFaraday's law responds to changing flux, not to deformation by itself. In a uniform perpendicular field, only the enclosed area matters."
+    },
+    {
+      "question": "A straight conducting rod of length L rotates with angular speed omega about an axis through its midpoint, perpendicular to the rod. A uniform magnetic field B is parallel to the rotation axis. The potential difference between the two ends of the rod is",
+      "choices": [
+        "B omega L^2",
+        "B omega L^2/2",
+        "B omega L^2/4",
+        "B omega L^2/8",
+        "zero"
+      ],
+      "answer": "E",
+      "image": "images/motional-emf-15/q12_centered_rotating_rod.png",
+      "explanation": "WORKED SOLUTION\nFor a point a signed distance x from the midpoint, the local velocity produces a motional field along the rod proportional to x. The end-to-end voltage is proportional to integral from -L/2 to L/2 of x dx, which is zero. Equivalently, both ends acquire the same potential relative to the midpoint by symmetry, so their mutual potential difference vanishes.\n\n90-SECOND SOLUTION\nThe two halves are mirror images and generate equal midpoint-to-end voltages. Subtracting the endpoint potentials gives zero.\n\nWHAT TO MEMORIZE\nFor a rotating rod, use signed position and integration. A rod rotating about its midpoint can have nonzero center-to-end voltages while its two ends remain at equal potential."
+    },
+    {
+      "question": "An open semicircular wire of radius R has its endpoints vertically separated by 2R. It translates to the right with speed v through a uniform magnetic field into the page. The magnitude of the potential difference between its endpoints is",
+      "choices": [
+        "0",
+        "pi BvR/2",
+        "BvR",
+        "2BvR",
+        "pi BvR"
+      ],
+      "answer": "D",
+      "image": "images/motional-emf-15/q13_open_semicircle.png",
+      "explanation": "WORKED SOLUTION\nFor rigid translation in uniform fields, the open-wire voltage depends only on endpoint displacement: Delta V=(v cross B) dot Delta r. With v to the right and B into the page, v cross B points upward. The endpoints are separated upward by 2R, so the magnitude is Bv(2R)=2BvR. The semicircular path length does not enter.\n\n90-SECOND SOLUTION\nUse the straight endpoint separation, not the curved wire length. The separation along v cross B is 2R.\n\nWHAT TO MEMORIZE\nFor an open conductor translating rigidly through uniform B, integrate v cross B along the path; because it is constant, only the endpoint displacement survives."
+    },
+    {
+      "question": "A vertical isolated conducting rod moves to the right through a uniform magnetic field directed out of the page. After charges reach equilibrium, which end is at higher electric potential?",
+      "choices": [
+        "the lower end",
+        "the upper end",
+        "both ends are at the same potential",
+        "the answer depends on the rod's resistance",
+        "the answer depends on whether the charge carriers are electrons"
+      ],
+      "answer": "A",
+      "image": "images/motional-emf-15/q14_polarity_open_rod.png",
+      "explanation": "WORKED SOLUTION\nFor velocity to the right and magnetic field out of the page, v cross B points downward. Positive charge is driven toward the lower end, making it positive relative to the upper end. The lower end is therefore at higher electric potential. This conclusion does not depend on whether the mobile carriers are electrons; the equilibrium electric field adjusts consistently.\n\n90-SECOND SOLUTION\nRight cross out-of-page points downward. Positive charge is pushed down, so the lower end is at higher potential.\n\nWHAT TO MEMORIZE\nUse the force direction on a positive test charge to identify polarity. Carrier type changes which charges move, not the final sign of the Hall-like voltage."
+    },
+    {
+      "question": "Two conducting rails lie in a plane and separate so that their spacing at position x is alpha x. A conducting bar at position x bridges the rails and moves in the +x direction with speed v through a uniform magnetic field B perpendicular to the plane. The rails are joined behind the bar. The magnitude of the induced emf is",
+      "choices": [
+        "B alpha x^2",
+        "B alpha v",
+        "B alpha x v",
+        "2B alpha x v",
+        "B alpha x^2 v/2"
+      ],
+      "answer": "C",
+      "image": "images/motional-emf-15/q15_diverging_rails.png",
+      "explanation": "WORKED SOLUTION\nAt position x the sliding bar has length ell=alpha x. Its motional emf is B ell v=B alpha xv. The same result follows from flux: the triangular loop area is A=(1/2)x(alpha x)=(alpha/2)x^2, so dA/dt=alpha xv and |emf|=B dA/dt=B alpha xv.\n\n90-SECOND SOLUTION\nUse the instantaneous bar length in BLv: ell=alpha x, so emf=B alpha xv.\n\nWHAT TO MEMORIZE\nFor a moving boundary, emf can be found either from integral(v cross B) dot dl or from dPhi/dt. With changing geometry, confirm that both approaches agree."
+    }
+  ],
+  "added": "2026-10-23"
+},
+{
+  "name": "Laboratory Methods: Measurement & Scaling (15 Questions)",
+  "category": "lab",
+  "cards": [
+    {
+      "question": "Which of the following is an intensive property of a system in equilibrium?",
+      "choices": [
+        "volume",
+        "internal energy",
+        "entropy",
+        "particle number",
+        "pressure"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nAn intensive property does not scale with the amount of material. If two identical equilibrium systems are combined, volume, internal energy, entropy, and particle number all double, but pressure remains the same. Therefore pressure is the intensive property listed.\n\n90-SECOND SOLUTION\nAsk what stays unchanged when the system size doubles. Pressure does; the other four quantities double.\n\nWHAT TO MEMORIZE\nCommon intensive properties include pressure, temperature, density, and specific heat. Common extensive properties include mass, volume, particle number, internal energy, entropy, and heat capacity."
+    },
+    {
+      "question": "Two identical chambers contain equal amounts of the same ideal gas at the same temperature and pressure. A partition between them is removed without heat exchange. Compared with either original chamber, the combined equilibrium system has",
+      "choices": [
+        "twice the pressure and twice the temperature",
+        "the same volume and twice the density",
+        "twice the volume and particle number, but the same pressure and temperature",
+        "twice every thermodynamic property",
+        "the same particle number but twice the internal energy"
+      ],
+      "answer": "C",
+      "image": "images/lab-methods-15/q02_remove_partition.png",
+      "explanation": "WORKED SOLUTION\nThe two gas samples begin in the same thermodynamic state. Removing the partition simply combines them. The accessible volume and total particle number each double, as do extensive quantities such as internal energy. Their ratios remain unchanged, so density, pressure, and temperature stay the same.\n\n90-SECOND SOLUTION\nCombining identical systems doubles extensive quantities but leaves intensive quantities unchanged.\n\nWHAT TO MEMORIZE\nExtensive quantities add when systems are combined. Intensive quantities describe the local state and do not add."
+    },
+    {
+      "question": "A uniform wire is cut into two equal lengths without changing its temperature. For either half, compared with the original wire, the electrical resistivity and resistance are respectively",
+      "choices": [
+        "halved and halved",
+        "unchanged and halved",
+        "unchanged and unchanged",
+        "doubled and halved",
+        "halved and unchanged"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nElectrical resistivity is a material property at a specified temperature, so cutting the wire does not change it. Resistance is R=rho L/A. Each half has the same cross-sectional area but half the length, so its resistance is R/2.\n\n90-SECOND SOLUTION\nResistivity stays fixed; resistance is proportional to length, so halving L halves R.\n\nWHAT TO MEMORIZE\nResistivity is intensive, while resistance depends on geometry through R=rho L/A."
+    },
+    {
+      "question": "Two samples of the same homogeneous substance have masses m and 2m and are at the same temperature and phase. If the smaller sample has heat capacity C and specific heat c, the larger sample has",
+      "choices": [
+        "heat capacity 2C and specific heat c",
+        "heat capacity C and specific heat 2c",
+        "heat capacity 2C and specific heat 2c",
+        "heat capacity C/2 and specific heat c",
+        "heat capacity C and specific heat c"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nHeat capacity is C=mc. The specific heat c is an intensive material property, so it is the same for both samples. Doubling the mass therefore doubles the heat capacity from C to 2C.\n\n90-SECOND SOLUTION\nSpecific heat stays the same; total heat capacity scales with mass.\n\nWHAT TO MEMORIZE\nSpecific heat is intensive. Heat capacity is extensive and equals mass times specific heat."
+    },
+    {
+      "question": "The density of a cylindrical sample is calculated from rho=4m/(pi d^2 L). Independent one-standard-deviation fractional uncertainties in m, d, and L are 1%, 1%, and 2%, respectively. The fractional uncertainty in rho is most nearly",
+      "choices": [
+        "1%",
+        "2%",
+        "2.4%",
+        "3%",
+        "4%"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nFor rho proportional to m d^(-2)L^(-1), independent fractional uncertainties add in quadrature with their powers as coefficients. Thus (sigma_rho/rho)^2=(1%)^2+[2(1%)]^2+(2%)^2=1+4+4 percent-squared=9 percent-squared. Therefore sigma_rho/rho=3%.\n\n90-SECOND SOLUTION\nUse the exponents as multipliers: sqrt(1^2+2^2+2^2)%=sqrt9%=3%.\n\nWHAT TO MEMORIZE\nFor independent errors in z=x^a y^b, fractional uncertainties combine as sqrt[(a sigma_x/x)^2+(b sigma_y/y)^2]."
+    },
+    {
+      "question": "To determine g, a student measures the period T of a simple pendulum for several lengths L and plots T^2 on the vertical axis against L on the horizontal axis. If the best-fit slope is s, then g is",
+      "choices": [
+        "s/(4pi^2)",
+        "4pi^2/s",
+        "2pi/s",
+        "s^2/(4pi^2)",
+        "4pi^2 s"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nFor a simple pendulum, T=2pi sqrt(L/g). Squaring gives T^2=(4pi^2/g)L. Therefore the slope s of a T^2-versus-L graph is 4pi^2/g, and solving yields g=4pi^2/s.\n\n90-SECOND SOLUTION\nRead the coefficient of L after squaring the pendulum formula: s=4pi^2/g, so invert.\n\nWHAT TO MEMORIZE\nLinearize power laws before fitting. For pendulum data, T^2 versus L is linear and its slope contains g."
+    },
+    {
+      "question": "A measurement is repeated N times with independent random errors, giving a standard error of the mean sigma. If the same measurement is instead repeated 4N times with the same scatter per reading, the standard error of the mean is",
+      "choices": [
+        "4sigma",
+        "2sigma",
+        "sigma",
+        "sigma/sqrt(2)",
+        "sigma/2"
+      ],
+      "answer": "E",
+      "explanation": "WORKED SOLUTION\nFor independent measurements with unchanged scatter, the standard error of the mean scales as 1/sqrt(N). Replacing N by 4N multiplies the standard error by 1/sqrt4=1/2. The new standard error is sigma/2.\n\n90-SECOND SOLUTION\nFour times as many readings gives twice the square root, so the standard error halves.\n\nWHAT TO MEMORIZE\nAveraging reduces independent random uncertainty as 1/sqrt(N), not as 1/N. It does not remove systematic bias."
+    },
+    {
+      "question": "A detector records 1600 counts from a source plus background in 200 s. In a separate 50 s background run it records 225 counts. Assuming Poisson statistics, the background-subtracted count rate and its uncertainty are most nearly",
+      "choices": [
+        "3.5 plus or minus 0.13 s^-1",
+        "3.5 plus or minus 0.20 s^-1",
+        "3.5 plus or minus 0.30 s^-1",
+        "3.5 plus or minus 0.36 s^-1",
+        "3.5 plus or minus 0.50 s^-1"
+      ],
+      "answer": "D",
+      "explanation": "WORKED SOLUTION\nThe source-plus-background rate is 1600/200=8.0 s^-1. The background rate is 225/50=4.5 s^-1, so the net rate is 3.5 s^-1. Poisson count uncertainties are square roots: the rate uncertainties are sqrt1600/200=40/200=0.20 s^-1 and sqrt225/50=15/50=0.30 s^-1. Independent uncertainties combine in quadrature, giving sqrt(0.20^2+0.30^2)=sqrt0.13=0.36 s^-1.\n\n90-SECOND SOLUTION\nRates: 8.0-4.5=3.5. Uncertainties: 0.20 and 0.30, so the combined value is sqrt(.04+.09)=sqrt.13, about 0.36.\n\nWHAT TO MEMORIZE\nPoisson sigma_N=sqrt(N). Convert each run to a rate uncertainty using its own duration, then add independent subtraction uncertainties in quadrature."
+    },
+    {
+      "question": "A balance reads 0.20 g when its empty pan should read zero. Repeating a mass measurement many times without correcting the balance will",
+      "choices": [
+        "remove the offset because positive and negative errors cancel",
+        "increase the offset in proportion to the number of trials",
+        "reduce random uncertainty but leave the offset",
+        "remove both random and systematic uncertainty",
+        "make the measured mean approach zero"
+      ],
+      "answer": "C",
+      "explanation": "WORKED SOLUTION\nThe 0.20 g reading at zero is a calibration offset, which is systematic. Repeating the measurement and averaging can reduce random scatter, but every reading retains the same offset unless the balance is zeroed or the correction is subtracted.\n\n90-SECOND SOLUTION\nA fixed zero error does not average away. More trials only tighten the distribution around the wrong mean.\n\nWHAT TO MEMORIZE\nRandom errors are reduced by repetition; systematic errors require calibration, correction, or redesign."
+    },
+    {
+      "question": "A student measures the resistance of a metal wire as a function of the wire's externally controlled temperature. Which procedure best reduces a systematic error caused by self-heating of the wire during each resistance measurement?",
+      "choices": [
+        "use the smallest practical measuring current",
+        "repeat each reading many times at the same current",
+        "use a longer time interval for every reading",
+        "plot resistance rather than conductance",
+        "increase the current until the voltage is easy to read"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nThe measuring current itself dissipates power I^2R and can raise the wire above the externally controlled temperature. Using the smallest practical current reduces this self-heating while still allowing a voltage reading. Repetition at the same current does not remove the bias.\n\n90-SECOND SOLUTION\nSelf-heating scales as I^2R, so reduce I.\n\nWHAT TO MEMORIZE\nA measuring instrument can disturb the system. Good experimental design minimizes loading, self-heating, and other back-action rather than merely repeating biased readings."
+    },
+    {
+      "question": "A sinusoidal voltage oscillates about a constant positive offset. Switching an oscilloscope input from DC coupling to AC coupling will ideally",
+      "choices": [
+        "double the signal frequency",
+        "remove the sinusoidal part",
+        "reverse the signal polarity",
+        "remove the constant offset while retaining the oscillation",
+        "make the trace independent of the time-base setting"
+      ],
+      "answer": "D",
+      "image": "images/lab-methods-15/q11_scope_coupling.png",
+      "explanation": "WORKED SOLUTION\nAC coupling places a capacitor in the signal path. The capacitor blocks the constant, zero-frequency component while passing the time-varying sinusoidal component over the appropriate frequency range. Thus the positive DC offset is removed and the oscillation is displayed centered about zero.\n\n90-SECOND SOLUTION\nAC coupling blocks DC and retains the changing part of the signal.\n\nWHAT TO MEMORIZE\nDC coupling displays both offset and variation. AC coupling removes the DC component but can distort sufficiently low-frequency signals."
+    },
+    {
+      "question": "A digital voltmeter has full-scale ranges of 2 V, 20 V, and 200 V. To measure a steady voltage known to be approximately 3.2 V with the best available resolution, the meter should be set to",
+      "choices": [
+        "2 V",
+        "20 V",
+        "200 V",
+        "either 20 V or 200 V gives the same resolution",
+        "the resistance range"
+      ],
+      "answer": "B",
+      "explanation": "WORKED SOLUTION\nThe 2 V range would overload for a 3.2 V signal. Both the 20 V and 200 V ranges can display it, but the 20 V range uses more of the available digits and therefore gives better resolution. It is the smallest range that does not overload.\n\n90-SECOND SOLUTION\nChoose the lowest safe full-scale range: 20 V.\n\nWHAT TO MEMORIZE\nFor best resolution, use the smallest measurement range that comfortably includes the signal. Start high only when the signal magnitude is unknown."
+    },
+    {
+      "question": "A calibration experiment shows that an instrument reading y is related to the true value x by y=1.04x+0.20, with all quantities in the same units. If a later reading is y=m, the best corrected value is",
+      "choices": [
+        "(m-0.20)/1.04",
+        "1.04m+0.20",
+        "m/1.04+0.20",
+        "1.04(m-0.20)",
+        "m-1.24"
+      ],
+      "answer": "A",
+      "explanation": "WORKED SOLUTION\nThe calibration relation is m=1.04x+0.20, where m is the observed reading and x is the true value. Subtract the offset first: m-0.20=1.04x. Then divide by the scale factor: x=(m-0.20)/1.04.\n\n90-SECOND SOLUTION\nUndo the calibration operations in reverse order: subtract 0.20, then divide by 1.04.\n\nWHAT TO MEMORIZE\nA linear calibration y=ax+b contains both a scale error and a zero offset. Correct a reading with x=(y-b)/a."
+    },
+    {
+      "question": "A measured drag force is modeled as F=av+bv^2. Which graph should be a straight line with vertical intercept a and slope b?",
+      "choices": [
+        "F versus v",
+        "F versus v^2",
+        "F/v^2 versus v",
+        "v/F versus v",
+        "F/v versus v"
+      ],
+      "answer": "E",
+      "image": "images/lab-methods-15/q14_drag_linearization.png",
+      "explanation": "WORKED SOLUTION\nStarting from F=av+bv^2, divide every term by v: F/v=a+bv. This has straight-line form y=intercept+slope times x when F/v is plotted vertically against v horizontally. The intercept is a and the slope is b.\n\n90-SECOND SOLUTION\nDivide by v to turn the two powers into a constant and a term linear in v: F/v=a+bv.\n\nWHAT TO MEMORIZE\nChoose a transformation that produces y=mx+b. The intercept and slope should correspond directly to the parameters being measured."
+    },
+    {
+      "question": "Data are fit with a straight line. A residual plot shows points predominantly positive at small and large x but negative near the middle. This pattern most strongly suggests that",
+      "choices": [
+        "the uncertainties are exactly Gaussian",
+        "the fitted slope is certainly zero",
+        "the linear model misses curvature in the data",
+        "the data contain only random error",
+        "more significant figures should be retained"
+      ],
+      "answer": "C",
+      "image": "images/lab-methods-15/q15_residual_curvature.png",
+      "explanation": "WORKED SOLUTION\nFor an adequate model with unbiased random errors, residuals should scatter randomly above and below zero. Here the residuals are positive at both ends and negative in the middle, producing a clear U-shaped pattern. That systematic structure indicates the true relation has curvature that the straight-line model misses.\n\n90-SECOND SOLUTION\nA visible pattern in residuals means the model has left information unexplained. A U shape points to missing curvature.\n\nWHAT TO MEMORIZE\nResiduals should look random around zero. Trends, curvature, or changing spread signal model inadequacy or nonconstant uncertainty."
+    }
+  ],
+  "added": "2026-10-23"
 }
 ];
