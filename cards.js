@@ -34354,5 +34354,192 @@ const EXAMS = [
     }
   ],
   "added": "2026-10-24"
+},
+{
+  "name": "Circuits Test 6 (20 Questions)",
+  "category": "em",
+  "cards": [
+
+// Q1 (M)
+{
+  "question": "A 12 V ideal battery drives a 4.0 ohm resistor in series with parallel 6.0 ohm and 3.0 ohm branches. A switch opens and removes only the 3.0 ohm branch. The voltage across the 6.0 ohm resistor changes by what factor?",
+  "choices": ["9/5", "5/9", "3/2", "2", "1"],
+  "answer": "A",
+  "image": "images/circuits-6/q1.png",
+  "explanation": "WORKED SOLUTION\nInitially, 6.0 ohms in parallel with 3.0 ohms gives 2.0 ohms. With the series 4.0 ohm resistor, the total resistance is 6.0 ohms, so the current is 12/6=2.0 A and the parallel-section voltage is (2.0 A)(2.0 ohms)=4.0 V. After the 3.0 ohm branch is removed, the total resistance is 4.0+6.0=10 ohms. The current is 12/10=1.2 A, so the 6.0 ohm voltage is 7.2 V. The factor is 7.2/4.0=9/5.\n\n90-SECOND SOLUTION\nReplace the parallel pair by 2 ohms. The 6 ohm branch voltage is initially 12(2/6)=4 V and afterward 12(6/10)=7.2 V. Divide to get 9/5.\n\nWHAT TO MEMORIZE\nA branch removal can increase the voltage across the remaining load because it changes the voltage-divider ratio."
+},
+
+// Q2 (M)
+{
+  "question": "The negative terminals of ideal 12 V and 6.0 V batteries share a common return. Their positive terminals are connected to node P through 2.0 ohm and 4.0 ohm resistors, respectively. With both switches closed and no other connection to P, the potential of P above the return is",
+  "choices": ["8.0 V", "10 V", "9.0 V", "6.0 V", "12 V"],
+  "answer": "B",
+  "image": "images/circuits-6/q2.png",
+  "explanation": "WORKED SOLUTION\nBecause node P has no load, the current arriving through one resistor must leave through the other. Let its potential be V_P. Kirchhoff's junction rule gives (12-V_P)/2+(6-V_P)/4=0. Multiplying by 4 gives 24-2V_P+6-V_P=0, so 3V_P=30 and V_P=10 V.\n\n90-SECOND SOLUTION\nThe two sources differ by 6 V and drive a loop current 6/(2+4)=1 A. Starting from the 12 V source, the 2 ohm resistor drops 2 V, placing P at 10 V.\n\nWHAT TO MEMORIZE\nA floating node connected to unequal sources can be found either with one KCL equation or by treating the source difference as the loop emf."
+},
+
+// Q3 (M)
+{
+  "question": "Identical lamps A and B, each of resistance R, are initially in series across an ideal battery. Closing switch S places an ideal wire across lamp B. Compared with its initial value, the power in lamp A becomes",
+  "choices": ["zero", "twice as large", "four times as large", "one-half as large", "unchanged"],
+  "answer": "C",
+  "image": "images/circuits-6/q3.png",
+  "explanation": "WORKED SOLUTION\nInitially the two equal lamps split the battery voltage, so lamp A has voltage V/2 and power P_i=(V/2)^2/R=V^2/(4R). Closing S shorts lamp B, leaving lamp A directly across the full battery voltage. Its new power is P_f=V^2/R=4P_i.\n\n90-SECOND SOLUTION\nLamp A's voltage doubles from V/2 to V. Since its resistance is unchanged and P=V^2/R, its power increases by 2^2=4.\n\nWHAT TO MEMORIZE\nAn ideal wire bypasses a parallel component. For fixed resistance, power is proportional to the square of the component voltage."
+},
+
+// Q4 (M)
+{
+  "question": "An ideal 9.0 V battery fixes the potential difference between the top and bottom rails. A second branch contains a 6.0 V ideal battery, a 6.0 ohm resistor, and a closed switch in series; the 6.0 V battery opposes the rail voltage. The current in this branch is",
+  "choices": ["1.5 A upward", "1.5 A downward", "0", "0.50 A downward", "0.50 A upward"],
+  "answer": "D",
+  "image": "images/circuits-6/q4.png",
+  "explanation": "WORKED SOLUTION\nThe ideal 9.0 V battery fixes the top rail 9.0 V above the bottom rail. Moving downward through the second branch, the opposing 6.0 V battery accounts for 6.0 V, leaving 9.0-6.0=3.0 V across the resistor. Thus I=3.0/6.0=0.50 A downward.\n\n90-SECOND SOLUTION\nThe opposing emfs leave 3 V to drive the 6 ohm resistor: I=(9-6)/6=0.50 A, in the direction favored by the 9 V source.\n\nWHAT TO MEMORIZE\nAn ideal voltage source fixes the voltage across every parallel branch; then apply Kirchhoff's loop rule within the branch."
+},
+
+// Q5 (M)
+{
+  "question": "An ideal voltmeter is accidentally inserted in series in the single-loop circuit shown. What are the loop current and the voltmeter reading?",
+  "choices": ["3.0 A and 0", "3.0 A and 9.0 V", "0 and 0", "0 and 3.0 V", "0 and 9.0 V"],
+  "answer": "E",
+  "image": "images/circuits-6/q5.png",
+  "explanation": "WORKED SOLUTION\nAn ideal voltmeter has infinite resistance. In series it opens the circuit, so the loop current is zero. With zero current, the resistor voltage is IR=0, leaving the full 9.0 V battery voltage across the voltmeter.\n\n90-SECOND SOLUTION\nReplace the ideal voltmeter by an open circuit. Current is zero, the resistor drop is zero, and the meter spans the full 9 V.\n\nWHAT TO MEMORIZE\nAn ideal voltmeter has infinite resistance and belongs in parallel, not in series."
+},
+
+// Q6 (M)
+{
+  "question": "The ideal ammeter is connected as shown. What does it read?",
+  "choices": ["4.0 A", "2.0 A", "1.0 A", "0.50 A", "0"],
+  "answer": "A",
+  "image": "images/circuits-6/q6.png",
+  "explanation": "WORKED SOLUTION\nAn ideal ammeter has zero resistance. It connects the junction directly to the negative battery terminal, so the lower 3.0 ohm resistor is shorted and has no current. The battery therefore sees only the upper 3.0 ohm resistor. The current through that resistor and the ammeter is 12/3.0=4.0 A.\n\n90-SECOND SOLUTION\nThe zero-resistance meter bypasses the lower resistor. Only 3 ohms remains across 12 V, giving 4 A.\n\nWHAT TO MEMORIZE\nAn ideal ammeter is a zero-resistance branch; placing it in parallel with a resistor shorts that resistor."
+},
+
+// Q7 (M)
+{
+  "question": "Two equal resistors R form a voltage divider across an ideal battery V. An initially uncharged capacitor C is connected by a switch between the divider midpoint and the battery's negative terminal. Immediately after the switch is closed, the capacitor current is",
+  "choices": ["V/(4R)", "V/R", "V/(2R)", "2V/R", "zero"],
+  "answer": "B",
+  "image": "images/circuits-6/q7.png",
+  "explanation": "WORKED SOLUTION\nImmediately after connection, the initially uncharged capacitor has zero voltage and behaves like a wire. It clamps the divider midpoint to the negative terminal, bypassing the lower resistor. The battery then drives current through only the upper resistor R, so the current into the capacitor is V/R. Equivalently, the divider's Thevenin values are V_th=V/2 and R_th=R parallel R=R/2, giving I(0+)=V_th/R_th=V/R.\n\n90-SECOND SOLUTION\nAt the first instant replace the uncharged capacitor by a short. The lower R is bypassed, so the battery current through the upper R is V/R and flows into the capacitor.\n\nWHAT TO MEMORIZE\nCapacitor voltage cannot jump. An initially uncharged capacitor acts as a short only at the switching instant."
+},
+
+// Q8 (M)
+{
+  "question": "A capacitor C initially at voltage V is disconnected from its battery and discharged through resistors R and 2R connected in parallel. The magnitude of dV_C/dt immediately after the discharge switch closes is",
+  "choices": ["V/(3RC)", "V/(2RC)", "3V/(2RC)", "2V/(3RC)", "3V/(RC)"],
+  "answer": "C",
+  "image": "images/circuits-6/q8.png",
+  "explanation": "WORKED SOLUTION\nThe discharge resistance is R_eq=R parallel 2R=(R)(2R)/(3R)=2R/3. At the first instant the capacitor voltage is still V, so the discharge current magnitude is V/R_eq=3V/(2R). Since I=C|dV_C/dt|, the requested rate is 3V/(2RC).\n\n90-SECOND SOLUTION\nUse R parallel 2R=2R/3. Then |dV/dt|=V/(R_eq C)=3V/(2RC).\n\nWHAT TO MEMORIZE\nFor a simple discharge, |dV_C/dt| at any instant equals V_C/(R_eq C)."
+},
+
+// Q9 (M)
+{
+  "question": "An isolated capacitor C is charged to 6.0 V and an isolated capacitor 2C is charged to 9.0 V, with their upper plates positive. Their lower plates are joined, and a resistor connects the upper plates when switch S closes. Immediately afterward, conventional current through the resistor flows",
+  "choices": ["from C toward 2C with zero magnitude", "from C toward 2C because C has the smaller capacitance", "in neither direction because both capacitors are charged", "from 2C toward C because its initial voltage is higher", "in a direction that cannot be found without R"],
+  "answer": "D",
+  "image": "images/circuits-6/q9.png",
+  "explanation": "WORKED SOLUTION\nCapacitor voltage cannot change instantaneously, so just after the switch closes the upper plates remain at 6.0 V and 9.0 V relative to their joined lower plates. Conventional current through a resistor flows from higher to lower potential, hence from the upper plate of 2C toward the upper plate of C. The capacitances affect the later voltage change, not this initial direction.\n\n90-SECOND SOLUTION\nCompare the two initial node voltages: 9 V is higher than 6 V, so current flows from 2C toward C.\n\nWHAT TO MEMORIZE\nCurrent direction through a resistor is set by voltage, not by which capacitor has greater charge or capacitance."
+},
+
+// Q10 (M)
+{
+  "question": "The same capacitor, initially charged to voltage V, is allowed to discharge completely through R in one trial and through 2R in a second trial. The total thermal energy produced in the resistor in the second trial is",
+  "choices": ["twice that in the first trial", "one-half that in the first trial", "four times that in the first trial", "one-fourth that in the first trial", "the same as in the first trial"],
+  "answer": "E",
+  "image": "images/circuits-6/q10.png",
+  "explanation": "WORKED SOLUTION\nIn either trial the capacitor starts with energy U=(1/2)CV^2 and ends with zero stored energy. With no other energy-storage element or source, all of that initial energy becomes thermal energy in the resistor. Changing R changes the discharge time and instantaneous power, but not the total heat.\n\n90-SECOND SOLUTION\nBoth trials dissipate the same initial capacitor energy, (1/2)CV^2. Resistance controls how fast, not how much.\n\nWHAT TO MEMORIZE\nFor a complete passive capacitor discharge, total heat equals the initial stored energy and is independent of the resistance."
+},
+
+// Q11 (M)
+{
+  "question": "A battery has emf E and internal resistance R. Its load is changed from R to 2R. The power delivered to the new load divided by the power delivered to the original load is",
+  "choices": ["8/9", "1/2", "4/9", "2", "9/8"],
+  "answer": "A",
+  "explanation": "WORKED SOLUTION\nFor the original load R, the total resistance is 2R, so I_1=E/(2R) and P_1=I_1^2R=E^2/(4R). For the new load 2R, the total resistance is 3R, so I_2=E/(3R) and P_2=I_2^2(2R)=2E^2/(9R). Therefore P_2/P_1=(2/9)/(1/4)=8/9.\n\n90-SECOND SOLUTION\nUse P_load=E^2 R_load/(r+R_load)^2. The ratio is [2/(1+2)^2]/[1/(1+1)^2]=(2/9)/(1/4)=8/9.\n\nWHAT TO MEMORIZE\nFor a source with internal resistance r, load power is E^2R_load/(r+R_load)^2. It is maximum when R_load=r."
+},
+
+// Q12 (H)
+{
+  "question": "A battery of emf E and internal resistance r delivers the same power to a load R and to a load 4R. What is r?",
+  "choices": ["R/2", "2R", "R", "4R", "sqrt(2)R"],
+  "answer": "B",
+  "image": "images/circuits-6/q12.png",
+  "explanation": "WORKED SOLUTION\nThe power delivered to a load X is P=E^2X/(r+X)^2. Equating the powers for R and 4R gives R/(r+R)^2=4R/(r+4R)^2. After canceling R and taking the positive square root, 1/(r+R)=2/(r+4R). Thus r+4R=2r+2R, so r=2R.\n\n90-SECOND SOLUTION\nEqual powers occur for load resistances whose product is r^2. Here R(4R)=r^2, so r=2R. This shortcut follows directly from the displayed power formula.\n\nWHAT TO MEMORIZE\nThe standard load-power formula is enough; the reciprocal-load shortcut need not be memorized."
+},
+
+// Q13 (M)
+{
+  "question": "Identical lamps A and B are initially in series across an ideal battery, while the branch containing lamp C is open. Closing switch S connects C in parallel with B. Which statement is correct?",
+  "choices": ["A dims and B brightens", "A and B both brighten", "A brightens, while B dims and C lights with the same brightness as B", "A is unchanged and B goes out", "All three lamps have equal brightness"],
+  "answer": "C",
+  "image": "images/circuits-6/q13.png",
+  "explanation": "WORKED SOLUTION\nInitially A and B are in series, so each has power V^2/(4R). After S closes, B parallel C has resistance R/2, in series with A. The total resistance becomes 3R/2, so the current through A rises to 2V/(3R); A therefore brightens. The current then splits equally between B and C, giving each V/(3R), less than the original V/(2R). Thus B dims, and C has the same brightness as B.\n\n90-SECOND SOLUTION\nAdding C in parallel lowers the section after A, so total current and A's power increase. B and C share the branch equally, and each gets less current than B had before.\n\nWHAT TO MEMORIZE\nFor identical lamps treated as resistors, brightness follows power. Compare both the total current and current division after switching."
+},
+
+// Q14 (H)
+{
+  "question": "Each identical battery has emf E and internal resistance r, and the load has resistance R=r. With only S_1 closed, battery 1 supplies current I_1. When S_2 is also closed, the batteries operate in parallel with the same polarity. The new current supplied by battery 1 divided by I_1 is",
+  "choices": ["1/3", "1/2", "1", "2/3", "4/3"],
+  "answer": "D",
+  "image": "images/circuits-6/q14.png",
+  "explanation": "WORKED SOLUTION\nWith only battery 1 connected, the internal resistance r and load R=r are in series, so I_1=E/(2r). With both identical batteries connected in parallel, their equivalent emf remains E while their equivalent internal resistance becomes r/2. The total load current is E/(r+r/2)=2E/(3r). Symmetry makes each battery supply half, so battery 1 supplies E/(3r). The requested ratio is [E/(3r)]/[E/(2r)]=2/3.\n\n90-SECOND SOLUTION\nTwo identical parallel sources act like E with internal resistance r/2. Find total current 2E/(3r), halve it between the batteries, and compare E/(3r) with the original E/(2r): 2/3.\n\nWHAT TO MEMORIZE\nIdentical same-polarity sources in parallel keep the same emf; their equal internal resistances combine in parallel."
+},
+
+// Q15 (E)
+{
+  "question": "An ideal battery V, resistor R, resistor 2R, and capacitor C are all in series. The switch has been closed for a long time. The voltage across the 2R resistor is",
+  "choices": ["2V/3", "V/3", "V", "V/2", "zero"],
+  "answer": "E",
+  "image": "images/circuits-6/q15.png",
+  "explanation": "WORKED SOLUTION\nAfter a long time in a DC circuit, the capacitor is fully charged and behaves as an open circuit. The series current is therefore zero. Since a resistor's voltage is IR, the voltage across the 2R resistor is zero. The battery voltage appears across the capacitor.\n\n90-SECOND SOLUTION\nLong-time DC capacitor means open circuit. No current gives no resistor voltage.\n\nWHAT TO MEMORIZE\nA capacitor is an open circuit in DC steady state, but its voltage need not be zero."
+},
+
+// Q16 (H)
+{
+  "question": "A battery V, resistor R, and inductor L have been in series for a long time. At t=0 a two-position switch reverses the battery polarity while leaving R and L in series. The magnitude of the voltage across the inductor immediately afterward is",
+  "choices": ["2V", "V", "V/2", "zero", "infinite"],
+  "answer": "A",
+  "image": "images/circuits-6/q16.png",
+  "explanation": "WORKED SOLUTION\nBefore switching, the inductor is a short in steady state, so the current is I_0=V/R. Inductor current cannot change instantaneously, so immediately after the battery is reversed the current is still I_0 in its old direction. The resistor drop is therefore I_0R=V, and the reversed battery also opposes that current by V. Kirchhoff's loop rule requires the inductor to provide a voltage of magnitude V+V=2V.\n\n90-SECOND SOLUTION\nKeep the pre-switch current V/R at the first instant. The resistor then needs V in the old-current direction, while the reversed source contributes another opposing V. The inductor must supply 2V.\n\nWHAT TO MEMORIZE\nInductor current is continuous at a switching instant. Re-evaluate the loop using that fixed initial current."
+},
+
+// Q17 (E)
+{
+  "question": "An ideal battery V, resistor R, and open switch S form a single series loop. The potential difference across the open switch has magnitude",
+  "choices": ["zero", "V", "V/2", "V/R", "infinite"],
+  "answer": "B",
+  "image": "images/circuits-6/q17.png",
+  "explanation": "WORKED SOLUTION\nThe open switch makes the current zero. Consequently the resistor voltage is IR=0. Kirchhoff's loop rule then places the entire battery voltage V across the two open-switch contacts.\n\n90-SECOND SOLUTION\nOpen circuit means I=0, so the resistor drops nothing. The full source voltage appears across the break.\n\nWHAT TO MEMORIZE\nAn open branch has zero current, not necessarily zero voltage."
+},
+
+// Q18 (E)
+{
+  "question": "At the junction shown, 2.0 A enters from the left and 3.0 A leaves upward. The current I in the third wire is",
+  "choices": ["5.0 A leaving the junction", "1.0 A leaving the junction", "1.0 A entering the junction", "5.0 A entering the junction", "zero"],
+  "answer": "C",
+  "image": "images/circuits-6/q18.png",
+  "explanation": "WORKED SOLUTION\nKirchhoff's junction rule requires total current entering to equal total current leaving. Since 3.0 A leaves but only 2.0 A is already known to enter, the third branch must supply the missing 1.0 A into the junction.\n\n90-SECOND SOLUTION\nBalance 3 A out with 3 A in. The known 2 A in needs 1 A more entering.\n\nWHAT TO MEMORIZE\nCharge does not accumulate at an ordinary circuit junction: sum of currents in equals sum of currents out."
+},
+
+// Q19 (H)
+{
+  "question": "Each side of the square is a resistor R. An ideal wire joins two opposite corners as shown. What is the equivalent resistance between the other two corners?",
+  "choices": ["R/4", "R/2", "2R", "R", "4R"],
+  "answer": "D",
+  "image": "images/circuits-6/q19.png",
+  "explanation": "WORKED SOLUTION\nThe diagonal ideal wire makes the upper-left and lower-right corners the same electrical node. From terminal A to that node, the top and right resistors are parallel, giving R/2. From the common node to terminal B, the left and bottom resistors are also parallel, giving R/2. These two equivalents are in series between A and B, so R_eq=R/2+R/2=R.\n\n90-SECOND SOLUTION\nMerge the two wire-connected corners into one node. The network becomes R parallel R, followed by another R parallel R: R/2+R/2=R.\n\nWHAT TO MEMORIZE\nPoints joined by an ideal wire are one node even when they are far apart in the drawing. Redraw the topology before combining resistors."
+},
+
+// Q20 (M)
+{
+  "question": "Three identical resistors R form the sides of a triangle between vertices A, B, and C. An ideal battery is connected between A and B. Closing switch S joins C directly to A with an ideal wire. The battery current changes by what factor?",
+  "choices": ["1/2", "2/3", "3/2", "2", "4/3"],
+  "answer": "E",
+  "image": "images/circuits-6/q20.png",
+  "explanation": "WORKED SOLUTION\nInitially the resistor directly from A to B is in parallel with the two-resistor path A-C-B. Thus R_i=R parallel 2R=2R/3. Closing S makes A and C the same node. The A-C resistor is then shorted, while the C-B resistor becomes a second resistance R directly from A to B. The new equivalent is R_f=R parallel R=R/2. At fixed battery voltage, I_f/I_i=R_i/R_f=(2R/3)/(R/2)=4/3.\n\n90-SECOND SOLUTION\nBefore: R parallel 2R=2R/3. After C is wired to A: two R branches remain in parallel, so R/2. Reverse the resistance ratio to get the current factor 4/3.\n\nWHAT TO MEMORIZE\nClosing an ideal-wire branch merges its endpoint nodes and shorts any component connected between those same nodes."
+}
+
+  ],
+  "added": "2026-10-24"
 }
 ];
